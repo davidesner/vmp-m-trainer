@@ -1,0 +1,106 @@
+<h2>Otázka #321 — Výstražní znaky, jedno nebo dvě světla vedle sebe blikají</h2>
+
+<p><strong>Správná odpověď: a) můžete pokračovat v plavbě.</strong></p>
+
+<h3>Jádro</h3>
+
+<p>Bílá přerušovaná (blikající) světla — ať už jedno samostatné, nebo dvě vedle sebe — znamenají, že <strong>plavba je povolena, můžeš pokračovat</strong>. Tahle skupina světelných znaků funguje jako „upozorňovač" v místech, kde je provoz nějak regulovaný (přístup ke zdymadlům, pohyblivé mosty, úžiny, vjezdy do přístavů). V systému plavebních světel je <em>bílá blikající</em> přiřazena právě k variantě <em>„volno"</em>.</p>
+
+<h3>Pozadí</h3>
+
+<p>Logika světelné signalizace na vnitrozemských vodních cestách (vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha o plavebních znacích, navazuje na evropský CEVNI):</p>
+
+<table>
+  <thead>
+    <tr><th>Co svítí</th><th>Význam</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Červená (stálá nebo blikající)</td><td>Zákaz — stůj</td></tr>
+    <tr><td><strong>Bílá blikající (1× nebo 2× vedle sebe)</strong></td><td><strong>Plavba povolena</strong></td></tr>
+    <tr><td>Žlutá blikající</td><td>Pozor, zvláštní situace / omezení</td></tr>
+    <tr><td>Zelená</td><td>Volno (typicky v dvoubarevných systémech)</td></tr>
+  </tbody>
+</table>
+
+<p>Počet bílých blikajících světel (jedno vs. dvě vedle sebe) <strong>nemění význam</strong> — jde jen o variantu téhož znaku. Určující je barva (bílá) a fakt, že světlo bliká.</p>
+
+<h3>Symbol v testu vs. realita na vodě</h3>
+
+<p>V testu jsou nakreslené dva kroužky se čtyřmi černo-bílými výsečemi vedle sebe. To je jen <strong>tištěná zkratka pro blikající světlo</strong> — střídání černé a bílé znázorňuje rozsvíceno/zhasnuto. V reálu na signálním stožáru svítí dvě bílá světla vedle sebe a periodicky problikávají.</p>
+
+<!-- Statická verze vizualizace. V interaktivní podobě obě bílé žárovky vpravo blikají přerušovaně cca 1× za sekundu (rozsvíceno ~0,6 s, zhasnuto ~0,6 s). -->
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t321 d321">
+  <title id="t321">Otázka #321 — symbol v testu vs. realita na vodě</title>
+  <desc id="d321">Vlevo: symbol z testu — dva kroužky se čtyřmi černo-bílými výsečemi vedle sebe, což je tištěné zobrazení blikajících světel. Vpravo: jak to reálně vypadá na signálním stožáru — dvě bílá blikající světla vedle sebe. Význam: můžete pokračovat v plavbě.</desc>
+
+  <text x="180" y="40" text-anchor="middle" style="font: 600 14px ui-sans-serif, system-ui, sans-serif; fill: #111;">Co je v testu (symbol)</text>
+  <text x="560" y="40" text-anchor="middle" style="font: 600 14px ui-sans-serif, system-ui, sans-serif; fill: #111;">Co stojí na vodní cestě</text>
+
+  <g transform="translate(80,100)">
+    <circle cx="50" cy="50" r="46" style="fill:#fff;stroke:#111;stroke-width:2;"/>
+    <path d="M50,50 L50,4 A46,46 0 0,0 4,50 Z" style="fill:#111;"/>
+    <path d="M50,50 L50,96 A46,46 0 0,0 96,50 Z" style="fill:#111;"/>
+    <circle cx="50" cy="50" r="46" style="fill:none;stroke:#111;stroke-width:2;"/>
+
+    <circle cx="170" cy="50" r="46" style="fill:#fff;stroke:#111;stroke-width:2;"/>
+    <path d="M170,50 L170,4 A46,46 0 0,0 124,50 Z" style="fill:#111;"/>
+    <path d="M170,50 L170,96 A46,46 0 0,0 216,50 Z" style="fill:#111;"/>
+    <circle cx="170" cy="50" r="46" style="fill:none;stroke:#111;stroke-width:2;"/>
+
+    <text x="110" y="160" text-anchor="middle" style="font: 500 11px ui-sans-serif, system-ui, sans-serif; fill: #555;">Černo-bílé výseče = tištěná zkratka</text>
+    <text x="110" y="176" text-anchor="middle" style="font: 500 11px ui-sans-serif, system-ui, sans-serif; fill: #555;">pro „světlo bliká" (rozsvíceno / zhasnuto).</text>
+  </g>
+
+  <path d="M295,195 L345,195" style="stroke:#888;stroke-width:2;fill:none;" marker-end="url(#arr321)"/>
+  <text x="320" y="180" text-anchor="middle" style="font: 500 12px ui-sans-serif, system-ui, sans-serif; fill: #555;">v reálu</text>
+
+  <defs>
+    <marker id="arr321" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#888;"/>
+    </marker>
+  </defs>
+
+  <g transform="translate(420,60)">
+    <rect x="60" y="60" width="160" height="70" rx="6" style="fill:#f3f4f6;stroke:#cfd3d8;stroke-width:1.5;"/>
+    <rect x="135" y="100" width="10" height="170" rx="2" style="fill:#dadde2;stroke:#cfd3d8;stroke-width:1.5;"/>
+    <rect x="100" y="270" width="80" height="10" rx="2" style="fill:#dadde2;stroke:#cfd3d8;stroke-width:1.5;"/>
+
+    <circle cx="105" cy="95" r="24" style="fill:#ffffff;opacity:0.35;"/>
+    <circle cx="105" cy="95" r="13" style="fill:#ffffff;stroke:#9aa0a6;stroke-width:1;"/>
+    <circle cx="175" cy="95" r="24" style="fill:#ffffff;opacity:0.35;"/>
+    <circle cx="175" cy="95" r="13" style="fill:#ffffff;stroke:#9aa0a6;stroke-width:1;"/>
+
+    <text x="140" y="200" text-anchor="middle" style="font: 500 11px ui-sans-serif, system-ui, sans-serif; fill: #555;">Dvě bílá blikající světla vedle sebe</text>
+    <text x="140" y="216" text-anchor="middle" style="font: 500 11px ui-sans-serif, system-ui, sans-serif; fill: #555;">(varianta s jedním světlem má stejný význam)</text>
+  </g>
+
+  <rect x="200" y="305" width="320" height="46" rx="23" style="fill:rgba(34,197,94,.12);stroke:rgba(34,197,94,.45);stroke-width:1.5;"/>
+  <text x="360" y="333" text-anchor="middle" style="font: 700 14px ui-sans-serif, system-ui, sans-serif; fill: #16a34a;">Význam: můžete pokračovat v plavbě</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>(b) zůstat stát, překážky ve směru plavby</strong> — to by signalizovala jiná značka, typicky kombinace červených světel nebo specifický znak A.1 (zákaz vplutí). Bílá blikající nikdy nezakazuje plavbu.</li>
+  <li><strong>(c) zůstat stát, podle počtu světel jednu, nejvýše dvě hodiny</strong> — fiktivní výklad. Žádný plavební znak nefunguje na principu „počet světel = počet hodin". Klasická pasť pro toho, kdo si plete světelnou signalizaci s něčím, co nezná.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Připlouváš třeba ke zdymadlu nebo k pohyblivému mostu a koukáš na signální stožár:</p>
+
+<ul>
+  <li><strong>Bílé blikající světlo (jedno i dvě vedle sebe)</strong> → můžeš pokračovat dál, plavba je povolena.</li>
+  <li><strong>Červené</strong> → stop, počkej.</li>
+  <li><strong>Žluté blikající</strong> → pozor, plav opatrně / průjezd s omezením.</li>
+</ul>
+
+<blockquote><strong>Mnemotechnika:</strong> Bílá bliká → bez problémů. Červená stojí, žlutá varuje, bílá pouští dál.</blockquote>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — <a href="https://www.zakonyprolidi.cz/cs/2015-67">zakonyprolidi.cz/cs/2015-67</a> (zejména příloha o plavebních znacích a světelné signalizaci)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě — <a href="https://www.zakonyprolidi.cz/cs/1995-114">zakonyprolidi.cz/cs/1995-114</a></li>
+  <li>Státní plavební správa — <a href="https://plavebniurad.cz/">plavebniurad.cz</a></li>
+</ul>

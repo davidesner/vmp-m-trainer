@@ -1,0 +1,10 @@
+{
+  "qid": 17,
+  "generated_at": "2026-05-04T00:00:00Z",
+  "sources": [
+    "https://www.zakonyprolidi.cz/cs/2015-67",
+    "https://www.zakonyprolidi.cz/cs/1995-114",
+    "https://plavebniurad.cz/"
+  ],
+  "model": "claude-opus-4-7"
+}
