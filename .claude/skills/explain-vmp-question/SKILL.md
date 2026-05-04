@@ -19,6 +19,23 @@ Pokud sis právě uvědomil, že chceš ukládat, nedělej to. **Zeptej se nejd�
 
 1. Identifikuj `qid` z promptu (např. "otázka #12"). Pokud nejednoznačné, zeptej se.
 2. Přečti `public/data/questions.json`, najdi `id === qid`. Poznamenej `text`, `correct`, `options`, `group`, `image`.
+3. **Pokud má otázka pole `image` (typicky `/data/images/q-{qid}.jpg`)**, soubor leží v `public/data/images/q-{qid}.jpg`. **Přečti ho hned tooly Read** — neignoruj. Obrázek je často podstatnou částí zadání (schéma plavidla, plavební značka, světelný znak, situace na vodě, šipky popisující manévr) a bez něj odpověď často nepostavíš správně.
+
+### Jak číst test images — konvence VMP
+
+V tištěných test materiálech jsou některé jevy zobrazené **schematicky**, ne fotorealisticky. Než navrhneš výklad, dekóduj symbol:
+
+- **Kroužek se čtyřmi černo-bílými výsečemi** = blikající světlo (střídání černé a bílé znázorňuje rozsvíceno/zhasnuto). Jeden kroužek = 1 světlo, dva vedle sebe = 2 světla.
+- **Plné vybarvené kruhy/obdélníky v barvě** = stálá světla té barvy (červené, zelené, bílé, žluté).
+- **Šipky u plavidla** = směr plavby / směr manévru.
+- **Schéma plavidla shora vs. zboku** — pohled určuje, která světla jsou viditelná (boční × stěžňové × záďové).
+- **Plavební značky** v testu jsou typicky vykreslené čelně, bez perspektivy — barevný a tvarový kód značky drž (čtverec/obdélník/kruh/trojúhelník, červená/bílá/zelená/žlutá).
+
+Pokud si konvencí nejsi jistý, popiš v chatu, co na obrázku vidíš, a ať uživatel potvrdí — lepší než postavit vysvětlení na špatné interpretaci.
+
+### Vizualizace ať vychází z obrázku v zadání
+
+Když otázka má `image` a chystáš vlastní vizualizaci, **nestav ji od nuly na obecné představě** — vyjdi z toho, co je skutečně na obrázku. Dobrý vzor je dvouúrovňová vizualizace: vlevo přesně to, co vidí uživatel v testu (symbol/schéma 1:1), vpravo „překlad" do reality (jak to vypadá na vodě / na plavidle / na značce). Tím se naučí dekódovat tištěnou konvenci, ne jen memorovat odpověď.
 
 ## Krok 2 — Vysvětli v chatu (konverzačně)
 
