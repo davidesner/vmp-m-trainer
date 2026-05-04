@@ -1,6 +1,9 @@
 import type { Question, GroupId } from '../types'
+import { GROUPS } from '../lib/groupConfig'
 import QuestionCard from './QuestionCard'
 import ExplainButton from './ExplainButton'
+
+const groupName = (id: GroupId) => GROUPS.find(g => g.id === id)?.name ?? id
 
 interface Props {
   questions: Question[]
@@ -31,7 +34,7 @@ export default function TestResults({ questions, answers, projectRoot, onHome }:
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Po skupinách</div>
         {Object.entries(perGroup).map(([g, s]) => (
           <div key={g} className="flex justify-between text-sm py-1">
-            <span>{g}</span>
+            <span>{groupName(g as GroupId)}</span>
             <span className="tabular-nums">{s.correct}/{s.total}</span>
           </div>
         ))}
