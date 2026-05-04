@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 const items = [
-  { to: '/',         label: '▶ Ostrý test',   highlight: true },
+  { to: '/',         label: '🏠 Přehled' },
   { to: '/practice', label: '📚 Procvičování' },
   { to: '/weak',     label: '🎯 Slabiny' },
   { to: '/stats',    label: '📊 Statistiky' },
