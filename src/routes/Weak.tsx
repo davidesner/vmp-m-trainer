@@ -15,7 +15,7 @@ export default function Weak() {
   useEffect(() => {
     if (!data) return
     const picked = sampleByMix(data.questions, store.questions, 'weak', 20, Date.now())
-    setRun(picked.slice(0, 20))
+    setRun(picked)
   }, [data, store.questions])
 
   if (loading || !run) return <div className="p-8">Načítám…</div>
