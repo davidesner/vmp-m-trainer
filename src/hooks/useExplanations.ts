@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import type { ExplanationMeta } from '../types'
 
 export interface ExplanationFetchResult {
@@ -9,9 +9,11 @@ export interface ExplanationFetchResult {
 
 export function useExplanations() {
   const [cache, setCache] = useState<Record<number, ExplanationFetchResult>>({})
+  const cacheRef = useRef(cache)
+  cacheRef.current = cache
 
   const fetchExplanation = useCallback(async (qid: number, force = false): Promise<ExplanationFetchResult> => {
-    if (!force && cache[qid]) return cache[qid]
+    if (!force && cacheRef.current[qid]) return cacheRef.current[qid]
     try {
       const htmlRes = await fetch(`/explanations/q-${qid}.html`, { cache: 'no-store' })
       if (htmlRes.status === 404) {
@@ -29,12 +31,12 @@ export function useExplanations() {
       const r: ExplanationFetchResult = { status: 'hit', html, meta }
       setCache(c => ({ ...c, [qid]: r }))
       return r
-    } catch (e) {
+    } catch {
       const r: ExplanationFetchResult = { status: 'miss' }
       setCache(c => ({ ...c, [qid]: r }))
       return r
     }
-  }, [cache])
+  }, [])
 
   return { fetchExplanation, cache }
 }
