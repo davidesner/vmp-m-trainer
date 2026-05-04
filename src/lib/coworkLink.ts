@@ -5,7 +5,7 @@ export interface ExplainLinkParams {
 
 export function buildExplainLink({ qid, folder }: ExplainLinkParams): string {
   if (!folder) throw new Error('folder is required')
-  const prompt = `Použij skill explain-vmp-question pro otázku #${qid}. Načti otázku z public/data/questions.json, prozkoumej kontext a ulož HTML do explanations/q-${qid}.html spolu s metadaty.`
+  const prompt = `Vysvětli mi otázku #${qid} z VMP M testu (skill explain-vmp-question). Začni výkladem v chatu, vizualizací pokud pomůže — uložení do HTML pak nabídneš.`
   const params = new URLSearchParams({ q: prompt, folder })
   return `claude://cowork/new?${params.toString()}`
 }
