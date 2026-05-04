@@ -7,6 +7,12 @@ description: Vysvětli otázku z VMP M testu uživateli konverzačně, s vizuali
 
 **Hlavní cíl:** pomoct uživateli pochopit, **proč** je správná odpověď správná. Konverzuj. Nepiš HTML hned. Až po vysvětlení nabídni uložení.
 
+## Hard rule: nikdy neukládej bez výslovného souhlasu
+
+Soubory `explanations/q-{qid}.html` a `explanations/q-{qid}.meta.json` **nikdy nezapisuj ani nepřepisuj** bez toho, aby uživatel řekl "ano, ulož to" (nebo ekvivalent — "jo", "save it", "ulož", atp.). To platí **vždy** — pro nové vysvětlení i pro úpravu existujícího.
+
+Pokud sis právě uvědomil, že chceš ukládat, nedělej to. **Zeptej se nejdřív.**
+
 ---
 
 ## Krok 1 — Najdi otázku
@@ -38,11 +44,17 @@ Možnosti, které máš v artefaktu k dispozici:
 
 Vizualizace má **přidat hodnotu**. Pro otázky o definicích nebo prostých číselných hodnotách ji většinou nepotřebuješ.
 
-## Krok 3 — Nabídni uložení do HTML
+## Krok 3 — Nabídni uložení do HTML (vždy ručně potvrdit)
 
-**Až po vysvětlení** (a případných follow-up otázkách) nabídni:
+**Až po vysvětlení** (a případných follow-up otázkách) **se zeptej**:
 
 > *"Chceš tohle uložit jako HTML do `explanations/q-{qid}.html`? Při dalším otevření v appce se zobrazí přímo v modalu."*
+
+Pokud má soubor už existovat a ty ho přepisuješ, formulace musí být jednoznačná, např.:
+
+> *"Tohle nahradí současný `explanations/q-{qid}.html`. Uložit?"*
+
+**Počkej na výslovné potvrzení.** Mlčení nebo follow-up otázka **nikdy** neznamená souhlas.
 
 ### Když uživatel souhlasí
 
@@ -78,10 +90,9 @@ Potvrď jednou větou: *"Uloženo: explanations/q-{qid}.html"*
 
 ---
 
-## Bez automatické regenerace
+## Když HTML už existuje
 
-Pokud `explanations/q-{qid}.html` už existuje a uživatel neřekl výslovně "regeneruj" / "udělej nové vysvětlení":
-
-1. Vrať obsah aktuálního HTML jako základ konverzace
-2. Zeptej se: *"Vysvětlení už existuje. Chceš ho rozšířit/upravit, nebo mě zajímá jiná část?"*
-3. HTML přepiš jen po výslovném souhlasu
+1. Přečti existující `explanations/q-{qid}.html` a použij jeho obsah jako základ konverzace
+2. Zeptej se uživatele, co potřebuje: *"Vysvětlení už existuje. Chceš ho rozšířit / upravit, nebo se chceš zeptat na něco konkrétního?"*
+3. Konverzuj normálně podle Kroku 2
+4. **Nikdy nepřepisuj soubor automaticky.** I když uživatel řekne "regeneruj" nebo "udělej nové", nejdřív vyrob navrhovanou verzi v chatu, pak se zeptej *"Tohle nahradí současný explanations/q-{qid}.html. Uložit?"* a počkej na potvrzení.
