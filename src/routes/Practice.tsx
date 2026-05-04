@@ -3,6 +3,7 @@ import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
 import { sampleTestQuestions } from '../lib/testStructure'
 import { sampleByMix } from '../lib/sampleQuestions'
+import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 import PracticeRunner from '../components/PracticeRunner'
 import type { Question, MixMode, GroupId } from '../types'
 
@@ -38,7 +39,7 @@ export default function Practice() {
       // Apply mix preference within structure: re-rank using bucket priority
       final = sampleByMix(final, store.questions, mix, final.length, Date.now())
     }
-    setRun(final)
+    setRun(final.map(q => shuffleQuestionOptions(q)))
   }
 
   const toggleGroup = (g: GroupId) => {

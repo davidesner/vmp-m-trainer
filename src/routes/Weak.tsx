@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
 import { sampleByMix } from '../lib/sampleQuestions'
+import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 import PracticeRunner from '../components/PracticeRunner'
 import type { Question } from '../types'
 
@@ -15,7 +16,7 @@ export default function Weak() {
   useEffect(() => {
     if (!data) return
     const picked = sampleByMix(data.questions, store.questions, 'weak', 20, Date.now())
-    setRun(picked)
+    setRun(picked.map(q => shuffleQuestionOptions(q)))
   }, [data, store.questions])
 
   if (loading || !run) return <div className="p-8">Načítám…</div>

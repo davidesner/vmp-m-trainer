@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
 import { sampleTestQuestions } from '../lib/testStructure'
+import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 import QuestionCard from '../components/QuestionCard'
 import Timer from '../components/Timer'
 import TestResults from '../components/TestResults'
@@ -17,7 +18,7 @@ export default function Test() {
 
   const sampled = useMemo<Question[]>(() => {
     if (!data) return []
-    return sampleTestQuestions(data.questions, data.testStructure)
+    return sampleTestQuestions(data.questions, data.testStructure).map(q => shuffleQuestionOptions(q))
   }, [data])
 
   const [answers, setAnswers] = useState<Record<number, 'a'|'b'|'c'>>({})
