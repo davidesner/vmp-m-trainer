@@ -5,7 +5,7 @@
 
 ## 1. Goal & Scope
 
-Lokální webová aplikace pro učení a trénink na zkoušku VMP M (Vůdce malého plavidla) — kategorie M 2015. Jediný uživatel = autor + případně sdíleno s kámoši přes git repo. Cíl: dosáhnout stabilně 30+ z 35 v ostrém režimu.
+Lokální webová aplikace pro učení a trénink na zkoušku VMP M (Vůdce malého plavidla) — kategorie M 2015. Single-user, lokální použití. Cíl: dosáhnout stabilně 30+ z 35 v ostrém režimu.
 
 **Zdroj otázek:** `http://www.spspraha.cz/zkousky/otazky.asp?zp=M+2015` (~~250 otázek se správnými odpověďmi).
 
@@ -16,12 +16,12 @@ Lokální webová aplikace pro učení a trénink na zkoušku VMP M (Vůdce mal�
 | Vrstva | Volba | Důvod |
 |---|---|---|
 | Bundler / dev server | Vite | Nulová konfigurace, hot reload |
-| Framework | React 18 + TypeScript | Široce známý, větší šance že kámoši pomůžou |
+| Framework | React 18 + TypeScript | Známý, široký ekosystém |
 | Styling | TailwindCSS | Rychlé stylování, nepotřebujeme design systém |
 | State | React `useState` + custom hooks | Není potřeba Redux/Zustand pro tuhle velikost |
 | Persistence (uživatel) | `localStorage` | Per-prohlížeč, bez backendu |
 | Persistence (data) | JSON v repu | Statické, jednoduchý deploy |
-| Package manager | `pnpm` | Rychlejší než npm, lockfile commitujeme |
+| Package manager | `pnpm` | Rychlejší než npm |
 | Test framework | Vitest | Native pro Vite |
 
 **Žádný backend.** Vite dev server stačí, aplikace je statická.
@@ -121,7 +121,7 @@ explanations/
 └── q-001.meta.json    # { qid, generated_at, sources: [], session_url? }
 ```
 
-**Výhled:** explanations jsou commitované do repa — kámoši po `git pull` vidí explanations které vygeneroval kdokoliv.
+**Výhled:** explanations jsou commitované do repa — postupně se akumulují, lze je libovolně ručně editovat.
 
 ## 4. Application Modes
 
@@ -306,7 +306,7 @@ Aplikace musí znát absolutní cestu k repu — řešení: env var `VITE_PROJEC
 
 ### 7.4 HTML sanitizace v aplikaci
 
-I když skill generuje "důvěryhodný" HTML, app ho prochází `DOMPurify` před `dangerouslySetInnerHTML`. Defence in depth — kámoši můžou ručně editovat soubory v `explanations/`.
+I když skill generuje "důvěryhodný" HTML, app ho prochází `DOMPurify` před `dangerouslySetInnerHTML`. Defence in depth pro případ ruční editace souborů v `explanations/`.
 
 ### 7.5 Setup pro uživatele
 
@@ -385,14 +385,13 @@ src/
 - AI-generované otázky (jen stávající data set)
 - Mobilní native app (PWA install pokud chce, ale nedělíme to)
 - Live re-scraping spspraha.cz
-- Sdílení výsledků mezi kámoši (každý má svůj localStorage)
 - Spaced repetition (SuperMemo / Anki algoritmus) — náš mix je dost dobrý pro start
 
 ## 12. Otevřené body / rizika
 
 1. **Cowork skill auto-aktivace** — popis ve frontmatter musí být dost specifický, aby Cowork skill aktivoval na český prompt. Pokud nestačí, Project instructions explicitně řeknou *"vždy použij skill explain-vmp-question"*.
 2. **Cesta k repu pro deep link** — uživatel musí jednou nastavit `VITE_PROJECT_ROOT`. Bez toho deep link nemá `folder` parametr, což znamená že Cowork session nezná folder. Musí se to v UI jasně komunikovat.
-3. **Sanitizace HTML** — kámoši můžou commitnout kompromitovaný HTML do `explanations/`. Mitigace: DOMPurify v app + bez `<script>` v template.
+3. **Sanitizace HTML** — Cowork skill v zásadě generuje důvěryhodný HTML, ale pro případ chyby nebo ruční editace má app `DOMPurify` + template bez `<script>`.
 4. **Scraper závislý na strukturě spspraha.cz** — pokud změní layout, scraper rozbijeme. Akceptovatelné — manuální fix při změně.
 
 ---
