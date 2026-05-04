@@ -13,7 +13,6 @@ export interface Group {
   id: GroupId
   name: string
   zkratky: ZkratkaId[]
-  testCount: number
 }
 
 export interface QuestionOption {

@@ -10,13 +10,13 @@ export const ZKRATKA_TO_GROUP: Record<ZkratkaId, GroupId> = {
 }
 
 export const GROUPS: Group[] = [
-  { id: 'plavebni-provoz',             name: 'Plavební provoz',                              zkratky: ['PP1'], testCount: 16 },
-  { id: 'nocni-denni-signalizace',     name: 'Noční a denní signalizace',                    zkratky: ['PP2'], testCount: 7 },
-  { id: 'signalizace-rizeni-plavby',   name: 'Signalizace pro řízení plavby na vodní cestě', zkratky: ['PP3'], testCount: 0 },
-  { id: 'zvukove-signaly',             name: 'Zvukové signály',                              zkratky: ['PP4'], testCount: 0 },
-  { id: 'vytyceni-vodnich-cest',       name: 'Vytyčení vodních cest',                        zkratky: [],      testCount: 0 },
-  { id: 'zaklady-konstrukce-plavidel', name: 'Základy konstrukce plavidel',                  zkratky: ['TZ'],  testCount: 3 },
-  { id: 'zaklady-prvni-pomoci',        name: 'Základy první pomoci',                         zkratky: ['ZP'],  testCount: 4 },
+  { id: 'plavebni-provoz',             name: 'Plavební provoz',                              zkratky: ['PP1'] },
+  { id: 'nocni-denni-signalizace',     name: 'Noční a denní signalizace',                    zkratky: ['PP2'] },
+  { id: 'signalizace-rizeni-plavby',   name: 'Signalizace pro řízení plavby na vodní cestě', zkratky: ['PP3'] },
+  { id: 'zvukove-signaly',             name: 'Zvukové signály',                              zkratky: ['PP4'] },
+  { id: 'vytyceni-vodnich-cest',       name: 'Vytyčení vodních cest',                        zkratky: []      },
+  { id: 'zaklady-konstrukce-plavidel', name: 'Základy konstrukce plavidel',                  zkratky: ['TZ']  },
+  { id: 'zaklady-prvni-pomoci',        name: 'Základy první pomoci',                         zkratky: ['ZP']  },
 ]
 
 // 16/7/5/3/4 segment definition for the real test
