@@ -2,7 +2,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/.claude/skills/explain-vmp-question"
-OUT_DIR="$ROOT/dist"
+OUT_DIR="$ROOT/dist-skill"
 OUT_ZIP="$OUT_DIR/explain-vmp-question.zip"
 
 mkdir -p "$OUT_DIR"
