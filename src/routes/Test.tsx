@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
@@ -25,14 +25,7 @@ export default function Test() {
   const [submitted, setSubmitted] = useState(false)
   const [startedAt] = useState(() => Date.now())
 
-  if (loading) return <div className="p-8">Načítám otázky…</div>
-  if (error) return <div className="p-8 text-danger">Chyba: {error.message}</div>
-  if (!data || sampled.length === 0) return <div className="p-8">Žádné otázky.</div>
-
-  const q = sampled[idx]
-  const answeredCount = Object.keys(answers).length
-
-  const submit = () => {
+  const submit = useCallback(() => {
     setSubmitted(true)
     const at = new Date().toISOString()
     let score = 0
@@ -53,7 +46,14 @@ export default function Test() {
       perGroup,
       questionIds: sampled.map(s => s.id),
     })
-  }
+  }, [sampled, answers, startedAt, recordAttempt, recordTestHistory])
+
+  if (loading) return <div className="p-8">Načítám otázky…</div>
+  if (error) return <div className="p-8 text-danger">Chyba: {error.message}</div>
+  if (!data || sampled.length === 0) return <div className="p-8">Žádné otázky.</div>
+
+  const q = sampled[idx]
+  const answeredCount = Object.keys(answers).length
 
   if (submitted) {
     return <TestResults questions={sampled} answers={answers} onHome={() => navigate('/')} projectRoot={import.meta.env.VITE_PROJECT_ROOT ?? ''} />
