@@ -23,6 +23,10 @@
 #   - skill v .claude/skills/explain-vmp-question/
 #
 # Logy: dist-skill/batch-logs/q-{id}.log
+#
+# Pozn.: používá `--permission-mode auto`, takže Claude rozhoduje
+# autonomně (žádné permission prompts). Skill explicitně dostává
+# povolení uložit HTML přímo přes prompt.
 
 set -euo pipefail
 
@@ -105,14 +109,13 @@ generate_one() {
 
   local prompt="Vysvětli mi otázku #${qid} z VMP M testu (skill explain-vmp-question). Začni výkladem v chatu, vizualizací pokud pomůže (preferuj vizualizaci) — ulož do html rovnou. Na nic se neptej a dokonci task"
 
-  # -p / --print                       : non-interactive (vypíše a skončí)
-  # --max-turns 20                     : safety cap (typický run ~5-10 turns)
-  # --dangerously-skip-permissions     : skip tool permission prompts
-  #                                      (uživatel autorizoval batch mode v promptu)
+  # -p / --print            : non-interactive (vypíše a skončí)
+  # --max-turns 20          : safety cap (typický run ~5-10 turns)
+  # --permission-mode auto  : autonomní rozhodování (auto mode), bez prompts
   if claude \
       -p \
       --max-turns 20 \
-      --dangerously-skip-permissions \
+      --permission-mode auto \
       "$prompt" \
       > "$log" 2>&1
   then
