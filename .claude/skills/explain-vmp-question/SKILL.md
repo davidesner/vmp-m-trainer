@@ -13,6 +13,20 @@ Soubory `explanations/q-{qid}.html` a `explanations/q-{qid}.meta.json` **nikdy n
 
 Pokud sis právě uvědomil, že chceš ukládat, nedělej to. **Zeptej se nejdřív.**
 
+## Hard rule: nikdy neoznačuj odpovědi písmenem
+
+Appka při zobrazení **náhodně přerendlí pořadí odpovědí a přepíše písmena a/b/c**. Konkrétní písmeno z `questions.json` (`correct: 'a'`) tedy v UI nemá platnost — uživatel právě vidí jinou odpověď pod stejným písmenem.
+
+**Pravidlo:**
+- **Nikdy nepiš** "správná odpověď je a)" / "možnost (b) je správná" / "viz odpověď a" / "zatímco varianta c říká…" ani v chatu, ani v ukládaném HTML.
+- **Vždy odkazuj na obsah** — buď doslovnou citací, nebo parafrází. Např.:
+  - ❌ *"Správná odpověď je a)."*
+  - ✅ *"Správná odpověď je '__ovladatelné těleso určené k pohybu nebo stání na vodě…__'."*
+  - ✅ *"Správná je definice, která zahrnuje 'ovladatelné těleso' — širší pojetí pokrývající i plovoucí zařízení a stroje."*
+- Stejně tak u **chytlavých variant**: identifikuj je obsahem, ne písmenem. *"Varianta, která tvrdí, že plavidlo musí mít vlastní pohon, je nesprávná, protože…"* místo *"Odpověď b) je nesprávná."*
+
+Tohle pravidlo platí pro chat **i** uložené HTML — uložené HTML se otevírá v appce, kde je shuffle stále aktivní.
+
 ---
 
 ## Krok 1 — Najdi otázku
