@@ -32,8 +32,17 @@ Tohle pravidlo platí pro chat **i** uložené HTML — uložené HTML se oteví
 ## Krok 1 — Najdi otázku
 
 1. Identifikuj `qid` z promptu (např. "otázka #12"). Pokud nejednoznačné, zeptej se.
-2. Přečti `public/data/questions.json`, najdi `id === qid`. Poznamenej `text`, `correct`, `options`, `group`, `image`.
-3. **Pokud má otázka pole `image` (typicky `/data/images/q-{qid}.jpg`)**, soubor leží v `public/data/images/q-{qid}.jpg`. **Přečti ho hned tooly Read** — neignoruj. Obrázek je často podstatnou částí zadání (schéma plavidla, plavební značka, světelný znak, situace na vodě, šipky popisující manévr) a bez něj odpověď často nepostavíš správně.
+2. **Spusť helper skript** — jediným voláním vytáhne text, options, správnou odpověď, image path (i s informací jestli existuje) a stav existujícího vysvětlení v `explanations/`:
+
+   ```bash
+   python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid>
+   # nebo --json pro strojové zpracování:
+   python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid> --json
+   ```
+
+   Skript hledá repo root automaticky (najde `public/data/questions.json` u sebe nebo u některého předka), takže ho můžeš volat odkudkoliv. **Nepokoušej se parsovat `questions.json` ručně** — má top-level objekt s polem `questions[]`, ne pole na top-levelu, a tohle si chytá skript za tebe.
+3. **Pokud helper hlásí, že obrázek existuje** (typicky `/data/images/q-{qid}.jpg` → soubor v `public/data/images/q-{qid}.jpg`), **přečti ho hned tooly Read** — neignoruj. Obrázek je často podstatnou částí zadání (schéma plavidla, plavební značka, světelný znak, situace na vodě, šipky popisující manévr) a bez něj odpověď často nepostavíš správně.
+4. Pokud helper hlásí, že existuje `explanations/q-{qid}.html`, přečti ho — viz sekci „Když HTML už existuje" níž.
 
 ### Jak číst test images — konvence VMP
 
