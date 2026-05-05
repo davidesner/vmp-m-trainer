@@ -145,35 +145,58 @@ filter_desc=""
 [ "$LIMIT" -gt 0 ] && filter_desc="$filter_desc limit=$LIMIT"
 [ -n "$filter_desc" ] && echo "Filtry:$filter_desc"
 
+# Cílový seznam zafixovaný na začátku — LIMIT a filtry se aplikují JEDNOU.
+# Další kola jen retry-ují ty, co z této množiny ještě nemají HTML.
+INITIAL_TARGETS=$(list_missing | grep -v '^$' || true)
+
+if [ -z "$INITIAL_TARGETS" ]; then
+  echo "✓ Žádné chybějící otázky pro tento filtr — není co dělat."
+  exit 0
+fi
+
+initial_count=$(printf '%s\n' "$INITIAL_TARGETS" | wc -l | tr -d ' ')
+echo "Cíl: $initial_count otázek (qids: $(printf '%s\n' "$INITIAL_TARGETS" | tr '\n' ',' | sed 's/,$//' | head -c 200))"
+
+# Vrací qids z INITIAL_TARGETS, které ještě nemají HTML.
+list_remaining_targets() {
+  while IFS= read -r qid; do
+    [ -z "$qid" ] && continue
+    if [ ! -f "$EXPLANATIONS_DIR/q-${qid}.html" ]; then
+      printf '%s\n' "$qid"
+    fi
+  done <<< "$INITIAL_TARGETS"
+}
+
 round=0
 while [ "$round" -lt "$MAX_ROUNDS" ]; do
   round=$((round + 1))
 
-  missing=$(list_missing | grep -v '^$' || true)
-  if [ -z "$missing" ]; then
-    echo "✓ Všechny cílové otázky mají vysvětlení. Hotovo po $((round - 1)) kolech."
+  remaining=$(list_remaining_targets)
+  if [ -z "$remaining" ]; then
+    echo ""
+    echo "✓ Všech $initial_count cílových otázek hotovo po $((round - 1)) kolech."
     exit 0
   fi
 
-  count=$(printf '%s\n' "$missing" | wc -l | tr -d ' ')
+  count=$(printf '%s\n' "$remaining" | wc -l | tr -d ' ')
   echo ""
-  echo "=== Kolo $round/$MAX_ROUNDS · $count chybějících · concurrency=$CONCURRENCY ==="
+  echo "=== Kolo $round/$MAX_ROUNDS · $count z $initial_count chybí · concurrency=$CONCURRENCY ==="
 
   # xargs -P spustí až $CONCURRENCY paralelních volání generate_one.
   # `|| true` aby celkový skript nepadl při dílčí chybě (logujeme + pokračujeme).
-  printf '%s\n' "$missing" \
+  printf '%s\n' "$remaining" \
     | xargs -n 1 -P "$CONCURRENCY" -I{} bash -c 'generate_one "$@"' _ {} \
     || true
 done
 
-remaining=$(list_missing | grep -v '^$' || true)
+remaining=$(list_remaining_targets)
 if [ -z "$remaining" ]; then
   echo ""
-  echo "✓ Hotovo po $round kolech."
+  echo "✓ Všech $initial_count cílových otázek hotovo po $round kolech."
 else
   count=$(printf '%s\n' "$remaining" | wc -l | tr -d ' ')
   echo ""
-  echo "✗ Po $MAX_ROUNDS kolech zůstává $count nezpracovaných otázek."
+  echo "✗ Po $MAX_ROUNDS kolech zůstává $count z $initial_count nezpracovaných."
   echo "  Zkontroluj logy v $LOG_DIR/ a případně pusť skript znovu."
   exit 2
 fi
