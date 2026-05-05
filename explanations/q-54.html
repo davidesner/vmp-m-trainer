@@ -1,0 +1,114 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Krátké vysvětlení</h2>
+    <p>Vyhláška o pravidlech plavebního provozu (67/2015 Sb.) výslovně dovoluje nahradit válce, balóny, kužele a dvojkužele <strong>jinými upravenými předměty</strong> — pod jednou podmínkou: <strong>při pohledu z dálky musí mít stejný tvar</strong>. Rozhoduje tedy silueta, ne barva ani provedení.</p>
+  </section>
+
+  <section>
+    <h2>Pozadí — § 14 odst. 1 vyhlášky 67/2015 Sb.</h2>
+    <blockquote>
+      „Válce, balóny, kužele a dvojité kužele předepsané v této vyhlášce mohou být nahrazeny také upravenými předměty, které mají při pohledu z dálky stejný tvar."
+    </blockquote>
+    <p>Tyhle čtyři předměty patří mezi <strong>denní (optické) signály na plavidlech</strong>. Vyvěšují se na stěžni nebo viditelném místě a sdělují ostatním stav plavidla (např. plavidlo s omezenou manévrovací schopností, plavidlo přepravující nebezpečný náklad, kotvící plavidlo na neobvyklém místě a další situace). Informaci nesou výhradně svou siluetou — proto je legislativa nechává nahradit čímkoliv, co tu siluetu z dálky drží.</p>
+  </section>
+
+  <section>
+    <h2>Vizualizace — co rozhoduje a co ne</h2>
+    <p>Vlevo čtyři předepsané tvary, vpravo příklady, čím je reálně lze (a nelze) nahradit. <strong>Rozhoduje obrys, ne barva ani materiál.</strong></p>
+
+    <svg viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;height:auto;background:#f7f7fa;border-radius:8px;">
+      <!-- Header -->
+      <text x="120" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222">Předepsaný tvar</text>
+      <text x="380" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0a7a2a">OK náhrada (správný tvar)</text>
+      <text x="600" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#a40000">Špatná náhrada</text>
+
+      <!-- Row 1: VÁLEC -->
+      <g transform="translate(0,40)">
+        <text x="120" y="100" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#444">Válec</text>
+        <!-- válec -->
+        <ellipse cx="120" cy="40" rx="22" ry="6" fill="#222"/>
+        <rect x="98" y="40" width="44" height="50" fill="#222"/>
+        <ellipse cx="120" cy="90" rx="22" ry="6" fill="#222"/>
+
+        <!-- OK: prázdná konzervová plechovka, popsáno jako válec -->
+        <ellipse cx="380" cy="40" rx="20" ry="5" fill="#666"/>
+        <rect x="360" y="40" width="40" height="50" fill="#888"/>
+        <ellipse cx="380" cy="90" rx="20" ry="5" fill="#aaa"/>
+        <text x="380" y="108" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0a7a2a">plechovka / trubka</text>
+
+        <!-- BAD: koule místo válce -->
+        <circle cx="600" cy="65" r="25" fill="#222"/>
+        <text x="600" y="108" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a40000">jiná silueta</text>
+      </g>
+
+      <!-- Row 2: BALÓN (koule) -->
+      <g transform="translate(0,160)">
+        <text x="120" y="100" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#444">Balón (koule)</text>
+        <circle cx="120" cy="65" r="25" fill="#222"/>
+
+        <!-- OK: nafouknutý míč jiné barvy, ale kulatý -->
+        <circle cx="380" cy="65" r="25" fill="#c33"/>
+        <text x="380" y="108" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0a7a2a">míč (i červený)</text>
+
+        <!-- BAD: plochý kotouč zepředu i zboku -->
+        <ellipse cx="600" cy="65" rx="25" ry="6" fill="#222"/>
+        <text x="600" y="108" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a40000">plochý kotouč</text>
+      </g>
+
+      <!-- Row 3: KUŽEL -->
+      <g transform="translate(0,280)">
+        <text x="120" y="100" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#444">Kužel</text>
+        <polygon points="120,30 100,90 140,90" fill="#222"/>
+
+        <!-- OK: papírový/plachtový kornout -->
+        <polygon points="380,30 360,90 400,90" fill="#d2b48c"/>
+        <text x="380" y="108" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0a7a2a">kornout / čepice</text>
+
+        <!-- BAD: válec místo kuželu -->
+        <ellipse cx="600" cy="35" rx="20" ry="5" fill="#222"/>
+        <rect x="580" y="35" width="40" height="55" fill="#222"/>
+        <ellipse cx="600" cy="90" rx="20" ry="5" fill="#222"/>
+        <text x="600" y="108" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a40000">jiná silueta</text>
+      </g>
+
+      <!-- Row 4: DVOJKUŽEL -->
+      <g transform="translate(0,400)">
+        <text x="120" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#444">Dvojkužel</text>
+        <polygon points="120,-10 100,20 140,20" fill="#222"/>
+        <polygon points="120,50 100,20 140,20" fill="#222"/>
+
+        <!-- OK: dva spojené kornouty -->
+        <polygon points="380,-10 360,20 400,20" fill="#d2b48c"/>
+        <polygon points="380,50 360,20 400,20" fill="#d2b48c"/>
+        <text x="380" y="68" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0a7a2a">dva kornouty hrot na hrot</text>
+
+        <!-- BAD: jeden kužel -->
+        <polygon points="600,-10 580,50 620,50" fill="#222"/>
+        <text x="600" y="68" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a40000">jen jeden kužel</text>
+      </g>
+    </svg>
+
+    <p style="margin-top:12px;"><em>Klíč k zapamatování:</em> rozhoduje <strong>silueta proti obloze</strong>. Materiál, barva ani provedení nejsou podstatné — důležité je, aby plavec/jiné plavidlo z dálky rozeznal, který ze čtyř předepsaných tvarů to je.</p>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní možnosti</h2>
+    <ul>
+      <li><strong>Varianta o nahrazení podle barvy</strong> — past. Vyhláška barvu jako kritérium náhrady neuvádí. Denní signály jsou typicky černé a nesou informaci tvarem; náhrada červeným míčem za černý balón je legitimní (tvar sedí), kdežto černý kotouč za černý balón ne (siluetu z boku nedrží).</li>
+      <li><strong>Varianta, která náhradu zakazuje</strong> — přímý rozpor s § 14 odst. 1, který náhradu výslovně dovoluje.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <p>Na malých plavidlech se „katalogová" sada válce/balónu/kužele/dvojkužele běžně nepoužívá — a vyhláška to počítá: stačí cokoliv, co má při pohledu z dálky správný obrys (kornout z plachty místo kuželu, lehký nafukovací míč místo balónu, plechovka místo válce). Důležité je, aby ostatní účastníci plavby rozpoznali siluetu signálu — zbytek (barva, materiál) je vedlejší.</p>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li><a href="https://krajta.slv.cz/2015/67/pril_7">Vyhláška 67/2015 Sb. — § 14 odst. 1 (znění v plné podobě)</a></li>
+      <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška 67/2015 Sb. o pravidlech plavebního provozu — zakonyprolidi.cz</a></li>
+    </ol>
+  </section>
+</article>

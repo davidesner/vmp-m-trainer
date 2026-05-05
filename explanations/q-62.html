@@ -1,0 +1,131 @@
+<h2>Malé plavidlo bez manévrovací schopnosti — noční signalizace</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„červeným nebo bílým světlem kývajícím se v půlkruhu nebo dvěma červenými světly 1 m nad sebou."</em></p>
+
+<h3>Jádro</h3>
+<p>Když malé plavidlo ztratí manévrovací schopnost (porucha motoru, zlomené veslo, zamotané kormidlo…), musí ostatní upozornit, že <strong>se nemůže uhnout</strong>. V noci má dvě možnosti:</p>
+<ul>
+  <li><strong>Kývající se světlo v půlkruhu</strong> — červené, ale <strong>u malého plavidla může být i bílé</strong> (typicky baterka).</li>
+  <li><strong>Dvě červená světla 1 m nad sebou</strong>, umístěná dostatečně vysoko a viditelná ze všech stran.</li>
+</ul>
+
+<h3>Vizualizace obou variant</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" style="max-width:720px;background:#0a1628;border-radius:8px">
+  <defs>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff3030" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#cc0000" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#cc0000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="whiteGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#fff9c4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fff9c4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Title bar -->
+  <text x="360" y="28" text-anchor="middle" fill="#e6f3ff" font-family="sans-serif" font-size="15" font-weight="bold">Doplňková noční signalizace — plavidlo bez manévrovací schopnosti</text>
+
+  <!-- LEFT: swinging light -->
+  <g>
+    <text x="180" y="58" text-anchor="middle" fill="#9fc5e8" font-family="sans-serif" font-size="13" font-weight="bold">Varianta 1: kývající se světlo v půlkruhu</text>
+    <text x="180" y="76" text-anchor="middle" fill="#9fc5e8" font-family="sans-serif" font-size="11">(červené, u malého plavidla může být bílé)</text>
+
+    <!-- Boat hull -->
+    <path d="M 90,260 L 270,260 L 250,290 L 110,290 Z" fill="#3a3a3a" stroke="#888" stroke-width="1.5"/>
+    <!-- Mast -->
+    <line x1="180" y1="260" x2="180" y2="170" stroke="#888" stroke-width="2"/>
+    <!-- Person silhouette -->
+    <circle cx="180" cy="240" r="6" fill="#888"/>
+    <rect x="177" y="246" width="6" height="14" fill="#888"/>
+
+    <!-- Arc showing semicircle motion -->
+    <path d="M 100,170 A 80,80 0 0 1 260,170" fill="none" stroke="#5a8db0" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <!-- Three positions of swinging light -->
+    <!-- Left position (faint) -->
+    <circle cx="100" cy="170" r="20" fill="url(#redGlow)" opacity="0.35"/>
+    <circle cx="100" cy="170" r="6" fill="#ff4040" opacity="0.5"/>
+    <!-- Top position (bright = current) -->
+    <circle cx="180" cy="90" r="28" fill="url(#redGlow)" opacity="1"/>
+    <circle cx="180" cy="90" r="8" fill="#ff5050"/>
+    <!-- Right position (faint) -->
+    <circle cx="260" cy="170" r="20" fill="url(#redGlow)" opacity="0.35"/>
+    <circle cx="260" cy="170" r="6" fill="#ff4040" opacity="0.5"/>
+
+    <!-- Arrow showing motion -->
+    <path d="M 110,160 Q 180,100 250,160" fill="none" stroke="#7fb3d5" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+    <text x="180" y="320" text-anchor="middle" fill="#cfe2f3" font-family="sans-serif" font-size="11">Plavec kýve baterkou v půlkruhu nad hlavou</text>
+    <text x="180" y="338" text-anchor="middle" fill="#9fc5e8" font-family="sans-serif" font-size="10" font-style="italic">(nejčastější u malého plavidla — bílá baterka stačí)</text>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="360" y1="50" x2="360" y2="340" stroke="#2c4a6b" stroke-width="1" stroke-dasharray="2,4"/>
+
+  <!-- RIGHT: two red lights -->
+  <g>
+    <text x="540" y="58" text-anchor="middle" fill="#9fc5e8" font-family="sans-serif" font-size="13" font-weight="bold">Varianta 2: dvě červená světla 1 m nad sebou</text>
+    <text x="540" y="76" text-anchor="middle" fill="#9fc5e8" font-family="sans-serif" font-size="11">(viditelná ze všech stran, dostatečně vysoko)</text>
+
+    <!-- Boat hull -->
+    <path d="M 450,260 L 630,260 L 610,290 L 470,290 Z" fill="#3a3a3a" stroke="#888" stroke-width="1.5"/>
+    <!-- Mast -->
+    <line x1="540" y1="260" x2="540" y2="100" stroke="#888" stroke-width="2"/>
+    <!-- Crossbar (yard) -->
+    <line x1="525" y1="155" x2="555" y2="155" stroke="#888" stroke-width="1.5"/>
+
+    <!-- Top red light -->
+    <circle cx="540" cy="115" r="22" fill="url(#redGlow)" opacity="0.9"/>
+    <circle cx="540" cy="115" r="7" fill="#ff3030"/>
+    <!-- Bottom red light -->
+    <circle cx="540" cy="155" r="22" fill="url(#redGlow)" opacity="0.9"/>
+    <circle cx="540" cy="155" r="7" fill="#ff3030"/>
+
+    <!-- 1m distance label -->
+    <line x1="580" y1="115" x2="580" y2="155" stroke="#7fb3d5" stroke-width="1"/>
+    <line x1="575" y1="115" x2="585" y2="115" stroke="#7fb3d5" stroke-width="1"/>
+    <line x1="575" y1="155" x2="585" y2="155" stroke="#7fb3d5" stroke-width="1"/>
+    <text x="595" y="139" fill="#cfe2f3" font-family="sans-serif" font-size="12" font-weight="bold">1 m</text>
+
+    <text x="540" y="320" text-anchor="middle" fill="#cfe2f3" font-family="sans-serif" font-size="11">Pevně instalovaná světla na stěžni</text>
+    <text x="540" y="338" text-anchor="middle" fill="#9fc5e8" font-family="sans-serif" font-size="10" font-style="italic">(spíš u větších plavidel, ale vyhláška povoluje obě varianty)</text>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#7fb3d5"/>
+    </marker>
+  </defs>
+</svg>
+
+<p style="font-size:0.9em;color:#666;margin-top:0.5em"><em>Vizualizace ukazuje obě povolené varianty noční signalizace. Vlevo: světlo se v praxi pohybuje sem a tam v půlkruhu (vykresleny tři pozice — krajní jsou bledší, horní pozice jasnější). Vpravo: dvě stálá červená světla nad sebou.</em></p>
+
+<h3>Pozadí — vyhláška 67/2015 Sb., čl. 3.18</h3>
+<p>Doplňková signalizace plavidla, které ztratilo manévrovací schopnost:</p>
+<blockquote style="border-left:3px solid #5a8db0;padding-left:12px;margin-left:0;color:#444;font-style:italic">
+„… červeným světlem kývajícím se v půlkruhu, <strong>na malých plavidlech může být toto světlo bílé</strong> … nebo dvěma červenými světly umístěnými na vhodném místě dostatečně vysoko a <strong>1 m nad sebou</strong>."
+</blockquote>
+<p>Vyhláška povoluje obě varianty — plavidlo si vybírá podle situace a vybavení.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>Varianta s červeným a zeleným světlem pohybujícími se proti sobě svisle</strong> — v žádném plavebním předpisu neexistuje. Červená a zelená jsou navíc <strong>boční světla</strong> pro identifikaci stran plavidla, ne nouzový signál.</li>
+  <li><strong>Varianta s jedním až třemi modrými světly na hlavním stěžni</strong> — modrá světla mají úplně jiný význam: signalizují <strong>nebezpečný náklad podle ADN</strong>. 1 modré = hořlavé látky, 2 = zdraví škodlivé, 3 = výbušniny. S manévrovací poruchou nesouvisí.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<ul>
+  <li><strong>Vypadl mi motor v noci</strong> — vezmu baterku a kývám jí v půlkruhu nad hlavou.</li>
+  <li><strong>Bílá baterka stačí</strong> — výjimka pro malá plavidla, není potřeba shánět červené sklíčko.</li>
+  <li><strong>Doplň zvukovým signálem</strong>, pokud hrozí kolize — série krátkých tónů (čl. 4.01).</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.stranypotapecske.cz/dokument/rpb.asp">Řád plavební bezpečnosti — vyhláška 67/2015 Sb., čl. 3.18 (stranypotapecske.cz)</a></li>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu (zakonyprolidi.cz)</a></li>
+</ul>

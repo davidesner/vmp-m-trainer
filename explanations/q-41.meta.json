@@ -1,0 +1,9 @@
+{
+  "qid": 41,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://zakony.judikaty.info/cz/predpis/vyhlaska-67/2015",
+    "https://www.kapitanske-zkousky-testy.cz/prohlizeni_otazek.php?okruh=101"
+  ],
+  "model": "claude-opus-4-7"
+}

@@ -1,0 +1,10 @@
+{
+  "qid": 37,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://www.zakonyprolidi.cz/cs/1995-114",
+    "https://sps.gov.cz/wp-content/public/downloads/predpisy/zakon-114-1995sb.pdf",
+    "https://krajta.slv.cz/2014/187/cl_1-bod_51"
+  ],
+  "model": "claude-opus-4-7"
+}

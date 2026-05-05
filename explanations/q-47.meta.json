@@ -1,0 +1,9 @@
+{
+  "qid": 47,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://app.batacanal.cz/pokyny-pro-plavbu/doklady-plavidla.html",
+    "https://www.kapitanske-zkousky-testy.cz/prohlizeni_otazek.php?otazka=7488-male_plavidlo_nepodlehajici_evidenci_nese_na_vnitrni_nebo_vnejsi_strane_plavidla"
+  ],
+  "model": "claude-opus-4-7"
+}

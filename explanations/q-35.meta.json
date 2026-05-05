@@ -1,0 +1,9 @@
+{
+  "qid": 35,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://sps.gov.cz/doz-pl/plavebni-prekazky-a-nehody",
+    "https://www.zakonyprolidi.cz/cs/1995-114"
+  ],
+  "model": "claude-opus-4-7"
+}

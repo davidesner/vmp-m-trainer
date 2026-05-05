@@ -1,0 +1,174 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Jádro</h2>
+    <p>
+      Evidenční označení malého plavidla zapsaného v plavebním rejstříku se vyznačuje
+      <strong>na vnějších stranách obou boků</strong> plavidla
+      <strong>poblíž přídě</strong>,
+      <strong>čitelnými nesmazatelnými latinskými písmeny o výšce nejméně 10 cm</strong>.
+    </p>
+    <p>Všechna čtyři kritéria musí být splněna současně:</p>
+    <table>
+      <thead>
+        <tr><th>Parametr</th><th>Hodnota</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Kde</td><td>vnější strany <strong>obou</strong> boků (levobok i pravobok)</td></tr>
+        <tr><td>Pozice</td><td>poblíž <strong>přídě</strong> (přední část plavidla)</td></tr>
+        <tr><td>Typ písma</td><td>čitelná, <strong>nesmazatelná latinská</strong> písmena</td></tr>
+        <tr><td>Velikost</td><td>minimálně <strong>10 cm</strong> na výšku</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Vizualizace</h2>
+    <p>Schéma malého plavidla — pohled shora (vlevo) a z boku (vpravo) s vyznačenou správnou pozicí evidenčního označení.</p>
+
+    <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma umístění evidenčního označení">
+      <defs>
+        <marker id="arrow46" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+        </marker>
+        <marker id="arrowBad46" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+        </marker>
+      </defs>
+
+      <!-- LEVÝ PANEL: pohled shora -->
+      <text x="170" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Pohled shora</text>
+
+      <!-- trup plavidla shora -->
+      <path d="M 60,180 Q 60,110 170,80 L 270,80 Q 320,80 320,180 Q 320,280 270,280 L 170,280 Q 60,250 60,180 Z"
+            fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+      <!-- příď (vlevo) - šipka -->
+      <text x="40" y="185" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0f172a">PŘÍĎ</text>
+      <line x1="48" y1="180" x2="58" y2="180" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arrow46)"/>
+      <!-- záď (vpravo) -->
+      <text x="320" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0f172a" transform="rotate(0 320 180)"></text>
+      <text x="335" y="185" text-anchor="start" font-family="sans-serif" font-size="11" fill="#0f172a">ZÁĎ</text>
+
+      <!-- správné označení - levobok poblíž přídě -->
+      <rect x="100" y="92" width="70" height="20" fill="#fff" stroke="#16a34a" stroke-width="2" rx="2"/>
+      <text x="135" y="107" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#0f172a">CZ 12345</text>
+      <!-- správné označení - pravobok poblíž přídě -->
+      <rect x="100" y="248" width="70" height="20" fill="#fff" stroke="#16a34a" stroke-width="2" rx="2"/>
+      <text x="135" y="263" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#0f172a">CZ 12345</text>
+
+      <!-- popisky správného umístění -->
+      <text x="170" y="135" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#16a34a" font-weight="bold">vnější strana levoboku</text>
+      <text x="170" y="240" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#16a34a" font-weight="bold">vnější strana pravoboku</text>
+
+      <!-- špatná pozice - střed (zákaz) -->
+      <rect x="220" y="170" width="60" height="20" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3" rx="2"/>
+      <text x="250" y="184" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#dc2626">střed = ✗</text>
+
+      <!-- DĚLICÍ ČÁRA -->
+      <line x1="380" y1="40" x2="380" y2="320" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 3"/>
+
+      <!-- PRAVÝ PANEL: pohled z boku -->
+      <text x="550" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Pohled z boku (levobok)</text>
+
+      <!-- voda -->
+      <line x1="410" y1="220" x2="700" y2="220" stroke="#0284c7" stroke-width="1" stroke-dasharray="6 4"/>
+      <text x="700" y="235" text-anchor="end" font-family="sans-serif" font-size="9" fill="#0284c7">vodorys</text>
+
+      <!-- trup z boku -->
+      <path d="M 410,180 Q 410,140 460,135 L 660,135 Q 690,135 690,180 L 690,210 Q 690,225 660,225 L 460,225 Q 410,225 410,180 Z"
+            fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+      <!-- nástavba/kabina -->
+      <path d="M 480,135 L 530,105 L 605,105 L 620,135 Z" fill="#fef3c7" stroke="#a16207" stroke-width="1.5"/>
+
+      <!-- označení na boku poblíž přídě -->
+      <rect x="430" y="155" width="80" height="22" fill="#fff" stroke="#16a34a" stroke-width="2" rx="2"/>
+      <text x="470" y="172" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">CZ 12345</text>
+
+      <!-- výška označení - kóta -->
+      <line x1="525" y1="155" x2="525" y2="177" stroke="#16a34a" stroke-width="1"/>
+      <line x1="520" y1="155" x2="530" y2="155" stroke="#16a34a" stroke-width="1"/>
+      <line x1="520" y1="177" x2="530" y2="177" stroke="#16a34a" stroke-width="1"/>
+      <text x="540" y="170" text-anchor="start" font-family="sans-serif" font-size="11" fill="#16a34a" font-weight="bold">≥ 10 cm</text>
+
+      <!-- popisek pozice -->
+      <text x="470" y="195" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#16a34a" font-weight="bold">poblíž přídě</text>
+
+      <!-- šipka na příď -->
+      <text x="395" y="180" text-anchor="end" font-family="sans-serif" font-size="11" fill="#0f172a">PŘÍĎ</text>
+      <line x1="398" y1="178" x2="408" y2="178" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arrow46)"/>
+      <text x="700" y="178" text-anchor="start" font-family="sans-serif" font-size="11" fill="#0f172a">← ZÁĎ ne</text>
+
+      <!-- špatná pozice na zádi -->
+      <rect x="610" y="180" width="60" height="16" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3" rx="2"/>
+      <text x="640" y="192" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#dc2626">záď = ✗</text>
+
+      <!-- LEGENDA dole -->
+      <g transform="translate(40,330)">
+        <rect x="0" y="-10" width="14" height="14" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+        <text x="20" y="1" font-family="sans-serif" font-size="11" fill="#0f172a">správné umístění</text>
+
+        <rect x="170" y="-10" width="14" height="14" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="190" y="1" font-family="sans-serif" font-size="11" fill="#0f172a">nesprávné umístění</text>
+      </g>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Pozadí — právní zdroj</h2>
+    <p>
+      Pravidlo vychází z <strong>vyhlášky č. 334/2015 Sb.</strong>, o vedení rejstříku malých plavidel
+      a technické způsobilosti malých plavidel, převozních lodí a plovoucích zařízení k provozu na vodních
+      cestách. Konkrétní technické požadavky na evidenční označení jsou v příloze vyhlášky.
+    </p>
+    <blockquote>
+      Evidenční označení se vyznačuje na vnějších stranách obou boků plavidla poblíž přídě,
+      čitelnými nesmazatelnými latinskými písmeny o výšce nejméně 10 cm.
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní varianty</h2>
+    <ul>
+      <li>
+        Varianta s umístěním <em>„na vnitřní straně plavidla poblíž zádě, písmena 5 cm"</em> je nesprávná
+        ve třech bodech: označení musí být <strong>vnější</strong> (aby ho šlo přečíst zvenčí při kontrole
+        nebo havárii), <strong>u přídě</strong> (ne zádi) a <strong>nejméně 10 cm</strong> (ne 5 cm).
+        Také vůbec nezmiňuje latinská písmena.
+      </li>
+      <li>
+        Varianta připouštějící <em>„vnitřní nebo vnější stranu poblíž středu, výšku 5–10 cm"</em>
+        sice správně zmiňuje latinská písmena, ale střed boku je špatná pozice (předpis vyžaduje
+        polohu <strong>u přídě</strong>) a rozsah 5–10 cm připouští i podlimitní velikost — minimum je
+        striktně <strong>10 cm</strong>.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <ul>
+      <li>Označení (např. „CZ 12345") nalepte/natřete <strong>symetricky na oba boky</strong> plavidla
+        zhruba v první třetině délky od přídě.</li>
+      <li>Materiál musí být <strong>odolný proti UV, vodě a mechanické abrazi</strong> — proto požadavek
+        „nesmazatelnými".</li>
+      <li><strong>Latinská abeceda</strong> je důležitá pro mezinárodní čitelnost (např. při plavbě
+        po Labi do Německa).</li>
+      <li>Bez správného vyznačení hrozí pokuta od Státní plavební správy a komplikace při identifikaci
+        plavidla v případě havárie.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li>
+        <a href="https://www.zakonyprolidi.cz/cs/2015-334">Vyhláška č. 334/2015 Sb. — o vedení rejstříku malých plavidel a technické způsobilosti malých plavidel (zakonyprolidi.cz)</a>
+      </li>
+      <li>
+        <a href="https://app.batacanal.cz/pokyny-pro-plavbu/doklady-plavidla.html">Plavební atlas — Doklady plavidla (batacanal.cz)</a>
+      </li>
+      <li>
+        <a href="https://sps.gov.cz/downloads/predpisy/vyhlaska-334-2015sb.pdf">Vyhláška 334/2015 Sb. — PDF (Státní plavební správa)</a>
+      </li>
+    </ol>
+  </section>
+</article>

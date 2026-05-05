@@ -1,0 +1,156 @@
+<h2>Signalizace při snížené viditelnosti</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„optická signalizace předepsaná pro provoz v noci i ve dne."</em></p>
+
+<h3>Jádro</h3>
+<p>Když viditelnost klesne (mlha, hustý déšť, šero, sněžení), <strong>nestačí denní signalizace</strong> — musíš použít tu, která je předepsaná pro <strong>noční provoz</strong>, i kdyby bylo „technicky" pořád den. Denní signály (balón, kužel, vlajka) jsou v mlze neviditelné, zatímco rozsvícená poziční světla jsou vidět i přes pár stovek metrů mléčného oparu.</p>
+
+<h3>Pozadí — vyhláška č. 67/2015 Sb., § 12</h3>
+<blockquote>
+  <p><strong>§ 12 odst. 1:</strong> Optickou signalizaci tvoří <strong>světla, tabule, vlajky, plamence, balóny a kužele</strong>.</p>
+  <p><strong>§ 12 odst. 2:</strong> <em>„Vyžadují-li to podmínky viditelnosti, použije se signalizace předepsaná pro provoz v noci i ve dne."</em></p>
+</blockquote>
+<p>Druhý odstavec je doslovná předloha této otázky — text správné odpovědi je téměř citací paragrafu.</p>
+
+<h3>Vizualizace — tři scénáře</h3>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" style="width:100%;max-width:900px;height:auto;background:#f8fafc;border-radius:8px">
+  <defs>
+    <linearGradient id="day-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="fog-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="night-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="glow-white" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef9c3" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fef9c3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-red" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-green" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Scénář 1: Den, dobrá viditelnost -->
+  <g transform="translate(0,0)">
+    <rect x="10" y="10" width="280" height="200" fill="url(#day-sky)" rx="6"/>
+    <circle cx="245" cy="45" r="18" fill="#fde047"/>
+    <rect x="10" y="170" width="280" height="40" fill="#3b82f6" rx="6"/>
+    <!-- Plavidlo -->
+    <g transform="translate(95,135)">
+      <polygon points="0,30 90,30 110,15 110,30 0,30" fill="#475569"/>
+      <rect x="30" y="0" width="40" height="20" fill="#64748b"/>
+      <rect x="48" y="-25" width="4" height="25" fill="#334155"/>
+      <!-- Denní signál: balón / kužel -->
+      <circle cx="50" cy="-30" r="6" fill="#000"/>
+    </g>
+    <text x="150" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Den, dobrá viditelnost</text>
+    <text x="150" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#475569">Denní signalizace</text>
+    <text x="150" y="274" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">balón / kužel / tabule / vlajka</text>
+    <text x="150" y="305" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#16a34a" font-weight="600">světla zhasnutá</text>
+  </g>
+
+  <!-- Scénář 2: Den + mlha → NOČNÍ signalizace -->
+  <g transform="translate(305,0)">
+    <rect x="0" y="10" width="280" height="200" fill="url(#fog-sky)" rx="6"/>
+    <!-- náznak slunce za mlhou -->
+    <circle cx="235" cy="45" r="18" fill="#fde047" opacity="0.35"/>
+    <!-- mlha -->
+    <ellipse cx="60" cy="80" rx="80" ry="14" fill="#f1f5f9" opacity="0.7"/>
+    <ellipse cx="200" cy="100" rx="90" ry="12" fill="#f1f5f9" opacity="0.7"/>
+    <ellipse cx="120" cy="130" rx="110" ry="14" fill="#f1f5f9" opacity="0.6"/>
+    <rect x="0" y="170" width="280" height="40" fill="#475569" opacity="0.6" rx="6"/>
+    <!-- Plavidlo se SVĚTLY zapnutými ve dne -->
+    <g transform="translate(85,135)">
+      <polygon points="0,30 90,30 110,15 110,30 0,30" fill="#475569"/>
+      <rect x="30" y="0" width="40" height="20" fill="#64748b"/>
+      <rect x="48" y="-25" width="4" height="25" fill="#334155"/>
+      <!-- záře okolo -->
+      <circle cx="48" cy="-25" r="14" fill="url(#glow-white)"/>
+      <circle cx="0" cy="15" r="14" fill="url(#glow-red)"/>
+      <circle cx="100" cy="15" r="14" fill="url(#glow-green)"/>
+      <!-- Stěžňové bílé světlo -->
+      <circle cx="50" cy="-25" r="3.5" fill="#fef08a" stroke="#fde047" stroke-width="1"/>
+      <!-- Boční světla -->
+      <circle cx="2" cy="15" r="3.5" fill="#ef4444"/>
+      <circle cx="98" cy="15" r="3.5" fill="#22c55e"/>
+    </g>
+    <text x="140" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Den + mlha (snížená viditelnost)</text>
+    <text x="140" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#475569">NOČNÍ signalizace ve dne</text>
+    <text x="140" y="274" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">stěžňové + boční světla zapnutá</text>
+    <text x="140" y="305" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#dc2626" font-weight="600">§ 12 odst. 2 — toto je jádro otázky</text>
+  </g>
+
+  <!-- Scénář 3: Noc -->
+  <g transform="translate(610,0)">
+    <rect x="0" y="10" width="280" height="200" fill="url(#night-sky)" rx="6"/>
+    <circle cx="40" cy="40" r="1.5" fill="#fef9c3"/>
+    <circle cx="80" cy="60" r="1" fill="#fef9c3"/>
+    <circle cx="220" cy="35" r="1.5" fill="#fef9c3"/>
+    <circle cx="180" cy="80" r="1" fill="#fef9c3"/>
+    <circle cx="245" cy="45" r="14" fill="#f1f5f9" opacity="0.85"/>
+    <rect x="0" y="170" width="280" height="40" fill="#0c1729" rx="6"/>
+    <!-- Plavidlo -->
+    <g transform="translate(85,135)">
+      <polygon points="0,30 90,30 110,15 110,30 0,30" fill="#1e293b"/>
+      <rect x="30" y="0" width="40" height="20" fill="#334155"/>
+      <rect x="48" y="-25" width="4" height="25" fill="#0f172a"/>
+      <!-- záře -->
+      <circle cx="48" cy="-25" r="16" fill="url(#glow-white)"/>
+      <circle cx="0" cy="15" r="16" fill="url(#glow-red)"/>
+      <circle cx="100" cy="15" r="16" fill="url(#glow-green)"/>
+      <circle cx="50" cy="-25" r="3.5" fill="#fef08a" stroke="#fde047" stroke-width="1"/>
+      <circle cx="2" cy="15" r="3.5" fill="#ef4444"/>
+      <circle cx="98" cy="15" r="3.5" fill="#22c55e"/>
+    </g>
+    <text x="140" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Noc</text>
+    <text x="140" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#475569">Noční signalizace</text>
+    <text x="140" y="274" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">stěžňové + boční světla zapnutá</text>
+    <text x="140" y="305" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#16a34a" font-weight="600">samozřejmě</text>
+  </g>
+</svg>
+
+<p><em>Trik vyhlášky: prostřední scénář vypadá jako &bdquo;den&ldquo;, ale podmínky viditelnosti přepnuly režim na noční signalizaci.</em></p>
+
+<h3>Proč ne ostatní varianty</h3>
+<table>
+  <thead>
+    <tr><th>Varianta</th><th>Proč ne</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>„nejméně jeden světlomet v přední části plavidla"</strong></td>
+      <td>Světlomet (reflektor) je <em>povolený</em> prostředek, ale není předepsaný jako reakce na sníženou viditelnost. Slouží k tomu, aby <strong>ty</strong> viděl/a překážku před plavidlem — ne aby <strong>tebe</strong> viděli ostatní. Při nevhodném použití navíc oslňuje a je zakázán.</td>
+    </tr>
+    <tr>
+      <td><strong>„radiolokační zařízení"</strong> (radar)</td>
+      <td>Pomáhá <em>tobě</em> orientovat se v mlze, ale ostatní plavidla tě přes radar neuvidí. Pro malá rekreační plavidla není povinný a nenahrazuje signalizaci.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Společný háček obou špatných odpovědí:</strong> řeší <em>„jak vidět ven"</em>. Otázka se ptá <em>„jak být viděn"</em> = signalizace.</p>
+
+<h3>Praktická aplikace</h3>
+<ul>
+  <li>Plujete v poledne, naletí <strong>mlha</strong> → nečekáte do tmy, rozsvěcujete poziční světla okamžitě.</li>
+  <li>Stejně tak za <strong>hustého deště, sněžení, v dýmu</strong> nebo při soumraku/úsvitu, kdy už balón/vlajka splývá s pozadím.</li>
+  <li>Pravidlo platí pro plující i kotvící plavidla — kotvící plavidlo v mlze ve dne také rozsvítí kotevní světlo.</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — zakonyprolidi.cz</a></li>
+  <li><a href="https://www.sagit.cz/info/sb15067">Vyhláška č. 67/2015 Sb. — Sagit (úplné znění)</a></li>
+  <li><a href="https://krajta.slv.cz/2015/67/cl_3-01">Článek 3.01 / § 12 — Použití signalizace</a></li>
+</ul>

@@ -1,0 +1,208 @@
+<h2>Rozmístění nákladu na plavidle — co předpis vyžaduje</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„nesmí ohrožovat stabilitu plavidla nebo pevnost jeho tělesa."</em> Jde o doslovnou citaci z <strong>§ 4 odst. 3 vyhlášky č. 67/2015 Sb.</strong> o pravidlech plavebního provozu.</p>
+
+<blockquote style="border-left:4px solid #2563eb;padding:10px 14px;background:#eff6ff;margin:14px 0">
+<strong>§ 4 odst. 3 vyhlášky č. 67/2015 Sb. (Zatížení a bezpečné rozmístění nákladu):</strong><br>
+„Náklad nesmí <strong>ohrožovat stabilitu plavidla</strong> nebo <strong>pevnost lodního tělesa</strong>."
+</blockquote>
+
+<h3>Dvě fyzikální hrozby, které pravidlo pokrývá</h3>
+
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;height:auto;background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;display:block;margin:12px 0">
+  <text x="380" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Tři způsoby rozmístění stejného nákladu</text>
+
+  <!-- ========== PANEL 1: SPRÁVNĚ ========== -->
+  <g>
+    <rect x="20" y="40" width="240" height="170" fill="#ffffff" stroke="#16a34a" stroke-width="2" rx="6"/>
+    <rect x="20" y="40" width="240" height="22" fill="#dcfce7" stroke="none" rx="6"/>
+    <text x="140" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#14532d">SPRÁVNĚ</text>
+
+    <!-- water -->
+    <line x1="35" y1="155" x2="245" y2="155" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="35" y="155" width="210" height="50" fill="#bae6fd" opacity="0.5"/>
+
+    <!-- hull symmetric, low cargo -->
+    <path d="M65 130 L215 130 L205 175 L75 175 Z" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+    <!-- cargo evenly distributed, low -->
+    <rect x="80" y="115" width="35" height="15" fill="#92400e" stroke="#451a03"/>
+    <rect x="120" y="115" width="35" height="15" fill="#92400e" stroke="#451a03"/>
+    <rect x="160" y="115" width="35" height="15" fill="#92400e" stroke="#451a03"/>
+
+    <!-- center of gravity, low and centered -->
+    <circle cx="140" cy="135" r="6" fill="#16a34a" stroke="#14532d" stroke-width="1.5"/>
+    <text x="140" y="139" text-anchor="middle" font-size="9" font-weight="700" fill="white">T</text>
+
+    <!-- vertical reference line -->
+    <line x1="140" y1="100" x2="140" y2="180" stroke="#16a34a" stroke-width="1" stroke-dasharray="2,2" opacity="0.6"/>
+
+    <text x="140" y="195" text-anchor="middle" font-size="10" fill="#166534">rovnoměrně, těžiště nízko</text>
+  </g>
+
+  <!-- ========== PANEL 2: ŠPATNĚ - STABILITA ========== -->
+  <g>
+    <rect x="270" y="40" width="240" height="170" fill="#ffffff" stroke="#dc2626" stroke-width="2" rx="6"/>
+    <rect x="270" y="40" width="240" height="22" fill="#fee2e2" stroke="none" rx="6"/>
+    <text x="390" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#7f1d1d">OHROŽENÁ STABILITA</text>
+
+    <!-- water -->
+    <line x1="285" y1="155" x2="495" y2="155" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="285" y="155" width="210" height="50" fill="#bae6fd" opacity="0.5"/>
+
+    <!-- hull TILTED — rotate around center bottom -->
+    <g transform="rotate(-12 390 175)">
+      <path d="M315 130 L465 130 L455 175 L325 175 Z" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+      <!-- cargo all on one side, stacked HIGH -->
+      <rect x="320" y="115" width="35" height="15" fill="#92400e" stroke="#451a03"/>
+      <rect x="320" y="100" width="35" height="15" fill="#92400e" stroke="#451a03"/>
+      <rect x="360" y="115" width="35" height="15" fill="#92400e" stroke="#451a03"/>
+      <!-- center of gravity, off-center and high -->
+      <circle cx="355" cy="110" r="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+      <text x="355" y="114" text-anchor="middle" font-size="9" font-weight="700" fill="white">T</text>
+    </g>
+
+    <!-- tilt arrow -->
+    <path d="M455 95 Q470 85 480 100" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#arrowRed)"/>
+
+    <text x="390" y="195" text-anchor="middle" font-size="10" fill="#991b1b">náklad na jedné straně + vysoko → naklonění</text>
+  </g>
+
+  <!-- ========== PANEL 3: ŠPATNĚ - PEVNOST ========== -->
+  <g>
+    <rect x="520" y="40" width="220" height="170" fill="#ffffff" stroke="#dc2626" stroke-width="2" rx="6"/>
+    <rect x="520" y="40" width="220" height="22" fill="#fee2e2" stroke="none" rx="6"/>
+    <text x="630" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#7f1d1d">OHROŽENÁ PEVNOST</text>
+
+    <!-- water -->
+    <line x1="535" y1="155" x2="730" y2="155" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="535" y="155" width="195" height="50" fill="#bae6fd" opacity="0.5"/>
+
+    <!-- hull SAGGING in middle (deformed, curved bottom dipping down) -->
+    <path d="M555 130 L705 130 L700 165 Q630 185 560 165 Z" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- huge concentrated load in middle -->
+    <rect x="610" y="100" width="40" height="30" fill="#7f1d1d" stroke="#450a0a" stroke-width="1.5"/>
+    <text x="630" y="120" text-anchor="middle" font-size="10" font-weight="700" fill="white">⬇⬇⬇</text>
+
+    <!-- force arrows down on hull middle -->
+    <path d="M620 135 L620 155" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+    <path d="M640 135 L640 155" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+
+    <!-- buoyancy arrows up at ends -->
+    <path d="M575 175 L575 158" stroke="#0284c7" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <path d="M685 175 L685 158" stroke="#0284c7" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <text x="630" y="195" text-anchor="middle" font-size="10" fill="#991b1b">přetížení v jednom bodě → prohyb trupu (sagging)</text>
+  </g>
+
+  <!-- arrow markers -->
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <!-- explanation row -->
+  <g>
+    <rect x="20" y="230" width="720" height="170" fill="#fafaf9" stroke="#d4d4d8" rx="6"/>
+    <text x="380" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Co konkrétně předpis chrání</text>
+
+    <!-- left col: stabilita -->
+    <g>
+      <rect x="40" y="270" width="340" height="115" fill="#fff" stroke="#dc2626" stroke-width="1.5" rx="4"/>
+      <text x="55" y="290" font-size="12" font-weight="700" fill="#7f1d1d">⚠ STABILITA plavidla</text>
+      <text x="55" y="310" font-size="11" fill="#1f2937">• těžiště musí být v ose plavidla a co nejníž</text>
+      <text x="55" y="328" font-size="11" fill="#1f2937">• riziko: <em>převrácení</em> v zatáčce, vlnách,</text>
+      <text x="64" y="343" font-size="11" fill="#1f2937">při manévrování nebo přesunu osob</text>
+      <text x="55" y="365" font-size="10" font-style="italic" fill="#6b7280">(nesymetrický náklad → kýlový moment</text>
+      <text x="64" y="378" font-size="10" font-style="italic" fill="#6b7280">→ trvalý náklon → menší rezerva do překlopení)</text>
+    </g>
+
+    <!-- right col: pevnost -->
+    <g>
+      <rect x="395" y="270" width="325" height="115" fill="#fff" stroke="#dc2626" stroke-width="1.5" rx="4"/>
+      <text x="410" y="290" font-size="12" font-weight="700" fill="#7f1d1d">⚠ PEVNOST tělesa (trupu)</text>
+      <text x="410" y="310" font-size="11" fill="#1f2937">• zatížení musí být rozprostřené po délce</text>
+      <text x="410" y="328" font-size="11" fill="#1f2937">• riziko: <em>ohyb / prolomení</em> trupu mezi</text>
+      <text x="419" y="343" font-size="11" fill="#1f2937">místem přetížení a body vztlaku</text>
+      <text x="410" y="365" font-size="10" font-style="italic" fill="#6b7280">(bod. zatížení uprostřed → sagging;</text>
+      <text x="419" y="378" font-size="10" font-style="italic" fill="#6b7280">na koncích → hogging — obojí poškozuje konstrukci)</text>
+    </g>
+  </g>
+</svg>
+
+<h3>Co všechno § 4 vyhlášky 67/2015 řeší</h3>
+
+<table style="width:100%;border-collapse:collapse;margin:10px 0">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8;width:18%">Odstavec</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Co stanoví</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top"><strong>§ 4 odst. 1</strong></td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top">Plavidlo se nesmí zatěžovat <strong>nad značku maximálního ponoru</strong>.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top"><strong>§ 4 odst. 2</strong></td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top">Náklad musí být rozmístěn tak, aby byl zajištěn <strong>výhled minimálně 350 m</strong> (omezení lze kompenzovat technickými prostředky, např. radarem).</td>
+    </tr>
+    <tr style="background:#fef3c7">
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top"><strong>§ 4 odst. 3 ← tato otázka</strong></td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top">Náklad <strong>nesmí ohrožovat stabilitu plavidla nebo pevnost lodního tělesa</strong>.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top"><strong>§ 4 odst. 4</strong></td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top">U kontejnerových plavidel (nad určitou šíři / vrstvy kontejnerů) se <strong>před vyplutím ověřuje stabilita</strong>.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;vertical-align:top"><strong>§ 4 odst. 5</strong></td>
+      <td style="padding:8px;vertical-align:top">Osobní plavidla nesmějí přepravovat <strong>více osob, než je povoleno</strong>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<table style="width:100%;border-collapse:collapse;margin:10px 0">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8;width:42%">Varianta</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Proč je špatně</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top"><em>„musí odpovídat parametrům vodní cesty a staveb na ní"</em></td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;vertical-align:top">Chytlavé — parametrům vodní cesty (hloubka, šířka komor, podjezdné výšky mostů) musí odpovídat <strong>plavidlo jako celek</strong> (jeho rozměry a ponor — § 5 a § 6 vyhlášky), ne <em>rozmístění nákladu</em>. Náklad se přidá do rovnice přes ponor, ale samotná formulace o „rozmístění" tu cílí jinam.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;vertical-align:top"><em>„stanoví jeho vůdce nejméně 2 dny před vyplutím..."</em></td>
+      <td style="padding:8px;vertical-align:top">Fabulace. Žádnou <strong>2denní lhůtu</strong> pro plánování rozložení nákladu předpisy neukládají. Vůdce plavidla je za náklad odpovědný (§ 29 zák. 114/1995 Sb.), ale rozhoduje o něm při nakládce a kontroluje jej průběžně — žádné formální plánovací okno.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+<ul>
+  <li><strong>Před vyplutím:</strong> rozložení zkontroluj vizuálně — plavidlo nemá viditelně klesat na jednu stranu (žádný „list"). I malé naklonění zhoršuje plavební vlastnosti a snižuje rezervu do překlopení.</li>
+  <li><strong>Při nakládce:</strong> těžké věci dolů a do středu, lehké nahoru / na okraje. Kapalný náklad v polonaplněných nádržích je obzvlášť zrádný (volná hladina = posun těžiště za pohybu).</li>
+  <li><strong>U malých plavidel (rekreace):</strong> totéž platí pro lidi a vybavení — nepřesedávat všichni na jednu stranu, neukládat baterie a kotvu na záď, zatímco příď je prázdná.</li>
+  <li><strong>Za plavby:</strong> pokud se náklad uvolní nebo posune, je třeba ho znovu zajistit — pravidlo „nesmí ohrožovat stabilitu" platí <em>po celou dobu plavby</em>, ne jen při vyplutí.</li>
+</ul>
+
+<h3>Mnemo</h3>
+<p style="background:#fef3c7;padding:10px 14px;border-left:4px solid #f59e0b;border-radius:4px">
+<strong>„Stabilita = aby se nepřevrátilo. Pevnost = aby se nezlomilo."</strong> Náklad nesmí způsobit ani jedno — proto rozprostřít, držet těžiště nízko a centrované.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.sagit.cz/info/sb15067">Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — úplné znění (Sagit)</a></li>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb. (zákonyprolidi.cz)</a></li>
+</ul>

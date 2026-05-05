@@ -1,0 +1,158 @@
+<h2>Boční světla — barva, intenzita, úhel</h2>
+
+<p><strong>Správná je odpověď:</strong> <em>„jasné zelené světlo na pravém boku a jasné červené světlo na levém boku plavidla, z nichž každé svítí nepřerušovaně v obzorovém výseku 112,5°."</em> Je to <strong>doslovná citace § 15 odst. 1 písm. b) vyhlášky č. 67/2015 Sb.</strong> o pravidlech plavebního provozu.</p>
+
+<h3>Jádro</h3>
+<p>U boční signalizace musí <strong>sednout tři věci najednou</strong>:</p>
+<ul>
+  <li><strong>Typ světla = „jasné"</strong> (ne „silné", ne „obyčejné" — vyhláška rozlišuje tři intenzity a každá je vyhrazena jinému světlu)</li>
+  <li><strong>Barva podle boku</strong> — <span style="color:#16a34a;font-weight:700">zelená vpravo</span>, <span style="color:#dc2626;font-weight:700">červená vlevo</span></li>
+  <li><strong>Úhel 112,5°</strong> — sektor svítí nepřerušovaně, viditelně z přídě a 22,5° dozadu za kolmici</li>
+</ul>
+
+<blockquote style="border-left:4px solid #2563eb;padding:8px 14px;background:#eff6ff;margin:12px 0">
+<strong>§ 15 odst. 1 písm. b) vyhlášky č. 67/2015 Sb.:</strong><br>
+„bočním světlem [se rozumí] <strong>jasné zelené světlo na pravém boku plavidla a jasné červené světlo na levém boku plavidla</strong>, z nichž každé svítí nepřerušovaně v obzorovém výseku <strong>112,5 stupňů</strong>"
+</blockquote>
+
+<h3>Vizualizace — pohled shora na plavidlo</h3>
+<p>Příď nahoru. Sektory ukazují, odkud je která barva vidět. <span style="color:#16a34a;font-weight:700">Zelený sektor</span> a <span style="color:#dc2626;font-weight:700">červený sektor</span> mají každý <strong>112,5°</strong> a navazují přes příď. Dozadu je doplňuje záďové (jasné nebo obyčejné <strong>bílé</strong>) světlo s úhlem <strong>135°</strong>. Dohromady kryjí plných 360°.</p>
+
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Schéma bočních světel — pohled shora</title>
+  <desc>Plavidlo viděné shora s vyznačenými sektory navigačních světel: pravý bok 112,5° zelený, levý bok 112,5° červený, záď 135° bílý.</desc>
+
+  <!-- záďový sektor (bílý/šedý informativní) -->
+  <path d="M 400 300 L 603.25 384.2 A 220 220 0 0 1 196.75 384.2 Z"
+        style="fill:#f5f5f4;stroke:#a8a29e;stroke-width:1.5;opacity:0.85"/>
+
+  <!-- pravý sektor (zelená) - 0° až 112,5° po směru hodinových ručiček -->
+  <path d="M 400 300 L 400 80 A 220 220 0 0 1 603.25 384.2 Z"
+        style="fill:#16a34a;stroke:#15803d;stroke-width:1.5;opacity:0.55"/>
+
+  <!-- levý sektor (červená) - 0° proti směru do 247,5° -->
+  <path d="M 400 300 L 400 80 A 220 220 0 0 0 196.75 384.2 Z"
+        style="fill:#dc2626;stroke:#b91c1c;stroke-width:1.5;opacity:0.55"/>
+
+  <!-- kolmice k podélné ose (čárkované) -->
+  <line x1="180" y1="300" x2="620" y2="300"
+        style="stroke:#475569;stroke-width:1.2;stroke-dasharray:6 4"/>
+  <text x="630" y="304" style="font-size:11px;fill:#475569">kolmice k podélné ose</text>
+
+  <!-- podélná osa plavidla -->
+  <line x1="400" y1="80" x2="400" y2="540"
+        style="stroke:#475569;stroke-width:1;stroke-dasharray:3 3;opacity:0.6"/>
+
+  <!-- obrys plavidla (kapka, příď nahoru) -->
+  <path d="M 400 200
+           C 440 215, 455 260, 455 310
+           L 455 360
+           C 455 380, 445 392, 430 395
+           L 370 395
+           C 355 392, 345 380, 345 360
+           L 345 310
+           C 345 260, 360 215, 400 200 Z"
+        style="fill:#fafaf9;stroke:#1f2937;stroke-width:2.5"/>
+
+  <!-- střední tečka (poloha svítilny) -->
+  <circle cx="400" cy="300" r="4" style="fill:#1f2937"/>
+
+  <!-- zelené světlo na pravém boku -->
+  <circle cx="455" cy="305" r="7" style="fill:#16a34a;stroke:#14532d;stroke-width:1.5"/>
+  <!-- červené světlo na levém boku -->
+  <circle cx="345" cy="305" r="7" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+
+  <!-- popisky sektorů -->
+  <text x="540" y="200" text-anchor="middle" style="font-size:18px;font-weight:700;fill:#15803d">112,5°</text>
+  <text x="540" y="220" text-anchor="middle" style="font-size:12px;fill:#15803d">PRAVÝ BOK · zelená</text>
+
+  <text x="260" y="200" text-anchor="middle" style="font-size:18px;font-weight:700;fill:#b91c1c">112,5°</text>
+  <text x="260" y="220" text-anchor="middle" style="font-size:12px;fill:#b91c1c">LEVÝ BOK · červená</text>
+
+  <text x="400" y="500" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#475569">135° záďové · bílá</text>
+
+  <!-- popisky příď/záď -->
+  <text x="400" y="60" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#1f2937">PŘÍĎ</text>
+  <polygon points="400,68 393,78 407,78" style="fill:#1f2937"/>
+
+  <text x="400" y="570" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#1f2937">ZÁĎ</text>
+  <polygon points="400,548 393,538 407,538" style="fill:#1f2937"/>
+
+  <!-- 22,5° přesah indikace na pravé straně -->
+  <path d="M 400 300 L 400 240 A 60 60 0 0 1 455.4 322.9"
+        style="fill:none;stroke:#15803d;stroke-width:1.5;stroke-dasharray:2 3"/>
+  <text x="465" y="260" style="font-size:11px;font-weight:600;fill:#15803d">22,5° přes příď</text>
+
+  <!-- 22,5° přesah indikace na levé straně -->
+  <path d="M 400 300 L 344.6 322.9 A 60 60 0 0 1 400 240"
+        style="fill:none;stroke:#b91c1c;stroke-width:1.5;stroke-dasharray:2 3"/>
+  <text x="265" y="260" text-anchor="end" style="font-size:11px;font-weight:600;fill:#b91c1c">22,5° přes příď</text>
+
+  <!-- vysvětlivka součtu úhlů -->
+  <g transform="translate(20,20)">
+    <rect x="0" y="0" width="220" height="80" rx="6" style="fill:#fffbeb;stroke:#f59e0b;stroke-width:1.5"/>
+    <text x="10" y="20" style="font-size:12px;font-weight:700;fill:#92400e">Součet sektorů:</text>
+    <text x="10" y="38" style="font-size:11px;fill:#92400e">112,5° + 112,5° + 135° = 360°</text>
+    <text x="10" y="56" style="font-size:11px;fill:#92400e">Sektory na sebe navazují,</text>
+    <text x="10" y="70" style="font-size:11px;fill:#92400e">kryjí celé okolí plavidla.</text>
+  </g>
+</svg>
+
+<h3>Pozadí — tři intenzity světla podle vyhlášky</h3>
+<p>Vyhláška v § 15 odst. 1 rozlišuje <strong>tři intenzity</strong> světel (<em>silné</em>, <em>jasné</em>, <em>obyčejné</em>) a každý typ světla má přiřazenou jednu z nich. Tohle je v testu hlavní past:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:8px 0">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Druh světla</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Intenzita</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Úhel sektoru</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Barva</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:600">vrcholové (stěžňové)</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb"><strong>silné</strong></td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">225°</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">bílá</td>
+    </tr>
+    <tr style="background:#ecfdf5">
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">boční</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">jasné</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">112,5°</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">zelená vpravo / červená vlevo</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:600">záďové</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">jasné nebo obyčejné</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">135°</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">bílá</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;font-weight:600">viditelné ze všech stran</td>
+      <td style="padding:8px">—</td>
+      <td style="padding:8px">360°</td>
+      <td style="padding:8px">podle situace</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li>Varianta s <strong>„silným"</strong> bočním světlem a barvami <em>zelená vlevo, červená vpravo</em> má rovnou <strong>dvě chyby</strong>: typ světla má být <em>jasné</em> (silné má jen vrcholové), a barvy jsou prohozené. Pravidlo: <strong>pravý bok = zelená</strong>, <strong>levý bok = červená</strong>.</li>
+  <li>Varianta s <strong>„obyčejnými"</strong> světly má chybu v intenzitě. „Obyčejné" je nejslabší kategorie a vyhláška ji povoluje jen jako alternativu pro záďové světlo, ne pro boční.</li>
+</ul>
+
+<h3>Mnemoniky a praxe</h3>
+<ul>
+  <li><strong>Pravá zelená, levá červená.</strong> Anglicky: Po<strong>RT</strong> = <strong>R</strong>ed (levý bok = červená).</li>
+  <li><strong>112,5° = 90° + 22,5°.</strong> Kolmo k boku (90°) plus přesah <strong>přes příď</strong> (22,5°). Boční světlo proto vidí i loď, která vám jede přímo proti přídi.</li>
+  <li><strong>225° + 135° = 360°.</strong> Pravé + levé boční dohromady (2× 112,5° = 225°) kryjí přední polokouli; záďové (135°) doplňuje záď. Žádná mezera, žádný přesah.</li>
+  <li><strong>Praktická aplikace:</strong> když v noci vidíte před sebou na vodě <strong>jen červené světlo</strong>, máte loď z levého boku — v křížící situaci je to <em>vy</em>, kdo má přednost (vidíte ji přicházet zprava? Ne — z pohledu druhé lodi jste vy ten, kdo přichází z její pravé strany). Pokud vidíte <strong>jen zelené</strong>, máte ji z pravého boku — vy musíte uhnout.</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://sps.gov.cz/downloads/predpisy/vyhlaska-67-2015sb.pdf">Vyhláška č. 67/2015 Sb. — úplné znění (Státní plavební správa, PDF)</a></li>
+</ul>

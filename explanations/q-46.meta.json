@@ -1,0 +1,10 @@
+{
+  "qid": 46,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://www.zakonyprolidi.cz/cs/2015-334",
+    "https://app.batacanal.cz/pokyny-pro-plavbu/doklady-plavidla.html",
+    "https://sps.gov.cz/downloads/predpisy/vyhlaska-334-2015sb.pdf"
+  ],
+  "model": "claude-opus-4-7"
+}

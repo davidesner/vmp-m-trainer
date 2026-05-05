@@ -1,0 +1,145 @@
+<h2>Vrcholové světlo — definice</h2>
+
+<p>Správná odpověď: <strong>„silné bílé světlo svítící nepřerušovaně v obzorovém výseku 225°"</strong>.</p>
+
+<p>Tři znaky musí sedět současně:</p>
+<ul>
+  <li><strong>Intenzita: silné</strong> — nejvyšší kategorie (silnější než „jasné" a „obyčejné")</li>
+  <li><strong>Barva: bílá</strong></li>
+  <li><strong>Výsek: 225°</strong> — viditelné zepředu a 22,5° dozadu od kolmice na podélnou osu z obou boků</li>
+</ul>
+
+<h3>Vizualizace — výseky světel shora (pohled z ptačí perspektivy)</h3>
+
+<p>Plavidlo je orientované přídí nahoru. Vrcholové světlo (225°) pokrývá příď a oba boky až 22,5° za kolmici, záďové (135°) doplňuje zbývající kruh. Boční zelené (pravobok) a červené (levobok) překrývají výsek 112,5° každé.</p>
+
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:800px;height:auto;background:#f8fafc;border-radius:8px">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Levý panel: Vrcholové světlo 225° ===== -->
+  <g transform="translate(200,230)">
+    <text x="0" y="-200" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Vrcholové světlo — 225°</text>
+    <text x="0" y="-180" text-anchor="middle" font-size="12" fill="#475569">silné bílé, nepřerušované</text>
+
+    <!-- Výsek 225° (od -112.5° do +112.5° měřeno od přídy) -->
+    <!-- V SVG kruh: 0° = vpravo. Příď nahoru = -90°. Výsek 225° kolem přídy = -90°-112.5°=-202.5° až -90°+112.5°=22.5° -->
+    <!-- Pro arc: start na úhlu -202.5° (= 157.5°), end na 22.5° -->
+    <!-- start: cos(157.5°)=-0.924, sin(157.5°)=0.383 -> (-138.6, 57.4) -->
+    <!-- end: cos(22.5°)=0.924, sin(22.5°)=0.383 -> (138.6, 57.4) -->
+    <path d="M 0,0 L -138.6,-57.4 A 150,150 0 1,1 138.6,-57.4 Z"
+          fill="#fde68a" fill-opacity="0.6" stroke="#ca8a04" stroke-width="2"/>
+
+    <!-- Loď shora -->
+    <path d="M -16,30 L -16,-15 L 0,-35 L 16,-15 L 16,30 Z"
+          fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+
+    <!-- Bílé světlo na stěžni -->
+    <circle cx="0" cy="-5" r="6" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="0" cy="-5" r="10" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+    <!-- Šipka přídě -->
+    <line x1="0" y1="30" x2="0" y2="-50" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="6" y="-50" font-size="11" fill="#475569">příď</text>
+
+    <!-- Popisky úhlů -->
+    <text x="-110" y="50" font-size="11" fill="#92400e" font-weight="bold">22,5°</text>
+    <text x="80" y="50" font-size="11" fill="#92400e" font-weight="bold">22,5°</text>
+
+    <!-- Slepý sektor (135° vzadu) -->
+    <text x="0" y="100" text-anchor="middle" font-size="11" fill="#64748b">slepý sektor 135°</text>
+  </g>
+
+  <!-- ===== Pravý panel: kompletní rozložení ===== -->
+  <g transform="translate(580,230)">
+    <text x="0" y="-200" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Všechna světla dohromady</text>
+    <text x="0" y="-180" text-anchor="middle" font-size="12" fill="#475569">vrcholové + boční + záďové = 360°</text>
+
+    <!-- Vrcholové 225° (žluté, slabší) - jako reference v pozadí -->
+    <path d="M 0,0 L -138.6,-57.4 A 150,150 0 1,1 138.6,-57.4 Z"
+          fill="#fef3c7" fill-opacity="0.4" stroke="none"/>
+
+    <!-- Pravé boční světlo - zelené 112.5° (od přídy 22.5° na pravobok) -->
+    <!-- Výsek od -90° (příď) po -90°+112.5°=22.5° -->
+    <!-- start: (0,-150), end: (138.6, 57.4) -->
+    <path d="M 0,0 L 0,-150 A 150,150 0 0,1 138.6,57.4 Z"
+          fill="#22c55e" fill-opacity="0.45" stroke="#15803d" stroke-width="1.5"/>
+
+    <!-- Levé boční světlo - červené 112.5° -->
+    <!-- Výsek od -90°-112.5°=-202.5° (=157.5°) po -90° (příď) -->
+    <!-- start: (-138.6, 57.4), end: (0,-150) -->
+    <path d="M 0,0 L -138.6,57.4 A 150,150 0 0,1 0,-150 Z"
+          fill="#ef4444" fill-opacity="0.45" stroke="#b91c1c" stroke-width="1.5"/>
+
+    <!-- Záďové světlo - bílé 135° (vzadu) -->
+    <!-- Výsek od 22.5° po 157.5° -->
+    <!-- start: (138.6, 57.4), end: (-138.6, 57.4) -->
+    <path d="M 0,0 L 138.6,57.4 A 150,150 0 0,1 -138.6,57.4 Z"
+          fill="#e2e8f0" fill-opacity="0.7" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- Loď shora -->
+    <path d="M -16,30 L -16,-15 L 0,-35 L 16,-15 L 16,30 Z"
+          fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+
+    <!-- Vrcholové světlo (bílá tečka) -->
+    <circle cx="0" cy="-5" r="5" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+
+    <!-- Šipka přídě -->
+    <line x1="0" y1="30" x2="0" y2="-50" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Popisky -->
+    <text x="-95" y="-90" font-size="11" fill="#b91c1c" font-weight="bold">červené 112,5°</text>
+    <text x="35" y="-90" font-size="11" fill="#15803d" font-weight="bold">zelené 112,5°</text>
+    <text x="0" y="130" text-anchor="middle" font-size="11" fill="#475569" font-weight="bold">záďové bílé 135°</text>
+  </g>
+
+  <!-- Legenda dole -->
+  <g transform="translate(50,400)">
+    <rect x="0" y="0" width="20" height="14" fill="#fde68a" stroke="#ca8a04"/>
+    <text x="28" y="11" font-size="11" fill="#0f172a">vrcholové (silné bílé) 225°</text>
+
+    <rect x="200" y="0" width="20" height="14" fill="#22c55e" fill-opacity="0.45" stroke="#15803d"/>
+    <text x="228" y="11" font-size="11" fill="#0f172a">boční pravé (jasné zelené) 112,5°</text>
+
+    <rect x="430" y="0" width="20" height="14" fill="#ef4444" fill-opacity="0.45" stroke="#b91c1c"/>
+    <text x="458" y="11" font-size="11" fill="#0f172a">boční levé (jasné červené) 112,5°</text>
+
+    <rect x="640" y="0" width="20" height="14" fill="#e2e8f0" stroke="#475569"/>
+    <text x="668" y="11" font-size="11" fill="#0f172a">záďové (j./obyč. bílé) 135°</text>
+  </g>
+</svg>
+
+<h3>Srovnání všech světel — tři znaky, které se musí trefit</h3>
+
+<table>
+  <thead>
+    <tr><th>Typ světla</th><th>Intenzita</th><th>Barva</th><th>Výsek</th></tr>
+  </thead>
+  <tbody>
+    <tr style="background:#fef3c7"><td><strong>Vrcholové</strong></td><td><strong>silné</strong></td><td><strong>bílá</strong></td><td><strong>225°</strong></td></tr>
+    <tr><td>Boční (pravobok)</td><td>jasné</td><td>zelená</td><td>112,5°</td></tr>
+    <tr><td>Boční (levobok)</td><td>jasné</td><td>červená</td><td>112,5°</td></tr>
+    <tr><td>Záďové</td><td>jasné nebo obyčejné</td><td>bílá</td><td>135°</td></tr>
+  </tbody>
+</table>
+
+<h3>Proč nejsou ostatní varianty správně</h3>
+
+<ul>
+  <li><strong>„Obyčejné bílé, 135°"</strong> → to je popis <strong>záďového</strong> světla. Sedí barva, ale chybí intenzita „silné" a 135° je naopak doplňkový (slepý) sektor vrcholového.</li>
+  <li><strong>„Jasné bílé, 112,5°"</strong> → 112,5° je výsek <strong>bočního</strong> světla, jenže ta jsou barevná (zelené/červené), ne bílá. Hybrid, který neodpovídá žádnému světlu v definici.</li>
+</ul>
+
+<h3>Praktická aplikace — geometrie</h3>
+
+<p><strong>Vrcholové 225° + záďové 135° = 360°.</strong> V noci je plavidlo viditelné kolem dokola — vpředu a do boků silným bílým vrcholovým, vzadu jasným/obyčejným bílým záďovým. Boční zelené (pravobok) a červené (levobok) ve výseku 112,5° pak ostatním plavidlům říkají, <em>kterým směrem</em> se plavíte: kdo vidí zelené, je u vašeho pravoboku.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li><a href="https://www.stranypotapecske.cz/dokument/rpb.asp">Řád plavební bezpečnosti — §1.03.01 (definice světel)</a></li>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — <a href="https://www.zakonyprolidi.cz/cs/2015-67">úplné znění</a></li>
+</ul>

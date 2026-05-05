@@ -1,0 +1,137 @@
+<h2>Záďové světlo — definice</h2>
+
+<p>Správná odpověď je <strong>„jasné nebo obyčejné bílé světlo, svítící nepřerušovaně v obzorovém výseku 135°"</strong>.</p>
+
+<h3>Co říká vyhláška</h3>
+
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, <strong>Příloha č. 5, čl. 3.01 odst. 5 písm. c)</strong>, definuje záďové světlo takto:</p>
+
+<blockquote>
+„záďové světlo" je jasné nebo obyčejné bílé světlo, svítící nepřerušovaně v obzorovém výseku 135 stupňů umístěné tak, aby bylo viditelné zezadu 67,5 stupňů na obě strany od podélné osy plavidla
+</blockquote>
+
+<p>Tři klíčové parametry:</p>
+
+<table>
+  <thead>
+    <tr><th>Parametr</th><th>Hodnota</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Barva</td><td><strong>bílá</strong></td></tr>
+    <tr><td>Intenzita</td><td>jasné <strong>nebo</strong> obyčejné</td></tr>
+    <tr><td>Režim</td><td><strong>nepřerušované</strong> svícení</td></tr>
+    <tr><td>Obzorový výsek</td><td><strong>135°</strong> (2× 67,5° od podélné osy vzad)</td></tr>
+  </tbody>
+</table>
+
+<h3>Vizualizace — pohled na plavidlo shora</h3>
+
+<p>Plavidlo je orientováno přídí nahoru. Záďové světlo svítí z kormy a pokrývá zadní výsek 135°. Pro porovnání jsou zobrazena i ostatní obzorová světla.</p>
+
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#0a1929;border-radius:8px">
+  <defs>
+    <radialGradient id="bow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="port" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff3b3b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff3b3b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="stbd" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="stern" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sektor záďového světla (bílý, 135°, dozadu) -->
+  <!-- Střed (300,300), poloměr 260, úhel od 22,5° vlevo od osy vzad po 22,5° vpravo od osy vzad -->
+  <!-- Osa vzad = úhel 90° od kladné x (tj. dolů). Levá hrana 90°-67,5°=22,5°, pravá 90°+67,5°=157,5° -->
+  <!-- Souřadnice: x = 300 + r*cos(a), y = 300 + r*sin(a) -->
+  <!-- a1 = 22,5° → (540.21, 399.49); a2 = 157,5° → (59.79, 399.49) -->
+  <path d="M 300 300 L 540.21 399.49 A 260 260 0 0 1 59.79 399.49 Z" fill="url(#stern)" stroke="#ffffff" stroke-width="1" stroke-opacity="0.6"/>
+
+  <!-- Sektor levobok – červené světlo, 112,5°, viditelné z přední levé strany -->
+  <!-- Boční světlo: od přídě (osa vpřed = -90° tj. nahoru) o 112,5° dovnitř příslušného boku -->
+  <!-- Levobok (port): od osy vpřed po 22,5° za příčnou rovinu nalevo -->
+  <!-- Tedy úhly od -90° (nahoru) po -90°-112,5° = -202,5° (= 157,5°). V SVG y dolů, sin pozitivní = dolů. -->
+  <!-- Levobok je strana se záporným x (vlevo). Jdeme od (300, 40) nahoru-dopředu, doleva-dozadu po 22,5° za příčku. -->
+  <!-- a_start = -90° (nahoru), a_end = -90° - 112,5° = -202,5° (= 157,5°) -->
+  <!-- Bod a_start: (300, 40). Bod a_end: (300+260*cos(-202,5°), 300+260*sin(-202,5°)) = (300-240.21, 300-99.49) = (59.79, 200.51) -->
+  <path d="M 300 300 L 300 40 A 260 260 0 0 0 59.79 200.51 Z" fill="url(#port)" stroke="#ff3b3b" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Sektor pravobok – zelené světlo, 112,5°, od osy vpřed po 22,5° za příčku napravo -->
+  <!-- a_start = -90°, a_end = -90° + 112,5° = 22,5°. Bod a_end: (540.21, 200.51) -->
+  <path d="M 300 300 L 300 40 A 260 260 0 0 1 540.21 200.51 Z" fill="url(#stbd)" stroke="#22c55e" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Osy a vodítka -->
+  <line x1="300" y1="40" x2="300" y2="560" stroke="#ffffff" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.3"/>
+  <line x1="40" y1="300" x2="560" y2="300" stroke="#ffffff" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.3"/>
+
+  <!-- Plavidlo – kontura shora -->
+  <path d="M 300 200 C 320 200 335 240 335 280 L 335 380 C 335 395 325 405 300 405 C 275 405 265 395 265 380 L 265 280 C 265 240 280 200 300 200 Z"
+        fill="#1e3a5f" stroke="#7dd3fc" stroke-width="2"/>
+
+  <!-- Pozice světel na plavidle -->
+  <!-- Záďové světlo (bílá tečka) -->
+  <circle cx="300" cy="402" r="6" fill="#ffffff" stroke="#0a1929" stroke-width="1"/>
+  <!-- Levoboční (červená tečka, vpředu vlevo) -->
+  <circle cx="280" cy="225" r="6" fill="#ff3b3b" stroke="#0a1929" stroke-width="1"/>
+  <!-- Pravoboční (zelená tečka, vpředu vpravo) -->
+  <circle cx="320" cy="225" r="6" fill="#22c55e" stroke="#0a1929" stroke-width="1"/>
+
+  <!-- Příď / záď popisky -->
+  <text x="300" y="25" fill="#7dd3fc" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">PŘÍĎ ↑</text>
+  <text x="300" y="585" fill="#ffffff" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">ZÁĎ ↓</text>
+
+  <!-- Popis úhlů -->
+  <text x="300" y="475" fill="#ffffff" font-family="sans-serif" font-size="18" text-anchor="middle" font-weight="bold">135°</text>
+  <text x="300" y="495" fill="#ffffff" font-family="sans-serif" font-size="11" text-anchor="middle" opacity="0.85">záďové světlo (bílé)</text>
+
+  <text x="135" y="155" fill="#ff3b3b" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">112,5°</text>
+  <text x="135" y="172" fill="#ff3b3b" font-family="sans-serif" font-size="10" text-anchor="middle">levoboční</text>
+
+  <text x="465" y="155" fill="#22c55e" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">112,5°</text>
+  <text x="465" y="172" fill="#22c55e" font-family="sans-serif" font-size="10" text-anchor="middle">pravoboční</text>
+
+  <!-- Vyznačení 67,5° na každou stranu od podélné osy vzad -->
+  <text x="395" y="370" fill="#ffffff" font-family="sans-serif" font-size="10" opacity="0.7">67,5°</text>
+  <text x="180" y="370" fill="#ffffff" font-family="sans-serif" font-size="10" opacity="0.7" text-anchor="end">67,5°</text>
+</svg>
+
+<p><em>Pohled shora. Tři barevné výseky reprezentují tři typy obzorových světel a jejich zorné pole. Záďové světlo (bílé) zalévá zadní 135° výsek; boční světla (červené levobok, zelené pravobok) každé 112,5°.</em></p>
+
+<h3>Pomůcka — součet 360°</h3>
+
+<p>Všechna obzorová světla menšího plavidla dohromady pokryjí celých 360° kolem lodi:</p>
+
+<ul>
+  <li>2× boční světlo: 2 × 112,5° = <strong>225°</strong> vpředu</li>
+  <li>záďové světlo: <strong>135°</strong> vzadu</li>
+  <li>součet: <strong>225° + 135° = 360°</strong> ✓</li>
+</ul>
+
+<p>Pro úplnost: <strong>stěžňové (topové) bílé světlo</strong> má 225° a překrývá oba boky vpředu — to je úhel, který v jedné z chytlavých variant figuruje místo záďového a snadno splete.</p>
+
+<h3>Proč jsou ostatní varianty špatně</h3>
+
+<ul>
+  <li>Varianta s <strong>„silným žlutým světlem, výsekem 225°"</strong> má všechny tři parametry špatně: barva (žluté, ne bílé), kategorie intenzity (vyhláška zná „jasné" a „obyčejné") a 225° je úhel <strong>stěžňového</strong> světla.</li>
+  <li>Varianta s <strong>„bílým světlem, výsekem 112,5°"</strong> má správnou barvu i režim, ale 112,5° je úhel <strong>bočních</strong> světel (červené levobok / zelené pravobok). Klasická past.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Pokud vidíš na plavidle samostatné <strong>bílé světlo zezadu</strong> a žádné boční (zelené/červené), znamená to, že stojíš v zadním 135° výseku — plavidlo se od tebe vzdaluje. Jakmile uvidíš boční světlo, jsi v jeho předním zorném poli a musíš respektovat pravidla míjení podle barvy, kterou vidíš.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb. — Pravidla plavebního provozu (zakonyprolidi.cz)</a></li>
+  <li><a href="https://www.stranypotapecske.cz/dokument/rpb.asp">Řád plavební bezpečnosti — čl. 3.01 odst. 5 písm. c) (stranypotapecske.cz)</a></li>
+</ul>

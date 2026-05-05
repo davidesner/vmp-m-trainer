@@ -1,0 +1,170 @@
+<h2>Příkazy vůdce sestavy — komu velí, komu ne</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„vůdci plavidel, která jsou součástí sestavy plavidel."</em></p>
+
+<p>Sestava plavidel (např. remorkér s vlečenou barkou) má <strong>jediného vůdce sestavy</strong> — ten určuje pohyb a manévry celé sestavy. Jeho příkazy poslouchají <strong>vůdci jednotlivých plavidel</strong> v sestavě, kteří je pak předávají své posádce. Příkazová linka nesahá na cizí lodě venku ze sestavy ani neobchází vůdce posádky.</p>
+
+<h3>Vizualizace: kdo komu velí v sestavě plavidel</h3>
+
+<svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;height:auto;display:block;margin:0 auto;background:#eaf4fb;border-radius:8px">
+  <defs>
+    <marker id="arr1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrX" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <text x="320" y="26" text-anchor="middle" font-size="16" font-weight="700" fill="#111">Sestava plavidel: komu sahá pravomoc vůdce sestavy</text>
+
+  <line x1="20" y1="265" x2="620" y2="265" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="20" y1="285" x2="620" y2="285" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="20" y1="305" x2="620" y2="305" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <g>
+    <polygon points="80,225 80,275 180,275 200,250 180,225" fill="#0f766e" stroke="#0d4f4a" stroke-width="2"/>
+    <rect x="100" y="195" width="60" height="35" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+    <circle cx="130" cy="180" r="9" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+    <text x="130" y="184" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">V</text>
+    <text x="130" y="167" text-anchor="middle" font-size="10" font-weight="700" fill="#7f1d1d">VŮDCE SESTAVY</text>
+    <text x="130" y="290" text-anchor="middle" font-size="11" font-weight="700" fill="#0d4f4a">REMORKÉR</text>
+    <text x="130" y="304" text-anchor="middle" font-size="9" fill="#0d4f4a">(plavidlo s pohonem)</text>
+  </g>
+
+  <line x1="200" y1="250" x2="240" y2="250" stroke="#374151" stroke-width="3"/>
+
+  <g>
+    <rect x="240" y="225" width="130" height="50" fill="#7c3aed" stroke="#4c1d95" stroke-width="2"/>
+    <rect x="260" y="200" width="40" height="25" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+    <circle cx="280" cy="190" r="7" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5"/>
+    <text x="280" y="193" text-anchor="middle" font-size="8" font-weight="700" fill="#fff">v</text>
+    <text x="280" y="178" text-anchor="middle" font-size="9" font-weight="700" fill="#1e3a8a">vůdce</text>
+    <text x="305" y="255" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">BARKA 1</text>
+  </g>
+
+  <line x1="370" y1="250" x2="410" y2="250" stroke="#374151" stroke-width="3"/>
+
+  <g>
+    <rect x="410" y="225" width="130" height="50" fill="#7c3aed" stroke="#4c1d95" stroke-width="2"/>
+    <rect x="430" y="200" width="40" height="25" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+    <circle cx="450" cy="190" r="7" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5"/>
+    <text x="450" y="193" text-anchor="middle" font-size="8" font-weight="700" fill="#fff">v</text>
+    <text x="450" y="178" text-anchor="middle" font-size="9" font-weight="700" fill="#1e3a8a">vůdce</text>
+    <text x="475" y="255" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">BARKA 2</text>
+  </g>
+
+  <path d="M 130 175 Q 200 130 280 178" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr1)"/>
+  <path d="M 130 175 Q 280 100 450 178" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr1)"/>
+  <text x="320" y="105" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">PŘÍKAZY VŮDCE SESTAVY</text>
+  <text x="320" y="120" text-anchor="middle" font-size="9" fill="#7f1d1d">→ vůdci ostatních plavidel v sestavě</text>
+
+  <g opacity="0.5">
+    <rect x="555" y="60" width="65" height="30" fill="#9ca3af" stroke="#4b5563" stroke-width="1.5"/>
+    <circle cx="585" cy="50" r="6" fill="#9ca3af" stroke="#374151" stroke-width="1"/>
+    <text x="588" y="55" text-anchor="middle" font-size="10" fill="#1f2937">cizí loď</text>
+    <text x="588" y="80" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">CIZÍ</text>
+  </g>
+  <line x1="160" y1="160" x2="555" y2="75" stroke="#9ca3af" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrX)"/>
+  <text x="370" y="55" text-anchor="middle" font-size="11" font-weight="700" fill="#6b7280">✗ příkaz NEDOPADÁ</text>
+
+  <text x="320" y="345" text-anchor="middle" font-size="11" fill="#1e3a8a">Vůdce sestavy má pravomoc <tspan font-weight="700">jen uvnitř své sestavy</tspan>. Cizí lodě řídí pravidla plavebního provozu, ne příkazy vůdce sestavy.</text>
+  <text x="320" y="362" text-anchor="middle" font-size="10" fill="#0d4f4a">Modré kruhy = vůdci jednotlivých plavidel · Červený kruh = vůdce sestavy</text>
+</svg>
+
+<h3>Hierarchie příkazů — dvě úrovně</h3>
+
+<svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;height:auto;display:block;margin:0 auto;background:#fafafa;border-radius:8px">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e40af"/>
+    </marker>
+  </defs>
+
+  <text x="320" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#111">Příkazová linka v sestavě plavidel</text>
+
+  <rect x="240" y="40" width="160" height="44" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="320" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#7f1d1d">VŮDCE SESTAVY</text>
+  <text x="320" y="75" text-anchor="middle" font-size="10" fill="#7f1d1d">(řídí celou sestavu)</text>
+
+  <line x1="320" y1="84" x2="160" y2="120" stroke="#1e40af" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="320" y1="84" x2="320" y2="120" stroke="#1e40af" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="320" y1="84" x2="480" y2="120" stroke="#1e40af" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <rect x="80" y="125" width="160" height="40" rx="5" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+  <text x="160" y="143" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">vůdce plavidla A</text>
+  <text x="160" y="158" text-anchor="middle" font-size="9" fill="#1e3a8a">(plavidlo v sestavě)</text>
+
+  <rect x="240" y="125" width="160" height="40" rx="5" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+  <text x="320" y="143" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">vůdce plavidla B</text>
+  <text x="320" y="158" text-anchor="middle" font-size="9" fill="#1e3a8a">(plavidlo v sestavě)</text>
+
+  <rect x="400" y="125" width="160" height="40" rx="5" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+  <text x="480" y="143" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">vůdce plavidla C</text>
+  <text x="480" y="158" text-anchor="middle" font-size="9" fill="#1e3a8a">(plavidlo v sestavě)</text>
+
+  <line x1="160" y1="165" x2="160" y2="200" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="320" y1="165" x2="320" y2="200" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="480" y1="165" x2="480" y2="200" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <rect x="100" y="205" width="120" height="32" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="160" y="225" text-anchor="middle" font-size="10" fill="#334155">posádka A</text>
+
+  <rect x="260" y="205" width="120" height="32" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="320" y="225" text-anchor="middle" font-size="10" fill="#334155">posádka B</text>
+
+  <rect x="420" y="205" width="120" height="32" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="480" y="225" text-anchor="middle" font-size="10" fill="#334155">posádka C</text>
+
+  <text x="320" y="265" text-anchor="middle" font-size="10" fill="#374151" font-style="italic">Vůdce sestavy → vůdci plavidel → posádky. Vůdce sestavy nikdy nepřeskakuje vůdce plavidla.</text>
+</svg>
+
+<h3>Pozadí: § 29 zákona č. 114/1995 Sb.</h3>
+
+<p>Zákon o vnitrozemské plavbě ukládá v § 29:</p>
+
+<blockquote style="border-left:3px solid #3b82f6;padding-left:12px;margin:8px 0;color:#1e3a8a;font-style:italic">
+  „Vůdce plavidla, které je součástí sestavy plavidel, je povinen řídit se příkazy vůdce sestavy plavidel."
+</blockquote>
+
+<p>Tatáž norma stanoví i druhou úroveň hierarchie — vůdce plavidla je oprávněn dávat příkazy členům posádky a osobám na palubě, kteří jsou je povinni plnit. Tedy:</p>
+
+<ul>
+  <li><strong>Vůdce sestavy</strong> velí <strong>vůdcům plavidel v sestavě</strong>.</li>
+  <li><strong>Vůdce plavidla</strong> velí <strong>posádce a osobám na palubě</strong>.</li>
+</ul>
+
+<p>Doplňkově vyhláška <strong>č. 67/2015 Sb.</strong> (Pravidla plavebního provozu) stanoví, kdo se vůdcem sestavy stává — typicky vůdce (jediného nebo prvního) plavidla s vlastním pohonem; u bočně svázané sestavy vůdce plavidla, ze kterého bylo přeneseno vlečné lano.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;height:auto;display:block;margin:0 auto;background:#fafafa;border-radius:8px">
+  <text x="320" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#111">Pravomoc vůdce sestavy: rozsah</text>
+
+  <rect x="20" y="40" width="600" height="42" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="35" y="60" font-size="12" font-weight="700" fill="#14532d">✓ vůdci plavidel v sestavě</text>
+  <text x="35" y="76" font-size="10" fill="#14532d">→ přesný rozsah pravomoci podle § 29 zákona 114/1995 Sb.</text>
+
+  <rect x="20" y="92" width="600" height="42" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="35" y="112" font-size="12" font-weight="700" fill="#7f1d1d">✗ všichni účastníci plavebního provozu</text>
+  <text x="35" y="128" font-size="10" fill="#7f1d1d">→ moc široké. Cizí lodě se řídí pravidly plavebního provozu, signály a značkami, ne osobními příkazy cizího vůdce sestavy.</text>
+
+  <rect x="20" y="144" width="600" height="48" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="35" y="162" font-size="12" font-weight="700" fill="#7c2d12">✗ pouze členové posádky plavidla, které zajišťuje pohyb sestavy</text>
+  <text x="35" y="177" font-size="10" fill="#7c2d12">→ moc úzké a špatně cílené. Posádce velí jejich vůdce plavidla;</text>
+  <text x="35" y="188" font-size="10" fill="#7c2d12">do sestavy navíc patří i další plavidla — jejich vůdci se musí řídit příkazy vůdce sestavy.</text>
+</svg>
+
+<h3>Praktická aplikace</h3>
+
+<p>Klasická situace: <strong>remorkér táhne barku</strong>. Vůdce remorkéru = vůdce sestavy. Vůdci barky předává po vysílačce příkazy typu „zpomal, máme rychlou loď zezadu", „drž osu plavebního proudu", „zakotvit po levém boku". Vůdce barky tyto příkazy plní a zároveň je překládá do pokynů své posádce.</p>
+
+<p>Osádka jiné lodi, která se sestavou se sestavou jen míjí, žádné příkazy vůdce sestavy neposlouchá — řídí se pravidly o vyhýbání, plavebními značkami a signály.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li><a href="https://www.zakonyprolidi.cz/cs/1995-114" target="_blank" rel="noopener">Zákon č. 114/1995 Sb., o vnitrozemské plavbě (zakonyprolidi.cz)</a></li>
+  <li><a href="https://krajta.slv.cz/2015/67/par_6" target="_blank" rel="noopener">Vyhláška č. 67/2015 Sb. — vůdce sestavy plavidel (krajta.slv.cz)</a></li>
+  <li><a href="https://sps.gov.cz/dok-os/vudce-plavidla-cr" target="_blank" rel="noopener">Státní plavební správa — Vůdce plavidla ČR</a></li>
+</ul>

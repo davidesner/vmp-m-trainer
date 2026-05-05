@@ -1,0 +1,136 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Jádro</h2>
+    <p>Vůdce plavidla je „šéf na palubě". Jeho příkazy k zajištění bezpečnosti a plynulosti plavebního provozu jsou povinni respektovat <strong>všichni, kdo jsou fyzicky s ním na plavidle</strong> — členové posádky <em>i</em> cestující, návštěvníci, kamarádi. Pravomoc ale končí na zábradlí: <strong>okolní plavidla, plavce ve vodě ani osoby na břehu řídit nemůže.</strong></p>
+  </section>
+
+  <section>
+    <h2>Vizualizace — kdo poslouchá vůdce plavidla?</h2>
+    <p>Modrá zóna = okruh osob, na které pravomoc vůdce dosahuje. Šedá zóna = ostatní účastníci plavebního provozu (jiná plavidla, plavci, břeh) — ti se řídí zákonem a vyhláškou, ne osobními příkazy.</p>
+
+    <svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;display:block;margin:0 auto;font-family:system-ui,sans-serif">
+      <defs>
+        <marker id="arr-q25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#1e40af"/>
+        </marker>
+      </defs>
+
+      <rect x="0" y="0" width="600" height="420" fill="#f8fafc"/>
+
+      <rect x="20" y="20" width="560" height="380" rx="12" fill="#e5e7eb" stroke="#9ca3af" stroke-dasharray="6 4"/>
+      <text x="40" y="48" font-size="14" font-weight="600" fill="#374151">Účastníci plavebního provozu (mimo plavidlo) — řídí se zákonem a vyhláškou, NE příkazy vůdce</text>
+
+      <g>
+        <circle cx="120" cy="320" r="14" fill="#9ca3af"/>
+        <path d="M134,320 q14,-4 22,4 q-12,8 -22,-4 z" fill="#9ca3af"/>
+        <text x="100" y="358" font-size="12" fill="#374151">Plavec</text>
+      </g>
+      <g>
+        <ellipse cx="500" cy="100" rx="60" ry="14" fill="#9ca3af"/>
+        <rect x="475" y="80" width="50" height="20" fill="#6b7280"/>
+        <line x1="500" y1="80" x2="500" y2="60" stroke="#374151" stroke-width="2"/>
+        <text x="455" y="138" font-size="12" fill="#374151">Cizí plavidlo</text>
+      </g>
+      <g>
+        <rect x="500" y="350" width="60" height="6" fill="#78716c"/>
+        <circle cx="520" cy="340" r="6" fill="#78716c"/>
+        <line x1="520" y1="346" x2="520" y2="358" stroke="#78716c" stroke-width="2"/>
+        <text x="492" y="382" font-size="12" fill="#374151">Osoba na břehu</text>
+      </g>
+
+      <ellipse cx="300" cy="220" rx="200" ry="120" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="300" y="125" font-size="14" font-weight="700" fill="#1e40af" text-anchor="middle">PLAVIDLO — pravomoc vůdce</text>
+
+      <ellipse cx="300" cy="240" rx="160" ry="60" fill="#1e3a8a" opacity="0.15"/>
+      <path d="M150 240 Q300 180 450 240 L420 280 L180 280 Z" fill="#1e40af" stroke="#1e3a8a" stroke-width="2"/>
+      <rect x="285" y="195" width="30" height="50" fill="#fbbf24" stroke="#92400e"/>
+
+      <g>
+        <circle cx="300" cy="220" r="14" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+        <text x="300" y="225" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">V</text>
+        <text x="300" y="180" font-size="11" font-weight="600" fill="#7f1d1d" text-anchor="middle">Vůdce plavidla</text>
+      </g>
+
+      <g>
+        <circle cx="230" cy="240" r="9" fill="#2563eb"/>
+        <text x="230" y="265" font-size="10" fill="#1e40af" text-anchor="middle">posádka</text>
+      </g>
+      <g>
+        <circle cx="370" cy="240" r="9" fill="#2563eb"/>
+        <text x="370" y="265" font-size="10" fill="#1e40af" text-anchor="middle">posádka</text>
+      </g>
+      <g>
+        <circle cx="260" cy="270" r="9" fill="#10b981"/>
+        <text x="260" y="295" font-size="10" fill="#065f46" text-anchor="middle">cestující</text>
+      </g>
+      <g>
+        <circle cx="340" cy="270" r="9" fill="#10b981"/>
+        <text x="340" y="295" font-size="10" fill="#065f46" text-anchor="middle">cestující</text>
+      </g>
+
+      <line x1="300" y1="220" x2="232" y2="240" stroke="#1e40af" stroke-width="1.5" marker-end="url(#arr-q25)"/>
+      <line x1="300" y1="220" x2="368" y2="240" stroke="#1e40af" stroke-width="1.5" marker-end="url(#arr-q25)"/>
+      <line x1="300" y1="220" x2="262" y2="268" stroke="#1e40af" stroke-width="1.5" marker-end="url(#arr-q25)"/>
+      <line x1="300" y1="220" x2="338" y2="268" stroke="#1e40af" stroke-width="1.5" marker-end="url(#arr-q25)"/>
+
+      <line x1="450" y1="220" x2="540" y2="160" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 4"/>
+      <text x="540" y="155" font-size="11" font-weight="600" fill="#dc2626" text-anchor="end">✗ příkaz nedosahuje</text>
+
+      <text x="300" y="395" font-size="11" font-style="italic" fill="#475569" text-anchor="middle">Modré šipky = příkazy vůdce | Modrá zóna = okruh povinnosti poslechnout</text>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Pozadí — § 29b odst. 3 zákona č. 114/1995 Sb.</h2>
+    <blockquote style="border-left:4px solid #2563eb;padding-left:12px;color:#374151;font-style:italic">
+      „K zajištění bezpečnosti a plynulosti plavebního provozu je vůdce plavidla oprávněn vydávat příkazy členům posádky plavidla a dalším osobám na plavidle; tyto osoby jsou povinny vydanými příkazy řídit se."
+    </blockquote>
+    <p>Klíčový výraz <strong>„na plavidle"</strong> definuje hranici pravomoci. Porušení této povinnosti je přestupek podle § 43 zákona.</p>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní varianty</h2>
+    <ul>
+      <li><strong>„všichni účastníci plavebního provozu"</strong> — moc široké. Vůdce plavidla A nemá pravomoc rozkazovat posádce plavidla B. Mezi plavidly platí pravidla vyhlášky č. 67/2015 Sb. (světelné a zvukové signály, vyhýbání), ne osobní příkazy.</li>
+      <li><strong>„všechny další osoby na plavidle, pokud nemají vlastního průvodce"</strong> — fingovaná výjimka. Žádné „pokud nemají průvodce" v zákoně není. Všichni na plavidle (posádka i ostatní) se řídí vůdcem.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <table style="border-collapse:collapse;width:100%;margin-top:8px">
+      <thead>
+        <tr style="background:#f1f5f9">
+          <th style="text-align:left;padding:8px;border:1px solid #cbd5e1">Situace</th>
+          <th style="text-align:left;padding:8px;border:1px solid #cbd5e1">Pravomoc vůdce?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:8px;border:1px solid #cbd5e1">Cestující odmítá vestu při zhoršení počasí</td>
+          <td style="padding:8px;border:1px solid #cbd5e1;color:#065f46"><strong>Ano</strong> — je na plavidle, musí poslechnout</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;border:1px solid #cbd5e1">Kamarád na palubě chce skočit do vody před přídí blížící se lodi</td>
+          <td style="padding:8px;border:1px solid #cbd5e1;color:#065f46"><strong>Ano</strong> — vůdce zakáže, je povinen poslechnout</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;border:1px solid #cbd5e1">Vodák v kánoi v dráze plavidla</td>
+          <td style="padding:8px;border:1px solid #cbd5e1;color:#7f1d1d"><strong>Ne</strong> — řídí se vyhláškou; lze použít zvukový signál</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;border:1px solid #cbd5e1">Plavec u břehu</td>
+          <td style="padding:8px;border:1px solid #cbd5e1;color:#7f1d1d"><strong>Ne</strong> — není na plavidle</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li><a href="https://www.podnikatel.cz/zakony/zakon-o-vnitrozemske-plavbe/f1619660/">Zákon č. 114/1995 Sb., o vnitrozemské plavbě — Část V Plavební provoz (§ 29b)</a></li>
+      <li><a href="https://sps.gov.cz/dok-os/vudce-plavidla-cr">Státní plavební správa — Vůdce plavidla ČR</a></li>
+    </ol>
+  </section>
+</article>

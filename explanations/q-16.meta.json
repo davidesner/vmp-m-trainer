@@ -1,0 +1,10 @@
+{
+  "qid": 16,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://sps.gov.cz/downloads/predpisy/vyhlaska-67-2015sb.pdf",
+    "https://krajta.slv.cz/2015/67/par_2",
+    "https://www.stranypotapecske.cz/dokument/rpb.asp"
+  ],
+  "model": "claude-opus-4-7"
+}
