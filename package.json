@@ -10,7 +10,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "scrape": "node scripts/scrape.mjs",
-    "package-skill": "bash scripts/package-skill.sh"
+    "package-skill": "bash scripts/package-skill.sh",
+    "batch-explanations": "bash scripts/batch_generate_explanations.sh"
   },
   "dependencies": {
     "dompurify": "^3.4.2",
