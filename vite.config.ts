@@ -29,6 +29,14 @@ function serveExplanations() {
 export default defineConfig({
   plugins: [react(), serveExplanations()],
   resolve: { alias: { '@': path.resolve(__dirname, './src') } },
+  server: {
+    port: 5400,
+    strictPort: true,
+  },
+  preview: {
+    port: 5400,
+    strictPort: true,
+  },
   test: {
     environment: 'jsdom',
     globals: true,

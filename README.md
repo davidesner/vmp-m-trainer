@@ -17,7 +17,9 @@ cp .env.local.example .env.local
 pnpm dev
 ```
 
-Otevře se `http://localhost:5173`.
+Otevře se `http://localhost:5400`.
+
+Případně dvojklik na `~/Desktop/VMP-Trainer.command` — spustí dev server, počká až nastartuje, a otevře prohlížeč. Zavřením okna Terminálu se server vypne.
 
 ## Cowork skill (volitelně, pro AI vysvětlení)
 
