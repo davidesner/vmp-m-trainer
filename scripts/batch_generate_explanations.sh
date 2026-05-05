@@ -110,11 +110,12 @@ generate_one() {
   local prompt="Vysvětli mi otázku #${qid} z VMP M testu (skill explain-vmp-question). Začni výkladem v chatu, vizualizací pokud pomůže (preferuj vizualizaci) — ulož do html rovnou. Na nic se neptej a dokonci task"
 
   # -p / --print            : non-interactive (vypíše a skončí)
-  # --max-turns 20          : safety cap (typický run ~5-10 turns)
+  # --max-turns 35          : safety cap (typický run ~5-15 turns;
+  #                           obrázkové otázky + web research občas potřebují víc)
   # --permission-mode auto  : autonomní rozhodování (auto mode), bez prompts
   if claude \
       -p \
-      --max-turns 20 \
+      --max-turns 35 \
       --permission-mode auto \
       "$prompt" \
       > "$log" 2>&1
