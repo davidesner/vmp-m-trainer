@@ -1,0 +1,110 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Jádro</h2>
+    <p>Správná odpověď je <strong>„spojení jednoho nebo více plavidel vlečených jedním nebo několika plavidly s vlastním pohonem, která jsou součástí sestavy"</strong>. Klíč je ve slovech <em>vlečených</em> (= tažených na laně za sebou) a v tom, že <em>plavidlo s vlastním pohonem (vlečný remorkér) jede vepředu</em> a táhne ostatní za sebou.</p>
+  </section>
+
+  <section>
+    <h2>Tři typy sestav — vizualizace</h2>
+    <p>Pohled shora. Modré obrysy = plavidlo s vlastním pohonem (remorkér). Šedé = vlečené/tlačené plavidlo. Šipka = směr plavby.</p>
+
+    <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#f0f7fb;border:1px solid #cfdde6;border-radius:8px">
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#1f4e79"/>
+        </marker>
+      </defs>
+
+      <!-- VLECNA SESTAVA -->
+      <text x="20" y="30" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1f4e79">1) Vlečná sestava (správná odpověď)</text>
+      <text x="20" y="50" font-family="sans-serif" font-size="12" fill="#444">Remorkér vepředu, plavidla tažená za ním na laně.</text>
+
+      <!-- remorker -->
+      <rect x="40" y="70" width="70" height="30" rx="6" fill="#4a90d9" stroke="#1f4e79" stroke-width="2"/>
+      <text x="75" y="90" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle">remorkér</text>
+      <!-- lano -->
+      <line x1="110" y1="85" x2="150" y2="85" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <!-- tlumene plavidlo 1 -->
+      <rect x="150" y="70" width="80" height="30" rx="4" fill="#bbb" stroke="#666" stroke-width="1.5"/>
+      <text x="190" y="90" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">vlek 1</text>
+      <line x1="230" y1="85" x2="270" y2="85" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <!-- tlumene plavidlo 2 -->
+      <rect x="270" y="70" width="80" height="30" rx="4" fill="#bbb" stroke="#666" stroke-width="1.5"/>
+      <text x="310" y="90" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">vlek 2</text>
+      <!-- směrová šipka -->
+      <line x1="380" y1="85" x2="560" y2="85" stroke="#1f4e79" stroke-width="2" marker-end="url(#arr)"/>
+      <text x="470" y="78" font-family="sans-serif" font-size="11" fill="#1f4e79" text-anchor="middle">směr plavby</text>
+
+      <!-- TLACNA SESTAVA -->
+      <text x="20" y="160" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1f4e79">2) Tlačná sestava</text>
+      <text x="20" y="180" font-family="sans-serif" font-size="12" fill="#444">Vlek vepředu, remorkér tlačí zezadu (pevné spojení).</text>
+
+      <!-- vlek -->
+      <rect x="40" y="200" width="80" height="30" rx="4" fill="#bbb" stroke="#666" stroke-width="1.5"/>
+      <text x="80" y="220" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">vlek</text>
+      <!-- pevné spojeni -->
+      <rect x="120" y="210" width="6" height="10" fill="#444"/>
+      <rect x="126" y="210" width="6" height="10" fill="#444"/>
+      <!-- remorker -->
+      <rect x="132" y="200" width="70" height="30" rx="6" fill="#4a90d9" stroke="#1f4e79" stroke-width="2"/>
+      <text x="167" y="220" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle">tlačný r.</text>
+      <line x1="380" y1="215" x2="560" y2="215" stroke="#1f4e79" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- BOCNE SVAZANA -->
+      <text x="20" y="290" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1f4e79">3) Bočně svázaná sestava (soulodí)</text>
+      <text x="20" y="310" font-family="sans-serif" font-size="12" fill="#444">Plavidla boky vedle sebe, ani jedno před remorkérem.</text>
+
+      <!-- pruvodni plavidlo -->
+      <rect x="40" y="330" width="100" height="22" rx="4" fill="#bbb" stroke="#666" stroke-width="1.5"/>
+      <text x="90" y="346" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">vlek</text>
+      <!-- remorker vedle -->
+      <rect x="40" y="354" width="100" height="22" rx="6" fill="#4a90d9" stroke="#1f4e79" stroke-width="2"/>
+      <text x="90" y="370" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle">remorkér</text>
+      <line x1="160" y1="353" x2="560" y2="353" stroke="#1f4e79" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- POTAH (NE-sestava, ze brehu) -->
+      <text x="20" y="410" font-family="sans-serif" font-size="16" font-weight="bold" fill="#a0392e">4) Potah (vlečení ze břehu) — NENÍ sestava plavidel</text>
+      <text x="20" y="428" font-family="sans-serif" font-size="12" fill="#444">Historický způsob: kůň/traktor/lidé táhli plavidlo ze břehu. Zákon to neoznačuje za sestavu.</text>
+      <!-- breh -->
+      <rect x="40" y="440" width="520" height="14" fill="#c8a878" stroke="#8a6f4a" stroke-width="1"/>
+      <text x="50" y="451" font-family="sans-serif" font-size="10" fill="#5a4423">břeh</text>
+      <!-- kun -->
+      <circle cx="100" cy="438" r="5" fill="#8a4a2a"/>
+      <text x="100" y="434" font-family="sans-serif" font-size="9" fill="#5a4423" text-anchor="middle">tahač</text>
+      <!-- lano sikme dolu k plavidlu -->
+      <line x1="105" y1="442" x2="200" y2="465" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <!-- plavidlo na vode -->
+      <rect x="180" y="460" width="90" height="14" rx="3" fill="#bbb" stroke="#666" stroke-width="1.5"/>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní možnosti</h2>
+    <ul>
+      <li><strong>„Spojení plavidel boky vedle sebe, z nichž se ani jedno nenachází před plavidlem s vlastním pohonem"</strong> — to je doslovná definice <em>bočně svázané sestavy</em> (soulodí), ne vlečné. Past spočívá v tom, že obě sestavy obsahují plavidlo s vlastním pohonem, ale liší se geometrií.</li>
+      <li><strong>„Plavidlo, plovoucí těleso nebo jejich spojení, vlečené ze břehu"</strong> — to je <em>potah</em> (kůň/traktor/lidé tahali ze břehu). Zákon o vnitrozemské plavbě potah jako typ sestavy plavidel <strong>nedefinuje</strong> — sestava plavidel vždy předpokládá plavidlo s vlastním pohonem na vodě, ne tažné prostředky na břehu.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pozadí — právní zdroj</h2>
+    <p>Zákon č. <strong>114/1995 Sb.</strong> o vnitrozemské plavbě v § 2 písm. e) definuje obecně <em>sestavu plavidel</em>:</p>
+    <blockquote>„spojení několika plavidel, z nichž alespoň jedno je s vlastním pohonem"</blockquote>
+    <p>Konkrétní <strong>typy sestav</strong> (vlečná, tlačná, bočně svázaná) definuje prováděcí vyhláška č. <strong>67/2015 Sb.</strong> o pravidlech plavebního provozu (dříve vyhláška 344/1991 Sb. — Řád plavební bezpečnosti). Definice vlečné sestavy zní v podstatě tak, jak je formulovaná správná odpověď: spojení plavidel vlečených jedním či více plavidly s vlastním pohonem, přičemž <strong>vlečný remorkér je součástí sestavy</strong>.</p>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <p>Typ sestavy určuje, <strong>jaká denní a noční signalizace</strong> se na ní nese (žluté kulové znaky, počet bílých světel na stěžni, vlečné koule), kdo je vůdcem sestavy, a jaké manévrovací schopnosti se očekávají. Na ČR vodních cestách jsou dnes <strong>vlečné sestavy vzácné</strong> — drtivá většina nákladních sestav na Labi a Vltavě je tlačných (efektivnější ovládání, lepší tahové vlastnosti, kratší brzdná dráha). Vlečení ze břehu (potah) se na sledovaných vodních cestách už neprovozuje, je to historická forma.</p>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li><a href="https://www.zakonyprolidi.cz/cs/1995-114">Zákon č. 114/1995 Sb., o vnitrozemské plavbě — zakonyprolidi.cz</a></li>
+      <li><a href="https://sps.gov.cz/downloads/predpisy/zakon-114-1995sb.pdf">Zákon č. 114/1995 Sb. — PDF (Státní plavební správa)</a></li>
+      <li><a href="https://www.aspi.cz/products/lawText/1/83902/1/2/vyhlaska-c-67-2015-sb-o-pravidlech-plavebniho-provozu-pravidla-plavebniho-provozu/vyhlaska-c-67-2015-sb-o-pravidlech-plavebniho-provozu-pravidla-plavebniho-provozu">Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — ASPI</a></li>
+      <li><a href="https://cs.wikipedia.org/wiki/Sestava_plavidel">Sestava plavidel — Wikipedie</a></li>
+    </ol>
+  </section>
+</article>

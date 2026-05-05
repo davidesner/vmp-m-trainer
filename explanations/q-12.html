@@ -1,0 +1,111 @@
+<h2>Zastavení plujícího plavidla = stojí vůči břehu</h2>
+
+<p><strong>Správně je: „ke břehu."</strong></p>
+
+<h3>Jádro</h3>
+<p>Pro <strong>plující plavidlo</strong> je „zastavení" právní stav, kdy se plavidlo nepohybuje <strong>vzhledem ke břehu</strong> — tedy vůči pevné zemi, ne vůči vodě. Klíč je, že referenčním rámcem musí být <strong>něco nehybného</strong> (pobřežní bod). Voda i jiná plavidla se taky pohybují, takže se na ně „zastavení" měřit nedá.</p>
+
+<h3>Pozadí — tři stavy plavidla</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu rozlišuje:</p>
+<ul>
+  <li><strong>Plující plavidlo</strong> — není ukotveno, uvázáno ani nasedlé na dno. „Plující" je <em>právní status</em>, ne otázka, jestli se zrovna fyzicky pohybuje.</li>
+  <li><strong>Stojící plavidlo</strong> — je ukotvené, uvázané nebo nasedlé na dno.</li>
+  <li><strong>Zastavení</strong> — pojem <em>uvnitř kategorie „plující"</em>: popisuje moment, kdy plující plavidlo dočasně nehýbe vůči břehu (drží polohu motorem proti proudu, zastavilo v plavební dráze, atp.).</li>
+</ul>
+<p>Proto má „zastavení" vlastní definici — plující plavidlo se může v jednom okamžiku pohybovat po vodě a v dalším stát na místě, aniž by tím změnilo svůj právní status na „stojící".</p>
+
+<h3>Vizualizace — tři lodě, tři stavy</h3>
+<svg width="100%" viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Tři plavidla na řece — která jsou „zastavená"?</title>
+  <desc>Schéma řeky: jedno plavidlo drží polohu motorem proti proudu (zastavené vůči břehu), druhé je unášeno proudem (nezastavené), třetí kotví u břehu (stojící, jiná kategorie).</desc>
+
+  <defs>
+    <marker id="q12arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#888"/>
+    </marker>
+    <marker id="q12arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#c45"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="60" style="fill:#e8e2d4"/>
+  <rect x="0" y="370" width="760" height="90" style="fill:#e8e2d4"/>
+  <rect x="0" y="60" width="760" height="310" style="fill:#d6e8ee;opacity:0.7"/>
+  <line x1="0" y1="60" x2="760" y2="60" style="stroke:#888;stroke-width:2"/>
+  <line x1="0" y1="370" x2="760" y2="370" style="stroke:#888;stroke-width:2"/>
+
+  <text x="12" y="35" style="font-size:13px;font-weight:600;fill:#333">BŘEH (pevný referenční bod)</text>
+  <text x="12" y="410" style="font-size:13px;font-weight:600;fill:#333">BŘEH</text>
+
+  <line x1="40" y1="120" x2="120" y2="120" style="stroke:#888;stroke-width:1.5;fill:none" marker-end="url(#q12arr)"/>
+  <line x1="40" y1="200" x2="120" y2="200" style="stroke:#888;stroke-width:1.5;fill:none" marker-end="url(#q12arr)"/>
+  <line x1="40" y1="280" x2="120" y2="280" style="stroke:#888;stroke-width:1.5;fill:none" marker-end="url(#q12arr)"/>
+  <text x="40" y="105" style="font-size:11px;fill:#666;font-style:italic">směr proudu →</text>
+
+  <g transform="translate(220, 130)">
+    <line x1="0" y1="-65" x2="0" y2="60" style="stroke:#c45;stroke-width:1;stroke-dasharray:3 3;opacity:0.6"/>
+    <text x="4" y="-55" style="font-size:10px;fill:#c45">vůči břehu: 0 m/s</text>
+    <path d="M-30,0 L20,-12 L30,0 L20,12 z" style="fill:#2a3a4a;stroke:#2a3a4a"/>
+    <line x1="20" y1="0" x2="55" y2="0" style="stroke:#c45;stroke-width:2" marker-end="url(#q12arrR)"/>
+    <text x="30" y="-8" style="font-size:10px;fill:#c45">tah motoru</text>
+    <line x1="-15" y1="-25" x2="-50" y2="-25" style="stroke:#4a8aa8;stroke-width:1" marker-end="url(#q12arr)"/>
+    <line x1="-15" y1="25" x2="-50" y2="25" style="stroke:#4a8aa8;stroke-width:1" marker-end="url(#q12arr)"/>
+    <text x="-72" y="42" style="font-size:10px;fill:#4a8aa8">voda obtéká</text>
+    <text x="0" y="-95" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#2a3a4a">Drží polohu motorem</text>
+    <text x="0" y="-80" text-anchor="middle" style="font-size:11px;fill:#666">vůči vodě se pohybuje, vůči břehu stojí</text>
+  </g>
+  <g transform="translate(220, 240)">
+    <rect x="-95" y="0" width="190" height="50" rx="6" style="fill:#d6efd6;stroke:#2a8a4a;stroke-width:1.5"/>
+    <text x="0" y="20" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#2a8a4a">ZASTAVENÉ</text>
+    <text x="0" y="38" text-anchor="middle" style="font-size:11px;fill:#2a3a4a">plující + stojí ke břehu</text>
+  </g>
+
+  <g transform="translate(440, 200)">
+    <line x1="-40" y1="-15" x2="40" y2="-15" style="stroke:#c45;stroke-width:1;stroke-dasharray:3 3;opacity:0.6"/>
+    <text x="0" y="-22" text-anchor="middle" style="font-size:10px;fill:#c45">vůči břehu: pohybuje se →</text>
+    <path d="M-30,0 L20,-12 L30,0 L20,12 z" style="fill:#2a3a4a;stroke:#2a3a4a"/>
+    <text x="0" y="-38" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#2a3a4a">Unášené proudem</text>
+    <text x="0" y="-25" text-anchor="middle" style="font-size:11px;fill:#666">vůči vodě stojí, vůči břehu pluje</text>
+    <line x1="30" y1="20" x2="65" y2="20" style="stroke:#c45;stroke-width:2" marker-end="url(#q12arrR)"/>
+    <text x="48" y="38" text-anchor="middle" style="font-size:10px;fill:#c45">pohyb</text>
+  </g>
+  <g transform="translate(440, 240)">
+    <rect x="-95" y="0" width="190" height="50" rx="6" style="fill:#f5dada;stroke:#b04040;stroke-width:1.5"/>
+    <text x="0" y="20" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#b04040">NENÍ ZASTAVENÉ</text>
+    <text x="0" y="38" text-anchor="middle" style="font-size:11px;fill:#2a3a4a">posouvá se vůči břehu</text>
+  </g>
+
+  <g transform="translate(660, 130)">
+    <line x1="-25" y1="-5" x2="-15" y2="-50" style="stroke:#666;stroke-width:1.5"/>
+    <line x1="25" y1="-5" x2="15" y2="-50" style="stroke:#666;stroke-width:1.5"/>
+    <rect x="-30" y="-65" width="60" height="8" style="fill:#888"/>
+    <path d="M-30,0 L20,-12 L30,0 L20,12 z" style="fill:#2a3a4a;stroke:#2a3a4a"/>
+    <text x="0" y="-95" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#2a3a4a">Uvázané u břehu</text>
+    <text x="0" y="-80" text-anchor="middle" style="font-size:11px;fill:#666">jiná kategorie — „stojící"</text>
+  </g>
+  <g transform="translate(660, 240)">
+    <rect x="-95" y="0" width="190" height="50" rx="6" style="fill:#e8e2d4;stroke:#888;stroke-width:1.5"/>
+    <text x="0" y="20" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#444">STOJÍCÍ (≠ zastavené)</text>
+    <text x="0" y="38" text-anchor="middle" style="font-size:11px;fill:#2a3a4a">není už „plující"</text>
+  </g>
+
+  <text x="380" y="425" text-anchor="middle" style="font-size:12px;fill:#2a3a4a">
+    <tspan font-weight="700">Klíč:</tspan> „Zastavení" se měří vůči <tspan font-weight="700" style="fill:#c45">BŘEHU</tspan> — jedinému pevnému bodu. Voda i jiná plavidla se taky pohybují.
+  </text>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Vůči vodnímu proudu</strong> — past. Plavidlo unášené proudem (motory vypnuté, voda ho nese) by vůči okolní vodě stálo, a přitom evidentně pluje. Definice „zastavení" by tedy přestala dávat smysl.</li>
+  <li><strong>Vůči jinému plujícímu plavidlu / plovoucímu tělesu</strong> — referenční bod, který se sám pohybuje. Dvě plavidla plující stejným směrem stejnou rychlostí by byla „vzájemně zastavená", a přitom obě uhání po řece.</li>
+</ul>
+<p>Pevný bod (břeh) je jediný smysluplný referenční rámec.</p>
+
+<h3>Praktická aplikace</h3>
+<p>Tohle se reálně liší od fyzikální intuice. Kapitán, který motorem <strong>drží stejnou polohu proti silnému proudu</strong>, se vůči vodě pohybuje (voda mu plyne kolem trupu), ale <strong>vůči břehu stojí</strong> — a podle pravidel je tedy zastavený. Důsledky to má pro signalizaci, povinnosti při míjení a pro výklad situací typu „plavidlo zastavilo v plavební dráze".</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. <a href="https://www.zakonyprolidi.cz/cs/2015-67">67/2015 Sb.</a>, o pravidlech plavebního provozu — definice „plující plavidlo", „stání", „zastavení"</li>
+  <li>Zákon č. <a href="https://www.zakonyprolidi.cz/cs/1995-114">114/1995 Sb.</a>, o vnitrozemské plavbě</li>
+</ul>

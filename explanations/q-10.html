@@ -1,0 +1,178 @@
+<h2>Stojící plavidlo — definice podle § 1 písm. b) vyhlášky 67/2015 Sb.</h2>
+
+<h3>Jádro</h3>
+<p>
+  Správná odpověď je <strong>„je přímo nebo nepřímo zakotveno nebo přímo nebo nepřímo vyvázáno ke břehu"</strong>.
+  Tato formulace je <strong>doslovná citace</strong> z <strong>§ 1 písm. b)</strong> vyhlášky č. 67/2015 Sb.
+  o pravidlech plavebního provozu.
+</p>
+<ul>
+  <li><strong>Přímo</strong> = plavidlo má vlastní kotvu spuštěnou na dno, nebo vlastní lano přivázané ke břehu / pevnému objektu.</li>
+  <li><strong>Nepřímo</strong> = plavidlo je uvázáno k jinému plavidlu, které je samo zakotvené nebo vyvázané (typicky skupina plavidel bok při boku).</li>
+</ul>
+
+<h3>Vizualizace — tři stavy plavidla</h3>
+<p>
+  Vyhláška rozeznává tři vzájemně se vylučující stavy. Vlevo je správná odpověď, uprostřed a vpravo dvě
+  pasti, které vypadají, jako by „plavidlo stálo", ale podle definice nejde o stojící plavidlo.
+</p>
+
+<svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#f0f7fc;border:1px solid #d0d7de;border-radius:8px">
+  <defs>
+    <marker id="arrFlow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1976d2"/>
+    </marker>
+  </defs>
+
+  <!-- Panel 1: STOJÍCÍ (correct) -->
+  <g transform="translate(0,0)">
+    <rect x="10" y="10" width="280" height="340" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="6"/>
+    <text x="150" y="35" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1b5e20">STOJÍCÍ ✓</text>
+    <text x="150" y="55" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2e7d32">§ 1 písm. b)</text>
+
+    <!-- water -->
+    <rect x="20" y="180" width="260" height="160" fill="#bbdefb"/>
+    <!-- shore (left bank) -->
+    <rect x="20" y="180" width="40" height="160" fill="#a1887f"/>
+    <line x1="60" y1="180" x2="60" y2="340" stroke="#5d4037" stroke-width="2"/>
+    <text x="40" y="260" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fff" transform="rotate(-90 40 260)">břeh</text>
+
+    <!-- vessel -->
+    <g transform="translate(170,200)">
+      <path d="M -45,0 L 45,0 L 35,18 L -35,18 Z" fill="#37474f" stroke="#102027" stroke-width="1.5"/>
+      <rect x="-15" y="-12" width="30" height="12" fill="#90a4ae" stroke="#37474f"/>
+    </g>
+
+    <!-- mooring line to shore -->
+    <line x1="125" y1="208" x2="60" y2="195" stroke="#bf360c" stroke-width="2"/>
+    <text x="92" y="195" font-family="sans-serif" font-size="9" fill="#bf360c" font-weight="bold">vyvázání</text>
+
+    <!-- anchor line down -->
+    <line x1="200" y1="218" x2="220" y2="310" stroke="#1a237e" stroke-width="2"/>
+    <path d="M 215,308 L 220,318 L 225,308 M 220,300 L 220,318" stroke="#1a237e" stroke-width="2" fill="none"/>
+    <text x="225" y="305" font-family="sans-serif" font-size="9" fill="#1a237e" font-weight="bold">kotva</text>
+
+    <text x="150" y="330" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1b5e20" font-weight="bold">zakotveno NEBO vyvázáno</text>
+  </g>
+
+  <!-- Panel 2: PLUJÍCÍ trap (motor proti proudu) -->
+  <g transform="translate(305,0)">
+    <rect x="10" y="10" width="280" height="340" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="6"/>
+    <text x="150" y="35" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#bf360c">PAST: motor proti proudu</text>
+    <text x="150" y="55" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e65100">= PLUJÍCÍ (§ 1 písm. c)</text>
+
+    <rect x="20" y="180" width="260" height="160" fill="#bbdefb"/>
+
+    <!-- current arrows -->
+    <line x1="40" y1="220" x2="100" y2="220" stroke="#1976d2" stroke-width="2" marker-end="url(#arrFlow)"/>
+    <line x1="40" y1="270" x2="100" y2="270" stroke="#1976d2" stroke-width="2" marker-end="url(#arrFlow)"/>
+    <line x1="200" y1="320" x2="270" y2="320" stroke="#1976d2" stroke-width="2" marker-end="url(#arrFlow)"/>
+    <text x="270" y="215" text-anchor="end" font-family="sans-serif" font-size="10" fill="#1976d2" font-weight="bold">proud →</text>
+
+    <!-- vessel facing left (against current) -->
+    <g transform="translate(170,240)">
+      <path d="M 45,0 L -45,0 L -35,18 L 35,18 Z" fill="#37474f" stroke="#102027" stroke-width="1.5"/>
+      <rect x="-15" y="-12" width="30" height="12" fill="#90a4ae" stroke="#37474f"/>
+      <!-- propeller wash behind -->
+      <path d="M 35,12 Q 60,12 70,18 M 35,18 Q 60,22 75,28" stroke="#fff" stroke-width="2" fill="none" opacity="0.8"/>
+    </g>
+
+    <text x="150" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bf360c">stojí vůči břehu, ale</text>
+    <text x="150" y="215" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bf360c" font-weight="bold">motor běží, není ukotveno</text>
+
+    <text x="150" y="320" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bf360c" font-weight="bold">→ je to PLUJÍCÍ plavidlo</text>
+  </g>
+
+  <!-- Panel 3: NASEDLÉ trap -->
+  <g transform="translate(610,0)">
+    <rect x="10" y="10" width="280" height="340" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="6"/>
+    <text x="150" y="35" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#bf360c">PAST: uvízlé na dně</text>
+    <text x="150" y="55" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e65100">= NASEDLÉ (§ 1 písm. d)</text>
+
+    <rect x="20" y="180" width="260" height="160" fill="#bbdefb"/>
+
+    <!-- bottom -->
+    <path d="M 20,310 Q 80,290 140,300 Q 200,315 280,295 L 280,340 L 20,340 Z" fill="#8d6e63" stroke="#5d4037" stroke-width="1.5"/>
+
+    <!-- rock/obstacle -->
+    <path d="M 130,300 L 145,278 L 165,295 L 175,285 L 185,302 Z" fill="#616161" stroke="#212121" stroke-width="1.5"/>
+
+    <!-- vessel tilted, stuck on rock -->
+    <g transform="translate(155,260) rotate(-12)">
+      <path d="M -45,0 L 45,0 L 35,18 L -35,18 Z" fill="#37474f" stroke="#102027" stroke-width="1.5"/>
+      <rect x="-15" y="-12" width="30" height="12" fill="#90a4ae" stroke="#37474f"/>
+    </g>
+
+    <text x="150" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bf360c">uvízlo na překážce,</text>
+    <text x="150" y="215" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bf360c" font-weight="bold">ztráta volného pohybu</text>
+
+    <text x="150" y="330" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bf360c" font-weight="bold">→ je to NASEDLÉ plavidlo</text>
+  </g>
+</svg>
+
+<h3>Pozadí — tři stavy plavidla</h3>
+<p>
+  Vyhláška v § 1 definuje <strong>tři vzájemně se vylučující stavy</strong>, do kterých plavidlo může spadnout.
+  Správné zařazení určuje, jaké má plavidlo povinnosti (signalizace, vyhýbání, světla atd.).
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stav</th>
+      <th>Paragraf</th>
+      <th>Definice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Stojící</strong></td>
+      <td>§ 1 písm. b)</td>
+      <td>plavidlo, které je přímo nebo nepřímo zakotveno nebo přímo nebo nepřímo vyvázáno ke břehu</td>
+    </tr>
+    <tr>
+      <td><strong>Plující</strong></td>
+      <td>§ 1 písm. c)</td>
+      <td>plavidlo, které není přímo nebo nepřímo zakotveno, vyvázáno ke břehu nebo není nasedlé</td>
+    </tr>
+    <tr>
+      <td><strong>Nasedlé</strong></td>
+      <td>§ 1 písm. d)</td>
+      <td>plavidlo, které uvízlo na překážce nebo na dně vodní cesty, v důsledku čehož došlo ke ztrátě jeho volného pohybu</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<p>
+  <strong>Varianta s motorem překonávajícím proud:</strong> Plavidlo se sice nepohybuje vůči břehu,
+  ale <strong>není ukotvené ani uvázané</strong> — drží polohu pomocí strojního pohonu. Definice stojícího
+  plavidla je čistě formální: rozhoduje <em>fyzické spojení</em> s dnem nebo břehem, ne to, jestli se
+  plavidlo aktuálně pohybuje. Plavidlo na motoru je <strong>plující</strong> a platí pro něj všechny
+  povinnosti plujícího (boční světla, pravidla míjení, signalizace).
+</p>
+
+<p>
+  <strong>Varianta s uvíznutím na překážce:</strong> Toto je <strong>doslovná definice nasedlého plavidla</strong>
+  z § 1 písm. d) — past spočívá v záměně dvou různých kategorií. Nasedlé plavidlo má vlastní specifická
+  pravidla (havarijní signalizace, povinnost upozornit na překážku ve vodní cestě).
+</p>
+
+<h3>Praktická aplikace</h3>
+
+<ul>
+  <li><strong>Stojící</strong> — kotevní/uvazovací světla (zpravidla bílá), specifické zvukové signály pro stojící.</li>
+  <li><strong>Plující</strong> (včetně toho, co „stojí" na motoru proti proudu) — boční světla (červená/zelená), stěžňová, povinnost dodržovat pravidla míjení a vyhýbání.</li>
+  <li><strong>Nasedlé</strong> — havarijní signalizace upozorňující ostatní plavidla na nepohyblivou překážku.</li>
+</ul>
+
+<p>
+  Tip: pokud si nejste jistí, ptejte se „<em>je plavidlo fyzicky uchyceno k něčemu pevnému</em> (kotva, lano, jiné stojící plavidlo)?"
+  Pokud ano → stojící. Pokud uvízlo neúmyslně → nasedlé. Pokud žádné z toho → plující.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.sagit.cz/info/sb15067">Vyhláška č. 67/2015 Sb. — § 1 Základní pojmy (Sagit)</a></li>
+</ul>

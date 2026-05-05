@@ -1,0 +1,158 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Jádro</h2>
+    <p>
+      Správná odpověď je <strong>„mezi východem slunce a západem slunce"</strong>.
+      Je to doslovná definice z vyhlášky č. 67/2015 Sb. o pravidlech plavebního provozu —
+      žádný časový buffer, žádné fixní hodiny, jen astronomický východ a západ slunce.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pozadí — co říká vyhláška</h2>
+    <p>
+      Definice je v <strong>§ 15 odst. 1</strong> vyhlášky č. 67/2015 Sb. — v paragrafu, který
+      uvozuje pravidla pro <em>světla a denní znaky</em> plavidel. Stojí v něm doslova:
+    </p>
+    <blockquote>
+      „<strong>dnem</strong> [se rozumí] období mezi východem slunce a západem slunce" (písm. g)<br>
+      „<strong>nocí</strong> [se rozumí] období mezi západem slunce a východem slunce" (písm. f)
+    </blockquote>
+    <p>
+      To, že je definice umístěná zrovna do paragrafu o světlech, není náhoda — celá řada
+      povinností se od pojmu „den/noc" odvíjí: kdy musíš mít rozsvícená plavební světla,
+      kdy naopak musíš ukázat denní znak (válec, kouli, kužel) atd.
+    </p>
+  </section>
+
+  <section>
+    <h2>Vizualizace — kde končí den a kde začínají chytáky</h2>
+    <p>
+      Časová osa modelového dne (24 h). Žlutý pruh = <em>den</em> podle vyhlášky — období
+      mezi východem a západem slunce. Pod ním vidíš obě nesprávné varianty z otázky:
+      buffer ±30 min a model s fixními hodinami. Šipky ukazují, kde se s realitou rozcházejí.
+    </p>
+    <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Časová osa dne s vyznačenými hranicemi den/noc podle vyhlášky a porovnání s nesprávnými variantami">
+      <defs>
+        <linearGradient id="skyGrad18" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0%" stop-color="#1f2a44"/>
+          <stop offset="22%" stop-color="#1f2a44"/>
+          <stop offset="28%" stop-color="#f4c87a"/>
+          <stop offset="50%" stop-color="#7ec8ff"/>
+          <stop offset="80%" stop-color="#f08a5d"/>
+          <stop offset="86%" stop-color="#1f2a44"/>
+          <stop offset="100%" stop-color="#1f2a44"/>
+        </linearGradient>
+      </defs>
+
+      <text x="360" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1f2a44">
+        Časová osa modelového dne (východ slunce 6:00, západ 20:00)
+      </text>
+
+      <rect x="60" y="40" width="600" height="46" fill="url(#skyGrad18)" stroke="#333" stroke-width="1"/>
+
+      <line x1="60" y1="86" x2="660" y2="86" stroke="#333" stroke-width="1"/>
+      <g font-family="system-ui, sans-serif" font-size="11" fill="#333" text-anchor="middle">
+        <line x1="60"  y1="86" x2="60"  y2="92" stroke="#333"/><text x="60"  y="106">0:00</text>
+        <line x1="210" y1="86" x2="210" y2="92" stroke="#333"/><text x="210" y="106">6:00</text>
+        <line x1="360" y1="86" x2="360" y2="92" stroke="#333"/><text x="360" y="106">12:00</text>
+        <line x1="510" y1="86" x2="510" y2="92" stroke="#333"/><text x="510" y="106">18:00</text>
+        <line x1="660" y1="86" x2="660" y2="92" stroke="#333"/><text x="660" y="106">24:00</text>
+      </g>
+
+      <g font-family="system-ui, sans-serif" font-size="12" fill="#1f2a44">
+        <circle cx="210" cy="62" r="10" fill="#fde68a" stroke="#b45309" stroke-width="1.5"/>
+        <text x="210" y="34" text-anchor="middle" font-weight="600">východ slunce</text>
+        <circle cx="560" cy="62" r="10" fill="#fb923c" stroke="#9a3412" stroke-width="1.5"/>
+        <text x="560" y="34" text-anchor="middle" font-weight="600">západ slunce</text>
+      </g>
+
+      <g>
+        <rect x="60"  y="130" width="150" height="22" fill="#475569" opacity="0.85"/>
+        <rect x="210" y="130" width="350" height="22" fill="#facc15"/>
+        <rect x="560" y="130" width="100" height="22" fill="#475569" opacity="0.85"/>
+        <text x="135" y="146" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff">NOC</text>
+        <text x="385" y="146" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1f2a44">DEN (vyhláška 67/2015 Sb., § 15)</text>
+        <text x="610" y="146" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff">NOC</text>
+      </g>
+
+      <g>
+        <text x="60" y="190" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#b91c1c">Chyták 1: ±30 min buffer (varianta s „půl hodiny před a po")</text>
+        <rect x="60"  y="200" width="138" height="18" fill="#475569" opacity="0.85"/>
+        <rect x="198" y="200" width="374" height="18" fill="#fee2e2" stroke="#dc2626" stroke-dasharray="4 3"/>
+        <rect x="572" y="200" width="88"  height="18" fill="#475569" opacity="0.85"/>
+        <text x="385" y="213" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#7f1d1d">5:30 → 20:30 (špatně, vyhláška buffer nepoužívá)</text>
+        <line x1="198" y1="218" x2="210" y2="148" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr18)"/>
+        <line x1="572" y1="218" x2="560" y2="148" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr18)"/>
+      </g>
+
+      <g>
+        <text x="60" y="248" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#b91c1c">Chyták 2: fixní hodiny (4:30–20:00 léto / 7:00–17:00 zima)</text>
+        <rect x="60"  y="258" width="113" height="18" fill="#475569" opacity="0.85"/>
+        <rect x="173" y="258" width="387" height="18" fill="#fef3c7" stroke="#ca8a04" stroke-dasharray="4 3"/>
+        <rect x="560" y="258" width="100" height="18" fill="#475569" opacity="0.85"/>
+        <text x="370" y="271" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#713f12">léto 4:30 → 20:00</text>
+
+        <rect x="60"  y="282" width="235" height="18" fill="#475569" opacity="0.85"/>
+        <rect x="295" y="282" width="190" height="18" fill="#fef3c7" stroke="#ca8a04" stroke-dasharray="4 3"/>
+        <rect x="485" y="282" width="175" height="18" fill="#475569" opacity="0.85"/>
+        <text x="390" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#713f12">zima 7:00 → 17:00</text>
+
+        <text x="360" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#7f1d1d">
+          Pevné hodiny den/noc <em>nemůžou</em> popsat — východ a západ slunce se posouvá každý den i podle zeměpisné polohy.
+        </text>
+      </g>
+
+      <defs>
+        <marker id="arr18" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0,0 L8,4 L0,8 z" fill="#dc2626"/>
+        </marker>
+      </defs>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní varianty</h2>
+    <ul>
+      <li>
+        <strong>Buffer „půl hodiny před východem a půl hodiny po západu slunce"</strong> —
+        vypadá rozumně, protože podobnou rezervu znají jiné obory (myslivost, dříve i silniční
+        provoz, „občanská noc" v letectví). Vyhláška 67/2015 Sb. ji ale <em>nemá</em>:
+        plavební den končí přesně se západem slunce.
+      </li>
+      <li>
+        <strong>Fixní hodiny (4:30–20:00 léto, 7:00–17:00 zima)</strong> — věcný nesmysl,
+        protože okamžiky východu a západu slunce se posouvají každý den (a liší se i podle
+        zeměpisné polohy). Žádný předpis na vodě s pevným blokem hodin nepracuje.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <p>
+      Hranice „den/noc" rozhoduje o tom, <strong>kdy musíš mít rozsvíceno</strong>. Konkrétně:
+    </p>
+    <ul>
+      <li>v <em>noci</em> a za snížené viditelnosti svítí předepsaná plavební světla
+          (boční, vrcholové, záďové, kotevní apod.) — vteřinu po západu slunce už musí být zapnuta;</li>
+      <li>ve <em>dne</em> jsou naopak na řadě <em>denní znaky</em> (válce, koule, kužele),
+          pokud má plavidlo zvláštní stav (kotví, je nasedlé, něco táhne…);</li>
+      <li>za snížené viditelnosti (mlha, husté sněžení) platí navíc další pravidla nezávisle
+          na denní době — např. zvláštní zvukové signály.</li>
+    </ul>
+    <p>
+      Praktický důsledek: <em>mít po ruce přesný čas západu slunce v dané lokalitě</em>
+      (počasí v telefonu, plánovač plavby) a podle něj rozsvítit. Žádné „za chvíli" ani
+      „když se začne stmívat".
+    </p>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ul>
+      <li><a href="https://krajta.slv.cz/2015/67/par_15">§ 15 vyhlášky č. 67/2015 Sb. — definice „den" a „noc" (písm. f, g)</a></li>
+      <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — úplné znění (zakonyprolidi.cz)</a></li>
+    </ul>
+  </section>
+</article>

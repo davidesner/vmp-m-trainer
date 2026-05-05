@@ -1,0 +1,11 @@
+{
+  "qid": 9,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://www.zakonyprolidi.cz/cs/1995-114",
+    "https://sps.gov.cz/downloads/predpisy/zakon-114-1995sb.pdf",
+    "https://www.aspi.cz/products/lawText/1/83902/1/2/vyhlaska-c-67-2015-sb-o-pravidlech-plavebniho-provozu-pravidla-plavebniho-provozu/vyhlaska-c-67-2015-sb-o-pravidlech-plavebniho-provozu-pravidla-plavebniho-provozu",
+    "https://cs.wikipedia.org/wiki/Sestava_plavidel"
+  ],
+  "model": "claude-opus-4-7"
+}
