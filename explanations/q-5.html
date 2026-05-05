@@ -1,0 +1,127 @@
+<h2>Kdy plavidlo do 20 m není „malým plavidlem"</h2>
+
+<p>Plavidlo do 20 m je <strong>standardně malé plavidlo</strong>. Aby přestalo být malým, musí ho ze zákona „vystrčit" konkrétní výjimka — a ta nejdůležitější se týká situace, kdy je plavidlo <strong>určené k tažení/tlačení/vedení sestavy plavidel, která sama nejsou malá</strong> (typicky velké lodi nad 20 m, nákladní čluny, lodi pro 12+ osob).</p>
+
+<p>Správná je tedy formulace, že malým plavidlem (přestože má pod 20 m) <strong>není</strong> takové plavidlo, které je <em>„určené k vlečení, tlačení nebo vedení bočně svázané sestavy jiných než malých plavidel"</em>.</p>
+
+<h3>Pozadí — § 9 zákona č. 114/1995 Sb. o vnitrozemské plavbě</h3>
+
+<p>Zákon definuje <strong>malé plavidlo</strong> jako plavidlo s délkou trupu menší než 20 m. Z kategorie malých však vyřazuje:</p>
+
+<ol>
+  <li>plavidlo určené k přepravě <strong>více než 12 cestujících</strong>;</li>
+  <li>plavidlo určené k <strong>vlečení, tlačení nebo vedení bočně svázané sestavy <em>jiných než malých</em> plavidel</strong>;</li>
+  <li>převozní lodě (přívozy).</li>
+</ol>
+
+<h3>Vizualizace: tři scénáře tahače pod 20 m</h3>
+
+<p>Schéma ukazuje stejný motorový člun (kratší než 20 m) ve třech situacích — kdy zůstává malým plavidlem a kdy přestává.</p>
+
+<svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#eaf4fb;border-radius:8px">
+  <defs>
+    <marker id="arr5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Voda -->
+  <rect x="0" y="260" width="900" height="100" fill="#bcdcef"/>
+  <path d="M0,275 Q 30,270 60,275 T 120,275 T 180,275 T 240,275 T 300,275 T 360,275 T 420,275 T 480,275 T 540,275 T 600,275 T 660,275 T 720,275 T 780,275 T 840,275 T 900,275" stroke="#9cc7e0" fill="none" stroke-width="1.5"/>
+
+  <!-- ===== Scéna 1: tahá malý člun ===== -->
+  <text x="150" y="30" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0a5d2a">Tahá malé plavidlo</text>
+  <text x="150" y="48" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">(člun pod 20 m, loďka pod 20 m)</text>
+
+  <!-- Tažený malý člun -->
+  <g transform="translate(40,200)">
+    <path d="M0,20 L50,20 L60,30 L50,40 L0,40 Z" fill="#fff" stroke="#444" stroke-width="1.5"/>
+    <text x="30" y="55" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#666">malý člun</text>
+  </g>
+  <!-- Lano -->
+  <line x1="100" y1="220" x2="140" y2="225" stroke="#8a4b1a" stroke-width="2" stroke-dasharray="3,3"/>
+  <!-- Tahač (motorový člun) -->
+  <g transform="translate(140,200)">
+    <path d="M0,20 L70,20 L90,30 L70,40 L0,40 Z" fill="#ffd866" stroke="#444" stroke-width="1.5"/>
+    <rect x="20" y="8" width="35" height="14" fill="#666"/>
+    <text x="45" y="55" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#666">tahač &lt; 20 m</text>
+  </g>
+
+  <!-- Verdikt -->
+  <rect x="40" y="100" width="220" height="55" fill="#d9f0d9" stroke="#3a8a3a" stroke-width="1.5" rx="4"/>
+  <text x="150" y="122" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1d5a1d">Tahač JE malé plavidlo</text>
+  <text x="150" y="142" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1d5a1d">tahá jen malé plavidlo → výjimka neplatí</text>
+
+  <!-- ===== Scéna 2: tahá velkou loď ===== -->
+  <text x="450" y="30" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#8a1a1a">Tahá velkou loď</text>
+  <text x="450" y="48" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">(tahač pod 20 m, loď přes 20 m)</text>
+
+  <!-- Tažená velká loď (delší, vyšší) -->
+  <g transform="translate(310,180)">
+    <path d="M0,30 L160,30 L185,50 L160,70 L0,70 Z" fill="#aac7e8" stroke="#444" stroke-width="1.5"/>
+    <rect x="40" y="5" width="80" height="25" fill="#5b7fa3"/>
+    <rect x="55" y="-15" width="15" height="20" fill="#888"/>
+    <text x="92" y="85" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#666">velká loď &gt; 20 m</text>
+  </g>
+  <!-- Lano -->
+  <line x1="495" y1="225" x2="535" y2="225" stroke="#8a4b1a" stroke-width="2" stroke-dasharray="3,3"/>
+  <!-- Tahač -->
+  <g transform="translate(535,200)">
+    <path d="M0,20 L70,20 L90,30 L70,40 L0,40 Z" fill="#ffd866" stroke="#444" stroke-width="1.5"/>
+    <rect x="20" y="8" width="35" height="14" fill="#666"/>
+    <text x="45" y="55" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#666">tahač &lt; 20 m</text>
+  </g>
+
+  <!-- Verdikt -->
+  <rect x="340" y="100" width="220" height="55" fill="#fbe0e0" stroke="#a83232" stroke-width="1.5" rx="4"/>
+  <text x="450" y="122" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#8a1a1a">Tahač NENÍ malé plavidlo</text>
+  <text x="450" y="142" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8a1a1a">tahá „jiné než malé" → výjimka § 9 platí</text>
+
+  <!-- ===== Scéna 3: tahá vodního lyžaře ===== -->
+  <text x="780" y="30" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0a5d2a">Tahá vodního lyžaře</text>
+  <text x="780" y="48" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">(lyžař = osoba, ne plavidlo)</text>
+
+  <!-- Lyžař -->
+  <g transform="translate(640,225)">
+    <circle cx="10" cy="-2" r="4" fill="#f4c094"/>
+    <line x1="10" y1="2" x2="10" y2="14" stroke="#444" stroke-width="3"/>
+    <line x1="10" y1="6" x2="2" y2="10" stroke="#444" stroke-width="2"/>
+    <line x1="10" y1="6" x2="22" y2="2" stroke="#444" stroke-width="2"/>
+    <rect x="-2" y="14" width="24" height="3" fill="#7a3e0e"/>
+    <text x="10" y="35" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#666">lyžař</text>
+  </g>
+  <!-- Lano -->
+  <line x1="665" y1="225" x2="710" y2="225" stroke="#8a4b1a" stroke-width="2" stroke-dasharray="3,3"/>
+  <!-- Tahač -->
+  <g transform="translate(710,200)">
+    <path d="M0,20 L70,20 L90,30 L70,40 L0,40 Z" fill="#ffd866" stroke="#444" stroke-width="1.5"/>
+    <rect x="20" y="8" width="35" height="14" fill="#666"/>
+    <text x="45" y="55" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#666">tahač &lt; 20 m</text>
+  </g>
+
+  <!-- Verdikt -->
+  <rect x="670" y="100" width="220" height="55" fill="#d9f0d9" stroke="#3a8a3a" stroke-width="1.5" rx="4"/>
+  <text x="780" y="122" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1d5a1d">Tahač JE malé plavidlo</text>
+  <text x="780" y="142" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1d5a1d">lyžař není plavidlo → § 9 vůbec neřeší</text>
+
+  <!-- Oddělovací linky -->
+  <line x1="300" y1="60" x2="300" y2="270" stroke="#cdd9e2" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="600" y1="60" x2="600" y2="270" stroke="#cdd9e2" stroke-width="1" stroke-dasharray="4,4"/>
+</svg>
+
+<h3>Chytlavé varianty — proč nejsou správné</h3>
+
+<ul>
+  <li><strong>„…sestavy <em>jiných</em> plavidel"</strong> (bez „než malých") — chybí dvě klíčová slova. Takhle by každý člun, co odtáhne kamarádovu loďku, automaticky přestal být malým plavidlem. Smysl zákona je odlišit tažení <strong>velkých</strong> lodí (kde tahač přebírá zodpovědnost za sestavu velkých plavidel) od běžné výpomoci mezi malými čluny. Druhý detail: tato varianta přidává „<strong>nebo používané</strong>" — zákon mluví o <strong>určení</strong>, ne o ad‑hoc použití.</li>
+  <li><strong>„…vlečení vodních lyžařů"</strong> — vodní lyžař není plavidlo. Tažení lyžaře z motorového člunu malé plavidlo neudělá nic jiného. Žádná taková výjimka v § 9 neexistuje.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>V praxi to znamená: jestli na vodě uvidíš malý remorkér (kratší než 20 m) tlačit nebo táhnout velkou nákladní loď, řídí se <strong>plnou sadou pravidel jako velké plavidlo</strong> — má jiná světla, jiné signály, jiné povinnosti při vyhýbání. A obráceně — motorový člun s vlekem za vodním lyžařem nebo s odtaženým rekreačním člunem si zachovává výhody i povinnosti <strong>malého plavidla</strong>.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.podnikatel.cz/zakony/zakon-o-vnitrozemske-plavbe/uplne/">Zákon č. 114/1995 Sb., o vnitrozemské plavbě, § 9 — úplné znění (Podnikatel.cz)</a></li>
+  <li><a href="https://cs.wikipedia.org/wiki/Mal%C3%A9_plavidlo">Malé plavidlo — Wikipedie (souhrn definice dle § 9)</a></li>
+</ul>

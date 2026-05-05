@@ -1,0 +1,9 @@
+{
+  "qid": 8,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://sps.gov.cz/downloads/predpisy/zakon-114-1995sb.pdf",
+    "https://www.zakonyprolidi.cz/cs/2015-67"
+  ],
+  "model": "claude-opus-4-7"
+}

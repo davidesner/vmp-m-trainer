@@ -1,0 +1,122 @@
+<h2>Plavidlo s vlastním pohonem — definice</h2>
+
+<p>Otázka testuje znalost legální definice termínu <strong>„plavidlo s vlastním pohonem"</strong> podle pravidel plavebního provozu. Definici dává <strong>vyhláška č. 67/2015 Sb., § 1 odst. 1 písm. a)</strong>:</p>
+
+<blockquote>
+„Plavidlem s vlastním pohonem se rozumí plavidlo vybavené vlastním strojním pohonem, <strong>s výjimkou plavidla, jehož strojní pohon je používán pouze pro manévry a snadnější vedení při vlečení nebo tlačení</strong>."
+</blockquote>
+
+<p>Správná odpověď je tedy ta, která tuto dvousložkovou definici reprodukuje doslova: pozitivní podmínka (vlastní strojní pohon) <em>+</em> negativní výjimka (motor pouze pro manévry při vlečení/tlačení).</p>
+
+<h3>Klasifikace plavidel — rozhodovací strom</h3>
+
+<p>Vizualizace ukazuje, do jaké kategorie plavidlo spadne podle toho, jakým způsobem je poháněno:</p>
+
+<svg viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:system-ui,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Root question -->
+  <rect x="270" y="10" width="220" height="60" rx="8" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="380" y="35" text-anchor="middle" font-size="14" font-weight="600" fill="#0c4a6e">Má plavidlo</text>
+  <text x="380" y="54" text-anchor="middle" font-size="14" font-weight="600" fill="#0c4a6e">vlastní strojní pohon?</text>
+
+  <!-- Yes branch -->
+  <line x1="330" y1="70" x2="200" y2="120" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="240" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#16a34a">ANO</text>
+
+  <!-- No branch -->
+  <line x1="430" y1="70" x2="560" y2="120" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="520" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#dc2626">NE</text>
+
+  <!-- Yes: second question -->
+  <rect x="60" y="125" width="280" height="70" rx="8" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+  <text x="200" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#713f12">Slouží motor POUZE pro manévry</text>
+  <text x="200" y="168" text-anchor="middle" font-size="13" font-weight="600" fill="#713f12">a snadnější vedení při vlečení</text>
+  <text x="200" y="186" text-anchor="middle" font-size="13" font-weight="600" fill="#713f12">nebo tlačení?</text>
+
+  <!-- No: second question -->
+  <rect x="420" y="125" width="280" height="70" rx="8" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+  <text x="560" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#713f12">Pluje plavidlo</text>
+  <text x="560" y="168" text-anchor="middle" font-size="13" font-weight="600" fill="#713f12">výlučně</text>
+  <text x="560" y="186" text-anchor="middle" font-size="13" font-weight="600" fill="#713f12">pomocí plachet?</text>
+
+  <!-- Yes branch under "manévry only" -->
+  <line x1="120" y1="195" x2="120" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="100" y="220" text-anchor="end" font-size="12" font-weight="600" fill="#16a34a">ANO</text>
+
+  <line x1="280" y1="195" x2="280" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="220" text-anchor="start" font-size="12" font-weight="600" fill="#dc2626">NE</text>
+
+  <!-- "Pomocný pohon" outcome (NOT plavidlo s vl. pohonem) -->
+  <rect x="20" y="245" width="200" height="80" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="120" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">NENÍ plavidlo</text>
+  <text x="120" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">s vlastním pohonem</text>
+  <text x="120" y="312" text-anchor="middle" font-size="11" fill="#7f1d1d">(zákonná výjimka)</text>
+
+  <!-- "Plavidlo s vl. pohonem" outcome -->
+  <rect x="180" y="245" width="200" height="80" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="280" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">PLAVIDLO</text>
+  <text x="280" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">S VLASTNÍM POHONEM</text>
+  <text x="280" y="312" text-anchor="middle" font-size="11" fill="#14532d">(motorový člun, výletní loď…)</text>
+
+  <!-- Yes/No branch under "plachty?" -->
+  <line x1="480" y1="195" x2="480" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="460" y="220" text-anchor="end" font-size="12" font-weight="600" fill="#16a34a">ANO</text>
+
+  <line x1="640" y1="195" x2="640" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="660" y="220" text-anchor="start" font-size="12" font-weight="600" fill="#dc2626">NE</text>
+
+  <!-- Plachetnice -->
+  <rect x="380" y="245" width="200" height="80" rx="8" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="480" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#0c4a6e">PLACHETNICE</text>
+  <text x="480" y="294" text-anchor="middle" font-size="11" fill="#0c4a6e">§ 21 odst. 1 vyhlášky</text>
+  <text x="480" y="310" text-anchor="middle" font-size="11" fill="#0c4a6e">67/2015 Sb.</text>
+
+  <!-- Bez pohonu -->
+  <rect x="540" y="245" width="200" height="80" rx="8" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2"/>
+  <text x="640" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#581c87">PLAVIDLO BEZ</text>
+  <text x="640" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#581c87">VLASTNÍHO POHONU</text>
+  <text x="640" y="312" text-anchor="middle" font-size="11" fill="#581c87">(vlečené, tlačené, veslice…)</text>
+
+  <!-- Legend / examples -->
+  <rect x="20" y="370" width="720" height="135" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="395" font-size="13" font-weight="700" fill="#0f172a">Praktické příklady</text>
+
+  <circle cx="50" cy="420" r="6" fill="#15803d"/>
+  <text x="65" y="425" font-size="12" fill="#0f172a"><tspan font-weight="600">Plavidlo s vlastním pohonem:</tspan> motorový člun, kajutová loď s motorem na výletě, výletní parník, kabinová motorová jachta s vypnutými plachtami.</text>
+
+  <circle cx="50" cy="445" r="6" fill="#0369a1"/>
+  <text x="65" y="450" font-size="12" fill="#0f172a"><tspan font-weight="600">Plachetnice:</tspan> jachta plující pouze na plachty (motor vypnutý nebo žádný). Když jachtař zapne motor, stává se z plachetnice plavidlo s vlastním pohonem.</text>
+
+  <circle cx="50" cy="470" r="6" fill="#7e22ce"/>
+  <text x="65" y="475" font-size="12" fill="#0f172a"><tspan font-weight="600">Plavidlo bez vlastního pohonu:</tspan> vlečený / tlačený člun (tlačná tlumivka), pramice, raft, paddleboard, veslice.</text>
+
+  <circle cx="50" cy="495" r="6" fill="#b91c1c"/>
+  <text x="65" y="500" font-size="12" fill="#0f172a"><tspan font-weight="600">Výjimka (pomocný pohon):</tspan> např. tlačený člun, který má drobný motor jen pro manévry v přístavu — pro účely pravidel se za motorové plavidlo NEPOVAŽUJE.</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>„Plavidlo, které pluje výlučně pomocí plachet"</strong> — to je definice <em>plachetnice</em> (§ 21 odst. 1 vyhlášky 67/2015 Sb.), tedy úplně jiná kategorie.</li>
+  <li><strong>„Plavidlo, které nepluje pomocí strojního pohonu ani pomocí plachet"</strong> — to je <em>plavidlo bez vlastního pohonu</em> (vlečené nebo tlačené čluny, veslice, pramice). Je to <strong>opak</strong> toho, na co se otázka ptá.</li>
+</ul>
+
+<h3>Proč na výjimce záleží</h3>
+
+<p>Klíčová část definice je ta <strong>negativní výjimka</strong>. Bez ní by se za „plavidlo s vlastním pohonem" považoval i tlačný či vlečný člun, který má motor pouze pro pomocné manévry. Tato kvalifikace má reálné důsledky pro:</p>
+<ul>
+  <li><strong>signalizaci</strong> (jaká světla a znaky musí plavidlo nést za plavby),</li>
+  <li><strong>pravidla vyhýbání</strong> a přednosti při potkávání,</li>
+  <li><strong>zvukové signály</strong>, které smí/musí dávat.</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.epravo.cz/top/zakony/sbirka-zakonu/vyhlaska-ze-dne-1-dubna-2015-o-pravidlech-plavebniho-provozu-pravidla-plavebniho-provozu-20488.html">Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — § 1 odst. 1 písm. a) (epravo.cz)</a></li>
+  <li><a href="https://www.kapitanjepes.cz/storage/upload/resources/67-2015_Pravidla_plavebniho_provozu.pdf">Vyhláška č. 67/2015 Sb. — plné znění (PDF)</a></li>
+</ul>

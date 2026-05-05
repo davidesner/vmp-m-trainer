@@ -1,0 +1,9 @@
+{
+  "qid": 4,
+  "generated_at": "2026-05-05T00:00:00Z",
+  "sources": [
+    "https://sps.gov.cz/wp-content/public/downloads/predpisy/zakon-114-1995sb.pdf",
+    "https://cs.wikipedia.org/wiki/Mal%C3%A9_plavidlo"
+  ],
+  "model": "claude-opus-4-7"
+}

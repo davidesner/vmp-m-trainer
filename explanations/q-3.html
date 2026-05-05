@@ -1,0 +1,137 @@
+<h2>Co je &bdquo;plachetnice&ldquo; podle pravidel plavebního provozu</h2>
+
+<h3>Jádro</h3>
+<p>
+  Plachetnice je <strong>plavidlo, které pluje pouze pomocí plachet a současně nepoužívá vlastní strojní pohon</strong>.
+  Kličová jsou dvě slova: <em>&bdquo;pouze&ldquo;</em> a <em>&bdquo;současně nepoužívá&ldquo;</em> &mdash;
+  v daný okamžik musí pohon zajišťovat <strong>výhradně vítr přes plachty</strong> a motor být vypnutý.
+</p>
+
+<h3>Pozadí &mdash; § 21 odst. 1 vyhlášky č. 67/2015 Sb.</h3>
+<blockquote>
+  <em>&bdquo;Plavidlo, které pluje pouze pomocí plachet a současně nepoužívá vlastní strojní pohon.&ldquo;</em>
+</blockquote>
+<p>
+  Status &bdquo;plachetnice&ldquo; <strong>není dán typem lodi</strong> (kolik má stěžňů, jestli má plachty vytažené),
+  ale <strong>aktuálním způsobem pohonu</strong>. Stejná loď tedy může být:
+</p>
+<ul>
+  <li><strong>plachetnicí</strong> &mdash; když pluje na plachty a motor je vypnutý,</li>
+  <li><strong>plavidlem se strojním pohonem</strong> &mdash; jakmile spustí motor, i kdyby měla plachty stále vytažené.</li>
+</ul>
+<p>
+  Pro smíšený režim (plachty + běžící motor) § 21 odst. 3 dokonce ukládá zvláštní denní signál:
+  <strong>černý kužel špičkou dolů</strong> &mdash; aby ostatní z dálky poznali, že
+  &bdquo;i když to vypadá na plachetnici, fakticky to plachetnice není&ldquo;.
+</p>
+
+<h3>Vizualizace &mdash; tři scénáře téže lodi</h3>
+<p>Stejné plavidlo, různý režim pohonu &mdash; různý status v pravidlech.</p>
+
+<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#eaf4fb;border-radius:8px">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- voda -->
+  <rect x="0" y="280" width="720" height="80" fill="#b6dcef"/>
+  <path d="M0,290 Q60,283 120,290 T240,290 T360,290 T480,290 T600,290 T720,290" stroke="#7ab8d6" fill="none" stroke-width="1.5"/>
+
+  <!-- popisky scénářů nahoře -->
+  <text x="120" y="22" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a4566">Pouze plachty</text>
+  <text x="120" y="40" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1a4566">motor vypnutý</text>
+  <text x="360" y="22" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#7a3d12">Plachty + motor</text>
+  <text x="360" y="40" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a3d12">smíšený režim</text>
+  <text x="600" y="22" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#7a3d12">Pouze motor</text>
+  <text x="600" y="40" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a3d12">plachty svinuté / nepouž.</text>
+
+  <!-- ===== SCÉNÁŘ 1: pouze plachty ===== -->
+  <g transform="translate(60,60)">
+    <!-- stěžeň -->
+    <line x1="60" y1="0" x2="60" y2="200" stroke="#333" stroke-width="3"/>
+    <!-- plachta (vztyčená) -->
+    <path d="M60,10 L110,180 L60,180 Z" fill="#fdfdfd" stroke="#1a4566" stroke-width="1.5"/>
+    <!-- trup -->
+    <path d="M10,210 Q60,235 110,210 L100,225 L20,225 Z" fill="#3d6f99" stroke="#1a4566" stroke-width="1.5"/>
+    <!-- vítr -->
+    <line x1="-15" y1="100" x2="40" y2="100" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="-18" y="92" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">vítr</text>
+    <!-- žádný kouř / motor mlčí -->
+    <text x="60" y="265" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1a4566" font-style="italic">motor: OFF</text>
+  </g>
+  <!-- štítek pod scénářem 1 -->
+  <g transform="translate(60,300)">
+    <rect x="0" y="0" width="120" height="50" rx="6" fill="#cdebd2" stroke="#3a8049" stroke-width="1.5"/>
+    <text x="60" y="20" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1f5128">PLACHETNICE</text>
+    <text x="60" y="38" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1f5128">přednost před motor. plav.</text>
+  </g>
+
+  <!-- ===== SCÉNÁŘ 2: plachty + motor ===== -->
+  <g transform="translate(300,60)">
+    <line x1="60" y1="0" x2="60" y2="200" stroke="#333" stroke-width="3"/>
+    <path d="M60,10 L110,180 L60,180 Z" fill="#fdfdfd" stroke="#1a4566" stroke-width="1.5"/>
+    <!-- černý kužel špičkou dolů (denní signál!) -->
+    <polygon points="50,40 70,40 60,60" fill="#111"/>
+    <text x="92" y="52" font-family="sans-serif" font-size="10" fill="#111">černý kužel</text>
+    <text x="92" y="64" font-family="sans-serif" font-size="10" fill="#111">špičkou dolů</text>
+    <!-- trup -->
+    <path d="M10,210 Q60,235 110,210 L100,225 L20,225 Z" fill="#3d6f99" stroke="#1a4566" stroke-width="1.5"/>
+    <!-- vítr -->
+    <line x1="-15" y1="100" x2="40" y2="100" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="-18" y="92" text-anchor="end" font-family="sans-serif" font-size="11" fill="#444">vítr</text>
+    <!-- voda za zádí: čeřič od šroubu -->
+    <path d="M115,222 Q125,228 135,222 Q145,216 155,222" stroke="#7a3d12" fill="none" stroke-width="2"/>
+    <text x="60" y="265" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a3d12" font-style="italic">motor: ON</text>
+  </g>
+  <g transform="translate(300,300)">
+    <rect x="0" y="0" width="120" height="50" rx="6" fill="#fbe3c2" stroke="#a5631a" stroke-width="1.5"/>
+    <text x="60" y="20" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#7a3d12">NENÍ PLACHETNICE</text>
+    <text x="60" y="38" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a3d12">= plav. se strojním pohonem</text>
+  </g>
+
+  <!-- ===== SCÉNÁŘ 3: pouze motor ===== -->
+  <g transform="translate(540,60)">
+    <line x1="60" y1="0" x2="60" y2="200" stroke="#333" stroke-width="3"/>
+    <!-- plachta svinutá / chybí -->
+    <line x1="60" y1="80" x2="80" y2="80" stroke="#888" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="84" y="84" font-family="sans-serif" font-size="10" fill="#888" font-style="italic">plachta sklizená</text>
+    <!-- trup -->
+    <path d="M10,210 Q60,235 110,210 L100,225 L20,225 Z" fill="#3d6f99" stroke="#1a4566" stroke-width="1.5"/>
+    <!-- čeřič od šroubu -->
+    <path d="M115,222 Q125,228 135,222 Q145,216 155,222" stroke="#7a3d12" fill="none" stroke-width="2"/>
+    <text x="60" y="265" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a3d12" font-style="italic">motor: ON</text>
+  </g>
+  <g transform="translate(540,300)">
+    <rect x="0" y="0" width="120" height="50" rx="6" fill="#fbe3c2" stroke="#a5631a" stroke-width="1.5"/>
+    <text x="60" y="20" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#7a3d12">PLAVIDLO SE</text>
+    <text x="60" y="34" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#7a3d12">STROJNÍM POHONEM</text>
+  </g>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li>
+    <strong>Varianta &bdquo;plachty a zároveň strojní pohon&ldquo;</strong> &mdash; to je přesně ten smíšený režim,
+    kdy se na plavidlo <em>už nepohlíží jako na plachetnici</em>. Naopak musí nést černý kužel špičkou dolů
+    a v pravidlech vyhýbání má status motorového plavidla.
+  </li>
+  <li>
+    <strong>Varianta omezená délkou do 20 m</strong> &mdash; v definici plachetnice <em>žádný limit délky není</em>.
+    Hranice 20 m je relevantní u jiných pojmů (např. malé plavidlo), s definicí plachetnice ale nesouvisí.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Proč na ostré definici záleží &mdash; <strong>pravidla vyhýbání</strong>. Plachetnice má v míjení/křižování
+  s motorovým plavidlem zpravidla <strong>přednost</strong> (motorové se vyhýbá plachetnici).
+  Jakmile ale plachetnice spustí motor, tato přednost zaniká &mdash; stává se motorovým plavidlem
+  a platí pro ni jiné pořadí v hierarchii vyhýbání. Proto je definice ostře vystavěná na slově &bdquo;<em>pouze</em>&ldquo;.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.sagit.cz/info/sb15067">Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu &mdash; Sagit (§ 21)</a></li>
+</ul>
