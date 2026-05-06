@@ -27,6 +27,23 @@ Appka při zobrazení **náhodně přerendlí pořadí odpovědí a přepíše p
 
 Tohle pravidlo platí pro chat **i** uložené HTML — uložené HTML se otevírá v appce, kde je shuffle stále aktivní.
 
+## Web research jen v nutném případě
+
+**Nehledej online preventivně.** Většinu otázek umíš vysvětlit z vlastní znalosti — vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, zákon č. 114/1995 Sb. o vnitrozemské plavbě, základy první pomoci a konstrukce plavidel jsou standardní rozsah.
+
+**WebSearch / WebFetch použij pouze pokud:**
+
+- Otázka se opírá o **konkrétní číslo / paragraf / odstavec**, kterým si nejsi jistý a špatná citace by změnila odpověď
+- Zaznamenáváš nedávnou novelizaci nebo specifický termín mimo standardní rozsah
+- Sám si **ne jsi jistý** věcnou správností — pak ano, ověř
+
+**Pokud web nepoužiješ:**
+
+- V sekci `Zdroje` stačí uvést právní zdroj jménem a paragrafem (např. *„vyhláška č. 67/2015 Sb., §X odst. Y"*) bez URL
+- Necituj zdroj, který jsi reálně neotevřel (žádné „pravděpodobně-správné" URL)
+
+Cíl: rychlé, věcně správné vysvětlení. Web research zdvojnásobí čas runu — vyhrazuj ho pro reálné pochybnosti.
+
 ---
 
 ## Krok 1 — Najdi otázku
@@ -69,7 +86,7 @@ Vysvětli **přímo v chatu**, ne v souboru. Strukturu volíš podle otázky —
 - **Proč ne ostatní možnosti** — když to pomáhá k pochopení (zejména pro chytlavé varianty)
 - **Praktická aplikace** — kdy/jak se to v reálu projeví
 
-Cituj zdroje. Pokud si nejsi jistý nebo otázka vyžaduje hlubší kontext, hledej online (úplné znění zákonů na zakonyprolidi.cz, web Státní plavební správy).
+Cituj zdroje — typicky stačí název předpisu a paragraf (např. *„vyhláška č. 67/2015 Sb., §X odst. Y"*). Web research jen v případě reálné pochybnosti, viz sekce výš.
 
 ### Vizualizace — udělej, kdykoliv to pomůže
 

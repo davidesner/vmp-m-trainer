@@ -1,0 +1,202 @@
+<h2>Červená vedle sebe = komora je <em>zavřena</em>, ne <em>mimo provoz</em></h2>
+
+<p><strong>Správná odpověď:</strong> <em>„vplutí není možné, plavební komora je zavřena."</em></p>
+
+<p>Signalizace u plavební komory funguje jako semafor s několika fázemi a otázka cíleně testuje, jestli rozlišíš dva podobně znějící „červené" stavy: <strong>komora zavřena</strong> (právě teď nepouští dovnitř, ale funguje — možná zrovna probíhá cyklus) vs. <strong>komora není v provozu</strong> (vyřazena, mimo provozní dobu, dnes vás nepustí vůbec). Klíč k rozlišení je <strong>uspořádání červených světel</strong> — vedle sebe, nebo nad sebou.</p>
+
+<h3>Všechny fáze signalizace na jednom obrázku</h3>
+
+<svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Čtyři fáze signalizace u plavební komory</title>
+  <desc>Čtyři vedle sebe stojící schémata zobrazující světelné signály na vratech plavební komory: 1) komora není v provozu - dvě červená nad sebou (vertikálně). 2) komora je zavřena - jedno červené nebo dvě červená vedle sebe (horizontálně). 3) připravuje se otevření - kombinace červené a zelené. 4) vplutí možné - jedno nebo dvě zelená vedle sebe.</desc>
+
+  <rect x="0" y="0" width="880" height="360" style="fill:#f8fafc"/>
+
+  <!-- FÁZE 1: NENÍ V PROVOZU - dvě červená nad sebou -->
+  <g>
+    <rect x="15" y="15" width="200" height="330" rx="10" style="fill:#fef2f2;stroke:#fca5a5;stroke-width:2"/>
+    <text x="115" y="38" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#7f1d1d">NENÍ V PROVOZU</text>
+    <text x="115" y="54" text-anchor="middle" style="font-size:10px;fill:#991b1b">červená NAD sebou</text>
+
+    <!-- stěna komory -->
+    <rect x="80" y="80" width="70" height="220" style="fill:#94a3b8;stroke:#475569;stroke-width:1.5"/>
+    <rect x="80" y="80" width="70" height="10" style="fill:#64748b"/>
+    <!-- panel se světly -->
+    <rect x="95" y="120" width="40" height="100" rx="3" style="fill:#1e293b;stroke:#0f172a;stroke-width:1.5"/>
+    <!-- horní červená -->
+    <circle cx="115" cy="145" r="14" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="111" cy="141" r="4" style="fill:#fca5a5;opacity:0.7"/>
+    <!-- dolní červená -->
+    <circle cx="115" cy="195" r="14" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="111" cy="191" r="4" style="fill:#fca5a5;opacity:0.7"/>
+
+    <text x="115" y="320" text-anchor="middle" style="font-size:10px;fill:#1e293b">komora vypnuta,</text>
+    <text x="115" y="334" text-anchor="middle" style="font-size:10px;fill:#1e293b">mimo provozní dobu</text>
+  </g>
+
+  <!-- FÁZE 2: ZAVŘENA - jedno nebo dvě červená vedle sebe -->
+  <g>
+    <rect x="225" y="15" width="200" height="330" rx="10" style="fill:#fff7ed;stroke:#fb923c;stroke-width:3"/>
+    <text x="325" y="38" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#7c2d12">ZAVŘENA ← otázka #110</text>
+    <text x="325" y="54" text-anchor="middle" style="font-size:10px;fill:#9a3412">červená VEDLE sebe (1 nebo 2)</text>
+
+    <!-- stěna komory -->
+    <rect x="280" y="80" width="90" height="220" style="fill:#94a3b8;stroke:#475569;stroke-width:1.5"/>
+    <rect x="280" y="80" width="90" height="10" style="fill:#64748b"/>
+    <!-- panel se světly -->
+    <rect x="290" y="155" width="70" height="40" rx="3" style="fill:#1e293b;stroke:#0f172a;stroke-width:1.5"/>
+    <!-- levá červená -->
+    <circle cx="310" cy="175" r="14" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="306" cy="171" r="4" style="fill:#fca5a5;opacity:0.7"/>
+    <!-- pravá červená -->
+    <circle cx="340" cy="175" r="14" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="336" cy="171" r="4" style="fill:#fca5a5;opacity:0.7"/>
+
+    <text x="325" y="240" text-anchor="middle" style="font-size:9px;fill:#475569">(nebo jen jedno červené)</text>
+
+    <text x="325" y="320" text-anchor="middle" style="font-size:10px;fill:#1e293b">komora <tspan style="font-weight:700">funguje</tspan>, ale</text>
+    <text x="325" y="334" text-anchor="middle" style="font-size:10px;fill:#1e293b">právě nepouští dovnitř</text>
+  </g>
+
+  <!-- FÁZE 3: PŘIPRAVUJE SE -->
+  <g>
+    <rect x="435" y="15" width="200" height="330" rx="10" style="fill:#fefce8;stroke:#facc15;stroke-width:2"/>
+    <text x="535" y="38" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#713f12">PŘIPRAVUJE SE</text>
+    <text x="535" y="54" text-anchor="middle" style="font-size:10px;fill:#854d0e">červená + zelená</text>
+
+    <!-- stěna komory -->
+    <rect x="490" y="80" width="90" height="220" style="fill:#94a3b8;stroke:#475569;stroke-width:1.5"/>
+    <rect x="490" y="80" width="90" height="10" style="fill:#64748b"/>
+    <!-- panel se světly (dva vedle sebe — červené + zelené) -->
+    <rect x="500" y="155" width="70" height="40" rx="3" style="fill:#1e293b;stroke:#0f172a;stroke-width:1.5"/>
+    <circle cx="520" cy="175" r="14" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="516" cy="171" r="4" style="fill:#fca5a5;opacity:0.7"/>
+    <circle cx="550" cy="175" r="14" style="fill:#16a34a;stroke:#14532d;stroke-width:1.5"/>
+    <circle cx="546" cy="171" r="4" style="fill:#86efac;opacity:0.7"/>
+
+    <text x="535" y="240" text-anchor="middle" style="font-size:9px;fill:#475569">(nebo červená nad zelenou)</text>
+
+    <text x="535" y="320" text-anchor="middle" style="font-size:10px;fill:#1e293b">vrata se chystají otevřít,</text>
+    <text x="535" y="334" text-anchor="middle" style="font-size:10px;fill:#1e293b">ještě <tspan style="font-weight:700">nevplouvat</tspan></text>
+  </g>
+
+  <!-- FÁZE 4: VPLUTÍ MOŽNÉ -->
+  <g>
+    <rect x="645" y="15" width="220" height="330" rx="10" style="fill:#f0fdf4;stroke:#22c55e;stroke-width:2"/>
+    <text x="755" y="38" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#14532d">VPLUTÍ MOŽNÉ</text>
+    <text x="755" y="54" text-anchor="middle" style="font-size:10px;fill:#166534">zelená (1 nebo 2 vedle sebe)</text>
+
+    <!-- stěna komory -->
+    <rect x="710" y="80" width="90" height="220" style="fill:#94a3b8;stroke:#475569;stroke-width:1.5"/>
+    <rect x="710" y="80" width="90" height="10" style="fill:#64748b"/>
+    <!-- panel se světly -->
+    <rect x="720" y="155" width="70" height="40" rx="3" style="fill:#1e293b;stroke:#0f172a;stroke-width:1.5"/>
+    <circle cx="740" cy="175" r="14" style="fill:#16a34a;stroke:#14532d;stroke-width:1.5"/>
+    <circle cx="736" cy="171" r="4" style="fill:#86efac;opacity:0.7"/>
+    <circle cx="770" cy="175" r="14" style="fill:#16a34a;stroke:#14532d;stroke-width:1.5"/>
+    <circle cx="766" cy="171" r="4" style="fill:#86efac;opacity:0.7"/>
+
+    <!-- plavidlo -->
+    <g transform="translate(680 270)">
+      <ellipse cx="0" cy="0" rx="22" ry="6" style="fill:#fff;stroke:#0f172a;stroke-width:1.5"/>
+      <polygon points="22,0 30,-4 30,4" style="fill:#fff;stroke:#0f172a;stroke-width:1.5"/>
+    </g>
+    <line x1="710" y1="270" x2="700" y2="270" style="stroke:#16a34a;stroke-width:2"/>
+    <polygon points="715,270 705,266 705,274" style="fill:#16a34a"/>
+
+    <text x="755" y="320" text-anchor="middle" style="font-size:10px;fill:#1e293b">komora čeká,</text>
+    <text x="755" y="334" text-anchor="middle" style="font-size:10px;fill:#1e293b">vplouvej</text>
+  </g>
+</svg>
+
+<h3>Klíč: orientace červených světel</h3>
+
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Vertikální vs. horizontální uspořádání červených světel</title>
+  <desc>Vlevo dvě červená nad sebou (vertikálně) - komora není v provozu. Vpravo dvě červená vedle sebe (horizontálně) - komora je zavřena. Šipky zdůrazňují orientaci.</desc>
+
+  <rect x="0" y="0" width="700" height="200" style="fill:#f8fafc"/>
+
+  <!-- vertikální -->
+  <g>
+    <rect x="20" y="15" width="320" height="170" rx="8" style="fill:#fef2f2;stroke:#fca5a5;stroke-width:1.5"/>
+    <text x="180" y="40" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#7f1d1d">červená NAD sebou ↕</text>
+    <rect x="100" y="60" width="50" height="120" rx="4" style="fill:#1e293b;stroke:#0f172a;stroke-width:1.5"/>
+    <circle cx="125" cy="90" r="16" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="121" cy="86" r="5" style="fill:#fca5a5;opacity:0.7"/>
+    <circle cx="125" cy="150" r="16" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="121" cy="146" r="5" style="fill:#fca5a5;opacity:0.7"/>
+    <!-- šipka označující orientaci -->
+    <line x1="170" y1="80" x2="170" y2="160" style="stroke:#7f1d1d;stroke-width:2"/>
+    <polygon points="170,80 166,90 174,90" style="fill:#7f1d1d"/>
+    <polygon points="170,160 166,150 174,150" style="fill:#7f1d1d"/>
+    <text x="225" y="115" style="font-size:13px;font-weight:700;fill:#7f1d1d">→ NENÍ</text>
+    <text x="225" y="135" style="font-size:13px;font-weight:700;fill:#7f1d1d">  V PROVOZU</text>
+  </g>
+
+  <!-- horizontální -->
+  <g>
+    <rect x="360" y="15" width="320" height="170" rx="8" style="fill:#fff7ed;stroke:#fb923c;stroke-width:2"/>
+    <text x="520" y="40" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#7c2d12">červená VEDLE sebe ↔</text>
+    <rect x="430" y="80" width="120" height="50" rx="4" style="fill:#1e293b;stroke:#0f172a;stroke-width:1.5"/>
+    <circle cx="460" cy="105" r="16" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="456" cy="101" r="5" style="fill:#fca5a5;opacity:0.7"/>
+    <circle cx="520" cy="105" r="16" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <circle cx="516" cy="101" r="5" style="fill:#fca5a5;opacity:0.7"/>
+    <!-- šipka označující orientaci -->
+    <line x1="450" y1="150" x2="530" y2="150" style="stroke:#7c2d12;stroke-width:2"/>
+    <polygon points="450,150 460,146 460,154" style="fill:#7c2d12"/>
+    <polygon points="530,150 520,146 520,154" style="fill:#7c2d12"/>
+    <text x="490" y="172" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#7c2d12">→ ZAVŘENA</text>
+  </g>
+</svg>
+
+<p style="background:#fff7ed;border-left:4px solid #fb923c;padding:10px 14px;margin:10px 0;border-radius:4px"><strong>Mnemotechnika:</strong> Když jsou červené <em>vedle sebe</em>, jako vrata která se zavřela – komora je <em>zavřena</em>. Když jsou <em>nad sebou</em>, jako složený stoh – komora je <em>složená</em>, mimo provoz.</p>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<table style="width:100%;border-collapse:collapse;margin:8px 0">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Tvrzení</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Proč je špatně</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:600">„vplutí není možné, plavební komora <em>není v provozu</em>"</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Klasický chyták. „Není v provozu" je jiný stav komory a jiný signál: <strong>dvě červená NAD sebou</strong> (vertikálně), ne vedle sebe. Rozlišuje se tím, že komora vypnutá ven (mimo provoz) vs. komora zrovna pracující ale momentálně zavřená (čekáš na cyklus).</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;font-weight:600">„vplutí do plavební komory je možné <em>pouze na vlastní nebezpečí</em>"</td>
+      <td style="padding:8px">Takový signál v české signalizaci plavební komory <strong>neexistuje</strong>. Komora je vždy v jednom ze čtyř jednoznačných stavů: mimo provoz / zavřena / připravuje se / vplutí možné. Žádný „šedý" stav „vplujte na vlastní riziko" — buď je zelená a smíš, nebo není a nesmíš.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Pozadí — vyhláška č. 67/2015 Sb.</h3>
+
+<p>Pravidla signalizace u plavebních komor stanovuje <strong>vyhláška č. 67/2015 Sb.</strong>, o pravidlech plavebního provozu. Signalizace se osazuje typicky <strong>na jedné nebo na obou stranách vratového pole</strong> komory tak, aby byla viditelná z plavební dráhy přibližujícího se plavidla. Formulace v zadání („na jedné nebo na obou stranách") přesně opisuje znění předpisu.</p>
+
+<p>Logika čtyř stavů:</p>
+<ul>
+  <li><strong>Mimo provoz</strong> (🔴 nad 🔴) — komora je vyřazena, nelze počítat s tím, že tě dnes pustí. Tady nemá smysl čekat.</li>
+  <li><strong>Zavřena</strong> (🔴, nebo 🔴🔴 vedle sebe) — komora pracuje, jen právě teď nepouští. Buď zrovna proplouvá protisměr, nebo se napouští/vypouští. <em>Stůj a počkej.</em></li>
+  <li><strong>Připravuje se</strong> (🔴 + 🟢, nebo 🔴 nad 🟢) — vrata se za chvíli otevřou, ale ještě <em>nevplouvej</em>. Připrav se k odvázání, nahoď motor.</li>
+  <li><strong>Vplutí možné</strong> (🟢, nebo 🟢🟢 vedle sebe) — vrata otevřena, vplouvej.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<ul>
+  <li>Před komorou počkej před <strong>znakem A.1</strong> (červeně orámovaný čtverec s vodorovnou černou čarou) — to je hranice, za kterou se nesmí, dokud nesvítí zelená.</li>
+  <li>Když svítí <strong>červená vedle sebe</strong>, komora zatím funguje normálně, jen čeká na cyklus. <em>Trpělivost</em> — za chvíli přijde žluto-zelený přechod a pak zelená.</li>
+  <li>Když svítí <strong>červená nad sebou</strong>, nemá cenu čekat dlouho — komora dnes už nepojede. Zkontroluj provozní dobu, zavolej na obsluhu komory nebo Státní plavební správu.</li>
+  <li>Při přechodové fázi <strong>červená+zelená</strong> nepřejížděj znak A.1 — uvolni druhý strojní výkon, ale fyzicky drž pozici. Vrata se ještě hýbou.</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb. — Pravidla plavebního provozu</a> (zakonyprolidi.cz)</li>
+  <li><a href="https://gedima.cz/serial-01-jake-chovani-na-vodu-nepatri-dil-10-signalizace-pred-plavebni-komorou/">Signalizace před plavební komorou — Gedima s.r.o.</a> (přehled fází signalizace s ilustracemi)</li>
+  <li><a href="https://app.batacanal.cz/plavebni-komory/plavba-plavebnimi-komorami.html">Plavební atlas — Plavba plavebními komorami</a> (praktický průvodce postupem)</li>
+</ul>
