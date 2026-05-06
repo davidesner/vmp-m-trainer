@@ -1,0 +1,190 @@
+<h2>Tísňové signály — plavidlo v nouzi</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„odpalováním světlic nebo pyrotechnických prostředků, které po odpálení vytvářejí tzv. červený déšť a následují v krátkých intervalech."</em></p>
+
+<h3>Jádro</h3>
+<p>Tahle formulace je doslovná citace z <strong>§ 39 vyhlášky č. 67/2015 Sb.</strong> (o pravidlech plavebního provozu), který vyjmenovává všechny povolené tísňové signály. Společný jmenovatel celé sady: <strong>červená barva, viditelnost, opakování</strong>. Mezinárodní standard tísně je červená — proto v plavebním právu nikde nenajdeš zelený nebo bílý tísňový signál.</p>
+
+<h3>Pozadí — § 39 vyhlášky 67/2015 Sb.</h3>
+<blockquote>
+  <strong>§ 39 — Signály v nouzi</strong><br>
+  Plavidlo v nouzi, které potřebuje pomoc, používá tuto signalizaci:<br>
+  a) kroužení vlajkou nebo jiným obdobným předmětem,<br>
+  b) kroužení světlem,<br>
+  c) vlajka, pod kterou nebo nad kterou je vyvěšen balón nebo předmět podobného tvaru,<br>
+  <strong>d) odpalování světlic nebo pyrotechnických prostředků, které po odpálení vytvářejí tzv. červený déšť a následují v krátkých intervalech,</strong><br>
+  e) světelný signál sestávající ze spojení znaků <code>· · · — — — · · ·</code> (SOS) Morseovou abecedou,<br>
+  f) plamen,<br>
+  g) světlice s padákem nebo pochodně s červeným světlem,<br>
+  h) opakující se pomalé pohyby rukou ze vzpažení dolů.<br>
+  Tyto signály nahrazují nebo doplňují zvukové signály.
+</blockquote>
+
+<h3>Vizualizace — všech 8 povolených tísňových signálů</h3>
+
+<p>Plavidlo v nouzi má k dispozici osm různých způsobů, jak požádat o pomoc. Všimni si dominance červené barvy a opakovaného / blikavého charakteru.</p>
+
+<svg viewBox="0 0 800 540" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:800px;height:auto;background:#0b1220;border-radius:8px;font-family:system-ui,sans-serif">
+  <defs>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#7f1d1d" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0b1220" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orangeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#9a3412" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0b1220" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <text x="400" y="28" text-anchor="middle" fill="#e5e7eb" font-size="16" font-weight="bold">§ 39 vyhlášky 67/2015 Sb. — signály v nouzi</text>
+
+  <!-- a) krouzeni vlajkou -->
+  <g transform="translate(40,60)">
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#1f2937" stroke="#374151"/>
+    <text x="85" y="20" text-anchor="middle" fill="#9ca3af" font-size="11">a) Kroužení vlajkou</text>
+    <line x1="60" y1="90" x2="60" y2="35" stroke="#9ca3af" stroke-width="2"/>
+    <path d="M 60 35 Q 100 25 110 50 Q 100 60 60 55 Z" fill="#dc2626"/>
+    <path d="M 60 50 Q 50 30 90 28" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+    <path d="M 88 28 L 92 26 L 90 32 Z" fill="#fbbf24"/>
+  </g>
+
+  <!-- b) krouzeni svetlem -->
+  <g transform="translate(220,60)">
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#1f2937" stroke="#374151"/>
+    <text x="85" y="20" text-anchor="middle" fill="#9ca3af" font-size="11">b) Kroužení světlem</text>
+    <circle cx="85" cy="65" r="22" fill="url(#orangeGlow)"/>
+    <circle cx="85" cy="65" r="9" fill="#fde68a" stroke="#fbbf24"/>
+    <path d="M 85 65 m 0 -28 a 28 28 0 1 1 -1 0" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+    <path d="M 84 37 L 88 36 L 86 41 Z" fill="#fbbf24"/>
+  </g>
+
+  <!-- c) vlajka + balon -->
+  <g transform="translate(400,60)">
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#1f2937" stroke="#374151"/>
+    <text x="85" y="20" text-anchor="middle" fill="#9ca3af" font-size="11">c) Vlajka + balón</text>
+    <line x1="85" y1="100" x2="85" y2="32" stroke="#9ca3af" stroke-width="2"/>
+    <circle cx="85" cy="42" r="9" fill="#1f2937" stroke="#e5e7eb" stroke-width="1.5"/>
+    <rect x="85" y="55" width="35" height="20" fill="#dc2626"/>
+  </g>
+
+  <!-- d) cerveny dest -->
+  <g transform="translate(580,60)">
+    <rect x="0" y="0" width="180" height="110" rx="8" fill="#1f2937" stroke="#dc2626" stroke-width="2"/>
+    <text x="90" y="20" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="bold">d) Červený déšť ✅</text>
+    <circle cx="90" cy="50" r="22" fill="url(#redGlow)"/>
+    <circle cx="90" cy="50" r="6" fill="#fef2f2"/>
+    <line x1="75" y1="65" x2="68" y2="98" stroke="#ef4444" stroke-width="2"/>
+    <line x1="83" y1="68" x2="80" y2="100" stroke="#ef4444" stroke-width="2"/>
+    <line x1="90" y1="70" x2="90" y2="102" stroke="#ef4444" stroke-width="2"/>
+    <line x1="97" y1="68" x2="100" y2="100" stroke="#ef4444" stroke-width="2"/>
+    <line x1="105" y1="65" x2="112" y2="98" stroke="#ef4444" stroke-width="2"/>
+    <circle cx="68" cy="98" r="2" fill="#ef4444"/>
+    <circle cx="80" cy="100" r="2" fill="#ef4444"/>
+    <circle cx="90" cy="102" r="2" fill="#ef4444"/>
+    <circle cx="100" cy="100" r="2" fill="#ef4444"/>
+    <circle cx="112" cy="98" r="2" fill="#ef4444"/>
+  </g>
+
+  <!-- e) SOS -->
+  <g transform="translate(40,200)">
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#1f2937" stroke="#374151"/>
+    <text x="85" y="20" text-anchor="middle" fill="#9ca3af" font-size="11">e) SOS Morseovkou</text>
+    <text x="85" y="55" text-anchor="middle" fill="#fbbf24" font-size="20" font-family="monospace" font-weight="bold">· · · — — — · · ·</text>
+    <text x="85" y="80" text-anchor="middle" fill="#e5e7eb" font-size="14" font-weight="bold">S O S</text>
+    <text x="85" y="98" text-anchor="middle" fill="#6b7280" font-size="9">světlem</text>
+  </g>
+
+  <!-- f) plamen -->
+  <g transform="translate(220,200)">
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#1f2937" stroke="#374151"/>
+    <text x="85" y="20" text-anchor="middle" fill="#9ca3af" font-size="11">f) Plamen</text>
+    <ellipse cx="85" cy="80" rx="14" ry="4" fill="#1f2937" stroke="#6b7280"/>
+    <path d="M 73 78 Q 70 50 85 35 Q 100 50 97 78 Z" fill="#fb923c"/>
+    <path d="M 78 76 Q 76 58 85 46 Q 94 58 92 76 Z" fill="#fde047"/>
+    <path d="M 82 74 Q 81 64 85 56 Q 89 64 88 74 Z" fill="#fef3c7"/>
+  </g>
+
+  <!-- g) svetlice s padakem -->
+  <g transform="translate(400,200)">
+    <rect x="0" y="0" width="170" height="110" rx="8" fill="#1f2937" stroke="#374151"/>
+    <text x="85" y="20" text-anchor="middle" fill="#9ca3af" font-size="11">g) Padáková světlice</text>
+    <path d="M 60 45 Q 85 30 110 45 L 105 50 L 95 45 L 85 50 L 75 45 L 65 50 Z" fill="#dc2626"/>
+    <line x1="65" y1="50" x2="80" y2="78" stroke="#9ca3af" stroke-width="0.8"/>
+    <line x1="78" y1="48" x2="83" y2="78" stroke="#9ca3af" stroke-width="0.8"/>
+    <line x1="92" y1="48" x2="87" y2="78" stroke="#9ca3af" stroke-width="0.8"/>
+    <line x1="105" y1="50" x2="90" y2="78" stroke="#9ca3af" stroke-width="0.8"/>
+    <circle cx="85" cy="85" r="10" fill="url(#redGlow)"/>
+    <circle cx="85" cy="85" r="4" fill="#fef2f2"/>
+  </g>
+
+  <!-- h) pohyby rukou -->
+  <g transform="translate(580,200)">
+    <rect x="0" y="0" width="180" height="110" rx="8" fill="#1f2937" stroke="#374151"/>
+    <text x="90" y="20" text-anchor="middle" fill="#9ca3af" font-size="11">h) Pomalé pohyby paží</text>
+    <circle cx="90" cy="42" r="6" fill="#e5e7eb"/>
+    <line x1="90" y1="48" x2="90" y2="85" stroke="#e5e7eb" stroke-width="3"/>
+    <!-- vzpazene -->
+    <line x1="90" y1="55" x2="68" y2="35" stroke="#e5e7eb" stroke-width="2.5" opacity="0.4"/>
+    <line x1="90" y1="55" x2="112" y2="35" stroke="#e5e7eb" stroke-width="2.5" opacity="0.4"/>
+    <!-- dole -->
+    <line x1="90" y1="55" x2="68" y2="78" stroke="#e5e7eb" stroke-width="2.5"/>
+    <line x1="90" y1="55" x2="112" y2="78" stroke="#e5e7eb" stroke-width="2.5"/>
+    <path d="M 60 50 Q 56 60 60 70" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="2,2"/>
+    <path d="M 120 50 Q 124 60 120 70" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="2,2"/>
+    <line x1="90" y1="86" x2="80" y2="105" stroke="#e5e7eb" stroke-width="3"/>
+    <line x1="90" y1="86" x2="100" y2="105" stroke="#e5e7eb" stroke-width="3"/>
+  </g>
+
+  <!-- klic -->
+  <g transform="translate(40,360)">
+    <rect x="0" y="0" width="720" height="160" rx="8" fill="#0f172a" stroke="#1e293b"/>
+    <text x="360" y="24" text-anchor="middle" fill="#e5e7eb" font-size="13" font-weight="bold">Společný princip všech tísňových signálů</text>
+
+    <g transform="translate(30,45)">
+      <circle cx="14" cy="14" r="14" fill="#dc2626"/>
+      <text x="40" y="12" fill="#e5e7eb" font-size="11" font-weight="bold">Červená barva</text>
+      <text x="40" y="26" fill="#9ca3af" font-size="10">Mezinárodní standard tísně —</text>
+      <text x="40" y="38" fill="#9ca3af" font-size="10">světlice, pochodně, „červený déšť"</text>
+    </g>
+
+    <g transform="translate(260,45)">
+      <circle cx="14" cy="14" r="14" fill="#1f2937" stroke="#fbbf24" stroke-width="2"/>
+      <path d="M 14 4 L 14 24 M 4 14 L 24 14" stroke="#fbbf24" stroke-width="2"/>
+      <text x="40" y="12" fill="#e5e7eb" font-size="11" font-weight="bold">Opakování / pohyb</text>
+      <text x="40" y="26" fill="#9ca3af" font-size="10">Krátké intervaly, kroužení, blikání —</text>
+      <text x="40" y="38" fill="#9ca3af" font-size="10">aby bylo jasné, že nejde o náhodu</text>
+    </g>
+
+    <g transform="translate(490,45)">
+      <circle cx="14" cy="14" r="14" fill="#1f2937" stroke="#3b82f6" stroke-width="2"/>
+      <text x="14" y="19" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="bold">360°</text>
+      <text x="40" y="12" fill="#e5e7eb" font-size="11" font-weight="bold">Viditelnost</text>
+      <text x="40" y="26" fill="#9ca3af" font-size="10">Všesměrová — záchranář se může</text>
+      <text x="40" y="38" fill="#9ca3af" font-size="10">přibližovat z libovolné strany</text>
+    </g>
+
+    <line x1="20" y1="100" x2="700" y2="100" stroke="#1e293b"/>
+
+    <text x="30" y="120" fill="#fca5a5" font-size="11" font-weight="bold">✗ Co tísňový signál NIKDY NENÍ:</text>
+    <text x="30" y="138" fill="#9ca3af" font-size="10.5">• zelená světla (zelená = pravý bok plavidla, ne nouze)</text>
+    <text x="30" y="152" fill="#9ca3af" font-size="10.5">• černý kouř ze zápalné gumy (nepatří do § 39 a je nesmysl ekologicky i prakticky)</text>
+  </g>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<ul>
+  <li><strong>„Tři silná zelená světla v rovnostranném trojúhelníku na předním stěžni"</strong> — vymyšlené. <strong>Zelená</strong> v plavbě signalizuje pravý bok plavidla, ne nouzi. § 39 žádný takový signál nezná. Trojice světel se jako kombinace v plavbě používá (např. nasedlé plavidlo má soustavu kotevních světel), ale ne v zelené a ne pro tíseň.</li>
+  <li><strong>„Černý kouř zapálené gumy vhozené na hladinu"</strong> — taky vymyšlené, k tomu absurdní. Kouř jako tísňový signál existuje v námořní praxi (oranžová dýmovnice), ale ve vyhlášce 67/2015 ho mezi povolenými tísňovými signály nenajdeš a černý kouř ze zápalné gumy už vůbec ne.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>V krabičce povinného vybavení malého plavidla na vnitrozemských vodách u nás světlice obvykle nejsou (na rozdíl od námořní plavby), ale <strong>rozeznat tísňový signál a umět na něj reagovat</strong> je součást zkoušek. Když na vodě uvidíš červené světlice opakující se v krátkých intervalech, někdo poblíž volá o pomoc — tvá povinnost podle <strong>§ 30 zákona č. 114/1995 Sb.</strong> je poskytnout pomoc, pokud to nezpůsobí vážné nebezpečí tobě, tvému plavidlu nebo osobám na něm.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.sagit.cz/info/sb15067">Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — § 39 Signály v nouzi (Sagit)</a></li>
+</ul>

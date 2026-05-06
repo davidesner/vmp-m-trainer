@@ -1,0 +1,120 @@
+<h2>Křížení směrů plavby — pravidlo přednosti zprava</h2>
+
+<p>Otázka řeší situaci, kdy si dvě <strong>malá plavidla stejného druhu</strong> (např. dva motoráky, dvě veslice — výslovně <em>vyjma plachetnic</em>) kříží dráhy a hrozí kolize. Platí pro ně klasické <strong>pravidlo přednosti zprava</strong>: kdo má druhé plavidlo na svém <strong>pravém boku (starboardu)</strong>, tomu dává přednost a vyhne se tak, aby <strong>proplul za jeho zádí</strong> — nikdy ne před přídí.</p>
+
+<h3>Vizualizace — pohled shora</h3>
+
+<p>Vlevo modré plavidlo má červené po svém <strong>pravém boku</strong> → modré dává přednost, uhýbá za záď. Červené má modré po levém boku → zachovává směr a rychlost.</p>
+
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#e8f4fa;border-radius:8px">
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c8a3a"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowDashed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="25" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1f2937">Pohled shora — dráhy se kříží</text>
+
+  <line x1="300" y1="60" x2="300" y2="360" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="80" y1="200" x2="540" y2="200" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <line x1="120" y1="200" x2="270" y2="200" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowBlue)"/>
+
+  <path d="M 270 200 Q 320 250, 380 270 L 470 270" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowDashed)"/>
+  <text x="370" y="305" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2563eb" font-weight="bold">uhýbá za záď ✓</text>
+
+  <line x1="300" y1="80" x2="300" y2="320" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowRed)"/>
+  <text x="320" y="105" font-family="sans-serif" font-size="11" fill="#c0392b">zachovává směr</text>
+
+  <g transform="translate(240,200)">
+    <ellipse cx="0" cy="0" rx="28" ry="11" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.5"/>
+    <polygon points="28,0 36,-4 36,4" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.5"/>
+    <text x="0" y="3" text-anchor="middle" font-family="sans-serif" font-size="10" fill="white" font-weight="bold">A</text>
+  </g>
+  <text x="180" y="180" font-family="sans-serif" font-size="11" fill="#2563eb" font-weight="bold">A — uvolní dráhu</text>
+  <text x="180" y="232" font-family="sans-serif" font-size="10" fill="#475569">(má B po pravém boku)</text>
+
+  <g transform="translate(300,170) rotate(90)">
+    <ellipse cx="0" cy="0" rx="28" ry="11" fill="#c0392b" stroke="#7c1d1d" stroke-width="1.5"/>
+    <polygon points="28,0 36,-4 36,4" fill="#c0392b" stroke="#7c1d1d" stroke-width="1.5"/>
+    <text x="0" y="3" text-anchor="middle" font-family="sans-serif" font-size="10" fill="white" font-weight="bold">B</text>
+  </g>
+  <text x="370" y="155" font-family="sans-serif" font-size="11" fill="#c0392b" font-weight="bold">B — má přednost</text>
+  <text x="370" y="170" font-family="sans-serif" font-size="10" fill="#475569">(přichází z pravé strany A)</text>
+
+  <line x1="240" y1="200" x2="240" y2="225" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="240,225 236,219 244,219" fill="#16a34a"/>
+  <text x="248" y="222" font-family="sans-serif" font-size="10" fill="#16a34a" font-weight="bold">pravobok A → tady je B</text>
+
+  <rect x="20" y="340" width="14" height="14" fill="#2563eb"/>
+  <text x="40" y="352" font-family="sans-serif" font-size="11" fill="#1f2937">A: dává přednost</text>
+  <rect x="180" y="340" width="14" height="14" fill="#c0392b"/>
+  <text x="200" y="352" font-family="sans-serif" font-size="11" fill="#1f2937">B: má přednost</text>
+  <line x1="380" y1="347" x2="410" y2="347" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="416" y="351" font-family="sans-serif" font-size="11" fill="#1f2937">původní směr</text>
+</svg>
+
+<h3>Co říká § 59 vyhlášky 67/2015 Sb.</h3>
+
+<p>Odstavec 1 zavádí obecné pravidlo:</p>
+
+<blockquote>
+<p>"Plují-li plavidla takovými směry, že se jejich dráhy kříží a mohlo by vzniknout nebezpečí kolize, plavidlo, které má jiné plavidlo po pravém boku, dá tomuto plavidlu přednost v plavbě a vyhne se křížení směrů plavby před jeho přídí. Plavidlo, které pluje z pravé strany, zachová svůj směr plavby. <strong>To neplatí pro malá plavidla ve vztahu k ostatním plavidlům</strong>…"</p>
+</blockquote>
+
+<p>Pro <strong>malá plavidla navzájem</strong> má odst. 2 vlastní hierarchii:</p>
+
+<blockquote>
+<p>"a) malé plavidlo s vlastním pohonem uvolní dráhu všem ostatním malým plavidlům,<br>
+b) malé plavidlo bez vlastního pohonu a neplující pomocí plachet uvolní dráhu malým plavidlům plujícím pomocí plachet,<br>
+c) plavidlo, které pluje z pravé strany, zachová svůj směr plavby."</p>
+</blockquote>
+
+<p>U <strong>stejného druhu</strong> (motor × motor, nebo veslice × veslice) písm. <em>a)</em> ani <em>b)</em> nerozhodne — žádné z plavidel nemá v hierarchii navrch. Aplikuje se proto písm. <strong>c)</strong>, které je věcně shodné s pravidlem zprava z odst. 1: kdo má druhého na pravoboku, ustupuje a vyhne se za jeho záď.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<table style="border-collapse:collapse;width:100%;font-size:14px">
+  <thead>
+    <tr style="background:#f1f5f9">
+      <th style="border:1px solid #cbd5e1;padding:8px;text-align:left">Tvrzení varianty</th>
+      <th style="border:1px solid #cbd5e1;padding:8px;text-align:left">Proč je špatně</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #cbd5e1;padding:8px">"Plavidlo, které má druhé na <strong>levém boku</strong>, dá přednost a změní směr <strong>vpravo</strong>."</td>
+      <td style="border:1px solid #cbd5e1;padding:8px">Obráceně — levobok má naopak přednost. A "změní směr vpravo" je pravidlo z § 60 pro <strong>potkávání čelem proti sobě</strong>, ne pro křížení.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #cbd5e1;padding:8px">"Plavidlo, které <strong>připlouvá z pravého boku</strong>, se vyhne, sníží rychlost nebo zastaví."</td>
+      <td style="border:1px solid #cbd5e1;padding:8px">Také obráceně — plavidlo přicházející zprava <strong>zachovává směr a rychlost</strong> (má přednost). Uhýbá a zpomaluje to, kdo má druhého na pravoboku.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+
+<ul>
+  <li><strong>Mnemotechnika:</strong> "Co máš po pravé ruce, to má přednost." Stejný princip jako auto z hlavní z pravé strany.</li>
+  <li><strong>Manévr:</strong> Vždycky uhni <strong>za záď</strong> druhého plavidla. Nezkoušej "to stihnout" před jeho přídí — to je nejčastější důvod kolizí.</li>
+  <li><strong>Plachetnice:</strong> Otázka je vyjímá schválně. Pro plachetnice mezi sebou platí <strong>jiná logika</strong> (§ 59 odst. 3 — rozhoduje strana, ze které fouká vítr, ne pravobok/levobok).</li>
+  <li><strong>Velká vs. malá plavidla:</strong> Tahle pravidla mezi sebou neřeší vztah malého a velkého plavidla — tam má vždy přednost to větší a malé navíc musí udržovat odstup nejméně dvojnásobku své délky (§ 59 odst. 5).</li>
+</ul>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu (Zákony pro lidi)</a></li>
+  <li><a href="https://www.kapitanjepes.cz/storage/upload/resources/67-2015_Pravidla_plavebniho_provozu.pdf">Plné znění vyhlášky 67/2015 Sb. (PDF)</a> — § 59</li>
+  <li><a href="https://krasajachtingu.cz/zaludnosti-v-pravidlech-plavebniho-provozu/">Krása jachtingu — záludnosti v pravidlech plavebního provozu</a></li>
+</ul>

@@ -1,0 +1,149 @@
+<h2>Před nepřehlednou úžinou: jeden dlouhý tón</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„jeden dlouhý zvuk; je-li úžina dlouhá, signál se při proplouvání úžinou opakuje."</em></p>
+
+<h3>Jádro</h3>
+<p>Úžina je úsek, kde plavební dráha <strong>není dostatečně široká pro potkávání plavidel</strong> (§ 62 odst. 1). Jakmile je úsek navíc <strong>nepřehledný</strong> — most, ostrý zákrut, skála, vegetace zakrývající výhled — musíš zvukem oznámit, že tam jedeš, dřív než tě protijedoucí může vidět. Standardizovaný signál pro tuhle situaci je <strong>jeden dlouhý zvuk</strong> (= 4 sekundy houkání). V dlouhé úžině se opakuje, aby tě protijedoucí slyšel kdykoliv během průjezdu.</p>
+
+<h3>Pozadí — § 62 odst. 1 písm. b) vyhlášky č. 67/2015 Sb.</h3>
+<blockquote>„Před vplutím do nepřehledné úžiny plavidlo dá zvukový signál ‚jeden dlouhý zvuk‘, je-li úžina dlouhá, zvukový signál při proplouvání úžinou opakuje."</blockquote>
+
+<p>Délka zvuků je definovaná v § 53 odst. 3: <strong>krátký zvuk = 1 sekunda, dlouhý zvuk = 4 sekundy</strong>, mezi dvěma zvuky následujícími po sobě je interval 1 sekunda.</p>
+
+<h3>Vizualizace — co to znamená v čase a v prostoru</h3>
+<p>Levý panel: jak dlouhý zvuk zní oproti krátkému (§ 53 odst. 3). Pravý panel: pohled shora na typickou nepřehlednou úžinu — most, zákrut nebo zúžení mezi pilíři, kde nevidíš, jestli proti tobě někdo nejede.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" style="width:100%;max-width:780px;height:auto;background:#f0f9ff;border:1px solid #cbd5e1;border-radius:6px">
+  <defs>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e40af"/>
+    </marker>
+    <marker id="arrSound" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <text x="195" y="26" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="bold">Délka zvuků (§ 53 odst. 3)</text>
+  <text x="585" y="26" font-family="sans-serif" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="bold">Situace na vodě (§ 62 odst. 1 písm. b)</text>
+
+  <line x1="390" y1="40" x2="390" y2="430" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- ============ LEFT PANEL: time bars ============ -->
+  <!-- Time axis -->
+  <line x1="40" y1="380" x2="370" y2="380" stroke="#475569" stroke-width="1.5"/>
+  <g font-family="sans-serif" font-size="10" fill="#475569">
+    <line x1="40" y1="378" x2="40" y2="386" stroke="#475569"/>
+    <text x="40" y="400" text-anchor="middle">0 s</text>
+    <line x1="100" y1="378" x2="100" y2="386" stroke="#475569"/>
+    <text x="100" y="400" text-anchor="middle">1 s</text>
+    <line x1="160" y1="378" x2="160" y2="386" stroke="#475569"/>
+    <text x="160" y="400" text-anchor="middle">2 s</text>
+    <line x1="220" y1="378" x2="220" y2="386" stroke="#475569"/>
+    <text x="220" y="400" text-anchor="middle">3 s</text>
+    <line x1="280" y1="378" x2="280" y2="386" stroke="#475569"/>
+    <text x="280" y="400" text-anchor="middle">4 s</text>
+    <line x1="340" y1="378" x2="340" y2="386" stroke="#475569"/>
+    <text x="340" y="400" text-anchor="middle">5 s</text>
+  </g>
+
+  <!-- Krátký zvuk (1 s) -->
+  <text x="40" y="80" font-family="sans-serif" font-size="12" fill="#64748b">Krátký zvuk (1 s) — jiné signály</text>
+  <rect x="40" y="90" width="60" height="36" fill="#cbd5e1" stroke="#475569" stroke-width="1.5" rx="3"/>
+  <text x="70" y="113" font-family="sans-serif" font-size="11" fill="#0f172a" text-anchor="middle" font-weight="bold">tón 1 s</text>
+
+  <!-- Dlouhý zvuk (4 s) — highlighted -->
+  <text x="40" y="160" font-family="sans-serif" font-size="12" fill="#b45309" font-weight="bold">Dlouhý zvuk (4 s) — pro úžinu</text>
+  <rect x="40" y="170" width="240" height="48" fill="#fbbf24" stroke="#b45309" stroke-width="2" rx="3"/>
+  <text x="160" y="200" font-family="sans-serif" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">— jeden dlouhý zvuk —</text>
+
+  <!-- Loudspeaker icon -->
+  <g transform="translate(310,178)">
+    <polygon points="0,18 12,18 24,8 24,32 12,22 0,22" fill="#b45309"/>
+    <path d="M 28 14 Q 36 20 28 26" stroke="#b45309" stroke-width="2" fill="none"/>
+    <path d="M 32 8 Q 44 20 32 32" stroke="#b45309" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Repeat in long narrows -->
+  <text x="40" y="252" font-family="sans-serif" font-size="12" fill="#0f172a" font-weight="bold">V dlouhé úžině: opakovat</text>
+  <rect x="40" y="262" width="60" height="40" fill="#fbbf24" stroke="#b45309" stroke-width="1.5" rx="3"/>
+  <text x="70" y="287" font-family="sans-serif" font-size="10" fill="#0f172a" text-anchor="middle">4 s</text>
+  <text x="115" y="287" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="middle">…pauza…</text>
+  <rect x="160" y="262" width="60" height="40" fill="#fbbf24" stroke="#b45309" stroke-width="1.5" rx="3"/>
+  <text x="190" y="287" font-family="sans-serif" font-size="10" fill="#0f172a" text-anchor="middle">4 s</text>
+  <text x="235" y="287" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="middle">…pauza…</text>
+  <rect x="280" y="262" width="60" height="40" fill="#fbbf24" stroke="#b45309" stroke-width="1.5" rx="3"/>
+  <text x="310" y="287" font-family="sans-serif" font-size="10" fill="#0f172a" text-anchor="middle">4 s</text>
+
+  <text x="40" y="335" font-family="sans-serif" font-size="11" fill="#475569" font-style="italic">Pozn.: animace by ukázala střídavé houkání</text>
+  <text x="40" y="350" font-family="sans-serif" font-size="11" fill="#475569" font-style="italic">a pauzy po celou dobu průjezdu úžinou.</text>
+
+  <!-- ============ RIGHT PANEL: top-down view of narrows ============ -->
+  <!-- River shape (banks narrowing to a bridge) -->
+  <path d="M 410 60 L 410 170 Q 470 200 500 220 L 670 220 Q 700 200 760 170 L 760 60 Z"
+        fill="#bae6fd" stroke="#0284c7" stroke-width="1.5"/>
+  <path d="M 410 430 L 410 320 Q 470 290 500 270 L 670 270 Q 700 290 760 320 L 760 430 Z"
+        fill="#bae6fd" stroke="#0284c7" stroke-width="1.5"/>
+
+  <!-- Bridge piers (creating the narrows) -->
+  <rect x="498" y="218" width="14" height="56" fill="#78716c" stroke="#1c1917" stroke-width="1"/>
+  <rect x="660" y="218" width="14" height="56" fill="#78716c" stroke="#1c1917" stroke-width="1"/>
+  <text x="585" y="252" font-family="sans-serif" font-size="11" fill="#1c1917" text-anchor="middle" font-weight="bold">MOST / NEPŘEHLEDNÁ ÚŽINA</text>
+
+  <!-- Vessel approaching from left -->
+  <g>
+    <polygon points="430,240 470,240 482,245 470,250 430,250" fill="#1e40af" stroke="#0c1e4a" stroke-width="1.5"/>
+    <text x="453" y="248" font-family="sans-serif" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">JÁ</text>
+    <line x1="487" y1="245" x2="525" y2="245" stroke="#1e40af" stroke-width="2" marker-end="url(#arrBlue)"/>
+  </g>
+
+  <!-- Sound waves emanating from vessel -->
+  <g stroke="#b45309" stroke-width="1.5" fill="none" opacity="0.85">
+    <path d="M 410 230 Q 400 245 410 260" stroke-dasharray="2,2"/>
+    <path d="M 400 220 Q 385 245 400 270" stroke-dasharray="3,2"/>
+    <path d="M 390 210 Q 370 245 390 280"/>
+  </g>
+  <text x="380" y="200" font-family="sans-serif" font-size="11" fill="#b45309" text-anchor="middle" font-weight="bold">— TÚÚÚ —</text>
+  <text x="380" y="215" font-family="sans-serif" font-size="10" fill="#b45309" text-anchor="middle">(4 s)</text>
+
+  <!-- Hidden vessel behind the bridge -->
+  <g opacity="0.5">
+    <polygon points="745,295 705,295 693,290 705,285 745,285" fill="#7f1d1d" stroke="#3b0a0a" stroke-width="1.5"/>
+    <text x="720" y="293" font-family="sans-serif" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">?</text>
+    <line x1="690" y1="290" x2="660" y2="290" stroke="#7f1d1d" stroke-width="2" stroke-dasharray="3,2"/>
+  </g>
+  <text x="700" y="335" font-family="sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle" font-style="italic">protijedoucí —</text>
+  <text x="700" y="348" font-family="sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle" font-style="italic">nevidím ho, ale</text>
+  <text x="700" y="361" font-family="sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle" font-style="italic">slyší můj signál</text>
+
+  <!-- Annotations -->
+  <text x="430" y="80" font-family="sans-serif" font-size="11" fill="#0f172a" font-weight="bold">1) Před vplutím:</text>
+  <text x="430" y="96" font-family="sans-serif" font-size="11" fill="#0f172a">jeden dlouhý zvuk (4 s)</text>
+
+  <text x="430" y="125" font-family="sans-serif" font-size="11" fill="#0f172a" font-weight="bold">2) V dlouhé úžině:</text>
+  <text x="430" y="141" font-family="sans-serif" font-size="11" fill="#0f172a">signál opakovat</text>
+
+  <text x="430" y="395" font-family="sans-serif" font-size="11" fill="#0f172a" font-weight="bold">3) Pokud uslyšíš odpověď:</text>
+  <text x="430" y="411" font-family="sans-serif" font-size="11" fill="#0f172a">přednost dle § 62 odst. 1 c)/d)</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<p><strong>Varianta „dva dlouhé zvuky opakované v intervalech ne delších než 1 minuta"</strong> — tohle popisuje úplně jinou situaci: <em>sestava plavidel plující za snížené viditelnosti bez radiolokátoru</em> podle § 89 odst. 1 písm. b). Slovo „minuta" je nápověda — týká se mlhy, ne úžiny. (Samostatné plavidlo dává v té situaci „jeden dlouhý zvuk"; sestava „dva dlouhé".)</p>
+
+<p><strong>Varianta „tři dlouhé zvuky" + odpověď „tři krátké zvuky"</strong> — kombinace, která ve vyhlášce vůbec není. Co existuje a co tě má zmást: <strong>„tři krátké zvuky" = couvám / jedu zpětným chodem</strong> (manévrový signál). S úžinou nesouvisí.</p>
+
+<h3>Praktická aplikace</h3>
+<p>Klasické situace, ve kterých použiješ jeden dlouhý zvuk:</p>
+<ul>
+  <li>blížíš se k <strong>mostu</strong> s úzkým průjezdem mezi pilíři</li>
+  <li>vplouváš do <strong>ostrého zákrutu</strong>, kde za břehem nevidíš</li>
+  <li><strong>úžina mezi ostrovem a břehem</strong> nebo mezi dvěma plavebními značkami</li>
+  <li>vjezd do <strong>plavební komory</strong> nebo přístavu, pokud je nepřehledný</li>
+</ul>
+<p>Pokud uslyšíš odpověď („někdo houká proti mně"), řídíš se pravidly přednosti v úžině podle § 62 odst. 1 písm. c)/d) — kdo pluje proti proudu počká pod úžinou; kde proud není stanoven, přednost má plavidlo, které nemá překážky po pravé straně, atd.</p>
+
+<h3>Zdroje</h3>
+<ol>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb. — pravidla plavebního provozu (zakonyprolidi.cz)</a></li>
+  <li><a href="https://sps.gov.cz/downloads/predpisy/vyhlaska-67-2015sb.pdf">Vyhláška č. 67/2015 Sb. — úplné znění (Státní plavební správa, PDF)</a></li>
+</ol>

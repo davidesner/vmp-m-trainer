@@ -1,0 +1,179 @@
+<h2>Plavidlo s předností při proplouvání — denní signalizace</h2>
+
+<p><strong>Správně je:</strong> <em>„červený plamenec umístěný v přední části plavidla."</em></p>
+
+<h3>Jádro</h3>
+<p><strong>Plamenec</strong> = dlouhá úzká vlajka tvaru zužující se stuhy — neplést s běžnou (obdélníkovou) vlajkou. Plavidlo s předností ho za dne nese <strong>vepředu</strong> (na přídi/stěžni v dostatečné výšce), aby ho viděla protijedoucí plavidla z dálky a včas mu dala přednost.</p>
+
+<p>V noci a za snížené viditelnosti se místo plamence nese <strong>červené stálé světlo</strong> na stejném místě.</p>
+
+<blockquote style="border-left:4px solid #dc2626;padding:8px 14px;background:#fef2f2;margin:12px 0">
+<strong>§ 26 vyhlášky č. 67/2015 Sb.</strong> (pravidla plavebního provozu) — <em>Signalizace plavidel, která mají přednost při proplouvání</em>:<br>
+„Plavidlo mající přednost při proplouvání místy s určeným pořadím proplouvání, musí nést kromě signalizace předepsané jinými ustanoveními této hlavy <strong>za dne červený plamenec umístěný v přední části plavidla v dostatečné výši, aby byl dobře viditelný</strong>."
+</blockquote>
+
+<h3>Vizualizace — plamenec vs. vlajka, správné vs. chybné umístění</h3>
+
+<svg viewBox="0 0 820 460" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Denní signalizace plavidla s předností: červený plamenec na přídi</title>
+  <desc>Schémata tří variant umístění a tvaru červené signalizace na plavidle: plamenec na přídi (správně), vlajka na zádi (špatně), vlajka s pruhem na přídi (špatně). Pod tím detail rozdílu mezi plamencem a vlajkou.</desc>
+
+  <defs>
+    <linearGradient id="sky65" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#dbeafe"/>
+      <stop offset="100%" style="stop-color:#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="water65" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#7dd3fc"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="280" style="fill:url(#sky65)"/>
+  <rect x="0" y="240" width="820" height="40" style="fill:url(#water65);opacity:.85"/>
+
+  <!-- Panel 1: SPRÁVNĚ - plamenec na přídi -->
+  <g transform="translate(0 0)">
+    <rect x="10" y="10" width="260" height="260" style="fill:none;stroke:#16a34a;stroke-width:2;stroke-dasharray:4,3;rx:6"/>
+    <text x="140" y="32" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#166534">SPRÁVNĚ</text>
+    <text x="140" y="50" text-anchor="middle" style="font-size:11px;fill:#166534">červený plamenec, vepředu</text>
+
+    <!-- stěžeň/příď nahoře -->
+    <line x1="190" y1="220" x2="190" y2="80" style="stroke:#475569;stroke-width:2.5"/>
+    <!-- plamenec - dlouhá zužující se stuha -->
+    <path d="M 190 85 L 250 88 L 252 92 L 250 96 L 190 100 Z" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1"/>
+    <!-- vlnka simulující vlání -->
+    <path d="M 190 100 Q 220 105 250 96" style="fill:none;stroke:#991b1b;stroke-width:.5;opacity:.5"/>
+
+    <!-- trup plavidla -->
+    <path d="M 90 240 Q 110 215 190 215 L 245 215 Q 260 220 255 240 Z" style="fill:#fbbf24;stroke:#92400e;stroke-width:1.5"/>
+    <!-- nástavba/kabina -->
+    <rect x="140" y="195" width="60" height="22" style="fill:#fef3c7;stroke:#92400e;stroke-width:1"/>
+    <rect x="148" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+    <rect x="165" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+    <rect x="182" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+
+    <!-- označení směru pohybu -->
+    <text x="60" y="232" style="font-size:10px;fill:#1e3a8a;font-weight:600">PŘÍĎ ←</text>
+    <text x="252" y="232" style="font-size:10px;fill:#1e3a8a;font-weight:600">→ ZÁĎ</text>
+
+    <!-- popisek -->
+    <text x="140" y="258" text-anchor="middle" style="font-size:10px;fill:#166534;font-weight:600">✓ tvar zužující se stuhy</text>
+    <text x="140" y="272" text-anchor="middle" style="font-size:10px;fill:#166534;font-weight:600">✓ vepředu, vysoko</text>
+  </g>
+
+  <!-- Panel 2: ŠPATNĚ - vlajka na zádi -->
+  <g transform="translate(275 0)">
+    <rect x="10" y="10" width="260" height="260" style="fill:none;stroke:#dc2626;stroke-width:2;stroke-dasharray:4,3;rx:6"/>
+    <text x="140" y="32" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#991b1b">ŠPATNĚ</text>
+    <text x="140" y="50" text-anchor="middle" style="font-size:11px;fill:#991b1b">vlajka na zádi</text>
+
+    <!-- stěžeň na zádi -->
+    <line x1="240" y1="215" x2="240" y2="100" style="stroke:#475569;stroke-width:2.5"/>
+    <!-- obdélníková vlajka na zádi -->
+    <rect x="240" y="105" width="50" height="32" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1"/>
+
+    <!-- trup -->
+    <path d="M 90 240 Q 110 215 190 215 L 245 215 Q 260 220 255 240 Z" style="fill:#fbbf24;stroke:#92400e;stroke-width:1.5"/>
+    <rect x="140" y="195" width="60" height="22" style="fill:#fef3c7;stroke:#92400e;stroke-width:1"/>
+    <rect x="148" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+    <rect x="165" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+    <rect x="182" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+
+    <text x="60" y="232" style="font-size:10px;fill:#1e3a8a;font-weight:600">PŘÍĎ ←</text>
+    <text x="252" y="232" style="font-size:10px;fill:#1e3a8a;font-weight:600">→ ZÁĎ</text>
+
+    <!-- chyby -->
+    <text x="140" y="258" text-anchor="middle" style="font-size:10px;fill:#991b1b;font-weight:600">✗ chybný tvar (vlajka)</text>
+    <text x="140" y="272" text-anchor="middle" style="font-size:10px;fill:#991b1b;font-weight:600">✗ chybné místo (záď)</text>
+  </g>
+
+  <!-- Panel 3: ŠPATNĚ - vlajka s pruhem na přídi -->
+  <g transform="translate(550 0)">
+    <rect x="10" y="10" width="260" height="260" style="fill:none;stroke:#dc2626;stroke-width:2;stroke-dasharray:4,3;rx:6"/>
+    <text x="140" y="32" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#991b1b">ŠPATNĚ</text>
+    <text x="140" y="50" text-anchor="middle" style="font-size:11px;fill:#991b1b">červeno-bílo-červená vlajka, vepředu</text>
+
+    <!-- stěžeň na přídi -->
+    <line x1="105" y1="215" x2="105" y2="100" style="stroke:#475569;stroke-width:2.5"/>
+    <!-- vlajka červená/bílý pruh/červená -->
+    <rect x="105" y="105" width="55" height="11" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:.6"/>
+    <rect x="105" y="116" width="55" height="11" style="fill:#ffffff;stroke:#7f1d1d;stroke-width:.6"/>
+    <rect x="105" y="127" width="55" height="11" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:.6"/>
+
+    <!-- trup -->
+    <path d="M 90 240 Q 110 215 190 215 L 245 215 Q 260 220 255 240 Z" style="fill:#fbbf24;stroke:#92400e;stroke-width:1.5"/>
+    <rect x="140" y="195" width="60" height="22" style="fill:#fef3c7;stroke:#92400e;stroke-width:1"/>
+    <rect x="148" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+    <rect x="165" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+    <rect x="182" y="200" width="10" height="10" style="fill:#7dd3fc;stroke:#0c4a6e;stroke-width:.5"/>
+
+    <text x="60" y="232" style="font-size:10px;fill:#1e3a8a;font-weight:600">PŘÍĎ ←</text>
+    <text x="252" y="232" style="font-size:10px;fill:#1e3a8a;font-weight:600">→ ZÁĎ</text>
+
+    <text x="140" y="258" text-anchor="middle" style="font-size:10px;fill:#991b1b;font-weight:600">✗ vymyšlený vzor</text>
+    <text x="140" y="272" text-anchor="middle" style="font-size:10px;fill:#991b1b;font-weight:600">✗ chybný tvar (vlajka)</text>
+  </g>
+
+  <!-- Detail: plamenec vs. vlajka -->
+  <g transform="translate(0 295)">
+    <rect x="10" y="10" width="800" height="155" style="fill:#f8fafc;stroke:#cbd5e1;stroke-width:1;rx:6"/>
+    <text x="410" y="32" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#0f172a">Klíčový rozdíl: plamenec vs. vlajka</text>
+
+    <!-- Plamenec detail -->
+    <g transform="translate(60 50)">
+      <line x1="0" y1="0" x2="0" y2="80" style="stroke:#475569;stroke-width:2"/>
+      <path d="M 0 8 L 200 14 L 205 20 L 200 26 L 0 32 Z" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1"/>
+      <text x="0" y="100" style="font-size:12px;fill:#0f172a;font-weight:700">PLAMENEC</text>
+      <text x="0" y="115" style="font-size:10px;fill:#475569">dlouhá, úzká, zužuje se k volnému konci</text>
+      <text x="0" y="128" style="font-size:10px;fill:#475569">— vlaje jako stuha</text>
+    </g>
+
+    <!-- Oddělovač -->
+    <line x1="410" y1="50" x2="410" y2="160" style="stroke:#cbd5e1;stroke-width:1;stroke-dasharray:3,3"/>
+
+    <!-- Vlajka detail -->
+    <g transform="translate(460 50)">
+      <line x1="0" y1="0" x2="0" y2="80" style="stroke:#475569;stroke-width:2"/>
+      <rect x="0" y="8" width="80" height="50" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1"/>
+      <text x="0" y="100" style="font-size:12px;fill:#0f172a;font-weight:700">VLAJKA</text>
+      <text x="0" y="115" style="font-size:10px;fill:#475569">obdélníkový/čtvercový tvar</text>
+      <text x="0" y="128" style="font-size:10px;fill:#475569">— pro tuto signalizaci se NEPOUŽÍVÁ</text>
+    </g>
+  </g>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<table style="width:100%;border-collapse:collapse;margin:10px 0">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Co je špatně</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Proč</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Červená <strong>vlajka</strong> umístěná <strong>na zádi</strong></td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Dvě chyby najednou: tvar (vlajka místo plamence) i místo (záď místo přídě). Smyslem signalizace je, aby ji <em>zdálky viděla protijedoucí plavidla</em> — proto vepředu, vysoko, ve formátu, který je z dálky jasně rozpoznatelný.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px">Červená vlajka s <strong>bílým vodorovným pruhem</strong> uprostřed, vepředu</td>
+      <td style="padding:8px">Místo je správné, ale vzor a tvar je <strong>vymyšlený distraktor</strong>. Vyhláška 67/2015 Sb. žádnou červeno-bílo-červenou pruhovou vlajku pro tento účel neurčuje. Předepsán je jednoduchý jednobarevný <strong>plamenec</strong>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+<p>Kdy plavidlo plamenec vyvěšuje:</p>
+<ul>
+  <li><strong>Plavební komory</strong> — kde je určeno pořadí proplouvání (např. linkový osobní spoj má přednost před rekreačními plavidly)</li>
+  <li><strong>Úžiny a místa s jednosměrným provozem</strong> — zúžení pod mostem, krátké kanály, místa označená příslušnými plavebními značkami</li>
+  <li><strong>Místa, kde plavební orgán stanovil pořadí proplouvání</strong> — typicky úsek, kde se vejde jen jedno plavidlo</li>
+</ul>
+<p>V noci a za snížené viditelnosti plamenec nahrazuje <strong>červené stálé světlo</strong> na stejném místě (vepředu, dostatečně vysoko).</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu, § 26 (Signalizace plavidel, která mají přednost při proplouvání) — <a href="https://krajta.slv.cz/2015/67/pril_7" target="_blank" rel="noopener">krajta.slv.cz/2015/67</a></li>
+</ul>

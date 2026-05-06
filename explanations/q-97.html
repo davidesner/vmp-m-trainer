@@ -1,0 +1,129 @@
+<h2>Jádro</h2>
+<p>Plující plavidlo není veřejně přístupný objekt — za bezpečnost manévrů kolem svého trupu odpovídá <strong>vůdce</strong>. Cizí plavidlo se k němu nesmí přiblížit bokem, vyvázat na něj ani plout těsně za ním, dokud k tomu vůdce <strong>výslovně</strong> nesvolí.</p>
+
+<p>Správná odpověď je tedy ta, která vyžaduje <em>„výslovný souhlas vůdce plavidla"</em>.</p>
+
+<h2>Pozadí — § 72 odst. 3 vyhlášky č. 67/2015 Sb.</h2>
+<blockquote>
+  <p>„Přibližovat se k boku plavidla, které pluje, vyvazovat se na ně nebo plout těsně za ním, lze jen s výslovným souhlasem jeho vůdce. To neplatí pro plavidlo plavebního úřadu při výkonu státního dozoru, plavidlo Policie České republiky nebo Celní správy České republiky při služebních úkonech a plavidlo obecní policie při výkonu její působnosti."</p>
+</blockquote>
+
+<p>Klíčová slova:</p>
+<ul>
+  <li><strong>„výslovný souhlas"</strong> — ne implicitní, ne mlčení; vůdce musí aktivně přivolit (rádio, gesto, zvolání).</li>
+  <li><strong>„jeho vůdce"</strong> — rozhoduje vůdce konkrétního plavidla, ke kterému se přibližuješ. Ne plavební úřad, ne kapitán přístavu.</li>
+  <li><strong>Výjimka</strong> je jen pro plavební úřad / Policii ČR / Celní správu ČR / obecní policii při výkonu jejich působnosti.</li>
+</ul>
+
+<h2>Vizualizace — kde je „nebezpečná zóna" plujícího plavidla</h2>
+
+<p>Plavidlo za plavby kolem sebe vytváří tři rizikové oblasti, do kterých nesmíš bez souhlasu vůdce vplout:</p>
+
+<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#eaf3fb;border:1px solid #b8d4e6;border-radius:6px">
+  <!-- voda -->
+  <defs>
+    <pattern id="wake" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 10 Q5 6 10 10 T20 10" fill="none" stroke="#9cc4dd" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="600" height="360" fill="url(#wake)"/>
+
+  <!-- nebezpečné zóny: bok -->
+  <rect x="220" y="60" width="160" height="40" fill="#ffd1d1" stroke="#e07070" stroke-dasharray="4 3" rx="6"/>
+  <text x="300" y="55" font-size="11" fill="#a63a3a" text-anchor="middle" font-family="sans-serif">BOK — vlnění, riziko kolize</text>
+
+  <rect x="220" y="240" width="160" height="40" fill="#ffd1d1" stroke="#e07070" stroke-dasharray="4 3" rx="6"/>
+  <text x="300" y="297" font-size="11" fill="#a63a3a" text-anchor="middle" font-family="sans-serif">BOK — vlnění, riziko kolize</text>
+
+  <!-- nebezpečná zóna: za zádí (kýlový proud) -->
+  <path d="M380 130 L520 100 L520 260 L380 230 Z" fill="#ffd1d1" stroke="#e07070" stroke-dasharray="4 3"/>
+  <text x="450" y="180" font-size="11" fill="#a63a3a" text-anchor="middle" font-family="sans-serif">ZÁĎ — kýlový proud,</text>
+  <text x="450" y="194" font-size="11" fill="#a63a3a" text-anchor="middle" font-family="sans-serif">savný efekt vrtule, brázda</text>
+
+  <!-- plavidlo (shora) -->
+  <path d="M120 150 L320 130 L380 170 L320 210 L120 190 Z" fill="#3a6b8f" stroke="#1f3d52" stroke-width="2"/>
+  <!-- nástavba -->
+  <rect x="190" y="156" width="80" height="28" fill="#d8e6f0" stroke="#1f3d52"/>
+  <!-- okno -->
+  <rect x="200" y="162" width="60" height="8" fill="#5a8caf"/>
+
+  <!-- směr plavby -->
+  <line x1="380" y1="170" x2="450" y2="170" stroke="#1f3d52" stroke-width="2" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1f3d52"/>
+    </marker>
+  </defs>
+  <text x="415" y="160" font-size="11" fill="#1f3d52" font-family="sans-serif" text-anchor="middle">směr plavby</text>
+
+  <!-- brázda -->
+  <path d="M120 170 Q60 145 30 130" fill="none" stroke="#9cc4dd" stroke-width="1.5"/>
+  <path d="M120 170 Q60 195 30 210" fill="none" stroke="#9cc4dd" stroke-width="1.5"/>
+  <path d="M120 170 Q70 160 40 150" fill="none" stroke="#9cc4dd" stroke-width="1"/>
+  <path d="M120 170 Q70 180 40 190" fill="none" stroke="#9cc4dd" stroke-width="1"/>
+
+  <!-- malé plavidlo, které se chce přiblížit -->
+  <g transform="translate(540 60)">
+    <path d="M0 0 L20 0 L26 8 L20 16 L0 16 Z" fill="#c2502b" stroke="#7a3019"/>
+    <text x="13" y="32" font-size="10" fill="#7a3019" text-anchor="middle" font-family="sans-serif">malé plavidlo</text>
+  </g>
+  <line x1="540" y1="78" x2="395" y2="105" stroke="#c2502b" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arr2)"/>
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c2502b"/>
+    </marker>
+  </defs>
+  <text x="475" y="80" font-size="10" fill="#c2502b" font-family="sans-serif">manévr možný JEN</text>
+  <text x="475" y="92" font-size="10" fill="#c2502b" font-family="sans-serif">se souhlasem vůdce</text>
+
+  <!-- popis -->
+  <text x="20" y="340" font-size="11" fill="#1f3d52" font-family="sans-serif">Pohled shora. Červené plochy = zóny, do kterých nelze bez výslovného souhlasu vůdce.</text>
+</svg>
+
+<h2>Proč to existuje — praktické pozadí</h2>
+
+<p>Plující plavidlo má kolem sebe nebezpečné zóny, které z dálky nevidíš:</p>
+
+<table>
+  <thead>
+    <tr><th>Zóna</th><th>Riziko</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Bok</strong></td>
+      <td>Vlnění a vlna z trupu, riziko nárazu při náhlém zaboření; ruční kormidlo nemusí vykompenzovat odraz.</td>
+    </tr>
+    <tr>
+      <td><strong>Záď / kýlový proud</strong></td>
+      <td>Savný efekt vrtule, intenzivní brázda; malé plavidlo může být vtaženo nebo přehozeno vlnou.</td>
+    </tr>
+    <tr>
+      <td><strong>Manévrová odpověď velké lodi</strong></td>
+      <td>Vůdce nestihne reagovat na náhlý objekt blízko trupu, zejména na řece nebo v plavební komoře.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Výslovný souhlas vůdce znamená, že druhá posádka o tobě ví — případně zpomalí, vypne pohon, vyloží lano nebo signalizuje bezpečnou stranu.</p>
+
+<h2>Proč ne ostatní varianty</h2>
+
+<ul>
+  <li><strong>Povolení plavebního úřadu</strong> — plavební úřad reguluje provoz na vodní cestě jako celek (omezení, rychlosti, uzávěry vodní cesty). Manévry těsně u jiného plavidla jsou věc <em>vůdce konkrétního plavidla</em>, ne úřadu. Úřad by ani nemohl vědět o aktuálních podmínkách na palubě.</li>
+  <li><strong>Dostatečně široká plavební dráha</strong> — šířka dráhy řeší pravidla pro <em>míjení a předjíždění</em>, ne přiblížení se k boku. I na široké hladině je manévr riskantní, dokud druhá posádka neví, že přicházíš.</li>
+</ul>
+
+<h2>Praktická aplikace</h2>
+
+<ul>
+  <li>Před přiblížením k velkému plavidlu naváž spojení (VHF kanál, gesto, zvolání) a počkej na <strong>aktivní</strong> souhlas.</li>
+  <li>„Mlčení neznamená souhlas." Pokud vůdce nereaguje, drž bezpečný odstup a manévr neprováděj.</li>
+  <li>Souhlas se vztahuje k <em>okamžiku</em> manévru — nelze předpokládat, že platí trvale; podmínky na vodě se mění.</li>
+</ul>
+
+<h2>Zdroje</h2>
+
+<ul>
+  <li><a href="https://krajta.slv.cz/2015/67/par_6">§ 72 odst. 3 vyhlášky č. 67/2015 Sb. — krajta.slv.cz</a></li>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — zakonyprolidi.cz</a></li>
+</ul>

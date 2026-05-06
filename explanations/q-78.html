@@ -1,0 +1,121 @@
+<h2>Když je bezpečno, nedělej nic</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„Nemění směr nebo rychlost plavby způsobem, který by mohl nebezpečí kolize přivodit."</em></p>
+
+<h3>Jádro</h3>
+<p>Pravidlo říká přesný opak toho, co by člověk možná čekal — když je situace <strong>bezpečná</strong>, <strong>nedělej nic</strong>. Žádné „pro jistotu" zatočení doleva, žádné zpomalení „pro klid". Jakákoliv nečekaná změna směru nebo rychlosti totiž může z bezpečné situace udělat nebezpečnou: druhé plavidlo už dávno vyhodnotilo tvůj kurz a manévruje (nebo nemanévruje) podle něj. <strong>Predikovatelnost</strong> je základ bezpečnosti na vodě.</p>
+
+<h3>Pozadí — § 57 odst. 5 vyhlášky č. 67/2015 Sb.</h3>
+<blockquote>„Plují-li plavidla směry, které vylučují jakékoli nebezpečí kolize, nemění směr nebo rychlost plavby způsobem, který by mohl nebezpečí kolize přivodit."</blockquote>
+
+<p>Princip je v zásadě totožný s pravidlem 17 mezinárodního COLREGu — povinnost plavidla, které má přednost, „udržet kurz a rychlost". Filozofie: pokud všichni dělají to, co dělají, ostatní se podle toho zařídí. Zbytečný manévr tuhle vzájemnou předvídatelnost rozbije.</p>
+
+<h3>Vizualizace — bezpečná situace vs. zbytečný manévr</h3>
+<p>Levý sloupec ukazuje výchozí situaci, kterou popisuje § 57 odst. 5 — kurzy <strong>vylučují nebezpečí kolize</strong>. Pravý sloupec ukazuje, co se stane, když jedno plavidlo přesto „pro jistotu" změní kurz: vytvoří kolizní bod, kde dříve nebyl.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" style="width:100%;max-width:760px;height:auto;background:#f0f9ff;border:1px solid #cbd5e1;border-radius:6px">
+  <defs>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#15803d"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b91c1c"/>
+    </marker>
+    <marker id="arrGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Titles -->
+  <text x="190" y="28" font-family="sans-serif" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">SPRÁVNĚ — držet kurz a rychlost</text>
+  <text x="570" y="28" font-family="sans-serif" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">ŠPATNĚ — zbytečný manévr</text>
+
+  <!-- Vertical divider -->
+  <line x1="380" y1="40" x2="380" y2="430" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- =============== LEFT PANEL — safe situation =============== -->
+  <!-- River banks (light blue water already, just label) -->
+  <text x="20" y="60" font-family="sans-serif" font-size="11" fill="#64748b" font-style="italic">Výchozí stav</text>
+
+  <!-- Vessel A (green) — going up-right, lower-left position -->
+  <g>
+    <!-- hull -->
+    <polygon points="60,340 100,340 110,330 100,320 60,320" fill="#15803d" stroke="#14532d" stroke-width="1.5"/>
+    <text x="85" y="335" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">A</text>
+    <!-- direction arrow -->
+    <line x1="115" y1="330" x2="200" y2="270" stroke="#15803d" stroke-width="2" marker-end="url(#arrG)"/>
+  </g>
+
+  <!-- Vessel B (blue) — going down-right, upper-left position -->
+  <g>
+    <polygon points="60,120 100,120 110,130 100,140 60,140" fill="#0369a1" stroke="#0c4a6e" stroke-width="1.5"/>
+    <text x="85" y="135" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">B</text>
+    <line x1="115" y1="130" x2="200" y2="190" stroke="#0369a1" stroke-width="2" marker-end="url(#arrG)"/>
+  </g>
+
+  <!-- Course continuation — show they pass safely apart -->
+  <line x1="200" y1="270" x2="350" y2="160" stroke="#15803d" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="200" y1="190" x2="350" y2="300" stroke="#0369a1" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- "Safe distance" indicator -->
+  <line x1="275" y1="215" x2="275" y2="245" stroke="#15803d" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="285" y="234" font-family="sans-serif" font-size="11" fill="#15803d" font-weight="bold">bezpečně se míjejí</text>
+
+  <!-- Bottom callout -->
+  <rect x="20" y="380" width="340" height="42" fill="#dcfce7" stroke="#15803d" stroke-width="1" rx="4"/>
+  <text x="190" y="397" font-family="sans-serif" font-size="11" fill="#15803d" text-anchor="middle" font-weight="bold">Kurzy se rozcházejí → nebezpečí kolize neexistuje</text>
+  <text x="190" y="413" font-family="sans-serif" font-size="11" fill="#15803d" text-anchor="middle">Obě plavidla pokračují beze změny směru i rychlosti.</text>
+
+  <!-- =============== RIGHT PANEL — unnecessary maneuver =============== -->
+  <text x="400" y="60" font-family="sans-serif" font-size="11" fill="#64748b" font-style="italic">Tatáž výchozí pozice…</text>
+
+  <!-- Vessel A — same start, but turns toward B "for safety" -->
+  <g>
+    <polygon points="440,340 480,340 490,330 480,320 440,320" fill="#b91c1c" stroke="#7f1d1d" stroke-width="1.5"/>
+    <text x="465" y="335" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">A</text>
+    <!-- original (would-be) course — faded -->
+    <line x1="495" y1="330" x2="580" y2="270" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrGrey)"/>
+    <text x="600" y="270" font-family="sans-serif" font-size="9" fill="#94a3b8" font-style="italic">(původní kurz)</text>
+    <!-- new course — turning up toward B -->
+    <line x1="495" y1="325" x2="600" y2="220" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- Vessel B — same path -->
+  <g>
+    <polygon points="440,120 480,120 490,130 480,140 440,140" fill="#0369a1" stroke="#0c4a6e" stroke-width="1.5"/>
+    <text x="465" y="135" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">B</text>
+    <line x1="495" y1="130" x2="600" y2="220" stroke="#0369a1" stroke-width="2" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- Collision point -->
+  <g>
+    <circle cx="600" cy="220" r="14" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+    <text x="600" y="225" font-family="sans-serif" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">!</text>
+  </g>
+  <text x="625" y="218" font-family="sans-serif" font-size="11" fill="#b91c1c" font-weight="bold">nový</text>
+  <text x="625" y="232" font-family="sans-serif" font-size="11" fill="#b91c1c" font-weight="bold">kolizní bod</text>
+
+  <!-- Bottom callout -->
+  <rect x="400" y="380" width="340" height="42" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="4"/>
+  <text x="570" y="397" font-family="sans-serif" font-size="11" fill="#b91c1c" text-anchor="middle" font-weight="bold">Změna kurzu „pro jistotu" → vznikne riziko kolize</text>
+  <text x="570" y="413" font-family="sans-serif" font-size="11" fill="#b91c1c" text-anchor="middle">Přesně to, co § 57 odst. 5 zakazuje.</text>
+
+  <!-- Footer caption -->
+  <text x="380" y="450" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="middle" font-style="italic">Pohled shora. Plné šipky = aktuální kurz, čárkované = pokračování kurzu, šedá = původní kurz před manévrem.</text>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Varianta „musí změnit směr nebo rychlost tak, aby míjení proběhlo levými boky"</strong> — to je pravidlo pro <strong>potkávání plavidel jdoucích proti sobě</strong> (čelní setkání, jiný odstavec § 57). Tady ale zadání výslovně říká, že kurzy nebezpečí kolize <em>vylučují</em> — žádné levobokové míjení vynucovat nemusíš a vynucený manévr by sám vyrobil nebezpečí.</li>
+  <li><strong>Varianta „mohou směr nebo rychlost změnit pouze plavidla plující proti proudu"</strong> — žádné takové pravidlo ve vyhlášce neexistuje. Plavba proti proudu / po proudu hraje roli u předjíždění a u přednosti na úzkých místech, ne u situací bez nebezpečí kolize.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Klasický příklad: dvě motorová plavidla plují <strong>paralelně</strong> ve velké vzdálenosti od sebe, nebo se jejich <strong>kurzy rozevírají</strong>. I když máš sebelepší úmysl „uhnout pro jistotu", pravidlo říká: <em>nech to být</em>. Tvůj manévr může druhého strojvedoucího zaskočit přesně v okamžiku, kdy už si byl jistý, že se nepotkáte — a vytvoří kolizní situaci, která tam předtím nebyla.</p>
+
+<p><strong>Mnemo:</strong> „Bezpečno + manévr = potenciální průšvih." Čili: pokud <em>nehrozí</em> kolize, drž kurz a rychlost.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://www.sagit.cz/info/sb15067">Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — § 57 odst. 5 (Sagit)</a></li>
+</ul>

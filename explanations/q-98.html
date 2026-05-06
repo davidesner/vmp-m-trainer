@@ -1,0 +1,170 @@
+<h2>Vlnobití a sání — § 74 vyhlášky 67/2015 Sb.</h2>
+
+<p><strong>Správná odpověď</strong> říká, že plavidlo musí <em>„upravit rychlost plavby tak, aby nevznikalo nadměrné vlnobití nebo sání"</em>. Pravidlo je obecné a flexibilní — žádný pevný číselný limit. Vodič posoudí situaci a jede tak pomalu, aby vlna a sání, které sám tvoří, nikomu neuškodily.</p>
+
+<h3>Co říká vyhláška</h3>
+
+<blockquote>
+„Plavidlo upraví rychlost plavby tak, aby nevznikalo nadměrné vlnobití nebo sání, které by mohlo způsobit škodu…"
+<br><em>— § 74 odst. 1 vyhlášky č. 67/2015 Sb. (Zabezpečení ochrany před vlnobitím a sáním)</em>
+</blockquote>
+
+<p>Pravidlo nestanoví konkrétní km/h — protože i nízká rychlost u velkého plavidla může tvořit destruktivní vlnu, zatímco u malého člunu nemusí vadit ani vyšší rychlost. <strong>Posuzuješ účinek</strong>, ne číslo na rychloměru.</p>
+
+<h3>Co je „sání"</h3>
+
+<p>Plující plavidlo žene před sebou vodu a za sebou ji „dosává" zpět. Hladina kolem trupu se snižuje a vzniká tah na okolní objekty:</p>
+<ul>
+  <li><strong>Vyvázaná plavidla</strong> trhne na lanech, narazí o sebe nebo o molo</li>
+  <li><strong>Převozní lodě</strong> při nástupu cestujících jsou ohroženy strháváním lidí</li>
+  <li><strong>Plovoucí zařízení</strong> (bagry, plovoucí stavby) může vychýlit z polohy</li>
+  <li><strong>Břehové stavby</strong> jsou nárazově namáhány vlnou</li>
+</ul>
+
+<h3>Vizualizace — proč zpomalit</h3>
+
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:#f0f7fb;border-radius:8px">
+  <defs>
+    <linearGradient id="water" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7bb6d6"/>
+      <stop offset="100%" stop-color="#3d7a9f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Levá scéna: rychlá plavba (špatně) -->
+  <rect x="0" y="0" width="400" height="460" fill="#fdf2f2"/>
+  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#b91c1c">PŘÍLIŠ RYCHLE — ŠPATNĚ</text>
+  <text x="200" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#7c2d12">velká vlna, silné sání → škody</text>
+
+  <!-- Molo -->
+  <rect x="20" y="180" width="40" height="100" fill="#8b6f47" stroke="#5a4830" stroke-width="2"/>
+  <line x1="20" y1="190" x2="60" y2="190" stroke="#5a4830" stroke-width="1"/>
+  <line x1="20" y1="220" x2="60" y2="220" stroke="#5a4830" stroke-width="1"/>
+  <line x1="20" y1="250" x2="60" y2="250" stroke="#5a4830" stroke-width="1"/>
+
+  <!-- Vyvázaná plavidla u mola - nakloněná vlnou -->
+  <g transform="translate(80,210) rotate(-12)">
+    <path d="M 0,0 L 60,0 L 65,15 L -5,15 Z" fill="#f4a460" stroke="#8b4513" stroke-width="1.5"/>
+    <rect x="20" y="-12" width="20" height="12" fill="#fff" stroke="#8b4513" stroke-width="1.5"/>
+  </g>
+  <line x1="60" y1="200" x2="80" y2="200" stroke="#5a4830" stroke-width="1.5"/>
+
+  <g transform="translate(80,260) rotate(15)">
+    <path d="M 0,0 L 60,0 L 65,15 L -5,15 Z" fill="#f4a460" stroke="#8b4513" stroke-width="1.5"/>
+    <rect x="20" y="-12" width="20" height="12" fill="#fff" stroke="#8b4513" stroke-width="1.5"/>
+  </g>
+  <line x1="60" y1="260" x2="80" y2="265" stroke="#5a4830" stroke-width="1.5"/>
+
+  <!-- Velké plavidlo - rychlé -->
+  <g transform="translate(220,295)">
+    <path d="M 0,0 L 100,0 L 115,25 L -15,25 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="2"/>
+    <rect x="25" y="-25" width="50" height="25" fill="#fff" stroke="#1e3a8a" stroke-width="2"/>
+    <rect x="40" y="-18" width="8" height="8" fill="#1e3a8a"/>
+    <rect x="55" y="-18" width="8" height="8" fill="#1e3a8a"/>
+  </g>
+
+  <!-- Šipka rychlosti -->
+  <path d="M 380 308 L 340 308" stroke="#dc2626" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="365" y="295" font-family="sans-serif" font-size="11" fill="#dc2626" font-weight="bold">RYCHLE</text>
+
+  <!-- Velké vlny -->
+  <path d="M 220 340 Q 200 310, 180 340 T 140 340 T 100 340 T 60 340" stroke="#1e40af" stroke-width="3" fill="none"/>
+  <path d="M 220 360 Q 200 330, 180 360 T 140 360 T 100 360 T 60 360" stroke="#1e40af" stroke-width="3" fill="none"/>
+  <path d="M 220 380 Q 200 350, 180 380 T 140 380 T 100 380 T 60 380" stroke="#1e40af" stroke-width="3" fill="none"/>
+
+  <!-- Sání (šipky tažení) -->
+  <path d="M 110 230 L 130 270" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#arrow2)" stroke-dasharray="4,2"/>
+  <path d="M 110 280 L 130 260" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#arrow2)" stroke-dasharray="4,2"/>
+  <text x="120" y="220" font-family="sans-serif" font-size="10" fill="#dc2626" font-weight="bold">sání</text>
+
+  <!-- Pravá scéna: pomalá plavba (správně) -->
+  <rect x="400" y="0" width="400" height="460" fill="#f0fdf4"/>
+  <text x="600" y="30" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#15803d">SNÍŽENÁ RYCHLOST — SPRÁVNĚ</text>
+  <text x="600" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#14532d">malá vlna, slabé sání → bezpečno</text>
+
+  <!-- Molo -->
+  <rect x="420" y="180" width="40" height="100" fill="#8b6f47" stroke="#5a4830" stroke-width="2"/>
+  <line x1="420" y1="190" x2="460" y2="190" stroke="#5a4830" stroke-width="1"/>
+  <line x1="420" y1="220" x2="460" y2="220" stroke="#5a4830" stroke-width="1"/>
+  <line x1="420" y1="250" x2="460" y2="250" stroke="#5a4830" stroke-width="1"/>
+
+  <!-- Vyvázaná plavidla - klidná, rovně -->
+  <g transform="translate(480,205)">
+    <path d="M 0,0 L 60,0 L 65,15 L -5,15 Z" fill="#f4a460" stroke="#8b4513" stroke-width="1.5"/>
+    <rect x="20" y="-12" width="20" height="12" fill="#fff" stroke="#8b4513" stroke-width="1.5"/>
+  </g>
+  <line x1="460" y1="210" x2="480" y2="210" stroke="#5a4830" stroke-width="1.5"/>
+
+  <g transform="translate(480,255)">
+    <path d="M 0,0 L 60,0 L 65,15 L -5,15 Z" fill="#f4a460" stroke="#8b4513" stroke-width="1.5"/>
+    <rect x="20" y="-12" width="20" height="12" fill="#fff" stroke="#8b4513" stroke-width="1.5"/>
+  </g>
+  <line x1="460" y1="260" x2="480" y2="260" stroke="#5a4830" stroke-width="1.5"/>
+
+  <!-- Velké plavidlo - pomalé -->
+  <g transform="translate(620,295)">
+    <path d="M 0,0 L 100,0 L 115,25 L -15,25 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="2"/>
+    <rect x="25" y="-25" width="50" height="25" fill="#fff" stroke="#1e3a8a" stroke-width="2"/>
+    <rect x="40" y="-18" width="8" height="8" fill="#1e3a8a"/>
+    <rect x="55" y="-18" width="8" height="8" fill="#1e3a8a"/>
+  </g>
+
+  <!-- Šipka rychlosti pomalá -->
+  <path d="M 770 308 L 750 308" stroke="#15803d" stroke-width="3" fill="none" marker-end="url(#arrow3)"/>
+  <text x="755" y="295" font-family="sans-serif" font-size="11" fill="#15803d" font-weight="bold">POMALU</text>
+
+  <!-- Malé vlny -->
+  <path d="M 620 340 Q 610 332, 600 340 T 580 340 T 560 340 T 540 340 T 520 340" stroke="#15803d" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 620 355 Q 610 348, 600 355 T 580 355 T 560 355 T 540 355" stroke="#15803d" stroke-width="2" fill="none" opacity="0.5"/>
+
+  <!-- Markery -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#15803d"/>
+    </marker>
+  </defs>
+
+  <!-- Spodní vodní pruh -->
+  <rect x="0" y="430" width="800" height="30" fill="url(#water)" opacity="0.5"/>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<table>
+  <thead>
+    <tr><th>Tvrzení</th><th>Proč je nesprávné</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>„Vypnout motory a proplout setrvačností co nejdále."</strong></td>
+      <td>Plavidlo bez chodu motoru <strong>ztrácí ovladatelnost</strong> — neumí se vyhnout, brzdit, korigovat snos proudem. Vyhláška vyžaduje rychlost <em>upravit</em>, ne motor vypnout. Plavidlo musí zůstat ovladatelné.</td>
+    </tr>
+    <tr>
+      <td><strong>„Rychlost ne vyšší než 5 km/h vůči těmto plavidlům."</strong></td>
+      <td>Vyhláška pro tuto situaci <strong>žádný pevný číselný limit nestanoví</strong>. Pleteš si to s lokálními limity (např. 10 km/h ve vzdálenosti 25 m od břehu z § 7). § 74 záměrně nestanoví číslo — i 5 km/h může u velkého plavidla tvořit ničivou vlnu, zatímco u malého člunu nemusí vadit ani víc.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Typické situace, kdy zpomalit</h3>
+
+<ul>
+  <li>vjezd a výjezd z <strong>přístavů</strong> a marin</li>
+  <li>proplouvání kolem <strong>vyvázaných plavidel</strong> (kotviště, mola)</li>
+  <li>proplouvání kolem <strong>převozních lodí</strong> při nakládce/vykládce cestujících</li>
+  <li>kolem <strong>plovoucích zařízení a staveb</strong> (bagry, plovoucí mola)</li>
+  <li>kolem plavidel signalizujících <strong>omezenou manévrovatelnost</strong> (§ 34 odst. 2, § 38) — tam navíc povinnost plout od nich co nejdále (§ 74 odst. 2)</li>
+</ul>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li><a href="https://krajta.slv.cz/2015/67/par_74">§ 74 vyhlášky č. 67/2015 Sb. — Zabezpečení ochrany před vlnobitím a sáním</a></li>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb. — pravidla plavebního provozu (zakonyprolidi.cz)</a></li>
+</ul>

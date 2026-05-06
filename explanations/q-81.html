@@ -1,0 +1,217 @@
+<h2>Zvukový signál před vplutím do nepřehledné úžiny</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„jeden dlouhý zvuk; je-li úžina dlouhá, zvukový signál při proplouvání úžinou opakuje."</em></p>
+
+<h3>Jádro</h3>
+
+<p>Pravidlo je v <strong>§ 62 odst. 1 písm. b) vyhlášky č. 67/2015 Sb.</strong> o pravidlech plavebního provozu (hlava „Potkávání v úžinách"):</p>
+
+<blockquote>„před vplutím do nepřehledné úžiny plavidlo dá zvukový signál „jeden dlouhý zvuk", je-li úžina dlouhá, zvukový signál při proplouvání úžinou opakuje"</blockquote>
+
+<p>V <strong>úžině</strong> (úsek, kde plavební dráha není dostatečně široká pro potkávání plavidel) hrozí, že nezvládneš výhybku s protijedoucím. Pokud je úžina navíc <strong>nepřehledná</strong> (zákrut, zastíněný úsek), nevidíš, jestli někdo nepluje proti tobě. Dlouhý hlasitý zvuk tě „ohlásí" dřív, než si do sebe vplujete. V dlouhé úžině se signál opakuje, aby věděl i ten, kdo dorazí do druhé části úžiny později.</p>
+
+<h3>Délka signálu (§ 48 odst. 3 vyhlášky)</h3>
+<ul>
+  <li><strong>Krátký zvuk</strong> = 1 s</li>
+  <li><strong>Dlouhý zvuk</strong> = 4 s</li>
+  <li>Interval mezi zvuky = 1 s</li>
+</ul>
+
+<h3>Vizualizace — jak ty tři rytmy vypadají v čase</h3>
+
+<p>Časová osa je v sekundách. Tmavé bloky = zvuk (houkačka / zvon), bílé mezery = ticho.</p>
+
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;height:auto;background:#fafafa;border:1px solid #ddd;border-radius:6px">
+  <!-- Title -->
+  <text x="360" y="22" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#222">Rytmy tří zvukových signálů z otázky</text>
+
+  <!-- Time axis at bottom -->
+  <g font-family="sans-serif" font-size="10" fill="#666">
+    <line x1="60" y1="395" x2="700" y2="395" stroke="#999" stroke-width="1"/>
+    <!-- 0 to 12 seconds, 60..700 (640px / 12s ≈ 53.3 px/s) -->
+    <line x1="60" y1="392" x2="60" y2="398" stroke="#999"/>
+    <line x1="113" y1="392" x2="113" y2="398" stroke="#999"/>
+    <line x1="167" y1="392" x2="167" y2="398" stroke="#999"/>
+    <line x1="220" y1="392" x2="220" y2="398" stroke="#999"/>
+    <line x1="273" y1="392" x2="273" y2="398" stroke="#999"/>
+    <line x1="327" y1="392" x2="327" y2="398" stroke="#999"/>
+    <line x1="380" y1="392" x2="380" y2="398" stroke="#999"/>
+    <line x1="433" y1="392" x2="433" y2="398" stroke="#999"/>
+    <line x1="487" y1="392" x2="487" y2="398" stroke="#999"/>
+    <line x1="540" y1="392" x2="540" y2="398" stroke="#999"/>
+    <line x1="593" y1="392" x2="593" y2="398" stroke="#999"/>
+    <line x1="647" y1="392" x2="647" y2="398" stroke="#999"/>
+    <line x1="700" y1="392" x2="700" y2="398" stroke="#999"/>
+    <text x="60" y="412" text-anchor="middle">0</text>
+    <text x="167" y="412" text-anchor="middle">2</text>
+    <text x="273" y="412" text-anchor="middle">4</text>
+    <text x="380" y="412" text-anchor="middle">6</text>
+    <text x="487" y="412" text-anchor="middle">8</text>
+    <text x="593" y="412" text-anchor="middle">10</text>
+    <text x="700" y="412" text-anchor="middle">12 s</text>
+  </g>
+
+  <!-- ROW 1: Jeden dlouhý zvuk (správná) -->
+  <g>
+    <text x="55" y="80" text-anchor="end" font-family="sans-serif" font-size="11" font-weight="700" fill="#0a7d2c">SPRÁVNÁ ODPOVĚĎ</text>
+    <text x="55" y="95" text-anchor="end" font-family="sans-serif" font-size="11" fill="#0a7d2c">„jeden dlouhý zvuk"</text>
+    <text x="55" y="110" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666">před úžinou</text>
+    <!-- one 4-second tone, starting at t=1 -->
+    <rect x="113" y="60" width="213" height="55" fill="#0a7d2c" rx="3"/>
+    <text x="220" y="93" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="white">━━━━ 4 s ━━━━</text>
+    <!-- Annotation -->
+    <text x="450" y="93" font-family="sans-serif" font-size="11" fill="#333">jediný táhlý tón</text>
+  </g>
+
+  <!-- ROW 2: Řada úderů na zvon (signál stojícího plavidla) -->
+  <g>
+    <text x="55" y="180" text-anchor="end" font-family="sans-serif" font-size="11" font-weight="700" fill="#9a3412">JINÁ SITUACE</text>
+    <text x="55" y="195" text-anchor="end" font-family="sans-serif" font-size="11" fill="#9a3412">„řada úderů na zvon"</text>
+    <text x="55" y="210" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666">stojící plavidlo</text>
+    <!-- A "řada úderů" = 4 seconds of bell strikes (rapid). We draw rapid pulses for 4s. -->
+    <!-- Rapid bell pulses: each pulse ~0.3s, gap ~0.2s, fits ~8 pulses in 4s -->
+    <g fill="#9a3412">
+      <rect x="113" y="160" width="16" height="55" rx="2"/>
+      <rect x="140" y="160" width="16" height="55" rx="2"/>
+      <rect x="167" y="160" width="16" height="55" rx="2"/>
+      <rect x="194" y="160" width="16" height="55" rx="2"/>
+      <rect x="221" y="160" width="16" height="55" rx="2"/>
+      <rect x="248" y="160" width="16" height="55" rx="2"/>
+      <rect x="275" y="160" width="16" height="55" rx="2"/>
+      <rect x="302" y="160" width="16" height="55" rx="2"/>
+    </g>
+    <text x="220" y="240" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">řada úderů (4 s) — pak pauza, pak další řada</text>
+    <!-- Second series after a pause -->
+    <g fill="#9a3412" opacity="0.4">
+      <rect x="540" y="160" width="16" height="55" rx="2"/>
+      <rect x="567" y="160" width="16" height="55" rx="2"/>
+      <rect x="594" y="160" width="16" height="55" rx="2"/>
+      <rect x="621" y="160" width="16" height="55" rx="2"/>
+    </g>
+    <text x="600" y="190" font-family="sans-serif" font-size="10" fill="#666">další řada za ≤ 1 min…</text>
+  </g>
+
+  <!-- ROW 3: Řada velmi krátkých zvuků (hrozí kolize) -->
+  <g>
+    <text x="55" y="290" text-anchor="end" font-family="sans-serif" font-size="11" font-weight="700" fill="#b91c1c">VAROVÁNÍ</text>
+    <text x="55" y="305" text-anchor="end" font-family="sans-serif" font-size="11" fill="#b91c1c">„řada velmi krátkých"</text>
+    <text x="55" y="320" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666">hrozí kolize</text>
+    <!-- ≥6 sounds, each 1s, gap 1s. Start t=1. -->
+    <g fill="#b91c1c">
+      <rect x="113" y="270" width="53" height="55" rx="3"/>
+      <rect x="220" y="270" width="53" height="55" rx="3"/>
+      <rect x="327" y="270" width="53" height="55" rx="3"/>
+      <rect x="433" y="270" width="53" height="55" rx="3"/>
+      <rect x="540" y="270" width="53" height="55" rx="3"/>
+      <rect x="647" y="270" width="53" height="55" rx="3"/>
+    </g>
+    <text x="139" y="303" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="white">1s</text>
+    <text x="246" y="303" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="white">1s</text>
+    <text x="353" y="303" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="white">1s</text>
+    <text x="459" y="303" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="white">1s</text>
+    <text x="566" y="303" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="white">1s</text>
+    <text x="673" y="303" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="white">1s</text>
+    <text x="380" y="350" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">≥ 6 zvuků po 1 s, mezi nimi 1 s pauza</text>
+  </g>
+
+  <!-- Dividers -->
+  <line x1="60" y1="135" x2="700" y2="135" stroke="#e5e5e5" stroke-dasharray="3,3"/>
+  <line x1="60" y1="250" x2="700" y2="250" stroke="#e5e5e5" stroke-dasharray="3,3"/>
+</svg>
+
+<h3>Co znamenají ty ostatní dvě varianty (proč je to past)</h3>
+
+<p>Všechny tři možnosti odkazují na <strong>skutečné</strong> zvukové signály z vyhlášky. Past je v tom, že každý znamená něco úplně jiného:</p>
+
+<table>
+  <thead>
+    <tr><th>Signál</th><th>Skutečný význam</th><th>Kdy</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1 dlouhý zvuk (4 s)</strong></td>
+      <td>„Vplouvám do nepřehledné úžiny — pozor"</td>
+      <td>Před úžinou, opakovaně v dlouhé úžině (§ 62)</td>
+    </tr>
+    <tr>
+      <td><strong>Řada úderů na zvon</strong> (nebo kovu o kov)</td>
+      <td>Stojící plavidlo signalizuje, na které straně plavební dráhy stojí</td>
+      <td>Při snížené viditelnosti, kotvící v plavební dráze (§ 87)</td>
+    </tr>
+    <tr>
+      <td><strong>Řada velmi krátkých zvuků</strong></td>
+      <td>„Hrozí nebezpečí kolize"</td>
+      <td>Bezprostřední krizový signál, když už srážka hrozí</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Schéma situace</h3>
+
+<svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;height:auto;background:#eaf4ff;border:1px solid #cdd;border-radius:6px">
+  <!-- Banks of the narrow passage (river narrows) -->
+  <path d="M 0,0 L 700,0 L 700,60 C 600,80 500,100 350,100 C 200,100 100,80 0,60 Z" fill="#a3c293"/>
+  <path d="M 0,280 L 700,280 L 700,220 C 600,200 500,180 350,180 C 200,180 100,200 0,220 Z" fill="#a3c293"/>
+
+  <!-- Curve hint - obscuring rocks/trees -->
+  <circle cx="380" cy="105" r="18" fill="#5a7a45"/>
+  <circle cx="410" cy="100" r="14" fill="#5a7a45"/>
+  <circle cx="350" cy="110" r="12" fill="#5a7a45"/>
+  <circle cx="370" cy="180" r="16" fill="#5a7a45"/>
+  <circle cx="400" cy="180" r="13" fill="#5a7a45"/>
+
+  <!-- Vessel approaching from left -->
+  <g transform="translate(80,140)">
+    <rect x="-25" y="-10" width="50" height="20" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <polygon points="25,-10 40,0 25,10" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <rect x="-15" y="-18" width="20" height="8" fill="#666"/>
+  </g>
+  <!-- direction arrow -->
+  <line x1="135" y1="140" x2="195" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Sound waves emanating -->
+  <g fill="none" stroke="#0a7d2c" stroke-width="2.5" opacity="0.85">
+    <path d="M 130,140 Q 160,115 175,135"/>
+    <path d="M 140,140 Q 175,105 195,140"/>
+    <path d="M 150,140 Q 195,95 215,140"/>
+  </g>
+  <text x="120" y="105" font-family="sans-serif" font-size="13" font-weight="700" fill="#0a7d2c">━━━━ 4 s</text>
+  <text x="120" y="92" font-family="sans-serif" font-size="11" fill="#0a7d2c">„jeden dlouhý zvuk"</text>
+
+  <!-- Hidden vessel behind curve -->
+  <g transform="translate(620,140)" opacity="0.5">
+    <rect x="-25" y="-10" width="50" height="20" rx="4" fill="#fff" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <polygon points="-25,-10 -40,0 -25,10" fill="#fff" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"/>
+  </g>
+  <text x="565" y="100" font-family="sans-serif" font-size="11" fill="#666">protiplavba?</text>
+  <text x="565" y="113" font-family="sans-serif" font-size="11" fill="#666">nevidím za zákrut</text>
+
+  <!-- Label -->
+  <text x="350" y="265" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#222">Nepřehledná úžina (zákrut, zastíněný úsek)</text>
+
+  <!-- arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+<h3>Praktická aplikace</h3>
+
+<p>Typická místa, kde to použiješ na české vodě:</p>
+<ul>
+  <li>vjezdy do <strong>plavebních komor</strong>,</li>
+  <li><strong>zákruty na Vltavě</strong> u Vraného / Štěchovic / Slap,</li>
+  <li>úseky <strong>pod mosty</strong>, kde nevidíš na druhou stranu,</li>
+  <li>průplav, kde si dvě plavidla nestačí vyhnout.</li>
+</ul>
+
+<p>Před nepřehledným úsekem: <strong>4 sekundy do houkačky</strong>. Když je úsek dlouhý, opakuj během plavby.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., § 62 odst. 1 písm. b) — Potkávání v úžinách (<a href="https://www.kapitanjepes.cz/storage/upload/resources/67-2015_Pravidla_plavebniho_provozu.pdf">PDF úplné znění</a>)</li>
+  <li>Vyhláška č. 67/2015 Sb., § 48 odst. 3–5 — délka zvuků (krátký 1 s, dlouhý 4 s, řada úderů na zvon 4 s)</li>
+  <li>Přehled na <a href="https://www.zakonyprolidi.cz/cs/2015-67">zakonyprolidi.cz</a></li>
+</ul>

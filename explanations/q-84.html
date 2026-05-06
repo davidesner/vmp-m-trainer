@@ -1,0 +1,119 @@
+<h2>Potkávání v úžině &mdash; pravidlo nejmenšího nebezpečí</h2>
+
+<p>Otázka cituje doslovně <strong>§ 62 odst. 2 vyhlášky č. 67/2015 Sb.</strong> o pravidlech plavebního provozu. Správná odpověď je věta:</p>
+
+<blockquote>
+  <em>&bdquo;&hellip; aby k potk&aacute;v&aacute;n&iacute; do&scaron;lo na vhodn&eacute;m m&iacute;st&ecaron; a za takov&yacute;ch podm&iacute;nek, kter&eacute; p&rcaron;edstavuj&iacute; nejmen&scaron;&iacute; nebezpe&ccaron;&iacute;.&ldquo;</em>
+</blockquote>
+
+<h3>Jak vyhláška o úžině uvažuje</h3>
+
+<p><strong>Úžina</strong> je úsek plavební dráhy, kde není dost místa pro bezpečné minutí dvou plavidel vedle sebe. Vyhláška řeší situaci ve dvou stupních:</p>
+
+<ol>
+  <li><strong>§ 62 odst. 1 &mdash; primární pravidlo:</strong> plavidla mají úžinou projet co nejrychleji a <strong>plavidlo plující proti proudu vyčká</strong> před vplutím, pokud do úžiny už vplouvá nebo jí prochází plavidlo plující po proudu. Důvod: plavidlo plující po proudu má kvůli tlaku vody horší ovladatelnost a nemůže tak snadno zastavit nebo manévrovat.</li>
+  <li><strong>§ 62 odst. 2 &mdash; záchranné pravidlo:</strong> když se potkávání opravdu nedá vyhnout (dlouhá nepřehledná úžina, obě plavidla už uvnitř atd.), vůdci dělají všechno proto, aby k potkání došlo na <strong>co nejlepším místě</strong> &mdash; tam, kde je dráha o trochu širší, lepší výhled, klidnější proud &mdash; a <strong>za co nejbezpečnějších podmínek</strong> (snížená rychlost, dohoda o straně potkání zvukovým / radiovým signálem).</li>
+</ol>
+
+<h3>Schéma &mdash; správné místo potkávání</h3>
+
+<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#f6fbff;border:1px solid #cfd8dc;border-radius:6px">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c62828"/>
+    </marker>
+  </defs>
+
+  <!-- Břehy: úzký - široký - úzký -->
+  <path d="M 0 60 L 200 60 L 260 120 L 460 120 L 520 60 L 720 60 L 720 0 L 0 0 Z" fill="#8d6e63" />
+  <path d="M 0 300 L 200 300 L 260 240 L 460 240 L 520 300 L 720 300 L 720 360 L 0 360 Z" fill="#8d6e63" />
+
+  <!-- Voda -->
+  <rect x="0" y="60" width="720" height="240" fill="#bbdefb"/>
+  <path d="M 200 60 L 260 120 L 460 120 L 520 60 Z" fill="#bbdefb"/>
+  <path d="M 200 300 L 260 240 L 460 240 L 520 300 Z" fill="#bbdefb"/>
+
+  <!-- Popisky úseků -->
+  <text x="100" y="40" text-anchor="middle" font-size="13" font-weight="bold" fill="#37474f">úžina</text>
+  <text x="360" y="40" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">vyhýbací místo (vhodné)</text>
+  <text x="620" y="40" text-anchor="middle" font-size="13" font-weight="bold" fill="#37474f">úžina</text>
+
+  <!-- Šipky proudu -->
+  <line x1="60" y1="180" x2="120" y2="180" stroke="#0288d1" stroke-width="2" marker-end="url(#arr)" stroke-dasharray="4 3"/>
+  <text x="90" y="200" text-anchor="middle" font-size="11" fill="#0277bd">proud</text>
+
+  <line x1="600" y1="180" x2="660" y2="180" stroke="#0288d1" stroke-width="2" marker-end="url(#arr)" stroke-dasharray="4 3"/>
+  <text x="630" y="200" text-anchor="middle" font-size="11" fill="#0277bd">proud</text>
+
+  <!-- Lod 1 - po proudu (z prava nalevo? Ne - proud teče doleva-doprava, takže lodě po proudu jedou doprava) -->
+  <!-- Tady ale chci ukázat: oba pluly proti sobě, potkávají se v širokém úseku. -->
+  <!-- Loď A jede po proudu (vlevo -> vpravo), tj. směrem doprava -->
+  <g transform="translate(330,165)">
+    <polygon points="0,0 40,0 50,15 40,30 0,30" fill="#1976d2" stroke="#0d47a1" stroke-width="1.5"/>
+    <text x="25" y="20" text-anchor="middle" font-size="11" fill="white" font-weight="bold">A</text>
+  </g>
+  <line x1="380" y1="180" x2="410" y2="180" stroke="#1976d2" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="350" y="155" font-size="10" fill="#0d47a1">po proudu</text>
+
+  <!-- Loď B jede proti proudu (vpravo -> vlevo), tj. směrem doleva -->
+  <g transform="translate(380,200)">
+    <polygon points="50,0 10,0 0,15 10,30 50,30" fill="#c62828" stroke="#7f0000" stroke-width="1.5"/>
+    <text x="30" y="20" text-anchor="middle" font-size="11" fill="white" font-weight="bold">B</text>
+  </g>
+  <line x1="380" y1="215" x2="350" y2="215" stroke="#c62828" stroke-width="2" marker-end="url(#arrR)"/>
+  <text x="380" y="245" font-size="10" fill="#7f0000">proti proudu</text>
+
+  <!-- Zelená fajfka -->
+  <circle cx="430" cy="180" r="14" fill="#2e7d32"/>
+  <path d="M 422 180 L 428 186 L 438 174" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Popisek vlevo dole -->
+  <text x="360" y="335" text-anchor="middle" font-size="12" fill="#37474f">
+    Pokud se potk&aacute;n&iacute; ned&aacute; vyhnout, vol&iacute; se mi&shy;sto, kde je dr&aacute;ha &scaron;ir&scaron;&iacute;, p&rcaron;ehledn&aacute; a za sn&iacute;&zcaron;en&eacute; rychlosti.
+  </text>
+</svg>
+
+<h3>Hierarchie pravidel v úžině</h3>
+
+<table>
+  <thead>
+    <tr><th>Krok</th><th>Pravidlo</th><th>Zdroj</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>Plavidlo plující <strong>proti proudu</strong> vyčká před vplutím do úžiny, pokud z druhé strany už pluje plavidlo po proudu.</td>
+      <td>§ 62 odst. 1</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Pokud potkávání v úžině přesto nelze vyhnout, vůdci učiní vše pro to, aby se odehrálo na <strong>vhodném místě</strong> a za <strong>nejmenšího nebezpečí</strong>.</td>
+      <td>§ 62 odst. 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ne další možnosti</h3>
+
+<ul>
+  <li><strong>&bdquo;&hellip; aby plavidlo plující proti proudu z úžiny vycouvalo.&ldquo;</strong> &mdash; vyhláška vůbec neukládá <em>couvání</em>. Předepisuje <strong>vyčkání před vplutím</strong> (odst. 1). Couvání na vodě, zvlášť v úzkém kanálu s proudem, znamená minimální ovladatelnost a vysoké riziko najetí na břeh nebo kolize &mdash; není to systémové řešení.</li>
+  <li><strong>&bdquo;&hellip; aby se mohla plavidla potkat levými boky.&ldquo;</strong> &mdash; potkávání levými boky (port-to-port) je <strong>obecné pravidlo otevřené vody</strong> ze § 60: dvě plavidla na srážkovém kursu zatočí oba vpravo a tím se minou levými boky. V úžině ale <strong>není prostor zatočit vpravo</strong>, takže se primárně řeší <em>kdo počká</em>, ne <em>kterým bokem se potkáme</em>. Jakmile je potkávání nevyhnutelné, je hlavní starost <em>kde a za jakých podmínek</em>, ne strana.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<ul>
+  <li>Před vplutím do úžiny <strong>zhodnoť výhled</strong> a poslouchej / použij rádio (VHF) k domluvě s protijedoucím plavidlem.</li>
+  <li>Plavidlo plující <strong>proti proudu</strong> má povinnost <strong>počkat</strong>, ne to druhé!</li>
+  <li>Když už jsi v úžině a víš, že se potkáš: <strong>sniž rychlost</strong>, miř si na <strong>nejširší místo</strong> (zátoka, rozšíření koryta, místo za ostrovem) a <strong>jasně signalizuj</strong> svůj záměr (zvukový signál nebo VHF).</li>
+  <li>Vyhni se potkávání v zatáčce, pod mostem, mezi pilíři, v úseku se silným proudem.</li>
+</ul>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li><a href="https://www.sagit.cz/info/sb15067" target="_blank" rel="noopener">Vyhláška č. 67/2015 Sb. &mdash; pravidla plavebního provozu (Sagit, úplné znění)</a> &mdash; § 62 odst. 1 a 2 (potkávání v úžině)</li>
+</ul>

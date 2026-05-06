@@ -1,0 +1,190 @@
+<h2>Co musí v noci nést vlečené nebo v sestavě svázané malé plavidlo</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„obyčejné bílé světlo viditelné ze všech stran."</em> Je to <strong>doslovná aplikace čl. 3.13 odst. 4 vyhlášky č. 67/2015 Sb.</strong> o pravidlech plavebního provozu.</p>
+
+<h3>Jádro pravidla</h3>
+<p>Jakmile malé plavidlo přestane plout vlastní silou samostatně a stane se součástí sestavy — buď ho někdo <strong>vleče za sebou na šňůře</strong>, nebo je <strong>přivázané bokem k jinému plavidlu</strong> („bočně svázaná sestava") — má jeho noční signalizace <strong>jediný úkol</strong>: být viditelné odkudkoli. Stačí mu k tomu <strong>jedno obyčejné bílé světlo viditelné ze všech stran</strong> (typicky lampa na háku, na stěžni, na kotvě).</p>
+<p>Důvod: směr a manévr <em>celé sestavy</em> signalizuje <strong>vůdčí plavidlo</strong> (tahač, remorkér) svou plnou sadou světel. Vlečené/svázané malé plavidlo už nemusí mít zelené/červené boční světlo — bylo by to zavádějící, protože samo nemanévruje.</p>
+
+<blockquote style="border-left:4px solid #2563eb;padding:8px 14px;background:#eff6ff;margin:12px 0">
+<strong>Vyhláška č. 67/2015 Sb., čl. 3.13 odst. 4:</strong><br>
+„Vlečené nebo v bočně svázané sestavě vedené malé plavidlo musí nést <strong>obyčejné bílé světlo viditelné ze všech stran</strong>."<br>
+<span style="color:#475569;font-size:0.9em">(Ustanovení se nevztahuje na manipulační čluny patřící plavidlům.)</span>
+</blockquote>
+
+<h3>Vizualizace — porovnání tří situací</h3>
+<p>Pohled shora (plán) na vodní hladinu. Plavidla jsou orientovaná přídí doprava. Žluté „hvězdičkové" světlo = <strong>obyčejné bílé světlo viditelné ze všech stran</strong>. Červená/zelená/bílá tečka = boční/záďová pozice.</p>
+
+<svg viewBox="0 0 720 700" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Noční signalizace malého plavidla — samostatně, vlečeného a v bočně svázané sestavě</title>
+  <desc>Tři panely. 1) Samostatně plující malé motorové plavidlo nese červené levobok, zelené pravobok a bílé záďové světlo. 2) Vlečené malé plavidlo za remorkérem nese pouze jedno obyčejné bílé světlo viditelné ze všech stran. 3) Malé plavidlo přivázané bokem v bočně svázané sestavě nese stejně jen jedno obyčejné bílé světlo viditelné ze všech stran. Vůdčí plavidlo (remorkér) ve scénářích 2 a 3 nese standardní sestavovou signalizaci.</desc>
+
+  <defs>
+    <marker id="arr58" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" style="fill:#0f172a"/>
+    </marker>
+  </defs>
+
+  <!-- ======= PANEL 1: Samostatně plující ======= -->
+  <rect x="10" y="10" width="700" height="200" rx="12" style="fill:#eff6ff;stroke:#bfdbfe;stroke-width:1.5"/>
+  <text x="24" y="36" style="font-size:14px;font-weight:700;fill:#1e3a8a">A) Samostatně plující malé motorové plavidlo (referenční stav)</text>
+  <text x="24" y="54" style="font-size:11px;fill:#1e40af">Pluje vlastní silou — musí samo signalizovat svou orientaci a směr → boční světla + záďové.</text>
+
+  <!-- water hint -->
+  <path d="M 30 175 Q 90 168, 150 175 T 270 175 T 390 175 T 510 175 T 630 175 T 690 175" style="fill:none;stroke:#93c5fd;stroke-width:1.5"/>
+
+  <!-- compass: bow direction -->
+  <text x="24" y="120" style="font-size:10px;fill:#475569">záď</text>
+  <text x="685" y="120" style="font-size:10px;fill:#475569">příď</text>
+  <line x1="60" y1="115" x2="680" y2="115" style="stroke:#cbd5e1;stroke-width:1;stroke-dasharray:3 3"/>
+  <line x1="660" y1="115" x2="680" y2="115" style="stroke:#0f172a;stroke-width:2" marker-end="url(#arr58)"/>
+
+  <!-- boat 1: standalone -->
+  <g transform="translate(260,90)">
+    <polygon points="0,30 130,30 175,15 175,45 130,30 0,30" style="fill:#fef3c7;stroke:#a16207;stroke-width:1.5"/>
+    <!-- side: top is port (left when facing bow on right) -->
+    <text x="60" y="22" style="font-size:9px;fill:#475569">← levobok (port)</text>
+    <text x="60" y="55" style="font-size:9px;fill:#475569">← pravobok (starboard)</text>
+    <!-- red light port: top side near bow -->
+    <circle cx="155" cy="20" r="6" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1"/>
+    <text x="155" y="9" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#7f1d1d">červené</text>
+    <!-- green light starboard -->
+    <circle cx="155" cy="40" r="6" style="fill:#16a34a;stroke:#14532d;stroke-width:1"/>
+    <text x="155" y="62" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#14532d">zelené</text>
+    <!-- white stern light at back -->
+    <circle cx="5" cy="30" r="6" style="fill:#fde68a;stroke:#a16207;stroke-width:1"/>
+    <text x="5" y="20" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#78350f">bílé</text>
+    <text x="5" y="58" text-anchor="middle" style="font-size:9px;fill:#78350f">záďové</text>
+  </g>
+
+  <text x="360" y="195" text-anchor="middle" style="font-size:11px;font-style:italic;fill:#1e40af">Tato situace NENÍ otázka #58 — je tu jen pro porovnání.</text>
+
+  <!-- ======= PANEL 2: Vlečná sestava ======= -->
+  <rect x="10" y="225" width="700" height="220" rx="12" style="fill:#fefce8;stroke:#fde68a;stroke-width:1.5"/>
+  <text x="24" y="251" style="font-size:14px;font-weight:700;fill:#854d0e">B) Vlečná sestava — malé plavidlo se táhne za vůdčím plavidlem</text>
+  <text x="24" y="269" style="font-size:11px;fill:#854d0e">Sestavu signalizuje remorkér. Vlečenému malému plavidlu stačí jediné bílé světlo viditelné ze všech stran.</text>
+
+  <!-- water -->
+  <path d="M 30 410 Q 90 403, 150 410 T 270 410 T 390 410 T 510 410 T 630 410 T 690 410" style="fill:none;stroke:#93c5fd;stroke-width:1.5"/>
+
+  <!-- TUG (vůdčí plavidlo) on left -->
+  <g transform="translate(60,320)">
+    <polygon points="0,30 110,30 155,15 155,45 110,30 0,30" style="fill:#cbd5e1;stroke:#475569;stroke-width:1.5"/>
+    <text x="75" y="55" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#1e293b">REMORKÉR (vůdčí)</text>
+    <text x="75" y="69" text-anchor="middle" style="font-size:9px;fill:#475569">nese plnou sestavovou signalizaci</text>
+    <!-- masthead lights (2 white above) -->
+    <circle cx="55" cy="22" r="4" style="fill:#fde68a;stroke:#854d0e;stroke-width:1"/>
+    <circle cx="80" cy="22" r="4" style="fill:#fde68a;stroke:#854d0e;stroke-width:1"/>
+    <text x="68" y="13" text-anchor="middle" style="font-size:9px;fill:#854d0e">2 vrcholová bílá</text>
+    <!-- side lights -->
+    <circle cx="135" cy="20" r="4" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1"/>
+    <circle cx="135" cy="40" r="4" style="fill:#16a34a;stroke:#14532d;stroke-width:1"/>
+    <!-- žluté všesměrové (vlečné) -->
+    <circle cx="5" cy="30" r="4" style="fill:#facc15;stroke:#854d0e;stroke-width:1"/>
+    <text x="5" y="22" text-anchor="middle" style="font-size:9px;fill:#854d0e">žluté</text>
+  </g>
+
+  <!-- tow line -->
+  <line x1="220" y1="350" x2="430" y2="370" style="stroke:#475569;stroke-width:2;stroke-dasharray:5 4"/>
+  <text x="325" y="345" text-anchor="middle" style="font-size:10px;fill:#475569">vlečné lano</text>
+
+  <!-- TOWED small vessel on right -->
+  <g transform="translate(440,355)">
+    <polygon points="0,18 75,18 105,10 105,30 75,18 0,18" style="fill:#fef3c7;stroke:#a16207;stroke-width:1.5"/>
+    <text x="50" y="50" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#78350f">vlečené malé plavidlo</text>
+
+    <!-- ALL-AROUND WHITE LIGHT visualization with rays -->
+    <g transform="translate(55,20)">
+      <circle r="22" style="fill:#fef9c3;opacity:0.5"/>
+      <circle r="14" style="fill:#fde68a;opacity:0.7"/>
+      <circle r="8" style="fill:#ffffff;stroke:#ca8a04;stroke-width:1.5"/>
+      <!-- rays in 8 directions -->
+      <line x1="0" y1="-22" x2="0" y2="-30" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="0" y1="22" x2="0" y2="30" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="-22" y1="0" x2="-30" y2="0" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="22" y1="0" x2="30" y2="0" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="-16" y1="-16" x2="-22" y2="-22" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="16" y1="-16" x2="22" y2="-22" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="-16" y1="16" x2="-22" y2="22" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="16" y1="16" x2="22" y2="22" style="stroke:#ca8a04;stroke-width:2"/>
+    </g>
+    <text x="55" y="-12" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#78350f">obyčejné BÍLÉ světlo</text>
+    <text x="55" y="-1" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#78350f">viditelné ze VŠECH stran</text>
+  </g>
+
+  <text x="360" y="430" text-anchor="middle" style="font-size:11px;font-style:italic;font-weight:600;fill:#854d0e">↑ Toto je situace z otázky #58.</text>
+
+  <!-- ======= PANEL 3: Bočně svázaná sestava ======= -->
+  <rect x="10" y="460" width="700" height="230" rx="12" style="fill:#fefce8;stroke:#fde68a;stroke-width:1.5"/>
+  <text x="24" y="486" style="font-size:14px;font-weight:700;fill:#854d0e">C) Bočně svázaná sestava — malé plavidlo přivázané bokem k vůdčímu plavidlu</text>
+  <text x="24" y="504" style="font-size:11px;fill:#854d0e">Stejné pravidlo jako u vlečné sestavy. Malé plavidlo nese pouze jedno bílé všesměrové světlo.</text>
+
+  <!-- water -->
+  <path d="M 30 660 Q 90 653, 150 660 T 270 660 T 390 660 T 510 660 T 630 660 T 690 660" style="fill:none;stroke:#93c5fd;stroke-width:1.5"/>
+
+  <!-- TUG (vůdčí) — larger boat in middle -->
+  <g transform="translate(180,560)">
+    <polygon points="0,30 200,30 250,12 250,48 200,30 0,30" style="fill:#cbd5e1;stroke:#475569;stroke-width:1.5"/>
+    <text x="125" y="68" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#1e293b">VŮDČÍ PLAVIDLO (větší, motorové)</text>
+    <text x="125" y="82" text-anchor="middle" style="font-size:9px;fill:#475569">nese plnou signalizaci sestavy: vrcholová + boční + záďové</text>
+
+    <!-- masthead lights -->
+    <circle cx="100" cy="22" r="4" style="fill:#fde68a;stroke:#854d0e;stroke-width:1"/>
+    <circle cx="130" cy="22" r="4" style="fill:#fde68a;stroke:#854d0e;stroke-width:1"/>
+    <!-- side lights at bow -->
+    <circle cx="225" cy="18" r="4" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1"/>
+    <circle cx="225" cy="42" r="4" style="fill:#16a34a;stroke:#14532d;stroke-width:1"/>
+    <!-- stern white -->
+    <circle cx="5" cy="30" r="4" style="fill:#fde68a;stroke:#854d0e;stroke-width:1"/>
+  </g>
+
+  <!-- SMALL VESSEL attached to side (top side of tug, so it shows above) -->
+  <g transform="translate(220,520)">
+    <polygon points="0,18 110,18 145,8 145,28 110,18 0,18" style="fill:#fef3c7;stroke:#a16207;stroke-width:1.5"/>
+    <text x="72" y="6" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#78350f">malé plavidlo (svázané bokem)</text>
+    <!-- coupling marks -->
+    <line x1="20" y1="28" x2="20" y2="40" style="stroke:#7f1d1d;stroke-width:2"/>
+    <line x1="60" y1="28" x2="60" y2="40" style="stroke:#7f1d1d;stroke-width:2"/>
+    <line x1="100" y1="28" x2="100" y2="40" style="stroke:#7f1d1d;stroke-width:2"/>
+
+    <!-- ALL-AROUND WHITE LIGHT -->
+    <g transform="translate(72,18)">
+      <circle r="20" style="fill:#fef9c3;opacity:0.5"/>
+      <circle r="13" style="fill:#fde68a;opacity:0.7"/>
+      <circle r="7" style="fill:#ffffff;stroke:#ca8a04;stroke-width:1.5"/>
+      <line x1="0" y1="-20" x2="0" y2="-27" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="0" y1="20" x2="0" y2="27" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="-20" y1="0" x2="-27" y2="0" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="20" y1="0" x2="27" y2="0" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="-14" y1="-14" x2="-19" y2="-19" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="14" y1="-14" x2="19" y2="-19" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="-14" y1="14" x2="-19" y2="19" style="stroke:#ca8a04;stroke-width:2"/>
+      <line x1="14" y1="14" x2="19" y2="19" style="stroke:#ca8a04;stroke-width:2"/>
+    </g>
+  </g>
+
+  <text x="475" y="538" style="font-size:11px;font-weight:700;fill:#854d0e">→ jedno obyčejné</text>
+  <text x="475" y="552" style="font-size:11px;font-weight:700;fill:#854d0e">   BÍLÉ světlo viditelné</text>
+  <text x="475" y="566" style="font-size:11px;font-weight:700;fill:#854d0e">   ze všech stran</text>
+
+  <text x="360" y="678" text-anchor="middle" style="font-size:11px;font-style:italic;font-weight:600;fill:#854d0e">↑ I toto je situace z otázky #58 — stejné pravidlo, stejné světlo.</text>
+</svg>
+
+<h3>Proč jsou ostatní možnosti pasti</h3>
+<ul>
+  <li><strong>Možnost „boční světla a záďové světlo"</strong> popisuje signalizaci <em>samostatně plujícího</em> malého motorového plavidla (panel A na schématu). Když je ale plavidlo vlečené nebo svázané v sestavě, červená/zelená boční světla by mátla — pozorovatel by si myslel, že plavidlo manévruje samo, a snažil by se z barev odhadnout jeho směr. Realita je, že manévruje vůdčí plavidlo.</li>
+  <li><strong>Možnost „vrcholové a záďové světlo"</strong> míří na sestavu pro <em>větší</em> motorové plavidlo (vrcholové bílé na stěžni + záďové bílé). Malé vlečené plavidlo žádný stěžeň často nemá, a hlavně — pravidlo pro něj specificky říká <em>jedno všesměrové bílé</em>, ne kombinaci dvou.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Když v noci táhnete za sebou na šňůře vlastní motorový člun (porouchaný, bez posádky, jako přívěs), nebo když jste na velké lodi a k boku máte přivázanou gumovku/dingy: <strong>na tom malém plavidle stačí rozsvítit jednu bílou všesměrovou lampu</strong> (typicky na háku/stěžni). Žádné zelené ani červené boční světlo. Sestavu jako celek signalizuje vůdčí plavidlo.</p>
+<p><strong>Výjimka v poslední větě paragrafu:</strong> manipulační čluny patřící plavidlům (typicky záchranný/pracovní člun spuštěný z mateřské lodi) mají zvláštní režim a tato povinnost se na ně nevztahuje.</p>
+
+<h3>Pomůcka pro zapamatování</h3>
+<p>„<strong>V sestavě = jedno bílé světlo na všechny strany.</strong>" Logika: kdo nemanévruje sám, nepotřebuje zelenou/červenou. Stačí, když je vidět.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. <a href="https://www.zakonyprolidi.cz/cs/2015-67">67/2015 Sb.</a>, o pravidlech plavebního provozu — čl. 3.13 odst. 4 (signalizace malých plavidel ve vlečné a bočně svázané sestavě)</li>
+  <li>Stránka <a href="https://www.stranypotapecske.cz/dokument/rpb.asp">Strany potápěčské — Řád plavební bezpečnosti</a> — souhrn pravidel signalizace malých plavidel s citací</li>
+</ul>

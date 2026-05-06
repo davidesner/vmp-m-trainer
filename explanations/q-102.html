@@ -1,0 +1,178 @@
+<h2>Úprava rychlosti kvůli nadměrnému vlnobití nebo sání</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„v&nbsp;blízkosti převozních lodí, které neplují volně"</em>.</p>
+
+<p>Plavidlo musí upravit (= snížit) rychlost tak, aby vlna nebo efekt sání nemohly nikomu uškodit, na pěti taxativně vyjmenovaných místech podle <strong>§&nbsp;74 odst.&nbsp;1 vyhlášky č.&nbsp;67/2015&nbsp;Sb.</strong> Jedním z nich jsou právě <strong>lanové a řetězové přívozy</strong> — tedy převozní lodě, které jsou napevno připoutané k lanu přepnutému přes řeku a <strong>nemohou vlně uhnout</strong>. Mosty, lávky ani regulační hrázky v tomto seznamu nejsou — pravidla plavby kolem nich řeší jiné paragrafy.</p>
+
+<h3>Pozadí — § 74 odst. 1 vyhlášky č. 67/2015 Sb.</h3>
+
+<blockquote style="border-left:4px solid #2563eb;padding:8px 14px;background:#eff6ff;margin:12px 0">
+<strong>§ 74 odst. 1</strong> — Plavidlo upraví rychlost plavby tak, aby nevznikalo nadměrné vlnobití nebo sání, které by mohlo způsobit škodu:<br>
+a) před vjezdem do přístavu,<br>
+b) v&nbsp;blízkosti plavidel vyvázaných ke břehu nebo k&nbsp;přístavním můstkům a&nbsp;v&nbsp;blízkosti plavidel, která se nakládají nebo vykládají,<br>
+c) v&nbsp;blízkosti plavidel, která stojí na obvyklých stanovištích,<br>
+<strong>d) v&nbsp;blízkosti převozních lodí, které neplují volně,</strong><br>
+e) v&nbsp;úsecích vodních cest označených signálním znakem <strong>A.9</strong> uvedeným v&nbsp;příloze č.&nbsp;7.
+</blockquote>
+
+<h3>Vizualizace — co je „převozní loď, která neplaje volně"</h3>
+
+<p>Lanový (řetězový) přívoz je trvale připoutaný k vodicímu lanu nataženému přes řeku. Po laně klouže z břehu na břeh, ale <strong>nemá pohon, kterým by mohl uhnout vlně</strong>, a často veze cestující nebo auta. Proplouvající plavidlo musí v jeho blízkosti zpomalit, aby vlna ani sání nezpůsobily naklonění, nabrání vody nebo pád lidí.</p>
+
+<svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Schéma řeky shora s lanovým přívozem a proplouvající lodí</title>
+  <desc>Pohled shora: dvě břehy nahoře a dole, mezi nimi voda. Přes řeku vede vodicí lano s připoutaným přívozem uprostřed. Po proudu se blíží motorová loď, kolem ní vlny. Šipky ukazují směry plavby a směr vlnobití/sání.</desc>
+
+  <defs>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="bankGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#65a30d"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#1e40af"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#b91c1c"/>
+    </marker>
+  </defs>
+
+  <!-- Voda -->
+  <rect x="0" y="60" width="760" height="240" style="fill:url(#waterGrad)"/>
+
+  <!-- Břehy -->
+  <rect x="0" y="0" width="760" height="60" style="fill:url(#bankGrad)"/>
+  <rect x="0" y="300" width="760" height="60" style="fill:url(#bankGrad)"/>
+  <text x="20" y="35" style="font-size:13px;font-weight:700;fill:#fef9c3">SEVERNÍ BŘEH</text>
+  <text x="20" y="335" style="font-size:13px;font-weight:700;fill:#fef9c3">JIŽNÍ BŘEH</text>
+
+  <!-- Sloupy lanového přívozu (kotvení lana na obou březích) -->
+  <rect x="370" y="40" width="20" height="22" style="fill:#44403c;stroke:#1c1917;stroke-width:1"/>
+  <rect x="370" y="298" width="20" height="22" style="fill:#44403c;stroke:#1c1917;stroke-width:1"/>
+
+  <!-- Vodicí lano přívozu -->
+  <line x1="380" y1="62" x2="380" y2="298" style="stroke:#78350f;stroke-width:3;stroke-dasharray:6,4"/>
+  <text x="395" y="95" style="font-size:11px;font-style:italic;fill:#78350f;font-weight:700">vodicí lano</text>
+
+  <!-- Přívoz uprostřed -->
+  <g>
+    <!-- Spojení přívozu s lanem -->
+    <line x1="380" y1="180" x2="395" y2="180" style="stroke:#78350f;stroke-width:2"/>
+    <!-- Přívoz (obdélníkový trup) -->
+    <rect x="395" y="160" width="80" height="40" rx="3" style="fill:#fbbf24;stroke:#78350f;stroke-width:2"/>
+    <!-- Auto na přívoze -->
+    <rect x="410" y="170" width="20" height="20" rx="2" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1"/>
+    <!-- Postavičky -->
+    <circle cx="445" cy="180" r="3" style="fill:#1f2937"/>
+    <circle cx="455" cy="180" r="3" style="fill:#1f2937"/>
+    <circle cx="465" cy="180" r="3" style="fill:#1f2937"/>
+    <text x="435" y="225" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#0f172a">PŘÍVOZ — neplaje volně</text>
+    <text x="435" y="240" text-anchor="middle" style="font-size:10px;fill:#475569">připoután k lanu, nemůže uhnout</text>
+  </g>
+
+  <!-- Proplouvající motorová loď zleva -->
+  <g>
+    <!-- Trup -->
+    <path d="M 60 175 L 200 175 L 230 190 L 200 205 L 60 205 Z" style="fill:#1e3a8a;stroke:#0c1d57;stroke-width:1.5"/>
+    <!-- Kabina -->
+    <rect x="100" y="160" width="60" height="20" rx="2" style="fill:#475569;stroke:#1e293b;stroke-width:1"/>
+    <!-- Šipka směru plavby -->
+    <line x1="240" y1="190" x2="320" y2="190" style="stroke:#1e40af;stroke-width:2.5" marker-end="url(#arrow)"/>
+    <text x="280" y="180" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#1e40af">směr plavby</text>
+    <text x="135" y="155" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#0f172a">motorová loď</text>
+  </g>
+
+  <!-- Vlny od proplouvající lodi -->
+  <g style="fill:none;stroke:#0284c7;stroke-width:1.5">
+    <!-- Vlny vějířovitě před lodí + bokem -->
+    <path d="M 230 190 Q 280 130 380 110"/>
+    <path d="M 230 190 Q 290 145 380 135"/>
+    <path d="M 230 190 Q 300 165 380 165"/>
+    <path d="M 230 190 Q 290 235 380 245"/>
+    <path d="M 230 190 Q 300 215 380 215"/>
+    <path d="M 230 190 Q 280 255 380 270"/>
+  </g>
+
+  <!-- Šipka označující vlnobití k přívozu -->
+  <line x1="300" y1="155" x2="395" y2="170" style="stroke:#b91c1c;stroke-width:2;stroke-dasharray:4,3" marker-end="url(#arrowRed)"/>
+  <text x="270" y="142" style="font-size:11px;font-weight:700;fill:#b91c1c">vlnobití + sání</text>
+
+  <!-- Pravý břeh popis: signál A.9 -->
+  <g>
+    <!-- Signální znak A.9 - obdélníková tabulka s vlnami a křížkem -->
+    <rect x="660" y="155" width="60" height="50" style="fill:#ffffff;stroke:#dc2626;stroke-width:3"/>
+    <!-- Vlnka -->
+    <path d="M 668 175 Q 675 168 682 175 T 696 175 T 710 175" style="fill:none;stroke:#1e40af;stroke-width:2"/>
+    <!-- Křížek -->
+    <line x1="668" y1="155" x2="720" y2="205" style="stroke:#dc2626;stroke-width:3"/>
+    <text x="690" y="225" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#0f172a">A.9</text>
+    <text x="690" y="238" text-anchor="middle" style="font-size:9px;fill:#475569">zákaz vlnobití</text>
+  </g>
+</svg>
+
+<p style="font-size:12px;color:#475569;font-style:italic">Pohled shora. Žlutá obdélníková loď uprostřed je lanový přívoz připoutaný k vodicímu lanu (čárkovaná hnědá čára). Modrá motorová loď proplouvá kolem a vyvolává vlnobití. Vpravo je pro úplnost signální znak A.9 (zákaz vlnobití) — pátá situace z výčtu § 74 odst. 1.</p>
+
+<h3>Všech pět případů z § 74 odst. 1 — přehled</h3>
+
+<table style="width:100%;border-collapse:collapse;margin:8px 0">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Písm.</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Místo / situace</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Proč zpomalit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">a)</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">před vjezdem do přístavu</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">V přístavu jsou plavidla nahuštěná, vlna je rozhoupe a poškodí lana/boky.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">b)</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">u plavidel vyvázaných ke břehu nebo můstkům, vč. nakládajících/vykládajících</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Vlna láme úvazy, kymácí jeřáby, ohrožuje lidi na palubě.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">c)</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">u plavidel stojících na obvyklých stanovištích</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Stojící loď na kotvě nebo bóji nemůže uhnout, vlna ji rozkývá.</td>
+    </tr>
+    <tr style="background:#eff6ff">
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">d)</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:700">u převozních lodí, které neplují volně (lanové/řetězové přívozy) ← <em>tato otázka</em></td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Přívoz je přivázaný k lanu, nemá pohon, veze cestující/auta — vlna ho naklopí.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;font-weight:700">e)</td>
+      <td style="padding:8px">úseky označené signálním znakem <strong>A.9</strong> (zákaz vlnobití)</td>
+      <td style="padding:8px">Konkrétní úsek označený správcem cesty — typicky kvůli břehům, mariny, biotopu.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ostatní varianty nejsou správné</h3>
+
+<ul>
+  <li><strong>„v blízkosti mostů nebo lávek přes vodní cestu"</strong> — mosty a lávky vlnobitím neutrpí (jsou pevně postavené). Pravidla plavby kolem nich řeší <em>signální znaky podjezdné výšky</em> a <em>směrová pravidla pro průplav otvorem mostu</em> (§ 28, § 30 vyhlášky 67/2015 Sb.), ne § 74. Mezi pěti případy povinného zpomalování kvůli vlně tato situace <strong>není</strong>.</li>
+  <li><strong>„v blízkosti podélných nebo příčných hrázek regulace vodní cesty"</strong> — regulační hrázky jsou pevné kamenné/betonové stavby na korytě. Plavidlo kolem nich má držet odstup kvůli mělčině a riziku nasednutí, ne kvůli vlně. Pro tato místa platí jiná pravidla bezpečné plavby a případné značení (zákazové/výstražné značky), ale <strong>ne</strong> § 74 odst. 1.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<ul>
+  <li><strong>Když uvidíš lanový přívoz přepnutý přes řeku</strong>, musíš zpomalit už <em>před</em> tím, než budeš na úrovni přívozu — ne až vedle něj. Cílem je, aby k přívozu nedorazila výrazná vlna ani efekt sání pod kýlem.</li>
+  <li>Lanové přívozy mají vlastní pravidla pro signalizaci a přednost (§&nbsp;39 vyhlášky 67/2015 Sb.) — proplouvající plavidla jim mají dát volnou cestu, pokud je to možné.</li>
+  <li>Signální znak <strong>A.9</strong> (bílý obdélník s červeným orámováním a přeškrtnutou vlnkou) označuje úseky, kde je <em>jakékoliv</em> vlnobití zakázané — typicky před marinami, kotvišti rekreačních plavidel, plážemi.</li>
+  <li>U malých rekreačních plavidel se to týká hlavně rychlých motorových člunů a vodních skútrů — i u nich, byť mají menší vodorys, vlna od plavby v plné rychlosti dokáže přívoz nebo přivázanou loď výrazně rozhoupat.</li>
+</ul>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, § 74 odst. 1 — plné znění: <a href="https://krajta.slv.cz/2015/67/par_6">krajta.slv.cz/2015/67</a></li>
+  <li>Vyhláška č. 67/2015 Sb. — vyhledání na portálu Sbírky zákonů: <a href="https://www.zakonyprolidi.cz/cs/2015-67">zakonyprolidi.cz/cs/2015-67</a></li>
+</ul>

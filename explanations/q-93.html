@@ -1,0 +1,172 @@
+<h2>Obrat doprava: dlouhý zvuk + jeden krátký</h2>
+
+<p>Plavidlo, které <strong>není malé</strong>, oznamuje úmysl provést <strong>obrat doprava</strong> signálem
+<strong>„jeden dlouhý zvuk, za kterým následuje jeden krátký zvuk"</strong>. Pravidlo říká přímo § 69 odst. 2 písm. a)
+vyhlášky č. 67/2015 Sb. o pravidlech plavebního provozu:</p>
+
+<blockquote>
+„… jeden dlouhý zvuk, za kterým následuje jeden krátký zvuk, má-li v úmyslu provést <strong>obrat doprava</strong>;
+jeden dlouhý zvuk, za kterým následují dva krátké zvuky, má-li v úmyslu provést <strong>obrat doleva</strong>."
+</blockquote>
+
+<h3>Pomůcka pro paměť</h3>
+
+<p>Každý obratový signál začíná <strong>dlouhým „pozor"</strong> a teprve pak přijdou krátké pípy, které říkají stranu:</p>
+
+<ul>
+  <li><strong>1 krátký</strong> po dlouhém → obrat <strong>DOprava</strong> (jeden = jednou „D")</li>
+  <li><strong>2 krátké</strong> po dlouhém → obrat <strong>DOleva</strong> (dva pípy = doleva)</li>
+</ul>
+
+<h3>Časování zvuků (vyhláška, příl. 6)</h3>
+
+<table>
+  <thead>
+    <tr><th>Prvek signálu</th><th>Trvání</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Krátký zvuk (▪)</td><td>~ 1 sekunda</td></tr>
+    <tr><td>Dlouhý zvuk (▬▬▬▬)</td><td>~ 4 sekundy</td></tr>
+    <tr><td>Mezera mezi zvuky</td><td>~ 1 sekunda</td></tr>
+  </tbody>
+</table>
+
+<h3>Vizualizace: rytmus signálu pro obrat doprava</h3>
+
+<p>Časová osa ukazuje obě varianty obratu vedle sebe — délka obdélníku odpovídá trvání zvuku.
+Pamatuj: <strong>počet krátkých = strana</strong>.</p>
+
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; background: #f7fafc; border-radius: 8px;">
+  <defs>
+    <marker id="arr93" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1a202c">
+    Signály obratu — § 69 odst. 2 vyhlášky 67/2015 Sb.
+  </text>
+
+  <!-- časová osa nahoře (sekundy) -->
+  <line x1="60" y1="60" x2="700" y2="60" stroke="#a0aec0" stroke-width="1" marker-end="url(#arr93)"/>
+  <text x="710" y="64" font-family="sans-serif" font-size="11" fill="#4a5568">čas</text>
+  <g font-family="sans-serif" font-size="10" fill="#718096" text-anchor="middle">
+    <text x="60" y="52">0s</text>
+    <text x="140" y="52">1s</text>
+    <text x="220" y="52">2s</text>
+    <text x="300" y="52">3s</text>
+    <text x="380" y="52">4s</text>
+    <text x="460" y="52">5s</text>
+    <text x="540" y="52">6s</text>
+  </g>
+
+  <!-- ===== OBRAT DOPRAVA (správná odpověď) ===== -->
+  <text x="60" y="100" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f855a">
+    OBRAT DOPRAVA — jeden dlouhý + jeden krátký   ✓ správná odpověď
+  </text>
+
+  <!-- dlouhý zvuk: 4s = 320px (60 -> 380) -->
+  <rect x="60" y="115" width="320" height="34" rx="4" fill="#38a169"/>
+  <text x="220" y="138" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">
+    ▬▬▬▬ dlouhý (4 s)
+  </text>
+
+  <!-- pauza 1s (380 -> 460) -->
+  <rect x="380" y="115" width="80" height="34" rx="4" fill="none" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="420" y="138" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#a0aec0">pauza</text>
+
+  <!-- krátký zvuk: 1s = 80px -->
+  <rect x="460" y="115" width="80" height="34" rx="4" fill="#38a169"/>
+  <text x="500" y="138" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">▪</text>
+
+  <text x="555" y="138" font-family="sans-serif" font-size="11" fill="#4a5568">→ doPRAVA</text>
+
+  <!-- ===== OBRAT DOLEVA (pro porovnání) ===== -->
+  <text x="60" y="190" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2b6cb0">
+    OBRAT DOLEVA — jeden dlouhý + dva krátké   (pro porovnání)
+  </text>
+
+  <rect x="60" y="205" width="320" height="34" rx="4" fill="#3182ce"/>
+  <text x="220" y="228" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">
+    ▬▬▬▬ dlouhý (4 s)
+  </text>
+
+  <rect x="380" y="205" width="80" height="34" rx="4" fill="none" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="420" y="228" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#a0aec0">pauza</text>
+
+  <rect x="460" y="205" width="80" height="34" rx="4" fill="#3182ce"/>
+  <text x="500" y="228" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">▪</text>
+
+  <rect x="540" y="205" width="20" height="34" rx="2" fill="none" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="2 2"/>
+
+  <rect x="560" y="205" width="80" height="34" rx="4" fill="#3182ce"/>
+  <text x="600" y="228" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="white">▪</text>
+
+  <text x="655" y="228" font-family="sans-serif" font-size="11" fill="#4a5568">→ doLEVA</text>
+
+  <!-- ===== Šipky obratu (vizualizace strany) ===== -->
+  <g transform="translate(60, 280)">
+    <text x="0" y="0" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1a202c">Strana obratu:</text>
+
+    <!-- doprava: plavidlo + zatáčka doprava -->
+    <g transform="translate(140, -10)">
+      <text x="50" y="-6" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2f855a" font-weight="bold">DOPRAVA</text>
+      <!-- plavidlo (trojúhelník mířící vzhůru) -->
+      <polygon points="50,30 38,55 62,55" fill="#2d3748"/>
+      <!-- zakřivená šipka doprava -->
+      <path d="M 50,30 Q 80,20 95,40" stroke="#2f855a" stroke-width="3" fill="none" marker-end="url(#arr93)"/>
+    </g>
+
+    <!-- doleva: plavidlo + zatáčka doleva -->
+    <g transform="translate(380, -10)">
+      <text x="50" y="-6" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2b6cb0" font-weight="bold">DOLEVA</text>
+      <polygon points="50,30 38,55 62,55" fill="#2d3748"/>
+      <path d="M 50,30 Q 20,20 5,40" stroke="#2b6cb0" stroke-width="3" fill="none" marker-end="url(#arr93)"/>
+    </g>
+  </g>
+
+  <!-- legenda dole -->
+  <line x1="60" y1="360" x2="700" y2="360" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="60" y="385" font-family="sans-serif" font-size="11" fill="#4a5568">
+    <tspan font-weight="bold">Trik:</tspan> obratový signál vždy začíná dlouhým „pozor" zvukem.
+    Počet krátkých určuje stranu — 1 = doprava, 2 = doleva.
+  </text>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<table>
+  <thead>
+    <tr><th>Možnost z testu</th><th>Co s tím?</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>jeden dlouhý + jeden krátký</strong></td>
+      <td style="background:#c6f6d5"><strong>SPRÁVNĚ</strong> — § 69 odst. 2 písm. a)</td>
+    </tr>
+    <tr>
+      <td>dva dlouhé + jeden krátký</td>
+      <td>Tato kombinace pro obrat ve vyhlášce <strong>není definována</strong>. Obratový signál začíná vždy <em>jedním</em> dlouhým, ne dvěma.</td>
+    </tr>
+    <tr>
+      <td>dva krátké + jeden dlouhý</td>
+      <td>Pořadí je <strong>prohozené</strong>. Signál pro obrat začíná dlouhým („pozor, manévruji"), nikdy ne krátkými. Začínat krátkými má jiný význam (změna kurzu / typové signály malých plavidel).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+
+<p>Signál se musí dát <strong>včas před obratem</strong>, ne v jeho průběhu — okolní lodi potřebují čas se přizpůsobit.
+Klasický scénář: nákladní loď chce uprostřed plavební dráhy otočit do přístavního bazénu na pravém břehu. Ještě před tím,
+než začne strhávat kormidlo, zatroubí <strong>▬▬▬▬ ▪</strong> a okolní plavidla vědí, že má tu pravomoc obsadit
+prostor napříč profilem směrem doprava.</p>
+
+<p>Pravidlo platí pro <strong>plavidla, která nejsou malá</strong> (typicky vlečné/tlačné sestavy, osobní lodi, nákladní lodi).
+Malá plavidla (rekreační čluny pod 20 m) mají oznamovací povinnost výrazně mírnější.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li><a href="https://www.sagit.cz/info/sb15067">Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — Sagit (§ 69 odst. 2)</a></li>
+</ul>
