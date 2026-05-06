@@ -1,0 +1,132 @@
+<h2>Obeplutí koupající se osoby — z které strany?</h2>
+
+<p><strong>Správně je:</strong> <em>„aby koupající se zůstal mezi malým plavidlem a nejbližším břehem."</em> Plavidlo tedy obeplouvá plavce <strong>z vodní (vnější) strany</strong> — ne mezi ním a souší.</p>
+
+<h3>Proč právě takhle</h3>
+<p>Pravidlo má tři pevné důvody, všechny bezpečnostní:</p>
+<ul>
+  <li><strong>Nejkratší úniková cesta plavce.</strong> Pokud cokoli selže (panika, křeč, vlna z plavidla), plavec má volnou cestu ke břehu — nemusí plavat kolem trupu nebo přes vlnu za zádí.</li>
+  <li><strong>Plavidlo má vodu k manévrování.</strong> Vnější strana = větší hloubka a víc prostoru. Z vnitřní strany bys riskoval, že kvůli mělčině nebo protiproudu nestihneš úhybný oblouk a budeš tlačený rovnou na plavce.</li>
+  <li><strong>Plavec je v zorném poli.</strong> Když je mezi tebou a břehem, máš ho při průjezdu vždy v dohledu na boku — ne těsně před přídí proti slunci nad břehem.</li>
+</ul>
+
+<h3>Vizualizace — správně vs. špatně</h3>
+<p>Pohled shora. Břeh nahoře, hluboká voda dole. Plavidlo (modrá šipka) se přibližuje zleva a má plavce obeplout v bezpečné vzdálenosti.</p>
+
+<svg viewBox="0 0 760 500" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Obeplutí koupající se osoby — správný a chybný způsob</title>
+  <desc>Dvě scény z ptačí perspektivy. Vlevo správně: plavidlo obeplouvá plavce z vodní (vnější) strany, plavec zůstává mezi plavidlem a břehem. Vpravo špatně: plavidlo projíždí mezi plavcem a břehem, plavec uvízl ve vnější vodě.</desc>
+
+  <!-- ===== LEFT scene: CORRECT ===== -->
+  <text x="190" y="28" text-anchor="middle" style="font-size:16px;font-weight:700;fill:#15803d">✓ Správně</text>
+  <rect x="20" y="40" width="340" height="400" rx="10" style="fill:#f0fdf4;stroke:#86efac;stroke-width:2"/>
+
+  <!-- Shore -->
+  <rect x="30" y="55" width="320" height="55" style="fill:#fde68a;stroke:#f59e0b;stroke-width:1"/>
+  <text x="190" y="88" text-anchor="middle" style="font-size:12px;font-weight:600;fill:#92400e">břeh</text>
+
+  <!-- Water -->
+  <rect x="30" y="110" width="320" height="320" style="fill:#dbeafe"/>
+  <path d="M 30 135 Q 60 131, 90 135 T 150 135 T 210 135 T 270 135 T 350 135" style="fill:none;stroke:#93c5fd;stroke-width:1.5"/>
+  <path d="M 30 410 Q 60 406, 90 410 T 150 410 T 210 410 T 270 410 T 350 410" style="fill:none;stroke:#93c5fd;stroke-width:1.5"/>
+  <text x="40" y="425" style="font-size:10px;fill:#1e40af;font-style:italic">otevřená voda</text>
+
+  <!-- Swimmer (near shore) -->
+  <circle cx="190" cy="160" r="13" style="fill:#fef3c7;stroke:#7c2d12;stroke-width:1.5"/>
+  <circle cx="185" cy="158" r="1.5" style="fill:#7c2d12"/>
+  <circle cx="195" cy="158" r="1.5" style="fill:#7c2d12"/>
+  <path d="M 183 166 Q 190 169, 197 166" style="fill:none;stroke:#7c2d12;stroke-width:1.5"/>
+  <text x="210" y="164" style="font-size:11px;fill:#0f172a">plavec</text>
+
+  <!-- Vessel path: outer (far from shore) curve -->
+  <path d="M 45 290 Q 100 290, 140 270 Q 190 245 240 270 Q 280 290 340 290"
+        style="fill:none;stroke:#15803d;stroke-width:3;stroke-dasharray:7 4"/>
+  <polygon points="340,290 327,283 327,297" style="fill:#15803d"/>
+
+  <!-- Vessel symbol at curve midpoint -->
+  <g transform="translate(190,253)">
+    <polygon points="-16,-7 16,-7 19,5 -19,5" style="fill:#1e40af;stroke:#0f172a;stroke-width:1"/>
+    <polygon points="-16,-7 -8,-16 8,-16 16,-7" style="fill:#3b82f6;stroke:#0f172a;stroke-width:1"/>
+    <line x1="0" y1="-15" x2="0" y2="-25" style="stroke:#0f172a;stroke-width:1"/>
+  </g>
+
+  <!-- Short escape arrow swimmer -> shore -->
+  <line x1="190" y1="175" x2="190" y2="113" style="stroke:#16a34a;stroke-width:1.5;stroke-dasharray:3 3"/>
+  <polygon points="190,113 186,121 194,121" style="fill:#16a34a"/>
+  <text x="115" y="142" style="font-size:10px;fill:#15803d;font-weight:600">krátká cesta ke břehu</text>
+
+  <!-- Caption -->
+  <text x="190" y="335" text-anchor="middle" style="font-size:11px;font-weight:600;fill:#15803d">plavidlo obeplouvá z vodní strany</text>
+  <text x="190" y="352" text-anchor="middle" style="font-size:11px;fill:#166534">plavec ↔ břeh = volná cesta</text>
+
+  <!-- ===== RIGHT scene: WRONG ===== -->
+  <text x="570" y="28" text-anchor="middle" style="font-size:16px;font-weight:700;fill:#991b1b">✗ Špatně</text>
+  <rect x="400" y="40" width="340" height="400" rx="10" style="fill:#fef2f2;stroke:#fca5a5;stroke-width:2"/>
+
+  <!-- Shore -->
+  <rect x="410" y="55" width="320" height="55" style="fill:#fde68a;stroke:#f59e0b;stroke-width:1"/>
+  <text x="570" y="88" text-anchor="middle" style="font-size:12px;font-weight:600;fill:#92400e">břeh</text>
+
+  <!-- Water -->
+  <rect x="410" y="110" width="320" height="320" style="fill:#dbeafe"/>
+  <path d="M 410 135 Q 440 131, 470 135 T 530 135 T 590 135 T 650 135 T 730 135" style="fill:none;stroke:#93c5fd;stroke-width:1.5"/>
+  <path d="M 410 410 Q 440 406, 470 410 T 530 410 T 590 410 T 650 410 T 730 410" style="fill:none;stroke:#93c5fd;stroke-width:1.5"/>
+  <text x="420" y="425" style="font-size:10px;fill:#1e40af;font-style:italic">otevřená voda</text>
+
+  <!-- Swimmer (further out, vessel will pass between him and shore) -->
+  <circle cx="570" cy="270" r="13" style="fill:#fef3c7;stroke:#7c2d12;stroke-width:1.5"/>
+  <circle cx="565" cy="268" r="1.5" style="fill:#7c2d12"/>
+  <circle cx="575" cy="268" r="1.5" style="fill:#7c2d12"/>
+  <path d="M 563 276 Q 570 279, 577 276" style="fill:none;stroke:#7c2d12;stroke-width:1.5"/>
+  <text x="590" y="274" style="font-size:11px;fill:#0f172a">plavec</text>
+
+  <!-- Vessel path: passes BETWEEN swimmer and shore -->
+  <path d="M 425 175 Q 480 175, 520 160 Q 570 140 620 160 Q 660 175 720 175"
+        style="fill:none;stroke:#dc2626;stroke-width:3;stroke-dasharray:7 4"/>
+  <polygon points="720,175 707,168 707,182" style="fill:#dc2626"/>
+
+  <g transform="translate(570,143)">
+    <polygon points="-16,-7 16,-7 19,5 -19,5" style="fill:#7f1d1d;stroke:#0f172a;stroke-width:1"/>
+    <polygon points="-16,-7 -8,-16 8,-16 16,-7" style="fill:#dc2626;stroke:#0f172a;stroke-width:1"/>
+    <line x1="0" y1="-15" x2="0" y2="-25" style="stroke:#0f172a;stroke-width:1"/>
+  </g>
+
+  <!-- Blocked path swimmer -> shore -->
+  <line x1="570" y1="255" x2="570" y2="180" style="stroke:#dc2626;stroke-width:2;stroke-dasharray:3 3"/>
+  <line x1="555" y1="170" x2="585" y2="155" style="stroke:#dc2626;stroke-width:3"/>
+  <line x1="555" y1="155" x2="585" y2="170" style="stroke:#dc2626;stroke-width:3"/>
+  <text x="595" y="220" style="font-size:10px;fill:#991b1b;font-weight:600">cesta ke břehu</text>
+  <text x="595" y="232" style="font-size:10px;fill:#991b1b;font-weight:600">blokovaná lodí</text>
+
+  <text x="570" y="335" text-anchor="middle" style="font-size:11px;font-weight:600;fill:#991b1b">plavidlo prošlo mezi plavcem a břehem</text>
+  <text x="570" y="352" text-anchor="middle" style="font-size:11px;fill:#7f1d1d">plavec zatlačený do otevřené vody</text>
+
+  <!-- Bottom rule -->
+  <rect x="20" y="455" width="720" height="38" rx="6" style="fill:#eff6ff;stroke:#93c5fd;stroke-width:1"/>
+  <text x="380" y="475" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#1e3a8a">Pravidlo: plavec vždy mezi plavidlem a nejbližším břehem</text>
+  <text x="380" y="488" text-anchor="middle" style="font-size:10px;fill:#1e40af">vůdce plavidla obeplouvá z té strany, která je dál od břehu</text>
+</svg>
+
+<h3>Proč jsou ostatní varianty špatně</h3>
+<ul>
+  <li><strong>Varianta tvrdící, že plavidlo zůstane mezi koupajícím se a nejbližším břehem,</strong> je obrácená logika. Plavec by měl mezi sebou a souší trup lodi a v jakékoli krizi by musel plavat <em>okolo</em> ní nebo do otevřené vody. Přesný opak toho, co bezpečnostní pravidlo chce.</li>
+  <li><strong>Varianta s fixním určením stran („břeh po pravém, plavec po levém boku")</strong> je nesmysl, protože odpověď nezávisí na boku plavidla. Záleží na <strong>geometrii vůči břehu</strong> — kdybys plul opačným směrem, byl by břeh po levé a plavec po pravé. Pravidlo se vztahuje k poloze plavce vůči břehu, ne k orientaci lodi.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>V praxi je to jeden z nejčastějších manévrů na vodě v sezóně. Když uvidíš ve vodě hlavu — plavce, šnorchlaře, někoho na nafukovačce — automaticky:</p>
+<ol>
+  <li><strong>Snižuješ rychlost</strong> (vyhláška č. 67/2015 Sb. vyžaduje ohleduplnou plavbu vůči osobám ve vodě, plus pravidlo bezpečné rychlosti).</li>
+  <li><strong>Zvětšuješ odstup</strong> tak, aby vlna od plavidla plavce nezalila a aby vrtule byla v dostatečné vzdálenosti.</li>
+  <li><strong>Obeplouváš z vnější strany</strong> — plavec zůstává mezi tebou a břehem.</li>
+</ol>
+<p>Pokud je plavců víc nebo je situace nepřehledná, zvol ještě širší oblouk; pokud nemáš dost prostoru ven, raději zpomal na minimum a počkej, než plavec vodu opustí, místo abys ho míjel z vnitřní strany.</p>
+
+<h3>Pomůcka pro zapamatování</h3>
+<p>Tři slova: <strong>plavec — plavidlo — voda</strong>. V tomhle pořadí směrem od břehu. Plavec je nejblíž souši, plavidlo je dál, otevřená voda je za plavidlem. Když si to představíš, automaticky víš, kudy obeplouvat.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — pravidla pro plavbu malých plavidel v blízkosti osob ve vodě (povinnost ohleduplné plavby, bezpečné vzdálenosti a rychlosti)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — obecné povinnosti vůdce plavidla (§ 29 a násl.)</li>
+</ul>

@@ -1,0 +1,135 @@
+<h2>Jádro — bezpečná rychlost ve mlze</h2>
+<p>
+  Správná odpověď je <strong>„přizpůsobí rychlost plavby stavu viditelnosti, místním podmínkám a provozu ostatních plavidel"</strong>.
+</p>
+<p>
+  Princip je prostý: <strong>bezpečná rychlost = taková, abys stihl zastavit nebo se vyhnout překážce v rámci toho, co reálně vidíš</strong>.
+  Když vidíš na 50 m, musíš se chovat jinak, než když vidíš na 500 m. Mlha, hustý déšť, soumrak, sněžení — vše zkracuje reakční vzdálenost a zvyšuje riziko kolize, najetí na mělčinu, srážky s neoznačenou překážkou.
+</p>
+
+<h2>Vizualizace — co určuje bezpečnou rychlost</h2>
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#e8eef2;border-radius:8px">
+  <defs>
+    <radialGradient id="fog" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95"/>
+      <stop offset="60%" style="stop-color:#cdd6dd;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#9aa5ad;stop-opacity:0.3"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#3a6b85"/>
+      <stop offset="100%" style="stop-color:#1f4659"/>
+    </linearGradient>
+    <marker id="arrowR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#c33"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#2a8"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="260" width="800" height="140" fill="url(#water)"/>
+  <rect x="0" y="0" width="800" height="260" fill="#aebac3"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#fog)" opacity="0.85"/>
+
+  <g transform="translate(280,290)">
+    <polygon points="0,0 80,0 95,18 -15,18" fill="#5b3925" stroke="#2d1c12" stroke-width="1.5"/>
+    <rect x="20" y="-22" width="40" height="22" fill="#d8d2c5" stroke="#2d1c12" stroke-width="1.2"/>
+    <rect x="38" y="-50" width="4" height="28" fill="#2d1c12"/>
+    <circle cx="40" cy="-56" r="5" fill="#fff" stroke="#000" stroke-width="0.8"/>
+    <text x="40" y="-65" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#222">stěžňové</text>
+    <line x1="80" y1="22" x2="120" y2="22" stroke="#2a8" stroke-width="2.5" marker-end="url(#arrowG)"/>
+    <text x="125" y="26" font-family="sans-serif" font-size="11" fill="#2a8" font-weight="bold">pomalu</text>
+  </g>
+
+  <g transform="translate(80,90)" font-family="sans-serif" fill="#222">
+    <rect x="0" y="0" width="160" height="60" fill="#fff" stroke="#666" stroke-width="1" rx="6"/>
+    <text x="80" y="20" text-anchor="middle" font-size="11" font-weight="bold">Viditelnost</text>
+    <text x="80" y="38" text-anchor="middle" font-size="10">jak daleko vidíš</text>
+    <text x="80" y="52" text-anchor="middle" font-size="10">→ takovou stihni zastavit</text>
+    <line x1="160" y1="50" x2="280" y2="270" stroke="#666" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <g transform="translate(560,90)" font-family="sans-serif" fill="#222">
+    <rect x="0" y="0" width="170" height="60" fill="#fff" stroke="#666" stroke-width="1" rx="6"/>
+    <text x="85" y="20" text-anchor="middle" font-size="11" font-weight="bold">Místní podmínky</text>
+    <text x="85" y="38" text-anchor="middle" font-size="10">úzké místo, mělčina,</text>
+    <text x="85" y="52" text-anchor="middle" font-size="10">peřej, vlnobití…</text>
+    <line x1="0" y1="50" x2="370" y2="270" stroke="#666" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <g transform="translate(320,30)" font-family="sans-serif" fill="#222">
+    <rect x="0" y="0" width="170" height="50" fill="#fff" stroke="#666" stroke-width="1" rx="6"/>
+    <text x="85" y="20" text-anchor="middle" font-size="11" font-weight="bold">Provoz okolo</text>
+    <text x="85" y="38" text-anchor="middle" font-size="10">jiná plavidla, hustota</text>
+    <line x1="85" y1="50" x2="320" y2="270" stroke="#666" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <g transform="translate(620,300)">
+    <polygon points="0,0 50,0 60,12 -10,12" fill="#444" opacity="0.45"/>
+    <text x="25" y="-3" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#222" opacity="0.7">jiné plavidlo (sotva vidět)</text>
+  </g>
+
+  <text x="400" y="380" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1a3a4d">
+    bezpečná rychlost = taková, na kterou si troufneš podle 3 faktorů výše
+  </text>
+</svg>
+
+<h2>Pozadí — co říká vyhláška</h2>
+<p>
+  Vychází to z <strong>vyhlášky č. 67/2015 Sb. o pravidlech plavebního provozu</strong>:
+</p>
+<ul>
+  <li><strong>§ 5 — Bezpečná rychlost</strong> (obecně): vůdce plavidla je povinen plout takovou rychlostí, aby s ohledem na okolnosti — <em>viditelnost, hustotu provozu, manévrovatelnost plavidla, stav vodní cesty</em> — mohl plavidlo bezpečně ovládat a včas zastavit.</li>
+  <li>Pravidla pro plavbu <strong>za snížené viditelnosti</strong> obecnou povinnost rozšiřují o:
+    <ul>
+      <li>povinné <strong>zvukové signály</strong> (dlouhý tón v intervalech min. 1× za minutu pro plující plavidlo),</li>
+      <li>povinnost <strong>využívat radar</strong>, pokud je instalován,</li>
+      <li>zvýšenou pozornost a pohotovost posádky.</li>
+    </ul>
+  </li>
+</ul>
+<p>
+  Definice „snížené viditelnosti" zahrnuje <strong>mlhu, sněžení, hustý déšť, kouř, prach, soumrak</strong> — cokoli, co snižuje dohlednost pod běžnou úroveň.
+</p>
+
+<h2>Proč ne ostatní možnosti</h2>
+
+<table style="border-collapse:collapse;width:100%;font-family:sans-serif">
+  <thead>
+    <tr style="background:#f0e8d8">
+      <th style="border:1px solid #c8b89a;padding:8px;text-align:left">Tvrzení</th>
+      <th style="border:1px solid #c8b89a;padding:8px;text-align:left">Proč nesedí</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #c8b89a;padding:8px"><em>„Zvýší rychlost, aby co nejrychleji doplulo do nejbližšího přístavu."</em></td>
+      <td style="border:1px solid #c8b89a;padding:8px">Přesný <strong>opak</strong> bezpečné plavby. Kdo ve mlze přidá plyn, narazí dřív, než stihne cokoli ovládat. „Útěk do přístavu" je fatální chyba — bezpečné je naopak <strong>zpomalit, signalizovat, případně se zastavit a vyčkat</strong>.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #c8b89a;padding:8px"><em>„Ponechá místo po pravém boku pro potkávání."</em></td>
+      <td style="border:1px solid #c8b89a;padding:8px">Obecné pravidlo potkávání platí samozřejmě dál, ale <strong>nezachrání před kolizí, když plavidlo neuvidíš včas</strong>. Při snížené viditelnosti je primární <strong>rychlost a signalizace</strong>, ne stranové rozestoupení.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Praktická aplikace — co dělat, když tě zastihne mlha</h2>
+
+<ol>
+  <li><strong>Sniž rychlost</strong> — tolik, abys mohl zastavit ve vzdálenosti, na kterou vidíš.</li>
+  <li><strong>Zapni navigační světla</strong>, i když je den.</li>
+  <li><strong>Vydávej zvukové signály</strong> — dlouhý tón min. 1× za minutu (plující plavidlo).</li>
+  <li><strong>Zostři poslech</strong> — krátce vypni motor, jestli jiné plavidlo neslyšíš dřív, než ho uvidíš.</li>
+  <li><strong>Pokud nemáš radar a viditelnost je velmi nízká</strong> — zvaž zakotvení mimo plavební dráhu a vyčkej.</li>
+</ol>
+
+<blockquote style="border-left:4px solid #1a6e8e;padding:8px 14px;background:#eaf3f7;margin:14px 0">
+  <strong>Pamatuj:</strong> ve mlze je čas tvůj nepřítel jen tehdy, když mu necháš volnou ruku. Trpělivost a pomalá plavba zachraňují plavidlo i posádku.
+</blockquote>
+
+<h2>Zdroje</h2>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — § 5 (Bezpečná rychlost), pravidla pro plavbu za snížené viditelnosti</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — obecné povinnosti vůdce plavidla</li>
+</ul>

@@ -1,0 +1,174 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Jádro</h2>
+    <p>
+      Tři černé znaky nad sebou na stěžni — <strong>balón → dvojitý kužel → balón</strong> —
+      označují plavidlo, které <strong>není schopno snadno uhnout z plavební dráhy</strong>,
+      protože je zaměstnáno prací omezující jeho manévrovatelnost: typicky
+      <strong>bagr, plovoucí stroj, plavidlo provádějící práce pod vodou</strong>
+      (potápěči, pokládání kabelů, údržba plavebního značení). Pro ostatní je to signál:
+      <em>musíš se mu vyhnout ty, on to neumí.</em>
+    </p>
+    <p>
+      Malé plavidlo proto musí udržovat bezpečnou vzdálenost <strong>alespoň 50 m</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Vizualizace</h2>
+    <p>
+      Vlevo to, co je na obrázku v testu (schematický záznam tvarů na stěžni).
+      Vpravo, jak to vypadá v reálu — pracovní plavidlo s povinnou bezpečnostní zónou.
+    </p>
+
+    <div style="display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; margin-top:12px;">
+
+      <!-- LEVÝ PANEL: SCHÉMA TVARŮ NA STĚŽNI (1:1 z testu) -->
+      <svg viewBox="0 0 200 380" width="200" height="380" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px;">
+        <text x="100" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Schéma na stěžni</text>
+        <text x="100" y="38" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#475569">(za dne, viditelné ze všech stran)</text>
+
+        <!-- stěžeň -->
+        <line x1="100" y1="50" x2="100" y2="360" stroke="#475569" stroke-width="3" />
+        <!-- patka stěžně -->
+        <rect x="80" y="358" width="40" height="8" fill="#475569" />
+
+        <!-- horní balón -->
+        <circle cx="100" cy="90" r="22" fill="#0f172a" />
+        <text x="135" y="95" font-family="sans-serif" font-size="11" fill="#0f172a">balón</text>
+
+        <!-- dvojitý kužel (přesýpací hodiny) uprostřed -->
+        <polygon points="78,165 122,165 100,190" fill="#0f172a" />
+        <polygon points="78,215 122,215 100,190" fill="#0f172a" />
+        <text x="135" y="195" font-family="sans-serif" font-size="11" fill="#0f172a">dvojitý kužel</text>
+
+        <!-- spodní balón -->
+        <circle cx="100" cy="270" r="22" fill="#0f172a" />
+        <text x="135" y="275" font-family="sans-serif" font-size="11" fill="#0f172a">balón</text>
+
+        <!-- rozestup 1 m popisek -->
+        <line x1="60" y1="112" x2="60" y2="165" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2" />
+        <text x="55" y="142" text-anchor="end" font-family="sans-serif" font-size="9" fill="#64748b">≥ 1 m</text>
+        <line x1="60" y1="215" x2="60" y2="248" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2" />
+        <text x="55" y="234" text-anchor="end" font-family="sans-serif" font-size="9" fill="#64748b">≥ 1 m</text>
+      </svg>
+
+      <!-- PRAVÝ PANEL: POHLED NA BAGR S 50M ZÓNOU -->
+      <svg viewBox="0 0 420 380" width="420" height="380" xmlns="http://www.w3.org/2000/svg" style="background:#e0f2fe; border:1px solid #cbd5e1; border-radius:8px;">
+        <text x="210" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Reálná situace — pohled shora</text>
+
+        <!-- voda (pozadí už modré) -->
+        <!-- bezpečnostní zóna 50 m kolem bagru -->
+        <circle cx="210" cy="210" r="135" fill="#fee2e2" fill-opacity="0.55" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4" />
+        <text x="210" y="80" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#b91c1c">bezpečnostní zóna ≥ 50 m</text>
+
+        <!-- bagr (obdélníkový trup) -->
+        <rect x="180" y="190" width="60" height="40" fill="#475569" stroke="#0f172a" stroke-width="1.5" />
+        <!-- nadstavba -->
+        <rect x="195" y="200" width="30" height="20" fill="#64748b" />
+        <!-- výložník bagru -->
+        <line x1="240" y1="210" x2="280" y2="180" stroke="#1f2937" stroke-width="3" />
+        <circle cx="282" cy="178" r="4" fill="#1f2937" />
+        <text x="295" y="180" font-family="sans-serif" font-size="10" fill="#0f172a">výložník</text>
+
+        <!-- stěžeň se znaky (zmenšená verze) -->
+        <line x1="210" y1="190" x2="210" y2="135" stroke="#1f2937" stroke-width="2" />
+        <circle cx="210" cy="145" r="6" fill="#0f172a" />
+        <polygon points="204,158 216,158 210,164" fill="#0f172a" />
+        <polygon points="204,170 216,170 210,164" fill="#0f172a" />
+        <circle cx="210" cy="180" r="6" fill="#0f172a" />
+
+        <!-- malé plavidlo plující kolem -->
+        <g transform="translate(60,210)">
+          <polygon points="0,0 30,0 35,8 30,16 0,16" fill="#fbbf24" stroke="#92400e" stroke-width="1" />
+          <text x="17" y="34" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0f172a">tvoje plavidlo</text>
+          <!-- směr -->
+          <line x1="40" y1="8" x2="60" y2="8" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)" />
+        </g>
+
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" fill="#16a34a" />
+          </marker>
+        </defs>
+
+        <!-- popisek 50 m čárkovaná osa -->
+        <line x1="210" y1="210" x2="345" y2="210" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,3" />
+        <text x="278" y="206" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#b91c1c" font-weight="bold">50 m</text>
+
+        <!-- legenda -->
+        <text x="20" y="360" font-family="sans-serif" font-size="10" fill="#0f172a">
+          Plavidla na stěžni nesou tytéž 3 znaky → drž odstup, neplaš vlnami,
+        </text>
+        <text x="20" y="372" font-family="sans-serif" font-size="10" fill="#0f172a">
+          pozor na kotevní lana a potápěče pod vodou.
+        </text>
+      </svg>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pozadí — denní vs. noční signalizace</h2>
+    <p>
+      Denní tvarová signalizace v ČR (vyhláška č. 67/2015 Sb.) zrcadlí noční
+      světelnou signalizaci v systému CEVNI. Stejné plavidlo má v každou denní
+      dobu signál se stejným <em>významem</em>, jen v jiném médiu:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Plavidlo</th>
+          <th>Den (tvary, černé)</th>
+          <th>Noc (světla, nad sebou)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>S omezenou schopností manévrování<br/>(bagr, plovoucí stroj, práce pod vodou)</td>
+          <td><strong>balón – dvojitý kužel – balón</strong></td>
+          <td>červené – bílé – červené</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Logika „obal–varování–obal" je záměrná: krajní znaky (kruh / červená)
+      ohraničují centrální výstrahu (přesýpací hodiny / bílé). Znaky musí být
+      viditelné ze všech stran a ve vzájemné vzdálenosti alespoň 1 m.
+    </p>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní vzdálenosti</h2>
+    <ul>
+      <li>
+        <strong>10 m</strong> — řádově málo. Bagr má často <strong>dlouhá kotevní lana</strong>
+        (i desítky metrů do stran) a pod hladinou může pracovat technika,
+        kterou shora nevidíš (potápěč, sací rameno, frézovací kolo).
+        10 m je odstup typický spíš pro běžné míjení mezi malými plavidly v užším profilu.
+      </li>
+      <li>
+        <strong>1 000 m</strong> — nereálně daleko. Vyhláška takovou vzdálenost
+        pro denní signalizaci pracovního plavidla nikde nestanovuje
+        a v praxi by znemožnila plavbu přes celé úseky vodní cesty.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <ul>
+      <li>Vidíš trojici <strong>kruh–přesýpací hodiny–kruh</strong> v černé na stěžni? Drž <strong>min. 50 m</strong>.</li>
+      <li>Projíždíš <strong>pomalu</strong>, v rovnoběžném směru, <strong>neplaš vlnami</strong> — bagr může mít vyvěšené potápěče nebo viset lana.</li>
+      <li>V noci je ekvivalent <strong>červené–bílé–červené světlo</strong> nad sebou — stejné pravidlo, stejných 50 m.</li>
+      <li>Když situace neumožňuje obejít plavidlo s odstupem 50 m (úzký kanál), zpomal na minimum a přizpůsob trajektorii — preventivní rádiová komunikace s posádkou bagru je v praxi obvyklá.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — ustanovení o denní a noční signalizaci plavidel se zvláštními právy / s omezenou manévrovatelností a o bezpečné vzdálenosti malých plavidel.</li>
+      <li>CEVNI — Evropský kodex pro vnitrozemské vodní cesty (mezinárodní systém, na který česká vyhláška navazuje).</li>
+    </ol>
+  </section>
+</article>

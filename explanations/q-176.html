@@ -1,0 +1,124 @@
+<h2>Jádro</h2>
+<p>Na obrázku jsou čtyři světla v charakteristické sestavě: <strong>bílé stěžňové</strong> vpředu nahoře, <strong>červené boční</strong> na levoboku, <strong>zelené boční</strong> na pravoboku a <strong>bílé záďové</strong> vzadu. Tahle kombinace je předepsaná <strong>právě pro plující malé plavidlo s vlastním pohonem</strong> (motorová loď). Žádná jiná kategorie malého plavidla tuhle sestavu nenese.</p>
+
+<h2>Vizualizace — schéma vs. realita</h2>
+<p>Vlevo: pohled na plavidlo zepředu, jak ho v noci uvidíš ze své lodi. Vpravo: půdorys s rozmístěním jednotlivých světel.</p>
+
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;background:#0a0e1a;border-radius:8px">
+  <!-- LEFT PANEL — front view at night -->
+  <text x="20" y="25" fill="#9ca3af" font-family="sans-serif" font-size="13" font-weight="bold">Pohled zepředu (jak ji v noci uvidíš)</text>
+
+  <!-- water -->
+  <path d="M 10 270 Q 50 262 90 270 T 170 270 T 250 270 T 330 270 T 360 270" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 10 280 Q 50 272 90 280 T 170 280 T 250 280 T 330 280 T 360 280" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.4"/>
+
+  <!-- boat hull silhouette -->
+  <path d="M 80 250 L 90 230 L 280 230 L 290 250 Z" fill="#1f2937" stroke="#374151" stroke-width="1.5"/>
+  <!-- cabin -->
+  <rect x="140" y="180" width="90" height="50" fill="#1f2937" stroke="#374151" stroke-width="1.5"/>
+  <!-- mast -->
+  <line x1="185" y1="180" x2="185" y2="80" stroke="#374151" stroke-width="2"/>
+
+  <!-- sidelights -->
+  <!-- port (left side from boat's view = right of viewer when looking head-on... wait, head-on the viewer sees port on their RIGHT) -->
+  <!-- Actually: viewer looking AT the bow sees the boat's port side on the viewer's RIGHT -->
+  <!-- Standard: red on port (left of boat), green on starboard (right of boat) -->
+  <!-- From front view, viewer sees: red on viewer's right, green on viewer's left -->
+  <circle cx="240" cy="215" r="8" fill="#ef4444"/>
+  <circle cx="240" cy="215" r="14" fill="#ef4444" opacity="0.25"/>
+  <text x="252" y="220" fill="#ef4444" font-family="sans-serif" font-size="11">červené (levobok)</text>
+
+  <circle cx="130" cy="215" r="8" fill="#22c55e"/>
+  <circle cx="130" cy="215" r="14" fill="#22c55e" opacity="0.25"/>
+  <text x="50" y="220" fill="#22c55e" font-family="sans-serif" font-size="11">zelené (pravobok)</text>
+
+  <!-- masthead white -->
+  <circle cx="185" cy="120" r="9" fill="#fef3c7"/>
+  <circle cx="185" cy="120" r="16" fill="#fef3c7" opacity="0.3"/>
+  <text x="200" y="115" fill="#fef3c7" font-family="sans-serif" font-size="11">bílé stěžňové</text>
+
+  <!-- stern white (visible from behind, dimmer here just labeled) -->
+  <text x="20" y="100" fill="#fef3c7" font-family="sans-serif" font-size="11" opacity="0.6">+ bílé záďové</text>
+  <text x="20" y="115" fill="#9ca3af" font-family="sans-serif" font-size="10" opacity="0.6">(zezadu)</text>
+
+  <!-- divider -->
+  <line x1="380" y1="20" x2="380" y2="300" stroke="#374151" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- RIGHT PANEL — top-down plan -->
+  <text x="400" y="25" fill="#9ca3af" font-family="sans-serif" font-size="13" font-weight="bold">Půdorys (rozmístění světel)</text>
+
+  <!-- boat shape from above -->
+  <path d="M 480 80 L 720 80 L 740 160 L 720 240 L 480 240 Z" fill="#1f2937" stroke="#374151" stroke-width="1.5"/>
+  <!-- bow indicator -->
+  <text x="730" y="165" fill="#9ca3af" font-family="sans-serif" font-size="10">příď →</text>
+
+  <!-- cabin block -->
+  <rect x="540" y="120" width="120" height="80" fill="#111827" stroke="#374151" stroke-width="1"/>
+
+  <!-- masthead light (forward) -->
+  <circle cx="680" cy="160" r="9" fill="#fef3c7"/>
+  <circle cx="680" cy="160" r="16" fill="#fef3c7" opacity="0.3"/>
+  <text x="650" y="105" fill="#fef3c7" font-family="sans-serif" font-size="10">stěžňové bílé</text>
+  <text x="650" y="118" fill="#9ca3af" font-family="sans-serif" font-size="9">(225°, dopředu)</text>
+
+  <!-- port red sidelight -->
+  <circle cx="490" cy="100" r="7" fill="#ef4444"/>
+  <text x="395" y="95" fill="#ef4444" font-family="sans-serif" font-size="10">červené levobok</text>
+  <text x="395" y="108" fill="#9ca3af" font-family="sans-serif" font-size="9">(112,5°)</text>
+
+  <!-- starboard green sidelight -->
+  <circle cx="490" cy="220" r="7" fill="#22c55e"/>
+  <text x="395" y="225" fill="#22c55e" font-family="sans-serif" font-size="10">zelené pravobok</text>
+  <text x="395" y="238" fill="#9ca3af" font-family="sans-serif" font-size="9">(112,5°)</text>
+
+  <!-- stern white -->
+  <circle cx="490" cy="160" r="8" fill="#fef3c7"/>
+  <circle cx="490" cy="160" r="14" fill="#fef3c7" opacity="0.3"/>
+  <text x="395" y="160" fill="#fef3c7" font-family="sans-serif" font-size="10">záďové bílé</text>
+  <text x="395" y="173" fill="#9ca3af" font-family="sans-serif" font-size="9">(135°, dozadu)</text>
+
+  <!-- arc indicators (subtle) -->
+  <text x="500" y="270" fill="#6b7280" font-family="sans-serif" font-size="9">Boční = červená P, zelená S, každá kryje 112,5° od přídě.</text>
+  <text x="500" y="285" fill="#6b7280" font-family="sans-serif" font-size="9">Stěžňové míří dopředu (225°), záďové dozadu (135°).</text>
+</svg>
+
+<h2>Pozadí — vyhláška č. 67/2015 Sb.</h2>
+<p>Vyhláška o pravidlech plavebního provozu (§ 3.13 — Noční signalizace malých plavidel) rozlišuje tři situace:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Noční signalizace za plavby</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Malé plavidlo s vlastním pohonem</strong> (motorové)</td>
+      <td>stěžňové bílé + boční (červená P / zelená S) + záďové bílé</td>
+    </tr>
+    <tr>
+      <td><strong>Malé plavidlo bez vlastního pohonu</strong> (veslice, paddleboard…)</td>
+      <td>obvykle <strong>jedno bílé světlo viditelné ze všech stran</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Malá plachetnice</strong></td>
+      <td>boční světla + záďové bílé (nebo trojbarevné na vrcholu stěžně) — bez bílého stěžňového</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Proč ne ostatní možnosti</h2>
+<ul>
+  <li><strong>Varianta „malé plavidlo bez vlastního pohonu"</strong> — to by neslo jen jedno bílé světlo dokola (typicky veslice). Boční barevná světla i bílé stěžňové jsou výsadou plavidel s vlastním pohonem.</li>
+  <li><strong>Varianta „každé malé plavidlo"</strong> — neplatí; signalizace se liší podle typu pohonu (motor / vesla / plachta), a tahle konkrétní čtveřice je jen pro motorová.</li>
+</ul>
+
+<h2>Praktická aplikace</h2>
+<p>Když na vodě v noci uvidíš <strong>vlevo červené, vpravo zelené plus dvě bílá v podélné ose</strong>, víš, že jde o <strong>motorovou loď, vidíš ji čelně</strong> a <strong>plave proti tobě</strong>. Pokud uvidíš jen jedno bílé „obloukové" světlo, je to malé plavidlo bez pohonu (veslice, kanoe, paddleboard za snížené viditelnosti).</p>
+
+<h2>Zdroje</h2>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — § 3.13 (Noční signalizace malých plavidel)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

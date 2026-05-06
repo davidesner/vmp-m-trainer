@@ -1,0 +1,131 @@
+<h2>Obvod plavební komory — kde platí komorová pravidla</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„až k místům, kde končí zařízení k vyvazování plavidel pro čekání na proplavení."</em></p>
+
+<h3>Jádro</h3>
+
+<p>„Obvod plavební komory" <strong>není jen prostor mezi vraty</strong>. Zahrnuje i čekací oblasti před a za komorou — úseky, kde jsou <strong>pacholíky, bóje a další vyvazovací zařízení</strong>, u kterých plavidla čekají na proplavení. Hranice obvodu = <strong>poslední vyvazovací zařízení</strong> v horní i dolní rejdě.</p>
+
+<p>To je podstatné: pravidla pro plavební komoru (pokyny obsluhy, zákaz předjíždění, přednost služebních plavidel, světelná signalizace, povinnost být připraven k manévru) platí už ve chvíli, kdy se plavidlo dostane k vyvazovací zóně — <strong>ne až když vplouvá mezi vrata</strong>.</p>
+
+<h3>Vizualizace — kde končí obvod komory</h3>
+
+<p>Schéma komory shora. Modře vyznačený úsek = <strong>obvod plavební komory</strong>, kde platí komorová pravidla. Červené trojúhelníky označují hraniční body — poslední vyvazovací zařízení.</p>
+
+<svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:800px;height:auto;background:#f0f4f8;border:1px solid #cbd5e1;border-radius:8px">
+  <!-- Voda - pozadí -->
+  <rect x="0" y="80" width="800" height="120" fill="#bfdbfe"/>
+
+  <!-- Obvod plavební komory - zvýrazněný pás -->
+  <rect x="80" y="80" width="640" height="120" fill="#3b82f6" fill-opacity="0.18" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Čekací zóna - horní rejda (vlevo) -->
+  <rect x="80" y="80" width="200" height="120" fill="#dbeafe" fill-opacity="0.3"/>
+
+  <!-- Samotná komora -->
+  <rect x="320" y="100" width="160" height="80" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+
+  <!-- Čekací zóna - dolní rejda (vpravo) -->
+  <rect x="520" y="80" width="200" height="120" fill="#dbeafe" fill-opacity="0.3"/>
+
+  <!-- Horní vrata -->
+  <line x1="320" y1="100" x2="320" y2="180" stroke="#7c2d12" stroke-width="6"/>
+  <text x="320" y="95" text-anchor="middle" font-size="11" fill="#7c2d12" font-weight="bold">horní vrata</text>
+
+  <!-- Dolní vrata -->
+  <line x1="480" y1="100" x2="480" y2="180" stroke="#7c2d12" stroke-width="6"/>
+  <text x="480" y="95" text-anchor="middle" font-size="11" fill="#7c2d12" font-weight="bold">dolní vrata</text>
+
+  <!-- Popis: KOMORA -->
+  <text x="400" y="145" text-anchor="middle" font-size="13" fill="#312e81" font-weight="bold">KOMORA</text>
+
+  <!-- Vyvazovací pacholíky - horní rejda -->
+  <circle cx="100" cy="90" r="5" fill="#1f2937"/>
+  <circle cx="160" cy="90" r="5" fill="#1f2937"/>
+  <circle cx="220" cy="90" r="5" fill="#1f2937"/>
+  <circle cx="280" cy="90" r="5" fill="#1f2937"/>
+  <circle cx="100" cy="200" r="5" fill="#1f2937"/>
+  <circle cx="160" cy="200" r="5" fill="#1f2937"/>
+  <circle cx="220" cy="200" r="5" fill="#1f2937"/>
+  <circle cx="280" cy="200" r="5" fill="#1f2937"/>
+
+  <!-- Vyvazovací pacholíky - dolní rejda -->
+  <circle cx="540" cy="90" r="5" fill="#1f2937"/>
+  <circle cx="600" cy="90" r="5" fill="#1f2937"/>
+  <circle cx="660" cy="90" r="5" fill="#1f2937"/>
+  <circle cx="700" cy="90" r="5" fill="#1f2937"/>
+  <circle cx="540" cy="200" r="5" fill="#1f2937"/>
+  <circle cx="600" cy="200" r="5" fill="#1f2937"/>
+  <circle cx="660" cy="200" r="5" fill="#1f2937"/>
+  <circle cx="700" cy="200" r="5" fill="#1f2937"/>
+
+  <!-- Hraniční značky - kde končí obvod -->
+  <polygon points="80,75 88,60 72,60" fill="#dc2626"/>
+  <polygon points="80,205 88,220 72,220" fill="#dc2626"/>
+  <polygon points="720,75 728,60 712,60" fill="#dc2626"/>
+  <polygon points="720,205 728,220 712,220" fill="#dc2626"/>
+
+  <!-- Popisky čekacích zón -->
+  <text x="180" y="55" text-anchor="middle" font-size="11" fill="#1e3a8a">čekací zóna (horní rejda)</text>
+  <text x="180" y="240" text-anchor="middle" font-size="10" fill="#374151">vyvazovací pacholíky / bóje</text>
+
+  <text x="620" y="55" text-anchor="middle" font-size="11" fill="#1e3a8a">čekací zóna (dolní rejda)</text>
+  <text x="620" y="240" text-anchor="middle" font-size="10" fill="#374151">vyvazovací pacholíky / bóje</text>
+
+  <!-- Popis hranic -->
+  <text x="80" y="265" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">hranice obvodu</text>
+  <text x="720" y="265" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">hranice obvodu</text>
+
+  <!-- Plavidlo (čekající) -->
+  <ellipse cx="200" cy="140" rx="22" ry="9" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+  <text x="200" y="160" text-anchor="middle" font-size="9" fill="#374151">čekající plavidlo</text>
+
+  <!-- Plavidlo (v komoře) -->
+  <ellipse cx="400" cy="165" rx="22" ry="8" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+
+  <!-- Plavidlo (vyplouvající) -->
+  <ellipse cx="600" cy="140" rx="22" ry="9" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+
+  <!-- Šipka směru toku -->
+  <line x1="30" y1="140" x2="60" y2="140" stroke="#0369a1" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="45" y="130" text-anchor="middle" font-size="9" fill="#0369a1">tok</text>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#0369a1"/>
+    </marker>
+  </defs>
+
+  <!-- Legenda nadpis nad rámečkem -->
+  <text x="400" y="25" text-anchor="middle" font-size="13" fill="#1d4ed8" font-weight="bold">⬛ obvod plavební komory — zde platí komorová pravidla</text>
+</svg>
+
+<p><strong>Klíč:</strong> modře orámovaný pás = obvod komory. Začíná u prvního vyvazovacího zařízení v horní rejdě, končí u posledního vyvazovacího zařízení v dolní rejdě (a naopak). Červené trojúhelníky = hraniční body.</p>
+
+<h3>Pozadí — právní zdroj</h3>
+
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, část upravující proplouvání plavebními komorami (§ 6.28 a související). Vymezuje obvod komory tak, aby pravidla přednosti, signalizace a poslušnosti vůči obsluze platila už od chvíle, kdy se plavidlo zařadí mezi čekající.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>„hlava dělicí hráze / dělicí zdi"</strong> — dělicí hráz odděluje plavební kanál od vodního toku, ale obvod komory tak daleko nesahá. Za hrází je zpravidla ještě úsek plavebního kanálu mimo komorový režim.</li>
+  <li><strong>„konec kanalizovaného úseku / začátek regulovaného úseku"</strong> — to je hranice <em>typu vodní cesty</em> (kanalizovaný × regulovaný úsek), nikoli hranice konkrétní komory. Obvod komory je lokální vymezení u každé komory zvlášť.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když přijíždíš k plavební komoře a vidíš první vyvazovací pacholíky / bóje pro čekání:</p>
+<ul>
+  <li>už <strong>musíš dodržovat pokyny obsluhy komory</strong> (světelná signalizace, gestika)</li>
+  <li>platí <strong>zákaz předjíždění</strong> ostatních čekajících plavidel</li>
+  <li><strong>přednost</strong> mají plavidla služební a plavidla, která už proplouvají</li>
+  <li>musíš být připraven okamžitě reagovat na pokyn ke vplutí</li>
+</ul>
+
+<p>Naopak: jakmile při výjezdu mineš <strong>poslední vyvazovací zařízení</strong>, jsi zpět v běžném plavebním režimu.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, § 6.28 a souv. (proplouvání plavebními komorami)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

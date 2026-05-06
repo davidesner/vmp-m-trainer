@@ -1,0 +1,82 @@
+<h2>Žlutý balón nad vodní plochou pro vodní lyžování</h2>
+
+<h3>Jádro</h3>
+<p>Vytažený žlutý balón nad vymezenou vodní plochou pro vodní lyžování znamená, že <strong>plocha je právě využívaná vodními lyžaři</strong>. Vplouvat smí jen plavidla určená k tomuto provozu (tažný motorový člun s lyžařem, doprovod) — ostatní mají vplutí <strong>zakázáno</strong>.</p>
+
+<p>Správná odpověď: <em>„je vodní plocha právě využívaná vodními lyžaři a vplouvat do této plochy je zakázáno plavidlům, k jejichž provozu nebyla určená."</em></p>
+
+<h3>Vizualizace — co znamená balón nahoře vs. dole</h3>
+
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;border:1px solid #ddd;background:#eaf6ff">
+  <!-- Levá scéna: balón nahoře = aktivní -->
+  <g>
+    <!-- Stožár -->
+    <line x1="80" y1="40" x2="80" y2="270" stroke="#444" stroke-width="3"/>
+    <!-- Lano -->
+    <line x1="80" y1="40" x2="120" y2="80" stroke="#888" stroke-width="1"/>
+    <!-- Žlutý balón -->
+    <ellipse cx="120" cy="100" rx="20" ry="26" fill="#f6c200" stroke="#9a7800" stroke-width="2"/>
+    <ellipse cx="113" cy="92" rx="6" ry="9" fill="#fde680" opacity="0.7"/>
+    <!-- Vlnky vody -->
+    <path d="M10 250 Q 40 240 70 250 T 130 250 T 190 250 T 250 250" fill="none" stroke="#3a8fcf" stroke-width="2"/>
+    <path d="M10 265 Q 40 255 70 265 T 130 265 T 190 265 T 250 265" fill="none" stroke="#3a8fcf" stroke-width="2"/>
+    <!-- Lyžař schematicky -->
+    <line x1="170" y1="220" x2="200" y2="240" stroke="#0a5" stroke-width="2"/>
+    <circle cx="170" cy="215" r="5" fill="#222"/>
+    <line x1="160" y1="240" x2="180" y2="240" stroke="#444" stroke-width="2"/>
+    <!-- Tažný člun -->
+    <polygon points="220,235 260,235 255,245 225,245" fill="#cc4444" stroke="#882222" stroke-width="1"/>
+    <line x1="200" y1="240" x2="222" y2="240" stroke="#666" stroke-width="1" stroke-dasharray="3,2"/>
+    <!-- Popis -->
+    <text x="150" y="30" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#a00">BALÓN NAHOŘE</text>
+    <text x="150" y="295" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#222">plocha aktivní — lyžování probíhá</text>
+    <text x="150" y="312" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#a00" font-weight="bold">VPLUTÍ ZAKÁZÁNO</text>
+  </g>
+
+  <!-- Dělící čára -->
+  <line x1="300" y1="20" x2="300" y2="300" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Pravá scéna: balón dole = neaktivní -->
+  <g>
+    <!-- Stožár -->
+    <line x1="380" y1="40" x2="380" y2="270" stroke="#444" stroke-width="3"/>
+    <!-- Balón složený dole u paty stožáru -->
+    <ellipse cx="395" cy="262" rx="14" ry="9" fill="#f6c200" stroke="#9a7800" stroke-width="2" opacity="0.7"/>
+    <!-- Vlnky -->
+    <path d="M310 250 Q 340 240 370 250 T 430 250 T 490 250 T 560 250" fill="none" stroke="#3a8fcf" stroke-width="2"/>
+    <path d="M310 265 Q 340 255 370 265 T 430 265 T 490 265 T 560 265" fill="none" stroke="#3a8fcf" stroke-width="2"/>
+    <!-- Volná plocha (žádný lyžař) -->
+    <text x="475" y="225" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888" font-style="italic">(plocha bez provozu)</text>
+    <!-- Popis -->
+    <text x="450" y="30" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#0a7a2a">BALÓN DOLE</text>
+    <text x="450" y="295" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#222">plocha mimo provoz</text>
+    <text x="450" y="312" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0a7a2a" font-weight="bold">vplouvat lze (dle dalšího značení)</text>
+  </g>
+</svg>
+
+<h3>Pozadí</h3>
+<ul>
+  <li>Vodní plocha pro vodní lyžování je <strong>vymezená a označená</strong> plavebními znaky určujícími hranice plochy.</li>
+  <li>Žlutý balón funguje jako <strong>dynamický signál</strong> — provozovatel ho vytáhne, když se aktuálně lyžuje, a stáhne, když je provoz ukončen.</li>
+  <li>Logika je stejná jako u jiných dynamických signálů na vodě: signál vidím → omezení platí; signál nevidím → toto konkrétní omezení neplatí (jiná značení samozřejmě platí dál).</li>
+  <li>Právní zdroj: zákon č. 114/1995 Sb. o vnitrozemské plavbě, vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu (značení a signalizace zvláštního provozu na vodě).</li>
+</ul>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li>Varianta tvrdící, že <em>plocha není využívaná a lze proplouvat</em> — přesný opak významu signálu. Vytažený balón znamená, že lyžování probíhá.</li>
+  <li>Varianta tvrdící, že <em>byl překročen nejvyšší povolený počet plavidel</em> — zaměňuje žlutý balón s jiným typem omezení. Tento signál nehlídá počet plavidel, hlídá probíhající lyžařský provoz.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Při průjezdu kolem vyznačené plochy:</p>
+<ul>
+  <li><strong>balón nahoře</strong> → plochu obeplouváš, dovnitř nesmíš (nejsi-li určen pro tento provoz)</li>
+  <li><strong>balón dole / sundán</strong> → plocha je momentálně mimo provoz; pro běžný průjezd se z hlediska tohoto signálu nic nemění</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu (signalizace zvláštního provozu na vodě)</li>
+</ul>

@@ -1,0 +1,132 @@
+<h2>Bezpečná vzdálenost při křížení = 2× délka velkého plavidla</h2>
+
+<p>Správná odpověď je <strong>„odpovídající nejméně dvojnásobku délky těchto plavidel"</strong>. Klíčové slovo je <em>„těchto plavidel"</em> — myslí se tím <strong>velké plavidlo</strong>, kterému se malé plavidlo vyhýbá. Pravidlo tedy škáluje s velikostí překážky: čím větší loď, tím větší odstup.</p>
+
+<h3>Hero scéna — 80m náklaďák a malý člun</h3>
+
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#e9f3fb;border-radius:8px">
+  <defs>
+    <linearGradient id="water153" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe8f5"/>
+      <stop offset="1" stop-color="#7fb6d6"/>
+    </linearGradient>
+    <marker id="arr153" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e7e34"/>
+    </marker>
+    <marker id="arrRed153" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b00020"/>
+    </marker>
+  </defs>
+
+  <!-- voda -->
+  <rect x="0" y="0" width="800" height="360" fill="url(#water153)"/>
+
+  <!-- bezpečná zóna 2× délka (zaoblený obdélník před přídí) -->
+  <rect x="290" y="155" width="320" height="50" fill="#fff5cc" stroke="#d4a017" stroke-width="2" stroke-dasharray="6,4" rx="6"/>
+  <text x="450" y="148" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a6d00">⚠ Bezpečná zóna = 2 × 80 m = 160 m</text>
+
+  <!-- velký nákladní -->
+  <g transform="translate(120,150)">
+    <!-- trup -->
+    <path d="M 0 10 L 160 10 L 180 30 L 160 50 L 0 50 Z" fill="#2c3e50" stroke="#1a252f" stroke-width="1.5"/>
+    <!-- nástavba -->
+    <rect x="20" y="-12" width="40" height="22" fill="#34495e"/>
+    <rect x="26" y="-7" width="8" height="8" fill="#7fb6d6"/>
+    <rect x="38" y="-7" width="8" height="8" fill="#7fb6d6"/>
+    <rect x="50" y="-7" width="8" height="8" fill="#7fb6d6"/>
+    <!-- náklad -->
+    <rect x="80" y="0" width="70" height="10" fill="#a87338"/>
+    <line x1="100" y1="0" x2="100" y2="10" stroke="#5a3a1a" stroke-width="1"/>
+    <line x1="120" y1="0" x2="120" y2="10" stroke="#5a3a1a" stroke-width="1"/>
+    <line x1="140" y1="0" x2="140" y2="10" stroke="#5a3a1a" stroke-width="1"/>
+    <!-- směr plavby -->
+    <line x1="185" y1="30" x2="270" y2="30" stroke="#1e7e34" stroke-width="3" marker-end="url(#arr153)"/>
+    <text x="225" y="22" text-anchor="middle" font-size="11" fill="#1e7e34" font-weight="bold">směr plavby</text>
+    <!-- popisek -->
+    <text x="90" y="68" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">délka 80 m</text>
+  </g>
+
+  <!-- ukazatel délky velké lodi pod trupem -->
+  <line x1="120" y1="220" x2="300" y2="220" stroke="#222" stroke-width="1"/>
+  <line x1="120" y1="215" x2="120" y2="225" stroke="#222" stroke-width="1.5"/>
+  <line x1="300" y1="215" x2="300" y2="225" stroke="#222" stroke-width="1.5"/>
+  <text x="210" y="235" text-anchor="middle" font-size="11" fill="#222">L = 80 m</text>
+
+  <!-- ukazatel 2L zóny -->
+  <line x1="300" y1="245" x2="610" y2="245" stroke="#d4a017" stroke-width="2"/>
+  <line x1="300" y1="238" x2="300" y2="252" stroke="#d4a017" stroke-width="2"/>
+  <line x1="610" y1="238" x2="610" y2="252" stroke="#d4a017" stroke-width="2"/>
+  <text x="455" y="260" text-anchor="middle" font-size="12" fill="#8a6d00" font-weight="bold">2L = 160 m (minimální odstup před přídí)</text>
+
+  <!-- malý člun křižující — SPRÁVNĚ za zónou -->
+  <g transform="translate(640,170)">
+    <path d="M 0 0 L 30 0 L 36 8 L 30 16 L 0 16 Z" fill="#5cb85c" stroke="#3d7c3d" stroke-width="1"/>
+    <rect x="10" y="-4" width="6" height="6" fill="#2d4d2d"/>
+    <line x1="18" y1="8" x2="18" y2="-15" stroke="#1e7e34" stroke-width="2.5" marker-end="url(#arr153)"/>
+    <text x="18" y="-22" text-anchor="middle" font-size="11" fill="#1e7e34" font-weight="bold">✓ kříží bezpečně</text>
+  </g>
+
+  <!-- malý člun ŠPATNĚ — uvnitř zóny -->
+  <g transform="translate(380,170)">
+    <path d="M 0 0 L 30 0 L 36 8 L 30 16 L 0 16 Z" fill="#e74c3c" stroke="#922b21" stroke-width="1"/>
+    <rect x="10" y="-4" width="6" height="6" fill="#5a1a14"/>
+    <line x1="18" y1="8" x2="18" y2="-15" stroke="#b00020" stroke-width="2.5" marker-end="url(#arrRed153)"/>
+    <text x="18" y="-22" text-anchor="middle" font-size="11" fill="#b00020" font-weight="bold">✗ vleze do zóny</text>
+  </g>
+
+  <!-- legenda dole -->
+  <g transform="translate(20,300)">
+    <rect width="760" height="48" fill="#fff" stroke="#bbb" rx="4"/>
+    <text x="14" y="20" font-size="12" font-weight="bold" fill="#222">Pravidlo:</text>
+    <text x="14" y="38" font-size="12" fill="#222">Malé plavidlo musí křížit směr plavby velkého plavidla tak, aby v okamžiku křížení bylo od něj minimálně <tspan font-weight="bold" fill="#1e7e34">2 × jeho délka</tspan> daleko (před přídí).</text>
+  </g>
+</svg>
+
+<h3>Jak to škáluje s délkou lodi</h3>
+
+<table>
+  <thead>
+    <tr><th>Velké plavidlo</th><th>Délka L</th><th>Minimální odstup 2L</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Menší výletní parník</td><td>30 m</td><td><strong>60 m</strong></td></tr>
+    <tr><td>Osobní loď „Praha"</td><td>50 m</td><td><strong>100 m</strong></td></tr>
+    <tr><td>Standardní nákladní motorová loď</td><td>80 m</td><td><strong>160 m</strong></td></tr>
+    <tr><td>Tlačná sestava (tlačný + 2 čluny)</td><td>110 m</td><td><strong>220 m</strong></td></tr>
+    <tr><td>Velká tlačná sestava</td><td>180 m</td><td><strong>360 m</strong></td></tr>
+  </tbody>
+</table>
+
+<h3>Pozadí — proč zrovna 2× délka</h3>
+
+<p>Pravidlo není náhodné. Vychází z toho, že malé plavidlo se musí vyhýbat velkému (§ 6.02 řádu plavební bezpečnosti CEVNI a vyhláška č. 67/2015 Sb.) a z fyziky velké lodi:</p>
+
+<ul>
+  <li><strong>Brzdná dráha velké lodi</strong> — náklaďák s 1500 t nákladu nezastaví ani na 500 m. Kapitán velké lodi prakticky nemá jak reagovat, pokud mu malé plavidlo vleze blízko před příď.</li>
+  <li><strong>Sání u boku trupu</strong> — u rychle plující velké lodi vzniká po stranách podtlakové pole, které malé plavidlo doslova přitáhne k boku. Vzdálenost 2× délka je dostatečná, aby se sem malý člun nedostal.</li>
+  <li><strong>Slepá zóna před přídí</strong> — kapitán z kormidelny nevidí přímo před přídí často 100+ metrů kvůli nákladu. Malé plavidlo v této zóně je z lodi neviditelné.</li>
+</ul>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>Fixní vzdálenost 200 m</strong> — zní intuitivně, ale neodpovídá realitě. U malé výletní lodi 30 m by 200 m byl zbytečný overkill (znemožnilo by to plavbu na užší řece), u tlačné sestavy 180 m by 200 m bylo naopak málo (skoro stejná vzdálenost jako délka samotné sestavy). Pravidlo musí škálovat s velikostí překážky, proto je založené na násobku délky, ne na pevném čísle.</li>
+  <li><strong>Asymetrické vzdálenosti 50 m proti proudu / 250 m po proudu</strong> — taková čísla v žádném plavebním předpisu nejsou. Záměrně zní oficiálně (asymetrie podle směru proudu zní logicky — proudem unášené plavidlo má delší brzdnou dráhu), ale jde o nastraženou variantu. Reálné pravidlo je čistě geometrické (2× L), nezávisí na směru proudu.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když na Labi nebo Vltavě plánuješ křížení s motorákem nebo plachetnicí a vidíš blížící se náklaďák:</p>
+
+<ol>
+  <li><strong>Odhadni délku</strong> — orientačně podle počtu nákladových prostorů (běžná motorová loď ~70–85 m), u tlačné sestavy podle počtu člunů × ~70 m + tlačný remorkér.</li>
+  <li><strong>Vynásob 2</strong> — to je tvoje minimální plánovaná mezera před přídí v okamžiku, kdy budeš křižovat.</li>
+  <li><strong>Když to nestihneš, nekřižuj</strong> — počkej, až loď projede, a kříž až za její zádí. Velké plavidlo nemá jak rychle změnit kurz nebo zastavit.</li>
+</ol>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — pravidla pro malá plavidla (povinnost vyhnout se nemalým plavidlům a udržovat bezpečnou vzdálenost při křížení)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

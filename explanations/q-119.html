@@ -1,0 +1,151 @@
+<h2>Vplouvání do plavební komory — pomalu a kontrolovaně</h2>
+
+<p>
+  Plavební komora je úzký uzavřený bazén s <strong>vraty na obou koncích</strong>, <strong>vyvazovacími a ochrannými prvky</strong> po stranách a obvykle <strong>dalšími plavidly</strong> uvnitř. Pravidlo je proto jednoznačné:
+  plavidlo vplouvající do komory <strong>sníží rychlost</strong> tak, aby nemohlo narazit do vrat, ochranných zařízení ani do jiných plavidel.
+</p>
+
+<h3>Vizualizace — co všechno v komoře nesmí narazit</h3>
+
+<p>
+  Schéma plavební komory shora. Červené prvky představují tři typy překážek, které vyhláška chrání. Vlevo je situace „vplouvám pomalu a pod kontrolou" (zelená šipka), vpravo „vplouvám příliš rychle" (červená šipka) — ten samý prostor, dvě filozofie.
+</p>
+
+<svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;height:auto;border:1px solid #d0d7de;background:#f6f8fa">
+  <defs>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/>
+    </marker>
+  </defs>
+
+  <!-- Levá komora: SPRÁVNĚ -->
+  <g>
+    <text x="180" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7f37">SPRÁVNĚ — pomalu, pod kontrolou</text>
+
+    <!-- Voda v komoře -->
+    <rect x="40" y="50" width="280" height="220" fill="#cfe8ff" stroke="#0969da" stroke-width="2"/>
+
+    <!-- Stěny komory (boky) -->
+    <rect x="35" y="50" width="10" height="220" fill="#8b6f47"/>
+    <rect x="315" y="50" width="10" height="220" fill="#8b6f47"/>
+
+    <!-- Horní vrata (vstup) - otevřená -->
+    <line x1="40" y1="50" x2="120" y2="50" stroke="#cf222e" stroke-width="6"/>
+    <line x1="240" y1="50" x2="320" y2="50" stroke="#cf222e" stroke-width="6"/>
+    <text x="180" y="42" text-anchor="middle" font-size="11" fill="#cf222e">vrata (otevřená — vplouváme)</text>
+
+    <!-- Dolní vrata (zavřená) -->
+    <line x1="40" y1="270" x2="320" y2="270" stroke="#cf222e" stroke-width="8"/>
+    <text x="180" y="288" text-anchor="middle" font-size="11" fill="#cf222e">vrata (zavřená — riziko č. 1)</text>
+
+    <!-- Ochranná vyvazovací zařízení (svislé pruhy na stěnách) -->
+    <rect x="45" y="90" width="6" height="30" fill="#d29922"/>
+    <rect x="45" y="160" width="6" height="30" fill="#d29922"/>
+    <rect x="45" y="220" width="6" height="30" fill="#d29922"/>
+    <rect x="309" y="90" width="6" height="30" fill="#d29922"/>
+    <rect x="309" y="160" width="6" height="30" fill="#d29922"/>
+    <rect x="309" y="220" width="6" height="30" fill="#d29922"/>
+    <text x="60" y="135" font-size="10" fill="#9a6700">ochranná zařízení (riziko č. 2)</text>
+
+    <!-- Jiné plavidlo už uvnitř -->
+    <rect x="125" y="200" width="70" height="28" fill="#8250df" stroke="#3a1d6e" stroke-width="1.5" rx="4"/>
+    <text x="160" y="218" text-anchor="middle" font-size="10" fill="white">jiné plavidlo</text>
+    <text x="160" y="245" text-anchor="middle" font-size="10" fill="#3a1d6e">(riziko č. 3)</text>
+
+    <!-- Naše plavidlo - vplouvá pomalu -->
+    <rect x="145" y="80" width="50" height="22" fill="#1a7f37" stroke="#0a3d1a" stroke-width="1.5" rx="3"/>
+    <text x="170" y="95" text-anchor="middle" font-size="10" fill="white">my</text>
+
+    <!-- Krátká zelená šipka = nízká rychlost -->
+    <line x1="170" y1="115" x2="170" y2="155" stroke="#1a7f37" stroke-width="3" marker-end="url(#arr-green)"/>
+    <text x="200" y="140" font-size="11" fill="#1a7f37" font-weight="bold">malá rychlost</text>
+  </g>
+
+  <!-- Pravá komora: ŠPATNĚ -->
+  <g>
+    <text x="560" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#cf222e">ŠPATNĚ — vplouvám rychle</text>
+
+    <rect x="420" y="50" width="280" height="220" fill="#cfe8ff" stroke="#0969da" stroke-width="2"/>
+
+    <rect x="415" y="50" width="10" height="220" fill="#8b6f47"/>
+    <rect x="695" y="50" width="10" height="220" fill="#8b6f47"/>
+
+    <!-- Horní vrata (vstup) - otevřená -->
+    <line x1="420" y1="50" x2="500" y2="50" stroke="#cf222e" stroke-width="6"/>
+    <line x1="620" y1="50" x2="700" y2="50" stroke="#cf222e" stroke-width="6"/>
+
+    <!-- Dolní vrata (zavřená) -->
+    <line x1="420" y1="270" x2="700" y2="270" stroke="#cf222e" stroke-width="8"/>
+
+    <!-- Ochranná zařízení -->
+    <rect x="425" y="90" width="6" height="30" fill="#d29922"/>
+    <rect x="425" y="160" width="6" height="30" fill="#d29922"/>
+    <rect x="425" y="220" width="6" height="30" fill="#d29922"/>
+    <rect x="689" y="90" width="6" height="30" fill="#d29922"/>
+    <rect x="689" y="160" width="6" height="30" fill="#d29922"/>
+    <rect x="689" y="220" width="6" height="30" fill="#d29922"/>
+
+    <!-- Jiné plavidlo -->
+    <rect x="505" y="200" width="70" height="28" fill="#8250df" stroke="#3a1d6e" stroke-width="1.5" rx="4"/>
+    <text x="540" y="218" text-anchor="middle" font-size="10" fill="white">jiné plavidlo</text>
+
+    <!-- Naše plavidlo - vplouvá rychle -->
+    <rect x="525" y="80" width="50" height="22" fill="#cf222e" stroke="#67000d" stroke-width="1.5" rx="3"/>
+    <text x="550" y="95" text-anchor="middle" font-size="10" fill="white">my</text>
+
+    <!-- Dlouhá červená šipka = vysoká rychlost -->
+    <line x1="550" y1="115" x2="550" y2="195" stroke="#cf222e" stroke-width="3" marker-end="url(#arr-red)"/>
+    <text x="585" y="160" font-size="11" fill="#cf222e" font-weight="bold">velká rychlost</text>
+
+    <!-- Symbol nárazu -->
+    <g transform="translate(545, 198)">
+      <polygon points="0,-8 4,-3 9,-2 5,2 6,8 0,5 -6,8 -5,2 -9,-2 -4,-3" fill="#ffd33d" stroke="#cf222e" stroke-width="1.5"/>
+      <text x="0" y="2" text-anchor="middle" font-size="8" font-weight="bold" fill="#cf222e">!</text>
+    </g>
+    <text x="600" y="205" font-size="11" fill="#cf222e" font-weight="bold">náraz</text>
+  </g>
+
+  <!-- Legenda -->
+  <g transform="translate(40, 320)">
+    <rect width="14" height="10" fill="#cf222e"/>
+    <text x="20" y="9" font-size="11">vrata</text>
+    <rect x="80" width="6" height="10" fill="#d29922"/>
+    <text x="92" y="9" font-size="11">ochranná zařízení</text>
+    <rect x="220" width="14" height="10" fill="#8250df"/>
+    <text x="240" y="9" font-size="11">jiná plavidla v komoře</text>
+  </g>
+</svg>
+
+<h3>Co říká vyhláška</h3>
+
+<p>
+  Vyhláška č. <strong>67/2015 Sb.</strong>, o pravidlech plavebního provozu, upravuje plavbu v plavebních komorách v <strong>§35</strong>. Pravidlo o snížené rychlosti při vplouvání je tam výslovně:
+  plavidlo musí volit rychlost, která <strong>vylučuje náraz do vrat, ochranných zařízení nebo jiných plavidel</strong>.
+</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li>
+    <strong>„Vplouvají rychle, aby nezdržovala ostatní"</strong> — staví rychlost nad bezpečnost. Plynulost proplavování zajišťuje proplavovací řád a pořadí, ne to, že někdo vletí do komory naplno.
+  </li>
+  <li>
+    <strong>„Nejnižší povolená rychlost 3 km/h"</strong> — vyhláška <em>nejnižší</em> rychlost v komoře neurčuje, naopak řeší <em>maximální</em>, respektive bezpečnou. Hodnota 3 km/h v tomto pravidle nefiguruje a obecně se rychlostní limity v obvodech přístavů a komor stanovují lokálně plavebními značkami.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>
+  Plyn ubírej už v nájezdu (typicky 200–300 m před vraty), do komory plouvej takovým režimem, abys k vyvazovacímu bodu dojel <em>doplutím</em> — ne nárazem. Reverz slouží k jemné korekci, ne jako primární brzda. Pravidlo platí stejně pro motorová i pro pohonem nepoháněná plavidla.
+</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu, §35 (Plavba v plavebních komorách)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě (rámec povinností provozovatele plavidla)</li>
+</ul>

@@ -111,12 +111,15 @@ generate_one() {
 
   # -p / --print            : non-interactive (vypíše a skončí)
   # --max-turns 35          : safety cap (typický run ~5-15 turns;
-  #                           obrázkové otázky + web research občas potřebují víc)
+  #                           obrázkové otázky občas potřebují víc)
   # --permission-mode auto  : autonomní rozhodování (auto mode), bez prompts
+  # --model sonnet          : Sonnet 4.6 — výrazně rychlejší + levnější než Opus
+  #                           pro template-driven generování explanations stačí
   if claude \
       -p \
       --max-turns 35 \
       --permission-mode auto \
+      --model sonnet \
       "$prompt" \
       > "$log" 2>&1
   then

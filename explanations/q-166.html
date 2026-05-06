@@ -1,0 +1,83 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Jádro</h2>
+    <p>Správná odpověď je <strong>„jen se souhlasem obsluhy plavební komory"</strong>. V plavební komoře řídí provoz proplavovač — určuje pohyb vody, vrat i plavidel. Pohyb cestujících na palubě a z paluby ven je v tomto prostoru bezpečnostní riziko (změna hladiny, napínání lan, pohyb plavidla po stěně), proto musí být schválený právě obsluhou komory, ne pouze vůdcem plavidla.</p>
+  </section>
+
+  <section>
+    <h2>Pozadí</h2>
+    <p>Pravidla pro proplavování upravuje <strong>vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu</strong> (oddíl o plavebních komorách, §6.28 a okolí). Klíčový princip:</p>
+    <ul>
+      <li><strong>Obsluha komory řídí proces proplavení</strong> — rozhoduje, kdy plavidla vplouvají, kde stojí, kdy se otevírají vrata.</li>
+      <li><strong>Vůdce plavidla plní její pokyny</strong> — uvnitř komory se hierarchie obrací oproti běžné plavbě.</li>
+      <li>Cokoliv, co může ovlivnit bezpečnost v komoře (včetně pohybu osob mezi plavidlem a břehem), proto vyžaduje souhlas obsluhy.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Vizualizace — kdo o čem rozhoduje</h2>
+    <p>Hierarchie velení uvnitř plavební komory:</p>
+    <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma hierarchie v plavební komoře">
+      <!-- pozadí komory -->
+      <rect x="40" y="60" width="520" height="240" fill="#dde9f2" stroke="#5a7a93" stroke-width="2"/>
+      <!-- voda -->
+      <rect x="50" y="180" width="500" height="115" fill="#7fb3d5" opacity="0.6"/>
+      <!-- vrata vlevo -->
+      <rect x="35" y="60" width="10" height="240" fill="#3d3d3d"/>
+      <!-- vrata vpravo -->
+      <rect x="555" y="60" width="10" height="240" fill="#3d3d3d"/>
+      <!-- plavidlo -->
+      <polygon points="220,170 380,170 400,200 200,200" fill="#fff8dc" stroke="#8b6914" stroke-width="2"/>
+      <rect x="260" y="140" width="80" height="30" fill="#fff8dc" stroke="#8b6914" stroke-width="2"/>
+      <text x="300" y="160" text-anchor="middle" font-size="11" fill="#5a4a14" font-family="sans-serif">plavidlo</text>
+      <!-- obsluha (nahoře u boku) -->
+      <circle cx="500" cy="40" r="12" fill="#c0392b"/>
+      <text x="500" y="44" text-anchor="middle" font-size="13" fill="white" font-weight="bold" font-family="sans-serif">!</text>
+      <text x="500" y="22" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold" font-family="sans-serif">obsluha komory</text>
+      <!-- vůdce (na plavidle) -->
+      <circle cx="300" cy="125" r="10" fill="#2874a6"/>
+      <text x="300" y="129" text-anchor="middle" font-size="11" fill="white" font-weight="bold" font-family="sans-serif">V</text>
+      <text x="300" y="108" text-anchor="middle" font-size="11" fill="#2874a6" font-family="sans-serif">vůdce plavidla</text>
+      <!-- cestující -->
+      <circle cx="240" cy="158" r="7" fill="#f1c40f"/>
+      <circle cx="360" cy="158" r="7" fill="#f1c40f"/>
+      <text x="300" y="225" text-anchor="middle" font-size="10" fill="#7d6608" font-family="sans-serif">cestující</text>
+      <!-- šipka rozkazu obsluha → vůdce -->
+      <defs>
+        <marker id="arr1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+        </marker>
+        <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#2874a6"/>
+        </marker>
+      </defs>
+      <line x1="488" y1="48" x2="312" y2="120" stroke="#c0392b" stroke-width="2" marker-end="url(#arr1)" stroke-dasharray="4 3"/>
+      <text x="395" y="78" font-size="11" fill="#c0392b" font-family="sans-serif">pokyn / souhlas</text>
+      <!-- popis dole -->
+      <text x="300" y="335" text-anchor="middle" font-size="12" fill="#34495e" font-family="sans-serif">
+        V komoře rozhoduje obsluha. Vůdce plavidla i cestující se řídí jejími pokyny.
+      </text>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní varianty</h2>
+    <ul>
+      <li><strong>Varianta „jen s vědomím vůdce plavidla a po jeho pokynu"</strong> — chytlavá past, protože mimo komoru vůdce skutečně rozhoduje. Uvnitř komory ale pravomoc přechází na obsluhu; pouhý pokyn vůdce nestačí.</li>
+      <li><strong>Varianta „jen v naléhavých případech"</strong> — příliš restriktivní. Výstup a nástup je v komoře běžně možný (např. při delším čekání nebo u rekreačních plavidel), pokud k tomu obsluha komory dá souhlas. Není vyhrazen jen pro nouzové situace.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <p>Když posádka malého plavidla v komoře potřebuje na břeh (třeba na vázací plošinu nebo na WC při delším čekání), je třeba dát obsluze komory vědět — VHF, voláním z paluby nebo gestem. <strong>Bez jejího souhlasu nikdo nevystupuje.</strong> Důvod je velmi praktický: voda v komoře se může začít plnit nebo vypouštět během vteřin, lana se napnou, plavidlo se houpne podél stěny — a noha mezi bokem plavidla a stěnou komory dopadne špatně.</p>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu, §6.28 a souvisejcí (proplavování plavebními komorami)</li>
+      <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě (postavení obsluhy plavebních objektů)</li>
+    </ol>
+  </section>
+</article>

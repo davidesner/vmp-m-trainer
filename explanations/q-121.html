@@ -1,0 +1,127 @@
+<h2>Odrazníky v plavební komoře</h2>
+
+<p>Správná odpověď: <strong>"je nezbytné, jsou-li odrazníky použité na plavidle snímatelné, musí být plovoucí."</strong></p>
+
+<h3>Jádro</h3>
+
+<p>V plavební komoře jsou odrazníky <strong>povinné</strong> — chrání trup plavidla i stěny komory před poškozením při manévrování, kolísání hladiny a kontaktu se sousedními plavidly. Pravidlo má dvě části:</p>
+
+<ol>
+  <li><strong>Použít odrazníky</strong> — povinně, ne volitelně.</li>
+  <li><strong>Pokud jsou snímatelné, musí být plovoucí</strong> — aby v případě pádu do vody zůstaly na hladině a neklesly ke dnu komory.</li>
+</ol>
+
+<h3>Proč musí být plovoucí — co se stane, když spadne odrazník na dno</h3>
+
+<p>Schéma: vlevo plovoucí odrazník (zůstane na hladině, jde vylovit), vpravo neplovoucí (klesne ke dnu, kde způsobí škodu).</p>
+
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#eef6fb;border:1px solid #c7dbe8;border-radius:6px">
+  <defs>
+    <pattern id="water121" width="20" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 4 Q5 0 10 4 T20 4" stroke="#7fb3d5" fill="none" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- LEFT SCENE: floating fender (correct) -->
+  <g>
+    <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a5e3a">Plovoucí odrazník — OK</text>
+
+    <!-- Lock chamber walls -->
+    <rect x="60" y="50" width="30" height="280" fill="#8a8a8a" stroke="#444" stroke-width="2"/>
+    <rect x="310" y="50" width="30" height="280" fill="#8a8a8a" stroke="#444" stroke-width="2"/>
+
+    <!-- Water -->
+    <rect x="90" y="120" width="220" height="210" fill="#cfe7f2"/>
+    <rect x="90" y="120" width="220" height="20" fill="url(#water121)"/>
+
+    <!-- Lock floor -->
+    <rect x="60" y="320" width="280" height="12" fill="#5d4633" stroke="#3a2c20" stroke-width="1"/>
+
+    <!-- Valve in floor (důvod proč nesmí spadnout odrazník) -->
+    <rect x="240" y="318" width="40" height="6" fill="#444"/>
+    <text x="260" y="350" text-anchor="middle" font-size="9" fill="#444">plnicí ventil</text>
+
+    <!-- Boat hull -->
+    <path d="M120 145 L290 145 L275 175 L135 175 Z" fill="#c0392b" stroke="#7d2418" stroke-width="2"/>
+    <rect x="170" y="125" width="80" height="22" fill="#e8c39e" stroke="#7d2418" stroke-width="1"/>
+
+    <!-- Floating fender on water surface, between boat and wall -->
+    <circle cx="105" cy="160" r="9" fill="#f4d03f" stroke="#7d6608" stroke-width="2"/>
+    <circle cx="105" cy="160" r="3" fill="#7d6608"/>
+    <text x="105" y="195" text-anchor="middle" font-size="9" fill="#1a5e3a">na hladině,</text>
+    <text x="105" y="206" text-anchor="middle" font-size="9" fill="#1a5e3a">vylovitelný</text>
+
+    <!-- Arrow showing it stays up -->
+    <path d="M105 175 Q90 200 105 220 Q120 240 105 260" stroke="#1a5e3a" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+    <text x="80" y="285" font-size="9" fill="#1a5e3a">i kdyby spadl,</text>
+    <text x="80" y="296" font-size="9" fill="#1a5e3a">plave dál</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="400" y1="50" x2="400" y2="330" stroke="#aaa" stroke-dasharray="4,4"/>
+
+  <!-- RIGHT SCENE: sinking fender (forbidden) -->
+  <g>
+    <text x="600" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#922">Neplovoucí — ZAKÁZÁNO</text>
+
+    <!-- Lock chamber walls -->
+    <rect x="460" y="50" width="30" height="280" fill="#8a8a8a" stroke="#444" stroke-width="2"/>
+    <rect x="710" y="50" width="30" height="280" fill="#8a8a8a" stroke="#444" stroke-width="2"/>
+
+    <!-- Water -->
+    <rect x="490" y="120" width="220" height="210" fill="#cfe7f2"/>
+    <rect x="490" y="120" width="220" height="20" fill="url(#water121)"/>
+
+    <!-- Lock floor -->
+    <rect x="460" y="320" width="280" height="12" fill="#5d4633" stroke="#3a2c20" stroke-width="1"/>
+
+    <!-- Valve in floor with fender stuck in it -->
+    <rect x="640" y="318" width="40" height="6" fill="#444"/>
+    <text x="660" y="350" text-anchor="middle" font-size="9" fill="#922">plnicí ventil — UCPÁNO</text>
+
+    <!-- Boat hull -->
+    <path d="M520 145 L690 145 L675 175 L535 175 Z" fill="#c0392b" stroke="#7d2418" stroke-width="2"/>
+    <rect x="570" y="125" width="80" height="22" fill="#e8c39e" stroke="#7d2418" stroke-width="1"/>
+
+    <!-- Sinking fender mid-fall -->
+    <circle cx="505" cy="240" r="9" fill="#7a7a7a" stroke="#333" stroke-width="2"/>
+    <circle cx="505" cy="240" r="3" fill="#222"/>
+
+    <!-- Arrow showing it sinks -->
+    <path d="M505 175 L505 230" stroke="#922" stroke-width="2" marker-end="url(#arrowred121)"/>
+    <text x="515" y="210" font-size="9" fill="#922">klesá</text>
+
+    <!-- Fender on floor next to valve -->
+    <circle cx="660" cy="313" r="8" fill="#7a7a7a" stroke="#333" stroke-width="2"/>
+
+    <text x="600" y="290" text-anchor="middle" font-size="9" fill="#922">poškodí dno, ucpe ventil,</text>
+    <text x="600" y="302" text-anchor="middle" font-size="9" fill="#922">zasekne se pod vraty</text>
+  </g>
+
+  <defs>
+    <marker id="arrowred121" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#922"/>
+    </marker>
+  </defs>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<ul>
+  <li><strong>"Není na plavidle třeba"</strong> — chybné. Při proplavování se hladina v komoře mění o metry, voda při napouštění/vypouštění víří, plavidlo se posouvá podél stěny i vůči sousedům. Bez odrazníků dojde k poškození trupu i komory.</li>
+  <li><strong>"Je zakázáno, pokud jsou plovoucí"</strong> — obrácený smysl pravidla. Plovoucí provedení je naopak <em>požadováno</em>, právě aby v případě ztráty odrazník neskončil na dně komory.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<ul>
+  <li>Před vplutím do komory měj odrazníky <strong>vyvěšené po obou bocích</strong> ve výšce hladiny — nejen z té strany, kde čekáš stěnu, protože se v komoře můžeš ocitnout vedle dalšího plavidla.</li>
+  <li>Snímatelné (závěsné) odrazníky volíme z <strong>plovoucích materiálů</strong> — typicky pěnové nebo duté plastové válce. Pevné, neplovoucí odrazníky (např. z plné gumy nebo se zátěží) do plavební komory nepatří.</li>
+  <li>Stejná logika "co spadne, nesmí klesnout" se vztahuje obecně na volné předměty na palubě při proplavování.</li>
+</ul>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — část upravující plavbu v plavebních komorách.</li>
+</ul>

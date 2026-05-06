@@ -1,0 +1,140 @@
+<h2>Tři zelená světla v trojúhelníku = bezpečný odstup 1000 m za zádí</h2>
+
+<p>Správná odpověď je <strong>„alespoň 1000 m"</strong>. Plavidlo, které v noci nese na stěžni <strong>tři zelená světla rozmístěná do tvaru trojúhelníku</strong>, signalizuje zvláštní režim — nejčastěji práci ve vodní cestě nebo jinak omezenou manévrovatelnost s vlečeným či ponořeným zařízením daleko za zádí. Malé plavidlo se k jeho zádi nesmí přiblížit blíž než na <strong>jeden kilometr</strong>.</p>
+
+<h3>Vizualizace — co vidíš na vodě a co znamená</h3>
+
+<svg viewBox="0 0 820 460" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#0b1929;border-radius:8px">
+  <defs>
+    <radialGradient id="glow154" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7fff7f" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#1e8a1e" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#1e8a1e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="night154" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1929"/>
+      <stop offset="1" stop-color="#1a2f4a"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="460" fill="url(#night154)"/>
+
+  <!-- LEVÁ ČÁST — symbol na stěžni (zoom) -->
+  <g transform="translate(40,30)">
+    <text x="140" y="0" text-anchor="middle" font-size="14" fill="#cfe8f5" font-weight="bold">Co uvidíš v noci na stěžni</text>
+
+    <!-- stěžeň -->
+    <line x1="140" y1="40" x2="140" y2="320" stroke="#9ab" stroke-width="3"/>
+    <line x1="120" y1="320" x2="160" y2="320" stroke="#9ab" stroke-width="3"/>
+
+    <!-- glow za horním světlem -->
+    <circle cx="140" cy="80" r="50" fill="url(#glow154)"/>
+    <!-- glow za levým dolním -->
+    <circle cx="105" cy="145" r="50" fill="url(#glow154)"/>
+    <!-- glow za pravým dolním -->
+    <circle cx="175" cy="145" r="50" fill="url(#glow154)"/>
+
+    <!-- horní zelené světlo -->
+    <circle cx="140" cy="80" r="14" fill="#3eea3e" stroke="#9aff9a" stroke-width="2"/>
+    <!-- levé dolní zelené světlo -->
+    <circle cx="105" cy="145" r="14" fill="#3eea3e" stroke="#9aff9a" stroke-width="2"/>
+    <!-- pravé dolní zelené světlo -->
+    <circle cx="175" cy="145" r="14" fill="#3eea3e" stroke="#9aff9a" stroke-width="2"/>
+
+    <!-- naznačení trojúhelníku -->
+    <polygon points="140,80 105,145 175,145" fill="none" stroke="#7fff7f" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <!-- popisky -->
+    <text x="140" y="200" text-anchor="middle" font-size="12" fill="#cfe8f5">3× zelené světlo</text>
+    <text x="140" y="218" text-anchor="middle" font-size="12" fill="#cfe8f5">v <tspan font-weight="bold">trojúhelníku</tspan> (vrchol nahoru)</text>
+
+    <!-- silueta trupu pod stěžněm -->
+    <path d="M 50 320 L 230 320 L 220 345 L 60 345 Z" fill="#34495e" stroke="#1a252f"/>
+    <rect x="120" y="305" width="40" height="15" fill="#2c3e50"/>
+    <text x="140" y="370" text-anchor="middle" font-size="11" fill="#9ab">plavidlo ve zvláštním režimu</text>
+  </g>
+
+  <!-- svislý oddělovač -->
+  <line x1="320" y1="40" x2="320" y2="420" stroke="#2a4a6a" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- PRAVÁ ČÁST — měřítko vzdáleností -->
+  <g transform="translate(360,30)">
+    <text x="220" y="0" text-anchor="middle" font-size="14" fill="#cfe8f5" font-weight="bold">Bezpečná vzdálenost za zádí — měřítko</text>
+
+    <!-- malá silueta plavidla vlevo (záď vpravo) -->
+    <g transform="translate(0,180)">
+      <path d="M 0 0 L 60 0 L 70 15 L 60 30 L 0 30 Z" fill="#34495e" stroke="#1a252f"/>
+      <line x1="30" y1="-25" x2="30" y2="0" stroke="#9ab" stroke-width="2"/>
+      <circle cx="30" cy="-22" r="3" fill="#3eea3e"/>
+      <circle cx="22" cy="-13" r="3" fill="#3eea3e"/>
+      <circle cx="38" cy="-13" r="3" fill="#3eea3e"/>
+      <text x="30" y="55" text-anchor="middle" font-size="10" fill="#9ab">záď →</text>
+    </g>
+
+    <!-- 10 m čára -->
+    <g transform="translate(70,160)">
+      <line x1="0" y1="35" x2="20" y2="35" stroke="#e74c3c" stroke-width="2"/>
+      <line x1="20" y1="20" x2="20" y2="50" stroke="#e74c3c" stroke-width="2"/>
+      <text x="10" y="15" text-anchor="middle" font-size="11" fill="#ff8a80" font-weight="bold">10 m</text>
+      <text x="10" y="70" text-anchor="middle" font-size="9" fill="#9ab">příliš blízko</text>
+    </g>
+
+    <!-- 100 m čára -->
+    <g transform="translate(70,160)">
+      <line x1="0" y1="35" x2="80" y2="35" stroke="#f39c12" stroke-width="2" stroke-dasharray="6,3"/>
+      <line x1="80" y1="20" x2="80" y2="50" stroke="#f39c12" stroke-width="2"/>
+      <text x="80" y="15" text-anchor="middle" font-size="11" fill="#ffd27f" font-weight="bold">100 m</text>
+      <text x="80" y="70" text-anchor="middle" font-size="9" fill="#9ab">stále nedostatečně</text>
+    </g>
+
+    <!-- 1000 m čára -->
+    <g transform="translate(70,160)">
+      <line x1="0" y1="35" x2="380" y2="35" stroke="#3eea3e" stroke-width="3"/>
+      <line x1="380" y1="15" x2="380" y2="55" stroke="#3eea3e" stroke-width="3"/>
+      <text x="220" y="28" text-anchor="middle" font-size="13" fill="#9aff9a" font-weight="bold">1000 m — minimum dle vyhlášky</text>
+      <text x="380" y="70" text-anchor="middle" font-size="11" fill="#9aff9a" font-weight="bold">✓ bezpečně</text>
+    </g>
+
+    <!-- malé plavidlo na konci kilometru -->
+    <g transform="translate(440,185)">
+      <path d="M 0 0 L 18 0 L 22 4 L 18 8 L 0 8 Z" fill="#7fb6d6" stroke="#4a7a92"/>
+      <text x="11" y="22" text-anchor="middle" font-size="9" fill="#cfe8f5">malé plavidlo</text>
+      <text x="11" y="33" text-anchor="middle" font-size="9" fill="#cfe8f5">(rekreační)</text>
+    </g>
+
+    <!-- vysvětlivka rozsahu -->
+    <text x="220" y="320" text-anchor="middle" font-size="11" fill="#cfe8f5">Kilometr za zádí — uvnitř pásma může být</text>
+    <text x="220" y="336" text-anchor="middle" font-size="11" fill="#cfe8f5">vlečené pracovní zařízení, kabel pod hladinou,</text>
+    <text x="220" y="352" text-anchor="middle" font-size="11" fill="#cfe8f5">turbulence nebo uvolněný materiál.</text>
+
+    <text x="220" y="386" text-anchor="middle" font-size="12" fill="#9aff9a" font-weight="bold">Pravidlo: čím vážnější signál, tím větší odstup.</text>
+  </g>
+</svg>
+
+<h3>Pozadí — proč zrovna kilometr</h3>
+
+<p>Pravidlo vychází z <strong>vyhlášky č. 67/2015 Sb.</strong>, o pravidlech plavebního provozu, z části upravující noční signalizaci zvláštních plavidel a chování ostatních účastníků provozu vůči nim. Logika regulátora má tři vrstvy:</p>
+
+<ul>
+  <li><strong>Vlečené pracovní zařízení.</strong> Plavidlo provádějící práce ve vodní cestě (sací bagr, plovoucí pluh, vlečené sítě, kabel) může mít zařízení potopené pod hladinou ve vzdálenosti stovek metrů za zádí. Bez velkého ochranného pásma by se kdokoli proplouvající mezi plavidlem a jeho vlekem ocitl nad neviditelnou překážkou.</li>
+  <li><strong>Omezená manévrovatelnost signalizujícího plavidla.</strong> Loď v takovém režimu nemůže rychle uhnout — musí mít garantovaný volný prostor za sebou, jinak by hrozila kolize, kterou by nestihla vyřešit.</li>
+  <li><strong>Riziko pro malé plavidlo.</strong> Turbulence, odpadávající materiál, nebo nečekaný manévr velkého plavidla mohou malou loď snadno převrátit. Kilometr je vzdálenost, na které posádka malého plavidla situaci včas vyhodnotí a stihne se odklonit.</li>
+</ul>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>10 m</strong> odpovídá běžnému vyhýbání mezi malými plavidly v běžné situaci. Na zvláštní signalizaci se to nevztahuje — je to o dva řády méně, než předpis vyžaduje.</li>
+  <li><strong>100 m</strong> je chytlavá past, protože působí jako rozumný „bezpečnostní" rozestup. U trojice zelených světel ale předpis výslovně cílí na <em>kilometr</em> — sto metrů by stále mohlo být v dosahu vlečeného zařízení nebo turbulencí.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když v noci spatříš na stěžni vzdáleného plavidla <strong>tři zelené body uspořádané do trojúhelníku (vrchol nahoru)</strong>, ber to jako pokyn „velký oblouk". Nepokoušej se proplout těsně za jeho zádí ani souběžně blízko boku — drž se mimo kilometrové pásmo za zádí a celkově plavbu kolem takového plavidla zpomal a zveličuj odstup.</p>
+
+<p>Stejný princip <em>„rozšířený odstup u zvláštní signalizace"</em> platí i u dalších kategorií plavidel s nestandardními světly — vždy, když místo běžné kombinace bočních a stěžňového světla vidíš tři barevná světla nad sebou nebo do trojúhelníku, předpokládej zvláštní režim a zvětši odstup.</p>
+
+<h3>Zdroje</h3>
+<ol>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — část o noční signalizaci zvláštních plavidel a chování ostatních plavidel.</li>
+</ol>

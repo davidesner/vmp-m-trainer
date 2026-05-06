@@ -1,0 +1,160 @@
+<h2>Vyvazování plavidel — co se NEPOUŽÍVÁ</h2>
+
+<p>Pravidlo je <strong>absolutní zákaz</strong>, ne podmíněný. Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu (kapitola o vyvazování) říká jednoznačně: <strong>stromy, zábradlí, sloupy, pilíře, patníky, žebříky ani svodidla</strong> se k vyvázání plavidla nepoužívají, protože nezaručují bezpečné a dostatečně pevné držení. K vyvazování slouží <strong>vyvazovací zařízení k tomu určená</strong> — pacholata (bittny), úvazné kruhy, úvazníky.</p>
+
+<h3>Vizuální přehled</h3>
+
+<p><em>Co se SMÍ použít vs. co se NEPOUŽÍVÁ k vyvázání plavidla:</em></p>
+
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:800px;height:auto;background:#f5f9fc;border-radius:8px;">
+  <!-- Title bars -->
+  <rect x="0" y="0" width="400" height="40" fill="#1f7a3a"/>
+  <rect x="400" y="0" width="400" height="40" fill="#a4282b"/>
+  <text x="200" y="26" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="bold">SPRÁVNĚ — k tomu určené</text>
+  <text x="600" y="26" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="bold">NEPOUŽÍVAT</text>
+
+  <!-- Water -->
+  <rect x="0" y="380" width="800" height="100" fill="#7cb8d9"/>
+  <path d="M0,385 Q50,378 100,385 T200,385 T300,385 T400,385 T500,385 T600,385 T700,385 T800,385" stroke="#5a9bbf" stroke-width="1.5" fill="none"/>
+  <path d="M0,395 Q50,388 100,395 T200,395 T300,395 T400,395 T500,395 T600,395 T700,395 T800,395" stroke="#5a9bbf" stroke-width="1.5" fill="none"/>
+
+  <!-- LEFT SIDE: correct mooring -->
+  <!-- Bank -->
+  <rect x="0" y="350" width="400" height="30" fill="#c4a875"/>
+  <line x1="0" y1="350" x2="400" y2="350" stroke="#8b7548" stroke-width="2"/>
+
+  <!-- Bollard (pacholata) -->
+  <g transform="translate(120,310)">
+    <rect x="-12" y="0" width="24" height="40" fill="#444" stroke="#222" stroke-width="1.5"/>
+    <ellipse cx="0" cy="0" rx="14" ry="5" fill="#666" stroke="#222" stroke-width="1.5"/>
+    <ellipse cx="0" cy="40" rx="14" ry="4" fill="#222"/>
+    <text x="0" y="60" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1f7a3a" font-weight="bold">PACHOLE</text>
+  </g>
+
+  <!-- Mooring ring -->
+  <g transform="translate(260,348)">
+    <rect x="-10" y="0" width="20" height="6" fill="#444"/>
+    <circle cx="0" cy="-8" r="11" fill="none" stroke="#444" stroke-width="3.5"/>
+    <text x="0" y="22" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1f7a3a" font-weight="bold">ÚVAZNÝ KRUH</text>
+  </g>
+
+  <!-- Boat moored to bollard -->
+  <g transform="translate(180,395)">
+    <path d="M-60,0 L60,0 L50,18 L-50,18 Z" fill="#e8e8e8" stroke="#333" stroke-width="1.5"/>
+    <rect x="-30" y="-12" width="40" height="12" fill="#fff" stroke="#333" stroke-width="1"/>
+  </g>
+
+  <!-- Mooring rope from boat to bollard -->
+  <path d="M125,395 Q123,360 120,338" stroke="#8b4513" stroke-width="2.5" fill="none"/>
+
+  <!-- Check mark -->
+  <g transform="translate(355,80)">
+    <circle cx="0" cy="0" r="22" fill="#1f7a3a"/>
+    <path d="M-10,0 L-3,8 L11,-8" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- RIGHT SIDE: forbidden objects -->
+  <!-- Bank -->
+  <rect x="400" y="350" width="400" height="30" fill="#c4a875"/>
+  <line x1="400" y1="350" x2="800" y2="350" stroke="#8b7548" stroke-width="2"/>
+
+  <!-- Tree -->
+  <g transform="translate(450,310)">
+    <rect x="-5" y="0" width="10" height="40" fill="#7a4a1a"/>
+    <circle cx="0" cy="-15" r="22" fill="#3d8b3d"/>
+    <circle cx="-12" cy="-5" r="14" fill="#4ca64c"/>
+    <circle cx="12" cy="-5" r="14" fill="#4ca64c"/>
+    <text x="0" y="60" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a4282b" font-weight="bold">strom</text>
+  </g>
+
+  <!-- Railing -->
+  <g transform="translate(530,330)">
+    <line x1="-25" y1="0" x2="-25" y2="20" stroke="#666" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="0" y2="20" stroke="#666" stroke-width="2.5"/>
+    <line x1="25" y1="0" x2="25" y2="20" stroke="#666" stroke-width="2.5"/>
+    <line x1="-30" y1="0" x2="30" y2="0" stroke="#666" stroke-width="2.5"/>
+    <line x1="-30" y1="10" x2="30" y2="10" stroke="#666" stroke-width="2"/>
+    <text x="0" y="40" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a4282b" font-weight="bold">zábradlí</text>
+  </g>
+
+  <!-- Lamp post -->
+  <g transform="translate(610,300)">
+    <rect x="-2" y="0" width="4" height="50" fill="#444"/>
+    <rect x="-9" y="-8" width="18" height="10" fill="#666"/>
+    <text x="0" y="68" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a4282b" font-weight="bold">sloup</text>
+  </g>
+
+  <!-- Ladder -->
+  <g transform="translate(680,310)">
+    <line x1="-8" y1="0" x2="-8" y2="40" stroke="#888" stroke-width="2.5"/>
+    <line x1="8" y1="0" x2="8" y2="40" stroke="#888" stroke-width="2.5"/>
+    <line x1="-8" y1="10" x2="8" y2="10" stroke="#888" stroke-width="2"/>
+    <line x1="-8" y1="22" x2="8" y2="22" stroke="#888" stroke-width="2"/>
+    <line x1="-8" y1="34" x2="8" y2="34" stroke="#888" stroke-width="2"/>
+    <text x="0" y="58" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a4282b" font-weight="bold">žebřík</text>
+  </g>
+
+  <!-- Guard rail -->
+  <g transform="translate(750,335)">
+    <path d="M-22,12 Q-22,4 -16,4 L16,4 Q22,4 22,12 L22,15 L-22,15 Z" fill="#bbb" stroke="#666" stroke-width="1.5"/>
+    <line x1="-22" y1="15" x2="-22" y2="20" stroke="#666" stroke-width="1.5"/>
+    <line x1="0" y1="15" x2="0" y2="20" stroke="#666" stroke-width="1.5"/>
+    <line x1="22" y1="15" x2="22" y2="20" stroke="#666" stroke-width="1.5"/>
+    <text x="0" y="40" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a4282b" font-weight="bold">svodidla</text>
+  </g>
+
+  <!-- Big X over right side -->
+  <g transform="translate(600,200)" opacity="0.85">
+    <line x1="-90" y1="-60" x2="90" y2="60" stroke="#a4282b" stroke-width="10" stroke-linecap="round"/>
+    <line x1="90" y1="-60" x2="-90" y2="60" stroke="#a4282b" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- Boat on right (drifting away) -->
+  <g transform="translate(620,395)">
+    <path d="M-60,0 L60,0 L50,18 L-50,18 Z" fill="#f0d0d0" stroke="#a4282b" stroke-width="1.5"/>
+    <rect x="-30" y="-12" width="40" height="12" fill="#fff" stroke="#a4282b" stroke-width="1"/>
+  </g>
+
+  <!-- Broken rope from tree to boat -->
+  <path d="M450,338 Q500,370 565,395" stroke="#8b4513" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+  <text x="510" y="380" font-family="sans-serif" font-size="11" fill="#a4282b" font-style="italic">→ utrhne se</text>
+
+  <!-- Cross mark icon -->
+  <g transform="translate(755,80)">
+    <circle cx="0" cy="0" r="22" fill="#a4282b"/>
+    <line x1="-10" y1="-10" x2="10" y2="10" stroke="white" stroke-width="4" stroke-linecap="round"/>
+    <line x1="10" y1="-10" x2="-10" y2="10" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
+
+<h3>Proč jsou „chytlavé" varianty špatně</h3>
+
+<ul>
+  <li><strong>Varianta s formulací <em>„pokud se před uvázáním lana neochrání obložením, obalením nebo vyztužením"</em></strong> — zní rozumně (chránit před odřením), ale <strong>mění zákaz na podmínku</strong>. Vyhláška neříká „smíš na strom, když podložíš hadrem" — říká „nepoužívají se". Obložení řeší úplně jinou věc (ochranu povrchu před lanem), ne pevnost úvazu.</li>
+  <li><strong>Varianta s <em>„jen je-li břeh vybaven dostatečně pevným vyvazovacím zařízením"</em></strong> — logický nesmysl: jestli břeh <strong>má</strong> vyvazovací zařízení, tak ho použiješ a strom/zábradlí stejně nepotřebuješ. Pseudopodmínka.</li>
+</ul>
+
+<h3>Proč právě tyhle předměty</h3>
+
+<table>
+  <thead>
+    <tr><th>Předmět</th><th>Proč nezajistí bezpečný úvaz</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Stromy</strong></td><td>Kořenový systém ani kmen nejsou dimenzované na cyklické zatížení od vlnobití/větru, kůra se odírá, lano klouže.</td></tr>
+    <tr><td><strong>Zábradlí, svodidla</strong></td><td>Projektovaná na pád člověka / náraz auta, ne na tahové síly plavidla; ukotvení k podkladu nezvládne dynamické zatížení.</td></tr>
+    <tr><td><strong>Sloupy, pilíře, patníky</strong></td><td>Neznámé ukotvení, často duté nebo jen kosmeticky usazené (lampa, dopravní značka, parkovací patník).</td></tr>
+    <tr><td><strong>Žebříky</strong></td><td>Určené pro nástup/výstup, žádná tahová pevnost — utrhnou se.</td></tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když přistáváš někde, kde <strong>není</strong> úvazník, řešení je: vyhledat oficiální přístav, vyvázat se mezi dvě plavidla, nebo použít <strong>vlastní břehové kotvy</strong> (skoby, šroubovací kotvy do země). Strom je až nouzové řešení v krajní situaci a stejně neodpovídá předpisu.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — pravidla vyvazování plavidel</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

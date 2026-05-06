@@ -1,0 +1,128 @@
+<h2>Dvě světla na vrcholu stěžně — červené nad zeleným</h2>
+
+<p><strong>Jádro:</strong> Dvojice kruhových světel na vrcholu stěžně — <strong>červené nahoře, zelené pod ním</strong>, viditelná ze všech stran — je <em>nepovinná doplňková signalizace</em> pro plachetnici za plavby. Smí ji nést pouze <strong>plachetnice, která není malým plavidlem</strong>.</p>
+
+<h3>Co plachetnice nese povinně</h3>
+<p>Každá plachetnice za plavby (vyhláška č. 67/2015 Sb., čl. 3.13) vede:</p>
+<ul>
+  <li><strong>Boční světla</strong> — červené na levoboku, zelené na pravoboku</li>
+  <li><strong>Záďové bílé světlo</strong></li>
+</ul>
+
+<h3>Doplňková volba pro větší plachetnice</h3>
+<p>Plachetnice, která <em>není</em> malým plavidlem, si <strong>může</strong> navíc zvolit jednu ze dvou variant, aby byla nápadnější:</p>
+<ul>
+  <li>dvě boční světla těsně u sebe pod horní podélnou částí ráhna, nebo</li>
+  <li><strong>dvě kruhová světla na vrcholu stěžně — červené nad zeleným</strong> (právě situace na obrázku v zadání)</li>
+</ul>
+<p>Malá plachetnice (typicky kratší než 20 m) tuhle volbu nemá — má vlastní, zjednodušený režim (např. kombinovaná trojbarevná lucerna na stěžni, nebo jen boční + záďové světlo).</p>
+
+<h3>Vizuální srovnání</h3>
+
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#0a1628;border-radius:8px">
+  <!-- LEFT: large sailing vessel WITH red-over-green masthead lights -->
+  <g transform="translate(20,20)">
+    <text x="160" y="20" text-anchor="middle" fill="#9fc4e8" font-family="sans-serif" font-size="13" font-weight="bold">Plachetnice, která NENÍ malé plavidlo</text>
+    <text x="160" y="38" text-anchor="middle" fill="#7ed957" font-family="sans-serif" font-size="11">smí nést tuhle dvojici světel</text>
+
+    <!-- water line -->
+    <path d="M 0 290 Q 40 285 80 290 T 160 290 T 240 290 T 320 290" stroke="#5599cc" stroke-width="2" fill="none"/>
+
+    <!-- hull -->
+    <path d="M 70 280 L 250 280 L 230 300 L 90 300 Z" fill="#1a3a5c" stroke="#7ed957" stroke-width="1.5"/>
+
+    <!-- mast -->
+    <line x1="160" y1="280" x2="160" y2="80" stroke="#cccccc" stroke-width="2"/>
+
+    <!-- sail (triangle) -->
+    <path d="M 160 90 L 160 270 L 240 270 Z" fill="rgba(255,255,255,0.15)" stroke="#cccccc" stroke-width="1"/>
+    <path d="M 160 90 L 160 270 L 95 270 Z" fill="rgba(255,255,255,0.1)" stroke="#cccccc" stroke-width="1"/>
+
+    <!-- masthead lights: RED above GREEN -->
+    <circle cx="160" cy="70" r="8" fill="#ff2222" stroke="#ffffff" stroke-width="1"/>
+    <circle cx="160" cy="90" r="8" fill="#22dd22" stroke="#ffffff" stroke-width="1"/>
+
+    <!-- side lights -->
+    <rect x="65" y="275" width="10" height="10" fill="#ff2222" stroke="#ffffff" stroke-width="0.5"/>
+    <rect x="245" y="275" width="10" height="10" fill="#22dd22" stroke="#ffffff" stroke-width="0.5"/>
+
+    <!-- stern white light -->
+    <circle cx="90" cy="290" r="5" fill="#ffffff"/>
+
+    <!-- annotations -->
+    <line x1="180" y1="70" x2="225" y2="55" stroke="#ffaa00" stroke-width="1"/>
+    <text x="227" y="50" fill="#ffaa00" font-family="sans-serif" font-size="11">červené (kruhové)</text>
+    <line x1="180" y1="90" x2="225" y2="105" stroke="#ffaa00" stroke-width="1"/>
+    <text x="227" y="109" fill="#ffaa00" font-family="sans-serif" font-size="11">zelené (kruhové)</text>
+
+    <text x="160" y="335" text-anchor="middle" fill="#7ed957" font-family="sans-serif" font-size="12" font-weight="bold">povoleno</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="365" y1="30" x2="365" y2="360" stroke="#334466" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- RIGHT: small sailing vessel WITHOUT the red-over-green pair -->
+  <g transform="translate(385,20)">
+    <text x="160" y="20" text-anchor="middle" fill="#9fc4e8" font-family="sans-serif" font-size="13" font-weight="bold">Plachetnice, která JE malé plavidlo</text>
+    <text x="160" y="38" text-anchor="middle" fill="#ff7777" font-family="sans-serif" font-size="11">tuhle dvojici světel nést NEsmí</text>
+
+    <!-- water line -->
+    <path d="M 0 290 Q 40 285 80 290 T 160 290 T 240 290 T 320 290" stroke="#5599cc" stroke-width="2" fill="none"/>
+
+    <!-- smaller hull -->
+    <path d="M 95 282 L 225 282 L 210 298 L 110 298 Z" fill="#1a3a5c" stroke="#aaaaaa" stroke-width="1.5"/>
+
+    <!-- mast -->
+    <line x1="160" y1="282" x2="160" y2="100" stroke="#cccccc" stroke-width="2"/>
+
+    <!-- sail -->
+    <path d="M 160 110 L 160 272 L 215 272 Z" fill="rgba(255,255,255,0.15)" stroke="#cccccc" stroke-width="1"/>
+    <path d="M 160 110 L 160 272 L 115 272 Z" fill="rgba(255,255,255,0.1)" stroke="#cccccc" stroke-width="1"/>
+
+    <!-- NO red-over-green at top — instead: tricolor combined lantern at masthead -->
+    <g transform="translate(160,95)">
+      <!-- combined tricolor: red left third, green right third, white aft third -->
+      <path d="M -7 0 A 7 7 0 0 0 7 0 L 0 0 Z" fill="#ffffff" stroke="#cccccc" stroke-width="0.5"/>
+      <path d="M -7 0 L 0 0 L 0 -7 A 7 7 0 0 0 -7 0 Z" fill="#ff2222" stroke="#cccccc" stroke-width="0.5"/>
+      <path d="M 7 0 L 0 0 L 0 -7 A 7 7 0 0 1 7 0 Z" fill="#22dd22" stroke="#cccccc" stroke-width="0.5"/>
+    </g>
+
+    <!-- annotation for tricolor -->
+    <line x1="170" y1="95" x2="245" y2="80" stroke="#9fc4e8" stroke-width="1"/>
+    <text x="247" y="76" fill="#9fc4e8" font-family="sans-serif" font-size="11">trojbarevná lucerna</text>
+    <text x="247" y="89" fill="#9fc4e8" font-family="sans-serif" font-size="10">(jedna z možností</text>
+    <text x="247" y="101" fill="#9fc4e8" font-family="sans-serif" font-size="10">pro malou plachetnici)</text>
+
+    <!-- BIG NO mark over the masthead position where red-over-green would be -->
+    <g transform="translate(160,75)" opacity="0.85">
+      <circle r="14" fill="none" stroke="#ff3333" stroke-width="2.5"/>
+      <line x1="-10" y1="10" x2="10" y2="-10" stroke="#ff3333" stroke-width="2.5"/>
+    </g>
+
+    <text x="160" y="335" text-anchor="middle" fill="#ff7777" font-family="sans-serif" font-size="12" font-weight="bold">NEpovoleno</text>
+  </g>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Každá plachetnice"</strong> — příliš široké. Tahle dvojice světel <em>není</em> povolena malým plavidlům, takže ne každá plachetnice ji nést smí.</li>
+  <li><strong>„Plachetnice, která je malým plavidlem"</strong> — opačně. Právě <em>malé</em> plachetnice tuhle dvojici nést <em>nesmí</em>; mají svůj zjednodušený režim (boční + záďové, případně kombinovaná trojbarevná lucerna na stěžni).</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Když v noci uvidíš plachetnici, která má na vrcholu stěžně dvě kruhová světla nad sebou (<strong>červené nahoře, zelené dole</strong>), víš, že jde o plachetnici, která <em>není</em> malým plavidlem — větší jachta nebo plachetnice (typicky nad cca 20 m délky trupu nebo jiné kritérium velikosti). Typický malý jachtař na přehradě tahle světla mít nebude.</p>
+
+<h3>Pozor na záměnu</h3>
+<p>Dvojice <strong>červené nad zeleným</strong> je signál pro <em>plachetnici za plavby</em>. Nezaměňuj s jinými dvojicemi:</p>
+<ul>
+  <li>Červené nad bílým — plavidlo lovící ryby (vlečnou sítí ne)</li>
+  <li>Bílé nad červeným — plavidlo s omezenou manévrovatelností (v některých kontextech), nebo lodivod podle kontextu</li>
+  <li>Zelené nad bílým — vlečná síť při lovu ryb</li>
+</ul>
+<p>Klíč k téhle otázce: <strong>kombinace „červené nad zeleným" = plachetnice, ne malé plavidlo</strong>.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — čl. 3.13 (světla plachetnic za plavby)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — definice malého plavidla</li>
+</ul>

@@ -1,0 +1,158 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Jádro</h2>
+    <p>
+      Modrý kužel (vrcholem dolů) za dne nebo modré světlo v noci je
+      <strong>mezinárodní signál plavidla přepravujícího nebezpečný náklad</strong>
+      (režim ADN). Počet kuželů/světel je odstupňovaný podle nebezpečnosti
+      nákladu a od něj se odvíjí i <strong>povinná minimální vzdálenost</strong>,
+      kterou ostatní plavidla (včetně malého plavidla) musí za stání dodržet.
+    </p>
+    <p>
+      U <strong>jednoho modrého kužele / jednoho modrého světla</strong> je
+      minimální vzdálenost pro malé plavidlo <strong>10 m</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Vizualizace — odstupňovaná škála</h2>
+    <p style="margin-bottom: 8px;">
+      Čím nebezpečnější náklad, tím víc kuželů a tím větší povinný odstup.
+      Pravá strana ukazuje měřítko vzdálenosti (schematicky, ne v měřítku metru):
+    </p>
+
+    <svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:760px; height:auto; background:#f7fbff; border:1px solid #cfd8e3; border-radius:8px;">
+      <!-- voda -->
+      <rect x="0" y="380" width="760" height="80" fill="#cfe6f5" />
+      <line x1="0" y1="380" x2="760" y2="380" stroke="#7aa6c2" stroke-width="1" />
+
+      <!-- ============ ŘÁDEK 1: 1 modrý kužel = 10 m ============ -->
+      <g transform="translate(0, 0)">
+        <!-- plavidlo s kuželem -->
+        <g transform="translate(60, 60)">
+          <!-- stěžeň -->
+          <line x1="40" y1="20" x2="40" y2="80" stroke="#444" stroke-width="2" />
+          <!-- modrý kužel (vrcholem dolů) -->
+          <polygon points="28,20 52,20 40,40" fill="#1976d2" stroke="#0d47a1" stroke-width="1.5" />
+          <!-- trup -->
+          <path d="M 5,90 L 75,90 L 70,105 L 10,105 Z" fill="#8d6e63" stroke="#4e342e" stroke-width="1.5" />
+        </g>
+        <text x="100" y="80" font-size="13" fill="#0d47a1" font-weight="bold">1 modrý kužel ▽</text>
+        <text x="100" y="98" font-size="11" fill="#555">hořlavé látky</text>
+
+        <!-- malé plavidlo + šipka odstupu -->
+        <g transform="translate(280, 80)">
+          <path d="M 0,15 L 30,15 L 27,25 L 3,25 Z" fill="#5d4037" stroke="#3e2723" stroke-width="1.2" />
+        </g>
+        <line x1="155" y1="100" x2="280" y2="100" stroke="#d32f2f" stroke-width="2" stroke-dasharray="4,3" />
+        <polygon points="280,100 273,96 273,104" fill="#d32f2f" />
+        <text x="217" y="92" font-size="13" fill="#d32f2f" font-weight="bold" text-anchor="middle">10 m</text>
+
+        <!-- highlight box -->
+        <rect x="350" y="40" width="380" height="60" fill="#fff3e0" stroke="#ef6c00" stroke-width="2" rx="6" />
+        <text x="540" y="62" font-size="13" fill="#bf360c" font-weight="bold" text-anchor="middle">→ TATO OTÁZKA</text>
+        <text x="540" y="82" font-size="12" fill="#5d4037" text-anchor="middle">malé plavidlo smí stát min. 10 m od plavidla s 1 modrým kuželem</text>
+      </g>
+
+      <!-- ============ ŘÁDEK 2: 2 modré kužele = 50 m ============ -->
+      <g transform="translate(0, 130)">
+        <g transform="translate(60, 30)">
+          <line x1="40" y1="0" x2="40" y2="80" stroke="#444" stroke-width="2" />
+          <polygon points="28,0 52,0 40,20" fill="#1976d2" stroke="#0d47a1" stroke-width="1.5" />
+          <polygon points="28,25 52,25 40,45" fill="#1976d2" stroke="#0d47a1" stroke-width="1.5" />
+          <path d="M 5,90 L 75,90 L 70,105 L 10,105 Z" fill="#8d6e63" stroke="#4e342e" stroke-width="1.5" />
+        </g>
+        <text x="100" y="80" font-size="13" fill="#0d47a1" font-weight="bold">2 modré kužele ▽▽</text>
+        <text x="100" y="98" font-size="11" fill="#555">toxické / žíravé látky</text>
+
+        <g transform="translate(490, 80)">
+          <path d="M 0,15 L 30,15 L 27,25 L 3,25 Z" fill="#5d4037" stroke="#3e2723" stroke-width="1.2" />
+        </g>
+        <line x1="155" y1="100" x2="490" y2="100" stroke="#f57c00" stroke-width="2" stroke-dasharray="4,3" />
+        <polygon points="490,100 483,96 483,104" fill="#f57c00" />
+        <text x="322" y="92" font-size="13" fill="#f57c00" font-weight="bold" text-anchor="middle">50 m</text>
+      </g>
+
+      <!-- ============ ŘÁDEK 3: 3 modré kužele = 100 m ============ -->
+      <g transform="translate(0, 260)">
+        <g transform="translate(60, 10)">
+          <line x1="40" y1="-15" x2="40" y2="80" stroke="#444" stroke-width="2" />
+          <polygon points="28,-15 52,-15 40,5" fill="#1976d2" stroke="#0d47a1" stroke-width="1.5" />
+          <polygon points="28,10 52,10 40,30" fill="#1976d2" stroke="#0d47a1" stroke-width="1.5" />
+          <polygon points="28,35 52,35 40,55" fill="#1976d2" stroke="#0d47a1" stroke-width="1.5" />
+          <path d="M 5,90 L 75,90 L 70,105 L 10,105 Z" fill="#8d6e63" stroke="#4e342e" stroke-width="1.5" />
+        </g>
+        <text x="100" y="80" font-size="13" fill="#0d47a1" font-weight="bold">3 modré kužele ▽▽▽</text>
+        <text x="100" y="98" font-size="11" fill="#555">výbušniny</text>
+
+        <g transform="translate(700, 80)">
+          <path d="M 0,15 L 30,15 L 27,25 L 3,25 Z" fill="#5d4037" stroke="#3e2723" stroke-width="1.2" />
+        </g>
+        <line x1="155" y1="100" x2="700" y2="100" stroke="#c62828" stroke-width="2" stroke-dasharray="4,3" />
+        <polygon points="700,100 693,96 693,104" fill="#c62828" />
+        <text x="427" y="92" font-size="13" fill="#c62828" font-weight="bold" text-anchor="middle">100 m</text>
+      </g>
+
+      <!-- legenda dole -->
+      <text x="20" y="430" font-size="11" fill="#555" font-style="italic">Vzdálenost na obrázku není v měřítku — ukazuje pořadí: 10 m « 50 m « 100 m.</text>
+      <text x="20" y="448" font-size="11" fill="#555" font-style="italic">Stejné odstupy platí v noci, kdy je kužel nahrazen modrým světlem.</text>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Pozadí</h2>
+    <p>
+      Signalizace modrými kužely a světly je sjednocena evropskou
+      <strong>Dohodou ADN</strong> (přeprava nebezpečného zboží po vnitrozemských
+      vodních cestách) a do české legislativy je promítnuta vyhláškou
+      <strong>č. 67/2015 Sb., o pravidlech plavebního provozu</strong>, v části
+      o signalizaci plavidel přepravujících nebezpečné věci.
+    </p>
+    <p>
+      Logika je odstupňovaná podle rizika nákladu:
+    </p>
+    <ul>
+      <li><strong>1 modrý kužel / světlo</strong> — hořlavé látky (např. uhlovodíky, benzín). Min. vzdálenost <strong>10 m</strong>.</li>
+      <li><strong>2 modré kužele / světla</strong> — toxické nebo žíravé látky. Min. vzdálenost <strong>50 m</strong>.</li>
+      <li><strong>3 modré kužele / světla</strong> — výbušniny. Min. vzdálenost <strong>100 m</strong>.</li>
+    </ul>
+    <p>
+      Vzdálenost roste <em>skokově</em>, ne lineárně — to je častý zdroj záměn
+      v testu (proto se lidé nechají nachytat na čísla 5, 25 atd.).
+    </p>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní možnosti</h2>
+    <p>
+      <strong>„Větší než 5 m"</strong> — 5 m je číslo, které pravidla pro modrý
+      kužel nikde nestanoví. Zní rozumně, ale neodpovídá vyhlášce.
+    </p>
+    <p>
+      <strong>„U boku, pro malé plavidlo se minimální vzdálenost nestanoví"</strong>
+      — přesný opak pravdy. Smyslem signalizace je naopak vytvořit ochrannou
+      zónu kolem nákladu, který může vzplanout. Velikost druhého plavidla na
+      tom nic nemění — odstup platí pro všechny.
+    </p>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <p>
+      Když v přístavu nebo na kotvišti uvidíš stojící plavidlo s modrým kuželem
+      na stěžni (nebo v noci s modrým světlem), <strong>drž odstup minimálně
+      10 m</strong>. Pokud zahlédneš <strong>dva nebo tři</strong> kužele/světla
+      nad sebou, povinný odstup okamžitě roste — 50 m, resp. 100 m. Tabulku
+      si vyplatí pamatovat jako celek, protože jednotlivá čísla samostatně se
+      v testu typicky zaměňují.
+    </p>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — část o signalizaci plavidel přepravujících nebezpečné věci.</li>
+      <li>Evropská dohoda ADN o mezinárodní přepravě nebezpečných věcí po vnitrozemských vodních cestách.</li>
+    </ol>
+  </section>
+</article>

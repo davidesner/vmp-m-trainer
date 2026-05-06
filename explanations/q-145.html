@@ -1,0 +1,111 @@
+<h2>Modré kužele/světla — minimální vzdálenost pro stání</h2>
+
+<p>Modré kužele (ve dne) a modrá světla (v noci) jsou signalizace <strong>nebezpečného nákladu</strong> — plavidlo přepravuje hořlavé, toxické nebo výbušné látky. Počet kuželů/světel udává <strong>kategorii nebezpečnosti</strong> a tomu odpovídá <strong>minimální vzdálenost</strong>, kterou musí ostatní plavidla (zejména malá rekreační) při stání dodržet.</p>
+
+<h3>Jádro</h3>
+<p>Pro plavidlo nesoucí <strong>dva modré kužele vrcholy dolů</strong> nebo <strong>dvě modrá světla</strong> je správná odpověď <strong>„v minimální vzdálenosti 50 m"</strong>. Jde o kategorii velmi hořlavých nebo toxických látek (např. benzin, čpavek), kde hrozí únik nebezpečných výparů na větší vzdálenost než u běžných hořlavin.</p>
+
+<h3>Vizualizace — tři kategorie nebezpečnosti</h3>
+
+<p><em>Vlevo signál na plavidle (jak ho vidíš v testu / na vodě), vpravo odpovídající minimální vzdálenost pro stání.</em></p>
+
+<svg viewBox="0 0 700 540" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; background: #f4f8fb; border: 1px solid #d0d7de; border-radius: 8px;">
+  <!-- Header -->
+  <text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1a1a1a">Signalizace nebezpečného nákladu — minimální vzdálenost pro stání</text>
+
+  <!-- Row 1: 1 cone = 10 m -->
+  <g transform="translate(0, 50)">
+    <!-- Vessel mast with 1 cone + 1 light -->
+    <line x1="80" y1="20" x2="80" y2="110" stroke="#444" stroke-width="2"/>
+    <!-- Day signal: blue cone vertex down -->
+    <polygon points="80,30 65,55 95,55" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <text x="80" y="75" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">den</text>
+    <!-- Night signal: blue light -->
+    <circle cx="80" cy="95" r="8" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <text x="80" y="120" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">noc</text>
+
+    <text x="160" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1a1a1a">1 modrý kužel / světlo</text>
+    <text x="160" y="68" font-family="sans-serif" font-size="11" fill="#555">Kategorie 1 — hořlavé látky</text>
+    <text x="160" y="84" font-family="sans-serif" font-size="11" fill="#555">(nafta, motorové oleje)</text>
+
+    <!-- Distance bar -->
+    <rect x="430" y="50" width="50" height="30" fill="#9ec5fe" stroke="#0a58ca" stroke-width="1.5"/>
+    <text x="455" y="70" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0a3a7a">10 m</text>
+    <line x1="430" y1="100" x2="480" y2="100" stroke="#0a58ca" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="455" y="115" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">min. vzdálenost</text>
+  </g>
+
+  <!-- Row 2: 2 cones = 50 m (the question!) -->
+  <g transform="translate(0, 200)">
+    <rect x="0" y="-10" width="700" height="140" fill="#fff7d6" stroke="#e0a800" stroke-width="2" rx="6"/>
+
+    <line x1="80" y1="10" x2="80" y2="120" stroke="#444" stroke-width="2"/>
+    <!-- Day: 2 cones -->
+    <polygon points="80,20 65,45 95,45" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <polygon points="80,50 65,75 95,75" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <text x="80" y="92" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">den</text>
+    <!-- Night: 2 lights -->
+    <circle cx="80" cy="105" r="6" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <circle cx="80" cy="120" r="6" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <text x="80" y="138" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">noc</text>
+
+    <text x="160" y="40" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1a1a1a">2 modré kužele / světla ← TATO OTÁZKA</text>
+    <text x="160" y="60" font-family="sans-serif" font-size="11" fill="#555">Kategorie 2 — velmi hořlavé / toxické</text>
+    <text x="160" y="76" font-family="sans-serif" font-size="11" fill="#555">(benzin, čpavek, zkapalněné plyny)</text>
+
+    <!-- Distance bar -->
+    <rect x="430" y="40" width="180" height="40" fill="#ffd966" stroke="#bf8700" stroke-width="2"/>
+    <text x="520" y="65" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#664d03">50 m</text>
+    <line x1="430" y1="100" x2="610" y2="100" stroke="#bf8700" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="520" y="118" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#664d03">min. vzdálenost = SPRÁVNÁ ODPOVĚĎ</text>
+  </g>
+
+  <!-- Row 3: 3 cones = 100 m -->
+  <g transform="translate(0, 360)">
+    <line x1="80" y1="10" x2="80" y2="135" stroke="#444" stroke-width="2"/>
+    <!-- Day: 3 cones -->
+    <polygon points="80,15 67,38 93,38" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <polygon points="80,42 67,65 93,65" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <polygon points="80,69 67,92 93,92" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <text x="80" y="108" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">den</text>
+    <!-- Night: 3 lights -->
+    <circle cx="80" cy="120" r="5" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <circle cx="80" cy="133" r="5" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+    <circle cx="80" cy="146" r="5" fill="#1e5fb3" stroke="#0a3a7a" stroke-width="1"/>
+
+    <text x="160" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1a1a1a">3 modré kužele / světla</text>
+    <text x="160" y="68" font-family="sans-serif" font-size="11" fill="#555">Kategorie 3 — výbušniny</text>
+
+    <!-- Distance bar -->
+    <rect x="280" y="50" width="350" height="30" fill="#f8b4b4" stroke="#a52a2a" stroke-width="1.5"/>
+    <text x="455" y="70" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#7a1818">100 m</text>
+    <line x1="280" y1="100" x2="630" y2="100" stroke="#a52a2a" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="455" y="115" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">min. vzdálenost</text>
+  </g>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#444"/>
+    </marker>
+  </defs>
+</svg>
+
+<h3>Pozadí</h3>
+<p>Pravidlo vychází z <strong>vyhlášky č. 67/2015 Sb.</strong> o pravidlech plavebního provozu (článek 3.14 — denní a noční signalizace plavidel přepravujících nebezpečné látky, navazující článek 7 o stání). Český předpis přejímá evropský systém <strong>CEVNI</strong> a navazuje na dohodu <strong>ADN</strong> (Evropská dohoda o mezinárodní přepravě nebezpečných věcí po vnitrozemských vodních cestách).</p>
+<p>Logika rostoucích vzdáleností je jednoduchá: čím větší riziko vznícení nebo výbuchu výparů, tím větší odstup. U kategorie 2 (typicky benzin, čpavek) se výpary šíří dál než u nafty — proto skok z 10 m na 50 m.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„25 m a více"</strong> — neodpovídá žádné z kategorií, jen znějící mezihodnota.</li>
+  <li><strong>„asi 10 m"</strong> — platí pro <strong>jeden</strong> modrý kužel / jedno modré světlo (kategorie 1, např. plavidlo s naftou), ne pro dva.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>U přístavů a překládacích terminálů, kde tankové lodě přečerpávají benzin nebo zkapalněné plyny, uvidíš ve dne <strong>dva modré kužele</strong> nad sebou na stěžni, v noci <strong>dvě modrá světla</strong>. Při kotvení nebo stání drž odstup minimálně <strong>50 m</strong> — jde o ochranu před zápalnými výpary, které se mohou rozšířit dál, než vidíš.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu, čl. 3.14 a čl. 7</li>
+  <li>Evropský kodex pro vnitrozemské vodní cesty (CEVNI)</li>
+  <li>Dohoda ADN — kategorizace nebezpečných nákladů na vnitrozemských vodních cestách</li>
+</ul>

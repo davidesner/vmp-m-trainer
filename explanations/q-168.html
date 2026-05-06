@@ -1,0 +1,105 @@
+<h2>Signalizace remorkéru v čele vlečné sestavy</h2>
+
+<p>Správná odpověď je <strong>„remorkér v čele vlečné sestavy"</strong>. Klíčem je kombinace dvou bílých stěžňových světel nad sebou a žlutého světla na zádi.</p>
+
+<h3>Dekódování obrázku</h3>
+
+<p>Vlevo je schéma tak, jak ho vidíš v testu. Vpravo je „překlad" — co která světla znamenají v reálu na vodě.</p>
+
+<svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;height:auto;background:#0b0b0d;border-radius:8px">
+  <!-- LEVÁ ČÁST: schéma 1:1 (jak je na obrázku) -->
+  <g transform="translate(20,30)">
+    <text x="160" y="0" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Co vidíš v testu</text>
+
+    <!-- voda -->
+    <path d="M0,210 Q20,205 40,210 T80,210 T120,210 T160,210 T200,210 T240,210 T280,210 T320,210" stroke="#fff" stroke-width="1.5" fill="none"/>
+    <path d="M0,225 Q20,220 40,225 T80,225 T120,225 T160,225 T200,225 T240,225 T280,225 T320,225" stroke="#fff" stroke-width="1.5" fill="none"/>
+
+    <!-- trup plavidla (zjednodušený) -->
+    <polygon points="20,200 300,200 290,170 30,170" fill="none" stroke="#fff" stroke-width="2"/>
+    <!-- nadstavba -->
+    <rect x="80" y="135" width="80" height="35" fill="none" stroke="#fff" stroke-width="2"/>
+    <!-- stěžeň -->
+    <line x1="240" y1="170" x2="240" y2="50" stroke="#fff" stroke-width="2"/>
+
+    <!-- 2 bílá stěžňová světla nad sebou -->
+    <rect x="247" y="55" width="14" height="14" fill="#ffffff" stroke="#fff"/>
+    <rect x="247" y="80" width="14" height="14" fill="#ffffff" stroke="#fff"/>
+
+    <!-- zelené boční (pravobok) -->
+    <circle cx="200" cy="160" r="7" fill="#22c55e"/>
+    <!-- červené boční (levobok) -->
+    <circle cx="190" cy="135" r="7" fill="#ef4444"/>
+    <!-- žluté záďové -->
+    <circle cx="35" cy="160" r="7" fill="#eab308"/>
+
+    <!-- popisky -->
+    <text x="270" y="65" fill="#e5e7eb" font-family="sans-serif" font-size="11">2× bílé stěžňové</text>
+    <text x="270" y="92" fill="#e5e7eb" font-family="sans-serif" font-size="11">(nad sebou)</text>
+    <text x="210" y="155" fill="#22c55e" font-family="sans-serif" font-size="11">zelené (pravobok)</text>
+    <text x="200" y="128" fill="#ef4444" font-family="sans-serif" font-size="11">červené (levobok)</text>
+    <text x="0" y="155" fill="#eab308" font-family="sans-serif" font-size="11">žluté (záď)</text>
+  </g>
+
+  <!-- dělící čára -->
+  <line x1="360" y1="20" x2="360" y2="300" stroke="#374151" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- PRAVÁ ČÁST: význam v reálu -->
+  <g transform="translate(380,30)">
+    <text x="160" y="0" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Co to znamená</text>
+
+    <g transform="translate(0,20)">
+      <rect x="0" y="0" width="16" height="32" fill="none" stroke="#fff" stroke-width="1"/>
+      <rect x="2" y="2" width="12" height="12" fill="#ffffff"/>
+      <rect x="2" y="18" width="12" height="12" fill="#ffffff"/>
+      <text x="28" y="14" fill="#e5e7eb" font-family="sans-serif" font-size="12" font-weight="600">2× bílé stěžňové nad sebou</text>
+      <text x="28" y="30" fill="#9ca3af" font-family="sans-serif" font-size="11">= plavidlo VLEČE jinou sestavu</text>
+      <text x="28" y="44" fill="#9ca3af" font-family="sans-serif" font-size="11">(samostatné plavidlo má jen 1 bílé)</text>
+    </g>
+
+    <g transform="translate(0,80)">
+      <circle cx="8" cy="14" r="7" fill="#eab308"/>
+      <text x="28" y="10" fill="#e5e7eb" font-family="sans-serif" font-size="12" font-weight="600">Žluté na zádi</text>
+      <text x="28" y="26" fill="#9ca3af" font-family="sans-serif" font-size="11">= signál do směru vlečené sestavy</text>
+      <text x="28" y="40" fill="#9ca3af" font-family="sans-serif" font-size="11">(vidí ho vlečená plavidla za remorkérem)</text>
+    </g>
+
+    <g transform="translate(0,140)">
+      <circle cx="4" cy="14" r="6" fill="#ef4444"/>
+      <circle cx="20" cy="14" r="6" fill="#22c55e"/>
+      <text x="36" y="10" fill="#e5e7eb" font-family="sans-serif" font-size="12" font-weight="600">Boční: červená vlevo / zelená vpravo</text>
+      <text x="36" y="26" fill="#9ca3af" font-family="sans-serif" font-size="11">= standardní boční světla</text>
+      <text x="36" y="40" fill="#9ca3af" font-family="sans-serif" font-size="11">(udávají směr pohybu plavidla)</text>
+    </g>
+
+    <g transform="translate(0,200)">
+      <rect x="0" y="0" width="320" height="60" fill="#1f2937" rx="4"/>
+      <text x="10" y="18" fill="#fbbf24" font-family="sans-serif" font-size="11" font-weight="700">⚓ Kombinace = REMORKÉR V ČELE TAHU</text>
+      <text x="10" y="36" fill="#e5e7eb" font-family="sans-serif" font-size="10">2× bílé stěžňové (nad sebou) + boční světla</text>
+      <text x="10" y="50" fill="#e5e7eb" font-family="sans-serif" font-size="10">+ žluté na zádi pro vlečenou sestavu</text>
+    </g>
+  </g>
+</svg>
+
+<h3>Co znamená která část signalizace</h3>
+
+<ul>
+  <li><strong>Dvě bílá stěžňová světla nad sebou</strong> — signalizují, že plavidlo s vlastním pohonem <strong>vleče</strong> jinou sestavu. Samostatně plující strojní plavidlo má pouze <em>jedno</em> stěžňové světlo. Druhé bílé světlo nad ním je „přidané" znamení vlečení.</li>
+  <li><strong>Žluté světlo na zádi</strong> — slouží směrem dozadu, do osy vlečené sestavy. Vidí ho zejména vlečená plavidla za remorkérem a okolní plavidla, která tak rozeznají, že jde o vedoucí remorkér tahu, ne samostatné plavidlo.</li>
+  <li><strong>Boční světla (zelené pravobok, červené levobok)</strong> — má jako každé plující strojní plavidlo, udávají směr pohybu.</li>
+</ul>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<ul>
+  <li>Varianta s <strong>„námořním plavidlem připlouvajícím z moře nebo vyplouvajícím na moře"</strong> nesedí — pro tento institut není vyhrazená sada „2 bílá stěžňová + žluté záďové". Námořní plavidla nesou světla podle COLREG dle své kategorie, ne tuto sestavu.</li>
+  <li>Varianta s <strong>„plavidlem lodivodské služby"</strong> také nesedí — lodivodské plavidlo má charakteristickou dvojici kruhových světel <em>bílé nahoře, červené pod ním</em> na stěžni (plus boční a záďová, je-li v plavbě). Nikoli dvě bílá stěžňová a žluté na zádi.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když v noci uvidíš <strong>dvě bílá světla nad sebou na stěžni</strong> a v ose za plavidlem se táhne další skupina světel, máš před sebou <strong>vlečnou sestavu</strong> a první plavidlo se světly je remorkér, který ji táhne. Drž od něj odstup — vlečné lano může být desítky metrů dlouhé a v noci ho neuvidíš.</p>
+
+<h3>Zdroj</h3>
+
+<p>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu, část upravující signalizaci plavidel za plavby v noci (signalizace samostatného strojního plavidla × remorkéru × vlečné sestavy × lodivodského plavidla).</p>

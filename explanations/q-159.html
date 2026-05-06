@@ -1,0 +1,117 @@
+<h2>Jádro</h2>
+<p>Správná odpověď je <strong>„před zimním obdobím"</strong>. Důvod je ryze praktický — na přehradních zdržích se hladina v průběhu roku <strong>významně mění</strong> a zima přidává navíc led. Plavidlo proto musí být buď úplně mimo dosah vody (vytažené nad kótu nejvyššího vzdutí), nebo na místě, kde lze pružně reagovat na pokles/vzestup hladiny převazováním lan.</p>
+
+<h2>Proč zrovna před zimou — tři rizika</h2>
+<ul>
+  <li><strong>Pokles hladiny</strong> — provozovatel přehrady před zimou hladinu často snižuje, aby vytvořil retenční prostor pro jarní tání. Plavidlo na fixním úvazu by viselo na lanech nebo se posadilo na dno.</li>
+  <li><strong>Led</strong> — zamrzající i pohybující se led dokáže plavidlo rozdrtit, převrátit nebo strhnout. Plovoucí kry při tání působí jako kladivo.</li>
+  <li><strong>Zimní bouře a námrazy</strong> — bez denní kontroly riziko poškození skokově roste.</li>
+</ul>
+
+<h2>Vizualizace — proč „nad kótu nejvyššího vzdutí" nebo „převazovat"</h2>
+<p>Schéma zachycuje řez přehradní zdrží se třemi typickými hladinami a dvěma povolenými způsoby zimního stání. Třetí varianta (fixní úvaz u mola) ukazuje, co je <em>nesprávně</em>:</p>
+
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Řez přehradou: úroveň nejvyššího vzdutí, letní a zimní hladina, plavidlo vytažené na břeh, plavidlo s převazovatelnými lany, plavidlo s fixním úvazem visící na laně">
+  <defs>
+    <pattern id="water" patternUnits="userSpaceOnUse" width="20" height="6">
+      <path d="M0 3 Q5 0 10 3 T20 3" stroke="#5a9fd4" fill="none" stroke-width="1"/>
+    </pattern>
+    <pattern id="ice" patternUnits="userSpaceOnUse" width="14" height="14">
+      <rect width="14" height="14" fill="#e8f4ff"/>
+      <path d="M0 7 L7 0 M7 14 L14 7" stroke="#a8c8e0" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Břehy -->
+  <polygon points="0,380 0,180 120,180 200,250 200,380" fill="#c9b89a" stroke="#8a7858" stroke-width="1"/>
+  <polygon points="720,380 720,180 600,180 520,250 520,380" fill="#c9b89a" stroke="#8a7858" stroke-width="1"/>
+
+  <!-- Voda mezi břehy: zimní hladina -->
+  <rect x="200" y="290" width="320" height="90" fill="url(#water)" stroke="#5a9fd4" stroke-width="0.5"/>
+  <!-- Tenká vrstva ledu na zimní hladině -->
+  <rect x="200" y="285" width="320" height="8" fill="url(#ice)" stroke="#7aa4c4" stroke-width="0.5"/>
+
+  <!-- Čára: nejvyšší vzdutí -->
+  <line x1="0" y1="180" x2="720" y2="180" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="10" y="174" font-family="sans-serif" font-size="11" fill="#c0392b" font-weight="bold">kóta nejvyššího vzdutí (max. možná hladina)</text>
+
+  <!-- Čára: letní hladina -->
+  <line x1="120" y1="230" x2="600" y2="230" stroke="#3498db" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="540" y="224" font-family="sans-serif" font-size="10" fill="#2980b9">letní provozní hladina</text>
+
+  <!-- Čára: zimní snížená hladina -->
+  <line x1="170" y1="290" x2="560" y2="290" stroke="#1f4e79" stroke-width="1"/>
+  <text x="450" y="305" font-family="sans-serif" font-size="10" fill="#1f4e79">zimní snížená hladina (retence pro tání)</text>
+
+  <!-- Plavidlo 1: vytažené na břeh nad nejvyšším vzdutím (vlevo) -->
+  <g transform="translate(40 150)">
+    <path d="M0 15 L60 15 L55 28 L5 28 Z" fill="#8b4513" stroke="#5a2d0c" stroke-width="1"/>
+    <rect x="20" y="3" width="20" height="12" fill="#d4a574" stroke="#5a2d0c" stroke-width="1"/>
+    <text x="-10" y="-2" font-family="sans-serif" font-size="10" fill="#1a5f1a" font-weight="bold">✓ vytaženo nad max. hladinu</text>
+    <text x="-10" y="50" font-family="sans-serif" font-size="9" fill="#444">žádná voda · žádný led</text>
+  </g>
+
+  <!-- Plavidlo 2: na vodě s převazovatelnými lany (uprostřed) -->
+  <g transform="translate(290 270)">
+    <!-- molo / sloup -->
+    <rect x="80" y="-90" width="6" height="100" fill="#5a4a3a"/>
+    <circle cx="83" cy="-85" r="3" fill="#333"/>
+    <!-- lano 1: aktuální (k zimní hladině) -->
+    <line x1="83" y1="-83" x2="60" y2="20" stroke="#2c7a2c" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <!-- lano 2: alternativní (k letní hladině), tečkované -->
+    <line x1="83" y1="-83" x2="55" y2="-40" stroke="#2c7a2c" stroke-width="1" stroke-dasharray="3 2" opacity="0.6"/>
+    <text x="95" y="-50" font-family="sans-serif" font-size="9" fill="#2c7a2c">popouští/dotahuje<tspan x="95" dy="11">podle hladiny</tspan></text>
+    <!-- plavidlo -->
+    <path d="M0 15 L60 15 L55 28 L5 28 Z" fill="#27ae60" stroke="#145a32" stroke-width="1"/>
+    <rect x="20" y="3" width="20" height="12" fill="#a3e0ba" stroke="#145a32" stroke-width="1"/>
+    <text x="-15" y="55" font-family="sans-serif" font-size="10" fill="#145a32" font-weight="bold">✓ převazovatelné úvazy</text>
+  </g>
+
+  <!-- Plavidlo 3: fixní úvaz - VISÍ (vpravo) -->
+  <g transform="translate(540 200)">
+    <!-- molo na kótě letní hladiny -->
+    <rect x="0" y="0" width="50" height="6" fill="#5a4a3a"/>
+    <rect x="20" y="-30" width="4" height="30" fill="#5a4a3a"/>
+    <!-- lano fixní -->
+    <line x1="22" y1="-25" x2="40" y2="50" stroke="#c0392b" stroke-width="2"/>
+    <!-- plavidlo visí ve vzduchu nad nižší hladinou -->
+    <g transform="translate(15 50)">
+      <path d="M0 15 L60 15 L55 28 L5 28 Z" fill="#7f8c8d" stroke="#2c3e50" stroke-width="1"/>
+      <rect x="20" y="3" width="20" height="12" fill="#bdc3c7" stroke="#2c3e50" stroke-width="1"/>
+    </g>
+    <!-- crash symbol -->
+    <text x="80" y="60" font-family="sans-serif" font-size="20" fill="#c0392b" font-weight="bold">✗</text>
+    <text x="-5" y="100" font-family="sans-serif" font-size="9" fill="#c0392b" font-weight="bold">fixní lano →</text>
+    <text x="-5" y="111" font-family="sans-serif" font-size="9" fill="#c0392b">visí, trhá se</text>
+  </g>
+
+  <!-- Šipka pohybu hladiny -->
+  <g transform="translate(660 220)">
+    <line x1="0" y1="0" x2="0" y2="65" stroke="#1f4e79" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="0" y1="65" x2="0" y2="0" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="6" y="38" font-family="sans-serif" font-size="9" fill="#1f4e79">hladina</text>
+    <text x="6" y="49" font-family="sans-serif" font-size="9" fill="#1f4e79">kolísá</text>
+  </g>
+</svg>
+
+<h2>Proč ne ostatní varianty</h2>
+<ul>
+  <li>Varianta vázající opatření na <strong>vydatný déšť delší než sedm dnů</strong> míří na povodňový stav. Pravidlo o přehradních zdržích ale řeší <strong>sezónní</strong> režim — při akutní povodni je už typicky pozdě plavidlo někam tahat a navíc to upravují jiné předpisy.</li>
+  <li>Varianta odkazující na <strong>nemožnost dohledu</strong> směšuje ostrahu (proti krádeži, vandalismu) s ochranou před vodním režimem. Dohled plavidlo nezachrání před ledem ani před poklesem hladiny.</li>
+</ul>
+
+<h2>Praktická aplikace</h2>
+<ul>
+  <li><strong>Malá plavidla</strong> (čluny, kajaky, malé motorové) — vytáhnout na břeh, ideálně pod přístřešek, mimo dosah ledu.</li>
+  <li><strong>Plavidla zůstávající u mol</strong> — lana musí jít <em>popouštět i dotahovat</em>; fixní úvaz na sloupu při poklesu hladiny plavidlo zničí.</li>
+  <li><strong>Časování</strong> — typicky během listopadu, před prvními mrazy. Konkrétní termín určuje provozovatel přístavu / přehradního stání.</li>
+</ul>
+
+<h2>Zdroje</h2>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — část upravující stání plavidel na vodních dílech mimo plavební sezónu</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

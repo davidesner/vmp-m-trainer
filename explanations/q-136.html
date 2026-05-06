@@ -1,0 +1,121 @@
+<h2>Jádro</h2>
+<p>Princip je čistě <strong>bezpečnostní a obecný</strong>: zakotvené nebo vyvázané plavidlo se nesmí samovolně pohnout — nesmí se utrhnout, otáčet kolem kotvy do plavební dráhy, narážet do sousedů ani překážet jiné plavbě. Způsob (kolik lan, jaký úhel, kolik kotev, odražeče) si vůdce plavidla volí <strong>podle podmínek</strong> — proudu, větru, vlnobití, hloubky, charakteru dna, blízkosti dalších plavidel.</p>
+
+<h2>Pozadí</h2>
+<p>Vyhláška č. <strong>67/2015 Sb. o pravidlech plavebního provozu, §6.18 (Kotvení)</strong> stanovuje, že plavidlo musí být zakotveno tak, <em>aby nemohlo měnit svou polohu způsobem ohrožujícím jiná plavidla nebo jim překážet</em> — zejména s ohledem na proud, vítr, vlny a sání proplouvajících plavidel. Stejný princip platí pro vyvázání u břehu nebo na vyvazovacím zařízení (§6.19).</p>
+<p>Klíčová slova: „<strong>nemohla změnit svoji polohu</strong>" + „<strong>ohrozit / překážet</strong>". To je celá podstata pravidla — řeší <strong>výsledek</strong>, ne techniku.</p>
+
+<h2>Vizualizace — správně vs. špatně</h2>
+<p>Vlevo plavidlo bezpečně vyvázané: kotva drží, lana zajišťují polohu, plavidlo nezasahuje do plavební dráhy. Vpravo nedostatečně zajištěné — proud / vítr ho stočí do dráhy nebo na sousedy.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" style="width:100%;max-width:800px;height:auto;background:#e8f4f8;border-radius:8px">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" style="fill:#1976d2"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" style="fill:#d32f2f"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT PANEL: SPRÁVNĚ -->
+  <rect x="10" y="10" width="380" height="340" style="fill:#ffffff;stroke:#2e7d32;stroke-width:2;rx:6"/>
+  <text x="200" y="32" style="font-family:sans-serif;font-size:15px;font-weight:bold;fill:#2e7d32;text-anchor:middle">SPRÁVNĚ — plavidlo nemůže změnit polohu</text>
+
+  <!-- proud arrow -->
+  <line x1="30" y1="60" x2="80" y2="60" style="stroke:#1976d2;stroke-width:2" marker-end="url(#arrow)"/>
+  <text x="85" y="64" style="font-family:sans-serif;font-size:11px;fill:#1976d2">proud</text>
+
+  <!-- břeh -->
+  <rect x="10" y="290" width="380" height="60" style="fill:#c8b88a"/>
+  <text x="200" y="325" style="font-family:sans-serif;font-size:11px;fill:#5d4e2a;text-anchor:middle">břeh / molo</text>
+  <!-- pacholata -->
+  <circle cx="120" cy="285" r="4" style="fill:#333"/>
+  <circle cx="280" cy="285" r="4" style="fill:#333"/>
+
+  <!-- plavidlo (správně) -->
+  <g transform="translate(200,180)">
+    <path d="M -55,-20 L 50,-20 L 65,0 L 50,20 L -55,20 Z" style="fill:#fff;stroke:#333;stroke-width:2"/>
+    <rect x="-30" y="-15" width="55" height="12" style="fill:#1976d2"/>
+    <text x="0" y="38" style="font-family:sans-serif;font-size:10px;text-anchor:middle">vyvázáno</text>
+  </g>
+
+  <!-- lana: příď, záď, spring -->
+  <line x1="265" y1="180" x2="280" y2="285" style="stroke:#2e7d32;stroke-width:1.8"/>
+  <line x1="145" y1="180" x2="120" y2="285" style="stroke:#2e7d32;stroke-width:1.8"/>
+  <line x1="145" y1="180" x2="280" y2="285" style="stroke:#2e7d32;stroke-width:1.5;stroke-dasharray:3,2"/>
+  <line x1="265" y1="180" x2="120" y2="285" style="stroke:#2e7d32;stroke-width:1.5;stroke-dasharray:3,2"/>
+
+  <!-- popisky lan -->
+  <text x="100" y="240" style="font-family:sans-serif;font-size:9px;fill:#2e7d32">přední lano</text>
+  <text x="295" y="240" style="font-family:sans-serif;font-size:9px;fill:#2e7d32">záďové lano</text>
+  <text x="200" y="265" style="font-family:sans-serif;font-size:9px;fill:#2e7d32;text-anchor:middle">springy (proti pohybu vpřed/vzad)</text>
+
+  <!-- plavební dráha -->
+  <line x1="10" y1="100" x2="390" y2="100" style="stroke:#1976d2;stroke-width:1;stroke-dasharray:6,4;opacity:0.5"/>
+  <text x="380" y="95" style="font-family:sans-serif;font-size:9px;fill:#1976d2;text-anchor:end">okraj plavební dráhy</text>
+
+  <!-- odraz: další plavidlo bezpečně proplouvá -->
+  <g transform="translate(80,75)">
+    <path d="M -18,-6 L 14,-6 L 20,0 L 14,6 L -18,6 Z" style="fill:#fff;stroke:#666;stroke-width:1"/>
+  </g>
+  <text x="150" y="78" style="font-family:sans-serif;font-size:9px;fill:#666">jiná plavba volně projede</text>
+
+
+  <!-- RIGHT PANEL: ŠPATNĚ -->
+  <rect x="410" y="10" width="380" height="340" style="fill:#ffffff;stroke:#c62828;stroke-width:2;rx:6"/>
+  <text x="600" y="32" style="font-family:sans-serif;font-size:15px;font-weight:bold;fill:#c62828;text-anchor:middle">ŠPATNĚ — plavidlo se utrhne / stočí</text>
+
+  <!-- proud arrow -->
+  <line x1="430" y1="60" x2="480" y2="60" style="stroke:#1976d2;stroke-width:2" marker-end="url(#arrow)"/>
+  <text x="485" y="64" style="font-family:sans-serif;font-size:11px;fill:#1976d2">proud</text>
+
+  <!-- břeh -->
+  <rect x="410" y="290" width="380" height="60" style="fill:#c8b88a"/>
+  <text x="600" y="325" style="font-family:sans-serif;font-size:11px;fill:#5d4e2a;text-anchor:middle">břeh / molo</text>
+  <circle cx="540" cy="285" r="4" style="fill:#333"/>
+
+  <!-- plavidlo (špatně - stočené do dráhy) -->
+  <g transform="translate(620,150) rotate(35)">
+    <path d="M -55,-20 L 50,-20 L 65,0 L 50,20 L -55,20 Z" style="fill:#ffebee;stroke:#c62828;stroke-width:2"/>
+    <rect x="-30" y="-15" width="55" height="12" style="fill:#c62828"/>
+  </g>
+
+  <!-- jen jedno lano -->
+  <line x1="595" y1="155" x2="540" y2="285" style="stroke:#c62828;stroke-width:1.8"/>
+  <text x="555" y="240" style="font-family:sans-serif;font-size:9px;fill:#c62828">jen 1 lano →</text>
+  <text x="555" y="252" style="font-family:sans-serif;font-size:9px;fill:#c62828">plavidlo „kýve"</text>
+
+  <!-- pohyb šipka -->
+  <path d="M 560,165 Q 600,130 650,140" style="fill:none;stroke:#d32f2f;stroke-width:1.5;stroke-dasharray:4,3" marker-end="url(#arrowRed)"/>
+  <text x="565" y="125" style="font-family:sans-serif;font-size:10px;fill:#d32f2f;font-weight:bold">stáčí se do dráhy</text>
+
+  <!-- plavební dráha -->
+  <line x1="410" y1="100" x2="790" y2="100" style="stroke:#1976d2;stroke-width:1;stroke-dasharray:6,4;opacity:0.5"/>
+  <text x="780" y="95" style="font-family:sans-serif;font-size:9px;fill:#1976d2;text-anchor:end">okraj plavební dráhy</text>
+
+  <!-- jiné plavidlo musí uhýbat -->
+  <g transform="translate(465,80)">
+    <path d="M -18,-6 L 14,-6 L 20,0 L 14,6 L -18,6 Z" style="fill:#fff;stroke:#666;stroke-width:1"/>
+  </g>
+  <path d="M 490,82 Q 520,70 555,75" style="fill:none;stroke:#d32f2f;stroke-width:1.2;stroke-dasharray:3,2" marker-end="url(#arrowRed)"/>
+  <text x="490" y="68" style="font-family:sans-serif;font-size:9px;fill:#d32f2f">musí uhnout!</text>
+</svg>
+
+<h2>Proč jsou ostatní varianty nesprávné</h2>
+<p><strong>„Postup vyznačený na plavebním znaku"</strong> — plavební znaky řeší <em>kde / zda</em> smíte kotvit (zákaz kotvení, povolená místa, stání plavidel), ale <strong>neříkají, jak fyzicky vyvazovat</strong>. Žádný znak nepředepisuje techniku uvázání — to je vždy věc vůdce plavidla a aktuálních podmínek.</p>
+<p><strong>„Příď proti proudu + přechodová lávka"</strong> — příď proti proudu je sice <em>obvyklá praxe na tekoucí vodě</em> (proud drží, kýl pracuje správně), ale není to univerzální pravidlo: na jezerech a v klidných přístavech nedává smysl. Přechodová lávka řeší výstup na břeh, ne fixaci plavidla. Tyhle dva požadavky jsou vyšperkovaný šum okolo skutečného principu.</p>
+
+<h2>Praktická aplikace</h2>
+<ul>
+  <li><strong>Tekoucí voda:</strong> lana na přídi proti proudu + záďové vyvázání + odražeče; pozor na sání proplouvajících velkých plavidel — to je hlavní důvod, proč musí být vyvázání pevné.</li>
+  <li><strong>Kotviště:</strong> dostatečně dlouhý kotevní řetěz (poměr cca 5:1 vůči hloubce u většiny dn), kontrola, že kotva drží — plavidlo nesmí „švihat" do plavební dráhy.</li>
+  <li><strong>Přístav / mola:</strong> příď + záď + <em>springy</em> (šikmá lana zabraňující pohybu vpřed/vzad), odražeče proti odření boku.</li>
+  <li><strong>Kolísavá hladina (přehrady, slapy):</strong> dostatečně dlouhá lana, příp. plovoucí mola — plavidlo nesmí „viset" na laně při poklesu hladiny.</li>
+</ul>
+
+<h2>Zdroje</h2>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, <strong>§6.18 (Kotvení)</strong> a <strong>§6.19 (Vyvazování)</strong></li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

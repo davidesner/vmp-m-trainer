@@ -1,0 +1,123 @@
+<h2>Stání plavidel ve vjezdech do přítoků a přístavů</h2>
+
+<p>Ve <strong>vjezdech do přítoků</strong>, <strong>výjezdech z nich</strong> a ve <strong>vjezdech do přístavů</strong> nesmějí stát <strong>plavidla bez výjimky</strong> — pravidlo se týká stejně malých plavidel, plachetnic, veslic i velkých motorových lodí.</p>
+
+<h3>Proč „úplný zákaz", a ne částečný</h3>
+
+<p>Jde o <strong>manévrovací zóny</strong> — místa, kde plavidla najíždějí z hlavního toku do bočního ramene (nebo naopak), často s omezeným výhledem za roh. Jakékoliv stojící plavidlo zužuje průjezd na nebezpečnou míru a může zablokovat plavidlo, které právě dokončuje obrat. Proto neexistuje výjimka pro malá plavidla ani pro plachetnice/veslice — i pramička ve vjezdu znamená, že větší plavidlo tam nemůže bezpečně zatočit.</p>
+
+<h3>Vizualizace — zakázané a povolené místo zakotvení</h3>
+
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;height:auto;background:#eaf6ec;border-radius:8px;">
+  <defs>
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7ec0e0"/>
+      <stop offset="100%" stop-color="#3b8ab5"/>
+    </linearGradient>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#c9302c" stroke-width="2" opacity="0.55"/>
+    </pattern>
+    <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c9302c"/>
+    </marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0a7d2c"/>
+    </marker>
+  </defs>
+
+  <!-- břeh (pozadí už je zelený) -->
+
+  <!-- hlavní řeka (vodorovně) -->
+  <rect x="0" y="180" width="700" height="120" fill="url(#riverGrad)"/>
+  <text x="20" y="175" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1f4f6f">hlavní tok</text>
+
+  <!-- přítok / vjezd do přístavu (svisle nahoru z hlavního toku) -->
+  <path d="M 280 180 L 280 60 L 420 60 L 420 180 Z" fill="url(#riverGrad)"/>
+  <text x="350" y="50" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1f4f6f">přítok / vjezd do přístavu</text>
+
+  <!-- ZAKÁZANÁ ZÓNA — vyšrafovaný obdélník přes celý vjezd, přesahující kousek do hlavního toku -->
+  <rect x="265" y="155" width="170" height="60" fill="url(#hatch)" stroke="#c9302c" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="350" y="148" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#c9302c">ZAKÁZANÉ STÁNÍ — žádné plavidlo</text>
+
+  <!-- špatně: stojící malé plavidlo přímo ve vjezdu -->
+  <g>
+    <ellipse cx="320" cy="190" rx="18" ry="7" fill="#8b5a2b" stroke="#5b3a1c" stroke-width="1"/>
+    <line x1="320" y1="190" x2="320" y2="178" stroke="#5b3a1c" stroke-width="1.5"/>
+    <text x="320" y="170" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c9302c" font-weight="bold">✗ špatně</text>
+    <text x="320" y="207" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">malá pramice</text>
+  </g>
+
+  <!-- špatně: plachetnice -->
+  <g>
+    <path d="M 380 190 L 408 190 L 405 198 L 383 198 Z" fill="#fff" stroke="#222" stroke-width="1"/>
+    <line x1="394" y1="190" x2="394" y2="165" stroke="#222" stroke-width="1.5"/>
+    <polygon points="394,166 394,188 408,188" fill="#fff" stroke="#222" stroke-width="1"/>
+    <text x="394" y="160" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c9302c" font-weight="bold">✗ špatně</text>
+    <text x="394" y="210" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">plachetnice</text>
+  </g>
+
+  <!-- plavidlo přijíždějící z hlavního toku, chce zatočit do přítoku -->
+  <g>
+    <path d="M 70 240 L 130 240 L 122 256 L 78 256 Z" fill="#444" stroke="#222" stroke-width="1"/>
+    <rect x="90" y="232" width="20" height="8" fill="#666" stroke="#222" stroke-width="1"/>
+    <text x="100" y="225" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#222">přijíždějící plavidlo</text>
+    <!-- šipka manévru — chce zatočit do přítoku -->
+    <path d="M 130 248 Q 250 248 280 200" fill="none" stroke="#c9302c" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#redArrow)"/>
+    <text x="220" y="240" font-family="sans-serif" font-size="11" fill="#c9302c" font-weight="bold">zablokovaný manévr!</text>
+  </g>
+
+  <!-- správně: plavidlo zakotvené dál v přítoku, mimo vjezd -->
+  <g>
+    <path d="M 340 90 L 380 90 L 376 100 L 344 100 Z" fill="#2a7d3f" stroke="#1a4f25" stroke-width="1"/>
+    <rect x="354" y="83" width="12" height="7" fill="#3a9d4f" stroke="#1a4f25" stroke-width="1"/>
+    <text x="360" y="78" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0a7d2c" font-weight="bold">✓ správně</text>
+    <text x="360" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">stání hlouběji v přístavu/přítoku, mimo vjezd</text>
+  </g>
+
+  <!-- správně: plavidlo zakotvené u břehu hlavního toku, daleko od vjezdu -->
+  <g>
+    <path d="M 530 240 L 580 240 L 575 252 L 535 252 Z" fill="#2a7d3f" stroke="#1a4f25" stroke-width="1"/>
+    <rect x="548" y="232" width="14" height="8" fill="#3a9d4f" stroke="#1a4f25" stroke-width="1"/>
+    <line x1="555" y1="252" x2="555" y2="295" stroke="#444" stroke-dasharray="2 2"/>
+    <circle cx="555" cy="297" r="3" fill="#444"/>
+    <text x="555" y="225" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0a7d2c" font-weight="bold">✓ správně</text>
+    <text x="555" y="320" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1f4f6f">stání u břehu mimo vjezd</text>
+  </g>
+
+  <!-- legenda -->
+  <g transform="translate(20, 350)">
+    <rect x="0" y="0" width="660" height="56" fill="#fff" stroke="#999" stroke-width="1" rx="4"/>
+    <rect x="10" y="10" width="20" height="14" fill="url(#hatch)" stroke="#c9302c" stroke-width="1"/>
+    <text x="38" y="22" font-family="sans-serif" font-size="11" fill="#222">zakázaná zóna stání — žádné plavidlo, ani malé, ani plachetnice, ani bez pohonu</text>
+    <text x="10" y="44" font-family="sans-serif" font-size="11" fill="#0a7d2c" font-weight="bold">✓</text>
+    <text x="22" y="44" font-family="sans-serif" font-size="11" fill="#222">povolené místo — hlouběji v přístavu/přítoku nebo u břehu hlavního toku mimo vjezd</text>
+  </g>
+</svg>
+
+<h3>Proč ostatní varianty neplatí</h3>
+
+<ul>
+  <li><strong>Varianta „nesmí stát plavidla, která nejsou malými"</strong> implikuje, že malá plavidla ve vjezdu stát smí. To je past — v jiných pravidlech mají malá plavidla zvláštní režim (např. povinnost dát přednost), tady však ne. Malá pramička stojící ve vjezdu zúží průjezd stejně účinně jako velký člun a znemožní bezpečný obrat většímu plavidlu.</li>
+  <li><strong>Varianta „kromě plavidel bez vlastního pohonu a plachetnic"</strong> hází dohromady plavidla, která se hůř ovládají, s pocitem „ta nemůžou jinam, tak ať tam smí stát". Skutečnost je opačná — plachetnice bez větru nebo veslice ve vjezdu jsou <strong>ještě nebezpečnější</strong>, protože se z místa nedostanou rychle, když se objeví druhé plavidlo.</li>
+</ul>
+
+<h3>Související místa, kde plavidla také nesmí stát</h3>
+
+<p>Logika „bottleneck musí být volný" se opakuje na řadě dalších míst (vyhláška č. 67/2015 Sb.):</p>
+<ul>
+  <li>pod mosty a v plavebních komorách</li>
+  <li>v úžinách a tam, kde by stojící plavidlo bránilo plavbě</li>
+  <li>na obratištích</li>
+  <li>v hlavní plavební dráze obecně</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když si jako vůdce malého plavidla vybíráš místo k zastavení nebo zakotvení, drž se <strong>od ústí přítoků a od vjezdů do přístavů dál</strong> — zakotvi až <strong>uvnitř</strong> přístavu/přítoku (mimo vjezdový pruh) nebo u břehu <strong>v dostatečné vzdálenosti od vjezdu</strong>. Není rozhodující, jestli máš pramici 4 m nebo motorák 8 m — pravidlo neodlišuje.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — část o stání plavidel (zákazy stání ve vjezdech do přítoků, výjezdech a vjezdech do přístavů).</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — obecný rámec povinností vůdce plavidla.</li>
+</ul>

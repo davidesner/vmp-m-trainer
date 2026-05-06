@@ -1,0 +1,132 @@
+<h2>Koupání a potápění je zakázáno</h2>
+
+<h3>Jádro</h3>
+<p>Správná odpověď je <strong>&bdquo;v plavební komoře a ve vodní ploše nad a pod plavební komorou až k místu, kde končí zařízení k vyvazování plavidel pro čekání na proplavení, nebo v plavebních kanálech.&ldquo;</strong></p>
+
+<p>Pravidlo se opírá o <strong>vyhlášku č. 67/2015 Sb., o pravidlech plavebního provozu</strong>. Zákaz pokrývá tři propojené zóny:</p>
+<ul>
+  <li>samotnou <strong>plavební komoru</strong></li>
+  <li><strong>vodní plochu nad a pod komorou</strong> až po konec čekacích vyvazovacích zařízení</li>
+  <li><strong>plavební kanály</strong> v celé délce</li>
+</ul>
+
+<p>Důvod je čistě bezpečnostní &mdash; <em>proudění vody při napouštění a vypouštění komory, manipulace s vraty, pohyb plavidel a omezená manévrovatelnost v úzkých kanálech</em> znamenají, že plavec v této zóně je v reálném ohrožení života.</p>
+
+<h3>Vizualizace zákazové zóny</h3>
+
+<p>Pohled shora na plavební komoru. Červeně vyznačená oblast = zákaz koupání a potápění.</p>
+
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#f4f8fb;border:1px solid #d0d7de;border-radius:6px">
+  <defs>
+    <pattern id="hatch162" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#dc2626" stroke-width="2" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Voda celkem (modrá) -->
+  <rect x="0" y="100" width="800" height="160" fill="#bfdbfe"/>
+
+  <!-- Zóna zákazu (červené šrafy) -->
+  <rect x="80" y="100" width="640" height="160" fill="url(#hatch162)"/>
+  <rect x="80" y="100" width="640" height="160" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- Plavební komora -->
+  <rect x="320" y="120" width="160" height="120" fill="#93c5fd" stroke="#1e3a8a" stroke-width="2"/>
+  <!-- Vrata komory (horní a dolní) -->
+  <rect x="316" y="115" width="8" height="130" fill="#1e3a8a"/>
+  <rect x="476" y="115" width="8" height="130" fill="#1e3a8a"/>
+  <!-- Hradlovaný symbol vrat -->
+  <line x1="320" y1="120" x2="320" y2="240" stroke="#0f172a" stroke-width="3"/>
+  <line x1="480" y1="120" x2="480" y2="240" stroke="#0f172a" stroke-width="3"/>
+
+  <!-- Břehy -->
+  <rect x="0" y="60" width="800" height="40" fill="#86efac"/>
+  <rect x="0" y="260" width="800" height="60" fill="#86efac"/>
+
+  <!-- Dalby / vyvazovací zařízení (kruhové pacholata) na obou stranách -->
+  <!-- horní břeh dolní vodní plocha -->
+  <circle cx="120" cy="105" r="6" fill="#475569"/>
+  <circle cx="170" cy="105" r="6" fill="#475569"/>
+  <circle cx="220" cy="105" r="6" fill="#475569"/>
+  <circle cx="270" cy="105" r="6" fill="#475569"/>
+
+  <circle cx="530" cy="105" r="6" fill="#475569"/>
+  <circle cx="580" cy="105" r="6" fill="#475569"/>
+  <circle cx="630" cy="105" r="6" fill="#475569"/>
+  <circle cx="680" cy="105" r="6" fill="#475569"/>
+
+  <!-- spodní břeh -->
+  <circle cx="120" cy="255" r="6" fill="#475569"/>
+  <circle cx="170" cy="255" r="6" fill="#475569"/>
+  <circle cx="220" cy="255" r="6" fill="#475569"/>
+  <circle cx="270" cy="255" r="6" fill="#475569"/>
+
+  <circle cx="530" cy="255" r="6" fill="#475569"/>
+  <circle cx="580" cy="255" r="6" fill="#475569"/>
+  <circle cx="630" cy="255" r="6" fill="#475569"/>
+  <circle cx="680" cy="255" r="6" fill="#475569"/>
+
+  <!-- Plavidlo čekající na proplavení -->
+  <g>
+    <rect x="200" y="160" width="60" height="40" rx="6" fill="#fde68a" stroke="#92400e" stroke-width="1.5"/>
+    <polygon points="260,160 275,180 260,200" fill="#fde68a" stroke="#92400e" stroke-width="1.5"/>
+  </g>
+
+  <!-- Hranice zákazové zóny - svislé čáry s popiskou -->
+  <line x1="80" y1="80" x2="80" y2="280" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="720" y1="80" x2="720" y2="280" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <!-- Popisky -->
+  <text x="400" y="35" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#0f172a">Zákazová zóna pro koupání a potápění</text>
+  <text x="400" y="180" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a">PLAVEBNÍ KOMORA</text>
+  <text x="195" y="83" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0f172a">vodní plocha nad komorou</text>
+  <text x="605" y="83" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0f172a">vodní plocha pod komorou</text>
+  <text x="195" y="287" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#475569">vyvazovací zařízení (dalby)</text>
+  <text x="605" y="287" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#475569">vyvazovací zařízení (dalby)</text>
+
+  <text x="80" y="305" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#dc2626" font-weight="bold">hranice zákazu</text>
+  <text x="720" y="305" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#dc2626" font-weight="bold">hranice zákazu</text>
+
+  <text x="40" y="170" font-family="sans-serif" font-size="11" fill="#0f172a">břeh</text>
+  <text x="40" y="320" font-family="sans-serif" font-size="11" fill="#0f172a">břeh</text>
+
+  <!-- Šipka přechodu z kanálu do komory -->
+  <line x1="20" y1="180" x2="70" y2="180" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arrow162)"/>
+  <defs>
+    <marker id="arrow162" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="20" y="172" font-family="sans-serif" font-size="10" fill="#0f172a">plavební kanál (rovněž zákaz)</text>
+</svg>
+
+<p style="font-size:0.9em;color:#475569"><em>Zákaz nekončí u vrat komory — pokračuje až tam, kde končí poslední dalby/pacholata pro čekající plavidla. Plavební kanál je celý zakázanou zónou.</em></p>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<ul>
+  <li><strong>Varianta s &bdquo;jezem a přehradní nádrží s provozem velkých plavidel&ldquo;</strong> &mdash; míchá pravdivé prvky (zákaz u jezu skutečně existuje, ale řeší ho jiné ustanovení a jinou vzdáleností &mdash; typicky 50 m nad a pod jezem) s nepravdivým rámcem. Definice neodpovídá vyhlášce a úplně vynechává plavební kanály, které jsou klíčovou součástí správné odpovědi.</li>
+  <li><strong>Varianta &bdquo;všude, kde není koupání povoleno signálním znakem&ldquo;</strong> &mdash; obrací logiku naruby. Vodní cesta je <em>defaultně veřejná pro koupání</em>, pokud konkrétní zóna není vyhláškou nebo značkou (signálním znakem A.20 &bdquo;Zákaz koupání&ldquo;) zakázaná. Vyžadovat povolovací znak by znamenalo, že na 99&nbsp;% vodních ploch nesmíš plavat &mdash; to neplatí.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>V praxi to znamená: jakmile vidíš <strong>dalby, pacholata nebo plovoucí vyvazovací zařízení</strong> před komorou, jsi už v zakázané zóně &mdash; a to bez ohledu na to, jestli zrovna nějaké plavidlo proplouvá nebo ne. Stejně tak v <strong>plavebním kanálu</strong> (např. Vraňany&ndash;Hořín, Veselí&ndash;Vnorovy) je koupání plošně zakázáno po celé délce, ne jen v okolí komor.</p>
+
+<table>
+  <thead>
+    <tr><th>Místo</th><th>Koupání povoleno?</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Plavební komora</td><td>NE</td></tr>
+    <tr><td>Vodní plocha nad/pod komorou (k poslední dalbě)</td><td>NE</td></tr>
+    <tr><td>Plavební kanál</td><td>NE (v celé délce)</td></tr>
+    <tr><td>Volná vodní cesta mimo zakázané zóny</td><td>ANO, pokud není zakázáno značkou</td></tr>
+  </tbody>
+</table>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu &mdash; ustanovení o zákazu koupání a potápění v okolí plavebních komor a v plavebních kanálech</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

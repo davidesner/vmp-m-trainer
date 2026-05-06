@@ -1,0 +1,130 @@
+<h2>Vedení sestav malých plavidel — požadavek na výkon</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„plavidlo, s takovým výkonem strojů, aby byla zajištěna náležitá manévrovací schopnost sestavy."</em></p>
+
+<h3>Jádro</h3>
+<p>Princip je <strong>funkční, ne číselný</strong>. Vedoucí plavidlo (vlečné, tlačné, nebo to, které vede bočně svázanou sestavu) musí mít <strong>dostatek výkonu, aby celá sestava bezpečně manévrovala</strong> — to znamená udržet kurz, brzdit, zatáčet a reagovat na proud. Žádný pevný kW limit ani předepsaný počet členů posádky vyhláška pro tyhle případy <strong>nestanovuje</strong>; co je „dost" se posuzuje podle hmotnosti, délky, ponoru a podmínek.</p>
+
+<h3>Tři typy sestav — vizualizace</h3>
+<p>Vyhláška rozeznává tři způsoby, jak mohou být plavidla sdružená do sestavy. U všech platí stejné funkční pravidlo: <strong>vedoucí plavidlo musí mít výkon přiměřený celku</strong>.</p>
+
+<svg viewBox="0 0 820 540" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#eaf4fb;border:1px solid #c5dbeb;border-radius:8px">
+  <defs>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f4a7a"/>
+    </marker>
+  </defs>
+
+  <!-- Water background -->
+  <rect x="0" y="0" width="820" height="540" fill="#bcdcef"/>
+
+  <!-- ============== Row 1: VLEČNÁ (TOWING) ============== -->
+  <text x="20" y="30" font-size="14" font-weight="700" fill="#103047">1) Vlečná sestava — vedoucí plavidlo táhne za lano</text>
+
+  <!-- Direction arrow -->
+  <line x1="40" y1="50" x2="780" y2="50" stroke="#1f4a7a" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrBlue)"/>
+  <text x="785" y="54" font-size="10" fill="#1f4a7a" font-weight="700">směr plavby</text>
+
+  <!-- Tug (leading) -->
+  <g transform="translate(560 70)">
+    <polygon points="0,0 100,0 130,20 100,40 0,40" fill="#1f7a3a" stroke="#0a3d18" stroke-width="1.5"/>
+    <rect x="20" y="8" width="40" height="24" fill="#fff" stroke="#0a3d18"/>
+    <text x="65" y="25" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">vedoucí</text>
+  </g>
+  <text x="595" y="125" font-size="10" fill="#103047" font-weight="700" text-anchor="middle">motor + dostatečný výkon</text>
+
+  <!-- Towed vessel -->
+  <g transform="translate(280 75)">
+    <polygon points="0,0 100,0 130,15 100,30 0,30" fill="#d8a44a" stroke="#5b3a0e" stroke-width="1.5"/>
+    <text x="65" y="20" text-anchor="middle" font-size="11" font-weight="700">vlečené</text>
+  </g>
+  <text x="345" y="120" font-size="10" fill="#5b3a0e" text-anchor="middle">bez vlastního pohonu / s pomocným</text>
+
+  <!-- Tow line -->
+  <line x1="410" y1="90" x2="560" y2="90" stroke="#5b3a0e" stroke-width="2" stroke-dasharray="2 2"/>
+  <text x="485" y="84" text-anchor="middle" font-size="9" fill="#5b3a0e" font-style="italic">vlečné lano</text>
+
+  <!-- Separator -->
+  <line x1="20" y1="155" x2="800" y2="155" stroke="#7aa3c0" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- ============== Row 2: TLAČNÁ (PUSHING) ============== -->
+  <text x="20" y="180" font-size="14" font-weight="700" fill="#103047">2) Tlačná sestava — vedoucí plavidlo pevně tlačí před sebou</text>
+
+  <line x1="40" y1="200" x2="780" y2="200" stroke="#1f4a7a" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrBlue)"/>
+
+  <!-- Pushed barge (in front) -->
+  <g transform="translate(420 220)">
+    <polygon points="0,0 110,0 145,20 110,40 0,40" fill="#d8a44a" stroke="#5b3a0e" stroke-width="1.5"/>
+    <text x="70" y="25" text-anchor="middle" font-size="11" font-weight="700">tlačené</text>
+  </g>
+  <text x="490" y="275" font-size="10" fill="#5b3a0e" text-anchor="middle">bez vlastního pohonu</text>
+
+  <!-- Tug (pushing from behind) -->
+  <g transform="translate(280 220)">
+    <polygon points="0,0 130,0 140,20 130,40 0,40" fill="#1f7a3a" stroke="#0a3d18" stroke-width="1.5"/>
+    <rect x="40" y="8" width="40" height="24" fill="#fff" stroke="#0a3d18"/>
+    <text x="65" y="25" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">vedoucí</text>
+  </g>
+  <text x="345" y="275" font-size="10" fill="#103047" font-weight="700" text-anchor="middle">motor + dostatečný výkon</text>
+
+  <!-- Rigid coupling indicator -->
+  <line x1="420" y1="240" x2="420" y2="240" stroke="#0a3d18" stroke-width="3"/>
+  <rect x="416" y="230" width="8" height="20" fill="#0a3d18"/>
+  <text x="420" y="225" text-anchor="middle" font-size="9" fill="#0a3d18" font-style="italic">pevné spojení</text>
+
+  <line x1="20" y1="305" x2="800" y2="305" stroke="#7aa3c0" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- ============== Row 3: BOČNĚ SVÁZANÁ (SIDE-COUPLED) ============== -->
+  <text x="20" y="330" font-size="14" font-weight="700" fill="#103047">3) Bočně svázaná sestava — plavidla svázaná bok po boku</text>
+
+  <line x1="40" y1="350" x2="780" y2="350" stroke="#1f4a7a" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrBlue)"/>
+
+  <!-- Side-by-side: leading + side vessel -->
+  <!-- Top vessel (leading - with engine) -->
+  <g transform="translate(360 370)">
+    <polygon points="0,0 110,0 140,18 110,35 0,35" fill="#1f7a3a" stroke="#0a3d18" stroke-width="1.5"/>
+    <rect x="30" y="6" width="40" height="22" fill="#fff" stroke="#0a3d18"/>
+    <text x="75" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">vedoucí</text>
+  </g>
+  <text x="430" y="365" font-size="10" fill="#103047" font-weight="700" text-anchor="middle">motor + dostatečný výkon</text>
+
+  <!-- Bottom vessel (side-tied) -->
+  <g transform="translate(360 410)">
+    <polygon points="0,0 110,0 140,18 110,35 0,35" fill="#d8a44a" stroke="#5b3a0e" stroke-width="1.5"/>
+    <text x="70" y="22" text-anchor="middle" font-size="11" font-weight="700">připojené</text>
+  </g>
+  <text x="430" y="465" font-size="10" fill="#5b3a0e" text-anchor="middle">bez vlastního pohonu / pasivní</text>
+
+  <!-- Lashing lines (sidebands) -->
+  <line x1="380" y1="405" x2="380" y2="410" stroke="#5b3a0e" stroke-width="2"/>
+  <line x1="460" y1="405" x2="460" y2="410" stroke="#5b3a0e" stroke-width="2"/>
+  <text x="500" y="410" font-size="9" fill="#5b3a0e" font-style="italic">vázací lana</text>
+
+  <!-- Bottom legend -->
+  <rect x="20" y="490" width="780" height="40" fill="#fff" stroke="#c5dbeb"/>
+  <text x="40" y="510" font-size="12" font-weight="700" fill="#103047">Společné pravidlo všech tří typů:</text>
+  <text x="40" y="525" font-size="11" fill="#103047">vedoucí plavidlo musí mít <tspan font-weight="700" fill="#1f7a3a">takový výkon strojů, aby byla zajištěna náležitá manévrovací schopnost celé sestavy</tspan>.</text>
+</svg>
+
+<h3>Pozadí</h3>
+<p>Vyhláška <strong>č. 67/2015 Sb.</strong> o pravidlech plavebního provozu definuje tři způsoby sdružení plavidel — <strong>vlečná</strong>, <strong>tlačná</strong> a <strong>bočně svázaná sestava</strong>. U malých plavidel zákon necpe konkrétní hodnoty (kW, počet posádky), místo toho dává <strong>obecné kritérium bezpečnosti</strong>: vedoucí plavidlo musí dokázat sestavu bezpečně řídit, brzdit a manévrovat. Co je „dost" se posuzuje podle hmotnosti, délky, ponoru a aktuálních podmínek (proud, vítr, plavební komora atd.).</p>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>„Výkon motoru nejméně 110 kW, schopné sestavu zastavit i po proudu"</strong> — konkrétní číslo zní oficiálně, ale vyhláška ho <strong>pro malá plavidla neuvádí</strong>. 110 kW (≈ 150 koní) by navíc bylo absurdně vysoký požadavek pro vedení dvou kánoí svázaných bok po boku. Pravidlo „zastavit i po proudu" je správný princip, ale není navázáno na žádnou pevnou kW hodnotu.</li>
+  <li><strong>„Tříčlenná posádka, aby mohla být sestava bezpečně proplavena i plavební komorou"</strong> — počet posádky se odvíjí od velikosti a typu plavidla, ne od průjezdu komorou. Plavební komora <strong>není kritériem</strong> pro stanovení posádky sestavy; pravidla pro proplavování komory jsou samostatná kapitola.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Když chceš vést dvě nafukovací kánoe svázané bok po boku motorovým člunem uprostřed:</p>
+<ul>
+  <li>Není potřeba 110 kW motor — stačí ten, co normálně poháněl člun samotný a má rezervu pro setrvačnost dvojnásobné šíře.</li>
+  <li>Otestuj si manévr „nouzové zastavení" na klidné vodě. Pokud sestavu zastavíš v rozumné vzdálenosti a udržíš směr, máš <strong>náležitou manévrovací schopnost</strong>.</li>
+  <li>Při proudu nebo větru počítej, že sestava reaguje pomaleji — najetí na stání nebo do plavební komory plánuj s větší rezervou.</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — kapitola o sestavách plavidel</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě — obecné požadavky na bezpečnost provozu</li>
+</ul>

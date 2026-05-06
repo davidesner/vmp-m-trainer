@@ -1,0 +1,82 @@
+<h2>Jádro</h2>
+<p>Klíčové slovo je <strong>„na té straně"</strong>. Plavební znaky umístěné na břehu se vztahují <strong>jen ke straně vodní cesty, na které stojí</strong>. Když je znak <strong>A.6 — Zákaz vyvazování ke břehu</strong> umístěn na pravém břehu, vyvazovat se nesmí na pravém břehu. Levý břeh tím dotčen není (ledaže by tam byl jiný vlastní znak).</p>
+
+<h2>Vizualizace</h2>
+
+<h3>Jak vypadá znak A.6</h3>
+<p>Čtverec s <strong>červeným okrajem</strong>, bílým polem a <strong>červeným šikmým pruhem</strong> přes symbol vyvazovacího pacholete (poller).</p>
+
+<svg viewBox="0 0 200 200" width="180" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Znak A.6 zákaz vyvazování ke břehu">
+  <rect x="10" y="10" width="180" height="180" fill="#ffffff" stroke="#cc0000" stroke-width="14"/>
+  <!-- Symbol pacholete (bollard) s lanem -->
+  <g stroke="#000000" stroke-width="6" fill="#000000">
+    <rect x="80" y="100" width="40" height="60" fill="#000000"/>
+    <ellipse cx="100" cy="100" rx="22" ry="8" fill="#000000"/>
+    <path d="M 60 90 Q 70 60 100 70 Q 130 80 140 60" stroke="#000000" stroke-width="5" fill="none"/>
+  </g>
+  <!-- Šikmý červený pruh -->
+  <line x1="30" y1="170" x2="170" y2="30" stroke="#cc0000" stroke-width="14" stroke-linecap="round"/>
+</svg>
+
+<h3>Působnost znaku — jen jedna strana cesty</h3>
+<p>Znak v této ukázce stojí na <strong>pravém</strong> břehu. Vyvazování je zakázané jen na straně se znakem; protilehlá strana zákazem dotčená není.</p>
+
+<svg viewBox="0 0 600 280" width="100%" style="max-width: 600px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma vodní cesty se znakem A.6 na jednom břehu">
+  <!-- Levý břeh -->
+  <rect x="0" y="0" width="600" height="50" fill="#d9c89e"/>
+  <text x="20" y="32" font-family="sans-serif" font-size="14" fill="#5a4a20">Levý břeh — bez znaku, vyvazování povolené</text>
+  <!-- Voda -->
+  <rect x="0" y="50" width="600" height="180" fill="#7fb6d9"/>
+  <!-- Vlnky -->
+  <path d="M 20 110 Q 40 105 60 110 T 100 110 T 140 110 T 180 110" stroke="#5fa0c7" stroke-width="2" fill="none"/>
+  <path d="M 220 150 Q 240 145 260 150 T 300 150 T 340 150 T 380 150" stroke="#5fa0c7" stroke-width="2" fill="none"/>
+  <path d="M 420 180 Q 440 175 460 180 T 500 180 T 540 180" stroke="#5fa0c7" stroke-width="2" fill="none"/>
+  <!-- Pravý břeh -->
+  <rect x="0" y="230" width="600" height="50" fill="#d9c89e"/>
+  <text x="20" y="262" font-family="sans-serif" font-size="14" fill="#5a4a20">Pravý břeh — zde je znak A.6, vyvazování zakázané</text>
+
+  <!-- Loď OK na levém břehu -->
+  <g transform="translate(140, 60)">
+    <path d="M -30 0 L 30 0 L 24 14 L -24 14 Z" fill="#3a3a3a"/>
+    <rect x="-10" y="-12" width="20" height="12" fill="#666"/>
+    <!-- vyvázané lano -->
+    <line x1="-25" y1="2" x2="-50" y2="-12" stroke="#8a5a2b" stroke-width="2"/>
+    <text x="0" y="32" font-family="sans-serif" font-size="13" fill="#0a6b1f" text-anchor="middle" font-weight="bold">✓ OK</text>
+  </g>
+
+  <!-- Loď NE na pravém břehu -->
+  <g transform="translate(420, 200)">
+    <path d="M -30 0 L 30 0 L 24 14 L -24 14 Z" fill="#3a3a3a"/>
+    <rect x="-10" y="-12" width="20" height="12" fill="#666"/>
+    <!-- pokus o vyvázání lana -->
+    <line x1="25" y1="2" x2="50" y2="20" stroke="#8a5a2b" stroke-width="2"/>
+    <!-- křížek přes loď -->
+    <line x1="-32" y1="-14" x2="32" y2="16" stroke="#cc0000" stroke-width="4"/>
+    <line x1="32" y1="-14" x2="-32" y2="16" stroke="#cc0000" stroke-width="4"/>
+    <text x="0" y="-22" font-family="sans-serif" font-size="13" fill="#cc0000" text-anchor="middle" font-weight="bold">✗ ZÁKAZ</text>
+  </g>
+
+  <!-- Znak A.6 na pravém břehu -->
+  <g transform="translate(490, 240)">
+    <rect x="-22" y="-50" width="44" height="44" fill="#ffffff" stroke="#cc0000" stroke-width="4"/>
+    <rect x="-8" y="-32" width="16" height="20" fill="#000000"/>
+    <line x1="-22" y1="-10" x2="22" y2="-50" stroke="#cc0000" stroke-width="4"/>
+    <!-- sloupek -->
+    <rect x="-2" y="-6" width="4" height="14" fill="#5a4a20"/>
+  </g>
+</svg>
+
+<h2>Proč ne ostatní možnosti</h2>
+<ul>
+  <li><strong>„Ani na protilehlé straně" je nesprávné.</strong> Princip „jeden znak = obě strany" pro skupinu zákazových znaků <strong>neplatí</strong>. Aby zákaz platil i na druhém břehu, musel by tam stát samostatný znak.</li>
+  <li><strong>„Pouze plavidla s větším ponorem" je nesprávné.</strong> Plete si dvě věci — zákaz vyvazování <strong>není</strong> vázaný na ponor. Ponor řeší jiný typ znaku (omezení ponoru). Znak A.6 platí pro <strong>všechna plavidla</strong>.</li>
+</ul>
+
+<h2>Praktická aplikace</h2>
+<p>Když plánuješ stání u břehu (přespání, nakládku, odpočinek), <strong>dívej se na bližší břeh</strong>. Pokud tam stojí A.6, přejdi na druhou stranu — ale i tam zkontroluj, jestli nestojí jiný zákaz. Zákazy se <strong>neaplikují „přes řeku"</strong>.</p>
+
+<h2>Zdroje</h2>
+<ul>
+  <li>vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha se signálními znaky — skupina A (zákazové znaky), znak <strong>A.6 Zákaz vyvazování ke břehu</strong></li>
+  <li>obecné pravidlo působnosti zákazových znaků: platí pro stranu vodní cesty, na které je znak umístěn</li>
+</ul>

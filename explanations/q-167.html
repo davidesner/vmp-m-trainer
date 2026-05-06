@@ -1,0 +1,106 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Jádro</h2>
+    <p>Schéma odpovídá <strong>noční signalizaci motorového plavidla plujícího samostatně</strong>: bílé stěžňové světlo vpředu nahoře, červený bočník na levoboku, zelený bočník na pravoboku a bílé záďové světlo. Tahle čtveřice je standardní "noční noticka" pro plavidlo s vlastním pohonem za plavby.</p>
+  </section>
+
+  <section>
+    <h2>Vizualizace — co která světla znamenají</h2>
+    <p>Vlevo schéma jako v testu (boční pohled, oba bočníky pro názornost). Vpravo pohled shora s vyznačenými úhly viditelnosti jednotlivých světel.</p>
+
+    <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;height:auto;background:#0a1020;border-radius:8px">
+      <!-- LEVÁ ČÁST: schéma jako v testu -->
+      <g>
+        <text x="20" y="22" fill="#cfd6e4" font-family="sans-serif" font-size="13" font-weight="600">Schéma z testu (boční pohled)</text>
+
+        <!-- vlnky -->
+        <path d="M10,260 q15,-10 30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0"
+              stroke="#fff" stroke-width="2" fill="none"/>
+        <path d="M10,275 q15,-10 30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0"
+              stroke="#fff" stroke-width="1.5" fill="none"/>
+
+        <!-- trup -->
+        <polygon points="40,255 280,255 305,225 70,225" fill="#1f2a40" stroke="#cfd6e4" stroke-width="1.5"/>
+        <!-- nadstavba -->
+        <rect x="100" y="180" width="50" height="45" fill="#1f2a40" stroke="#cfd6e4" stroke-width="1.5"/>
+        <!-- stěžeň -->
+        <line x1="220" y1="225" x2="220" y2="100" stroke="#cfd6e4" stroke-width="2"/>
+
+        <!-- BÍLÉ stěžňové (vrchol stěžně) -->
+        <circle cx="220" cy="100" r="9" fill="#fff" stroke="#cfd6e4" stroke-width="1.5"/>
+        <text x="235" y="105" fill="#cfd6e4" font-family="sans-serif" font-size="11">stěžňové (bílé)</text>
+
+        <!-- BÍLÉ záďové -->
+        <circle cx="60" cy="240" r="7" fill="#fff" stroke="#cfd6e4" stroke-width="1.5"/>
+        <text x="20" y="215" fill="#cfd6e4" font-family="sans-serif" font-size="11">záďové (bílé)</text>
+
+        <!-- ČERVENÝ bočník (levobok) -->
+        <rect x="165" y="200" width="14" height="14" fill="#e23b3b" stroke="#cfd6e4" stroke-width="1"/>
+        <text x="160" y="195" fill="#cfd6e4" font-family="sans-serif" font-size="11">levobok (červ.)</text>
+
+        <!-- ZELENÝ bočník (pravobok) -->
+        <rect x="165" y="232" width="14" height="14" fill="#1aa55a" stroke="#cfd6e4" stroke-width="1"/>
+        <text x="155" y="270" fill="#cfd6e4" font-family="sans-serif" font-size="11">pravobok (zel.)</text>
+      </g>
+
+      <!-- dělící čára -->
+      <line x1="370" y1="40" x2="370" y2="300" stroke="#3a4660" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <!-- PRAVÁ ČÁST: pohled shora s úhly viditelnosti -->
+      <g transform="translate(380,0)">
+        <text x="10" y="22" fill="#cfd6e4" font-family="sans-serif" font-size="13" font-weight="600">Pohled shora — úhly viditelnosti</text>
+
+        <!-- výseče: stěžňové bílé (přední 225°) -->
+        <path d="M170,180 L290,100 A140,140 0 0,0 50,100 Z" fill="#ffffff" fill-opacity="0.18"/>
+        <!-- záďové bílé (zadní 135°) -->
+        <path d="M170,180 L80,260 A100,100 0 0,0 260,260 Z" fill="#ffffff" fill-opacity="0.10"/>
+        <!-- červený levobok 112.5° -->
+        <path d="M170,180 L50,100 A140,140 0 0,0 80,255 Z" fill="#e23b3b" fill-opacity="0.22"/>
+        <!-- zelený pravobok 112.5° -->
+        <path d="M170,180 L290,100 A140,140 0 0,1 260,255 Z" fill="#1aa55a" fill-opacity="0.22"/>
+
+        <!-- silueta plavidla shora -->
+        <polygon points="170,120 200,170 200,230 140,230 140,170" fill="#1f2a40" stroke="#cfd6e4" stroke-width="1.5"/>
+        <!-- příď (nahoře) -->
+        <text x="160" y="115" fill="#cfd6e4" font-family="sans-serif" font-size="10">PŘÍĎ</text>
+        <!-- záď (dole) -->
+        <text x="162" y="248" fill="#cfd6e4" font-family="sans-serif" font-size="10">ZÁĎ</text>
+
+        <!-- světla na siluetě -->
+        <circle cx="170" cy="135" r="5" fill="#fff"/>
+        <circle cx="140" cy="200" r="4" fill="#e23b3b"/>
+        <circle cx="200" cy="200" r="4" fill="#1aa55a"/>
+        <circle cx="170" cy="230" r="4" fill="#fff"/>
+
+        <!-- legenda úhlů -->
+        <text x="10" y="285" fill="#cfd6e4" font-family="sans-serif" font-size="10">Bílé stěžňové: 225° dopředu · Bočníky: 112,5° každá strana · Záďové: 135° dozadu</text>
+      </g>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Proč ne ostatní možnosti</h2>
+    <ul>
+      <li><strong>Převozní loď, která nepluje volně</strong> — má navíc <strong>zelené kruhové světlo</strong> nad stěžňovým bílým (signalizuje pohyb po laně/kabelu, resp. typ převozu). Bez tohoto doplňku to nemůže být převozní loď.</li>
+      <li><strong>Plavidlo s přednostním proplutím</strong> — nese navíc <strong>červený válec</strong> (denní znak) nebo specifickou doplňkovou světelnou kombinaci přidělenou plavebním úřadem. Sama základní čtveřice (stěžňové + bočníky + záďové) přednost nesignalizuje.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <p>V noci na vodě je tahle čtveřice světel základní "podpis" motorového plavidla v jízdě. Podle toho, co uvidíš jako protijedoucí, poznáš geometrii setkání:</p>
+    <ul>
+      <li><strong>Bílé + červené + zelené najednou</strong> = vidíš plavidlo zepředu (jede proti tobě).</li>
+      <li><strong>Bílé + jen jeden bočník</strong> = vidíš plavidlo z boku. Červený = jde zleva doprava (jeho levobok); zelený = zprava doleva (jeho pravobok).</li>
+      <li><strong>Jen bílé záďové</strong> = plavidlo se vzdaluje.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ul>
+      <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — část o signalizaci plavidel za plavby v noci (stěžňové, bočníková a záďová světla samostatně plujícího plavidla s vlastním pohonem).</li>
+      <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — obecný rámec.</li>
+    </ul>
+  </section>
+</article>

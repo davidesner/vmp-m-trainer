@@ -1,0 +1,119 @@
+<h2>Vlečné lano při vodním lyžování — kdy nesmí být vlečeno</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„pokud se ho nedrží vodní lyžař."</em></p>
+
+<h3>Jádro</h3>
+<p>Jakmile lyžař spadne nebo lano pustí, <strong>prázdné lano se nesmí dál vléct za plavidlem</strong>. Doprovodná osoba (případně řidič po zastavení nebo zpomalení) ho musí <strong>okamžitě stáhnout na palubu</strong>. Důvod je čistě bezpečnostní — vlečené lano za pohybující se lodí má vysokou kinetickou energii a špatnou viditelnost na hladině, takže může:</p>
+<ul>
+  <li>zasáhnout a zranit jiného účastníka plavby (plavce, paddleboardistu, dalšího lyžaře)</li>
+  <li>zachytit se o překážku, jiné plavidlo nebo bóji</li>
+  <li>namotat se do <strong>vlastního lodního šroubu</strong>, což typicky znamená motor v háji a riziko, že lano švihne</li>
+</ul>
+
+<h3>Vizualizace — povolený vs. zakázaný stav</h3>
+
+<p>Vlevo situace, která je v pořádku — lyžař drží rukojeť, lano je „obsazené". Vpravo přesně to, co vyhláška zakazuje — lyžař spadl, ale plavidlo dál táhne lano za sebou.</p>
+
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:system-ui,sans-serif">
+  <defs>
+    <linearGradient id="water" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- LEFT PANEL: OK -->
+  <rect x="10" y="10" width="360" height="300" fill="url(#water)" rx="6"/>
+  <rect x="10" y="10" width="360" height="300" fill="none" stroke="#16a34a" stroke-width="2" rx="6"/>
+  <text x="20" y="35" font-size="14" font-weight="700" fill="#16a34a">POVOLENO — lyžař drží lano</text>
+
+  <!-- Boat (left) -->
+  <g transform="translate(40,140)">
+    <polygon points="0,15 70,15 80,5 80,25 70,35 0,35" fill="#1e293b"/>
+    <rect x="20" y="-5" width="35" height="20" fill="#475569" rx="2"/>
+    <circle cx="35" cy="5" r="3" fill="#fbbf24"/>
+    <text x="35" y="55" font-size="10" fill="#1e293b" text-anchor="middle">plavidlo</text>
+  </g>
+
+  <!-- Wake -->
+  <path d="M 50,160 Q 90,145 130,158 Q 170,170 210,158 Q 250,145 290,158" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+  <path d="M 50,170 Q 90,155 130,168 Q 170,180 210,168 Q 250,155 290,168" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Rope taut -->
+  <line x1="120" y1="150" x2="290" y2="195" stroke="#dc2626" stroke-width="2.5"/>
+
+  <!-- Skier -->
+  <g transform="translate(290,195)">
+    <!-- Body -->
+    <circle cx="0" cy="-12" r="6" fill="#fbbf24"/>
+    <line x1="0" y1="-6" x2="0" y2="14" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arms holding rope -->
+    <line x1="0" y1="-2" x2="-12" y2="-5" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Handle -->
+    <rect x="-18" y="-8" width="8" height="6" fill="#1e293b"/>
+    <!-- Skis -->
+    <line x1="-15" y1="20" x2="15" y2="20" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+    <text x="0" y="40" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="600">drží rukojeť</text>
+  </g>
+
+  <text x="190" y="280" font-size="11" fill="#16a34a" text-anchor="middle" font-style="italic">lano má funkci, lyžař ho ovládá</text>
+
+  <!-- RIGHT PANEL: FORBIDDEN -->
+  <rect x="390" y="10" width="360" height="300" fill="url(#water)" rx="6"/>
+  <rect x="390" y="10" width="360" height="300" fill="none" stroke="#dc2626" stroke-width="2" rx="6"/>
+  <text x="400" y="35" font-size="14" font-weight="700" fill="#dc2626">ZAKÁZÁNO — lyžař lano nedrží</text>
+
+  <!-- Boat (right) -->
+  <g transform="translate(420,140)">
+    <polygon points="0,15 70,15 80,5 80,25 70,35 0,35" fill="#1e293b"/>
+    <rect x="20" y="-5" width="35" height="20" fill="#475569" rx="2"/>
+    <circle cx="35" cy="5" r="3" fill="#fbbf24"/>
+    <text x="35" y="55" font-size="10" fill="#1e293b" text-anchor="middle">plavidlo pluje dál</text>
+  </g>
+
+  <!-- Wake -->
+  <path d="M 430,160 Q 470,145 510,158 Q 550,170 590,158 Q 630,145 670,158" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+  <path d="M 430,170 Q 470,155 510,168 Q 550,180 590,168 Q 630,155 670,168" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Rope dragging loose, snaking -->
+  <path d="M 500,150 Q 540,170 580,180 Q 620,195 660,200 Q 700,205 720,210" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="4,2"/>
+
+  <!-- Free-floating handle -->
+  <rect x="715" y="206" width="10" height="8" fill="#1e293b"/>
+  <text x="720" y="230" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="600">prázdná rukojeť</text>
+
+  <!-- Fallen skier in the water (further back) -->
+  <g transform="translate(560,235)">
+    <ellipse cx="0" cy="0" rx="14" ry="4" fill="#0c4a6e" opacity="0.4"/>
+    <circle cx="0" cy="-3" r="5" fill="#fbbf24"/>
+    <line x1="-8" y1="-2" x2="-15" y2="3" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="8" y1="-2" x2="15" y2="3" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+    <text x="0" y="22" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="600">lyžař spadl</text>
+  </g>
+
+  <!-- Warning -->
+  <text x="570" y="285" font-size="11" fill="#dc2626" text-anchor="middle" font-style="italic">lano je nutno okamžitě stáhnout na palubu</text>
+</svg>
+
+<h3>Pozadí</h3>
+<p>Pravidla vodního lyžování (a obecně vlečení osob za plavidlem) řeší <strong>vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu</strong>. Souběžně platí, že:</p>
+<ul>
+  <li>na plavidle musí být kromě vůdce ještě <strong>doprovodná osoba</strong>, která sleduje lyžaře a v případě pádu zajistí vytažení lana</li>
+  <li>lyžař musí mít možnost <strong>se kdykoliv pustit</strong> — lano se nesmí připoutat k tělu</li>
+  <li>vlečení smí probíhat jen <strong>za denní viditelnosti</strong> a v plavebně vhodných místech (ne v zúžených úsecích, blízko mol, plavebních značek apod.)</li>
+</ul>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Varianta s neplovoucím lanem.</strong> Plovoucí lana jsou doporučená (lépe vidět, neklesnou pod hladinu k šroubu), ale vyhláška <em>neukládá</em> povinnost mít právě plovoucí lano. Jako důvod zákazu vlečení tedy neobstojí.</li>
+  <li><strong>Varianta s délkou lana přes 10 m.</strong> Standardní vlečné lano pro lyžování má <strong>18–23 m</strong>, takže limit 10 m by znamenal, že běžné vybavení by bylo nelegální. Žádný takový limit v pravidlech není.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Posádka při vlečení má jasné role: <strong>vůdce</strong> řídí plavidlo a sleduje vodní situaci před sebou, <strong>doprovodná osoba</strong> sedí čelem dozadu a sleduje lyžaře. Jakmile lyžař spadne, doprovod dá vůdci signál, ten zpomalí, otočí se zpět k lyžaři a doprovod během obratu <strong>stáhne lano na palubu</strong>. Pokud řidič jen tak krouží s vlekoucím se lanem, je to porušení pravidel — i kdyby se nic nestalo.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu (sekce o vlečení vodních lyžařů)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

@@ -1,0 +1,10 @@
+{
+  "qid": 132,
+  "generated_at": "2026-05-06T00:00:00Z",
+  "sources": [
+    "Zákon č. 114/1995 Sb. o vnitrozemské plavbě",
+    "Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu",
+    "Vyhláška č. 46/2015 Sb. o stanovení vodních cest a jejich klasifikaci"
+  ],
+  "model": "claude-opus-4-7"
+}

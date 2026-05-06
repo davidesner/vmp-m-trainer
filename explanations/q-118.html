@@ -1,0 +1,197 @@
+<h2>Kotvy v plavebních komorách — proč úplně nahoře</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„úplně v plavebních komorách, ale i v místech určených pro čekání u plavebních komor, pokud nejsou použity k zakotvení plavidel."</em></p>
+
+<p>Klíčové slovo je <strong>„úplně"</strong> — kotva musí být celá nahoře, ne částečně, ne k hladině. Toto pravidlo platí jak <strong>uvnitř komory</strong>, tak i <strong>v rejdě</strong> (v místě pro čekání). Jediná výjimka: pokud kotva právě <em>aktivně</em> drží plavidlo na místě.</p>
+
+<h3>Pozadí — proč zrovna „úplně"</h3>
+
+<p>Plavební komora je <strong>uzavřený prostor s proměnnou hladinou</strong>. Při proplavování se hladina mění o jednotky až desítky metrů, plavidla stojí blízko sebe, dno komory má prahy a stěny mají různá vestavění (stupně, žebříky, uvazovací plovoucí piloty). Visící kotva v tomto prostředí znamená tři druhy škody:</p>
+
+<ul>
+  <li><strong>Mechanické poškození komory</strong> — kotva může poškrábat nebo prorazit stěnu komory, vrata, plovoucí piloty.</li>
+  <li><strong>Zaseknutí kotvy</strong> — při poklesu vody se kotva octne pod hladinou nebo na dně, zachytí se o hranu prahu, žebřík nebo o sousední plavidlo. Plavidlo je pak v komoře „uvázané" jinak, než zamýšlelo, a může se vážně poškodit, když se vrata otevřou a vody odplyne.</li>
+  <li><strong>Poškození jiných plavidel</strong> — v komoře stojí lodě těsně vedle sebe, visící kotva při manévru kontaktuje sousední plavidlo dřív než trup.</li>
+</ul>
+
+<p>Stejná logika platí v <strong>rejdě komory</strong> (místo pro čekání) — plavidla tam manévrují blízko sebe, sdružují se do skupin před vplutím a hladina se může lišit od hladiny v komoře. Předpis: <strong>vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu</strong> (oddíl o plavbě v plavebních komorách).</p>
+
+<h3>Vizualizace — co se stane při proplavování</h3>
+
+<svg viewBox="0 0 820 480" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Porovnání: kotva úplně zdvižená vs. kotva u hladiny při poklesu vody v plavební komoře</title>
+  <desc>Dva paralelní řezy plavební komorou. Vlevo plavidlo s úplně zdviženou kotvou — bezpečné při poklesu hladiny. Vpravo plavidlo s kotvou u hladiny — při poklesu hladiny se kotva zachytí o dno nebo o práh komory.</desc>
+
+  <rect x="0" y="0" width="820" height="480" style="fill:#f8fafc"/>
+
+  <text x="205" y="24" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#15803d">SPRÁVNĚ — kotva úplně nahoře</text>
+  <text x="615" y="24" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#b91c1c">ŠPATNĚ — kotva u hladiny</text>
+
+  <line x1="410" y1="40" x2="410" y2="460" style="stroke:#cbd5e1;stroke-width:1;stroke-dasharray:4 3"/>
+
+  <!-- LEFT: Correct - vessel with fully raised anchor -->
+  <!-- Top scene: full water -->
+  <g transform="translate(20,40)">
+    <text x="190" y="14" text-anchor="middle" style="font-size:11px;font-style:italic;fill:#475569">Komora plná → komora prázdná (proplavování dolů)</text>
+
+    <!-- Lock chamber walls -->
+    <rect x="10" y="20" width="370" height="170" style="fill:#f1f5f9;stroke:#475569;stroke-width:2"/>
+
+    <!-- Water at high level -->
+    <rect x="10" y="50" width="370" height="65" style="fill:#bfdbfe"/>
+    <path d="M 10 53 Q 60 50, 110 53 T 210 53 T 310 53 T 380 53" style="fill:none;stroke:#60a5fa;stroke-width:1.2"/>
+
+    <!-- Lock floor -->
+    <rect x="10" y="180" width="370" height="10" style="fill:#78716c"/>
+    <!-- Threshold/sill -->
+    <rect x="350" y="170" width="30" height="20" style="fill:#57534e;stroke:#44403c;stroke-width:1"/>
+    <text x="365" y="200" text-anchor="middle" style="font-size:8px;fill:#57534e">práh</text>
+
+    <!-- Vessel -->
+    <g transform="translate(80,30)">
+      <path d="M 0 28 L 0 5 L 180 5 L 200 28 Z" style="fill:#fef3c7;stroke:#92400e;stroke-width:1.5"/>
+      <rect x="40" y="-22" width="100" height="27" style="fill:#fef3c7;stroke:#92400e;stroke-width:1.5"/>
+      <!-- Anchor fully raised - in hawsepipe -->
+      <circle cx="195" cy="14" r="4" style="fill:#1f2937"/>
+      <text x="195" y="-2" text-anchor="middle" style="font-size:8px;fill:#15803d;font-weight:700">▲ kotva</text>
+    </g>
+
+    <!-- Label -->
+    <text x="190" y="215" text-anchor="middle" style="font-size:10px;fill:#15803d;font-weight:600">kotva v kluzu (hawse pipe), nezasahuje do vody</text>
+  </g>
+
+  <!-- Bottom scene: empty water - LEFT (correct) -->
+  <g transform="translate(20,250)">
+    <rect x="10" y="20" width="370" height="170" style="fill:#f1f5f9;stroke:#475569;stroke-width:2"/>
+
+    <!-- Water at low level -->
+    <rect x="10" y="155" width="370" height="25" style="fill:#bfdbfe"/>
+    <path d="M 10 158 Q 60 155, 110 158 T 210 158 T 310 158 T 380 158" style="fill:none;stroke:#60a5fa;stroke-width:1.2"/>
+
+    <!-- Lock floor -->
+    <rect x="10" y="180" width="370" height="10" style="fill:#78716c"/>
+    <rect x="350" y="170" width="30" height="20" style="fill:#57534e;stroke:#44403c;stroke-width:1"/>
+
+    <!-- Vessel sits low -->
+    <g transform="translate(80,135)">
+      <path d="M 0 28 L 0 5 L 180 5 L 200 28 Z" style="fill:#fef3c7;stroke:#92400e;stroke-width:1.5"/>
+      <rect x="40" y="-22" width="100" height="27" style="fill:#fef3c7;stroke:#92400e;stroke-width:1.5"/>
+      <!-- Anchor still fully raised -->
+      <circle cx="195" cy="14" r="4" style="fill:#1f2937"/>
+      <text x="195" y="-2" text-anchor="middle" style="font-size:8px;fill:#15803d;font-weight:700">▲ stále nahoře</text>
+    </g>
+
+    <text x="190" y="215" text-anchor="middle" style="font-size:10px;fill:#15803d;font-weight:600">Hladina klesla — kotva se nezachytila o nic. ✓</text>
+  </g>
+
+  <!-- RIGHT: Wrong - vessel with anchor at waterline -->
+  <!-- Top scene: full water -->
+  <g transform="translate(430,40)">
+    <text x="190" y="14" text-anchor="middle" style="font-size:11px;font-style:italic;fill:#475569">Komora plná → komora prázdná (proplavování dolů)</text>
+
+    <rect x="10" y="20" width="370" height="170" style="fill:#f1f5f9;stroke:#475569;stroke-width:2"/>
+
+    <rect x="10" y="50" width="370" height="65" style="fill:#bfdbfe"/>
+    <path d="M 10 53 Q 60 50, 110 53 T 210 53 T 310 53 T 380 53" style="fill:none;stroke:#60a5fa;stroke-width:1.2"/>
+
+    <rect x="10" y="180" width="370" height="10" style="fill:#78716c"/>
+    <rect x="350" y="170" width="30" height="20" style="fill:#57534e;stroke:#44403c;stroke-width:1"/>
+    <text x="365" y="200" text-anchor="middle" style="font-size:8px;fill:#57534e">práh</text>
+
+    <g transform="translate(80,30)">
+      <path d="M 0 28 L 0 5 L 180 5 L 200 28 Z" style="fill:#fef3c7;stroke:#92400e;stroke-width:1.5"/>
+      <rect x="40" y="-22" width="100" height="27" style="fill:#fef3c7;stroke:#92400e;stroke-width:1.5"/>
+      <!-- Anchor hanging at water level -->
+      <line x1="200" y1="20" x2="200" y2="50" style="stroke:#1f2937;stroke-width:1.5"/>
+      <g transform="translate(200,52)">
+        <line x1="0" y1="-3" x2="0" y2="8" style="stroke:#1f2937;stroke-width:1.8"/>
+        <path d="M -7 5 Q 0 14, 7 5" style="fill:none;stroke:#1f2937;stroke-width:1.8"/>
+        <line x1="-7" y1="5" x2="-9" y2="2" style="stroke:#1f2937;stroke-width:1.8"/>
+        <line x1="7" y1="5" x2="9" y2="2" style="stroke:#1f2937;stroke-width:1.8"/>
+        <line x1="-5" y1="-3" x2="5" y2="-3" style="stroke:#1f2937;stroke-width:1.8"/>
+      </g>
+      <text x="200" y="-2" text-anchor="middle" style="font-size:8px;fill:#b91c1c;font-weight:700">u hladiny</text>
+    </g>
+
+    <text x="190" y="215" text-anchor="middle" style="font-size:10px;fill:#b91c1c;font-weight:600">Vypadá nevinně — dokud se hladina nezačne snižovat…</text>
+  </g>
+
+  <!-- Bottom scene: empty water - RIGHT (wrong) -->
+  <g transform="translate(430,250)">
+    <rect x="10" y="20" width="370" height="170" style="fill:#fef2f2;stroke:#b91c1c;stroke-width:2"/>
+
+    <rect x="10" y="155" width="370" height="25" style="fill:#bfdbfe"/>
+    <path d="M 10 158 Q 60 155, 110 158 T 210 158 T 310 158 T 380 158" style="fill:none;stroke:#60a5fa;stroke-width:1.2"/>
+
+    <rect x="10" y="180" width="370" height="10" style="fill:#78716c"/>
+    <rect x="350" y="170" width="30" height="20" style="fill:#57534e;stroke:#44403c;stroke-width:1"/>
+
+    <g transform="translate(80,135)">
+      <path d="M 0 28 L 0 5 L 180 5 L 200 28 Z" style="fill:#fef3c7;stroke:#92400e;stroke-width:1.5"/>
+      <rect x="40" y="-22" width="100" height="27" style="fill:#fef3c7;stroke:#92400e;stroke-width:1.5"/>
+      <!-- Anchor stayed at the original water level — now caught on the threshold/sill -->
+      <line x1="200" y1="20" x2="270" y2="35" style="stroke:#dc2626;stroke-width:2"/>
+      <g transform="translate(270,38)">
+        <line x1="0" y1="-3" x2="0" y2="8" style="stroke:#1f2937;stroke-width:1.8"/>
+        <path d="M -7 5 Q 0 14, 7 5" style="fill:none;stroke:#1f2937;stroke-width:1.8"/>
+        <line x1="-7" y1="5" x2="-9" y2="2" style="stroke:#1f2937;stroke-width:1.8"/>
+        <line x1="7" y1="5" x2="9" y2="2" style="stroke:#1f2937;stroke-width:1.8"/>
+        <line x1="-5" y1="-3" x2="5" y2="-3" style="stroke:#1f2937;stroke-width:1.8"/>
+      </g>
+      <text x="270" y="62" text-anchor="middle" style="font-size:9px;fill:#b91c1c;font-weight:700">⚠ zachycena o práh</text>
+    </g>
+
+    <text x="190" y="215" text-anchor="middle" style="font-size:10px;fill:#b91c1c;font-weight:600">Hladina klesla, kotva uvázla — plavidlo je tažené dolů ✗</text>
+  </g>
+</svg>
+
+<p style="font-size:13px;color:#475569;margin-top:-4px"><em>Schéma: dva paralelní průběhy proplavování dolů. <strong>Vlevo</strong> kotva v kluzu (hawse pipe) — při poklesu hladiny se nestane nic. <strong>Vpravo</strong> kotva visí na hladině — při poklesu hladina odejde, kotva ale zůstane viset, zachytí se o práh / dno / vestavbu komory a může strhnout plavidlo nebo poškodit komoru.</em></p>
+
+<h3>Srovnání variant</h3>
+
+<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:13.5px">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Co se říká</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8;width:80px">Hodnocení</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Proč</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Kotvy musí být <strong>úplně</strong> zdviženy v komorách <strong>i v místech pro čekání</strong>, pokud nejsou použity k zakotvení plavidel.</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;color:#15803d;font-weight:700">SPRÁVNĚ</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Pokrývá <em>jak</em> (úplně) i <em>kde</em> (komora + rejda) i <em>výjimku</em> (aktivní zakotvení). Kompletní formulace odpovídající předpisu.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Kotvy stačí zdvihnout <strong>do úrovně hladiny</strong>, aby je bylo možné v případě potřeby snadno použít.</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;color:#b91c1c;font-weight:700">ŠPATNĚ</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Hladina v komoře <strong>aktivně klesá nebo stoupá</strong>. Kotva u hladiny se při poklesu vody zachytí o dno, práh nebo vestavbu komory. Argument „pro snadné použití" v komoře nedává smysl — v komoře se nezakotvuje volně, drží se uvazováním na piloty/úvazníky.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px">Kotvy musí být zdviženy, <strong>pokud nejsou použity k zakotvení</strong> v komoře nebo v místě pro čekání.</td>
+      <td style="padding:8px;color:#b91c1c;font-weight:700">ŠPATNĚ</td>
+      <td style="padding:8px">Říká jen <em>kdy</em> nezvedat (když se kotví), ale <strong>vynechává „úplně"</strong>. Po této formulaci by stačilo zvednout kotvu jakkoliv — třeba k hladině, což je přesně to, co předpis zakazuje.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+
+<ol>
+  <li>Před vplutím do <strong>rejdy komory</strong> zkontroluj, že kotva je vytažena <strong>úplně do kluzu</strong> (hawse pipe) a zajištěna proti samovolnému puštění.</li>
+  <li>V komoře plavidlo držíš <strong>uvazováním</strong> — na pevné úvazníky, plovoucí piloty, případně jiné určené prvky. Kotvu nepoužíváš.</li>
+  <li>Stejné pravidlo platí v <strong>místě pro čekání</strong> u komory — zvedni kotvu úplně, drž se motorem nebo (pokud to plavební orgán umožňuje) krátce zakotvi mimo dráhu manévrujících plavidel.</li>
+  <li>Výjimka „pokud nejsou použity k zakotvení plavidel" pokrývá situaci, kdy je kotvení v rejdě výslovně povolené — pak kotva pochopitelně dole zůstane.</li>
+</ol>
+
+<h3>Pomůcka pro zapamatování</h3>
+
+<p>V plavební komoře platí logika: <strong>kotva = riziko</strong>. Hladina se hýbe, prostor je úzký, dno má prahy. Proto buď je kotva <em>úplně nahoře</em>, nebo <em>aktivně drží plavidlo</em>. Mezi tím není žádný „kompromis u hladiny" — to je past, kterou předpis cíleně vylučuje.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. <a href="https://www.zakonyprolidi.cz/cs/2015-67">67/2015 Sb.</a>, o pravidlech plavebního provozu — režim plavby v plavebních komorách a v místech pro čekání.</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — obecná povinnost vůdce plavidla zajistit bezpečnost provozu a předcházet poškození vodní cesty.</li>
+</ul>

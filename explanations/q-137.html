@@ -1,0 +1,136 @@
+<h2>Stání pod mosty a pod elektrickým vedením VN</h2>
+
+<p><strong>Správná odpověď je zcela obecná: <em>„plavidla nesmí stát."</em></strong> Bez výjimek, bez podmínek, bez ohledu na typ plavidla nebo šířku plavební dráhy.</p>
+
+<h3>Jádro</h3>
+
+<p>Pod mosty a pod elektrickým vedením vysokého napětí platí <strong>plošný zákaz stání pro všechna plavidla</strong> — malá i velká, s nákladem i bez. Není to omezení vázané na konkrétní podmínky (šířku dráhy, typ plavidla). Vychází to z <strong>vyhlášky č. 67/2015 Sb., o pravidlech plavebního provozu, § 7</strong> (zákaz stání), kde je mezi vyjmenovanými místy explicitně i prostor pod mosty a pod elektrickým vedením vysokého napětí.</p>
+
+<h3>Vizualizace — proč zrovna tady</h3>
+
+<p>Schématický boční pohled na úsek vodní cesty s mostem a vedením VN. Červeně vyznačené zóny jsou oblasti, kde plavidlo <strong>nesmí stát</strong>. Plavidlo musí být odstaveno mimo svislou projekci mostu i vedení.</p>
+
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;height:auto;background:#f0f7fb;border:1px solid #cbd5e1;border-radius:8px">
+  <defs>
+    <pattern id="hatch137" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#dc2626" stroke-width="2" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="800" height="260" fill="#e0f2fe"/>
+  <!-- Water -->
+  <rect x="0" y="260" width="800" height="80" fill="#7dd3fc"/>
+  <line x1="0" y1="260" x2="800" y2="260" stroke="#0284c7" stroke-width="2"/>
+  <!-- Riverbed below -->
+  <rect x="0" y="340" width="800" height="40" fill="#a3a380"/>
+
+  <!-- Bridge piers -->
+  <rect x="170" y="180" width="30" height="160" fill="#78716c" stroke="#44403c" stroke-width="1.5"/>
+  <rect x="320" y="180" width="30" height="160" fill="#78716c" stroke="#44403c" stroke-width="1.5"/>
+  <!-- Bridge deck -->
+  <rect x="120" y="160" width="280" height="25" fill="#57534e" stroke="#292524" stroke-width="1.5"/>
+  <rect x="120" y="155" width="280" height="6" fill="#a8a29e"/>
+  <!-- Bridge railings -->
+  <line x1="120" y1="155" x2="400" y2="155" stroke="#1c1917" stroke-width="1"/>
+  <text x="260" y="148" text-anchor="middle" font-size="13" fill="#1f2937" font-family="sans-serif" font-weight="bold">MOST</text>
+
+  <!-- Forbidden zone under bridge -->
+  <rect x="200" y="185" width="120" height="155" fill="url(#hatch137)" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- VN power line pylons -->
+  <line x1="540" y1="340" x2="540" y2="60" stroke="#475569" stroke-width="3"/>
+  <line x1="720" y1="340" x2="720" y2="60" stroke="#475569" stroke-width="3"/>
+  <!-- Pylon cross-arms -->
+  <line x1="510" y1="80" x2="570" y2="80" stroke="#475569" stroke-width="3"/>
+  <line x1="515" y1="100" x2="565" y2="100" stroke="#475569" stroke-width="2.5"/>
+  <line x1="690" y1="80" x2="750" y2="80" stroke="#475569" stroke-width="3"/>
+  <line x1="695" y1="100" x2="745" y2="100" stroke="#475569" stroke-width="2.5"/>
+  <!-- Pylon bases -->
+  <polygon points="525,340 540,300 555,340" fill="#64748b"/>
+  <polygon points="705,340 720,300 735,340" fill="#64748b"/>
+  <!-- VN cables (3 lines) -->
+  <path d="M 510 80 Q 630 110 750 80" stroke="#0f172a" stroke-width="1.8" fill="none"/>
+  <path d="M 540 100 Q 630 130 720 100" stroke="#0f172a" stroke-width="1.8" fill="none"/>
+  <path d="M 540 120 Q 630 150 720 120" stroke="#0f172a" stroke-width="1.8" fill="none"/>
+  <!-- Insulators (dots) -->
+  <circle cx="510" cy="80" r="3" fill="#facc15"/>
+  <circle cx="570" cy="80" r="3" fill="#facc15"/>
+  <circle cx="690" cy="80" r="3" fill="#facc15"/>
+  <circle cx="750" cy="80" r="3" fill="#facc15"/>
+  <!-- Lightning warning symbol -->
+  <text x="630" y="60" text-anchor="middle" font-size="20" fill="#dc2626" font-weight="bold">⚡</text>
+  <text x="630" y="75" text-anchor="middle" font-size="11" fill="#991b1b" font-family="sans-serif" font-weight="bold">VN</text>
+
+  <!-- Forbidden zone under VN line -->
+  <rect x="540" y="155" width="180" height="185" fill="url(#hatch137)" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Allowed zone (boat sailing through, not standing) -->
+  <g transform="translate(50,255)">
+    <!-- small moving boat -->
+    <polygon points="0,12 50,12 45,22 5,22" fill="#92400e" stroke="#451a03" stroke-width="1"/>
+    <rect x="15" y="2" width="20" height="10" fill="#fef3c7" stroke="#451a03" stroke-width="1"/>
+    <line x1="50" y1="17" x2="65" y2="20" stroke="#0284c7" stroke-width="1.5"/>
+    <line x1="50" y1="20" x2="68" y2="22" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="25" y="38" text-anchor="middle" font-size="10" fill="#065f46" font-family="sans-serif" font-weight="bold">PROPLUTÍ OK</text>
+  </g>
+
+  <!-- Anchored boat in forbidden zone (with cross) -->
+  <g transform="translate(225,275)">
+    <polygon points="0,12 50,12 45,22 5,22" fill="#7c2d12" stroke="#1c1917" stroke-width="1"/>
+    <rect x="15" y="2" width="20" height="10" fill="#fee2e2" stroke="#1c1917" stroke-width="1"/>
+    <!-- anchor line -->
+    <line x1="25" y1="22" x2="25" y2="55" stroke="#1c1917" stroke-width="1.2" stroke-dasharray="2 2"/>
+    <text x="25" y="65" text-anchor="middle" font-size="14" fill="#dc2626" font-family="sans-serif" font-weight="bold">⚓</text>
+    <!-- big red X -->
+    <line x1="-8" y1="-5" x2="58" y2="30" stroke="#dc2626" stroke-width="3.5"/>
+    <line x1="58" y1="-5" x2="-8" y2="30" stroke="#dc2626" stroke-width="3.5"/>
+  </g>
+
+  <!-- Anchored boat under VN line (with cross) -->
+  <g transform="translate(605,275)">
+    <polygon points="0,12 50,12 45,22 5,22" fill="#7c2d12" stroke="#1c1917" stroke-width="1"/>
+    <rect x="15" y="2" width="20" height="10" fill="#fee2e2" stroke="#1c1917" stroke-width="1"/>
+    <!-- mast going up close to VN -->
+    <line x1="25" y1="2" x2="25" y2="-130" stroke="#1c1917" stroke-width="1.5"/>
+    <circle cx="25" cy="-130" r="2" fill="#1c1917"/>
+    <line x1="25" y1="22" x2="25" y2="55" stroke="#1c1917" stroke-width="1.2" stroke-dasharray="2 2"/>
+    <text x="25" y="65" text-anchor="middle" font-size="14" fill="#dc2626" font-family="sans-serif" font-weight="bold">⚓</text>
+    <!-- big red X -->
+    <line x1="-8" y1="-5" x2="58" y2="30" stroke="#dc2626" stroke-width="3.5"/>
+    <line x1="58" y1="-5" x2="-8" y2="30" stroke="#dc2626" stroke-width="3.5"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="260" y="200" text-anchor="middle" font-size="11" fill="#991b1b" font-family="sans-serif" font-weight="bold">ZÁKAZ STÁNÍ</text>
+  <text x="630" y="175" text-anchor="middle" font-size="11" fill="#991b1b" font-family="sans-serif" font-weight="bold">ZÁKAZ STÁNÍ</text>
+
+  <!-- Bottom legend -->
+  <rect x="0" y="340" width="800" height="40" fill="#a3a380"/>
+  <text x="400" y="368" text-anchor="middle" font-size="11" fill="#1f2937" font-family="sans-serif" font-style="italic">Šrafovaná červená zóna = svislá projekce mostu / vedení VN — sem žádné plavidlo nesmí kotvit ani stát</text>
+</svg>
+
+<h3>Proč zrovna tady absolutně</h3>
+
+<ul>
+  <li><strong>Pod mostem:</strong> podjezdný profil je úzký prostor, kde stojící plavidlo blokuje proplutí jiných a v případě nutnosti (požár, povodeň, kolize výše proti proudu) odsud nelze rychle uvolnit. Plus turbulentní proudění mezi pilíři ztěžuje bezpečné kotvení.</li>
+  <li><strong>Pod vedením VN:</strong> kovové stěžně, jeřáby, antény, lodní lana — vše může způsobit <strong>přeskok elektrického oblouku</strong> i bez přímého dotyku, pokud se příliš přiblíží k vodiči. U vedení 110 kV a vyšších je bezpečnostní vzdálenost v řádu metrů. Stojící plavidlo je navíc na místě dlouho — riziko narůstá s časem (vítr, vlnění, změna výšky hladiny při průtoku).</li>
+</ul>
+
+<h3>Proč jsou ostatní varianty pasti</h3>
+
+<ul>
+  <li><strong>Varianta omezující zákaz na plavidla, která nejsou malými</strong> — falešná úleva. Zákaz je obecný. I malá plavidla pod vedením VN mohou způsobit problém (rybářský prut, anténa, kovový stěžeň) a v podjezdu mostu blokují plavební dráhu pro velká plavidla. Zákaz se vztahuje na všechny.</li>
+  <li><strong>Varianta podmiňující zákaz zúžením plavební dráhy pilíři nebo stožáry</strong> — chytrá past, protože zní logicky. Obrací ale příčinu a důsledek: zákaz neplatí <em>pokud je úžina</em>, zákaz platí <strong>vždy</strong>, protože pod mostem/vedením je nebezpečí samo o sobě (proudění, elektrika), nezávisle na šířce dráhy.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když musíš stát (porucha, čekání na proplutí plavební komorou, čekání na noc), <strong>odstav plavidlo mimo prostor pod mostem i mimo svislou projekci vedení VN</strong>. Když potřebuješ kotvit u břehu poblíž mostu, drž se ve vzdálenosti, aby plavidlo ani při změně proudu/větru nesneslo do zakázané zóny — zejména na řekách s kolísavým průtokem může vlnobití nebo vítr posunout zakotvené plavidlo o desítky metrů.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu, § 7 — zákaz stání plavidel (mosty, elektrická vedení vysokého napětí jako vyjmenovaná místa)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — obecný rámec pro pravidla provozu</li>
+</ul>

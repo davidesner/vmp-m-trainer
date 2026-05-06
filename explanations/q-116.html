@@ -1,0 +1,144 @@
+<h2>Předjíždění × potkávání u plavební komory</h2>
+
+<p>V obvodu plavební komory a v místech určených pro čekání plavidel je <strong>zakázáno předjíždět</strong>. Prostor je úzký, manévrovací rezerva minimální a plavidla často brzdí, stojí nebo se řadí ke vplutí. Předjíždění by tu vyvolalo riziko bočních srážek a nárazů o stěny.</p>
+
+<p><strong>Potkávání</strong> (míjení plavidel jedoucích proti sobě) zakázáno <em>není</em> — k němu nutně dochází vždy, když jedno plavidlo z komory vyplouvá a druhé do ní vplouvá. Je to integrální součást provozu komory.</p>
+
+<h3>Vizualizace — co je rozdíl mezi předjížděním a potkáváním</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" style="max-width:800px;background:#0e1525;border-radius:8px;font-family:system-ui,sans-serif">
+  <defs>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff6b6b"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7be88a"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7ab8ff"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="28" text-anchor="middle" fill="#e6edf3" font-size="18" font-weight="600">Plavební komora a její přístup</text>
+  <text x="400" y="48" text-anchor="middle" fill="#9aa4b2" font-size="12">vyhláška č. 67/2015 Sb. — pravidla plavebního provozu</text>
+
+  <!-- LEFT PANEL: Overtaking FORBIDDEN -->
+  <g transform="translate(20,70)">
+    <rect x="0" y="0" width="370" height="380" rx="8" fill="#1a2233" stroke="#2d3748" stroke-width="1"/>
+    <text x="185" y="24" text-anchor="middle" fill="#ff8585" font-size="14" font-weight="700">PŘEDJÍŽDĚNÍ — ZAKÁZÁNO</text>
+    <text x="185" y="42" text-anchor="middle" fill="#9aa4b2" font-size="11">stejný směr, rychlejší obíhá pomalejšího</text>
+
+    <!-- Water/canal -->
+    <rect x="20" y="80" width="330" height="220" fill="#0d2b4a" stroke="#1f4068" stroke-width="1"/>
+    <!-- Banks -->
+    <rect x="20" y="60" width="330" height="20" fill="#3a3a2a"/>
+    <rect x="20" y="300" width="330" height="20" fill="#3a3a2a"/>
+
+    <!-- Lock chamber (right side) -->
+    <rect x="280" y="100" width="60" height="180" fill="#0a1c33" stroke="#5a8ec7" stroke-width="2"/>
+    <line x1="280" y1="100" x2="280" y2="280" stroke="#ffd166" stroke-width="3"/>
+    <text x="310" y="195" text-anchor="middle" fill="#ffd166" font-size="11" font-weight="600">KOMORA</text>
+
+    <!-- Waiting zone marker -->
+    <line x1="180" y1="80" x2="180" y2="300" stroke="#ffd166" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="225" y="76" text-anchor="middle" fill="#ffd166" font-size="10">obvod komory + čekací místo</text>
+
+    <!-- Slower boat (front) -->
+    <g transform="translate(220,170)">
+      <ellipse cx="0" cy="0" rx="22" ry="9" fill="#7ab8ff" stroke="#2d5a8a"/>
+      <polygon points="22,0 30,-3 30,3" fill="#7ab8ff"/>
+      <line x1="-30" y1="0" x2="-50" y2="0" stroke="#7ab8ff" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+      <text x="0" y="-14" text-anchor="middle" fill="#7ab8ff" font-size="9">pomalejší</text>
+    </g>
+
+    <!-- Faster boat (behind, trying to overtake) -->
+    <g transform="translate(110,200)">
+      <ellipse cx="0" cy="0" rx="22" ry="9" fill="#ff6b6b" stroke="#7a2020"/>
+      <polygon points="22,0 30,-3 30,3" fill="#ff6b6b"/>
+      <line x1="-30" y1="0" x2="-50" y2="0" stroke="#ff6b6b" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+      <text x="0" y="-14" text-anchor="middle" fill="#ff6b6b" font-size="9">rychlejší</text>
+    </g>
+
+    <!-- Forbidden overtaking arrow -->
+    <path d="M 130 195 Q 165 145 200 165" stroke="#ff6b6b" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+    <g transform="translate(170,150)">
+      <circle cx="0" cy="0" r="14" fill="#7a0e0e" stroke="#ff6b6b" stroke-width="2"/>
+      <line x1="-9" y1="-9" x2="9" y2="9" stroke="#ff6b6b" stroke-width="3"/>
+    </g>
+
+    <text x="185" y="340" text-anchor="middle" fill="#e6edf3" font-size="11">obě plavidla jedou stejným směrem,</text>
+    <text x="185" y="356" text-anchor="middle" fill="#e6edf3" font-size="11">rychlejší by chtělo obejít pomalejšího</text>
+    <text x="185" y="372" text-anchor="middle" fill="#ff8585" font-size="11" font-weight="600">→ tady to vyhláška zakazuje</text>
+  </g>
+
+  <!-- RIGHT PANEL: Meeting ALLOWED -->
+  <g transform="translate(410,70)">
+    <rect x="0" y="0" width="370" height="380" rx="8" fill="#1a2233" stroke="#2d3748" stroke-width="1"/>
+    <text x="185" y="24" text-anchor="middle" fill="#7be88a" font-size="14" font-weight="700">POTKÁVÁNÍ — POVOLENO</text>
+    <text x="185" y="42" text-anchor="middle" fill="#9aa4b2" font-size="11">opačné směry, plavidla se míjejí boky</text>
+
+    <!-- Water/canal -->
+    <rect x="20" y="80" width="330" height="220" fill="#0d2b4a" stroke="#1f4068" stroke-width="1"/>
+    <rect x="20" y="60" width="330" height="20" fill="#3a3a2a"/>
+    <rect x="20" y="300" width="330" height="20" fill="#3a3a2a"/>
+
+    <!-- Lock chamber (right side) -->
+    <rect x="280" y="100" width="60" height="180" fill="#0a1c33" stroke="#5a8ec7" stroke-width="2"/>
+    <line x1="280" y1="100" x2="280" y2="280" stroke="#ffd166" stroke-width="3"/>
+    <text x="310" y="195" text-anchor="middle" fill="#ffd166" font-size="11" font-weight="600">KOMORA</text>
+
+    <line x1="180" y1="80" x2="180" y2="300" stroke="#ffd166" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="225" y="76" text-anchor="middle" fill="#ffd166" font-size="10">obvod komory + čekací místo</text>
+
+    <!-- Boat going IN (right) -->
+    <g transform="translate(150,170)">
+      <ellipse cx="0" cy="0" rx="22" ry="9" fill="#7be88a" stroke="#2e6a3a"/>
+      <polygon points="22,0 30,-3 30,3" fill="#7be88a"/>
+      <line x1="30" y1="0" x2="50" y2="0" stroke="#7be88a" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+      <text x="0" y="-14" text-anchor="middle" fill="#7be88a" font-size="9">vplouvá</text>
+    </g>
+
+    <!-- Boat going OUT (left) -->
+    <g transform="translate(220,220)">
+      <ellipse cx="0" cy="0" rx="22" ry="9" fill="#7ab8ff" stroke="#2d5a8a"/>
+      <polygon points="-22,0 -30,-3 -30,3" fill="#7ab8ff"/>
+      <line x1="-30" y1="0" x2="-50" y2="0" stroke="#7ab8ff" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+      <text x="0" y="-14" text-anchor="middle" fill="#7ab8ff" font-size="9">vyplouvá</text>
+    </g>
+
+    <!-- OK checkmark -->
+    <g transform="translate(185,195)">
+      <circle cx="0" cy="0" r="14" fill="#0e5a1f" stroke="#7be88a" stroke-width="2"/>
+      <polyline points="-6,0 -2,5 7,-5" stroke="#7be88a" stroke-width="3" fill="none"/>
+    </g>
+
+    <text x="185" y="340" text-anchor="middle" fill="#e6edf3" font-size="11">jedno plavidlo do komory, druhé z komory —</text>
+    <text x="185" y="356" text-anchor="middle" fill="#e6edf3" font-size="11">k tomu nutně dochází, zakázat nelze</text>
+    <text x="185" y="372" text-anchor="middle" fill="#7be88a" font-size="11" font-weight="600">→ běžný a povolený manévr</text>
+  </g>
+</svg>
+
+<h3>Klíčové rozlišení</h3>
+
+<table>
+  <thead>
+    <tr><th>Manévr</th><th>Směr plavidel</th><th>U komory</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Předjíždění</strong></td><td>stejný směr (rychlejší obíhá pomalejšího)</td><td>zakázáno</td></tr>
+    <tr><td><strong>Potkávání</strong></td><td>opačné směry (míjení boky)</td><td>povoleno</td></tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+
+<p>Přijíždíš ke komoře, před tebou jede pomalejší plavidlo a chceš ho předjet, abys byl dřív ve frontě? <strong>Nesmíš.</strong> Zařadíš se za něj a počkáš ve frontě. Naopak když z komory vyplouvá plavidlo proti tobě, klidně ho mineš podle pravidel pro potkávání — to není předjíždění.</p>
+
+<p>Stejný zákaz předjíždění platí i v úzkých plavebních otvorech mostů a všude, kde to oznamuje plavební značka A.2 (zákaz předjíždění).</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — ustanovení o předjíždění a o plavbě v obvodu plavebních komor</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

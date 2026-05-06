@@ -1,0 +1,140 @@
+<h2>Stání plavidel v plavební komoře — vyznačené meze</h2>
+
+<p><strong>Jádro:</strong> Pokud jsou na zdech plavební komory vyznačeny meze vyznačených stání, plavidla <strong>stojí v těchto mezích</strong> — bezvýhradně. Není to doporučení ani „pokud to lana dovolí", a neexistuje žádná výjimka podle směru proplavování.</p>
+
+<h3>Vizualizace — pohled shora na plavební komoru</h3>
+
+<p>Schéma ukazuje, jak meze stání fungují v praxi: plavidlo musí stát mezi vyznačenými značkami na zdech (zelená situace). Přesah přes meze je porušení pravidel (červená situace).</p>
+
+<svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#f5f8fb;border:1px solid #ccd5dd;border-radius:8px">
+  <defs>
+    <pattern id="water" patternUnits="userSpaceOnUse" width="20" height="10">
+      <path d="M0 5 Q5 0 10 5 T20 5" stroke="#a8c9e8" fill="none" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="22" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1f3a52">Plavební komora — pohled shora</text>
+
+  <!-- Upper situation: correct -->
+  <text x="20" y="55" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a7a3a">SPRÁVNĚ — plavidlo v mezích stání</text>
+
+  <!-- Komora walls (correct) -->
+  <rect x="40" y="65" width="520" height="20" fill="#7d8a96"/>
+  <rect x="40" y="135" width="520" height="20" fill="#7d8a96"/>
+  <!-- Water inside -->
+  <rect x="40" y="85" width="520" height="50" fill="url(#water)"/>
+
+  <!-- Vyznačené meze (svislé značky na zdech) -->
+  <line x1="180" y1="60" x2="180" y2="90" stroke="#d62828" stroke-width="3"/>
+  <line x1="180" y1="130" x2="180" y2="160" stroke="#d62828" stroke-width="3"/>
+  <line x1="420" y1="60" x2="420" y2="90" stroke="#d62828" stroke-width="3"/>
+  <line x1="420" y1="130" x2="420" y2="160" stroke="#d62828" stroke-width="3"/>
+  <text x="180" y="55" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#d62828">mez</text>
+  <text x="420" y="55" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#d62828">mez</text>
+
+  <!-- Vyznačené stání zone (subtle highlight) -->
+  <rect x="180" y="85" width="240" height="50" fill="#c8e6c9" fill-opacity="0.4"/>
+  <text x="300" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a7a3a" font-style="italic">vyznačené stání</text>
+
+  <!-- Boat (correct, inside) -->
+  <g>
+    <path d="M 220 100 L 380 100 L 395 110 L 380 120 L 220 120 Z" fill="#4a7c2e" stroke="#2d4f1c" stroke-width="1.5"/>
+    <rect x="280" y="103" width="40" height="14" fill="#fff" stroke="#2d4f1c" stroke-width="1"/>
+    <text x="300" y="113" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#2d4f1c">plavidlo</text>
+  </g>
+
+  <!-- Lana to mooring -->
+  <line x1="230" y1="100" x2="200" y2="85" stroke="#4a3520" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="230" y1="120" x2="200" y2="135" stroke="#4a3520" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="375" y1="100" x2="400" y2="85" stroke="#4a3520" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="375" y1="120" x2="400" y2="135" stroke="#4a3520" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+  <!-- Check mark -->
+  <circle cx="540" cy="110" r="14" fill="#1a7a3a"/>
+  <path d="M 533 110 L 538 116 L 547 105" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Lower situation: incorrect -->
+  <text x="20" y="195" font-family="sans-serif" font-size="12" font-weight="bold" fill="#b32424">CHYBA — plavidlo přesahuje meze</text>
+
+  <!-- Komora walls (incorrect) -->
+  <rect x="40" y="205" width="520" height="20" fill="#7d8a96"/>
+  <rect x="40" y="275" width="520" height="20" fill="#7d8a96"/>
+  <!-- Water inside -->
+  <rect x="40" y="225" width="520" height="50" fill="url(#water)"/>
+
+  <!-- Vyznačené meze -->
+  <line x1="180" y1="200" x2="180" y2="230" stroke="#d62828" stroke-width="3"/>
+  <line x1="180" y1="270" x2="180" y2="300" stroke="#d62828" stroke-width="3"/>
+  <line x1="420" y1="200" x2="420" y2="230" stroke="#d62828" stroke-width="3"/>
+  <line x1="420" y1="270" x2="420" y2="300" stroke="#d62828" stroke-width="3"/>
+  <text x="180" y="195" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#d62828">mez</text>
+  <text x="420" y="195" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#d62828">mez</text>
+
+  <rect x="180" y="225" width="240" height="50" fill="#ffcdd2" fill-opacity="0.4"/>
+
+  <!-- Boat (incorrect, oversize, sticking out) -->
+  <g>
+    <path d="M 130 240 L 470 240 L 485 250 L 470 260 L 130 260 Z" fill="#b32424" stroke="#7a0c0c" stroke-width="1.5"/>
+    <rect x="280" y="243" width="40" height="14" fill="#fff" stroke="#7a0c0c" stroke-width="1"/>
+    <text x="300" y="253" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#7a0c0c">plavidlo</text>
+  </g>
+
+  <!-- Arrows indicating overflow -->
+  <path d="M 130 240 L 130 220 M 125 225 L 130 220 L 135 225" stroke="#7a0c0c" stroke-width="1.5" fill="none"/>
+  <text x="100" y="218" font-family="sans-serif" font-size="8" fill="#7a0c0c">přesah</text>
+  <path d="M 485 250 L 510 250 M 505 245 L 510 250 L 505 255" stroke="#7a0c0c" stroke-width="1.5" fill="none"/>
+  <text x="495" y="240" font-family="sans-serif" font-size="8" fill="#7a0c0c">přesah</text>
+
+  <!-- X mark -->
+  <circle cx="540" cy="250" r="14" fill="#b32424"/>
+  <path d="M 533 243 L 547 257 M 547 243 L 533 257" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Legend -->
+  <g transform="translate(40, 320)">
+    <rect x="0" y="0" width="14" height="3" fill="#d62828"/>
+    <text x="20" y="4" font-family="sans-serif" font-size="10" fill="#1f3a52">vyznačené meze stání (značky na zdech)</text>
+
+    <line x1="280" y1="2" x2="294" y2="2" stroke="#4a3520" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="300" y="6" font-family="sans-serif" font-size="10" fill="#1f3a52">lana k pacholatům</text>
+
+    <rect x="0" y="15" width="14" height="8" fill="url(#water)" stroke="#a8c9e8" stroke-width="0.5"/>
+    <text x="20" y="22" font-family="sans-serif" font-size="10" fill="#1f3a52">voda v komoře</text>
+
+    <rect x="280" y="15" width="14" height="8" fill="#7d8a96"/>
+    <text x="300" y="22" font-family="sans-serif" font-size="10" fill="#1f3a52">zeď komory</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="300" y="370" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555" font-style="italic">Meze jsou závazné — přesahovat je není dovoleno žádnému plavidlu, ani „z horní vody".</text>
+</svg>
+
+<h3>Pozadí</h3>
+
+<p>Plavební komora je úzký vodní prostor, ve kterém se plavidla převádějí mezi dvěma rozdílnými hladinami (horní a dolní voda). Během plnění a vyprazdňování komory působí na plavidla silné turbulence — plavidlo musí být zajištěno lany k pacholatům na zdi a nesmí překážet:</p>
+
+<ul>
+  <li><strong>vratům komory</strong> (horním ani dolním) — aby se mohla bezpečně otevřít a zavřít</li>
+  <li><strong>dalším plavidlům</strong>, která mají do komory podle zaplnění také vejít</li>
+  <li><strong>mechanismům komory</strong> (výpustě, ucpávky, signalizace)</li>
+</ul>
+
+<p>Proto plavební orgán na zdech komory přesně vymezuje, <strong>kde plavidlo smí stát</strong> — typicky svislými značkami na betonové zdi. Pokud jsou tyto meze vyznačeny, jsou pro stání plavidla <strong>závazné</strong>.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li>Tvrzení <em>„udržují se v mezích, pokud to práce s lany dovolí"</em> je chytlavá relativizace. Lana se k mezím přizpůsobují, ne naopak — vůdce plavidla je povinen uvázat plavidlo tak, aby <strong>v mezích stálo</strong>, ne aby si meze upravoval podle toho, jak mu vyhovuje obsluha lan.</li>
+  <li>Tvrzení <em>„vyznačené meze smějí přesahovat jen plavidla proplavovaná z horní vody"</em> je nesmysl — žádná taková výjimka v předpisech neexistuje. Směr proplavování (z horní × dolní vody) s mezemi stání nesouvisí.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když připlouváš ke komoře a vidíš na stěnách svislé značky vymezující stání, <strong>musíš se vejít do vyznačeného úseku</strong>. Pokud je tvoje plavidlo delší než vyznačené stání, do komory <strong>nesmíš vplout</strong> v této pozici — musíš počkat na další proplavení nebo se řídit pokynem obsluhy komory.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — část upravující proplavování plavebními komorami (§30 a okolí)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

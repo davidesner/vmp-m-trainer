@@ -1,0 +1,115 @@
+<h2>Bezpečná vzdálenost od koupajícího — minimálně 10 m</h2>
+
+<p><strong>Správná odpověď je „10 m".</strong> Malé plavidlo <em>s vlastním pohonem</em> (motorový člun, vodní skútr atp.) musí kolem plavce dodržet bezpečnostní okruh <strong>minimálně 10 metrů</strong>. „Alespoň" v zadání znamená spodní hranici — víc je vždy v pořádku, méně ne.</p>
+
+<h3>Proč zrovna 10 m</h3>
+
+<ul>
+  <li><strong>Lodní šroub</strong> — pod hladinou aktivně nebezpečný. I při nízkých otáčkách dokáže způsobit těžká zranění, pokud se plavec dostane do jeho dosahu.</li>
+  <li><strong>Vlna a sání</strong> — motor za sebou tlačí vlnu a vytváří podtlak, který může plavce přitáhnout pod boční zónu plavidla.</li>
+  <li><strong>Reakční doba</strong> — plavec se může nečekaně otočit, ponořit, vykřiknout o pomoc. 10 m je vzdálenost, kterou stihne motorová loď bezpečně manévrovat / zastavit.</li>
+</ul>
+
+<h3>Vizualizace — porovnání vzdáleností</h3>
+
+<p>Plavec uprostřed, kruhy ukazují tři varianty z otázky. <strong>Žlutě zvýrazněný kruh 10 m</strong> je správný — minimální zákonný odstup pro motorové plavidlo. Kruh 3 m je nebezpečně blízko, 50 m je nad rámec povinného minima.</p>
+
+<svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#e6f4f9;border-radius:8px">
+  <defs>
+    <pattern id="water" width="40" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 10 Q 10 5, 20 10 T 40 10" stroke="#a8d8e8" stroke-width="1.2" fill="none"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="600" height="500" fill="url(#water)"/>
+
+  <!-- 50m circle - too far, just informative -->
+  <circle cx="300" cy="250" r="220" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="300" y="40" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6b7280">50 m — nad rámec povinného minima</text>
+
+  <!-- 10m circle - correct, highlighted -->
+  <circle cx="300" cy="250" r="130" fill="rgba(250,204,21,0.18)" stroke="#eab308" stroke-width="3"/>
+  <text x="300" y="115" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#854d0e">10 m — minimum dle vyhlášky</text>
+
+  <!-- 3m circle - too close, danger -->
+  <circle cx="300" cy="250" r="45" fill="rgba(239,68,68,0.18)" stroke="#ef4444" stroke-width="2"/>
+  <text x="300" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#991b1b" font-weight="bold">3 m — nebezpečně blízko</text>
+
+  <!-- Swimmer in center -->
+  <g>
+    <!-- head -->
+    <circle cx="300" cy="245" r="10" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <!-- arms (waving) -->
+    <path d="M 290 248 Q 278 240, 282 230" stroke="#78350f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 310 248 Q 322 240, 318 230" stroke="#78350f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- ripples around swimmer -->
+    <ellipse cx="300" cy="258" rx="18" ry="4" fill="none" stroke="#0891b2" stroke-width="1"/>
+    <ellipse cx="300" cy="262" rx="24" ry="5" fill="none" stroke="#0891b2" stroke-width="0.8" opacity="0.6"/>
+  </g>
+  <text x="300" y="285" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0f172a">plavec</text>
+
+  <!-- Boat at 10m boundary - showing correct minimum distance -->
+  <g transform="translate(430, 250) rotate(20)">
+    <!-- hull -->
+    <path d="M -25 0 Q -25 -8, -15 -10 L 15 -10 Q 25 -8, 28 0 L 25 6 L -22 6 Z" fill="#475569" stroke="#1e293b" stroke-width="1.2"/>
+    <!-- deck -->
+    <rect x="-10" y="-7" width="14" height="5" fill="#cbd5e1" stroke="#475569" stroke-width="0.8"/>
+    <!-- wake -->
+    <path d="M -25 3 Q -40 0, -55 4" stroke="#a8d8e8" stroke-width="1.5" fill="none"/>
+    <path d="M -25 6 Q -42 8, -58 12" stroke="#a8d8e8" stroke-width="1.5" fill="none"/>
+  </g>
+  <text x="445" y="225" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0f172a">motorové plavidlo</text>
+
+  <!-- distance markers -->
+  <line x1="300" y1="250" x2="425" y2="250" stroke="#854d0e" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <text x="362" y="244" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#854d0e" font-weight="bold">≥ 10 m</text>
+
+  <!-- legend -->
+  <g transform="translate(20, 460)">
+    <circle cx="8" cy="0" r="6" fill="rgba(239,68,68,0.4)" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="22" y="4" font-family="sans-serif" font-size="11" fill="#1f2937">3 m — moc blízko</text>
+
+    <circle cx="170" cy="0" r="6" fill="rgba(250,204,21,0.5)" stroke="#eab308" stroke-width="2"/>
+    <text x="184" y="4" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1f2937">10 m — správně</text>
+
+    <circle cx="350" cy="0" r="6" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <text x="364" y="4" font-family="sans-serif" font-size="11" fill="#1f2937">50 m — nad rámec</text>
+  </g>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<table>
+  <thead>
+    <tr><th>Vzdálenost</th><th>Hodnocení</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>3 m</strong></td>
+      <td>Nebezpečně blízko — v dosahu šroubu, motorové plavidlo už nestihne reagovat na nečekaný pohyb plavce. Vyhláška toto minimum nepřipouští.</td>
+    </tr>
+    <tr>
+      <td><strong>10 m</strong></td>
+      <td><strong>Správně</strong> — zákonné minimum pro malé plavidlo s vlastním pohonem.</td>
+    </tr>
+    <tr>
+      <td><strong>50 m</strong></td>
+      <td>V reálu bezpečné, ale jde o víc, než vyhláška povinně vyžaduje. Otázka se ptá na <em>minimum</em>, ne na komfort.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+
+<ul>
+  <li>U koupacích zón označených bójemi je pro motorová plavidla typicky <strong>úplný zákaz vplutí</strong> — 10m pravidlo platí mimo vyznačené zóny, kde se náhodně setkáš s plavcem.</li>
+  <li>Když nelze 10 m dodržet (úzký průplav, mělčina), <strong>stáhni plyn na minimum</strong> a buď velmi opatrný, ideálně objeď úplně.</li>
+  <li>Stejné pravidlo platí pro vodní skútry a malé motorové čluny — i u sportovní jízdy.</li>
+</ul>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. <strong>67/2015 Sb.</strong>, o pravidlech plavebního provozu — část o provozu malých plavidel a chování vůči koupajícím se osobám.</li>
+  <li>Zákon č. <strong>114/1995 Sb.</strong>, o vnitrozemské plavbě — obecná povinnost vůdce plavidla neohrozit ostatní účastníky provozu.</li>
+</ul>

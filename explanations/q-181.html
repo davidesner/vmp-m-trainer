@@ -1,0 +1,118 @@
+<h2>Trojbarevná svítilna na vrcholu stěžně — kdo ji nese</h2>
+
+<p>Na obrázku je <strong>plachetnice s trojbarevnou svítilnou</strong> umístěnou na vrcholu stěžně. Detail vlevo (kruh s červenou, bílou a zelenou výsečí) ukazuje, co svítilna vyzařuje: jednu lampu, ve které jsou v jednom tělese sdružena boční světla (červené vlevo, zelené vpravo) a záďové bílé světlo. Pokrývá tak celých 360° kolem plavidla, ale každý sektor jen v té barvě, která tam patří.</p>
+
+<h3>Jádro</h3>
+<p>Tuto signalizaci nese <strong>plachetnice, která je malým plavidlem a jejíž délka přesahuje 7 m</strong>. Trojbarevná svítilna je <strong>alternativa</strong>, kterou si plachetnice nad 7 m smí zvolit místo klasického rozložení (boční světla na trupu + samostatné záďové bílé na zádi).</p>
+
+<h3>Vizualizace — sektory trojbarevné svítilny</h3>
+
+<p><em>Vlevo: jak signalizaci vidíš v testu / v noci na vodě (lampa na vrcholu stěžně). Vpravo: pohled shora na plavidlo — jak jsou rozdělené barevné sektory kolem plavidla.</em></p>
+
+<svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; background: #0e1a2b; border: 1px solid #2c3e57; border-radius: 8px;">
+  <!-- LEFT PANEL: vessel side view at night -->
+  <g transform="translate(0, 0)">
+    <text x="170" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff">Boční pohled — co vidíš na vodě</text>
+
+    <!-- water -->
+    <path d="M 20 280 Q 60 270 100 280 T 180 280 T 260 280 T 340 280 Z" fill="none" stroke="#7fb3d5" stroke-width="2"/>
+    <path d="M 20 295 Q 60 285 100 295 T 180 295 T 260 295 T 340 295" fill="none" stroke="#7fb3d5" stroke-width="2"/>
+
+    <!-- hull -->
+    <path d="M 130 270 L 230 270 L 215 290 L 145 290 Z" fill="#1a2535" stroke="#fff" stroke-width="2"/>
+
+    <!-- mast -->
+    <line x1="180" y1="270" x2="180" y2="90" stroke="#fff" stroke-width="2"/>
+
+    <!-- sail -->
+    <path d="M 180 110 L 180 260 L 245 260 Z" fill="none" stroke="#fff" stroke-width="1.5"/>
+
+    <!-- tricolour light at masthead (small marker on mast) -->
+    <rect x="174" y="78" width="12" height="12" fill="#0a8a2f" stroke="#fff" stroke-width="0.8"/>
+    <rect x="172" y="78" width="4" height="12" fill="#cc1a1a" stroke="#fff" stroke-width="0.4"/>
+
+    <!-- callout circle: tricolour sectors as visible from a distance -->
+    <g transform="translate(70, 100)">
+      <circle cx="0" cy="0" r="32" fill="#0e1a2b" stroke="#fff" stroke-width="1.5"/>
+      <!-- left red sector (112.5°) -->
+      <path d="M 0 0 L -32 0 A 32 32 0 0 1 -12.24 -29.56 Z" fill="#cc1a1a"/>
+      <!-- right green sector (112.5°) -->
+      <path d="M 0 0 L 12.24 -29.56 A 32 32 0 0 1 32 0 Z" fill="#0a8a2f"/>
+      <!-- white stern sector (135°) -->
+      <path d="M 0 0 L 32 0 A 32 32 0 0 1 -32 0 Z" fill="#f5f5f5"/>
+      <!-- bow direction arrow (up) -->
+      <line x1="0" y1="-32" x2="0" y2="-46" stroke="#ffd966" stroke-width="2"/>
+      <polygon points="0,-50 -4,-44 4,-44" fill="#ffd966"/>
+      <text x="0" y="-58" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffd966">příď</text>
+    </g>
+    <line x1="105" y1="105" x2="170" y2="84" stroke="#888" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="70" y="160" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bbb">trojbarevná lampa</text>
+    <text x="70" y="173" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bbb">na vrcholu stěžně</text>
+
+    <text x="170" y="320" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bbb">malá plachetnice nad 7 m</text>
+    <text x="170" y="335" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bbb">plující pod plachtami</text>
+  </g>
+
+  <!-- separator -->
+  <line x1="380" y1="50" x2="380" y2="340" stroke="#2c3e57" stroke-width="1"/>
+
+  <!-- RIGHT PANEL: top-down view with sectors -->
+  <g transform="translate(420, 0)">
+    <text x="160" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff">Shora — sektory kolem plavidla</text>
+
+    <!-- big circle representing 360° around vessel -->
+    <g transform="translate(160, 190)">
+      <!-- left red sector (112.5° from bow to abeam-port) -->
+      <path d="M 0 0 L 0 -110 A 110 110 0 0 0 -101.6 42.1 Z" fill="#cc1a1a" fill-opacity="0.8" stroke="#fff" stroke-width="1"/>
+      <!-- right green sector (112.5° from bow to abeam-starboard) -->
+      <path d="M 0 0 L 0 -110 A 110 110 0 0 1 101.6 42.1 Z" fill="#0a8a2f" fill-opacity="0.8" stroke="#fff" stroke-width="1"/>
+      <!-- white stern sector (135°) -->
+      <path d="M 0 0 L 101.6 42.1 A 110 110 0 0 0 -101.6 42.1 Z" fill="#f5f5f5" fill-opacity="0.85" stroke="#fff" stroke-width="1"/>
+
+      <!-- vessel silhouette top-down -->
+      <path d="M 0 -28 L 12 14 L -12 14 Z" fill="#1a2535" stroke="#fff" stroke-width="1.5"/>
+
+      <!-- bow direction -->
+      <line x1="0" y1="-110" x2="0" y2="-130" stroke="#ffd966" stroke-width="2"/>
+      <polygon points="0,-134 -4,-128 4,-128" fill="#ffd966"/>
+      <text x="0" y="-142" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ffd966">příď (směr plavby)</text>
+
+      <!-- sector labels -->
+      <text x="-65" y="-45" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fff">červená</text>
+      <text x="-65" y="-30" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">112,5°</text>
+
+      <text x="65" y="-45" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fff">zelená</text>
+      <text x="65" y="-30" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">112,5°</text>
+
+      <text x="0" y="80" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1a2535">bílá (záďová)</text>
+      <text x="0" y="93" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a2535">135°</text>
+    </g>
+
+    <text x="160" y="345" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bbb">112,5° + 112,5° + 135° = 360° pokrytí</text>
+  </g>
+</svg>
+
+<h3>Pozadí — co říká vyhláška</h3>
+<p>Pravidlo vychází z <strong>vyhlášky č. 67/2015 Sb.</strong> o pravidlech plavebního provozu, článek 3.13 (světla plachetnic za plavby).</p>
+<ul>
+  <li><strong>Plachetnice nad 7 m plující pod plachtami</strong> nese boční světla (červené vlevo, zelené vpravo) + záďové bílé světlo. <strong>Místo toho</strong> může na vrcholu stěžně nést <strong>trojbarevnou svítilnu</strong>, která sdružuje všechny tři barvy v jednom tělese — přesně situace na obrázku.</li>
+  <li><strong>Plachetnice do 7 m včetně</strong> trojbarevnou svítilnu nesmí používat. Stačí jí mít po ruce <strong>ruční svítilnu s bílým světlem</strong>, kterou rozsvítí včas k zabránění srážce.</li>
+  <li><strong>Trojbarevná svítilna není pro „každé plující malé plavidlo"</strong> — je vyhrazena výhradně plachetnicím plujícím pod plachtami. Malá motorová plavidla mají vlastní rozvržení (boční + záďové, případně bílé kruhové + boční).</li>
+</ul>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„plachetnice ≤ 7 m"</strong> — nesprávná. Malá plachetnice do 7 m nemá pevně instalovanou navigační signalizaci a trojbarevnou svítilnu nesmí používat jako náhradu klasických světel.</li>
+  <li><strong>„každé plující malé plavidlo"</strong> — nesprávná. Trojbarevná svítilna je vázaná na <em>plavbu pod plachtami</em>. Motorová plavidla, šlapadla, kanoe atd. ji nesmí nést — měla by jiným plavidlům dávat falešnou informaci o tom, co jsou zač a jak budou manévrovat.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Trojbarevná svítilna dává smysl pro plachetnice, kde stěžeň poskytuje vysoký a daleko viditelný bod. Tradiční boční světla na trupu plachetnice jsou často hůř viditelná kvůli nakloněnému trupu a plachtám stínícím nízko umístěná světla.</p>
+<p><strong>Zásadní omezení:</strong> trojbarevnou svítilnu lze použít <strong>jen při plavbě pod plachtami</strong>. Jakmile plachetnice spustí motor (a stane se „plavidlem se strojním pohonem", i když má plachty vytažené), <strong>musí přejít</strong> na klasický set světel pro motorové plavidlo: stěžňové bílé, boční (červené/zelené) a záďové bílé. Tohle je jeden z nejčastějších přestupků na plachetnicích — kapitán zapne motor a zapomene přepnout svítilny.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu, čl. 3.13 (světla plachetnic za plavby)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+  <li>CEVNI — Evropský kodex pro vnitrozemské vodní cesty (čl. 3.13)</li>
+</ul>

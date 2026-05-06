@@ -1,0 +1,82 @@
+<h2>Malé plavidlo plující za snížené viditelnosti a rádiová stanice</h2>
+
+<h3>Jádro</h3>
+<p>Správná odpověď je <strong>„má nastavenou rádiovou stanici na kmitočtovém kanálu pro spojení mezi plavidly."</strong></p>
+<p>Pokud malé plavidlo pluje za <strong>snížené viditelnosti</strong> (typicky mlha, hustý déšť, sněžení) a je rádiovou stanicí vybaveno, <strong>musí</strong> ji mít zapnutou a naladěnou na kanál určený pro vzájemnou komunikaci mezi plavidly. Smysl pravidla je jednoduchý: když se plavidla navzájem nevidí, musí si o sobě dát vědět jiným způsobem — zvukovým signálem a hlavně rádiem, na kterém si lze dohodnout vzájemné minutí, předjetí nebo upozornit na svou polohu.</p>
+
+<h3>Vizualizace — jak to funguje za mlhy</h3>
+<p>Dvě plavidla, která se kvůli mlze navzájem nevidí, se „najdou" na meziplavidlovém kanálu rádia:</p>
+
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#e8eef2;border:1px solid #c8d4dd;border-radius:6px">
+  <defs>
+    <radialGradient id="fog" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.0"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.85"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="220" width="600" height="100" style="fill:#7ba4c2"/>
+
+  <g transform="translate(80,200)">
+    <polygon points="0,0 80,0 70,25 10,25" style="fill:#3a3a3a;stroke:#1a1a1a;stroke-width:1.5"/>
+    <rect x="20" y="-20" width="40" height="20" style="fill:#d8d8d8;stroke:#1a1a1a;stroke-width:1"/>
+    <line x1="40" y1="-20" x2="40" y2="-50" style="stroke:#1a1a1a;stroke-width:1.5"/>
+    <circle cx="40" cy="-52" r="3" style="fill:#1a1a1a"/>
+    <text x="40" y="50" text-anchor="middle" style="font:bold 11px sans-serif;fill:#1a1a1a">Plavidlo A</text>
+  </g>
+
+  <g transform="translate(440,200)">
+    <polygon points="0,0 80,0 70,25 10,25" style="fill:#3a3a3a;stroke:#1a1a1a;stroke-width:1.5"/>
+    <rect x="20" y="-20" width="40" height="20" style="fill:#d8d8d8;stroke:#1a1a1a;stroke-width:1"/>
+    <line x1="40" y1="-20" x2="40" y2="-50" style="stroke:#1a1a1a;stroke-width:1.5"/>
+    <circle cx="40" cy="-52" r="3" style="fill:#1a1a1a"/>
+    <text x="40" y="50" text-anchor="middle" style="font:bold 11px sans-serif;fill:#1a1a1a">Plavidlo B</text>
+  </g>
+
+  <g style="opacity:0.6">
+    <circle cx="160" cy="160" r="6" style="fill:none;stroke:#1976d2;stroke-width:2"/>
+    <circle cx="160" cy="160" r="14" style="fill:none;stroke:#1976d2;stroke-width:1.5;stroke-dasharray:4,3"/>
+    <circle cx="160" cy="160" r="22" style="fill:none;stroke:#1976d2;stroke-width:1;stroke-dasharray:3,3"/>
+    <circle cx="520" cy="160" r="6" style="fill:none;stroke:#1976d2;stroke-width:2"/>
+    <circle cx="520" cy="160" r="14" style="fill:none;stroke:#1976d2;stroke-width:1.5;stroke-dasharray:4,3"/>
+    <circle cx="520" cy="160" r="22" style="fill:none;stroke:#1976d2;stroke-width:1;stroke-dasharray:3,3"/>
+  </g>
+
+  <line x1="180" y1="160" x2="500" y2="160" style="stroke:#1976d2;stroke-width:2;stroke-dasharray:8,4"/>
+  <text x="340" y="150" text-anchor="middle" style="font:bold 12px sans-serif;fill:#0d47a1">📻 kanál pro spojení mezi plavidly</text>
+  <text x="340" y="180" text-anchor="middle" style="font:11px sans-serif;fill:#0d47a1">„Plavidlo A volá B, mineme se levobokem"</text>
+
+  <rect x="0" y="0" width="600" height="240" style="fill:url(#fog)"/>
+  <text x="300" y="40" text-anchor="middle" style="font:italic 14px sans-serif;fill:#5a6770">mlha — vzájemná viditelnost minimální</text>
+</svg>
+
+<h3>Pozadí — vyhláška č. 67/2015 Sb. (Pravidla plavebního provozu)</h3>
+<p>Plavba za snížené viditelnosti je upravena v <strong>článku 6.30</strong> Pravidel plavebního provozu. Obecný princip:</p>
+<ul>
+  <li>Plavidla mají plout <strong>bezpečnou rychlostí</strong> přiměřenou viditelnosti, hustotě provozu a charakteru úseku.</li>
+  <li>Plavidla vybavená radiotelefonním zařízením musí mít stanici <strong>zapnutou</strong> a <strong>naladěnou na kanál určený pro vzájemné spojení plavidel</strong>; ostatním plavidlům se zde sděluje poloha, směr plavby a další informace nutné k bezpečnému míjení.</li>
+  <li>Souběžně se používají <strong>zvukové signály</strong> (jeden dlouhý tón v intervalu max. 1 minuty u plujícího plavidla).</li>
+</ul>
+<p>Na vnitrozemských vodních cestách v ČR slouží pro spojení mezi plavidly typicky <strong>kanál 10</strong> v pásmu VHF.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li>Varianta tvrdící, že plavidlo <strong>nesmí používat rádiovou stanici</strong>, je věcně opačná — rádio je za snížené viditelnosti klíčový nástroj koordinace, nikoli něco, co by se zakazovalo.</li>
+  <li>Varianta <strong>„nemusí být rádiovou stanicí vybaveno"</strong> míchá dvě roviny: za normálních podmínek malé plavidlo skutečně nemusí mít rádio. Otázka se ale ptá konkrétně na situaci <strong>plavby za snížené viditelnosti</strong> — v ní se rádio fakticky stává nutností a pravidla předpokládají jeho použití na správném kanálu. Tato odpověď tedy minulou pravdu (vybavení obecně) přenáší do situace, kde už neplatí stejně.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Když tě na vodě překvapí mlha:</p>
+<ol>
+  <li>Sniž rychlost na takovou, abys zastavil ve vzdálenosti viditelnosti.</li>
+  <li>Zapni rádio a nalaď ho na kanál pro spojení mezi plavidly (na vnitrozemských vodách v ČR typicky kanál 10).</li>
+  <li>Vydávej zvukový signál — jeden dlouhý tón v intervalu max. 1 minuty.</li>
+  <li>Poslouchej ostatní provoz a před manévrem (změna směru, míjení) si polohu a záměr ověř rádiem.</li>
+  <li>Pokud rádio nemáš a viditelnost se zhorší pod bezpečnou mez, zvaž zastavení a vyčkání na vhodném místě (mimo plavební dráhu).</li>
+</ol>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu, čl. 6.30 (Plavba za snížené viditelnosti)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

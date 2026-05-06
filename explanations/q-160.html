@@ -1,0 +1,86 @@
+<h2>Plavba bez měřiče rychlosti v zóně s limitem</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„smí plout pouze rychlostí odpovídající výtlačnému režimu plavby."</em></p>
+
+<h3>Proč zrovna výtlačný režim?</h3>
+
+<p>Výtlačný režim je <strong>fyzikálně nejpomalejší</strong> způsob, jak může plavidlo plout. Trup se prodírá vodou, tlačí ji před sebou a do stran. Maximální rychlost je v tomto režimu omezená samotnou délkou trupu — existuje tzv. teoretická trupová rychlost (přibližně <code>1,34 × √délka_v_metrech</code> v uzlech). U typického malého plavidla vychází na <strong>8–12 km/h</strong>, což je pod většinou rychlostních limitů na vodních cestách (typicky 10, 15 nebo 25 km/h).</p>
+
+<p>Pravidlo je tedy elegantní: pokud nemáš tachometr, drž se režimu, ve kterém se nad limit fyzicky nedostaneš.</p>
+
+<h3>Tři režimy plavby — porovnání</h3>
+
+<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#f0f8ff;border:1px solid #cdd9e5;border-radius:8px">
+  <!-- Title -->
+  <text x="300" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Režimy plavby motorového plavidla</text>
+
+  <!-- Water line baseline -->
+  <line x1="20" y1="120" x2="580" y2="120" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="20" y1="220" x2="580" y2="220" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="20" y1="320" x2="580" y2="320" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- DISPLACEMENT (výtlačný) - row 1 -->
+  <text x="30" y="60" font-size="13" font-weight="bold" fill="#059669">1. Výtlačný režim</text>
+  <text x="30" y="78" font-size="11" fill="#374151">~ 8–12 km/h · pomalý · stabilní</text>
+  <!-- water waves -->
+  <path d="M 250 120 Q 270 115 290 120 T 330 120 T 370 120 T 410 120 T 450 120 T 490 120 T 530 120" stroke="#3b82f6" fill="none" stroke-width="1.5"/>
+  <!-- boat hull (low, sitting in water) -->
+  <path d="M 280 120 L 380 120 L 390 110 L 270 110 Z" fill="#92400e" stroke="#451a03" stroke-width="1"/>
+  <!-- bow wave (small) -->
+  <path d="M 270 120 Q 260 117 252 120" stroke="#3b82f6" fill="none" stroke-width="1.5"/>
+  <!-- stern wave -->
+  <path d="M 390 120 Q 400 122 410 120" stroke="#3b82f6" fill="none" stroke-width="1.2"/>
+  <text x="500" y="115" font-size="11" fill="#059669" font-weight="bold">✓ povoleno</text>
+  <text x="500" y="128" font-size="10" fill="#059669">bez tachometru</text>
+
+  <!-- TRANSITION (přechodový) - row 2 -->
+  <text x="30" y="160" font-size="13" font-weight="bold" fill="#d97706">2. Přechodový režim</text>
+  <text x="30" y="178" font-size="11" fill="#374151">příď nahoru, záď zabořená, velká vlna</text>
+  <!-- water with bigger wave -->
+  <path d="M 250 220 Q 270 225 290 218 T 330 225 T 370 220" stroke="#3b82f6" fill="none" stroke-width="1.5"/>
+  <!-- boat tilted up -->
+  <path d="M 280 222 L 385 200 L 395 195 L 275 215 Z" fill="#92400e" stroke="#451a03" stroke-width="1"/>
+  <!-- big bow wave -->
+  <path d="M 275 215 Q 260 212 245 222 Q 235 230 225 225" stroke="#3b82f6" fill="none" stroke-width="2"/>
+  <!-- stern dug in -->
+  <path d="M 385 220 Q 395 232 410 222" stroke="#3b82f6" fill="none" stroke-width="2"/>
+  <text x="500" y="215" font-size="11" fill="#d97706" font-weight="bold">✗ nepovoleno</text>
+  <text x="500" y="228" font-size="10" fill="#d97706">pravděpodobně přes limit</text>
+
+  <!-- PLANING (kluzný) - row 3 -->
+  <text x="30" y="260" font-size="13" font-weight="bold" fill="#dc2626">3. Kluzný režim (gliding)</text>
+  <text x="30" y="278" font-size="11" fill="#374151">vyhoupnutí na hladinu, vysoká rychlost</text>
+  <!-- flat water -->
+  <line x1="250" y1="320" x2="540" y2="320" stroke="#3b82f6" stroke-width="1.2"/>
+  <!-- boat skimming, slightly above -->
+  <path d="M 280 308 L 390 308 L 400 300 L 275 300 Z" fill="#92400e" stroke="#451a03" stroke-width="1"/>
+  <!-- spray behind -->
+  <path d="M 280 320 Q 270 315 260 320" stroke="#3b82f6" fill="none" stroke-width="1.2"/>
+  <path d="M 390 320 Q 405 315 420 320 Q 435 318 450 320" stroke="#3b82f6" fill="none" stroke-width="1.2" opacity="0.6"/>
+  <!-- gap between hull and water -->
+  <line x1="280" y1="312" x2="390" y2="312" stroke="#93c5fd" stroke-width="0.5" stroke-dasharray="2 2"/>
+  <text x="500" y="315" font-size="11" fill="#dc2626" font-weight="bold">✗ nepovoleno</text>
+  <text x="500" y="328" font-size="10" fill="#dc2626">snadno se přejede limit</text>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<ul>
+  <li><strong>„Nesmí plout vůbec"</strong> — vyhláška takový absolutní zákaz neukládá. Pokud kapitán dodrží bezpečný režim, plavba je legální.</li>
+  <li><strong>„Jenom vlečeno, tlačeno nebo vedeno v sestavě"</strong> — to by znamenalo, že plavidlo vůbec nesmí použít vlastní pohon. Vyhláška vlastní pohon povoluje, jen omezí režim.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>V praxi to poznáš podle <strong>vlny za zádí</strong> a <strong>polohy plavidla</strong>:</p>
+<ul>
+  <li>Loď sedí ve vodě „rovně", vlna podél celého trupu, bez velkého spreje → <strong>výtlačný režim</strong> ✓</li>
+  <li>Záď zabořená, příď zvednutá, velká vlna za zádí → už ne výtlačný, jsi v přechodovém režimu</li>
+  <li>Loď se vyhoupla nahoru, klouže po hladině, sprej za zádí → kluzný režim, určitě nad limit u běžných úseků</li>
+</ul>
+
+<h3>Zdroj</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — pravidla pro plavbu malých plavidel a režim plavby v úsecích s omezenou rychlostí.</li>
+</ul>

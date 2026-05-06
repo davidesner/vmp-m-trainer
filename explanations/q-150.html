@@ -1,0 +1,139 @@
+<h2>Obeplouvání koupajícího — minimální vzdálenost</h2>
+
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu stanoví, jak daleko musí plavidlo obeplout osobu plovoucí ve vodě. Vzdálenost se liší podle toho, <strong>jestli má plavidlo vlastní (strojní) pohon, nebo ne</strong>.</p>
+
+<h3>Jádro</h3>
+<p>Pro malé plavidlo <strong>bez vlastního pohonu</strong> (veslice, kanoe, paddleboard, šlapadlo) nebo <strong>plachetnici</strong> je minimální vzdálenost obeplutí koupajícího se <strong>3 m</strong>. Motorová plavidla mají hranici jinou — 10 m, viz srovnání níž.</p>
+
+<h3>Vizualizace — pohled shora</h3>
+
+<p><em>Plavec ve vodě uprostřed. Soustředné kruhy ukazují minimální vzdálenosti pro obě kategorie plavidel.</em></p>
+
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; background: #e8f4fb; border: 1px solid #b6cfdf; border-radius: 8px;">
+  <defs>
+    <radialGradient id="water" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cce6f4"/>
+      <stop offset="100%" stop-color="#9bc5dd"/>
+    </radialGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0a3a7a"/>
+    </marker>
+  </defs>
+
+  <!-- Water background -->
+  <rect x="0" y="0" width="700" height="480" fill="url(#water)"/>
+
+  <!-- Title -->
+  <text x="350" y="26" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#0a3a7a">Minimální vzdálenost při obeplouvání koupajícího se</text>
+
+  <!-- 10 m circle (motor) - bigger, lighter -->
+  <circle cx="350" cy="260" r="180" fill="none" stroke="#d33" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"/>
+  <text x="350" y="78" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#a01818">10 m — pro plavidla s vlastním pohonem</text>
+
+  <!-- 3 m circle (non-motor) - tighter, solid green -->
+  <circle cx="350" cy="260" r="54" fill="rgba(46,160,67,0.15)" stroke="#2ea043" stroke-width="3"/>
+  <text x="350" y="195" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1a6b2c">3 m — bez pohonu / plachetnice</text>
+
+  <!-- Swimmer (top-down view) -->
+  <g transform="translate(350, 260)">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="11" fill="#f4c08c" stroke="#7d4f1f" stroke-width="1.5"/>
+    <!-- Arms doing breaststroke -->
+    <path d="M -10 -3 Q -22 -10 -28 -2" fill="none" stroke="#f4c08c" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 10 -3 Q 22 -10 28 -2" fill="none" stroke="#f4c08c" stroke-width="6" stroke-linecap="round"/>
+    <!-- Splash dots -->
+    <circle cx="-32" cy="-4" r="2" fill="#fff" opacity="0.8"/>
+    <circle cx="32" cy="-4" r="2" fill="#fff" opacity="0.8"/>
+    <circle cx="-26" cy="-12" r="1.5" fill="#fff" opacity="0.7"/>
+    <circle cx="26" cy="-12" r="1.5" fill="#fff" opacity="0.7"/>
+    <text x="0" y="32" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1a4060" font-style="italic">plavec</text>
+  </g>
+
+  <!-- Sailboat at exactly 3m boundary (TOP) -->
+  <g transform="translate(350, 206)">
+    <!-- hull (top-down) -->
+    <ellipse cx="0" cy="0" rx="22" ry="9" fill="#f5f0e0" stroke="#5d4a1f" stroke-width="1.5"/>
+    <!-- triangular sail (top-down hint with diagonal) -->
+    <polygon points="-2,-2 14,-12 2,2" fill="#fff" stroke="#666" stroke-width="1"/>
+    <text x="0" y="-22" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1a6b2c">plachetnice — 3 m</text>
+  </g>
+
+  <!-- Rowing boat at 3m boundary (LEFT) -->
+  <g transform="translate(296, 260)">
+    <ellipse cx="0" cy="0" rx="22" ry="9" fill="#e6c890" stroke="#5d4a1f" stroke-width="1.5"/>
+    <!-- oars -->
+    <line x1="-6" y1="-9" x2="-18" y2="-18" stroke="#5d4a1f" stroke-width="2"/>
+    <line x1="-6" y1="9" x2="-18" y2="18" stroke="#5d4a1f" stroke-width="2"/>
+    <line x1="6" y1="-9" x2="18" y2="-18" stroke="#5d4a1f" stroke-width="2"/>
+    <line x1="6" y1="9" x2="18" y2="18" stroke="#5d4a1f" stroke-width="2"/>
+    <text x="0" y="36" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1a6b2c">veslice — 3 m</text>
+  </g>
+
+  <!-- Motorboat at 10m boundary (RIGHT) -->
+  <g transform="translate(530, 260)">
+    <!-- hull (sleeker, top-down) -->
+    <polygon points="-30,-8 22,-8 32,0 22,8 -30,8" fill="#cfd6dc" stroke="#2c3e50" stroke-width="1.5"/>
+    <!-- propeller wake -->
+    <path d="M -30 0 Q -42 -4 -52 -2 Q -42 0 -52 2 Q -42 4 -30 0" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.8"/>
+    <!-- danger stripe -->
+    <rect x="-10" y="-4" width="14" height="8" fill="#d33"/>
+    <text x="0" y="24" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#a01818">motorové plavidlo — 10 m</text>
+  </g>
+
+  <!-- Distance label inside green ring -->
+  <line x1="350" y1="260" x2="350" y2="206" stroke="#1a6b2c" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"/>
+  <text x="358" y="236" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1a6b2c">3 m</text>
+
+  <!-- Distance label inside red ring -->
+  <line x1="350" y1="260" x2="530" y2="260" stroke="#a01818" stroke-width="1.5" marker-end="url(#arr)" opacity="0.5" stroke-dasharray="3 3"/>
+  <text x="430" y="252" font-family="sans-serif" font-size="11" font-weight="bold" fill="#a01818">10 m</text>
+
+  <!-- Legend -->
+  <g transform="translate(20, 420)">
+    <rect x="0" y="0" width="14" height="14" fill="rgba(46,160,67,0.15)" stroke="#2ea043" stroke-width="2"/>
+    <text x="22" y="11" font-family="sans-serif" font-size="11" fill="#1a4060">Veslice / kanoe / paddleboard / plachetnice — min. <strong>3 m</strong> (otázka #150)</text>
+  </g>
+  <g transform="translate(20, 444)">
+    <rect x="0" y="0" width="14" height="14" fill="none" stroke="#d33" stroke-width="2" stroke-dasharray="3 2"/>
+    <text x="22" y="11" font-family="sans-serif" font-size="11" fill="#1a4060">Motorové malé plavidlo — min. <strong>10 m</strong> (jiná kategorie, častá záměna)</text>
+  </g>
+</svg>
+
+<h3>Proč je rozdíl mezi 3 m a 10 m</h3>
+
+<p>Rozdíl je čistě bezpečnostní — riziko, které plavidlo představuje pro plavce ve vodě, je u motorového plavidla výrazně vyšší:</p>
+
+<table>
+  <thead>
+    <tr><th>Hledisko</th><th>Bez pohonu / plachetnice</th><th>S vlastním pohonem</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Lodní šroub</td><td>není</td><td><strong>rotuje pod vodou</strong> — vážná hrozba</td></tr>
+    <tr><td>Rychlost</td><td>nízká, plavec stihne uhnout</td><td>vyšší, kratší reakční čas</td></tr>
+    <tr><td>Vlnění</td><td>minimální</td><td>tlaková vlna může strhnout pod trup</td></tr>
+    <tr><td>Brzdná dráha</td><td>krátká (vesly se dá zabrzdit ihned)</td><td>delší — i po stažení plynu plavidlo dojíždí</td></tr>
+    <tr><td>Min. vzdálenost</td><td><strong>3 m</strong></td><td><strong>10 m</strong></td></tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>„10 m"</strong> — chytlavá past. To je vzdálenost pro motorová malá plavidla. Otázka záměrně testuje, jestli si pleteš obě kategorie.</li>
+  <li><strong>„50 m"</strong> — taková vzdálenost se v plavebních pravidlech objevuje například u stání v bezpečné vzdálenosti od plavidel s nebezpečným nákladem (dva modré kužele/světla), ale ne u obeplouvání plavce.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Pokud na řece nebo přehradě potkáš plavce, posuď nejdřív, čím sám pluješ:</p>
+<ul>
+  <li>Veslice, kanoe, paddleboard, plachetnice pod plachtou → <strong>3 m</strong> stranou.</li>
+  <li>Cokoliv s motorem (i pomocným, který je zrovna v provozu) → <strong>10 m</strong> stranou.</li>
+</ul>
+<p>V praxi: 3 m je zhruba délka pádla nataženého před tebe. 10 m je dvě délky průměrné motorové loďky. Když si nejsi jistý, drž větší rezervu — pravidlo říká „<em>alespoň</em>", ne „přesně".</p>
+
+<h3>Zdroje</h3>
+<ol>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — část upravující povinnosti malých plavidel vůči koupajícím se osobám.</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě — obecný rámec.</li>
+</ol>

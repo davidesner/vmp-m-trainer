@@ -1,0 +1,165 @@
+<h2>Signalizace plavební komory — co znamenají světla</h2>
+
+<p>Zelené světlo (jedno nebo dvě vedle sebe) na plavební komoře je <strong>povolovací signál</strong>: vrata jsou otevřena, hladina vyrovnaná a plavidlo smí dovnitř. Funguje to jako semafor — červená stůj, zelená jeď.</p>
+
+<h3>Vizualizace — všech pět stavů signalizace plavební komory</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="100%" style="max-width:800px;background:#0e1525;border-radius:8px;font-family:system-ui,sans-serif">
+  <defs>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="60%" stop-color="#d62828"/>
+      <stop offset="100%" stop-color="#7a0e0e"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7be88a"/>
+      <stop offset="60%" stop-color="#2ea043"/>
+      <stop offset="100%" stop-color="#0e5a1f"/>
+    </radialGradient>
+    <radialGradient id="offGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </radialGradient>
+  </defs>
+
+  <text x="400" y="28" text-anchor="middle" fill="#e6edf3" font-size="18" font-weight="600">Signalizace na plavební komoře</text>
+  <text x="400" y="48" text-anchor="middle" fill="#9aa4b2" font-size="12">vyhláška č. 67/2015 Sb. — pravidla plavebního provozu</text>
+
+  <!-- 1. Two red — out of service -->
+  <g transform="translate(40,80)">
+    <rect x="0" y="0" width="130" height="170" rx="8" fill="#1a2233" stroke="#2d3748" stroke-width="1"/>
+    <rect x="35" y="20" width="60" height="80" rx="4" fill="#0e1525" stroke="#2d3748"/>
+    <circle cx="52" cy="60" r="14" fill="url(#redGlow)"/>
+    <circle cx="78" cy="60" r="14" fill="url(#redGlow)"/>
+    <text x="65" y="125" text-anchor="middle" fill="#ff8585" font-size="13" font-weight="700">2× červená</text>
+    <text x="65" y="145" text-anchor="middle" fill="#e6edf3" font-size="11">komora</text>
+    <text x="65" y="160" text-anchor="middle" fill="#e6edf3" font-size="11">mimo provoz</text>
+  </g>
+
+  <!-- 2. One red — entry forbidden -->
+  <g transform="translate(190,80)">
+    <rect x="0" y="0" width="130" height="170" rx="8" fill="#1a2233" stroke="#2d3748"/>
+    <rect x="35" y="20" width="60" height="80" rx="4" fill="#0e1525" stroke="#2d3748"/>
+    <circle cx="65" cy="60" r="14" fill="url(#redGlow)"/>
+    <text x="65" y="125" text-anchor="middle" fill="#ff8585" font-size="13" font-weight="700">1× červená</text>
+    <text x="65" y="145" text-anchor="middle" fill="#e6edf3" font-size="11">vplutí</text>
+    <text x="65" y="160" text-anchor="middle" fill="#e6edf3" font-size="11">zakázáno</text>
+  </g>
+
+  <!-- 3. Red + green — preparing -->
+  <g transform="translate(340,80)">
+    <rect x="0" y="0" width="130" height="170" rx="8" fill="#1a2233" stroke="#2d3748"/>
+    <rect x="35" y="20" width="60" height="80" rx="4" fill="#0e1525" stroke="#2d3748"/>
+    <circle cx="52" cy="60" r="14" fill="url(#redGlow)"/>
+    <circle cx="78" cy="60" r="14" fill="url(#greenGlow)"/>
+    <text x="65" y="125" text-anchor="middle" fill="#ffd166" font-size="13" font-weight="700">červená + zelená</text>
+    <text x="65" y="145" text-anchor="middle" fill="#e6edf3" font-size="11">otevření se</text>
+    <text x="65" y="160" text-anchor="middle" fill="#e6edf3" font-size="11">připravuje</text>
+  </g>
+
+  <!-- 4. Green / two green — entry allowed (CORRECT) -->
+  <g transform="translate(490,80)">
+    <rect x="0" y="0" width="130" height="170" rx="8" fill="#1f3a23" stroke="#3fb950" stroke-width="2"/>
+    <rect x="35" y="20" width="60" height="80" rx="4" fill="#0e1525" stroke="#3fb950"/>
+    <circle cx="52" cy="60" r="14" fill="url(#greenGlow)"/>
+    <circle cx="78" cy="60" r="14" fill="url(#greenGlow)"/>
+    <text x="65" y="125" text-anchor="middle" fill="#7be88a" font-size="13" font-weight="700">1–2× zelená</text>
+    <text x="65" y="145" text-anchor="middle" fill="#e6edf3" font-size="11" font-weight="700">vplutí</text>
+    <text x="65" y="160" text-anchor="middle" fill="#e6edf3" font-size="11" font-weight="700">povoleno ✓</text>
+  </g>
+
+  <!-- 5. No lights — out of service -->
+  <g transform="translate(640,80)">
+    <rect x="0" y="0" width="130" height="170" rx="8" fill="#1a2233" stroke="#2d3748"/>
+    <rect x="35" y="20" width="60" height="80" rx="4" fill="#0e1525" stroke="#2d3748"/>
+    <circle cx="52" cy="60" r="14" fill="url(#offGlow)"/>
+    <circle cx="78" cy="60" r="14" fill="url(#offGlow)"/>
+    <text x="65" y="125" text-anchor="middle" fill="#9aa4b2" font-size="13" font-weight="700">žádné světlo</text>
+    <text x="65" y="145" text-anchor="middle" fill="#e6edf3" font-size="11">komora</text>
+    <text x="65" y="160" text-anchor="middle" fill="#e6edf3" font-size="11">mimo provoz</text>
+  </g>
+
+  <!-- Bottom: lock chamber view from above -->
+  <g transform="translate(0,290)">
+    <text x="400" y="0" text-anchor="middle" fill="#9aa4b2" font-size="13" font-weight="600">Umístění světel — pohled na plavební komoru shora</text>
+
+    <!-- water -->
+    <rect x="120" y="20" width="560" height="120" fill="#13315c" opacity="0.6"/>
+    <!-- lock walls -->
+    <rect x="120" y="20" width="560" height="14" fill="#3d4654"/>
+    <rect x="120" y="126" width="560" height="14" fill="#3d4654"/>
+    <!-- gates -->
+    <rect x="118" y="20" width="6" height="120" fill="#5a6677"/>
+    <rect x="676" y="20" width="6" height="120" fill="#5a6677"/>
+
+    <!-- Signal lights left side (entry) -->
+    <circle cx="155" cy="14" r="6" fill="url(#greenGlow)"/>
+    <circle cx="170" cy="14" r="6" fill="url(#greenGlow)"/>
+    <circle cx="155" cy="146" r="6" fill="url(#greenGlow)"/>
+    <circle cx="170" cy="146" r="6" fill="url(#greenGlow)"/>
+
+    <!-- Boat -->
+    <g transform="translate(280,80)">
+      <polygon points="0,-10 60,-10 75,0 60,10 0,10" fill="#e6edf3" stroke="#0e1525" stroke-width="1"/>
+      <rect x="20" y="-7" width="20" height="14" fill="#3fb950"/>
+    </g>
+    <!-- Arrow showing entry -->
+    <path d="M 220 80 L 270 80" stroke="#7be88a" stroke-width="3" marker-end="url(#arrowGreen)" fill="none"/>
+    <defs>
+      <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" fill="#7be88a"/>
+      </marker>
+    </defs>
+
+    <!-- Annotations -->
+    <text x="162" y="160" text-anchor="middle" fill="#7be88a" font-size="10">2× zelená</text>
+    <text x="162" y="172" text-anchor="middle" fill="#9aa4b2" font-size="9">(vlevo i vpravo)</text>
+    <text x="245" y="65" text-anchor="middle" fill="#7be88a" font-size="11" font-weight="600">vplouvám</text>
+
+    <text x="700" y="80" text-anchor="middle" fill="#9aa4b2" font-size="10">vrata</text>
+    <text x="119" y="80" text-anchor="middle" fill="#9aa4b2" font-size="10" transform="rotate(-90 119 80)">vrata</text>
+  </g>
+</svg>
+
+<h3>Pozadí — kompletní soustava signálů</h3>
+
+<p>Plavební komora má pět možných stavů, které se signalizují kombinací červených a zelených světel:</p>
+
+<table>
+  <thead>
+    <tr><th>Co svítí</th><th>Význam</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>2× červená</strong> vedle/nad sebou</td><td>komora <strong>mimo provoz</strong></td></tr>
+    <tr><td><strong>1× červená</strong></td><td>vplutí <strong>zakázáno</strong> (komora obsazená nebo se zavírá)</td></tr>
+    <tr><td><strong>červená + zelená</strong> vedle sebe</td><td>vplutí <strong>zatím zakázáno</strong>, otevření se připravuje</td></tr>
+    <tr><td><strong>1× zelená</strong> nebo <strong>2× zelená</strong> vedle sebe</td><td><strong>vplutí povoleno</strong> ✓</td></tr>
+    <tr><td><strong>žádné světlo</strong></td><td>komora mimo provoz / řiď se pokyny obsluhy</td></tr>
+  </tbody>
+</table>
+
+<p>Světla bývají umístěna <strong>na jedné nebo obou stranách</strong> vjezdu do komory. Varianta „dvě zelená vedle sebe" se používá tam, kde je třeba signál vidět z větší dálky nebo z obou plavebních směrů — význam je <em>totožný</em> jako u jediného zeleného světla.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li>Tvrzení o tom, že „<em>vplutí je omezeno, v plavební komoře je překážka</em>" — taková signalizace v systému plavební komory neexistuje. Překážky se zelenou neřeší.</li>
+  <li>Tvrzení o tom, že „<em>vplutí není možné, připravuje se otevření plavební komory</em>" popisuje reálný stav, ale ten signalizuje <strong>kombinace červené a zelené vedle sebe</strong> — ne samotné zelené.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když se blížíš k plavební komoře, vždy <strong>nejdřív zkontroluj návěstí</strong>. Vplouvej teprve při zelené. Při červeno-zelené kombinaci se zařaď do čekací zóny a počkej, až přepne na čistě zelenou. Pokud nesvítí nic, znamená to obvykle, že komora je mimo provoz — komunikuj s obsluhou (typicky VHF kanál nebo telefon uvedený na infotabuli).</p>
+
+<h3>Mnemo</h3>
+
+<blockquote>
+  🔴🔴 mimo provoz · 🔴 stůj · 🔴🟢 ještě stůj, hned to bude · 🟢(🟢) jeď · ⚫ bez služby
+</blockquote>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — signalizace plavebních komor</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

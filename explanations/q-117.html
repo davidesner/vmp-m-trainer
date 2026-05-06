@@ -1,0 +1,190 @@
+<h2>Plavební komora bez signálních světel — vplutí jen na pokyn obsluhy</h2>
+
+<p><strong>Správná je odpověď:</strong> <em>„nelze vplout do plavební komory nebo vyplout z ní bez pokynu obsluhy plavební komory."</em></p>
+
+<p>Plavební komora je <strong>řízený provoz</strong>. Za normálního stavu informuje plavidla o stavu komory <strong>semaforová signalizace</strong> u horních a dolních vrat. Když světla <strong>chybí</strong> nebo <strong>nesvítí</strong>, vypadne hlavní informační kanál — a jediné bezpečné řešení je dostat instrukci <strong>přímo od obsluhy</strong> (rádio, telefon, ruční signál). Plavidlo nesmí samo „odhadovat", v jaké fázi cyklu komora je.</p>
+
+<blockquote style="border-left:4px solid #2563eb;padding:10px 14px;background:#eff6ff;margin:12px 0">
+<strong>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu</strong> — ustanovení o plavbě plavebními komorami stanoví, že vplutí a vyplutí se řídí signalizací; <strong>pokud signalizace chybí nebo nefunguje, je vplutí/vyplutí možné výhradně na pokyn obsluhy</strong>.
+</blockquote>
+
+<h3>Jaká signalizace se na plavebních komorách používá</h3>
+
+<p>Na vstupu do komory bývá semafor s několika kombinacemi červených a zelených světel. Význam:</p>
+
+<svg viewBox="0 0 780 280" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Stavy signalizace plavební komory</title>
+  <desc>Pět stavů signalizace: dvě červená, jedna červená, červená a zelená, jedna zelená, a stav bez světel.</desc>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="780" height="280" style="fill:#f8fafc"/>
+
+  <!-- 2x červená -->
+  <g transform="translate(40,40)">
+    <rect x="0" y="0" width="100" height="160" rx="8" style="fill:#1e293b;stroke:#0f172a;stroke-width:2"/>
+    <circle cx="32" cy="40" r="18" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:2"/>
+    <circle cx="68" cy="40" r="18" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:2"/>
+    <circle cx="32" cy="90" r="18" style="fill:#1f2937;stroke:#374151;stroke-width:2"/>
+    <circle cx="68" cy="90" r="18" style="fill:#1f2937;stroke:#374151;stroke-width:2"/>
+    <text x="50" y="200" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#0f172a">2× červená</text>
+    <text x="50" y="220" text-anchor="middle" style="font-size:11px;fill:#475569">vplutí zakázáno</text>
+    <text x="50" y="234" text-anchor="middle" style="font-size:11px;fill:#475569">komora není připravena</text>
+  </g>
+
+  <!-- 1x červená -->
+  <g transform="translate(180,40)">
+    <rect x="0" y="0" width="100" height="160" rx="8" style="fill:#1e293b;stroke:#0f172a;stroke-width:2"/>
+    <circle cx="50" cy="40" r="18" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:2"/>
+    <circle cx="50" cy="90" r="18" style="fill:#1f2937;stroke:#374151;stroke-width:2"/>
+    <text x="50" y="200" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#0f172a">1× červená</text>
+    <text x="50" y="220" text-anchor="middle" style="font-size:11px;fill:#475569">vplutí zakázáno</text>
+    <text x="50" y="234" text-anchor="middle" style="font-size:11px;fill:#475569">komora se připravuje</text>
+  </g>
+
+  <!-- červená + zelená -->
+  <g transform="translate(320,40)">
+    <rect x="0" y="0" width="100" height="160" rx="8" style="fill:#1e293b;stroke:#0f172a;stroke-width:2"/>
+    <circle cx="32" cy="40" r="18" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:2"/>
+    <circle cx="68" cy="40" r="18" style="fill:#22c55e;stroke:#14532d;stroke-width:2"/>
+    <text x="50" y="200" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#0f172a">červená + zelená</text>
+    <text x="50" y="220" text-anchor="middle" style="font-size:11px;fill:#475569">zatím čekat</text>
+    <text x="50" y="234" text-anchor="middle" style="font-size:11px;fill:#475569">brzy bude volno</text>
+  </g>
+
+  <!-- 1x zelená -->
+  <g transform="translate(460,40)">
+    <rect x="0" y="0" width="100" height="160" rx="8" style="fill:#1e293b;stroke:#0f172a;stroke-width:2"/>
+    <circle cx="50" cy="40" r="18" style="fill:#22c55e;stroke:#14532d;stroke-width:2"/>
+    <circle cx="50" cy="90" r="18" style="fill:#1f2937;stroke:#374151;stroke-width:2"/>
+    <text x="50" y="200" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#0f172a">1× zelená</text>
+    <text x="50" y="220" text-anchor="middle" style="font-size:11px;fill:#16a34a;font-weight:600">vplutí povoleno</text>
+  </g>
+
+  <!-- žádná světla -->
+  <g transform="translate(620,40)">
+    <rect x="0" y="0" width="100" height="160" rx="8" style="fill:#1e293b;stroke:#0f172a;stroke-width:2;stroke-dasharray:6 4"/>
+    <circle cx="32" cy="40" r="18" style="fill:#1f2937;stroke:#374151;stroke-width:2"/>
+    <circle cx="68" cy="40" r="18" style="fill:#1f2937;stroke:#374151;stroke-width:2"/>
+    <circle cx="32" cy="90" r="18" style="fill:#1f2937;stroke:#374151;stroke-width:2"/>
+    <circle cx="68" cy="90" r="18" style="fill:#1f2937;stroke:#374151;stroke-width:2"/>
+    <text x="50" y="125" text-anchor="middle" style="font-size:30px;fill:#f59e0b">⚠</text>
+    <text x="50" y="200" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#b45309">žádná světla</text>
+    <text x="50" y="220" text-anchor="middle" style="font-size:11px;fill:#92400e;font-weight:600">JEN na pokyn obsluhy</text>
+    <text x="50" y="234" text-anchor="middle" style="font-size:11px;fill:#92400e">— rádio / telefon</text>
+  </g>
+</svg>
+
+<h3>Schéma plavební komory — kde jsou semafory</h3>
+
+<svg viewBox="0 0 780 320" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Plavební komora — pohled shora se semafory</title>
+  <desc>Schéma plavební komory s vrátnicemi a pozicemi vstupních a výstupních semaforů.</desc>
+
+  <!-- Voda nad/pod -->
+  <rect x="0" y="0" width="780" height="320" style="fill:#dbeafe"/>
+
+  <!-- Vlnky -->
+  <g style="stroke:#60a5fa;stroke-width:1;fill:none;opacity:0.5">
+    <path d="M 20 50 q 15 -8 30 0 t 30 0 t 30 0"/>
+    <path d="M 700 50 q 15 -8 30 0 t 30 0"/>
+    <path d="M 20 270 q 15 -8 30 0 t 30 0 t 30 0"/>
+    <path d="M 700 270 q 15 -8 30 0 t 30 0"/>
+  </g>
+
+  <!-- Komora - obrys -->
+  <rect x="200" y="100" width="380" height="120" style="fill:#bfdbfe;stroke:#1e3a8a;stroke-width:3"/>
+  <text x="390" y="170" text-anchor="middle" style="font-size:18px;font-weight:700;fill:#1e3a8a">PLAVEBNÍ KOMORA</text>
+  <text x="390" y="190" text-anchor="middle" style="font-size:11px;fill:#1e40af">prostor pro plavidlo</text>
+
+  <!-- Vrata levá (horní) -->
+  <rect x="190" y="95" width="14" height="130" style="fill:#78350f;stroke:#451a03;stroke-width:2"/>
+  <text x="180" y="240" text-anchor="middle" style="font-size:10px;fill:#451a03">horní vrata</text>
+
+  <!-- Vrata pravá (dolní) -->
+  <rect x="576" y="95" width="14" height="130" style="fill:#78350f;stroke:#451a03;stroke-width:2"/>
+  <text x="600" y="240" text-anchor="middle" style="font-size:10px;fill:#451a03">dolní vrata</text>
+
+  <!-- Levý semafor (vstup z horní vody) -->
+  <g transform="translate(110,130)">
+    <rect x="0" y="0" width="50" height="80" rx="6" style="fill:#1e293b;stroke:#0f172a;stroke-width:2"/>
+    <circle cx="25" cy="22" r="9" style="fill:#22c55e;stroke:#14532d;stroke-width:1.5"/>
+    <circle cx="25" cy="55" r="9" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <line x1="25" y1="80" x2="25" y2="110" style="stroke:#374151;stroke-width:3"/>
+    <text x="25" y="-6" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#0f172a">SEMAFOR</text>
+  </g>
+  <text x="135" y="260" text-anchor="middle" style="font-size:10px;fill:#1e3a8a;font-style:italic">vstupní (horní voda)</text>
+
+  <!-- Pravý semafor (vstup z dolní vody) -->
+  <g transform="translate(620,130)">
+    <rect x="0" y="0" width="50" height="80" rx="6" style="fill:#1e293b;stroke:#0f172a;stroke-width:2"/>
+    <circle cx="25" cy="22" r="9" style="fill:#22c55e;stroke:#14532d;stroke-width:1.5"/>
+    <circle cx="25" cy="55" r="9" style="fill:#dc2626;stroke:#7f1d1d;stroke-width:1.5"/>
+    <line x1="25" y1="80" x2="25" y2="110" style="stroke:#374151;stroke-width:3"/>
+    <text x="25" y="-6" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#0f172a">SEMAFOR</text>
+  </g>
+  <text x="645" y="260" text-anchor="middle" style="font-size:10px;fill:#1e3a8a;font-style:italic">vstupní (dolní voda)</text>
+
+  <!-- Šipky směru plavby -->
+  <g style="fill:#1e40af">
+    <path d="M 30 160 L 95 160" style="stroke:#1e40af;stroke-width:2;fill:none"/>
+    <polygon points="95,160 88,156 88,164"/>
+    <text x="50" y="150" style="font-size:10px;font-style:italic">přijíždějící plavidlo</text>
+  </g>
+
+  <!-- Šipky druhý směr -->
+  <g style="fill:#1e40af">
+    <path d="M 750 160 L 685 160" style="stroke:#1e40af;stroke-width:2;fill:none"/>
+    <polygon points="685,160 692,156 692,164"/>
+    <text x="700" y="150" style="font-size:10px;font-style:italic">přijíždějící</text>
+  </g>
+
+  <!-- Čekací stání -->
+  <rect x="20" y="280" width="120" height="22" style="fill:#fef3c7;stroke:#b45309;stroke-width:1.5;stroke-dasharray:3 3"/>
+  <text x="80" y="296" text-anchor="middle" style="font-size:10px;font-weight:600;fill:#78350f">čekací stání</text>
+
+  <rect x="640" y="280" width="120" height="22" style="fill:#fef3c7;stroke:#b45309;stroke-width:1.5;stroke-dasharray:3 3"/>
+  <text x="700" y="296" text-anchor="middle" style="font-size:10px;font-weight:600;fill:#78350f">čekací stání</text>
+
+  <!-- Popisek u komory -->
+  <text x="390" y="60" text-anchor="middle" style="font-size:12px;fill:#1e3a8a;font-weight:600">Když semafor nesvítí, plavidlo se NESMÍ samo rozhodnout — čeká na pokyn obsluhy</text>
+</svg>
+
+<h3>Co dělat, když přijedeš a světla nesvítí</h3>
+
+<ol>
+  <li><strong>Zastav v čekacím stání</strong> před komorou — nikdy nevjíždíš „na zkoušku".</li>
+  <li><strong>Naváž spojení s obsluhou</strong>: VHF rádiem na příslušném kanálu, telefonem (číslo bývá na infotabuli u komory), případně zvukovým signálem nebo ručně.</li>
+  <li><strong>Počkej na výslovný pokyn</strong> („vplujte" / „vyplujte"). Až po něm se rozjedeš.</li>
+  <li>Při samotném proplouvání zachovej zvýšenou opatrnost — obsluha tě navádí, ale za bezpečné ovládání plavidla pořád zodpovídáš ty.</li>
+</ol>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<table style="width:100%;border-collapse:collapse;margin:8px 0">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Tvrzení</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Proč to nefunguje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb;font-weight:600">„jen s největší opatrností"</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Opatrnost není náhrada za <strong>informaci</strong>. Vůdce plavidla z venku nevidí, jestli se vrata zrovna pohybují, jestli se komora plní, ani jestli uvnitř není jiné plavidlo. Žádná míra obezřetnosti tu chybějící údaj nedoplní.</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;font-weight:600">„nejsou-li v obvodu plavební komory zjevné překážky"</td>
+      <td style="padding:8px">Nejnebezpečnější procesy v komoře <strong>nejsou viditelné</strong> — zavlažování přes stavidla, manipulace s vraty pod tlakem, plavidlo skryté u stěny komory. „Vizuální kontrola z dálky" tady selhává.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická poznámka</h3>
+
+<p>Některé plavební komory bývají <strong>samoobslužné</strong> (tlačítko, magnetická karta). I tam ale <em>komora vždy nějak signalizuje stav</em> — buď semaforem, nebo informačním panelem. Pokud signalizace selže, řešení je stejné: <strong>spojit se s obsluhou / dispečerem</strong> a vyčkat pokynu.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — ustanovení o plavbě plavebními komorami a signalizaci na nich</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — obecná pravidla provozu na vodních cestách</li>
+</ul>

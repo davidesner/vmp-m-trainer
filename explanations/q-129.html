@@ -1,0 +1,124 @@
+<h2>Zvukový signál malého plavidla za snížené viditelnosti bez radaru</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„jeden dlouhý zvuk, opakující se v intervalech ne delších než jedna minuta."</em></p>
+
+<h3>Jádro</h3>
+<p>Když pluje malé plavidlo <strong>za snížené viditelnosti</strong> (mlha, hustý déšť, sněžení, soumrak) <strong>bez radiolokátoru</strong>, je zvuk jediným prostředkem, jak ostatním lodím sdělit „tady jsem" — nejde vás vidět ani okem, ani na radaru. Předepsaný signál je <strong>jeden dlouhý zvuk</strong> (~4 sekundy) opakovaný v intervalech, které nesmí být <strong>delší než 1 minuta</strong>.</p>
+
+<h3>Délky zvuků (normované)</h3>
+<table>
+  <thead>
+    <tr><th>Zvuk</th><th>Trvání</th><th>Použití</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>krátký</td><td>~1 sekunda</td><td>manévrovací signály (změna kurzu, couvání)</td></tr>
+    <tr><td>dlouhý</td><td>~4 sekundy</td><td>signály za snížené viditelnosti, varovné</td></tr>
+    <tr><td>velmi dlouhý</td><td>~10 sekund</td><td>vlečné soupravy, speciální situace</td></tr>
+  </tbody>
+</table>
+
+<h3>Vizualizace rytmu — časová osa 60 sekund</h3>
+
+<p>Horní osa ukazuje správný signál (jeden dlouhý zvuk každou minutu). Spodní dvě osy ukazují, jak vypadají chytlavé nesprávné varianty.</p>
+
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:system-ui,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Title row 1: SPRÁVNĚ -->
+  <text x="20" y="30" font-size="15" font-weight="700" fill="#16a34a">SPRÁVNĚ — jeden dlouhý zvuk, interval ne delší než 1 min</text>
+
+  <!-- Time axis 1 -->
+  <line x1="40" y1="80" x2="700" y2="80" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="690" y="100" font-size="11" fill="#475569" text-anchor="end">čas</text>
+
+  <!-- Tick marks every 10 seconds (660px / 60s = 11px per second) -->
+  <g stroke="#94a3b8" stroke-width="1">
+    <line x1="40" y1="76" x2="40" y2="84"/>
+    <line x1="150" y1="76" x2="150" y2="84"/>
+    <line x1="260" y1="76" x2="260" y2="84"/>
+    <line x1="370" y1="76" x2="370" y2="84"/>
+    <line x1="480" y1="76" x2="480" y2="84"/>
+    <line x1="590" y1="76" x2="590" y2="84"/>
+    <line x1="700" y1="76" x2="700" y2="84"/>
+  </g>
+  <g font-size="10" fill="#64748b" text-anchor="middle">
+    <text x="40" y="98">0 s</text>
+    <text x="150" y="98">10</text>
+    <text x="260" y="98">20</text>
+    <text x="370" y="98">30</text>
+    <text x="480" y="98">40</text>
+    <text x="590" y="98">50</text>
+    <text x="700" y="98">60 s</text>
+  </g>
+
+  <!-- Long sound at t=0 (4s = 44px wide) -->
+  <rect x="40" y="55" width="44" height="20" fill="#16a34a" rx="3"/>
+  <text x="62" y="50" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="600">~4 s</text>
+
+  <!-- Long sound at t=60 (start of next cycle) -->
+  <rect x="700" y="55" width="44" height="20" fill="#16a34a" rx="3" opacity="0.4"/>
+
+  <!-- Interval bracket -->
+  <line x1="40" y1="115" x2="700" y2="115" stroke="#16a34a" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="40" y1="110" x2="40" y2="120" stroke="#16a34a" stroke-width="1"/>
+  <line x1="700" y1="110" x2="700" y2="120" stroke="#16a34a" stroke-width="1"/>
+  <text x="370" y="132" font-size="11" fill="#16a34a" text-anchor="middle" font-weight="600">interval ≤ 60 sekund</text>
+
+  <!-- Title row 2: NESPRÁVNĚ — krátký zvuk -->
+  <text x="20" y="180" font-size="13" font-weight="600" fill="#dc2626">NESPRÁVNĚ — jeden krátký zvuk v minutovém intervalu</text>
+  <text x="20" y="196" font-size="11" fill="#64748b">krátký zvuk znamená manévrovací signál, ne signál za snížené viditelnosti</text>
+
+  <line x1="40" y1="230" x2="700" y2="230" stroke="#94a3b8" stroke-width="1"/>
+  <g stroke="#cbd5e1" stroke-width="1">
+    <line x1="40" y1="226" x2="40" y2="234"/>
+    <line x1="700" y1="226" x2="700" y2="234"/>
+  </g>
+  <g font-size="10" fill="#94a3b8" text-anchor="middle">
+    <text x="40" y="248">0 s</text>
+    <text x="700" y="248">60 s</text>
+  </g>
+  <!-- Short sound = 1s = 11px -->
+  <rect x="40" y="218" width="11" height="14" fill="#dc2626" rx="2"/>
+  <text x="60" y="215" font-size="10" fill="#dc2626" font-weight="600">~1 s (krátký)</text>
+  <rect x="700" y="218" width="11" height="14" fill="#dc2626" rx="2" opacity="0.4"/>
+
+  <!-- Title row 3: NESPRÁVNĚ — kombinace + delší interval -->
+  <text x="20" y="290" font-size="13" font-weight="600" fill="#dc2626">NESPRÁVNĚ — krátký-dlouhý-krátký, interval delší než 1 min</text>
+  <text x="20" y="306" font-size="11" fill="#64748b">kombinovaný signál pro jiné situace + příliš řídké opakování = ostatní vás nezachytí včas</text>
+
+  <line x1="40" y1="340" x2="700" y2="340" stroke="#94a3b8" stroke-width="1"/>
+  <g stroke="#cbd5e1" stroke-width="1">
+    <line x1="40" y1="336" x2="40" y2="344"/>
+    <line x1="700" y1="336" x2="700" y2="344"/>
+  </g>
+  <g font-size="10" fill="#94a3b8" text-anchor="middle">
+    <text x="40" y="358">0 s</text>
+    <text x="700" y="358">&gt; 60 s</text>
+  </g>
+  <!-- Krátký + dlouhý + krátký, with gaps -->
+  <rect x="40" y="328" width="11" height="14" fill="#dc2626" rx="2"/>
+  <rect x="58" y="328" width="44" height="14" fill="#dc2626" rx="2"/>
+  <rect x="109" y="328" width="11" height="14" fill="#dc2626" rx="2"/>
+  <text x="80" y="324" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="600">krátký + dlouhý + krátký</text>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<ul>
+  <li><strong>Varianta s krátkým-dlouhým-krátkým zvukem a intervalem delším než 1 minuta</strong> — kombinace krátký-dlouhý-krátký je vyhrazená pro jiné situace (varovné/manévrové signály), nikoli pro signál za snížené viditelnosti. Navíc interval <em>delší</em> než 1 minuta by znamenal, že vás okolní plavidla nemusí včas zachytit sluchem.</li>
+  <li><strong>Varianta s jedním krátkým zvukem v minutových intervalech</strong> — krátké zvuky (~1 s) se používají pro <em>manévrovací</em> signály: „měním kurz vpravo" (1 krátký), „měním kurz vlevo" (2 krátké), „couvám" (3 krátké). Za snížené viditelnosti potřebujete <strong>dlouhý</strong> zvuk, protože nese dál a je z hluku okolí lépe slyšitelný.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Jakmile mlha nebo soumrak omezí viditelnost a vy nemáte radar — <strong>každou minutu (klidně i častěji)</strong> zatáhněte za píšťalku přibližně na 4 sekundy. Pravidlo říká „<em>ne delší</em> než 1 minuta", takže častější opakování je v pořádku, méně časté nikoli. Mějte na palubě funkční zvukové zařízení (píšťalka, lodní houkačka) — na malém plavidle bývá vyžadovaná i obyčejná píšťalka stačící na slyšitelný dlouhý tón.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu (zvukové signály plavidel za plavby za snížené viditelnosti)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>
