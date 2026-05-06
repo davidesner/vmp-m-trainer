@@ -1,0 +1,146 @@
+<h2>Vplouvání do plavebních komor</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„ve dne i v noci optickými signály, osazenými na jedné nebo na obou stranách plavební komory."</em></p>
+
+<h3>Jádro</h3>
+<p>Vplouvání i vyplouvání z plavební komory se řídí <strong>soustavou červených a zelených světel</strong> (případně rovnocennými signálními znaky podle přílohy č. 7 vyhlášky). Protože jde o <strong>světla</strong>, fungují stejně dobře ve dne jako v noci — žádný „noční režim přes vysílačku" se nepředepisuje. Signály se osazují <strong>na jedné nebo na obou stranách</strong> vjezdu komory; obojí varianta je v souladu s vyhláškou.</p>
+
+<h3>Co říká § 83 vyhlášky č. 67/2015 Sb.</h3>
+<p>Pravidla plavebního provozu v § 83 (Vplouvání do plavebních komor a vyplouvání z nich) přiřazují kombinacím červených a zelených světel u vjezdu komory následující významy:</p>
+
+<table>
+  <thead>
+    <tr><th>Signál u vjezdu</th><th>Význam</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2 červená nad sebou</td><td>komora <strong>mimo provoz</strong> — vplutí není možné</td></tr>
+    <tr><td>1 červené, nebo 2 červená vedle sebe</td><td>komora <strong>právě pracuje</strong> — vplutí není možné</td></tr>
+    <tr><td>1 červené + 1 zelené vedle sebe (nebo jedno ze dvou červených zhasne)</td><td><strong>příprava</strong> — lze přistupovat k vjezdu</td></tr>
+    <tr><td>1 zelené, nebo 2 zelená vedle sebe</td><td><strong>vplutí je možné</strong></td></tr>
+  </tbody>
+</table>
+
+<p>Vyplouvání se řídí obdobně: červená světla = zákaz, zelená světla = povolení. Světla mohou být nahrazena odpovídajícími signálními znaky podle přílohy č. 7.</p>
+
+<h3>Vizualizace — signální stěna u vjezdu</h3>
+<p>Schematické zobrazení čtyř stavů u vplouvání (zleva doprava: zákaz statický, zákaz dočasný, příprava, povolení):</p>
+
+<svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Signalizace u plavební komory">
+  <defs>
+    <radialGradient id="redOn" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff5a5a"/>
+      <stop offset="100%" stop-color="#a40000"/>
+    </radialGradient>
+    <radialGradient id="greenOn" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7af07a"/>
+      <stop offset="100%" stop-color="#1a7a1a"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Stav 1: Mimo provoz (2 červená nad sebou) -->
+  <g transform="translate(20,20)">
+    <rect x="0" y="0" width="150" height="220" rx="6" fill="#2a2a2a" stroke="#000" stroke-width="2"/>
+    <circle cx="75" cy="55" r="22" fill="url(#redOn)" stroke="#000" stroke-width="2"/>
+    <circle cx="75" cy="115" r="22" fill="url(#redOn)" stroke="#000" stroke-width="2"/>
+    <circle cx="40" cy="170" r="18" fill="#3a3a3a" stroke="#111" stroke-width="2"/>
+    <circle cx="110" cy="170" r="18" fill="#3a3a3a" stroke="#111" stroke-width="2"/>
+    <text x="75" y="245" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#000">Mimo provoz</text>
+    <text x="75" y="262" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">vplutí není možné</text>
+  </g>
+
+  <!-- Stav 2: Pracuje (1-2 červená vedle sebe) -->
+  <g transform="translate(195,20)">
+    <rect x="0" y="0" width="150" height="220" rx="6" fill="#2a2a2a" stroke="#000" stroke-width="2"/>
+    <circle cx="75" cy="55" r="18" fill="#3a3a3a" stroke="#111" stroke-width="2"/>
+    <circle cx="40" cy="115" r="22" fill="url(#redOn)" stroke="#000" stroke-width="2"/>
+    <circle cx="110" cy="115" r="22" fill="url(#redOn)" stroke="#000" stroke-width="2"/>
+    <circle cx="75" cy="170" r="18" fill="#3a3a3a" stroke="#111" stroke-width="2"/>
+    <text x="75" y="245" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#000">Komora pracuje</text>
+    <text x="75" y="262" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">vplutí není možné</text>
+  </g>
+
+  <!-- Stav 3: Příprava (červená + zelená) -->
+  <g transform="translate(370,20)">
+    <rect x="0" y="0" width="150" height="220" rx="6" fill="#2a2a2a" stroke="#000" stroke-width="2"/>
+    <circle cx="75" cy="55" r="18" fill="#3a3a3a" stroke="#111" stroke-width="2"/>
+    <circle cx="40" cy="115" r="22" fill="url(#redOn)" stroke="#000" stroke-width="2"/>
+    <circle cx="110" cy="115" r="22" fill="url(#greenOn)" stroke="#000" stroke-width="2"/>
+    <circle cx="75" cy="170" r="18" fill="#3a3a3a" stroke="#111" stroke-width="2"/>
+    <text x="75" y="245" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#000">Příprava</text>
+    <text x="75" y="262" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">lze přistoupit</text>
+  </g>
+
+  <!-- Stav 4: Povoleno (1-2 zelená) -->
+  <g transform="translate(545,20)">
+    <rect x="0" y="0" width="150" height="220" rx="6" fill="#2a2a2a" stroke="#000" stroke-width="2"/>
+    <circle cx="75" cy="55" r="18" fill="#3a3a3a" stroke="#111" stroke-width="2"/>
+    <circle cx="40" cy="115" r="22" fill="url(#greenOn)" stroke="#000" stroke-width="2"/>
+    <circle cx="110" cy="115" r="22" fill="url(#greenOn)" stroke="#000" stroke-width="2"/>
+    <circle cx="75" cy="170" r="18" fill="#3a3a3a" stroke="#111" stroke-width="2"/>
+    <text x="75" y="245" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#000">Vplutí povoleno</text>
+    <text x="75" y="262" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#444">vjezd volný</text>
+  </g>
+</svg>
+
+<p>Signální stěna může být umístěna na <strong>jedné</strong> straně vjezdu (typicky u menších komor) nebo na <strong>obou</strong> stranách (u větších komor s širokým vjezdem) — význam světel je v obou případech stejný.</p>
+
+<h3>Pohled „shora" — kde stojí signální stěna</h3>
+
+<svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Půdorys plavební komory s umístěním signální stěny">
+  <!-- Voda mimo komoru -->
+  <rect x="0" y="60" width="720" height="100" fill="#cbe7f5"/>
+  <!-- Stěny komory (zdi) -->
+  <rect x="180" y="40" width="360" height="20" fill="#a89a7a" stroke="#7a6a4a"/>
+  <rect x="180" y="160" width="360" height="20" fill="#a89a7a" stroke="#7a6a4a"/>
+  <!-- Vrata vlevo (otevřená) -->
+  <rect x="170" y="40" width="14" height="20" fill="#5a4a2a"/>
+  <rect x="170" y="160" width="14" height="20" fill="#5a4a2a"/>
+  <!-- Vrata vpravo (zavřená) -->
+  <rect x="536" y="40" width="14" height="140" fill="#5a4a2a"/>
+  <!-- Plavidlo uvnitř -->
+  <g transform="translate(300,100)">
+    <path d="M0,0 L80,0 L100,15 L80,30 L0,30 Z" fill="#fff" stroke="#222" stroke-width="1.5"/>
+    <rect x="20" y="6" width="40" height="18" fill="#e8e8e8" stroke="#444"/>
+  </g>
+  <!-- Signální stěna na jedné straně (u vjezdu vlevo, na horním břehu) -->
+  <g transform="translate(155,8)">
+    <rect x="0" y="0" width="22" height="32" fill="#2a2a2a" stroke="#000"/>
+    <circle cx="11" cy="10" r="4" fill="url(#redOn)"/>
+    <circle cx="11" cy="22" r="4" fill="url(#greenOn)"/>
+  </g>
+  <!-- Signální stěna na druhé straně (volitelná, šedě) -->
+  <g transform="translate(155,180)" opacity="0.55">
+    <rect x="0" y="0" width="22" height="32" fill="#2a2a2a" stroke="#000"/>
+    <circle cx="11" cy="10" r="4" fill="#5a5a5a"/>
+    <circle cx="11" cy="22" r="4" fill="#5a5a5a"/>
+  </g>
+  <!-- Šipka směru vplouvání -->
+  <g>
+    <line x1="60" y1="110" x2="150" y2="110" stroke="#0a5" stroke-width="3"/>
+    <polygon points="150,110 142,105 142,115" fill="#0a5"/>
+    <text x="60" y="100" font-family="sans-serif" font-size="12" fill="#0a5">směr vplutí</text>
+  </g>
+  <!-- Popisky -->
+  <text x="170" y="200" font-family="sans-serif" font-size="11" fill="#444">druhá signální stěna — volitelná</text>
+  <text x="120" y="32" font-family="sans-serif" font-size="11" fill="#222">signální stěna (povinná aspoň jedna)</text>
+  <text x="350" y="195" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">plavební komora (půdorys)</text>
+</svg>
+
+<h3>Proč jsou ostatní varianty nesprávné</h3>
+<ul>
+  <li><strong>Varianta s radiotelefonem ve dne i v noci:</strong> vyhláška řízení vplouvání rádiem <em>nepředepisuje</em>. VHF se na komorách používá pro <strong>komunikaci s obsluhou</strong> (ohlášení, dotaz), ale <strong>povel k vplutí dává světelná signalizace</strong>.</li>
+  <li><strong>Varianta „ve dne světly, v noci rádiem":</strong> chytlavá, ale v praxi nesmyslná — světla jsou v noci <em>lépe viditelná</em> než ve dne. Není důvod přepínat režim.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<ol>
+  <li>Při příjezdu ke komoře sleduj <strong>signální stěnu</strong> u vjezdu (svislá stěna ohlaví).</li>
+  <li>Drž odstup, dokud nesvítí <strong>zelené světlo</strong>.</li>
+  <li>VHF (kanál komory) použij na <strong>ohlášení</strong>, ale do komory tě <strong>pustí světlo</strong>, ne dispečer hlasem.</li>
+</ol>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://zakony.judikaty.info/cz/predpis/vyhlaska-67/2015">Vyhláška č. 67/2015 Sb. — Pravidla plavebního provozu (zakony.judikaty.info)</a></li>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb. (zakonyprolidi.cz)</a></li>
+</ul>

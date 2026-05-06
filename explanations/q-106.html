@@ -1,0 +1,124 @@
+<h2>Předjíždění v blízkosti pohyblivých mostů</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„jen na zvláštní pokyn obsluhy mostu."</em></p>
+
+<h3>Jádro</h3>
+<p>V blízkosti <strong>pohyblivých mostů</strong> (zdvižné, otočné, sklápěcí) <strong>neplatí běžná pravidla pro předjíždění</strong>. Rozhodnutí, kdo a kdy může předjet, leží <strong>výhradně na obsluze mostu</strong> — vůdce plavidla musí počkat na její explicitní pokyn (rádiem, světelným signálem nebo gestem).</p>
+
+<h3>Právní pozadí</h3>
+<p>Vyhláška <strong>č. 67/2015 Sb.</strong>, § 80 odst. 3:</p>
+<blockquote>
+  „V blízkosti pohyblivých mostů je předjíždění možné jen na zvláštní pokyn obsluhy mostu."
+</blockquote>
+<p>Most se obvykle ohlašuje signální značkou <strong>B.5</strong> (povinnost zastavit) nebo se proplouvá podle pokynů obsluhy. Vůdce ohlašuje úmysl proplout <strong>jedním dlouhým zvukovým signálem</strong> nebo radiostanicí.</p>
+
+<h3>Vizualizace situace</h3>
+<p>Vlevo: pevný most — předjíždění závisí jen na šířce mostního pole. Vpravo: pohyblivý most — i kdyby fyzicky šířka stačila, rozhoduje obsluha mostu.</p>
+
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#eaf4fb;border:1px solid #c5dbeb;border-radius:8px">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f7a3a"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b22222"/>
+    </marker>
+  </defs>
+
+  <!-- Titles -->
+  <text x="200" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#103047">Pevný most (§ 79)</text>
+  <text x="600" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#103047">Pohyblivý most (§ 80 odst. 3)</text>
+
+  <!-- LEFT: Fixed bridge -->
+  <!-- water -->
+  <rect x="20" y="60" width="360" height="240" fill="#bcdcef"/>
+  <!-- bridge piers -->
+  <rect x="60" y="60" width="20" height="240" fill="#7d6646"/>
+  <rect x="320" y="60" width="20" height="240" fill="#7d6646"/>
+  <!-- bridge deck -->
+  <rect x="40" y="60" width="320" height="22" fill="#5c4a30"/>
+  <text x="200" y="76" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">PEVNÝ MOST</text>
+  <!-- bridge field width annotation -->
+  <line x1="80" y1="50" x2="320" y2="50" stroke="#103047" stroke-width="1.5"/>
+  <line x1="80" y1="44" x2="80" y2="56" stroke="#103047" stroke-width="1.5"/>
+  <line x1="320" y1="44" x2="320" y2="56" stroke="#103047" stroke-width="1.5"/>
+  <text x="200" y="44" text-anchor="middle" font-size="10" fill="#103047">šířka mostního pole</text>
+
+  <!-- vessel A (slow, ahead) -->
+  <g transform="translate(140 200)">
+    <polygon points="0,0 70,0 85,12 70,24 0,24" fill="#d8a44a" stroke="#5b3a0e" stroke-width="1.5"/>
+    <text x="40" y="16" text-anchor="middle" font-size="10" font-weight="700">A (pomalé)</text>
+  </g>
+  <!-- vessel B (overtaking) -->
+  <g transform="translate(110 240)">
+    <polygon points="0,0 70,0 85,12 70,24 0,24" fill="#4a8acb" stroke="#103047" stroke-width="1.5"/>
+    <text x="40" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">B</text>
+  </g>
+  <!-- arrow showing B overtaking -->
+  <path d="M 200 252 q 30 -10 60 -28" stroke="#1f7a3a" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="240" y="280" font-size="11" fill="#1f7a3a" font-weight="700">předjetí OK</text>
+  <text x="200" y="320" text-anchor="middle" font-size="11" fill="#103047">stačí dostatečná šířka pole</text>
+
+  <!-- divider -->
+  <line x1="400" y1="40" x2="400" y2="340" stroke="#888" stroke-dasharray="4 3"/>
+
+  <!-- RIGHT: Movable bridge -->
+  <rect x="420" y="60" width="360" height="240" fill="#bcdcef"/>
+  <!-- piers -->
+  <rect x="460" y="60" width="20" height="240" fill="#7d6646"/>
+  <rect x="720" y="60" width="20" height="240" fill="#7d6646"/>
+  <!-- bridge deck (lifted on one side) -->
+  <polygon points="440,82 600,82 600,60 700,60 700,82 760,82 760,60 440,60" fill="#5c4a30"/>
+  <!-- lift indicator -->
+  <line x1="600" y1="60" x2="600" y2="40" stroke="#103047" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="700" y1="60" x2="700" y2="40" stroke="#103047" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="650" y="56" text-anchor="middle" font-size="9" fill="#103047">zvedaná část</text>
+  <text x="500" y="76" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">POHYBLIVÝ</text>
+
+  <!-- operator booth -->
+  <rect x="730" y="100" width="55" height="50" fill="#fff3c0" stroke="#5b3a0e" stroke-width="1.5"/>
+  <rect x="740" y="110" width="35" height="20" fill="#1f7a3a"/>
+  <text x="757" y="124" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">OBSL.</text>
+  <text x="757" y="166" text-anchor="middle" font-size="9" fill="#103047" font-weight="700">obsluha mostu</text>
+
+  <!-- vessel A (slow, ahead) -->
+  <g transform="translate(540 200)">
+    <polygon points="0,0 70,0 85,12 70,24 0,24" fill="#d8a44a" stroke="#5b3a0e" stroke-width="1.5"/>
+    <text x="40" y="16" text-anchor="middle" font-size="10" font-weight="700">A (pomalé)</text>
+  </g>
+  <!-- vessel B (waiting!) -->
+  <g transform="translate(510 240)">
+    <polygon points="0,0 70,0 85,12 70,24 0,24" fill="#4a8acb" stroke="#103047" stroke-width="1.5"/>
+    <text x="40" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">B čeká</text>
+  </g>
+  <!-- forbidden arrow -->
+  <path d="M 600 252 q 30 -10 60 -28" stroke="#b22222" stroke-width="2.5" fill="none" stroke-dasharray="6 3" marker-end="url(#arrRed)"/>
+  <text x="640" y="280" font-size="11" fill="#b22222" font-weight="700">bez pokynu = NE</text>
+
+  <!-- signal from operator -->
+  <path d="M 745 150 q -30 30 -75 60" stroke="#e09010" stroke-width="2" fill="none" stroke-dasharray="3 2"/>
+  <text x="700" y="220" font-size="10" fill="#e09010" font-weight="700">pokyn obsluhy</text>
+
+  <text x="600" y="320" text-anchor="middle" font-size="11" fill="#103047">rozhoduje <tspan font-weight="700">obsluha mostu</tspan>, ne šířka pole</text>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>„až po otevření mostu pro proplutí"</strong> — chytlavé, ale špatně. Otevřený most neznamená, že je bezpečné předjíždět; obsluha řídí pořadí proplouvání. Naopak — pokyn obsluhy můžete dostat i v době, kdy je most ještě zavřený (řazení do fronty před otevřením).</li>
+  <li><strong>„je-li pro předjíždění dostatečná šířka mostního pole"</strong> — toto je pravidlo pro <strong>pevné</strong> mosty (§ 79). U pohyblivého mostu šířka pole nestačí — koordinace provozu má přednost před geometrií, protože obsluha musí synchronizovat plavbu se zdvihem/otočením mostu.</li>
+</ul>
+
+<h3>Praktický postup u pohyblivého mostu</h3>
+<ol>
+  <li>Při blížení k mostu <strong>snížit rychlost</strong>.</li>
+  <li><strong>Ohlásit</strong> úmysl proplout: 1× dlouhý zvukový signál nebo radiostanicí.</li>
+  <li><strong>Počkat</strong> na pokyn obsluhy — i kdyby šířka pole vypadala dostatečně.</li>
+  <li>Pokud je instalována značka <strong>B.5</strong> a nemíříte k proplutí, zastavit před touto značkou.</li>
+  <li>Předjetí v zóně mostu <strong>bez pokynu = porušení pravidel</strong>, i kdyby to fyzicky bylo možné.</li>
+</ol>
+
+<h3>Zdroje</h3>
+<ul>
+  <li><a href="https://krajta.slv.cz/2015/67/par_80">§ 80 vyhlášky č. 67/2015 Sb. — Proplouvání pohyblivými mosty</a></li>
+  <li><a href="https://www.zakonyprolidi.cz/cs/2015-67">Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu (úplné znění)</a></li>
+</ul>

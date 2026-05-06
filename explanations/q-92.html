@@ -1,0 +1,200 @@
+<h2>Obraty plavidel — kdy lze obrat zahájit</h2>
+
+<p><strong>Správné dokončení věty:</strong> <em>„a že ostatní plavidla tím nebudou přinucena změnit náhle směr nebo rychlost plavby."</em></p>
+
+<p>Zadání je <strong>doslovná citace § 69 odst. 1 vyhlášky č. 67/2015 Sb.</strong> o pravidlech plavebního provozu. Vůdce může obrat zahájit, jen když jsou splněny <strong>obě</strong> podmínky zároveň:</p>
+
+<ol>
+  <li>pohyb ostatních plavidel umožňuje provést obrat <strong>bez nebezpečí</strong>, <strong>A ZÁROVEŇ</strong></li>
+  <li>ostatní plavidla nebudou kvůli tomu přinucena <strong>náhle</strong> změnit směr nebo rychlost plavby.</li>
+</ol>
+
+<blockquote style="border-left:4px solid #2563eb;padding:8px 14px;background:#eff6ff;margin:12px 0">
+<strong>§ 69 odst. 1 vyhlášky č. 67/2015 Sb. — Obraty plavidel:</strong><br>
+„Plavidlo může provést obrat až poté, co se jeho vůdce ujistí, že pohyb ostatních plavidel umožňuje provést obrat bez nebezpečí <strong>a že ostatní plavidla tím nebudou přinucena změnit náhle směr nebo rychlost plavby</strong>."
+</blockquote>
+
+<h3>Vizualizace — bezpečná vs. nebezpečná situace</h3>
+<p>Vlevo: vůdce obracejícího plavidla má dost místa, ostatní plavidla nemusí nic dělat — obrat je v pořádku. Vpravo: obrat by donutil plující plavidlo náhle uhnout nebo zpomalit — obrat <strong>nelze zahájit</strong>, je nutno vyčkat.</p>
+
+<svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Bezpečná vs. nebezpečná situace pro obrat plavidla</title>
+  <desc>Dvě schémata vodní cesty pohledem shora. V levém panelu žluté plavidlo bezpečně provádí obrat, ostatní plavidla jsou daleko a nemusí měnit kurz. V pravém panelu by stejný obrat nutil druhé plavidlo k prudké úhybné reakci, proto je obrat zakázán.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" style="fill:#1e40af"/>
+    </marker>
+    <marker id="arrowred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" style="fill:#b91c1c"/>
+    </marker>
+    <marker id="arrowgreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" style="fill:#15803d"/>
+    </marker>
+  </defs>
+
+  <!-- Levý panel: BEZPEČNÝ -->
+  <rect x="10" y="10" width="360" height="340" rx="10" style="fill:#f0fdf4;stroke:#86efac;stroke-width:2"/>
+  <text x="190" y="35" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#14532d">OBRAT POVOLEN</text>
+  <text x="190" y="52" text-anchor="middle" style="font-size:11px;fill:#166534">ostatní mohou plynule pokračovat</text>
+
+  <!-- vodní cesta -->
+  <rect x="30" y="80" width="320" height="220" style="fill:#dbeafe;stroke:none"/>
+  <line x1="30" y1="190" x2="350" y2="190" style="stroke:#bfdbfe;stroke-width:1;stroke-dasharray:5 5"/>
+
+  <!-- vzdálené plavidlo (bezpečně daleko) -->
+  <g transform="translate(60, 150)">
+    <ellipse cx="0" cy="0" rx="18" ry="7" style="fill:#475569;stroke:#1e293b;stroke-width:1"/>
+    <line x1="18" y1="0" x2="48" y2="0" style="stroke:#15803d;stroke-width:2;marker-end:url(#arrowgreen)"/>
+  </g>
+  <text x="62" y="135" text-anchor="middle" style="font-size:10px;fill:#15803d">plyne dál,
+nemění kurz</text>
+
+  <!-- obracející plavidlo -->
+  <g transform="translate(220, 240)">
+    <ellipse cx="0" cy="0" rx="22" ry="9" style="fill:#fde047;stroke:#ca8a04;stroke-width:2"/>
+    <text x="0" y="3" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#713f12">JÁ</text>
+  </g>
+  <!-- oblouk obratu -->
+  <path d="M 220 235 Q 280 200, 280 160 Q 280 130, 220 125" style="fill:none;stroke:#ca8a04;stroke-width:2.5;stroke-dasharray:6 4;marker-end:url(#arrow)"/>
+  <text x="295" y="170" style="font-size:10px;font-weight:600;fill:#854d0e">obrat</text>
+
+  <!-- check -->
+  <circle cx="335" cy="290" r="14" style="fill:#16a34a"/>
+  <path d="M 327 290 L 333 296 L 343 285" style="fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/>
+
+  <text x="190" y="330" text-anchor="middle" style="font-size:10px;fill:#166534;font-style:italic">obě podmínky § 69 odst. 1 splněny</text>
+
+  <!-- Pravý panel: NEBEZPEČNÝ -->
+  <rect x="390" y="10" width="360" height="340" rx="10" style="fill:#fef2f2;stroke:#fca5a5;stroke-width:2"/>
+  <text x="570" y="35" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#991b1b">OBRAT NESMÍ</text>
+  <text x="570" y="52" text-anchor="middle" style="font-size:11px;fill:#7f1d1d">ostatní by museli náhle uhnout nebo brzdit</text>
+
+  <rect x="410" y="80" width="320" height="220" style="fill:#dbeafe;stroke:none"/>
+  <line x1="410" y1="190" x2="730" y2="190" style="stroke:#bfdbfe;stroke-width:1;stroke-dasharray:5 5"/>
+
+  <!-- blízké plující plavidlo -->
+  <g transform="translate(450, 165)">
+    <ellipse cx="0" cy="0" rx="18" ry="7" style="fill:#475569;stroke:#1e293b;stroke-width:1"/>
+    <line x1="18" y1="0" x2="60" y2="0" style="stroke:#b91c1c;stroke-width:2.5;marker-end:url(#arrowred)"/>
+    <!-- nucený úhyb -->
+    <path d="M 30 -3 Q 50 -25, 80 -30" style="fill:none;stroke:#b91c1c;stroke-width:2;stroke-dasharray:4 3;marker-end:url(#arrowred)"/>
+  </g>
+  <text x="520" y="115" style="font-size:10px;fill:#b91c1c;font-weight:600">nucený úhyb!</text>
+
+  <!-- obracející plavidlo -->
+  <g transform="translate(600, 230)">
+    <ellipse cx="0" cy="0" rx="22" ry="9" style="fill:#fde047;stroke:#ca8a04;stroke-width:2"/>
+    <text x="0" y="3" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#713f12">JÁ</text>
+  </g>
+  <path d="M 600 225 Q 650 195, 645 160 Q 640 130, 580 130" style="fill:none;stroke:#b91c1c;stroke-width:2.5;stroke-dasharray:6 4;marker-end:url(#arrowred)"/>
+  <text x="660" y="170" style="font-size:10px;font-weight:600;fill:#7f1d1d">obrat</text>
+
+  <!-- křížek -->
+  <circle cx="715" cy="290" r="14" style="fill:#dc2626"/>
+  <path d="M 707 282 L 723 298 M 723 282 L 707 298" style="fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round"/>
+
+  <text x="570" y="330" text-anchor="middle" style="font-size:10px;fill:#7f1d1d;font-style:italic">druhá podmínka § 69 odst. 1 nesplněna</text>
+</svg>
+
+<h3>Rozhodovací logika — dvojitý filtr</h3>
+
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>Rozhodovací strom pro zahájení obratu</title>
+  <desc>Dvoukrokový rozhodovací strom: nejprve test bezpečnosti obratu, poté test, zda ostatní plavidla nebudou přinucena měnit kurz nebo rychlost. Jen průchod oběma kroky vede k povolenému obratu.</desc>
+
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" style="fill:#334155"/>
+    </marker>
+  </defs>
+
+  <!-- start -->
+  <rect x="290" y="15" width="180" height="44" rx="22" style="fill:#1e293b;stroke:none"/>
+  <text x="380" y="42" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#fff">Chci provést obrat</text>
+
+  <line x1="380" y1="59" x2="380" y2="78" style="stroke:#334155;stroke-width:2;marker-end:url(#arrow2)"/>
+
+  <!-- test 1 -->
+  <polygon points="380,82 590,135 380,188 170,135" style="fill:#fef9c3;stroke:#ca8a04;stroke-width:2"/>
+  <text x="380" y="125" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#713f12">1. Pohyb ostatních plavidel</text>
+  <text x="380" y="142" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#713f12">umožňuje obrat bez nebezpečí?</text>
+
+  <!-- větev NE z testu 1 -->
+  <line x1="170" y1="135" x2="100" y2="135" style="stroke:#dc2626;stroke-width:2;marker-end:url(#arrow2)"/>
+  <text x="135" y="128" text-anchor="middle" style="font-size:11px;font-weight:600;fill:#991b1b">NE</text>
+  <rect x="20" y="115" width="80" height="40" rx="6" style="fill:#fee2e2;stroke:#dc2626;stroke-width:2"/>
+  <text x="60" y="132" text-anchor="middle" style="font-size:11px;font-weight:600;fill:#7f1d1d">VYČKAT</text>
+  <text x="60" y="146" text-anchor="middle" style="font-size:10px;fill:#7f1d1d">neobracet</text>
+
+  <!-- větev ANO -->
+  <line x1="380" y1="188" x2="380" y2="205" style="stroke:#15803d;stroke-width:2;marker-end:url(#arrow2)"/>
+  <text x="395" y="200" style="font-size:11px;font-weight:600;fill:#15803d">ANO</text>
+
+  <!-- test 2 -->
+  <polygon points="380,209 615,250 380,291 145,250" style="fill:#fef9c3;stroke:#ca8a04;stroke-width:2"/>
+  <text x="380" y="244" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#713f12">2. Ostatní plavidla NEBUDOU</text>
+  <text x="380" y="262" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#713f12">přinucena náhle změnit směr ani rychlost?</text>
+
+  <!-- větev NE z testu 2 -->
+  <line x1="615" y1="250" x2="680" y2="250" style="stroke:#dc2626;stroke-width:2;marker-end:url(#arrow2)"/>
+  <text x="650" y="243" text-anchor="middle" style="font-size:11px;font-weight:600;fill:#991b1b">NE</text>
+  <rect x="685" y="208" width="70" height="44" rx="6" style="fill:#fee2e2;stroke:#dc2626;stroke-width:2"/>
+  <text x="720" y="226" text-anchor="middle" style="font-size:10px;font-weight:600;fill:#7f1d1d">VYČKAT</text>
+  <text x="720" y="240" text-anchor="middle" style="font-size:9px;fill:#7f1d1d">+ zvuk. signál</text>
+  <text x="720" y="250" text-anchor="middle" style="font-size:9px;fill:#7f1d1d">(§ 69 odst. 2)</text>
+
+  <!-- větev ANO finální -->
+  <line x1="145" y1="250" x2="80" y2="250" style="stroke:#15803d;stroke-width:2;marker-end:url(#arrow2)"/>
+  <text x="115" y="243" text-anchor="middle" style="font-size:11px;font-weight:600;fill:#15803d">ANO</text>
+  <rect x="10" y="232" width="70" height="36" rx="6" style="fill:#dcfce7;stroke:#15803d;stroke-width:2"/>
+  <text x="45" y="247" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#14532d">OBRAT</text>
+  <text x="45" y="260" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#14532d">POVOLEN</text>
+</svg>
+
+<h3>Proč jsou ostatní možnosti špatně</h3>
+<ul>
+  <li><strong>Varianta tvrdící, že obrat lze provést „přestože ostatní plavidla budou muset změnit směr nebo snížit rychlost":</strong> přímý opak zákona. Pokud by manévr <em>vynutil</em> reakci ostatních, zákon obrat <strong>nepovoluje</strong>. Druhá podmínka § 69 odst. 1 je tu jako filtr právě proti takovým situacím.</li>
+  <li><strong>Varianta tvrdící, že obrat je možný „protože vůdci ostatních plavidel jsou povinni upravit směr a rychlost plavby nebo zastavit":</strong> přenáší odpovědnost na ostatní. § 69 odst. 3 sice říká, že <em>„vyžaduje-li to situace"</em>, ostatní změní rychlost a směr, aby obrat mohl být proveden bez nebezpečí — ale to je <strong>záchranná sekundární povinnost</strong>, ne licence pro obracející plavidlo. Primární odpovědnost má vůdce, který obrat zahajuje.</li>
+</ul>
+
+<h3>Praktické navazující povinnosti</h3>
+<table style="width:100%;border-collapse:collapse;margin:8px 0">
+  <thead>
+    <tr style="background:#f5f5f4">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Situace</th>
+      <th style="text-align:left;padding:8px;border-bottom:1px solid #d4d4d8">Povinnost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Obrat by mohl ostatní přinutit k náhlé změně</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Včas dát zvukový signál: <strong>1 dlouhý + 1 krátký</strong> = obrat doprava; <strong>1 dlouhý + 2 krátké</strong> = obrat doleva (§ 69 odst. 2)</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Úsek vodní cesty se znakem A.8</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Obrat <strong>zakázán</strong> (§ 69 odst. 5)</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Místo se znakem E.8 (obratiště)</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Místo <strong>vhodné</strong> pro obrat</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Obrat proti proudu</td>
+      <td style="padding:8px;border-bottom:1px solid #e5e7eb">Ostatní plavidla mu obrat <strong>umožní</strong> (§ 69 odst. 3)</td>
+    </tr>
+    <tr>
+      <td style="padding:8px">Malá plavidla vůči ostatním</td>
+      <td style="padding:8px">Odst. 1–3 <strong>neplatí</strong>; mezi malými navzájem platí jen odst. 1 a 3 (§ 69 odst. 4)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Pomůcka pro zapamatování</h3>
+<p>Hledej v odpovědi formulaci <strong>„nebudou přinucena náhle změnit směr nebo rychlost"</strong>. To je doslovný text zákona. Pokud odpověď říká opak (ostatní <em>budou muset</em> manévrovat) nebo přenáší odpovědnost na ostatní, je to past.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. <a href="https://www.zakonyprolidi.cz/cs/2015-67">67/2015 Sb.</a>, o pravidlech plavebního provozu — § 69 odst. 1 (Obraty plavidel)</li>
+  <li>Plné znění vyhlášky 67/2015 Sb. ke stažení — <a href="https://sps.gov.cz/downloads/predpisy/vyhlaska-67-2015sb.pdf">Státní plavební správa (PDF)</a></li>
+</ul>
