@@ -1,0 +1,117 @@
+<h2>Červený plamenec — přednostní proplutí</h2>
+
+<p>Otázka se ptá, jaké plavidlo nese tento plamenec. Na obrázku je vidět trojúhelníkový červený praporek (plamenec) vyvěšený na stožáru plavidla.</p>
+
+<p><strong>Správná odpověď:</strong> Plavidlo, které má oprávnění přednostního proplutí.</p>
+
+<hr>
+
+<h3>Vizualizace: co plamenec znamená a jak ho poznat</h3>
+
+<div style="display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start; margin:16px 0;">
+
+  <!-- Levý panel: symbol ze zadání -->
+  <div style="flex:1; min-width:200px;">
+    <p style="font-weight:bold; margin-bottom:8px; text-align:center;">V zadání testu</p>
+    <svg viewBox="0 0 220 200" width="220" height="200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <rect x="0" y="150" width="220" height="50" fill="#cce8ff"/>
+      <!-- Vlny -->
+      <path d="M0,155 q15,-8 30,0 q15,8 30,0 q15,-8 30,0 q15,8 30,0 q15,-8 30,0 q15,8 30,0 q15,-8 30,0" stroke="#7ab8e8" stroke-width="2" fill="none"/>
+      <path d="M0,165 q15,-6 30,0 q15,6 30,0 q15,-6 30,0 q15,6 30,0 q15,-6 30,0 q15,6 30,0 q15,-6 30,0" stroke="#7ab8e8" stroke-width="2" fill="none"/>
+      <!-- Trup plavidla -->
+      <rect x="40" y="125" width="140" height="28" rx="4" fill="#e8e8e8" stroke="#555" stroke-width="1.5"/>
+      <path d="M40,153 L30,160 L190,160 L180,153 Z" fill="#d0d0d0" stroke="#555" stroke-width="1.2"/>
+      <!-- Kabina/nástavba -->
+      <rect x="60" y="105" width="60" height="22" rx="2" fill="#f0f0f0" stroke="#555" stroke-width="1.2"/>
+      <!-- Stožár -->
+      <line x1="155" y1="125" x2="155" y2="55" stroke="#666" stroke-width="2.5"/>
+      <!-- Červený plamenec (trojúhelník) -->
+      <polygon points="155,55 195,68 155,78" fill="#e02020" stroke="#b00000" stroke-width="1"/>
+      <!-- Popis -->
+      <text x="110" y="195" text-anchor="middle" font-size="12" fill="#333">Plavidlo s červeným plamencem</text>
+    </svg>
+  </div>
+
+  <!-- Pravý panel: co to znamená -->
+  <div style="flex:1; min-width:220px;">
+    <p style="font-weight:bold; margin-bottom:8px; text-align:center;">Co to znamená</p>
+    <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Šipky přednosti — zelené šipky pro prioritní plavidlo -->
+      <defs>
+        <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 Z" fill="#2a9d2a"/>
+        </marker>
+        <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 Z" fill="#cc2222"/>
+        </marker>
+      </defs>
+      <!-- Prioritní plavidlo (s plamencem) -->
+      <rect x="10" y="75" width="90" height="24" rx="4" fill="#ffe0e0" stroke="#cc2222" stroke-width="1.5"/>
+      <line x1="80" y1="75" x2="80" y2="48" stroke="#666" stroke-width="2"/>
+      <polygon points="80,48 105,57 80,65" fill="#e02020" stroke="#b00000" stroke-width="1"/>
+      <text x="55" y="92" text-anchor="middle" font-size="10" fill="#cc2222" font-weight="bold">PRIORITA</text>
+      <!-- Šipka pohybu pro prioritní plavidlo -->
+      <line x1="100" y1="87" x2="200" y2="87" stroke="#2a9d2a" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+      <!-- Ostatní plavidlo -->
+      <rect x="130" y="130" width="80" height="24" rx="4" fill="#f0f0f0" stroke="#888" stroke-width="1.2"/>
+      <text x="170" y="147" text-anchor="middle" font-size="10" fill="#555">ostatní</text>
+      <!-- Šipka — ostatní musí čekat / dát přednost -->
+      <line x1="130" y1="142" x2="115" y2="142" stroke="#cc8800" stroke-width="2" marker-end="url(#arrowRed)"/>
+      <text x="60" y="160" text-anchor="middle" font-size="9" fill="#cc8800">dává přednost</text>
+      <!-- Legenda -->
+      <rect x="10" y="172" width="14" height="14" fill="#e02020" rx="2"/>
+      <text x="28" y="183" font-size="10" fill="#333">červený plamenec = přednostní proplutí</text>
+    </svg>
+  </div>
+</div>
+
+<hr>
+
+<h3>Srovnání: jak se označují jiná plavidla</h3>
+
+<table style="border-collapse:collapse; width:100%; font-size:13px;">
+  <thead>
+    <tr style="background:#f0f0f0;">
+      <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Označení</th>
+      <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Co znamená</th>
+      <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Signál (den)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #ccc; padding:6px 10px;"><strong>Červený plamenec</strong></td>
+      <td style="border:1px solid #ccc; padding:6px 10px;">Přednostní proplutí</td>
+      <td style="border:1px solid #ccc; padding:6px 10px;">
+        <svg width="30" height="20" viewBox="0 0 30 20"><polygon points="0,2 24,10 0,18" fill="#e02020"/></svg>
+        červený trojúhelníkový praporek
+      </td>
+    </tr>
+    <tr style="background:#fafafa;">
+      <td style="border:1px solid #ccc; padding:6px 10px;">Modrý kužel/kužele</td>
+      <td style="border:1px solid #ccc; padding:6px 10px;">Přeprava nebezpečných látek (ADN třídy)</td>
+      <td style="border:1px solid #ccc; padding:6px 10px;">
+        <svg width="60" height="20" viewBox="0 0 60 20">
+          <polygon points="5,18 12,2 19,18" fill="#1144cc"/>
+          <polygon points="22,18 29,2 36,18" fill="#1144cc"/>
+          <polygon points="39,18 46,2 53,18" fill="#1144cc"/>
+        </svg>
+        1–3 modré kužely (dle třídy)
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #ccc; padding:6px 10px;">Zvláštní praporek / světlo</td>
+      <td style="border:1px solid #ccc; padding:6px 10px;">Lodivodská služba (pilot)</td>
+      <td style="border:1px solid #ccc; padding:6px 10px;">Specifické označení lodivoda</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3>Praktická aplikace</h3>
+
+<p>Potkáte-li na řece plavidlo s červeným plamencem, musíte mu dát přednost bez ohledu na obecná pravidla míjení a předjíždění. Toto oprávnění uděluje plavební úřad — typicky trajektům s řízeným přejezdem nebo plavidlům státní správy v prioritním provozu.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — vizuální signály, denní označení plavidel.</p>

@@ -1,0 +1,110 @@
+<h2>Jedno bílé všestranné světlo na malém plavidle</h2>
+
+<p>Na obrázku je malé plavidlo s <strong>jedním bílým všestranným světlem</strong> na záďovém stožárku. Toto světlo nosí malá plavidla, která jsou <strong>vlečena nebo vedena v bočně svázané sestavě</strong>.</p>
+
+<h3>Vizualizace — dva scénáře, jedno světlo</h3>
+
+<div style="overflow-x:auto;">
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="max-width:700px;width:100%;display:block;margin:0 auto;background:#1a3a5c;border-radius:8px;">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f0c040"/>
+    </marker>
+    <marker id="arrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f0c040"/>
+    </marker>
+  </defs>
+
+  <!-- Vlny (celá šírka) -->
+  <g stroke="#2d6a9f" stroke-width="1.2" fill="none" opacity="0.5">
+    <path d="M0,200 Q35,192 70,200 Q105,208 140,200 Q175,192 210,200 Q245,208 280,200 Q315,192 350,200 Q385,208 420,200 Q455,192 490,200 Q525,208 560,200 Q595,192 630,200 Q665,208 700,200"/>
+    <path d="M0,215 Q35,207 70,215 Q105,223 140,215 Q175,207 210,215 Q245,223 280,215 Q315,207 350,215 Q385,223 420,215 Q455,207 490,215 Q525,223 560,215 Q595,207 630,215 Q665,223 700,215"/>
+  </g>
+
+  <!-- === SCÉNÁŘ 1: VLEČENÍ === -->
+  <!-- Titulek -->
+  <text x="175" y="30" text-anchor="middle" fill="#f0c040" font-size="14" font-weight="bold">Scénář 1: Vlečení</text>
+
+  <!-- Lano -->
+  <line x1="108" y1="170" x2="225" y2="170" stroke="#c8a060" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Velké plavidlo (vleče) -->
+  <rect x="30" y="158" width="80" height="30" rx="4" fill="#4a7a9b"/>
+  <polygon points="30,188 10,188 30,158" fill="#4a7a9b"/>
+  <rect x="90" y="145" width="15" height="20" fill="#5a8aab"/>
+  <!-- světlo na velkém plavidle -->
+  <circle cx="100" cy="143" r="4" fill="white" opacity="0.9"/>
+  <text x="60" y="210" text-anchor="middle" fill="#a0c8e8" font-size="11">tažné plavidlo</text>
+
+  <!-- Malé plavidlo (vlečené) -->
+  <rect x="225" y="163" width="55" height="24" rx="3" fill="#3d6b85"/>
+  <polygon points="225,187 210,187 225,163" fill="#3d6b85"/>
+  <!-- stožár -->
+  <line x1="265" y1="163" x2="265" y2="142" stroke="#c0c0c0" stroke-width="1.5"/>
+  <!-- bílé světlo -->
+  <circle cx="265" cy="138" r="7" fill="white" opacity="0.95"/>
+  <circle cx="265" cy="138" r="11" fill="white" opacity="0.15"/>
+  <text x="252" y="210" text-anchor="middle" fill="#a0c8e8" font-size="11">malé plavidlo (vlečené)</text>
+
+  <!-- Popisek světla scénář 1 -->
+  <line x1="272" y1="134" x2="305" y2="110" stroke="#f0c040" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="308" y="107" fill="#f0f0a0" font-size="10">1× bílé</text>
+  <text x="308" y="119" fill="#f0f0a0" font-size="10">všestranné</text>
+
+  <!-- Směr šipka -->
+  <line x1="35" y1="250" x2="90" y2="250" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="62" y="268" text-anchor="middle" fill="#f0c040" font-size="11">směr plavby</text>
+
+  <!-- Dělicí čára -->
+  <line x1="350" y1="20" x2="350" y2="295" stroke="#4a7a9b" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- === SCÉNÁŘ 2: BOČNĚ SVÁZANÁ SESTAVA === -->
+  <text x="525" y="30" text-anchor="middle" fill="#f0c040" font-size="14" font-weight="bold">Scénář 2: Bočně svázaná sestava</text>
+
+  <!-- Velké plavidlo (vede) -->
+  <rect x="380" y="148" width="90" height="38" rx="4" fill="#4a7a9b"/>
+  <polygon points="380,186 360,186 380,148" fill="#4a7a9b"/>
+  <rect x="450" y="130" width="15" height="25" fill="#5a8aab"/>
+  <circle cx="460" cy="128" r="4" fill="white" opacity="0.9"/>
+  <text x="425" y="210" text-anchor="middle" fill="#a0c8e8" font-size="11">vedoucí plavidlo</text>
+
+  <!-- Lano bočního svazu -->
+  <line x1="470" y1="155" x2="470" y2="175" stroke="#c8a060" stroke-width="2"/>
+  <line x1="470" y1="165" x2="520" y2="165" stroke="#c8a060" stroke-width="2" stroke-dasharray="3,2"/>
+
+  <!-- Malé plavidlo (bočně) -->
+  <rect x="520" y="153" width="55" height="24" rx="3" fill="#3d6b85"/>
+  <polygon points="520,177 505,177 520,153" fill="#3d6b85"/>
+  <!-- stožár -->
+  <line x1="558" y1="153" x2="558" y2="132" stroke="#c0c0c0" stroke-width="1.5"/>
+  <!-- bílé světlo -->
+  <circle cx="558" cy="128" r="7" fill="white" opacity="0.95"/>
+  <circle cx="558" cy="128" r="11" fill="white" opacity="0.15"/>
+  <text x="547" y="210" text-anchor="middle" fill="#a0c8e8" font-size="11">malé plavidlo (bočně)</text>
+
+  <!-- Popisek světla scénář 2 -->
+  <line x1="565" y1="124" x2="600" y2="100" stroke="#f0c040" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="603" y="97" fill="#f0f0a0" font-size="10">1× bílé</text>
+  <text x="603" y="109" fill="#f0f0a0" font-size="10">všestranné</text>
+
+  <!-- Směr šipka 2 -->
+  <line x1="365" y1="250" x2="420" y2="250" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <text x="392" y="268" text-anchor="middle" fill="#f0c040" font-size="11">směr plavby</text>
+
+  <!-- Spodní vysvětlivka -->
+  <rect x="80" y="285" width="540" height="22" rx="4" fill="#0d2135" opacity="0.8"/>
+  <text x="350" y="300" text-anchor="middle" fill="#f0f0d0" font-size="12">V obou situacích: 1 bílé všestranné světlo → plavidlo není volně plující, ale vedené</text>
+</svg>
+</div>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>„Pouze vlečená malá plavidla"</strong> — záludná zkratka. Pravidlo říká <em>nebo</em> — světlo platí i pro bočně svázanou sestavu. Zúžení na vlečení by vylučovalo polovinu situací.</li>
+  <li><strong>„Převozní loď, která nepluje volně"</strong> — přívoz/trajekt má zcela odlišnou výbavu (žlutá světla). Jedno bílé světlo na malém plavidle s přívozem nesouvisí.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Motorový člun tažený za turistickou lodí, kajak přivázaný k boku plavidla, plachetnice v bočně svázané sestavě — všechny svítí jedním bílým světlem. Ostatní plavci tak vědí: <em>toto plavidlo je řízeno zvenčí, nemanévruje samostatně.</em></p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — ustanovení o světelné výbavě malých plavidel v sestavě.</p>

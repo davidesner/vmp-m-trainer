@@ -1,0 +1,100 @@
+<h2>Signální znak — červený kruh: co znamená?</h2>
+
+<p>
+  Otázka ukazuje <strong>plný červený kruh na bílém pozadí</strong> a ptá se, co tento signální znak (světlo) znamená.
+  Správná odpověď je: <strong>zákaz proplutí</strong>.
+</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:20px 0;">
+
+  <!-- Levý panel: znak ze zadání -->
+  <div style="text-align:center; min-width:140px;">
+    <p style="font-size:0.85em; margin-bottom:6px; color:#555;"><em>Znak v testu</em></p>
+    <svg width="120" height="120" viewBox="0 0 120 120">
+      <rect width="120" height="120" fill="white" stroke="#ccc" stroke-width="1"/>
+      <circle cx="60" cy="60" r="42" fill="#cc2200"/>
+    </svg>
+    <p style="font-size:0.8em; color:#333; margin-top:6px;">plný červený kruh</p>
+  </div>
+
+  <!-- Střední panel: překlad do reality — semafor u komory -->
+  <div style="text-align:center; min-width:200px;">
+    <p style="font-size:0.85em; margin-bottom:6px; color:#555;"><em>Co to znamená v praxi</em></p>
+    <svg width="200" height="160" viewBox="0 0 200 160">
+      <!-- voda -->
+      <rect x="0" y="110" width="200" height="50" fill="#a8d4f0"/>
+      <!-- nábřeží / okraje komory -->
+      <rect x="0" y="90" width="20" height="70" fill="#8b7355"/>
+      <rect x="180" y="90" width="20" height="70" fill="#8b7355"/>
+      <!-- vrata komory -->
+      <rect x="18" y="90" width="8" height="30" fill="#555"/>
+      <rect x="174" y="90" width="8" height="30" fill="#555"/>
+      <!-- stožár se světlem -->
+      <line x1="30" y1="20" x2="30" y2="95" stroke="#444" stroke-width="3"/>
+      <!-- světlo — červené -->
+      <circle cx="30" cy="18" r="12" fill="#cc2200" stroke="#800000" stroke-width="1.5"/>
+      <!-- loď blížící se k vchodu — pohled zboku -->
+      <rect x="90" y="112" width="60" height="22" rx="4" fill="#4a6fa5"/>
+      <polygon points="150,112 170,123 150,134" fill="#3a5f95"/>
+      <rect x="110" y="102" width="8" height="12" fill="#2c3e50"/>
+      <!-- šipka zastav -->
+      <line x1="80" y1="123" x2="50" y2="123" stroke="#cc2200" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+      <defs>
+        <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#cc2200"/>
+        </marker>
+      </defs>
+      <!-- popisek -->
+      <text x="100" y="155" text-anchor="middle" font-size="11" fill="#333">STOP — vjezd zakázán</text>
+    </svg>
+  </div>
+
+  <!-- Pravý panel: kontrast se zelenou -->
+  <div style="text-align:center; min-width:140px;">
+    <p style="font-size:0.85em; margin-bottom:6px; color:#555;"><em>Pro srovnání — zelená</em></p>
+    <svg width="120" height="120" viewBox="0 0 120 120">
+      <rect width="120" height="120" fill="white" stroke="#ccc" stroke-width="1"/>
+      <circle cx="60" cy="60" r="42" fill="#22882e"/>
+    </svg>
+    <p style="font-size:0.8em; color:#333; margin-top:6px;">plný zelený kruh = průjezd povolen</p>
+  </div>
+
+</div>
+
+<h3>Proč je správná právě „zákaz proplutí"</h3>
+<p>
+  Červený plný kruh je přímou analogií silničního semaforu — červená zakazuje. Tento signál se umisťuje
+  u <strong>plavebních komor, zdymadel a pohyblivých mostů</strong>, kde je potřeba řídit provoz.
+  Když svítí červený kruh, plavidlo nesmí do úseku/komory vjet — typicky probíhá proplavení jiného plavidla
+  nebo je komora mimo provoz.
+</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li>
+    <strong>Příkaz dát zvukový signál „1 krátký zvuk"</strong> — tento příkaz bývá vyjádřen jiným symbolem
+    (tabulová značka s trubkou nebo houknout), ne plným červeným kruhem.
+  </li>
+  <li>
+    <strong>Doporučené proplavování v jednom směru</strong> — jednosměrný provoz se signalizuje kombinací
+    orientačních světel/šipek nebo specifickými párovými znaky u vrat komory, ne samostatným červeným kruhem.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Blížíte se ke komořišti — zkontrolujte světelný signál na stožáru/tabulí před vchody do komory:
+</p>
+<ul>
+  <li><strong>Červený kruh</strong> → zastavte, počkejte na změnu signálu.</li>
+  <li><strong>Zelený kruh</strong> → můžete vjet.</li>
+  <li>Při čekání plavidlo kotvete/přidržujete tak, abyste nepřekáželi ostatním a mohli rychle reagovat na změnu.</li>
+</ul>
+
+<h3>Zdroj</h3>
+<p>
+  Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu na vnitrozemských vodních cestách —
+  ustanovení o světelné signalizaci u plavebních objektů (plavební komory, zdymadla, pohyblivé mosty).
+</p>

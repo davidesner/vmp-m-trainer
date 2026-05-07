@@ -1,0 +1,132 @@
+<h2>Tyč na plováku — vyznačení bezpečných vod</h2>
+
+<p>Na obrázku je <strong>bílá tyč na plováku s červenou koulí jako topmarkem</strong>. Tato kombinace tvarů a barev jednoznačně identifikuje tzv. <em>středovou značku</em> (značku bezpečných vod).</p>
+
+<h3>Co tato značka znamená</h3>
+
+<p>Správná odpověď je: <strong>„vyznačení bezpečných vod."</strong></p>
+
+<p>Značka říká plavci: <em>„Voda kolem mě je bezpečná a propluvatelná — můžeš projet z obou stran."</em> Typicky označuje střed plavební dráhy, vstup do plavebního úseku nebo okraj bezpečného prostoru. Nevyžaduje vyhýbání — jen orientaci.</p>
+
+<h3>Vizualizace — kódovací systém topmarků</h3>
+
+<div style="margin: 20px 0;">
+<svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;display:block;">
+  <!-- Defs for wave pattern -->
+  <defs>
+    <pattern id="wave347" x="0" y="0" width="40" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 6 Q10 0 20 6 Q30 12 40 6" stroke="#5ba3d9" stroke-width="2" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- === ZNAČKA BEZPEČNÝCH VOD (středová) === -->
+  <g transform="translate(60, 20)">
+    <!-- Voda -->
+    <rect x="0" y="155" width="120" height="30" fill="url(#wave347)" rx="4"/>
+    <rect x="0" y="160" width="120" height="25" fill="#5ba3d9" opacity="0.3" rx="4"/>
+
+    <!-- Plovák -->
+    <ellipse cx="60" cy="160" rx="45" ry="12" fill="#b22222"/>
+    <rect x="18" y="155" width="84" height="10" fill="#b22222" rx="3"/>
+
+    <!-- Tělo tyče — bílo-červené pruhy -->
+    <rect x="45" y="60" width="30" height="100" fill="white" stroke="#ccc" stroke-width="1"/>
+    <!-- Červené pruhy -->
+    <rect x="45" y="60" width="30" height="18" fill="#b22222"/>
+    <rect x="45" y="95" width="30" height="18" fill="#b22222"/>
+    <rect x="45" y="130" width="30" height="17" fill="#b22222"/>
+
+    <!-- Tyčka nahoře -->
+    <rect x="57" y="25" width="6" height="38" fill="#555"/>
+
+    <!-- Červená koule (topmark) -->
+    <circle cx="60" cy="20" r="16" fill="#b22222"/>
+    <circle cx="55" cy="15" r="5" fill="#d44" opacity="0.5"/>
+
+    <!-- Popis -->
+    <text x="60" y="205" text-anchor="middle" font-size="12" fill="#333" font-family="sans-serif" font-weight="bold">Bezpečné vody</text>
+    <text x="60" y="218" text-anchor="middle" font-size="10" fill="#666" font-family="sans-serif">(středová značka)</text>
+  </g>
+
+  <!-- Šipka oddělení -->
+  <text x="210" y="115" font-size="28" fill="#aaa" font-family="sans-serif">vs.</text>
+
+  <!-- === OZNAČENÍ NEBEZPEČÍ === -->
+  <g transform="translate(255, 20)">
+    <!-- Voda -->
+    <rect x="0" y="155" width="120" height="30" fill="url(#wave347)" rx="4"/>
+    <rect x="0" y="160" width="120" height="25" fill="#5ba3d9" opacity="0.3" rx="4"/>
+
+    <!-- Plovák -->
+    <ellipse cx="60" cy="160" rx="45" ry="12" fill="#222"/>
+    <rect x="18" y="155" width="84" height="10" fill="#222" rx="3"/>
+
+    <!-- Tělo tyče — černé a červené vodorovné pruhy -->
+    <rect x="45" y="60" width="30" height="100" fill="#111"/>
+    <rect x="45" y="60" width="30" height="17" fill="#111"/>
+    <rect x="45" y="77" width="30" height="17" fill="#b22222"/>
+    <rect x="45" y="94" width="30" height="17" fill="#111"/>
+    <rect x="45" y="111" width="30" height="17" fill="#b22222"/>
+    <rect x="45" y="128" width="30" height="17" fill="#111"/>
+    <rect x="45" y="145" width="30" height="15" fill="#b22222"/>
+
+    <!-- Tyčka nahoře -->
+    <rect x="57" y="10" width="6" height="52" fill="#333"/>
+
+    <!-- DVĚ černé koule (topmark) -->
+    <circle cx="60" cy="5" r="10" fill="#111"/>
+    <circle cx="60" cy="22" r="10" fill="#111"/>
+
+    <!-- Popis -->
+    <text x="60" y="205" text-anchor="middle" font-size="12" fill="#333" font-family="sans-serif" font-weight="bold">Izolované nebezpečí</text>
+    <text x="60" y="218" text-anchor="middle" font-size="10" fill="#666" font-family="sans-serif">(2 černé koule nahoře)</text>
+  </g>
+
+  <!-- Legenda topmarků -->
+  <rect x="0" y="195" width="520" height="0" stroke="#ddd" stroke-width="1"/>
+</svg>
+</div>
+
+<h3>Klíč pro rozpoznávání</h3>
+
+<table style="border-collapse:collapse;width:100%;font-size:14px;">
+  <thead>
+    <tr style="background:#f0f4f8;">
+      <th style="border:1px solid #ccc;padding:6px 10px;text-align:left;">Topmark (vrcholový znak)</th>
+      <th style="border:1px solid #ccc;padding:6px 10px;text-align:left;">Barvy těla</th>
+      <th style="border:1px solid #ccc;padding:6px 10px;text-align:left;">Bedeutung / Funkce</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #ccc;padding:6px 10px;">🔴 1 červená koule</td>
+      <td style="border:1px solid #ccc;padding:6px 10px;">Bílo-červené svislé pruhy</td>
+      <td style="border:1px solid #ccc;padding:6px 10px;"><strong>Bezpečné vody</strong> — střed dráhy, propluvatelné ze všech stran</td>
+    </tr>
+    <tr style="background:#fafafa;">
+      <td style="border:1px solid #ccc;padding:6px 10px;">⚫⚫ 2 černé koule</td>
+      <td style="border:1px solid #ccc;padding:6px 10px;">Černé a červené vodorovné pruhy</td>
+      <td style="border:1px solid #ccc;padding:6px 10px;"><strong>Izolované nebezpečí</strong> — pod značkou (nebo blízko) je překážka</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #ccc;padding:6px 10px;">🔴 Červený kuželec vrcholem dolů</td>
+      <td style="border:1px solid #ccc;padding:6px 10px;">Červená</td>
+      <td style="border:1px solid #ccc;padding:6px 10px;"><strong>Levý okraj</strong> plavební dráhy (při plavbě po proudu)</td>
+    </tr>
+    <tr style="background:#fafafa;">
+      <td style="border:1px solid #ccc;padding:6px 10px;">🟢 Zelený kuželec vrcholem nahoru</td>
+      <td style="border:1px solid #ccc;padding:6px 10px;">Zelená</td>
+      <td style="border:1px solid #ccc;padding:6px 10px;"><strong>Pravý okraj</strong> plavební dráhy (při plavbě po proudu)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+
+<p>Středové/bezpečnostní tyče potkáváš při sjíždění řeky jako orientační bod středu koryta, u vstupů do plavebních kanálů nebo v oblastech s mělčinami na krajích. Vidíš ji → okolní voda je bezpečná, nevyhýbáš se.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 2 (vytyčení vodních cest — plavební znaky)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

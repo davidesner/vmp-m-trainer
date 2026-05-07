@@ -1,0 +1,97 @@
+<h2>Otázka #268 — Plavební signální tabule (konec úseku rychlostní plavby)</h2>
+
+<p><strong>Správná odpověď:</strong> konec úseku, ve kterém je povolena plavba malých plavidel vysokou rychlostí.</p>
+
+<h3>Jak číst tuto tabuli</h3>
+<p>Tabule zobrazuje červený čtvercový rámeček, černou siluetu rychlého motorového člunu v plachtovací poloze (lodní příď zdvižená, plavidlo "letí" po hladině) a červený diagonální pruh přes celý obrázek.</p>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:20px 0;">
+
+  <!-- Levá část: tabule jako v testu -->
+  <div style="text-align:center;">
+    <p style="font-size:0.85em; color:#555; margin-bottom:6px;"><em>Tabule v testu</em></p>
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Pozadí -->
+      <rect width="120" height="120" rx="8" fill="#fff"/>
+      <!-- Červený rámeček -->
+      <rect x="4" y="4" width="112" height="112" rx="6" fill="none" stroke="#cc2200" stroke-width="10"/>
+      <!-- Silueta rychlého člunu (stylizovaná) -->
+      <g fill="#222">
+        <!-- Trup člunu -->
+        <ellipse cx="58" cy="72" rx="36" ry="10" fill="#222"/>
+        <!-- Příď (zdvižená) -->
+        <path d="M22 72 Q40 50 58 62 Q76 72 94 68 L90 76 Q60 82 22 76 Z" fill="#222"/>
+        <!-- Záď -->
+        <rect x="86" y="62" width="10" height="14" rx="2" fill="#222"/>
+        <!-- Postava -->
+        <circle cx="62" cy="52" r="6" fill="#222"/>
+        <rect x="58" y="58" width="8" height="12" rx="2" fill="#222"/>
+      </g>
+      <!-- Vlna za člunem -->
+      <path d="M94 76 Q100 72 108 76" stroke="#222" stroke-width="2" fill="none"/>
+      <!-- Diagonální zrušovací pruh -->
+      <line x1="14" y1="14" x2="106" y2="106" stroke="#cc2200" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Pravá část: co to znamená -->
+  <div style="flex:1; min-width:200px;">
+    <p style="font-size:0.85em; color:#555; margin-bottom:6px;"><em>Překlad do praxe</em></p>
+    <svg width="340" height="120" viewBox="0 0 340 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <rect x="0" y="70" width="340" height="50" fill="#a8d8ea" rx="0"/>
+      <!-- Břeh -->
+      <rect x="0" y="60" width="340" height="12" fill="#8B7355"/>
+
+      <!-- Úsek "povolena rychlostní plavba" - vlevo -->
+      <rect x="10" y="10" width="130" height="52" rx="4" fill="#fff3cd" stroke="#e6a817" stroke-width="1.5"/>
+      <text x="75" y="28" text-anchor="middle" font-size="10" fill="#c07000">Povolena</text>
+      <text x="75" y="42" text-anchor="middle" font-size="10" fill="#c07000">rychlostní plavba</text>
+      <text x="75" y="56" text-anchor="middle" font-size="10" fill="#c07000">malých plavidel</text>
+
+      <!-- Tabule na konci úseku -->
+      <g transform="translate(148,10)">
+        <rect width="40" height="52" rx="3" fill="#fff" stroke="#cc2200" stroke-width="3"/>
+        <!-- mini člun -->
+        <ellipse cx="20" cy="32" rx="12" ry="4" fill="#222"/>
+        <path d="M8 32 Q14 24 20 28 Q26 32 32 30 L30 34 Q20 37 8 34 Z" fill="#222"/>
+        <!-- mini postava -->
+        <circle cx="22" cy="21" r="3" fill="#222"/>
+        <line x1="20" y1="24" x2="20" y2="30" stroke="#222" stroke-width="1.5"/>
+        <!-- diagonála -->
+        <line x1="5" y1="5" x2="35" y2="47" stroke="#cc2200" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+      <!-- Pravá část: normální provoz -->
+      <rect x="196" y="10" width="130" height="52" rx="4" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+      <text x="261" y="28" text-anchor="middle" font-size="10" fill="#2e7d32">Normální provoz</text>
+      <text x="261" y="42" text-anchor="middle" font-size="10" fill="#2e7d32">— platí obecná</text>
+      <text x="261" y="56" text-anchor="middle" font-size="10" fill="#2e7d32">rychlostní pravidla</text>
+
+      <!-- Šipka: směr plavby -->
+      <line x1="20" y1="90" x2="320" y2="90" stroke="#1a6b9a" stroke-width="2" stroke-dasharray="6,3"/>
+      <polygon points="320,87 330,90 320,93" fill="#1a6b9a"/>
+      <text x="170" y="108" text-anchor="middle" font-size="9" fill="#1a6b9a">směr plavby →</text>
+    </svg>
+  </div>
+
+</div>
+
+<h3>Klíč ke čtení tabule</h3>
+<ul>
+  <li><strong>Červený čtvercový rámeček + diagonální pruh</strong> = konec platnosti předchozího pravidla (zrušovací tabule)</li>
+  <li><strong>Piktogram</strong> = co se ruší — v tomto případě rychlostní plavba malých plavidel</li>
+  <li>Tabule stojí vždy na <em>konci</em> omezeného úseku, jehož začátek označovala zákazová tabule (bez diagonály)</li>
+</ul>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>Zákaz plavby malých plavidel s vlastním pohonem</strong> — zákazová tabule pro libovolná motorová plavidla by neměla zrušovací diagonální pruh; piktogram zobrazuje navíc plavidlo v rychlostní (plachtovací) poloze, ne obecný motorový člun.</li>
+  <li><strong>Zákaz plavby vodních skútrů</strong> — vodní skútr (jet ski) má odlišný piktogram; silueta na tabuli je klasický rychlý motorový člun s řidičem vsazeným do trupu.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Pravidlo: <em>červený rámeček + diagonální pruh + piktogram</em> → konec platnosti pravidla z piktogramu. Stejný vizuální klíč se opakuje u dalších zrušovacích tabulí (konec zákazu kotvení, konec zákazu vlnění apod.).</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — příloha, tabulky plavebních znaků pro malá plavidla.</p>

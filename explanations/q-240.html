@@ -1,0 +1,156 @@
+<h2>Zvonový signál stojícího plavidla za snížené viditelnosti</h2>
+
+<p>
+  Stojící plavidlo (kotvené nebo jinak stojící) musí za snížené viditelnosti pravidelně zvonit,
+  aby ostatní věděli nejen <em>že tam je</em>, ale také <strong>na které straně plavební dráhy stojí</strong>.
+  Počet skupin (řad) úderů kóduje polohu.
+</p>
+
+<h3>Systém signálů</h3>
+
+<div style="overflow-x:auto">
+<table>
+  <thead>
+    <tr>
+      <th>Signál</th>
+      <th>Poloha plavidla</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 řada úderů na zvon</td>
+      <td>Levá strana plavební dráhy</td>
+    </tr>
+    <tr style="background:#fff9e6">
+      <td><strong>2 řady úderů na zvon ← tato otázka</strong></td>
+      <td><strong>Pravá strana plavební dráhy</strong></td>
+    </tr>
+    <tr>
+      <td>3 řady úderů na zvon</td>
+      <td>Neurčitá poloha</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Vizualizace — pohled shora na plavební dráhu</h3>
+
+<svg viewBox="0 0 520 310" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;font-family:sans-serif">
+  <!-- Popis situace -->
+  <text x="260" y="18" text-anchor="middle" font-size="12" fill="#555">Pohled shora — snížená viditelnost (mlha)</text>
+
+  <!-- Břehy -->
+  <rect x="20" y="30" width="480" height="30" rx="4" fill="#a0855b" opacity="0.5"/>
+  <text x="260" y="50" text-anchor="middle" font-size="11" fill="#5a3e1b">LEVÝ BŘEH</text>
+
+  <rect x="20" y="250" width="480" height="30" rx="4" fill="#a0855b" opacity="0.5"/>
+  <text x="260" y="270" text-anchor="middle" font-size="11" fill="#5a3e1b">PRAVÝ BŘEH</text>
+
+  <!-- Plavební dráha -->
+  <rect x="20" y="60" width="480" height="190" fill="#c8e6f5" opacity="0.5"/>
+
+  <!-- Střed kanálu - přerušovaná čára -->
+  <line x1="20" y1="155" x2="500" y2="155" stroke="#aaa" stroke-width="1.5" stroke-dasharray="8,6"/>
+  <text x="510" y="159" font-size="10" fill="#888" text-anchor="start">střed</text>
+
+  <!-- Boční popisky -->
+  <text x="12" y="110" font-size="10" fill="#2980b9" text-anchor="middle" transform="rotate(-90,12,110)">LEVÁ STRANA</text>
+  <text x="12" y="210" font-size="10" fill="#e67e22" text-anchor="middle" transform="rotate(-90,12,210)">PRAVÁ STRANA</text>
+
+  <!-- Kotvené plavidlo - pravá strana (správná odpověď) -->
+  <!-- Trup plavidla -->
+  <ellipse cx="260" cy="215" rx="38" ry="14" fill="#e67e22" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="260,201 298,215 260,229 222,215" fill="#e8a24a" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="260" y="219" text-anchor="middle" font-size="10" fill="white" font-weight="bold">⚓</text>
+
+  <!-- Kotevní lano -->
+  <line x1="260" y1="229" x2="260" y2="248" stroke="#888" stroke-width="2" stroke-dasharray="3,2"/>
+
+  <!-- Mlhové znázornění -->
+  <ellipse cx="260" cy="215" rx="70" ry="40" fill="white" opacity="0.35"/>
+
+  <!-- Zvon + signál: 2 řady úderů -->
+  <text x="310" y="185" font-size="13">🔔🔔</text>
+  <text x="307" y="200" font-size="9" fill="#c0392b">2 řady úderů</text>
+
+  <!-- Plující plavidlo (přijíždí zleva) -->
+  <polygon points="80,148 110,140 110,162 80,155" fill="#2980b9" stroke="#1a5276" stroke-width="1.5"/>
+  <text x="78" y="175" text-anchor="middle" font-size="9" fill="#1a5276">plující</text>
+  <text x="78" y="185" text-anchor="middle" font-size="9" fill="#1a5276">plavidlo</text>
+
+  <!-- Šipka (smer plavby) -->
+  <line x1="115" y1="151" x2="175" y2="151" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2980b9"/>
+    </marker>
+  </defs>
+
+  <!-- Legenda -->
+  <text x="140" y="135" font-size="9" fill="#2980b9" text-anchor="middle">ví: kotevní plavidlo</text>
+  <text x="140" y="146" font-size="9" fill="#2980b9" text-anchor="middle">stojí VPRAVO →</text>
+  <text x="140" y="157" font-size="9" fill="#2980b9" text-anchor="middle">mohu plout středem</text>
+
+  <!-- Popisek pravé strany -->
+  <text x="430" y="220" font-size="10" fill="#e67e22" font-weight="bold" text-anchor="middle">PRAVÁ STRANA</text>
+  <text x="430" y="232" font-size="9" fill="#e67e22" text-anchor="middle">= 2 řady úderů</text>
+</svg>
+
+<h3>Přehled všech tří variant</h3>
+
+<svg viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;font-family:sans-serif">
+
+  <!-- Varianta 1: levá strana -->
+  <rect x="10" y="10" width="150" height="100" rx="8" fill="#f0f8ff" stroke="#aaa" stroke-width="1"/>
+  <text x="85" y="28" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">1 řada úderů</text>
+  <!-- kanál mini -->
+  <rect x="20" y="35" width="130" height="55" fill="#c8e6f5" opacity="0.6"/>
+  <rect x="20" y="30" width="130" height="8" fill="#a0855b" opacity="0.5"/>
+  <rect x="20" y="87" width="130" height="8" fill="#a0855b" opacity="0.5"/>
+  <ellipse cx="55" cy="62" rx="22" ry="9" fill="#2980b9" stroke="#1a5276" stroke-width="1.5"/>
+  <text x="55" y="66" text-anchor="middle" font-size="9" fill="white">⚓</text>
+  <text x="55" y="80" text-anchor="middle" font-size="8" fill="#2980b9">LEVÁ</text>
+  <text x="120" y="64" text-anchor="middle" font-size="18">🔔</text>
+
+  <!-- Varianta 2: pravá strana (SPRÁVNÁ) -->
+  <rect x="185" y="10" width="150" height="100" rx="8" fill="#fffbe6" stroke="#e67e22" stroke-width="2"/>
+  <text x="260" y="28" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">2 řady úderů ✓</text>
+  <rect x="195" y="35" width="130" height="55" fill="#c8e6f5" opacity="0.6"/>
+  <rect x="195" y="30" width="130" height="8" fill="#a0855b" opacity="0.5"/>
+  <rect x="195" y="87" width="130" height="8" fill="#a0855b" opacity="0.5"/>
+  <ellipse cx="295" cy="75" rx="22" ry="9" fill="#e67e22" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="295" y="79" text-anchor="middle" font-size="9" fill="white">⚓</text>
+  <text x="295" y="92" text-anchor="middle" font-size="8" fill="#e67e22">PRAVÁ</text>
+  <text x="220" y="64" text-anchor="middle" font-size="18">🔔🔔</text>
+
+  <!-- Varianta 3: neurčitá poloha -->
+  <rect x="360" y="10" width="150" height="100" rx="8" fill="#f5f5f5" stroke="#aaa" stroke-width="1"/>
+  <text x="435" y="28" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">3 řady úderů</text>
+  <rect x="370" y="35" width="130" height="55" fill="#c8e6f5" opacity="0.6"/>
+  <rect x="370" y="30" width="130" height="8" fill="#a0855b" opacity="0.5"/>
+  <rect x="370" y="87" width="130" height="8" fill="#a0855b" opacity="0.5"/>
+  <ellipse cx="435" cy="58" rx="22" ry="9" fill="#888" stroke="#555" stroke-width="1.5"/>
+  <text x="435" y="62" text-anchor="middle" font-size="9" fill="white">⚓?</text>
+  <text x="435" y="80" text-anchor="middle" font-size="8" fill="#555">NEURČITÁ</text>
+  <text x="388" y="50" text-anchor="middle" font-size="16">🔔🔔🔔</text>
+</svg>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Plující plavidlo v mlze slyší <strong>2 rychlé skupiny úderů zvonu</strong> opakované každou minutu →
+  ví, že kotvené plavidlo stojí <strong>na pravé straně plavební dráhy</strong> →
+  může bezpečně projet středem nebo podél levého břehu.
+</p>
+
+<h3>Mnemotechnika</h3>
+<p>
+  <strong>„dvě řady = PRAvá"</strong> — dvě skupiny úderů, pravá strana.
+  (Tři skupiny = <em>tři</em>krát nejistota → neurčitá poloha.)
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu (zvukové signály za snížené viditelnosti)</li>
+</ul>

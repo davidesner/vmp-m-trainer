@@ -1,0 +1,88 @@
+<h2>Dva zeleno-bílé kosočtverce — doporučení pro mostní/jezová pole</h2>
+
+<p>Tabule zobrazuje <strong>dva kosočtverce</strong>, každý rozdělený diagonálně — pravá polovina zelená, levá bílá. Jsou umístěny symetricky vedle sebe.</p>
+
+<h3>Správná odpověď</h3>
+<p><strong>Doporučení držet se v určeném prostoru v mostních nebo jezových polích.</strong></p>
+
+<h3>Vizualizace — jak tabuli číst</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levý panel: symbol ze zadání -->
+  <div style="text-align:center;">
+    <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#555;">Co vidíš v testu</div>
+    <svg width="160" height="80" viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+      <!-- Levý kosočtverec -->
+      <polygon points="10,40 40,10 70,40 40,70" fill="white" stroke="#333" stroke-width="1.5"/>
+      <!-- zelená pravá polovina levého -->
+      <polygon points="40,10 70,40 40,70" fill="#2e8b2e" stroke="#333" stroke-width="1.5"/>
+
+      <!-- Pravý kosočtverec -->
+      <polygon points="90,40 120,10 150,40 120,70" fill="white" stroke="#333" stroke-width="1.5"/>
+      <!-- zelená pravá polovina pravého -->
+      <polygon points="120,10 150,40 120,70" fill="#2e8b2e" stroke="#333" stroke-width="1.5"/>
+
+      <!-- šipka / rozestup označující koridor -->
+      <line x1="70" y1="75" x2="90" y2="75" stroke="#555" stroke-width="1" marker-end="url(#arr)" marker-start="url(#arr2)"/>
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#555"/>
+        </marker>
+        <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#555"/>
+        </marker>
+      </defs>
+    </svg>
+    <div style="font-size:0.75em; color:#666; margin-top:4px;">dva symetrické kosočtverce, pravá polovina zelená</div>
+  </div>
+
+  <!-- Pravý panel: co to znamená ve skutečnosti -->
+  <div style="text-align:center;">
+    <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#555;">Co to znamená na vodě</div>
+    <svg width="200" height="110" viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+      <!-- most / pilíře -->
+      <rect x="0" y="0" width="60" height="110" fill="#bbb" rx="2"/>
+      <rect x="140" y="0" width="60" height="110" fill="#bbb" rx="2"/>
+      <!-- voda -->
+      <rect x="60" y="50" width="80" height="60" fill="#a0d4f5"/>
+      <!-- doporučený koridor — zelené lemování -->
+      <rect x="70" y="48" width="60" height="62" fill="none" stroke="#2e8b2e" stroke-width="2" stroke-dasharray="5,3"/>
+      <!-- plavidlo -->
+      <rect x="88" y="65" width="24" height="12" rx="3" fill="#e07b00"/>
+      <polygon points="112,71 120,71 112,68" fill="#e07b00"/>
+      <!-- šipka směru -->
+      <line x1="100" y1="85" x2="100" y2="95" stroke="#333" stroke-width="1.5" marker-end="url(#sarr)"/>
+      <defs>
+        <marker id="sarr" markerWidth="6" markerHeight="6" refX="3" refY="6" orient="auto">
+          <path d="M0,0 L3,6 L6,0 Z" fill="#333"/>
+        </marker>
+      </defs>
+      <!-- popisky -->
+      <text x="30" y="55" text-anchor="middle" font-size="9" fill="#555">pilíř</text>
+      <text x="170" y="55" text-anchor="middle" font-size="9" fill="#555">pilíř</text>
+      <text x="100" y="44" text-anchor="middle" font-size="9" fill="#2e8b2e">doporučený koridor</text>
+    </svg>
+    <div style="font-size:0.75em; color:#666; margin-top:4px;">zelená čárkovaná oblast = doporučený průjezdní prostor</div>
+  </div>
+
+  <!-- Klíč barev -->
+  <div style="font-size:0.85em; line-height:1.8;">
+    <div style="font-weight:bold; margin-bottom:4px;">Klíč: barva = záměr</div>
+    <div><span style="display:inline-block;width:14px;height:14px;background:#2e8b2e;vertical-align:middle;margin-right:6px; border-radius:2px;"></span><strong>Zelená</strong> = doporučení</div>
+    <div><span style="display:inline-block;width:14px;height:14px;background:#cc2222;vertical-align:middle;margin-right:6px; border-radius:2px;"></span><strong>Červená</strong> = zákaz (zde není)</div>
+    <div><span style="display:inline-block;width:14px;height:14px;background:white;border:1.5px solid #333;vertical-align:middle;margin-right:6px; border-radius:2px;"></span><strong>Bílá</strong> = neutrální / informace</div>
+  </div>
+</div>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>„Zákaz plavby mimo vyznačený prostor"</strong> — zákaz by byl vyjádřen červenou barvou nebo červeným přeškrtnutím. Zelená barva vylučuje výklad jako zákaz.</li>
+  <li><strong>„Doporučené proplouvání jen v jednom směru"</strong> — jednosměrnost by byla naznačena šipkou nebo asymetrií. Oba kosočtverce jsou symetrické, žádný směr nepředepisují.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Pod mostem nebo u jezu bývají silné proudy, mělčiny a pilíře. Tabule říká: <em>„Doporučujeme ti projet tímto koridorem — je nejbezpečnější."</em> Není to přísný zákaz alternativní trasy, ale zkušený vůdce plavidla se tím řídí.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — příloha, tabulka plavebních značek (doporučující značky mostních a jezových polí)</p>

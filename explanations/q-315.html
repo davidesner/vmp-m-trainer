@@ -1,0 +1,94 @@
+<h2>Signální znak PP4 — bílý kříž na modrém poli (4 čtverce)</h2>
+
+<p>Tento znak nese plavidlo, které pluje po <strong>hlavní vodní cestě</strong> v místě, kde ji kříží vedlejší vodní cesta.</p>
+
+<h3>Co znak říká ostatním</h3>
+<p>Plavidlo s tímto znakem oznamuje: <em>„Pluju po hlavní vodní cestě."</em> Plavidla přijíždějící z vedlejší vodní cesty mu musejí dát přednost — musejí případně změnit rychlost nebo směr tak, aby nevznikla nebezpečná situace.</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levá část: znak jak je v testu -->
+  <div style="text-align:center;">
+    <div style="font-weight:bold; margin-bottom:8px; font-size:13px;">Znak v testu (PP4)</div>
+    <svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+      <rect width="110" height="110" fill="white" stroke="#bbb" stroke-width="1.5"/>
+      <!-- 4 modré čtverce -->
+      <rect x="6" y="6" width="44" height="44" fill="#5b9bd5"/>
+      <rect x="60" y="6" width="44" height="44" fill="#5b9bd5"/>
+      <rect x="6" y="60" width="44" height="44" fill="#5b9bd5"/>
+      <rect x="60" y="60" width="44" height="44" fill="#5b9bd5"/>
+      <!-- bílý kříž — vodorovný a svislý pruh -->
+      <rect x="0" y="48" width="110" height="14" fill="white"/>
+      <rect x="48" y="0" width="14" height="110" fill="white"/>
+    </svg>
+    <div style="font-size:12px; color:#666; margin-top:6px;">tabule nesená na plavidle</div>
+  </div>
+
+  <!-- Pravá část: schéma křižovatky vodních cest -->
+  <div style="text-align:center;">
+    <div style="font-weight:bold; margin-bottom:8px; font-size:13px;">Co to znamená v praxi</div>
+    <svg width="280" height="200" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Hlavní vodní cesta — vodorovně -->
+      <rect x="0" y="80" width="280" height="40" fill="#cce5ff" stroke="#5b9bd5" stroke-width="1.5"/>
+      <text x="10" y="106" font-size="11" fill="#1a5276">HLAVNÍ vodní cesta</text>
+
+      <!-- Vedlejší vodní cesta — svisle -->
+      <rect x="120" y="0" width="40" height="200" fill="#e8f5e9" stroke="#57a85a" stroke-width="1.5"/>
+      <text x="125" y="30" font-size="10" fill="#1e6b20" writing-mode="tb" text-anchor="start">VEDLEJŠÍ</text>
+
+      <!-- Plavidlo na hlavní cestě (vlevo od křižovatky) -->
+      <!-- tělo plavidla -->
+      <ellipse cx="55" cy="100" rx="30" ry="12" fill="#f0c040" stroke="#b8860b" stroke-width="1.5"/>
+      <polygon points="85,100 95,100 87,94" fill="#b8860b"/>
+      <!-- šipka směru -->
+      <line x1="88" y1="100" x2="112" y2="100" stroke="#c0392b" stroke-width="2" marker-end="url(#arr)"/>
+      <!-- miniaturní znak PP4 nad plavidlem -->
+      <rect x="38" y="72" width="32" height="20" fill="white" stroke="#bbb" stroke-width="0.8"/>
+      <rect x="40" y="73.5" width="12" height="8" fill="#5b9bd5"/>
+      <rect x="57" y="73.5" width="12" height="8" fill="#5b9bd5"/>
+      <rect x="40" y="83" width="12" height="8" fill="#5b9bd5"/>
+      <rect x="57" y="83" width="12" height="8" fill="#5b9bd5"/>
+      <rect x="38" y="79" width="32" height="3.5" fill="white"/>
+      <rect x="52" y="72" width="4" height="20" fill="white"/>
+      <text x="54" y="69" font-size="9" text-anchor="middle" fill="#333">PP4</text>
+
+      <!-- Plavidlo z vedlejší cesty (přijíždí shora) -->
+      <ellipse cx="140" cy="45" rx="12" ry="22" fill="#a9d18e" stroke="#57a85a" stroke-width="1.5"/>
+      <polygon points="140,67 140,77 134,68" fill="#57a85a"/>
+      <!-- šipka dolů ale zastavená -->
+      <line x1="140" y1="73" x2="140" y2="78" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,2"/>
+      <!-- STOP -->
+      <text x="155" y="60" font-size="9" fill="#c0392b" font-weight="bold">musí dát</text>
+      <text x="155" y="71" font-size="9" fill="#c0392b" font-weight="bold">přednost</text>
+
+      <!-- šipka pro plavidlo na hlavní -->
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#c0392b"/>
+        </marker>
+      </defs>
+
+      <!-- legenda -->
+      <rect x="0" y="175" width="280" height="25" fill="#f9f9f9"/>
+      <rect x="6" y="181" width="14" height="10" fill="#cce5ff" stroke="#5b9bd5" stroke-width="1"/>
+      <text x="24" y="191" font-size="10" fill="#333">Hlavní cesta (přednost)</text>
+      <rect x="140" y="181" width="14" height="10" fill="#e8f5e9" stroke="#57a85a" stroke-width="1"/>
+      <text x="158" y="191" font-size="10" fill="#333">Vedlejší cesta (ustupuje)</text>
+    </svg>
+    <div style="font-size:12px; color:#666; margin-top:6px;">žluté plavidlo na hlavní, zelené z vedlejší musí počkat</div>
+  </div>
+</div>
+
+<h3>Proč ostatní varianty nesedí</h3>
+<ul>
+  <li><strong>Varianta „nesmí donutit plavidla z vedlejší cesty změnit kurz nebo rychlost"</strong> — je to přesně naopak. Plavidla z vedlejší cesty <em>musejí</em> ustoupit plavidlu na hlavní, tzn. smějí být donucena změnit kurz nebo rychlost. Tato varianta by platila, kdyby plavidlo bylo na vedlejší cestě.</li>
+  <li><strong>Varianta „musí dát přednost plavidlu z vedlejší cesty zprava"</strong> — pravidlo „zprava" platí při setkání dvou plavidel na <em>téže</em> vodní cestě, ne na křižovatce hlavní a vedlejší. Na křižovatce rozhoduje hierarchie hlavní/vedlejší, ne strana.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Přibližujete-li se k ústí vedlejšího ramene nebo přítoku a vidíte na druhém plavidle tento znak, víte, že ono plavidlo má přednost — vy jste na vedlejší a musíte počkat nebo zpomalit. Naopak pokud váš velitel vztyčí tento znak, signalizuje ostatním vaši přednost.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu (pravidla přednosti na křižovatkách hlavní a vedlejší vodní cesty); zákon č. 114/1995 Sb. o vnitrozemské plavbě.</p>

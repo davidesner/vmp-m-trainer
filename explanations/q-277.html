@@ -1,0 +1,124 @@
+<h2>Příkazová tabule — přeplout na pravý bok</h2>
+
+<p>Tabule s červeným pozadím a zkříženými šipkami je <strong>příkazová tabule</strong>. Přikazuje plavidlu přeplavit se na <strong>stranu plavební dráhy, která je po pravém boku</strong>.</p>
+
+<hr>
+
+<h3>Jak číst tabuli</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Tabule (SVG rekonstrukce) -->
+  <div style="text-align:center;">
+    <svg width="130" height="150" viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg">
+      <!-- červené pozadí -->
+      <rect x="2" y="2" width="126" height="146" rx="8" fill="#c0392b" stroke="#8b0000" stroke-width="2"/>
+      <!-- bílý vnitřní rámeček -->
+      <rect x="10" y="10" width="110" height="130" rx="4" fill="none" stroke="white" stroke-width="2"/>
+
+      <!-- Šipka NAHORU vpravo (kam se přesunout) -->
+      <line x1="95" y1="120" x2="95" y2="30" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="95,18 86,38 104,38" fill="white"/>
+
+      <!-- Šipka DOLŮ vlevo (provoz přicházející) -->
+      <line x1="38" y1="30" x2="38" y2="118" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      <polygon points="38,130 29,110 47,110" fill="white"/>
+
+      <!-- Křížící se oblouky (manévr přeplavení) -->
+      <!-- oblouk zleva-dolů doprava-nahoru -->
+      <path d="M 25,100 Q 65,70 105,40" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <polygon points="105,40 92,44 97,58" fill="white"/>
+
+      <!-- oblouk zprava-dolů doleva-nahoru (protisměr) -->
+      <path d="M 108,105 Q 65,80 25,55" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="8,4"/>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:6px;">Tabule v testu</div>
+  </div>
+
+  <!-- Situace na vodě (pohled shora) -->
+  <div style="text-align:center;">
+    <svg width="280" height="150" viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg">
+      <!-- vodní cesta -->
+      <rect x="0" y="0" width="280" height="150" fill="#d6eaf8"/>
+
+      <!-- břehy -->
+      <rect x="0" y="0" width="280" height="18" fill="#a9784e"/>
+      <rect x="0" y="132" width="280" height="18" fill="#a9784e"/>
+
+      <!-- popis stran -->
+      <text x="140" y="13" text-anchor="middle" font-size="10" fill="white" font-weight="bold">LEVÝ BŘeh</text>
+      <text x="140" y="146" text-anchor="middle" font-size="10" fill="white" font-weight="bold">PRAVÝ BŘeh</text>
+
+      <!-- středová čára plavební dráhy (přerušovaná) -->
+      <line x1="0" y1="75" x2="280" y2="75" stroke="#666" stroke-width="1" stroke-dasharray="10,6"/>
+
+      <!-- Tabule na břehu (ikona) -->
+      <rect x="4" y="28" width="18" height="22" rx="2" fill="#c0392b" stroke="#8b0000" stroke-width="1"/>
+      <text x="13" y="44" text-anchor="middle" font-size="9" fill="white" font-weight="bold">→</text>
+
+      <!-- Plavidlo PŘED manévrem (vlevo, na levé straně dráhy) -->
+      <g transform="translate(60,58)">
+        <rect x="-18" y="-9" width="36" height="18" rx="4" fill="#2c3e50"/>
+        <polygon points="18,-9 28,0 18,9" fill="#2c3e50"/>
+        <!-- šipka směru (doprava = po vodě) -->
+        <line x1="30" y1="0" x2="50" y2="0" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+      </g>
+      <text x="60" y="46" text-anchor="middle" font-size="9" fill="#2c3e50">plavidlo</text>
+
+      <!-- Trajektorie přeplavení -->
+      <path d="M 105,57 Q 155,35 195,112" stroke="#e67e22" stroke-width="2.5" fill="none" stroke-dasharray="6,3"/>
+      <polygon points="195,112 183,104 192,96" fill="#e67e22"/>
+
+      <!-- Plavidlo PO manévru (vpravo, na pravé straně dráhy) -->
+      <g transform="translate(210,115)">
+        <rect x="-18" y="-9" width="36" height="18" rx="4" fill="#27ae60"/>
+        <polygon points="18,-9 28,0 18,9" fill="#27ae60"/>
+      </g>
+      <text x="210" y="104" text-anchor="middle" font-size="9" fill="#27ae60">po manévru</text>
+
+      <!-- popis -->
+      <text x="148" y="72" text-anchor="middle" font-size="9" fill="#888">← střed dráhy →</text>
+
+      <!-- šipka "pravý bok" -->
+      <line x1="255" y1="75" x2="255" y2="130" stroke="#c0392b" stroke-width="2"/>
+      <polygon points="255,130 249,118 261,118" fill="#c0392b"/>
+      <text x="265" y="108" font-size="8" fill="#c0392b">pravý</text>
+      <text x="265" y="118" font-size="8" fill="#c0392b">bok</text>
+
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <polygon points="0,0 6,3 0,6" fill="#2c3e50"/>
+        </marker>
+      </defs>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:6px;">Situace na vodě (pohled shora)</div>
+  </div>
+
+</div>
+
+<h3>Klíč k tabuli</h3>
+<table>
+  <thead>
+    <tr><th>Prvek tabule</th><th>Význam</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Červené pozadí</td><td>Příkazová tabule — povinnost, ne doporučení</td></tr>
+    <tr><td>Velká šipka vpravo (nahoru)</td><td>Strany, na kterou se musí plavidlo přesunout</td></tr>
+    <tr><td>Zkřížené oblouky uprostřed</td><td>Samotný manévr přeplavení (zkřížení dráhy)</td></tr>
+    <tr><td>Malá šipka dolů vlevo</td><td>Provoz přicházející naproti (pozor na protisměr)</td></tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní možnosti?</h3>
+<ul>
+  <li><strong>„Místo doporučené pro obrat"</strong> — tuto funkci plní zcela jiná tabule (zpravidla informační/doporučující, bez červeného příkazového pozadí).</li>
+  <li><strong>„Zákaz potkávání plavidel"</strong> — zákaz má vlastní symbol (přeškrtnutí, bílý kruh s červeným okrajem). Tato tabule naopak manévr <em>nařizuje</em>, nezakazuje.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Tabuli potkáte u zúžení řeky, u jezů nebo tam, kde je plavební dráha jednostranně omezena. Plavidlo musí přeplavení dokončit <strong>dříve, než dosáhne dalšího úseku</strong> — není to doporučení, je to příkaz.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — příloha příkazových tabulí (tabule série B, příkaz přeplout na danou stranu plavební dráhy)</li>
+</ul>

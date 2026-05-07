@@ -1,0 +1,137 @@
+<h2>Krvácení z nosu — správný postup první pomoci</h2>
+
+<p><strong>Správný postup:</strong> posazení postiženého s mírně předkloněnou hlavou, studený obklad na zátylek, stisk nosních křídel palcem a ukazovákem po dobu několika minut. Pokud krvácení přetrvává i po opakovaných pokusech nebo se zhoršuje, dopravíme postiženého k lékaři.</p>
+
+<hr>
+
+<h3>Vizualizace: porovnání poloh</h3>
+
+<svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:sans-serif;">
+
+  <!-- === SPRÁVNĚ === -->
+  <g transform="translate(20,20)">
+    <!-- Pozadí -->
+    <rect x="0" y="0" width="210" height="280" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
+    <text x="105" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">✓ SPRÁVNĚ</text>
+
+    <!-- Tělo sedící - trup -->
+    <rect x="80" y="130" width="50" height="70" rx="8" fill="#90a4ae"/>
+    <!-- Hlava mírně předkloněná -->
+    <ellipse cx="105" cy="110" rx="22" ry="26" fill="#ffcc80"/>
+    <!-- Lehký předklon - nos směrem dolů-dopředu -->
+    <line x1="105" y1="122" x2="100" y2="142" stroke="#90a4ae" stroke-width="2"/>
+    <!-- Nos -->
+    <ellipse cx="100" cy="118" rx="5" ry="4" fill="#ff8a65"/>
+    <!-- Kapky krve dopředu dolů -->
+    <ellipse cx="98" cy="128" rx="3" ry="4" fill="#e53935" opacity="0.8"/>
+    <ellipse cx="96" cy="138" rx="2" ry="3" fill="#e53935" opacity="0.6"/>
+    <!-- Ruce stiskající nos -->
+    <ellipse cx="88" cy="118" rx="9" ry="6" fill="#ffb74d" opacity="0.9"/>
+    <text x="78" y="117" font-size="9" fill="#5d4037">👍</text>
+    <!-- Zátylek + obklad -->
+    <rect x="118" y="95" width="24" height="18" rx="4" fill="#80deea" stroke="#00838f" stroke-width="1.5"/>
+    <text x="130" y="106" text-anchor="middle" font-size="8" fill="#006064">❄</text>
+    <!-- Šipka zátylek -->
+    <line x1="142" y1="104" x2="155" y2="104" stroke="#00838f" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="157" y="108" font-size="8" fill="#00838f">zátylek</text>
+    <!-- Nohy -->
+    <rect x="80" y="200" width="20" height="50" rx="6" fill="#78909c"/>
+    <rect x="110" y="200" width="20" height="50" rx="6" fill="#78909c"/>
+
+    <!-- Popisky -->
+    <text x="105" y="265" text-anchor="middle" font-size="9" fill="#1b5e20">vsedě, hlava mírně předkloněna</text>
+    <text x="105" y="277" text-anchor="middle" font-size="9" fill="#1b5e20">krev odtéká dopředu (ven)</text>
+  </g>
+
+  <!-- === ŠPATNĚ 1 — záklon === -->
+  <g transform="translate(255,20)">
+    <rect x="0" y="0" width="210" height="280" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+    <text x="105" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">✗ ŠPATNĚ — záklon</text>
+
+    <!-- Trup -->
+    <rect x="80" y="130" width="50" height="70" rx="8" fill="#90a4ae"/>
+    <!-- Hlava zakloněná -->
+    <ellipse cx="105" cy="108" rx="22" ry="26" fill="#ffcc80" transform="rotate(-20,105,108)"/>
+    <!-- Nos nahoře -->
+    <ellipse cx="116" cy="100" rx="5" ry="4" fill="#ff8a65" transform="rotate(-20,116,100)"/>
+    <!-- Kapky krve tekou do krku dolů -->
+    <line x1="113" y1="108" x2="108" y2="125" stroke="#e53935" stroke-width="2.5"/>
+    <ellipse cx="108" cy="128" rx="4" ry="5" fill="#e53935" opacity="0.7"/>
+    <!-- Šipka dolů do krku -->
+    <text x="115" y="130" font-size="18" fill="#e53935">↓</text>
+    <text x="125" y="145" font-size="8" fill="#c62828">do krku!</text>
+    <!-- Horký hrnek -->
+    <rect x="130" y="185" width="28" height="22" rx="4" fill="#ff8f00" opacity="0.8"/>
+    <path d="M158,192 Q168,192 168,200 Q168,208 158,208" stroke="#ff8f00" stroke-width="2" fill="none"/>
+    <text x="144" y="200" text-anchor="middle" font-size="8" fill="white">♨</text>
+    <text x="144" y="220" text-anchor="middle" font-size="8" fill="#c62828">horké tekutiny</text>
+    <text x="144" y="230" text-anchor="middle" font-size="8" fill="#c62828">= vazodilatace!</text>
+    <!-- Nohy -->
+    <rect x="80" y="200" width="20" height="50" rx="6" fill="#78909c"/>
+    <rect x="110" y="200" width="20" height="50" rx="6" fill="#78909c"/>
+
+    <text x="105" y="265" text-anchor="middle" font-size="9" fill="#b71c1c">záklon → krev do krku</text>
+    <text x="105" y="277" text-anchor="middle" font-size="9" fill="#b71c1c">+ horké tekutiny zhorší krvácení</text>
+  </g>
+
+  <!-- === ŠPATNĚ 2 — ležení === -->
+  <g transform="translate(490,20)">
+    <rect x="0" y="0" width="210" height="280" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+    <text x="105" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">✗ ŠPATNĚ — ležení</text>
+
+    <!-- Tělo leží na zádech -->
+    <rect x="20" y="150" width="130" height="35" rx="10" fill="#90a4ae"/>
+    <!-- Hlava vpravo -->
+    <ellipse cx="162" cy="167" rx="22" ry="20" fill="#ffcc80"/>
+    <!-- Nos -->
+    <ellipse cx="175" cy="170" rx="5" ry="4" fill="#ff8a65"/>
+    <!-- Nohy nahoru -->
+    <rect x="18" y="115" width="18" height="50" rx="6" fill="#78909c" transform="rotate(-15,27,140)"/>
+    <rect x="40" y="108" width="18" height="50" rx="6" fill="#78909c" transform="rotate(-10,49,133)"/>
+
+    <!-- Krev do krku -->
+    <line x1="165" y1="175" x2="150" y2="175" stroke="#e53935" stroke-width="2.5"/>
+    <ellipse cx="146" cy="175" rx="4" ry="4" fill="#e53935" opacity="0.7"/>
+    <text x="130" y="195" font-size="8" fill="#c62828">krev teče do krku</text>
+
+    <!-- Sanitka ikona -->
+    <rect x="55" y="205" width="50" height="28" rx="5" fill="#ef5350"/>
+    <rect x="60" y="198" width="40" height="12" rx="3" fill="#ef5350"/>
+    <text x="80" y="225" text-anchor="middle" font-size="11" fill="white">🚑</text>
+    <text x="80" y="244" text-anchor="middle" font-size="8" fill="#e65100">zbytečný výjezd ZZS</text>
+    <text x="80" y="254" text-anchor="middle" font-size="8" fill="#e65100">pro běžné krvácení</text>
+
+    <text x="105" y="265" text-anchor="middle" font-size="9" fill="#bf360c">protišoková poloha ≠ epistaxe</text>
+    <text x="105" y="277" text-anchor="middle" font-size="9" fill="#bf360c">ZZS nevolat, pokud není nutné</text>
+  </g>
+
+</svg>
+
+<hr>
+
+<h3>Mechanismus — proč to funguje</h3>
+
+<ul>
+  <li><strong>Mírný předklon hlavy</strong> — krev odtéká ven, ne do krku. Spolknutá krev způsobuje nevolnost a zvracení, u bezvědomých hrozí aspirace.</li>
+  <li><strong>Studený obklad na zátylek</strong> — reflex způsobuje vazokonstrikci (stažení cév) v nosní sliznici přes vazomotorické centrum.</li>
+  <li><strong>Stisk nosních křídel (Kiesselbacho­va oblast)</strong> — přímá komprese nejčastějšího místa krvácení: přední část nosního septa s hustou cévní sítí (anastomózy a. ethmoidalis, a. sphenopalatina a dalších). Výdrž alespoň 5–10 minut bez uvolňování.</li>
+  <li><strong>Při neúspěchu → lékař</strong> — může jít o zadní (arteriální) krvácení, které je hůř přístupné, nebo o příznak systémového onemocnění (hypertenze, koagulopatie).</li>
+</ul>
+
+<h3>Proč ne ostatní postupy</h3>
+
+<ul>
+  <li><strong>Záklon hlavy + horké tekutiny:</strong> záklon posílá krev do jícnu a průdušnice; horké tekutiny způsobují vazodilataci a krvácení zhoršují.</li>
+  <li><strong>Poloha na zádech se zvednutými nohami:</strong> to je protišoková (Trendelenburgova) poloha — pro epistaxi nevhodná, krev teče do krku. Záchranná služba se pro standardní krvácení z nosu nevolá.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Při krvácení z nosu: posadit, mírně předklonit, stisknout nosní křídla oběma prsty, studený hadr na zátylek, čekat 5–10 min. Neklopit hlavu, nepít nic horkého. Pokud nezastaví nebo krvácení je silné a opakované — lékař.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Doporučené postupy první pomoci — Česká resuscitační rada</li>
+  <li>Klinická praxe: epistaxe, standardní postupy urgentní medicíny</li>
+</ul>

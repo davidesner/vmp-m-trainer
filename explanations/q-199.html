@@ -1,0 +1,122 @@
+<article class="vmp-explanation">
+
+  <section>
+    <h2>Krátké vysvětlení</h2>
+    <p>
+      Černá koule (balón) na stožáru je <strong>denní tvar</strong> oznamující, že plavidlo stojí
+      <strong>bez přímého ani nepřímého přístupu na břeh</strong> — je uvázáno nebo zakotveno
+      tak, že posádka ani cestující se nemohou dostat na pevninu (žádná lávka, gangway, přívoz
+      ani jiná spojnice).
+    </p>
+  </section>
+
+  <section>
+    <h2>Vizualizace — test vs. realita</h2>
+
+    <!-- Dvouúrovňová vizualizace: vlevo symbol z testu, vpravo "překlad" do reality -->
+    <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg"
+         style="width:100%;max-width:640px;display:block;margin:12px auto;font-family:sans-serif">
+
+      <!-- ===== LEVÝ PANEL — SYMBOL Z TESTU ===== -->
+      <rect x="0" y="0" width="310" height="260" rx="8" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+      <text x="155" y="22" text-anchor="middle" font-size="12" fill="#666">Jak to vypadá v testu</text>
+
+      <!-- voda -->
+      <path d="M10,200 Q30,190 50,200 Q70,210 90,200 Q110,190 130,200 Q150,210 170,200 Q190,190 210,200 Q230,210 250,200 Q270,190 290,200 L300,200 L300,250 L10,250 Z" fill="#b3d9ff" stroke="none"/>
+
+      <!-- trup plavidla (pontón) -->
+      <rect x="50" y="170" width="210" height="35" rx="4" fill="#d0c8b0" stroke="#888" stroke-width="1.5"/>
+      <!-- přídě/záď zkosení -->
+      <polygon points="50,170 50,205 30,205 40,170" fill="#c0b898" stroke="#888" stroke-width="1"/>
+      <polygon points="260,170 260,205 280,205 270,170" fill="#c0b898" stroke="#888" stroke-width="1"/>
+
+      <!-- stožár -->
+      <line x1="155" y1="170" x2="155" y2="100" stroke="#555" stroke-width="2"/>
+
+      <!-- černá koule = balón -->
+      <circle cx="155" cy="90" r="14" fill="#111" stroke="#333" stroke-width="1"/>
+
+      <!-- popisek -->
+      <text x="175" y="86" font-size="11" fill="#222">černá koule</text>
+      <text x="175" y="100" font-size="11" fill="#222">(balón)</text>
+      <line x1="169" y1="90" x2="175" y2="90" stroke="#555" stroke-width="1"/>
+
+      <!-- popis stavu — "bez přístupu na břeh" -->
+      <text x="155" y="240" text-anchor="middle" font-size="11" fill="#444">plavidlo bez přístupu na břeh</text>
+
+      <!-- šipky ukazující "žádné spojení" -->
+      <line x1="50" y1="170" x2="10" y2="145" stroke="#c00" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="8" y="140" font-size="10" fill="#c00" text-anchor="middle">✕ břeh</text>
+      <line x1="260" y1="170" x2="300" y2="145" stroke="#c00" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="302" y="140" font-size="10" fill="#c00" text-anchor="start">✕ břeh</text>
+
+      <!-- ===== PRAVÝ PANEL — JINÉ SIGNÁLY (co to není) ===== -->
+      <rect x="320" y="0" width="310" height="260" rx="8" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+      <text x="475" y="22" text-anchor="middle" font-size="12" fill="#666">Co by nesly jiné situace</text>
+
+      <!-- Situace 1: potápěčské práce — tvar "A" -->
+      <text x="335" y="50" font-size="11" fill="#333" font-weight="bold">Práce pod vodou:</text>
+      <!-- stylizovaný tvar A (dvourohý) -->
+      <polygon points="370,75 390,55 390,75" fill="#0055aa" stroke="#003388" stroke-width="1"/>
+      <polygon points="390,55 410,75 390,75" fill="white" stroke="#003388" stroke-width="1"/>
+      <rect x="370" y="75" width="40" height="8" fill="#0055aa" stroke="#003388" stroke-width="1"/>
+      <text x="420" y="70" font-size="10" fill="#555">příznak „Alfa"</text>
+      <text x="420" y="83" font-size="10" fill="#555">(modrý+bílý)</text>
+
+      <!-- Situace 2: výbušniny — vlajka Bravo -->
+      <text x="335" y="125" font-size="11" fill="#333" font-weight="bold">Zneškodňování výbušnin:</text>
+      <rect x="370" y="135" width="50" height="35" fill="#cc0000" stroke="#990000" stroke-width="1"/>
+      <text x="390" y="157" font-size="16" fill="white" text-anchor="middle" font-weight="bold">B</text>
+      <text x="430" y="147" font-size="10" fill="#555">vlajka „Bravo"</text>
+      <text x="430" y="160" font-size="10" fill="#555">(červená)</text>
+
+      <!-- Situace 3: správná — černá koule -->
+      <text x="335" y="205" font-size="11" fill="#007700" font-weight="bold">Bez přístupu na břeh → ●</text>
+      <circle cx="370" cy="230" r="13" fill="#111" stroke="#333" stroke-width="1"/>
+      <text x="392" y="234" font-size="10" fill="#007700">černá koule = správná odpověď</text>
+
+    </svg>
+  </section>
+
+  <section>
+    <h2>Pozadí</h2>
+    <p>
+      Denní tvary (shapes) jsou vizuální signály používané za dne, kdy světla nejsou vidět. Různé
+      tvary mají přesně definovaný význam. Černá koule na stožáru patří plavidlům stojícím
+      <em>izolovaně</em> — typicky kotviště v širším profilu řeky nebo jezera, kde žádná lávka
+      ani spojovací prostředek na břeh nevede.
+    </p>
+    <p>
+      Ostatní denní tvary mají odlišnou formu i barvu:
+    </p>
+    <ul>
+      <li><strong>Potápěčské / podvodní práce</strong> — dvourohý tvar (příznak „Alfa" nebo
+        jeho rigidní replika), modrý s bílým výsečem</li>
+      <li><strong>Zneškodňování výbušnin</strong> — červená vlajka (příznak „Bravo" z Mezinárodního
+        signálního řádu) nebo červená vlajka s černou okrajovou linkou</li>
+    </ul>
+    <p>
+      <strong>Právní základ:</strong> vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu,
+      ustanovení o denních tvarech plavidel stojících bez přístupu na břeh.
+    </p>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <p>
+      V praxi se s tímto signálem setkáš u pontónů nebo pracovních plavidel kotvících uprostřed
+      řeky (např. při opravách spodní stavby mostu, průzkumech koryta), případně u rekreačních
+      plavidel na kotevním místě bez přístupu k molu. Projíždějící lodě vidí černou kouli a vědí,
+      že plavidlo se nemůže rychle uvolnit a pohnout — je třeba jim nechat dostatečný prostor.
+    </p>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li>Vyhláška č. 67/2015 Sb. — Pravidla plavebního provozu (denní tvary plavidel)</li>
+      <li>Zákon č. 114/1995 Sb. — o vnitrozemské plavbě</li>
+    </ol>
+  </section>
+
+</article>

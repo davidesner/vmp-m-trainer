@@ -1,0 +1,71 @@
+<h2>Zákazová tabule PP4 — zákaz plavby bez strojního pohonu</h2>
+
+<p>Na obrázku je červená čtvercová zákazová tabule se siluetou veslaře v loďce (vesla v rukou, bez plachty, s červeným diagonálním přeškrtnutím). Jde o znak <strong>PP4</strong>.</p>
+
+<h3>Správná odpověď</h3>
+<p><strong>„Zákaz plavby plavidel bez vlastního strojního pohonu a která nejsou plachetnicemi."</strong></p>
+<p>Tabule zakazuje plavbu veslicím, kanoím, paddleboardům a podobným plavidlům pohybovaným lidskou silou — tedy těm, která nemají vlastní strojní pohon <em>a zároveň</em> nejsou plachetnicemi.</p>
+<p>Plachetnice mají vlastní pohon (vítr/plachta) — proto pro ně tato tabule <strong>neplatí</strong> a mohou v daném úseku plout.</p>
+
+<h3>Vizualizace — co tabule zakazuje a co ne</h3>
+
+<svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;display:block;margin:1em auto;">
+  <!-- Veslice — zakázáno -->
+  <rect x="20" y="20" width="140" height="180" rx="10" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <!-- Tabule symbol -->
+  <rect x="40" y="35" width="100" height="100" rx="6" fill="#cc2200"/>
+  <!-- Silueta veslaře -->
+  <ellipse cx="90" cy="58" rx="10" ry="10" fill="#1a1a1a"/>
+  <rect x="82" y="68" width="16" height="22" rx="3" fill="#1a1a1a"/>
+  <!-- vesla -->
+  <line x1="68" y1="72" x2="112" y2="84" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  <line x1="68" y1="84" x2="112" y2="72" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  <!-- lodička -->
+  <path d="M60 92 Q90 108 120 92 L115 100 Q90 115 65 100 Z" fill="#1a1a1a"/>
+  <!-- přeškrtnutí -->
+  <line x1="42" y1="37" x2="138" y2="133" stroke="#cc2200" stroke-width="8" stroke-linecap="round"/>
+  <text x="90" y="158" text-anchor="middle" font-size="12" fill="#cc2200" font-weight="bold">ZAKÁZÁNO</text>
+  <text x="90" y="174" text-anchor="middle" font-size="11" fill="#555">Veslice, kánoe</text>
+  <text x="90" y="189" text-anchor="middle" font-size="11" fill="#555">paddleboard</text>
+
+  <!-- Plachetnice — povoleno -->
+  <rect x="190" y="20" width="140" height="180" rx="10" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <rect x="210" y="35" width="100" height="100" rx="6" fill="#e8f5e9"/>
+  <!-- silueta plachetnice -->
+  <line x1="260" y1="50" x2="260" y2="115" stroke="#1a1a1a" stroke-width="2"/>
+  <polygon points="260,52 260,90 295,75" fill="#1a1a1a"/>
+  <polygon points="260,55 260,90 225,80" fill="#555"/>
+  <path d="M240 115 Q260 122 280 115 L275 120 Q260 127 245 120 Z" fill="#1a1a1a"/>
+  <text x="260" y="155" text-anchor="middle" font-size="13" fill="#2a7a2a" font-weight="bold">✓ SMÍ PLOUT</text>
+  <text x="260" y="172" text-anchor="middle" font-size="11" fill="#555">Plachetnice</text>
+  <text x="260" y="187" text-anchor="middle" font-size="11" fill="#555">(vlastní pohon = vítr)</text>
+
+  <!-- Motorový člun — povoleno -->
+  <rect x="360" y="20" width="140" height="180" rx="10" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <rect x="380" y="35" width="100" height="100" rx="6" fill="#e8f5e9"/>
+  <!-- silueta motorového člunu -->
+  <path d="M390 105 Q430 88 470 95 L465 108 Q430 100 395 118 Z" fill="#1a1a1a"/>
+  <rect x="415" y="78" width="30" height="20" rx="2" fill="#555"/>
+  <!-- motor / výfuk -->
+  <rect x="460" y="100" width="8" height="12" rx="2" fill="#1a1a1a"/>
+  <!-- vlnky pohybu -->
+  <path d="M385 118 Q400 112 415 118 Q430 124 445 118" stroke="#4488cc" stroke-width="2" fill="none"/>
+  <text x="430" y="155" text-anchor="middle" font-size="13" fill="#2a7a2a" font-weight="bold">✓ SMÍ PLOUT</text>
+  <text x="430" y="172" text-anchor="middle" font-size="11" fill="#555">Motorový člun</text>
+  <text x="430" y="187" text-anchor="middle" font-size="11" fill="#555">(vlastní strojní pohon)</text>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Varianta „…bez vlastního pohonu a plachetnic"</strong> by zakazovala i plachetnice. To je špatně — plachetnice mají vlastní pohon (vítr) a na tomto znaku vyobrazeny nejsou. Zákaz plachetnic by byl zvláštní zákazovou tabulí.</li>
+  <li><strong>Varianta „zákaz plavby všech malých plavidel"</strong> by zakazovala i motorové čluny — to by byl úplně jiný znak.</li>
+</ul>
+
+<h3>Klíčový logický rozdíl</h3>
+<p>Správná varianta popisuje <em>jednu kategorii</em>: plavidlo bez strojního pohonu, které zároveň není plachetnicí (= veslice, kánoe, paddleboard). Záměnná varianta nesprávně odděluje dvě kategorie: [bez pohonu] + [plachetnice].</p>
+
+<h3>Praktická aplikace</h3>
+<p>Tato tabule se vyskytuje na úsecích s hustým motorovým provozem (přístavní kanály, toky pod mosty), kde pomalu plující veslice ohrožují bezpečnost plavebního provozu. Výjimka pro plachetnice je logická — ty jsou viditelné a pohybují se jinak než veslice.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha 7 — zákazové tabule (PP4 / mezinárodní ekvivalent A.5 dle CEVNI/ADN konvence pro vnitrozemskou plavbu).</p>

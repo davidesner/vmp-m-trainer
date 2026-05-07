@@ -1,0 +1,83 @@
+<h2>Signální tabule — černé T na červeném poli</h2>
+
+<p><strong>Otázka:</strong> Tento signální znak (tabule) znamená:</p>
+
+<p><strong>Správná odpověď:</strong> povinnost přesvědčit se před vplutím na hlavní vodní cestu, zda tento manévr nepřinutí plavidla na hlavní vodní cestě změnit směr nebo rychlost plavby.</p>
+
+<hr>
+
+<h3>Co tabule vypadá a co znamená</h3>
+
+<p>Červený čtverec s černým T uvnitř: silná vodorovná lišta nahoře, tenký svislý „ocas" dolů.</p>
+
+<div style="text-align:center; margin: 20px 0;">
+<svg width="340" height="220" viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <!-- Tabule -->
+  <rect x="10" y="10" width="120" height="120" rx="6" fill="#cc2200"/>
+  <rect x="22" y="22" width="96" height="96" rx="3" fill="white"/>
+  <!-- Černé T -->
+  <rect x="30" y="38" width="80" height="28" fill="#111"/>
+  <rect x="60" y="66" width="20" height="40" fill="#111"/>
+
+  <!-- Popis tabule -->
+  <text x="70" y="152" text-anchor="middle" font-size="11" fill="#555">Tabule na vedlejší</text>
+  <text x="70" y="165" text-anchor="middle" font-size="11" fill="#555">vodní cestě</text>
+
+  <!-- Schéma situace na vodě -->
+  <!-- Hlavní vodní cesta — vodorovně -->
+  <line x1="160" y1="100" x2="330" y2="100" stroke="#5599cc" stroke-width="28" stroke-linecap="round" opacity="0.3"/>
+  <line x1="160" y1="100" x2="330" y2="100" stroke="#5599cc" stroke-width="2"/>
+  <text x="245" y="88" text-anchor="middle" font-size="11" fill="#2266aa" font-weight="bold">HLAVNÍ VODNÍ CESTA</text>
+
+  <!-- Vedlejší vodní cesta — shora dolů, ústí do hlavní -->
+  <line x1="245" y1="200" x2="245" y2="104" stroke="#aaccee" stroke-width="14" opacity="0.35"/>
+  <line x1="245" y1="200" x2="245" y2="104" stroke="#5599cc" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="260" y="180" font-size="10" fill="#2266aa">vedlejší</text>
+  <text x="260" y="193" font-size="10" fill="#2266aa">cesta</text>
+
+  <!-- Plavidla na hlavní cestě -->
+  <rect x="170" y="91" width="32" height="18" rx="3" fill="#e66"/>
+  <text x="186" y="103" text-anchor="middle" font-size="9" fill="white">→</text>
+
+  <rect x="290" y="91" width="32" height="18" rx="3" fill="#e66"/>
+  <text x="306" y="103" text-anchor="middle" font-size="9" fill="white">←</text>
+
+  <!-- Plavidlo na vedlejší cestě čekající -->
+  <rect x="232" y="148" width="26" height="16" rx="3" fill="#228833"/>
+  <text x="245" y="159" text-anchor="middle" font-size="9" fill="white">↑</text>
+  <text x="245" y="175" text-anchor="middle" font-size="9" fill="#228833">TY</text>
+
+  <!-- Šipka propojující tabuli a situaci -->
+  <path d="M130,70 Q148,70 158,98" stroke="#888" stroke-width="1.5" fill="none" stroke-dasharray="3,2" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="4" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Dekódování T -->
+  <text x="165" y="215" font-size="10" fill="#555">vodorovná lišta = hlavní cesta | svislý ocas = ty (vedlejší)</text>
+</svg>
+</div>
+
+<h3>Dekódování tvaru T</h3>
+<ul>
+  <li><strong>Vodorovná lišta nahoře</strong> = hlavní vodní cesta (prochází zleva doprava)</li>
+  <li><strong>Svislý ocas dolů</strong> = vedlejší cesta, po které jsi ty</li>
+  <li>Ty jsi „ocas" — přijíždíš ke křižovatce a <strong>nemáš přednost</strong></li>
+</ul>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><em>„Plavidlo pluje po hlavní vodní cestě a nesmí přinutit ostatní ke změně…"</em> — plete si strany. Tabule visí na vedlejší, ne na hlavní cestě. Plavidlo na hlavní žádnou tabuli nepotřebuje — ono přednost má.</li>
+  <li><em>„Plavidlo pluje po vedlejší vodní cestě, má přednost před plavidly plujícími po hlavní…"</em> — přesný opak skutečného významu tabule.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Vyjíždíš z přístavu nebo odbočné cesty na Labe / Vltavu. Tabule ti říká: <em>nejdřív se rozhlédni, nech projet velký tlačný člun a teprve pak vjeď.</em> Nemůžeš nutit lodě na hlavní trase brzdit ani uhýbat — odpovědnost je na tobě jako na plavidle z vedlejší cesty.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 (tabulová signalizace) — tabule „Dej přednost plavidlům na hlavní vodní cestě"</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

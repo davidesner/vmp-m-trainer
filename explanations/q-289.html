@@ -1,0 +1,91 @@
+<h2>Signální tabule — omezení šířky plavebního profilu</h2>
+
+<p>
+  Tabule s červeným rámem, bílým středem a <strong>dvěma černými trojúhelníky mířícími k sobě</strong>
+  (z levé a pravé strany) znamená:
+  <strong>šířka plavebního profilu nebo šířka plavební dráhy je omezena.</strong>
+</p>
+
+<!-- Vizualizace: vlevo přesná replika tabule, vpravo schéma zúžení vodní cesty -->
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <!-- Replika tabule -->
+  <div style="text-align:center;">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="120" rx="6" fill="#cc2020"/>
+      <rect x="10" y="10" width="100" height="100" fill="white"/>
+      <!-- levý trojúhelník -->
+      <polygon points="14,60 50,28 50,92" fill="#111"/>
+      <!-- pravý trojúhelník -->
+      <polygon points="106,60 70,28 70,92" fill="#111"/>
+    </svg>
+    <p style="font-size:0.8em; color:#555; margin-top:6px;">Tabule v testu</p>
+  </div>
+
+  <!-- Schéma zúžení vodní cesty -->
+  <div style="text-align:center;">
+    <svg width="220" height="120" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Břehy — zužující se kanál -->
+      <!-- horní břeh -->
+      <polyline points="0,20 80,20 110,45 220,45" stroke="#8B6914" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <!-- dolní břeh -->
+      <polyline points="0,100 80,100 110,75 220,75" stroke="#8B6914" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <!-- voda -->
+      <polygon points="0,20 80,20 110,45 220,45 220,75 110,75 80,100 0,100" fill="#4fa3d1" opacity="0.45"/>
+      <!-- plavidlo (obdélník) jedoucí zleva doprava -->
+      <rect x="8" y="50" width="38" height="20" rx="3" fill="#e0a020" stroke="#7a5500" stroke-width="1.5"/>
+      <rect x="18" y="43" width="16" height="8" rx="2" fill="#7a5500"/>
+      <!-- šipka směr jízdy -->
+      <line x1="50" y1="60" x2="68" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+      <!-- šipky stlačení z obou stran (červené) -->
+      <line x1="135" y1="42" x2="135" y2="30" stroke="#cc2020" stroke-width="2" marker-end="url(#arrd)"/>
+      <line x1="135" y1="78" x2="135" y2="90" stroke="#cc2020" stroke-width="2" marker-end="url(#arru)"/>
+      <!-- popisek -->
+      <text x="145" y="62" font-size="11" fill="#cc2020" font-family="sans-serif">omezení</text>
+      <text x="145" y="75" font-size="11" fill="#cc2020" font-family="sans-serif">profilu</text>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+        </marker>
+        <marker id="arrd" markerWidth="8" markerHeight="8" refX="3" refY="6" orient="auto">
+          <path d="M0,0 L6,0 L3,8 z" fill="#cc2020"/>
+        </marker>
+        <marker id="arru" markerWidth="8" markerHeight="8" refX="3" refY="0" orient="auto">
+          <path d="M0,8 L6,8 L3,0 z" fill="#cc2020"/>
+        </marker>
+      </defs>
+    </svg>
+    <p style="font-size:0.8em; color:#555; margin-top:6px;">Vodní cesta se zužuje z obou stran</p>
+  </div>
+</div>
+
+<h3>Proč právě tato odpověď?</h3>
+<p>
+  Dva trojúhelníky mířící k sobě jsou přímou vizuální zkratkou pro <strong>stlačení profilu z obou boků</strong>.
+  Tabule upozorňuje plavce, že průjezdná šířka je v daném místě zmenšena — ať už kvůli stavebním pracím,
+  sesutému břehu, bahnu, nebo jiné překážce.
+</p>
+
+<h3>Proč ne ostatní možnosti?</h3>
+<ul>
+  <li>
+    <strong>Prioritní pole mostu</strong> se označuje jinak — číslováním polí nebo světelnou signalizací
+    (zelená šipka / červený křížek). Tato tabule k mostům neodkazuje.
+  </li>
+  <li>
+    <strong>Povolení stání po obou stranách</strong> mají svůj vlastní symbol — typicky svislé čáry nebo šipky
+    směřující k vodě, ne symetrické šipky mířící horizontálně k sobě.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Po spatření tabule: zpomal, drž střed plavební dráhy a předpokládej výskyt protijedoucích plavidel
+  v omezeném prostoru. Míjení může být podmíněno hlášením na VHF nebo čekáním.
+</p>
+
+<h3>Zdroj</h3>
+<p>
+  Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7
+  (tabulové a signální značky pro omezení plavební dráhy).
+</p>

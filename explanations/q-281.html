@@ -1,0 +1,105 @@
+<h2>Signální znak — zvláštní pozornost</h2>
+
+<p>Otázka testuje schopnost rozpoznat <strong>příkazovou signální tabuli</strong> a správně určit její význam na vnitrozemské vodní cestě.</p>
+
+<h3>Správná odpověď</h3>
+<p>Tabule zobrazená v otázce — <strong>červený rám, bílé pole, černá svislá tyč uprostřed</strong> — znamená:
+<strong>příkaz zachovávat zvláštní pozornost.</strong></p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:20px 0;">
+
+  <!-- Levá část: přesná reprodukce tabule -->
+  <div style="text-align:center;">
+    <p style="font-weight:bold; margin-bottom:8px;">Tabule v testu</p>
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- červený rám -->
+      <rect x="2" y="2" width="116" height="116" rx="6" ry="6" fill="#cc3300" />
+      <!-- bílé pole -->
+      <rect x="14" y="14" width="92" height="92" fill="#ffffff" />
+      <!-- černá svislá tyč -->
+      <rect x="52" y="24" width="16" height="72" fill="#111111" rx="2" />
+    </svg>
+  </div>
+
+  <!-- Pravá část: překlad do reálu -->
+  <div style="flex:1; min-width:200px;">
+    <p style="font-weight:bold; margin-bottom:8px;">Co to znamená v praxi</p>
+    <svg width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- břeh -->
+      <rect x="0" y="80" width="260" height="40" fill="#8B6914" opacity="0.3" />
+      <line x1="0" y1="80" x2="260" y2="80" stroke="#8B6914" stroke-width="2" />
+      <!-- voda -->
+      <rect x="0" y="0" width="260" height="80" fill="#4488cc" opacity="0.15" />
+
+      <!-- tabule na stožáru -->
+      <line x1="40" y1="10" x2="40" y2="80" stroke="#555" stroke-width="3" />
+      <!-- miniatura tabule -->
+      <rect x="18" y="10" width="44" height="44" rx="3" fill="#cc3300" />
+      <rect x="24" y="16" width="32" height="32" fill="#ffffff" />
+      <rect x="36" y="19" width="8" height="26" fill="#111" rx="1" />
+
+      <!-- plavidlo -->
+      <ellipse cx="170" cy="65" rx="50" ry="12" fill="#aaa" />
+      <rect x="145" y="42" width="50" height="23" rx="3" fill="#ccc" />
+      <rect x="155" y="34" width="8" height="14" fill="#999" />
+      <!-- šipka - plavidlo přijíždí zleva -->
+      <line x1="90" y1="62" x2="115" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arr)" />
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#333" />
+        </marker>
+      </defs>
+
+      <!-- popis -->
+      <text x="130" y="102" font-size="11" fill="#333" text-anchor="middle">Plavidlo vidí tabuli → musí zpozornět</text>
+    </svg>
+  </div>
+</div>
+
+<h3>Klíč ke čtení tabule</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Prvek tabule</th>
+      <th>Význam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Červený rám</td>
+      <td>Příkazový / výstražný charakter — nelze ignorovat</td>
+    </tr>
+    <tr>
+      <td>Bílé pole</td>
+      <td>Neutrální pozadí zvýrazňující symbol</td>
+    </tr>
+    <tr>
+      <td>Černá svislá tyč</td>
+      <td>Kód pro „zvláštní pozornost" — zpomal, sleduj situaci</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Příkaz zůstat stát</strong> — zastavovací příkaz by měl výrazně odlišný vizuální kód (typicky červené světlo nebo jiný symbol). Tato tabule nestanovuje zastavení, jen zvýšenou opatrnost.</li>
+  <li><strong>Plavidlo pluje po hlavní vodní cestě</strong> — to není informace, kterou by tabulí na břehu sděloval správce vodní cesty. Tato varianta popisuje situaci jiného plavidla, ne příkaz pro tebe.</li>
+</ul>
+
+<h3>Kde se tabule vyskytuje</h3>
+<ul>
+  <li>Před plavebními komorami (čekání na signál k vjezdu)</li>
+  <li>U úzkých profilů a mostů s omezenou průjezdností</li>
+  <li>V místech hustého křížení provozu nebo snížené viditelnosti</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Uvidíš-li tuto tabuli na břehu nebo na bóji: <strong>zpomal, zvyš ostražitost, sleduj ostatní plavidla a případné světelné nebo zvukové signály</strong>. Jde typicky o předstupeň dalšího příkazu (např. signálu k vjezdu do komory).</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — příloha se signálními znaky</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

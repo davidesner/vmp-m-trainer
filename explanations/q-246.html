@@ -1,0 +1,97 @@
+<h2>Dvě červená světla nad sebou — proplavovací semafor</h2>
+
+<p>Správná odpověď: <strong>zákaz proplutí na delší dobu</strong>.</p>
+
+<h3>Proplavovací semafor — systém světelných signálů</h3>
+
+<p>Na zdymadlech a úsecích s regulovaným provozem stojí semaforové značky.
+Dvě červená světla nad sebou znamenají, že zákaz proplutí je dlouhodobý — typicky oprava, havárie nebo neprůjezdnost komory.</p>
+
+<div style="margin: 1.5em 0;">
+  <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:0 auto;">
+    <!-- Sloupec popisků -->
+    <text x="10" y="20" font-size="13" font-weight="bold" fill="#333">Signál</text>
+    <text x="130" y="20" font-size="13" font-weight="bold" fill="#333">Světla</text>
+    <text x="260" y="20" font-size="13" font-weight="bold" fill="#333">Význam</text>
+
+    <!-- Řádek 1: dvě červená — ZVÝRAZNĚNÝ -->
+    <rect x="0" y="28" width="520" height="46" rx="4" fill="#fff3f3" stroke="#cc0000" stroke-width="1.5"/>
+    <!-- vizuál -->
+    <circle cx="50" cy="43" r="10" fill="#cc2200"/>
+    <circle cx="50" cy="63" r="10" fill="#cc2200"/>
+    <!-- popis světel -->
+    <text x="130" y="47" font-size="12" fill="#333">🔴 červená</text>
+    <text x="130" y="65" font-size="12" fill="#333">🔴 červená</text>
+    <!-- význam -->
+    <text x="260" y="51" font-size="13" font-weight="bold" fill="#cc0000">Zákaz proplutí</text>
+    <text x="260" y="67" font-size="12" fill="#cc0000">na delší dobu</text>
+
+    <!-- Řádek 2: jedno červené -->
+    <rect x="0" y="80" width="520" height="36" rx="4" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+    <circle cx="50" cy="98" r="10" fill="#cc2200"/>
+    <text x="130" y="102" font-size="12" fill="#555">🔴 červená</text>
+    <text x="260" y="102" font-size="12" fill="#555">Zákaz proplutí (krátkodobý)</text>
+
+    <!-- Řádek 3: červená + bílá -->
+    <rect x="0" y="122" width="520" height="46" rx="4" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+    <circle cx="50" cy="137" r="10" fill="#cc2200"/>
+    <circle cx="50" cy="157" r="10" fill="#e8e8e8" stroke="#999" stroke-width="1"/>
+    <text x="130" y="141" font-size="12" fill="#555">🔴 červená (nahoře)</text>
+    <text x="130" y="159" font-size="12" fill="#555">⚪ bílá (dole)</text>
+    <text x="260" y="151" font-size="12" fill="#555">Připravte se k proplutí</text>
+
+    <!-- Řádek 4: zelená -->
+    <rect x="0" y="174" width="520" height="36" rx="4" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+    <circle cx="50" cy="192" r="10" fill="#228833"/>
+    <text x="130" y="196" font-size="12" fill="#555">🟢 zelená</text>
+    <text x="260" y="196" font-size="12" fill="#555">Volno — proplutí povoleno</text>
+  </svg>
+</div>
+
+<h3>Vizualizace signálu z testu</h3>
+
+<div style="margin: 1em 0; display:flex; gap:2em; align-items:flex-start; flex-wrap:wrap;">
+  <!-- Co vidíte v testu -->
+  <div style="text-align:center;">
+    <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg" style="width:80px; height:130px; background:#fff; border:1px solid #ccc; border-radius:4px; display:block; margin:0 auto;">
+      <circle cx="40" cy="35" r="22" fill="#cc2200"/>
+      <circle cx="40" cy="90" r="22" fill="#cc2200"/>
+    </svg>
+    <p style="font-size:12px; color:#666; margin-top:6px;">V testu (schéma)</p>
+  </div>
+
+  <!-- Co to znamená v realitě -->
+  <div style="text-align:center;">
+    <svg viewBox="0 0 100 160" xmlns="http://www.w3.org/2000/svg" style="width:100px; height:160px; display:block; margin:0 auto;">
+      <!-- stožár -->
+      <rect x="47" y="10" width="6" height="140" fill="#555" rx="2"/>
+      <!-- světelné boxy -->
+      <rect x="22" y="18" width="56" height="38" rx="6" fill="#222"/>
+      <circle cx="50" cy="37" r="14" fill="#cc2200"/>
+      <rect x="22" y="68" width="56" height="38" rx="6" fill="#222"/>
+      <circle cx="50" cy="87" r="14" fill="#cc2200"/>
+      <!-- pata -->
+      <rect x="30" y="148" width="40" height="8" fill="#777" rx="2"/>
+    </svg>
+    <p style="font-size:12px; color:#666; margin-top:6px;">Reálný semafor</p>
+  </div>
+
+  <div style="flex:1; min-width:180px;">
+    <p><strong>Čtení symbolu:</strong> Plné vybarvené kruhy = stálá (neblíkající) světla. Červená barva = zákaz. Dvě červená = zákaz na delší dobu.</p>
+    <p>Klíč k zapamatování: <em>čím víc červených, tím delší čekání.</em></p>
+  </div>
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Připravte se k proplutí"</strong> — zobrazuje se kombinací červeného a bílého světla (červená nahoře + bílá dole), nikoliv dvěma červenými.</li>
+  <li><strong>„Zákaz vytvářet vlnobití nebo sání"</strong> — to je plavební značka na trati, zcela jiná kategorie než proplavovací semafor.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Dvě červená světla uvidíte u plavebních komor (Horin, Vraňany, Geiersberg aj.). Signál znamená nepřiplouvat k čekacímu pontounu — čekání bude podstatně delší než u jednoho červeného (typicky oprava, uzavření provozu).</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, příloha č. 7 (Plavební semafory)</li>
+</ul>

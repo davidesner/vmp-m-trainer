@@ -1,0 +1,103 @@
+<h2>Plovoucí signální znak (bóje) — pravá strana plavební dráhy</h2>
+
+<p><strong>Správná odpověď:</strong> Červená obdélníková bóje označuje <strong>pravou stranu plavební dráhy</strong>.</p>
+
+<h3>Jak číst laterální značení</h3>
+<p>Na vnitrozemských vodních cestách platí systém laterálního vytyčení. Bóje na levém a pravém břehu se liší barvou a tvarem:</p>
+
+<div style="overflow-x:auto;">
+<table style="border-collapse:collapse; width:100%; max-width:520px;">
+  <thead>
+    <tr style="background:#f0f0f0;">
+      <th style="border:1px solid #ccc; padding:8px;">Strana plavební dráhy</th>
+      <th style="border:1px solid #ccc; padding:8px;">Barva bóje</th>
+      <th style="border:1px solid #ccc; padding:8px;">Světlo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #ccc; padding:8px;"><strong>Pravá strana</strong> (po proudu)</td>
+      <td style="border:1px solid #ccc; padding:8px; color:#c0392b;"><strong>Červená</strong></td>
+      <td style="border:1px solid #ccc; padding:8px;">červené</td>
+    </tr>
+    <tr style="background:#f9f9f9;">
+      <td style="border:1px solid #ccc; padding:8px;"><strong>Levá strana</strong> (po proudu)</td>
+      <td style="border:1px solid #ccc; padding:8px; color:#27ae60;"><strong>Zelená / bílá</strong></td>
+      <td style="border:1px solid #ccc; padding:8px;">zelené / bílé</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Vizualizace</h3>
+
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;width:100%;display:block;margin:16px auto;">
+  <!-- Pozadí vody -->
+  <rect x="0" y="140" width="560" height="120" fill="#a8d8ea" rx="4"/>
+  <!-- Břehy -->
+  <rect x="0" y="0" width="560" height="50" fill="#c8a96e" rx="0"/>
+  <text x="280" y="32" text-anchor="middle" fill="#5a3e00" font-size="13" font-family="sans-serif">← pohyb po proudu (nebo stanovený směr) →</text>
+  <rect x="0" y="210" width="560" height="50" fill="#c8a96e" rx="0"/>
+
+  <!-- Plavební dráha šipka -->
+  <line x1="60" y1="175" x2="500" y2="175" stroke="#1a5276" stroke-width="2" stroke-dasharray="8,4"/>
+  <polygon points="500,170 516,175 500,180" fill="#1a5276"/>
+  <text x="280" y="170" text-anchor="middle" fill="#1a5276" font-size="11" font-family="sans-serif">střed plavební dráhy</text>
+
+  <!-- PRAVÁ bóje (červená) — nahoře blíže k pravému břehu (nahoře = pravý břeh při pohledu po proudu) -->
+  <!-- Bóje trup -->
+  <ellipse cx="420" cy="148" rx="22" ry="10" fill="#c0392b"/>
+  <rect x="398" y="118" width="44" height="32" fill="#c0392b" rx="3"/>
+  <ellipse cx="420" cy="118" rx="22" ry="8" fill="#e74c3c"/>
+  <!-- Vlny pod bójí -->
+  <path d="M398,150 Q410,156 420,150 Q430,144 442,150" stroke="#6ab0d4" stroke-width="2" fill="none"/>
+  <!-- Řetěz / kotevní lano -->
+  <line x1="420" y1="158" x2="420" y2="175" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <!-- Štítek -->
+  <text x="420" y="138" text-anchor="middle" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">P</text>
+  <!-- Popisek -->
+  <text x="420" y="100" text-anchor="middle" fill="#c0392b" font-size="12" font-family="sans-serif" font-weight="bold">PRAVÁ strana</text>
+  <text x="420" y="114" text-anchor="middle" fill="#c0392b" font-size="11" font-family="sans-serif">červená bóje ✓</text>
+
+  <!-- LEVÁ bóje (zelená) — dole blíže k levému břehu -->
+  <ellipse cx="140" cy="200" rx="22" ry="10" fill="#27ae60"/>
+  <rect x="118" y="170" width="44" height="32" fill="#27ae60" rx="3"/>
+  <ellipse cx="140" cy="170" rx="22" ry="8" fill="#2ecc71"/>
+  <path d="M118,202 Q130,208 140,202 Q150,196 162,202" stroke="#6ab0d4" stroke-width="2" fill="none"/>
+  <line x1="140" y1="210" x2="140" y2="225" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="140" y="190" text-anchor="middle" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">L</text>
+  <!-- Popisek -->
+  <text x="140" y="240" text-anchor="middle" fill="#1e8449" font-size="12" font-family="sans-serif" font-weight="bold">LEVÁ strana</text>
+  <text x="140" y="254" text-anchor="middle" fill="#1e8449" font-size="11" font-family="sans-serif">zelená/bílá bóje</text>
+
+  <!-- Plavidlo jedoucí po proudu -->
+  <g transform="translate(260,170)">
+    <polygon points="0,-12 20,0 0,12 -20,12 -20,-12" fill="#2c3e50" opacity="0.85"/>
+    <polygon points="0,-16 10,-8 0,-2 -10,-8" fill="#e74c3c"/>
+    <text x="0" y="26" text-anchor="middle" fill="#2c3e50" font-size="10" font-family="sans-serif">plavidlo →</text>
+  </g>
+
+  <!-- Legenda -->
+  <rect x="10" y="55" width="220" height="70" fill="white" opacity="0.85" rx="6"/>
+  <text x="20" y="72" fill="#333" font-size="11" font-family="sans-serif" font-weight="bold">Mnemotechnická pomůcka:</text>
+  <text x="20" y="88" fill="#c0392b" font-size="12" font-family="sans-serif" font-weight="bold">Č</text>
+  <text x="30" y="88" fill="#333" font-size="12" font-family="sans-serif">ervená =</text>
+  <text x="100" y="88" fill="#c0392b" font-size="12" font-family="sans-serif" font-weight="bold">P</text>
+  <text x="110" y="88" fill="#333" font-size="12" font-family="sans-serif">ravá strana</text>
+  <text x="20" y="106" fill="#333" font-size="10" font-family="sans-serif">(ČP — červená pravá)</text>
+  <text x="20" y="120" fill="#555" font-size="10" font-family="sans-serif">při plavbě po proudu / ve stanoveném směru</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>Levá strana plavební dráhy</strong> — levá strana se označuje <em>zelenou</em> nebo <em>bílou</em> bójí, nikoli červenou.</li>
+  <li><strong>Rozdělení plavební dráhy</strong> — pro rozdělení (bifurkaci) se používá kombinovaná bóje (červeno-zelená nebo zeleno-červená), ne jednobarevná.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Plaveš-li po proudu a vidíš červenou bóji po <strong>pravém boku</strong>, jsi na hranici pravého okraje plavební dráhy — zůstaň vlevo od ní, abys neopustil bezpečné pásmo.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 (Vytyčení plavební dráhy)</li>
+</ul>

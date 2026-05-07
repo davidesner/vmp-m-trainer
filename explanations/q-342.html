@@ -1,0 +1,96 @@
+<h2>Signální znak kužel (červený obrácený trojúhelník)</h2>
+
+<p><strong>Správná odpověď:</strong> Nebezpečné místo nebo překážka <strong>při pravém břehu</strong>.</p>
+
+<h3>Vizualizace — co znak znamená v praxi</h3>
+
+<div style="display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start; margin:20px 0;">
+
+  <!-- Levá část: znak samotný -->
+  <div style="text-align:center;">
+    <p style="margin-bottom:6px; font-weight:bold; font-size:13px;">Znak v testu</p>
+    <svg width="120" height="120" viewBox="0 0 120 120">
+      <polygon points="60,100 10,20 110,20" fill="#CC0000"/>
+      <text x="60" y="115" text-anchor="middle" font-size="11" fill="#333">kužel (špice dolů)</text>
+    </svg>
+  </div>
+
+  <!-- Pravá část: schéma řeky shora -->
+  <div style="text-align:center;">
+    <p style="margin-bottom:6px; font-weight:bold; font-size:13px;">Pohled na řeku shora (ve směru proudu →)</p>
+    <svg width="360" height="200" viewBox="0 0 360 200">
+      <!-- Řeka -->
+      <rect x="0" y="40" width="360" height="120" fill="#b3d9f7"/>
+
+      <!-- Levý břeh (nahoře) -->
+      <rect x="0" y="0" width="360" height="40" fill="#8B7355"/>
+      <text x="180" y="26" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">LEVÝ BŘEH</text>
+
+      <!-- Pravý břeh (dole) -->
+      <rect x="0" y="160" width="360" height="40" fill="#8B7355"/>
+      <text x="180" y="182" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">PRAVÝ BŘEH</text>
+
+      <!-- Směr proudu -->
+      <line x1="30" y1="100" x2="330" y2="100" stroke="#5599cc" stroke-width="2" stroke-dasharray="8,4"/>
+      <polygon points="330,100 318,94 318,106" fill="#5599cc"/>
+      <text x="180" y="96" text-anchor="middle" font-size="11" fill="#5599cc">→ směr proudu</text>
+
+      <!-- Překážka u pravého břehu -->
+      <ellipse cx="280" cy="155" rx="22" ry="12" fill="#888" opacity="0.7"/>
+      <text x="280" y="158" text-anchor="middle" font-size="10" fill="#fff">překážka</text>
+
+      <!-- Bóje se znakem u pravého břehu -->
+      <line x1="252" y1="145" x2="252" y2="165" stroke="#333" stroke-width="2"/>
+      <circle cx="252" cy="165" r="5" fill="#555"/>
+      <!-- Kužel (topmark) na bóji -->
+      <polygon points="252,120 240,143 264,143" fill="#CC0000"/>
+
+      <!-- Šipka ukazující na bóji -->
+      <line x1="200" y1="130" x2="238" y2="137" stroke="#CC0000" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="150" y="128" text-anchor="middle" font-size="11" fill="#CC0000" font-weight="bold">červený kužel</text>
+      <text x="150" y="142" text-anchor="middle" font-size="11" fill="#CC0000">= pravý břeh!</text>
+    </svg>
+  </div>
+</div>
+
+<h3>Barevný kód laterálního značení</h3>
+
+<table style="border-collapse:collapse; width:100%; max-width:500px;">
+  <thead>
+    <tr style="background:#f0f0f0;">
+      <th style="border:1px solid #ccc; padding:8px;">Barva znaku</th>
+      <th style="border:1px solid #ccc; padding:8px;">Strana vodní cesty</th>
+      <th style="border:1px solid #ccc; padding:8px;">Příklad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #ccc; padding:8px; background:#fff0f0;">
+        <span style="color:#CC0000; font-weight:bold;">● Červená</span>
+      </td>
+      <td style="border:1px solid #ccc; padding:8px;"><strong>Pravý břeh</strong> (ve směru proudu)</td>
+      <td style="border:1px solid #ccc; padding:8px;">červená bóje, červený kužel</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #ccc; padding:8px; background:#f0fff0;">
+        <span style="color:#006600; font-weight:bold;">● Zelená</span>
+      </td>
+      <td style="border:1px solid #ccc; padding:8px;"><strong>Levý břeh</strong> (ve směru proudu)</td>
+      <td style="border:1px solid #ccc; padding:8px;">zelená bóje, zelený kužel</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní varianty?</h3>
+<ul>
+  <li>Varianta o <strong>levém břehu</strong> by platila pro <em>zelený</em> znakový prvek — zelená = levá strana.</li>
+  <li>Varianta o <strong>rozdělení plavební dráhy</strong> popisuje <em>středové bifurkační značení</em> — bóje s červeno-zelenými pruhy uprostřed plavební dráhy.</li>
+</ul>
+
+<h3>Jak určit pravý/levý břeh</h3>
+<p>Orientace se vždy určuje <strong>ve směru po proudu</strong> (od pramene k ústí). Stojíš-li zády k prameni, pravý břeh je po tvé pravé ruce.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — příloha (laterální systém SIGNI, vytyčení vodní cesty)</li>
+</ul>

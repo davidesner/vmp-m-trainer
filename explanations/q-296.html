@@ -1,0 +1,113 @@
+<h2>Signální tabule zeleno-bílo-zelená = povolení proplutí</h2>
+
+<p>
+  Obdélníková tabule se třemi svislými pruhy v pořadí <strong>zelená – bílá – zelená</strong> je signálním znakem, který vyvěšuje správce vodní cesty (nebo obsluha jezu/plavební komory) na řídicím místě průjezdu. Její jediný význam: <strong>plavidlo smí projet</strong>.
+</p>
+
+<h3>Vizualizace — co tabule říká a kde se používá</h3>
+
+<div style="display:flex; gap:32px; flex-wrap:wrap; align-items:flex-start; margin:20px 0;">
+
+  <!-- Levý panel: tabule -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 8px; font-size:13px; color:#555;">Signální tabule v testu</p>
+    <svg width="120" height="90" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="90" rx="4" ry="4" fill="#ccc" />
+      <rect x="4" y="4" width="34" height="82" rx="2" fill="#3a7d3a" />
+      <rect x="43" y="4" width="34" height="82" rx="2" fill="#f8f8f8" />
+      <rect x="82" y="4" width="34" height="82" rx="2" fill="#3a7d3a" />
+    </svg>
+    <p style="margin:6px 0 0; font-size:12px; color:#3a7d3a; font-weight:bold;">Zelená – Bílá – Zelená</p>
+  </div>
+
+  <!-- Šipka -->
+  <div style="display:flex; align-items:center; font-size:28px; color:#666; padding-top:30px;">→</div>
+
+  <!-- Pravý panel: co to znamená -->
+  <div style="background:#f0faf0; border:2px solid #3a7d3a; border-radius:8px; padding:16px; max-width:260px;">
+    <p style="margin:0 0 6px; font-size:15px; font-weight:bold; color:#2a5f2a;">✓ Povolení proplutí</p>
+    <p style="margin:0; font-size:13px; color:#333;">
+      Plavidlo smí projet průjezdním místem (plavební komora, pohyblivý jez, zdvihací most, propust…).
+      Obsluha tabuli vyvěsí nebo rozsvítí zelené světlo jako pokyn „jede se".
+    </p>
+  </div>
+
+</div>
+
+<h3>Jak to nezaměnit — přehled signálních tabulí na průjezdních místech</h3>
+
+<svg width="100%" viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="max-width:580px; display:block; margin:0 auto 20px;">
+
+  <!-- Tabule 1: červeno-bílo-červená = STOP -->
+  <g transform="translate(20,20)">
+    <rect width="100" height="76" rx="4" fill="#ddd"/>
+    <rect x="3" y="3" width="28" height="70" rx="2" fill="#c0392b"/>
+    <rect x="36" y="3" width="28" height="70" rx="2" fill="#f5f5f5"/>
+    <rect x="69" y="3" width="28" height="70" rx="2" fill="#c0392b"/>
+    <text x="50" y="100" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">Červená–Bílá–Červená</text>
+    <text x="50" y="115" text-anchor="middle" font-size="12" fill="#555">= STOP</text>
+    <text x="50" y="130" text-anchor="middle" font-size="11" fill="#888">proplutí zakázáno</text>
+  </g>
+
+  <!-- Šipka oddělení -->
+  <text x="145" y="60" font-size="20" fill="#aaa">|</text>
+
+  <!-- Tabule 2: zeleno-bílo-zelená = POVOLENO (správná) -->
+  <g transform="translate(160,20)">
+    <rect width="100" height="76" rx="4" fill="#ddd"/>
+    <rect x="3" y="3" width="28" height="70" rx="2" fill="#3a7d3a"/>
+    <rect x="36" y="3" width="28" height="70" rx="2" fill="#f5f5f5"/>
+    <rect x="69" y="3" width="28" height="70" rx="2" fill="#3a7d3a"/>
+    <text x="50" y="100" text-anchor="middle" font-size="12" fill="#3a7d3a" font-weight="bold">Zelená–Bílá–Zelená</text>
+    <text x="50" y="115" text-anchor="middle" font-size="12" fill="#3a7d3a" font-weight="bold">= POVOLENÍ</text>
+    <text x="50" y="130" text-anchor="middle" font-size="11" fill="#888">proplutí povoleno</text>
+    <!-- Rámeček zvýraznění -->
+    <rect x="-4" y="-4" width="108" height="144" rx="6" fill="none" stroke="#3a7d3a" stroke-width="2.5" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Šipka oddělení -->
+  <text x="285" y="60" font-size="20" fill="#aaa">|</text>
+
+  <!-- Tabule 3: žlutá = řiď se pokyny obsluhy -->
+  <g transform="translate(300,20)">
+    <rect width="100" height="76" rx="4" fill="#ddd"/>
+    <rect x="3" y="3" width="94" height="70" rx="2" fill="#f0c030"/>
+    <text x="50" y="100" text-anchor="middle" font-size="12" fill="#b8860b" font-weight="bold">Žlutá</text>
+    <text x="50" y="115" text-anchor="middle" font-size="12" fill="#555">= čekej / pozor</text>
+    <text x="50" y="130" text-anchor="middle" font-size="11" fill="#888">čekej na pokyn</text>
+  </g>
+
+  <!-- Šipka oddělení -->
+  <text x="425" y="60" font-size="20" fill="#aaa">|</text>
+
+  <!-- Tabule 4: červená = zakázáno / mimo provoz -->
+  <g transform="translate(440,20)">
+    <rect width="100" height="76" rx="4" fill="#ddd"/>
+    <rect x="3" y="3" width="94" height="70" rx="2" fill="#c0392b"/>
+    <text x="50" y="100" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">Červená</text>
+    <text x="50" y="115" text-anchor="middle" font-size="12" fill="#555">= vstup zakázán</text>
+    <text x="50" y="130" text-anchor="middle" font-size="11" fill="#888">zařízení mimo provoz</text>
+  </g>
+
+</svg>
+
+<h3>Proč jsou ostatní možnosti nesprávné</h3>
+<ul>
+  <li>
+    <strong>„Plavební dráha vede středem vodní cesty"</strong> — tato informace se vyznačuje úplně jinou tabulí (zpravidla znakem A.10 ve tvaru kosočtverce s červeným pruhem), nikoli barevnými pruhovými tabulemi průjezdní signalizace.
+  </li>
+  <li>
+    <strong>„Plavební dráha není vyznačena plovoucími znaky"</strong> — opět jiný typ znaku (informační tabule na břehu nebo na plovoucím znaku), nikoli barevná signalizace průjezdu.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Před každou plavební komorou nebo pohyblivým jezem musíš nejdřív zastavit a vyčkat. Teprve až uvidíš zelenou tabuli (nebo zelená světla), smíš vjet. Červená = stoj i tehdy, když se komora zdánlivě vyprazdňuje — obsluha ještě neotvřela provoz.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 (signální znaky na průjezdních místech)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

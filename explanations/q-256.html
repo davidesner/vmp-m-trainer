@@ -1,0 +1,101 @@
+<h2>Signální znak — zákaz vyvazování ke břehu</h2>
+
+<p>Otázka ukazuje červenou zákazovou tabulku s černou <strong>bitou</strong> (pevná svíce u břehu, ke které se váže lano). Červený čtverec s diagonální zákazovou čarou = zákazová značka. Symbol bity = vyvazování ke břehu.</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:48px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <!-- Levý panel: znak 1:1 -->
+  <div style="text-align:center;">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- červené pozadí -->
+      <rect width="120" height="120" rx="8" fill="#cc1111"/>
+      <!-- bita -->
+      <ellipse cx="60" cy="78" rx="22" ry="8" fill="#111"/>
+      <rect x="50" y="42" width="20" height="38" fill="#111"/>
+      <ellipse cx="60" cy="42" rx="16" ry="8" fill="#111"/>
+      <ellipse cx="60" cy="42" rx="10" ry="5" fill="#333"/>
+      <!-- zákazová diagonála -->
+      <line x1="18" y1="18" x2="102" y2="102" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    </svg>
+    <p style="font-size:0.85em; margin-top:6px;">Tabulka v testu</p>
+  </div>
+
+  <!-- Pravý panel: překlad -->
+  <div style="max-width:340px;">
+    <h4 style="margin-top:0;">Co znak říká</h4>
+    <table style="border-collapse:collapse; width:100%;">
+      <thead>
+        <tr>
+          <th style="border:1px solid #ccc; padding:6px 10px; background:#f5f5f5;">Symbol</th>
+          <th style="border:1px solid #ccc; padding:6px 10px; background:#f5f5f5;">Význam</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border:1px solid #ccc; padding:6px 10px;">Červený čtverec + diagonála</td>
+          <td style="border:1px solid #ccc; padding:6px 10px;">Zákazová značka</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:6px 10px;">Bita (svíce)</td>
+          <td style="border:1px solid #ccc; padding:6px 10px;">Vyvazování lanem ke břehu</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:6px 10px;">Žádná kotva</td>
+          <td style="border:1px solid #ccc; padding:6px 10px;">Zákaz kotvení <strong>není</strong> zahrnut</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Srovnávací panel: co by bylo jinak -->
+  <div style="max-width:320px;">
+    <h4 style="margin-top:0;">Srovnání se záměnnými variantami</h4>
+    <svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+      <!-- Znak 1: jen bita (tato otázka) -->
+      <rect x="0" y="0" width="80" height="80" rx="6" fill="#cc1111"/>
+      <ellipse cx="40" cy="57" rx="15" ry="5" fill="#111"/>
+      <rect x="33" y="28" width="14" height="30" fill="#111"/>
+      <ellipse cx="40" cy="28" rx="11" ry="5" fill="#111"/>
+      <line x1="10" y1="10" x2="70" y2="70" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <!-- popisek -->
+      <text x="40" y="78" text-anchor="middle" font-size="9" fill="#333">jen vyvazování</text>
+
+      <!-- Šipka / dělítko -->
+      <text x="100" y="44" text-anchor="middle" font-size="20" fill="#888">≠</text>
+
+      <!-- Znak 2: kotva (ilustrace zákazu kotvení) -->
+      <rect x="120" y="0" width="80" height="80" rx="6" fill="#cc1111"/>
+      <!-- kotva zjednodušeně -->
+      <circle cx="160" cy="22" r="7" fill="none" stroke="#111" stroke-width="4"/>
+      <line x1="160" y1="29" x2="160" y2="60" stroke="#111" stroke-width="4"/>
+      <line x1="145" y1="60" x2="175" y2="60" stroke="#111" stroke-width="4"/>
+      <path d="M145,60 Q140,50 145,45" fill="none" stroke="#111" stroke-width="3"/>
+      <path d="M175,60 Q180,50 175,45" fill="none" stroke="#111" stroke-width="3"/>
+      <line x1="130" y1="10" x2="190" y2="70" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <text x="160" y="78" text-anchor="middle" font-size="9" fill="#333">jen kotvení</text>
+
+      <!-- kombinovaný popisek -->
+      <text x="215" y="38" text-anchor="middle" font-size="9" fill="#555">kombinace obou</text>
+      <text x="215" y="50" text-anchor="middle" font-size="9" fill="#555">= jiná značka</text>
+    </svg>
+  </div>
+</div>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<ul>
+  <li><strong>Varianta zahrnující zákaz stání na kotvě i vyvazování</strong> — zákaz kotvení by vyžadoval symbol kotvy. Tato tabulka kotvu neobsahuje; rozšiřovat zákaz nad rámec zobrazeného symbolu nelze.</li>
+  <li><strong>Varianta o konci zákazu stání</strong> — konec zákazu se vyjadřuje jiným grafickým prvkem (přeškrtnutí zákazové čáry, zelená šipka). Červené pozadí zákazový charakter potvrzuje, nikoli ukončuje.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Uvidíš-li tuto tabulku na břehu: průjezd i kotvení jsou povoleny, ale <strong>přivázat plavidlo lanem ke břehu (bita, kůl, strom, zábradlí…) je zakázáno</strong>.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 — zákazové tabulky (vyvazování a kotvení)</li>
+</ul>

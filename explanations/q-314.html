@@ -1,0 +1,94 @@
+<h2>Plavební značka — místo doporučené pro obrat</h2>
+
+<p>Modrý čtvercový znak s bílou kruhovou šipkou označuje <strong>místo doporučené pro obrat</strong>. Šipka opisuje celý kruh — vizuálně přímo znázorňuje otočení plavidla.</p>
+
+<div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;margin:24px 0;">
+
+  <!-- Přesná replika znaku z testu -->
+  <div style="text-align:center;">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Modrý čtverec -->
+      <rect x="4" y="4" width="112" height="112" rx="8" fill="#5b9bd5"/>
+      <!-- Kruhová šipka — oblouk těla -->
+      <path d="M60,22 A38,38 0 1,0 93,73" fill="none" stroke="white" stroke-width="10" stroke-linecap="round"/>
+      <!-- Šipka na konci -->
+      <polygon points="93,73 80,58 105,63" fill="white"/>
+    </svg>
+    <div style="font-size:12px;color:#555;margin-top:6px;">Znak z testu</div>
+  </div>
+
+  <!-- Překlad do reálné situace -->
+  <div style="text-align:center;">
+    <svg width="240" height="120" viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <rect x="0" y="0" width="240" height="120" fill="#c8e6f5"/>
+      <!-- Břehy -->
+      <rect x="0" y="0" width="240" height="18" fill="#a0b87a"/>
+      <rect x="0" y="102" width="240" height="18" fill="#a0b87a"/>
+
+      <!-- Plavidlo — původní pozice (nahoře vlevo, pluje doprava) -->
+      <g transform="translate(30,55)">
+        <ellipse cx="0" cy="0" rx="22" ry="9" fill="#e8c86a" stroke="#b8943a" stroke-width="1.5"/>
+        <polygon points="22,0 10,-6 10,6" fill="#b8943a"/>
+        <text x="-8" y="4" font-size="9" fill="#5a3a00" font-family="sans-serif">⛵</text>
+      </g>
+
+      <!-- Šipky znázorňující obrat (kruhová dráha) -->
+      <path d="M65,55 Q120,20 175,55 Q200,70 175,85 Q120,110 65,85 Q40,70 65,55"
+            fill="none" stroke="#e05a2b" stroke-width="2.5" stroke-dasharray="6,4"
+            marker-end="url(#arr)"/>
+
+      <!-- Plavidlo — po obratu (dole vpravo, pluje doleva) -->
+      <g transform="translate(185,78) rotate(180)">
+        <ellipse cx="0" cy="0" rx="22" ry="9" fill="#e8c86a" stroke="#b8943a" stroke-width="1.5"/>
+        <polygon points="22,0 10,-6 10,6" fill="#b8943a"/>
+      </g>
+
+      <!-- Značka u břehu -->
+      <rect x="108" y="3" width="24" height="24" rx="3" fill="#5b9bd5"/>
+      <path d="M120,9 A9,9 0 1,0 127,20" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="127,20 122,14 130,15" fill="white"/>
+
+      <!-- Šipka definice -->
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#e05a2b"/>
+        </marker>
+      </defs>
+
+      <text x="120" y="116" font-size="9" text-anchor="middle" fill="#444" font-family="sans-serif">dráha obratu plavidla</text>
+    </svg>
+    <div style="font-size:12px;color:#555;margin-top:6px;">Reálná situace</div>
+  </div>
+
+  <!-- Barevný klíč -->
+  <div style="max-width:200px;">
+    <h4 style="margin:0 0 8px;">Barevný klíč</h4>
+    <table style="border-collapse:collapse;font-size:13px;">
+      <tr>
+        <td style="padding:4px 8px 4px 0;"><span style="display:inline-block;width:16px;height:16px;background:#5b9bd5;border-radius:3px;vertical-align:middle;"></span></td>
+        <td style="padding:4px 0;">Modrá = informační / příkazová značka</td>
+      </tr>
+      <tr>
+        <td style="padding:4px 8px 4px 0;"><span style="display:inline-block;font-size:18px;vertical-align:middle;">↻</span></td>
+        <td style="padding:4px 0;">Kruhová šipka = otočení</td>
+      </tr>
+    </table>
+    <p style="font-size:12px;color:#555;margin-top:10px;">Jde o <em>doporučení</em>, nikoliv příkaz — plavidlo se otočit nemusí, ale místo je k tomu vhodné (dostatek šířky a hloubky).</p>
+  </div>
+
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>Křížení vzdušným kabelem</strong> — to se zobrazuje žlutým výstražným znakem (varování před překážkou shora), ne modrým kruhovým symbolem.</li>
+  <li><strong>Přístaviště (nástup/výstup)</strong> — ta tabule typicky zobrazuje symbol lodi u mola nebo kotevní symbol s osobami.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Obratiště jsou zřizována tam, kde je dostatek vodní plochy pro bezpečné otočení delšího plavidla nebo tlačné sestavy — typicky u konců slepých ramen, před mosty s omezeným průjezdem nebo u přístavišť bez průjezdné linky.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 — plavební znaky pro informaci plavby</li>
+</ul>

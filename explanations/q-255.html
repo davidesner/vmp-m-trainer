@@ -1,0 +1,109 @@
+<h2>Zákazová tabule — kotvení, vlečení kotev, lan a řetězů</h2>
+
+<p>Na obrázku je <strong>červená čtvercová zákazová tabule</strong> s kotvou přeškrtnutou diagonálním pruhem. Červená = zákaz — stejná logika jako u silničních zákazových značek.</p>
+
+<h3>Co tabule zakazuje?</h3>
+
+<p>Přeškrtnutá kotva neznamená jen zákaz přivazování ke dnu. Pokrývá tři úkony najednou:</p>
+<ul>
+  <li><strong>Kotvení</strong> — spuštění kotvy na dno</li>
+  <li><strong>Vlečení kotev</strong> — tažení kotvy po dně (manévrování, ztráta kotvy)</li>
+  <li><strong>Vlečení lan a řetězů</strong> — smykání kotevních lan nebo řetězů po dně</li>
+</ul>
+
+<p>Důvod: v daném úseku bývají na dně kabely, plynovody nebo jiná infrastruktura, kterou by vlečení poškodilo. Tabule chrání vše, co leží pod hladinou.</p>
+
+<div style="margin: 20px 0; text-align: center;">
+  <svg width="320" height="220" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" style="font-family: sans-serif;">
+
+    <!-- Levá strana: tabule jako v testu -->
+    <text x="80" y="18" text-anchor="middle" style="font-size:12px; fill:#555;">Tabule v testu</text>
+
+    <!-- Červený čtverec -->
+    <rect x="30" y="25" width="100" height="100" rx="4" fill="#cc2200"/>
+    <!-- Bílý vnitřní čtverec (rámeček) -->
+    <rect x="38" y="33" width="84" height="84" rx="2" fill="none" stroke="white" stroke-width="3"/>
+
+    <!-- Kotva — symbol -->
+    <!-- Hák kotvy (ring nahoře) -->
+    <circle cx="80" cy="48" r="7" fill="none" stroke="white" stroke-width="3.5"/>
+    <!-- Svislá tyč -->
+    <line x1="80" y1="55" x2="80" y2="95" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Vodorovná ramena -->
+    <line x1="58" y1="65" x2="102" y2="65" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Levé rameno kotvy -->
+    <path d="M 62 92 Q 60 98 65 102" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Pravé rameno kotvy -->
+    <path d="M 98 92 Q 100 98 95 102" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Spodní oblouk -->
+    <path d="M 65 102 Q 80 110 95 102" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Přeškrtávací diagonála (zákazový pruh) -->
+    <line x1="42" y1="37" x2="118" y2="113" stroke="white" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Pravá strana: vysvětlení -->
+    <text x="240" y="18" text-anchor="middle" style="font-size:12px; fill:#555;">Co zakazuje</text>
+
+    <!-- Box s výčtem -->
+    <rect x="155" y="25" width="150" height="100" rx="6" fill="#fff3f0" stroke="#cc2200" stroke-width="1.5"/>
+
+    <!-- Ikona 1: kotva + zákaz -->
+    <text x="168" y="50" style="font-size:18px;">⚓</text>
+    <line x1="165" y1="38" x2="183" y2="56" stroke="#cc2200" stroke-width="2.5"/>
+    <text x="192" y="52" style="font-size:11px; fill:#222;">Kotvení</text>
+
+    <!-- Ikona 2: vlečení kotvy -->
+    <text x="168" y="80" style="font-size:18px;">⚓</text>
+    <text x="192" y="75" style="font-size:11px; fill:#222;">Vlečení kotvy</text>
+    <text x="192" y="88" style="font-size:10px; fill:#555;">po dně</text>
+
+    <!-- Ikona 3: vlečení lan -->
+    <text x="168" y="112" style="font-size:14px;">〰</text>
+    <text x="192" y="107" style="font-size:11px; fill:#222;">Vlečení lan</text>
+    <text x="192" y="120" style="font-size:10px; fill:#555;">a řetězů po dně</text>
+
+    <!-- Šipka mezi levou a pravou stranou -->
+    <line x1="135" y1="75" x2="150" y2="75" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#888"/>
+      </marker>
+    </defs>
+
+    <!-- Dolní pás: srovnání s podobnými tabulemi -->
+    <text x="160" y="148" text-anchor="middle" style="font-size:11px; fill:#333; font-weight:bold;">Srovnání — záměna s podobnými tabulemi</text>
+
+    <!-- Modrá tabule (povolení) -->
+    <rect x="30" y="158" width="60" height="55" rx="4" fill="#0055aa"/>
+    <rect x="35" y="163" width="50" height="45" rx="2" fill="none" stroke="white" stroke-width="2"/>
+    <text x="60" y="196" text-anchor="middle" style="font-size:22px; fill:white;">⚓</text>
+    <text x="60" y="222" text-anchor="middle" style="font-size:9px; fill:#0055aa; font-weight:bold;">MODRÁ = povolení</text>
+
+    <!-- Červená tabule s přeškrtnutím (naše) -->
+    <rect x="130" y="158" width="60" height="55" rx="4" fill="#cc2200"/>
+    <rect x="135" y="163" width="50" height="45" rx="2" fill="none" stroke="white" stroke-width="2"/>
+    <text x="160" y="196" text-anchor="middle" style="font-size:22px; fill:white;">⚓</text>
+    <line x1="133" y1="161" x2="191" y2="214" stroke="white" stroke-width="4"/>
+    <text x="160" y="222" text-anchor="middle" style="font-size:9px; fill:#cc2200; font-weight:bold;">ČERVENÁ = zákaz ← tato</text>
+
+    <!-- Ukončovací tabule (konec zákazu) -->
+    <rect x="230" y="158" width="60" height="55" rx="4" fill="#cc2200" opacity="0.3"/>
+    <rect x="235" y="163" width="50" height="45" rx="2" fill="none" stroke="#cc2200" stroke-width="2" stroke-dasharray="4,3"/>
+    <line x1="233" y1="161" x2="291" y2="214" stroke="#aaa" stroke-width="2" stroke-dasharray="4,3"/>
+    <line x1="291" y1="161" x2="233" y2="214" stroke="#aaa" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="260" y="222" text-anchor="middle" style="font-size:9px; fill:#888;">konec zákazu = jiný tvar</text>
+
+  </svg>
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Povolené kotvení přídí po proudu"</strong> — povolení/instrukce ke kotvení by bylo na <em>modré</em> tabuli, ne červené. Červená vždy znamená zákaz.</li>
+  <li><strong>„Konec zákazu kotvení"</strong> — konec omezení se zobrazuje ukončovací tabulí (jiný tvar, přeškrtnuté pruhy) nebo prostou absencí zákazové tabule. Červená zákazová tabule nikdy neoznačuje konec omezení.</li>
+</ul>
+
+<h3>Prakticky</h3>
+<p>Tuto tabuli najdeš nejčastěji nad místy s podvodní infrastrukturou (kabely VN, plynovody, telekomunikační vedení). Nestačí zvednout kotvu — nesmíš ani nechat lan nebo řetěz klouzat po dně.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, Příloha 7 — zákazové břehové tabule, skupina A (tabule A.6 nebo ekvivalent).</p>

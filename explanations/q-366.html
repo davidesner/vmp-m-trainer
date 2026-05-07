@@ -1,0 +1,102 @@
+<h2>Příďové dokormidlovací zařízení</h2>
+
+<p><strong>Příďové dokormidlovací zařízení slouží ke zlepšení manévrovacích vlastností plavidla.</strong></p>
+
+<h3>Co to je?</h3>
+<p>
+  Příčný (bočníkový) vrtulový pohon zabudovaný v tunelu procházejícím přídí plavidla <strong>pod čarou ponoru</strong>.
+  Elektromotor nebo hydraulika roztočí vrtuli, která tlačí vodu buď na levobok, nebo na pravobok —
+  tím se příď otočí do strany, aniž by se plavidlo muselo pohybovat dopředu.
+</p>
+
+<!-- Vizualizace: pohled shora + příčný řez přídí -->
+<div style="margin: 20px 0;">
+<svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto;font-family:sans-serif;">
+  <!-- === LEVÝ PANEL: pohled shora === -->
+  <rect x="0" y="0" width="340" height="340" rx="8" fill="#f0f6ff" />
+  <text x="170" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a3a5c">Pohled shora</text>
+
+  <!-- Plavidlo shora — lodní tvar -->
+  <path d="M170,60 C210,65 240,90 240,140 L240,280 C240,295 230,305 170,305 C110,305 100,295 100,280 L100,140 C100,90 130,65 170,60 Z"
+        fill="#c8d8ea" stroke="#2255aa" stroke-width="2"/>
+
+  <!-- Tunel dokormidlovacího zařízení — příčný otvor v přídě -->
+  <rect x="100" y="155" width="140" height="22" rx="4" fill="#2255aa" opacity="0.85"/>
+  <text x="170" y="170" text-anchor="middle" font-size="11" fill="white" font-weight="bold">tunel</text>
+
+  <!-- Šipka: proud vody doleva (levobokový pohyb přídě doprava) -->
+  <line x1="98" y1="162" x2="48" y2="162" stroke="#e05000" stroke-width="3" stroke-dasharray="4,2"/>
+  <polygon points="44,162 54,156 54,168" fill="#e05000"/>
+  <text x="36" y="154" text-anchor="middle" font-size="11" fill="#e05000">voda</text>
+  <text x="36" y="166" text-anchor="middle" font-size="10" fill="#e05000">ven</text>
+
+  <!-- Šipka: příď se otočí doprava -->
+  <path d="M210,100 Q240,75 250,85" stroke="#008800" stroke-width="2.5" fill="none" stroke-dasharray="5,2"/>
+  <polygon points="250,85 242,79 248,91" fill="#008800"/>
+  <text x="255" y="90" font-size="10" fill="#008800">příď</text>
+  <text x="255" y="102" font-size="10" fill="#008800">se točí</text>
+
+  <!-- Označení přídě a zádi -->
+  <text x="170" y="52" text-anchor="middle" font-size="12" fill="#555">↑ příď</text>
+  <text x="170" y="320" text-anchor="middle" font-size="12" fill="#555">záď ↓</text>
+
+  <!-- === PRAVÝ PANEL: příčný řez přídí === -->
+  <rect x="360" y="0" width="340" height="340" rx="8" fill="#f0f8f0" />
+  <text x="530" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a3a5c">Příčný řez přídí</text>
+
+  <!-- Trupy — boční stěny přídě -->
+  <rect x="370" y="120" width="30" height="130" rx="4" fill="#c8d8ea" stroke="#2255aa" stroke-width="1.5"/>
+  <rect x="660" y="120" width="30" height="130" rx="4" fill="#c8d8ea" stroke="#2255aa" stroke-width="1.5"/>
+  <text x="385" y="245" text-anchor="middle" font-size="10" fill="#2255aa">P</text>
+  <text x="675" y="245" text-anchor="middle" font-size="10" fill="#2255aa">L</text>
+
+  <!-- Hladina vody -->
+  <line x1="360" y1="148" x2="700" y2="148" stroke="#5599cc" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="370" y="142" font-size="10" fill="#5599cc">hladina</text>
+
+  <!-- Voda pod trupem -->
+  <rect x="400" y="148" width="260" height="100" fill="#b8d8f0" opacity="0.5"/>
+
+  <!-- Tunel v řezu -->
+  <rect x="400" y="160" width="260" height="36" rx="6" fill="#2255aa" opacity="0.8"/>
+  <text x="530" y="183" text-anchor="middle" font-size="11" fill="white" font-weight="bold">tunel dokormidlovacího zař.</text>
+
+  <!-- Vrtule uprostřed tunelu -->
+  <circle cx="530" cy="178" r="14" fill="#ffd700" stroke="#996600" stroke-width="2"/>
+  <line x1="518" y1="170" x2="542" y2="186" stroke="#996600" stroke-width="3" stroke-linecap="round"/>
+  <line x1="518" y1="186" x2="542" y2="170" stroke="#996600" stroke-width="3" stroke-linecap="round"/>
+  <text x="530" y="220" text-anchor="middle" font-size="11" fill="#996600">vrtule</text>
+  <line x1="530" y1="216" x2="530" y2="196" stroke="#996600" stroke-width="1" stroke-dasharray="2,2"/>
+
+  <!-- Šipky: voda vystřeluje vlevo, nasává zprava -->
+  <line x1="398" y1="178" x2="355" y2="178" stroke="#e05000" stroke-width="3"/>
+  <polygon points="352,178 362,172 362,184" fill="#e05000"/>
+  <text x="340" y="172" text-anchor="middle" font-size="10" fill="#e05000">výtlak</text>
+
+  <line x1="662" y1="178" x2="705" y2="178" stroke="#0066cc" stroke-width="3" stroke-dasharray="4,2"/>
+  <polygon points="665,172 655,178 665,184" fill="#0066cc"/>
+  <text x="706" y="172" font-size="10" fill="#0066cc">sání</text>
+</svg>
+</div>
+
+<h3>Proč ne ostatní možnosti?</h3>
+<ul>
+  <li>
+    <strong>Varianta, která zmiňuje ruční páku:</strong> Zařízení je poháněno elektricky nebo hydraulicky a ovládá se joystickem nebo tlačítky — ne ruční pákou. Navíc název <em>dokormidlovací</em> (= doplněk ke kormidlu) říká, že jde o asistenci, nikoli primární řízení.
+  </li>
+  <li>
+    <strong>Varianta o ulehčení ovládání ručního mechanismu kormidla:</strong> Příďové dokormidlovací zařízení je zcela oddělený systém, který s mechanismem lodního kormidla nijak nesouvisí. Funguje nezávisle, má vlastní pohon a vlastní ovládání.
+  </li>
+</ul>
+
+<h3>Kdy se to využívá v praxi?</h3>
+<ul>
+  <li>Přistávání a odstavování od přístaviště bez pomoci remorkéru</li>
+  <li>Průjezd úzkými průplavy, zdymadly a propustěmi</li>
+  <li>Nízké rychlosti, kdy klasické kormidlo pracuje neefektivně (malý průtok vody)</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Základy konstrukce plavidel — oblast VMP M testu</li>
+</ul>

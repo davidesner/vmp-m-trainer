@@ -1,0 +1,109 @@
+<h2>Příkazová tabule PP4 — přidržuj se pravého boku</h2>
+
+<p>
+  <strong>Správná odpověď:</strong> <em>„příkaz přidržovat se strany plavební dráhy, která je po pravém boku."</em>
+</p>
+
+<hr>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;margin:16px 0;">
+
+  <!-- Tabule 1:1 -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 6px;font-size:0.85em;color:#555;">Jak to vidíš v testu</p>
+    <svg width="130" height="150" viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg">
+      <!-- červený rám -->
+      <rect x="2" y="2" width="126" height="146" rx="8" ry="8" fill="#c0392b" />
+      <rect x="12" y="12" width="106" height="126" rx="4" ry="4" fill="white" />
+
+      <!-- plná šipka nahoru (pravá strana) -->
+      <line x1="82" y1="110" x2="82" y2="45" stroke="#222" stroke-width="7" stroke-linecap="round"/>
+      <polygon points="82,30 72,52 92,52" fill="#222"/>
+
+      <!-- přerušovaná šipka dolů (levá strana) -->
+      <line x1="48" y1="40" x2="48" y2="68" stroke="#222" stroke-width="7" stroke-linecap="round" stroke-dasharray="8,7"/>
+      <line x1="48" y1="78" x2="48" y2="95" stroke="#222" stroke-width="7" stroke-linecap="round" stroke-dasharray="8,7"/>
+      <polygon points="48,120 38,98 58,98" fill="#222"/>
+    </svg>
+    <p style="margin:4px 0 0;font-size:0.8em;color:#777;">červený rám = příkaz</p>
+  </div>
+
+  <!-- Co to znamená na vodě -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 6px;font-size:0.85em;color:#555;">Co to znamená na vodě</p>
+    <svg width="260" height="180" viewBox="0 0 260 180" xmlns="http://www.w3.org/2000/svg">
+      <!-- voda -->
+      <rect x="0" y="0" width="260" height="180" fill="#d6eaf8"/>
+
+      <!-- pravý břeh (shora) -->
+      <rect x="220" y="0" width="40" height="180" fill="#a9cce3"/>
+      <text x="240" y="92" text-anchor="middle" font-size="11" fill="#1a5276" transform="rotate(90,240,92)">pravý břeh</text>
+
+      <!-- levý břeh -->
+      <rect x="0" y="0" width="40" height="180" fill="#a9cce3"/>
+      <text x="20" y="92" text-anchor="middle" font-size="11" fill="#1a5276" transform="rotate(-90,20,92)">levý břeh</text>
+
+      <!-- středová linie (přerušovaná) -->
+      <line x1="130" y1="0" x2="130" y2="180" stroke="#888" stroke-width="1" stroke-dasharray="6,5"/>
+
+      <!-- tvoje plavidlo (pravá strana, jede nahoru) -->
+      <rect x="152" y="100" width="44" height="24" rx="4" fill="#2980b9" opacity="0.9"/>
+      <polygon points="196,112 208,112 202,106" fill="#2980b9" opacity="0.9"/>
+      <text x="174" y="116" text-anchor="middle" font-size="9" fill="white">TY</text>
+      <!-- šipka pohybu -->
+      <line x1="174" y1="96" x2="174" y2="55" stroke="#2980b9" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+      <!-- protijedoucí plavidlo (levá strana, jede dolů) -->
+      <rect x="64" y="55" width="44" height="24" rx="4" fill="#7f8c8d" opacity="0.8"/>
+      <polygon points="64,67 52,67 58,73" fill="#7f8c8d" opacity="0.8"/>
+      <text x="86" y="71" text-anchor="middle" font-size="9" fill="white">PROTIJEDOUCÍ</text>
+      <line x1="86" y1="83" x2="86" y2="124" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+      <!-- popisky -->
+      <text x="174" y="148" text-anchor="middle" font-size="10" fill="#2471a3" font-weight="bold">pravý bok ✓</text>
+      <text x="86" y="148" text-anchor="middle" font-size="10" fill="#7f8c8d">levý bok</text>
+
+      <defs>
+        <marker id="arrowBlue" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#2980b9"/>
+        </marker>
+        <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#7f8c8d"/>
+        </marker>
+      </defs>
+    </svg>
+    <p style="margin:4px 0 0;font-size:0.8em;color:#777;">pohled shora — úzký kanál / průplav</p>
+  </div>
+
+</div>
+
+<hr>
+
+<h3>Klíč k dekódování</h3>
+<table>
+  <thead>
+    <tr><th>Prvek tabule</th><th>Význam</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Červený rám</td><td>Příkazová tabule — povinnost</td></tr>
+    <tr><td>Plná šipka nahoru (pravá)</td><td>Strana, kde musíš jet ty (a všichni ve tvém směru)</td></tr>
+    <tr><td>Přerušovaná šipka dolů (levá)</td><td>Protijedoucí provoz</td></tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>„Dej přednost protijedoucímu"</strong> — tabule neřeší přednost, ale <em>polohu</em> v plavební dráze. Přednost řeší jiné značky.</li>
+  <li><strong>„Obousměrný provoz"</strong> — informace o obousměrném provozu mívá neutrální (modrý/bílý) rám. Červený rám zde říká, že je to příkaz, ne pouhá informace.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Tabule se typicky osazuje na <strong>úzkých kanálech nebo průplavech</strong>, kde oba směry sdílejí jednu plavební dráhu.
+  Říká: <em>„Nespoléhej na protijedoucího — ty se aktivně drž pravého boku."</em>
+</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha — příkazová tabule PP4.</p>

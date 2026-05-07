@@ -1,0 +1,151 @@
+<h2>Zvukový signál: 1 řada úderů na zvon za snížené viditelnosti</h2>
+
+<p><strong>Správná odpověď:</strong> Stojím za snížené viditelnosti na <strong>levé straně plavební dráhy</strong>.</p>
+
+<h3>Logika systému: číslo sérií = strana</h3>
+
+<p>Stojící plavidlo za snížené viditelnosti (mlha, hustá srážka) musí ostatním říct, kde leží. Dělá to zvonkem — počet <em>řad</em> úderů kóduje polohu:</p>
+
+<div style="margin: 1rem 0;">
+  <svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;display:block;font-family:sans-serif;">
+    <!-- Background -->
+    <rect width="640" height="320" fill="#f8f9fa" rx="8"/>
+
+    <!-- Title row -->
+    <text x="160" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Signál</text>
+    <text x="430" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Poloha plavidla</text>
+    <line x1="310" y1="10" x2="310" y2="310" stroke="#ccc" stroke-width="1"/>
+
+    <!-- ===== ROW 1: 1 series = LEFT ===== -->
+    <rect x="10" y="40" width="290" height="80" fill="#fff" rx="6" stroke="#4CAF50" stroke-width="2"/>
+    <text x="155" y="60" text-anchor="middle" font-size="12" fill="#555">1 řada úderů</text>
+    <!-- Bell strokes: group of 4 strikes -->
+    <g transform="translate(50,75)">
+      <rect x="0" y="0" width="14" height="28" fill="#4CAF50" rx="3"/>
+      <rect x="20" y="0" width="14" height="28" fill="#4CAF50" rx="3"/>
+      <rect x="40" y="0" width="14" height="28" fill="#4CAF50" rx="3"/>
+      <rect x="60" y="0" width="14" height="28" fill="#4CAF50" rx="3"/>
+      <text x="37" y="42" text-anchor="middle" font-size="10" fill="#4CAF50">série 1</text>
+    </g>
+    <!-- Repeat dots -->
+    <text x="165" y="95" font-size="20" fill="#aaa" text-anchor="middle">…</text>
+    <text x="215" y="95" font-size="11" fill="#777" text-anchor="middle">≤ 1 min</text>
+    <text x="245" y="95" font-size="20" fill="#aaa" text-anchor="middle">…</text>
+
+    <!-- Schematic: bird's eye view of channel, vessel LEFT -->
+    <rect x="320" y="40" width="310" height="80" fill="#fff" rx="6" stroke="#4CAF50" stroke-width="2"/>
+    <!-- River -->
+    <rect x="340" y="55" width="270" height="50" fill="#b3d9f7" rx="4"/>
+    <!-- Banks -->
+    <rect x="330" y="45" width="290" height="10" fill="#c8a96e" rx="2"/>
+    <rect x="330" y="105" width="290" height="10" fill="#c8a96e" rx="2"/>
+    <!-- Labels -->
+    <text x="475" y="51" text-anchor="middle" font-size="10" fill="#555">LEVÝ BŘEH</text>
+    <text x="475" y="122" text-anchor="middle" font-size="10" fill="#555">PRAVÝ BŘEH</text>
+    <!-- Vessel on LEFT side -->
+    <g transform="translate(380,68)">
+      <rect x="-15" y="-8" width="30" height="16" fill="#4CAF50" rx="3"/>
+      <polygon points="15,0 22,0" fill="#4CAF50"/>
+      <text x="0" y="4" text-anchor="middle" font-size="9" fill="#fff">⚓</text>
+    </g>
+    <!-- Arrow showing it's on left -->
+    <text x="395" y="50" font-size="10" fill="#4CAF50" font-weight="bold">◄ LEVÁ STRANA</text>
+    <!-- Moving vessel -->
+    <g transform="translate(560,80)">
+      <rect x="-18" y="-7" width="36" height="14" fill="#1565C0" rx="3"/>
+      <polygon points="-18,0 -26,5 -26,-5" fill="#1565C0"/>
+      <text x="0" y="4" text-anchor="middle" font-size="8" fill="#fff">→</text>
+    </g>
+    <text x="558" y="104" text-anchor="middle" font-size="9" fill="#1565C0">plující</text>
+
+    <!-- ===== ROW 2: 2 series = RIGHT ===== -->
+    <rect x="10" y="135" width="290" height="80" fill="#fff" rx="6" stroke="#FF9800" stroke-width="2"/>
+    <text x="155" y="155" text-anchor="middle" font-size="12" fill="#555">2 řady úderů</text>
+    <g transform="translate(30,170)">
+      <rect x="0" y="0" width="14" height="22" fill="#FF9800" rx="3"/>
+      <rect x="20" y="0" width="14" height="22" fill="#FF9800" rx="3"/>
+      <rect x="40" y="0" width="14" height="22" fill="#FF9800" rx="3"/>
+      <rect x="60" y="0" width="14" height="22" fill="#FF9800" rx="3"/>
+      <text x="37" y="35" text-anchor="middle" font-size="10" fill="#FF9800">série 1</text>
+    </g>
+    <text x="120" y="188" font-size="12" fill="#aaa">—</text>
+    <g transform="translate(140,170)">
+      <rect x="0" y="0" width="14" height="22" fill="#FF9800" rx="3"/>
+      <rect x="20" y="0" width="14" height="22" fill="#FF9800" rx="3"/>
+      <rect x="40" y="0" width="14" height="22" fill="#FF9800" rx="3"/>
+      <rect x="60" y="0" width="14" height="22" fill="#FF9800" rx="3"/>
+      <text x="37" y="35" text-anchor="middle" font-size="10" fill="#FF9800">série 2</text>
+    </g>
+
+    <rect x="320" y="135" width="310" height="80" fill="#fff" rx="6" stroke="#FF9800" stroke-width="2"/>
+    <rect x="340" y="150" width="270" height="50" fill="#b3d9f7" rx="4"/>
+    <rect x="330" y="140" width="290" height="10" fill="#c8a96e" rx="2"/>
+    <rect x="330" y="200" width="290" height="10" fill="#c8a96e" rx="2"/>
+    <text x="475" y="146" text-anchor="middle" font-size="10" fill="#555">LEVÝ BŘEH</text>
+    <text x="475" y="217" text-anchor="middle" font-size="10" fill="#555">PRAVÝ BŘEH</text>
+    <!-- Vessel on RIGHT side -->
+    <g transform="translate(380,185)">
+      <rect x="-15" y="-8" width="30" height="16" fill="#FF9800" rx="3"/>
+      <text x="0" y="4" text-anchor="middle" font-size="9" fill="#fff">⚓</text>
+    </g>
+    <text x="395" y="148" font-size="10" fill="#FF9800" font-weight="bold">► PRAVÁ STRANA</text>
+    <g transform="translate(560,175)">
+      <rect x="-18" y="-7" width="36" height="14" fill="#1565C0" rx="3"/>
+      <polygon points="-18,0 -26,5 -26,-5" fill="#1565C0"/>
+    </g>
+
+    <!-- ===== ROW 3: 1 series + 3 strokes = uncertain ===== -->
+    <rect x="10" y="228" width="290" height="82" fill="#fff" rx="6" stroke="#9E9E9E" stroke-width="2"/>
+    <text x="155" y="248" text-anchor="middle" font-size="12" fill="#555">1 řada + 3 oddělené údery</text>
+    <g transform="translate(18,260)">
+      <!-- 3 separate strokes before -->
+      <rect x="0" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <rect x="16" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <rect x="32" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <text x="21" y="30" text-anchor="middle" font-size="9" fill="#9E9E9E">3 údery</text>
+    </g>
+    <text x="75" y="274" font-size="14" fill="#aaa">+</text>
+    <g transform="translate(92,260)">
+      <rect x="0" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <rect x="16" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <rect x="32" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <rect x="48" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <text x="29" y="30" text-anchor="middle" font-size="9" fill="#9E9E9E">série</text>
+    </g>
+    <text x="210" y="274" font-size="14" fill="#aaa">+</text>
+    <g transform="translate(222,260)">
+      <rect x="0" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <rect x="16" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <rect x="32" y="0" width="10" height="18" fill="#9E9E9E" rx="2"/>
+      <text x="21" y="30" text-anchor="middle" font-size="9" fill="#9E9E9E">3 údery</text>
+    </g>
+
+    <rect x="320" y="228" width="310" height="82" fill="#fff" rx="6" stroke="#9E9E9E" stroke-width="2"/>
+    <rect x="340" y="243" width="270" height="50" fill="#b3d9f7" rx="4"/>
+    <rect x="330" y="233" width="290" height="10" fill="#c8a96e" rx="2"/>
+    <rect x="330" y="293" width="290" height="10" fill="#c8a96e" rx="2"/>
+    <text x="475" y="239" text-anchor="middle" font-size="10" fill="#555">LEVÝ BŘEH</text>
+    <text x="475" y="310" text-anchor="middle" font-size="10" fill="#555">PRAVÝ BŘEH</text>
+    <!-- Vessel in middle -->
+    <g transform="translate(470,268)">
+      <rect x="-15" y="-8" width="30" height="16" fill="#9E9E9E" rx="3"/>
+      <text x="0" y="4" text-anchor="middle" font-size="9" fill="#fff">⚓</text>
+    </g>
+    <text x="471" y="240" text-anchor="middle" font-size="10" fill="#9E9E9E" font-weight="bold">? NEURČITÁ POLOHA</text>
+  </svg>
+</div>
+
+<h3>Mnemotechnika</h3>
+<p><strong>L</strong>evá = <strong>1</strong> (první číslo) &nbsp;|&nbsp; <strong>P</strong>ravá = <strong>2</strong> (druhé číslo)</p>
+
+<h3>Proč ostatní možnosti nesedí</h3>
+<ul>
+  <li>Varianta „pravá strana" se signalizuje <strong>dvěma</strong> řadami úderů — tedy o jednu sérii více.</li>
+  <li>Varianta „neurčitá poloha" se neohlašuje pouhou jednou řadou, ale přidávají se 3 oddělené údery před nebo za sérií (upozornění na nebezpečnost situace).</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Slyšíš-li za mlhy každou minutu jednu sérii zvonu — vlevo od plavební dráhy stojí zakotvené nebo zastavené plavidlo. Obeplávej ho po pravé straně a sniž rychlost.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, §6.31 — zvukové signály stojících plavidel za snížené viditelnosti.</p>

@@ -1,0 +1,83 @@
+<h2>Zvukový signál „5 krátkých zvuků"</h2>
+
+<p>Správná odpověď je <strong>„předjíždění není možné."</strong></p>
+
+<h3>Jádro vysvětlení</h3>
+<p>5 krátkých zvuků je <strong>odmítavá odpověď na žádost o předjíždění</strong>, kterou vysílá předjížděné plavidlo. Říká: „Souhlasit nemohu — podmínky to nedovolují." Teprve po obdržení souhlasného signálu smí žadatel zahájit manévr.</p>
+
+<h3>Vizualizace — dialog předjíždění</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" style="max-width:640px;width:100%;font-family:sans-serif;">
+
+  <!-- Background -->
+  <rect width="640" height="340" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title -->
+  <text x="320" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Zvukové signály při předjíždění</text>
+
+  <!-- Legenda -->
+  <rect x="30" y="44" width="14" height="14" rx="7" fill="#2196F3"/>
+  <text x="50" y="55" font-size="11" fill="#555">krátký zvuk (•)</text>
+  <rect x="140" y="44" width="32" height="14" rx="4" fill="#4CAF50"/>
+  <text x="178" y="55" font-size="11" fill="#555">dlouhý zvuk (–)</text>
+
+  <!-- Row 1: Žádost vpravo -->
+  <text x="20" y="92" font-size="12" fill="#555">Žádám předjíždět <tspan font-weight="bold">vpravo</tspan>:</text>
+  <text x="20" y="108" font-size="11" fill="#888">2 dlouhé + 1 krátký</text>
+  <!-- 2 dlouhé -->
+  <rect x="230" y="82" width="36" height="18" rx="4" fill="#4CAF50"/>
+  <rect x="274" y="82" width="36" height="18" rx="4" fill="#4CAF50"/>
+  <!-- 1 krátký -->
+  <circle cx="328" cy="91" r="9" fill="#2196F3"/>
+  <text x="230" y="116" font-size="10" fill="#4CAF50">–</text>
+  <text x="267" y="116" font-size="10" fill="#4CAF50">–</text>
+  <text x="325" y="116" font-size="10" fill="#2196F3">•</text>
+
+  <!-- Row 2: Žádost vlevo -->
+  <text x="20" y="147" font-size="12" fill="#555">Žádám předjíždět <tspan font-weight="bold">vlevo</tspan>:</text>
+  <text x="20" y="163" font-size="11" fill="#888">2 dlouhé + 2 krátké</text>
+  <rect x="230" y="137" width="36" height="18" rx="4" fill="#4CAF50"/>
+  <rect x="274" y="137" width="36" height="18" rx="4" fill="#4CAF50"/>
+  <circle cx="320" cy="146" r="9" fill="#2196F3"/>
+  <circle cx="344" cy="146" r="9" fill="#2196F3"/>
+
+  <!-- Row 3: Souhlas -->
+  <text x="20" y="202" font-size="12" fill="#555">Souhlas <tspan font-weight="bold">(ano, jedi)</tspan>:</text>
+  <text x="20" y="218" font-size="11" fill="#888">1 dl. + 1 kr. + 1 dl. + 1 kr.</text>
+  <rect x="230" y="192" width="28" height="18" rx="4" fill="#4CAF50"/>
+  <circle cx="272" cy="201" r="8" fill="#2196F3"/>
+  <rect x="290" y="192" width="28" height="18" rx="4" fill="#4CAF50"/>
+  <circle cx="332" cy="201" r="8" fill="#2196F3"/>
+
+  <!-- Row 4: ODMÍTNUTÍ — highlighted -->
+  <rect x="10" y="243" width="620" height="70" rx="8" fill="#FFF3CD" stroke="#FFC107" stroke-width="2"/>
+  <text x="20" y="265" font-size="13" font-weight="bold" fill="#333">Předjíždění NENÍ možné:</text>
+  <text x="20" y="281" font-size="11" fill="#888">5 krátkých zvuků</text>
+  <!-- 5 krátkých -->
+  <circle cx="230" cy="270" r="10" fill="#E53935"/>
+  <circle cx="256" cy="270" r="10" fill="#E53935"/>
+  <circle cx="282" cy="270" r="10" fill="#E53935"/>
+  <circle cx="308" cy="270" r="10" fill="#E53935"/>
+  <circle cx="334" cy="270" r="10" fill="#E53935"/>
+  <text x="230" y="295" font-size="10" fill="#E53935" text-anchor="middle">•</text>
+  <text x="256" y="295" font-size="10" fill="#E53935" text-anchor="middle">•</text>
+  <text x="282" y="295" font-size="10" fill="#E53935" text-anchor="middle">•</text>
+  <text x="308" y="295" font-size="10" fill="#E53935" text-anchor="middle">•</text>
+  <text x="334" y="295" font-size="10" fill="#E53935" text-anchor="middle">•</text>
+  <text x="380" y="275" font-size="12" fill="#c62828" font-weight="bold">← toto je správná odpověď</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti?</h3>
+<ul>
+  <li><strong>„Stroj má zpětný chod"</strong> — to jsou <strong>3 krátké zvuky</strong>, manévrovací signál při couvání motorem.</li>
+  <li><strong>„Nejsem schopen manévrování"</strong> — v pravidlech plavebního provozu jako samostatný zvukový signál takhle nefiguruje; tísňové a nouzové stavy mají jiné vyjádření (tísňový signál = opakované zvuky nebo optické signály).</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Předjíždění na vnitrozemských vodních cestách probíhá vždy jako <em>dialog</em>: předjíždějící žádá, předjížděné plavidlo odpovídá souhlasem nebo odmítnutím. Bez souhlasného signálu nesmí předjíždění začít. Signál 5 krátkých je závazný — žadatel musí vyčkat, přizpůsobit rychlost a případně žádost zopakovat, až situace dovolí.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. (pravidla plavebního provozu), § 6.09 — předjíždění</li>
+  <li>Vyhláška č. 67/2015 Sb., § 6.32 — zvukové signály za plavby</li>
+</ul>

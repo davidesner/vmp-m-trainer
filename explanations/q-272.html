@@ -1,0 +1,142 @@
+<h2>Signální tabule — šíp doleva: plout ke straně plavební dráhy po levém boku</h2>
+
+<p>
+  Tabule s šípem, který oblúkuje zprava doleva a míří nahoru doleva, je
+  <strong>příkazová navigační tabule</strong>. Říká veliteli plavidla:
+  <em>„Přesuň se na levou stranu plavební dráhy a drž se jí."</em>
+</p>
+
+<h3>Klíčový rozdíl: plavební dráha ≠ levý břeh</h3>
+
+<p>
+  Tady leží největší past otázky. Jsou tu dvě lákavě podobné varianty:
+</p>
+<ul>
+  <li><strong>Plout ke straně plavební dráhy po levém boku</strong> — správně</li>
+  <li>Plout k levému břehu — <em>nesprávně</em></li>
+</ul>
+
+<p>
+  <strong>Plavební dráha</strong> (fairway) je <em>vyznačený plavební koridor</em> uvnitř vodní cesty — jen ta část, kde je dostatečná hloubka a kde se smí plout.
+  V přirozených řekách plavební dráha meandruje a <strong>nemusí kopírovat žádný břeh</strong>. Příkaz plout
+  <em>ke straně plavební dráhy po levém boku</em> znamená: zůstaň v dráze, ale drž se jejího levého okraje.
+  Příkaz „plout k levému břehu" by tě mohl vyvést z plavební dráhy na mělčinu.
+</p>
+
+<!-- VIZUALIZACE: vlevo sign, vpravo schéma řeky s plavební dráhou -->
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin:20px 0">
+
+  <!-- Tabule -->
+  <div style="flex:0 0 auto;text-align:center">
+    <p style="font-size:0.8em;color:#666;margin-bottom:6px">Tabule v testu</p>
+    <svg width="110" height="130" viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- červený okraj -->
+      <rect x="2" y="2" width="106" height="126" rx="6" ry="6" fill="#cc2200" />
+      <rect x="10" y="10" width="90" height="110" rx="3" ry="3" fill="white" />
+      <!-- šíp: přichází zprava dole, oblúk doleva, míří nahoru doleva -->
+      <!-- tělo šípu jako path -->
+      <path d="M 75 105 C 75 75, 35 75, 35 45" stroke="black" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <!-- hrot šípu nahoru doleva -->
+      <polygon points="35,22 22,47 48,47" fill="black"/>
+    </svg>
+  </div>
+
+  <!-- Schéma řeky shora -->
+  <div style="flex:1 1 260px;text-align:center">
+    <p style="font-size:0.8em;color:#666;margin-bottom:6px">Pohled shora — řeka s plavební dráhou</p>
+    <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">
+
+      <!-- řeka (světle modrá plocha) -->
+      <rect x="0" y="0" width="320" height="200" fill="#dbeafe"/>
+
+      <!-- levý břeh (zelený pruh) -->
+      <rect x="0" y="0" width="40" height="200" fill="#86efac"/>
+      <!-- pravý břeh -->
+      <rect x="280" y="0" width="40" height="200" fill="#86efac"/>
+
+      <!-- břehové linie -->
+      <line x1="40" y1="0" x2="40" y2="200" stroke="#4ade80" stroke-width="2"/>
+      <line x1="280" y1="0" x2="280" y2="200" stroke="#4ade80" stroke-width="2"/>
+
+      <!-- plavební dráha (tmavší modrá, průhledná) — meandruje mírně -->
+      <!-- zjednodušeně: dráha je vyznačená část, přibližně uprostřed, ale ne přesně -->
+      <path d="M 90 0 C 90 50, 110 80, 100 130 C 90 160, 110 180, 110 200
+               L 190 200 C 190 180, 210 160, 200 130 C 190 80, 210 50, 210 0 Z"
+            fill="rgba(59,130,246,0.25)" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+      <!-- PŘED tabulí: loď je vpravo v plavební dráze -->
+      <!-- loď jako obdélníček s šipkou (směr: dolu = loď jede od nás / nahoru = loď jede k nám)
+           tady loď pluje vzhůru (od jihu na sever) a začíná z pravé poloviny dráhy -->
+
+      <!-- šipka pohybu lodi: z pravé strany dráhy na levou -->
+      <path d="M 175 155 C 155 130, 130 110, 120 80"
+            stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5,3" fill="none"
+            marker-end="url(#arrowRed)"/>
+
+      <!-- loď (startovní pozice — pravá strana dráhy) -->
+      <g transform="translate(175,165)">
+        <rect x="-10" y="-18" width="20" height="30" rx="3" fill="#1e3a5f" opacity="0.85"/>
+        <polygon points="0,-22 -7,-18 7,-18" fill="#1e3a5f"/>
+        <text x="0" y="4" text-anchor="middle" fill="white" font-size="9">⛵</text>
+      </g>
+
+      <!-- loď (cílová pozice — levá strana dráhy) -->
+      <g transform="translate(120,70)" opacity="0.45">
+        <rect x="-10" y="-18" width="20" height="30" rx="3" fill="#1e3a5f"/>
+        <polygon points="0,-22 -7,-18 7,-18" fill="#1e3a5f"/>
+      </g>
+
+      <!-- popisky -->
+      <!-- levý břeh -->
+      <text x="20" y="105" text-anchor="middle" fill="#166534" font-size="10" font-weight="bold"
+            transform="rotate(-90,20,105)">LEVÝ BŘEH</text>
+      <!-- pravý břeh -->
+      <text x="300" y="105" text-anchor="middle" fill="#166534" font-size="10" font-weight="bold"
+            transform="rotate(90,300,105)">PRAVÝ BŘEH</text>
+
+      <!-- plavební dráha label -->
+      <text x="150" y="20" text-anchor="middle" fill="#1d4ed8" font-size="9">plavební dráha</text>
+      <line x1="150" y1="23" x2="150" y2="35" stroke="#1d4ed8" stroke-width="1" stroke-dasharray="3,2"/>
+
+      <!-- levá / pravá strana dráhy -->
+      <text x="105" y="100" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="bold">LEVÁ strana</text>
+      <text x="105" y="112" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="bold">dráhy ✓</text>
+      <text x="195" y="145" text-anchor="middle" fill="#6b7280" font-size="9">pravá strana</text>
+      <text x="195" y="156" text-anchor="middle" fill="#6b7280" font-size="9">dráhy</text>
+
+      <!-- marker pro šíp -->
+      <defs>
+        <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#dc2626"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+</div>
+
+<p style="font-size:0.85em;color:#555;margin-top:-8px">
+  <em>Červená přerušovaná šipka = pohyb plavidla po přijetí příkazu z tabule.
+  Plavidlo zůstává v plavební dráze (modrá ohraničená plocha), pouze se přesunuje na její levou stranu —
+  nikoli k levému břehu řeky.</em>
+</p>
+
+<h3>Proč třetí varianta nesedí</h3>
+<p>
+  Varianta o předjíždění po levém boku nesouvisí s tímto typem tabule vůbec.
+  Předjíždění upravuje <strong>vyhláška č. 67/2015 Sb., § 6.09</strong> a řídí se dohodou plavidel
+  (zvukové signály, vizuální signály). Signální tabule s šípem je <em>stálý navigační příkaz</em>,
+  ne situační signál mezi plavidly.
+</p>
+
+<h3>Praktická situace</h3>
+<p>
+  Tuto tabuli nejčastěji potkáš před vjezdem do <strong>plavební komory</strong> nebo na úsecích
+  s organizovaným obousměrným provozem, kde provozovatel potřebuje sjet plavidla na jednu stranu
+  dráhy a uvolnit druhou pro protijedoucí.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — příloha č. 7 (signální tabule)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě — § 2 (definice plavební dráhy)</li>
+</ul>

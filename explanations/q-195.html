@@ -1,0 +1,78 @@
+<h2>Kývání červenou vlajkou v půlkruhu</h2>
+
+<p><strong>Správná odpověď: plavidlo ztratilo manévrovací schopnost.</strong></p>
+<p>Tento vizuální signál informuje ostatní plavidla, že loď se nemůže řídit, vyhýbat ani brzdit — například kvůli poruše kormidla nebo motoru.</p>
+
+<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;display:block;margin:1.5rem auto;border:1px solid #ddd;border-radius:8px;background:#f0f7ff;">
+
+  <!-- Water -->
+  <rect x="0" y="215" width="520" height="85" fill="#9ec9f0"/>
+  <path d="M0 220 Q26 212 52 220 Q78 228 104 220 Q130 212 156 220 Q182 228 208 220 Q234 212 260 220 Q286 228 312 220 Q338 212 364 220 Q390 228 416 220 Q442 212 468 220 Q494 228 520 220" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <path d="M0 234 Q26 226 52 234 Q78 242 104 234 Q130 226 156 234 Q182 242 208 234 Q234 226 260 234 Q286 242 312 234 Q338 226 364 234 Q390 242 416 234 Q442 226 468 234 Q494 242 520 234" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Boat hull -->
+  <path d="M90 210 L430 210 L410 235 Q260 245 90 232 Z" fill="#e8e8e8" stroke="#555" stroke-width="2"/>
+  <!-- Deck -->
+  <rect x="110" y="202" width="305" height="8" fill="#d5d5d5" stroke="#555" stroke-width="1.5"/>
+
+  <!-- Person (stick figure) -->
+  <circle cx="260" cy="158" r="14" fill="white" stroke="#333" stroke-width="2"/>
+  <line x1="260" y1="172" x2="260" y2="202" stroke="#333" stroke-width="2.5"/>
+  <line x1="260" y1="202" x2="247" y2="215" stroke="#333" stroke-width="2"/>
+  <line x1="260" y1="202" x2="273" y2="215" stroke="#333" stroke-width="2"/>
+
+  <!-- Ghost arm (left — where flag was) -->
+  <line x1="260" y1="178" x2="208" y2="157" stroke="#ccc" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="207" y1="145" x2="207" y2="160" stroke="#ccc" stroke-width="1.5"/>
+  <rect x="190" y="134" width="17" height="13" fill="#cc0000" opacity="0.2" rx="1"/>
+
+  <!-- Current arm (right — where flag is now) -->
+  <line x1="260" y1="178" x2="312" y2="157" stroke="#333" stroke-width="2.5"/>
+  <line x1="312" y1="143" x2="312" y2="160" stroke="#444" stroke-width="2"/>
+  <rect x="312" y="130" width="24" height="17" fill="#cc0000" rx="1"/>
+
+  <!-- Semicircular arc (motion path) with arrow -->
+  <path d="M 205 152 A 58 58 0 0 1 314 152" fill="none" stroke="#cc0000" stroke-width="2.5" stroke-dasharray="8,5"/>
+  <polygon points="314,152 303,145 305,158" fill="#cc0000"/>
+
+  <!-- Label box -->
+  <rect x="110" y="50" width="300" height="72" rx="10" fill="white" stroke="#cc0000" stroke-width="2.5" opacity="0.97"/>
+  <text x="260" y="75" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cc0000" font-weight="bold">ČERVENÁ VLAJKA — KÝVÁNÍ V PŮLKRUHU</text>
+  <text x="260" y="97" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222" font-weight="bold">Ztráta manévrovací schopnosti</text>
+  <text x="260" y="114" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#666">plavidlo se nemůže řídit ani vyhýbat</text>
+
+  <!-- Arrow connecting label to figure -->
+  <line x1="260" y1="122" x2="260" y2="138" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="260,144 255,136 265,136" fill="#cc0000"/>
+
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+  <thead>
+    <tr style="background:#f5f5f5;">
+      <th style="padding:8px 12px;text-align:left;border:1px solid #ddd;">Varianta</th>
+      <th style="padding:8px 12px;text-align:left;border:1px solid #ddd;">Proč je nesprávná</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px 12px;border:1px solid #ddd;"><strong>Plavidlo v nouzi, které potřebuje pomoc</strong></td>
+      <td style="padding:8px 12px;border:1px solid #ddd;">Tísňové signály jsou jiné: nepřetržitý zvukový signál, SOS světelné záblesky nebo pyrotechnika. Kývání vlajkou je <em>provozní</em> signál (technická závada), ne tísňové volání.</td>
+    </tr>
+    <tr style="background:#fafafa;">
+      <td style="padding:8px 12px;border:1px solid #ddd;"><strong>Plavidlo s oprávněním přednostního proplutí</strong></td>
+      <td style="padding:8px 12px;border:1px solid #ddd;">Přednostní proplutí se oznamuje <em>modrým</em> světlem nebo vlajkou — červená barva je vždy varování/nebezpečí, nikoli priorita.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Klíčové rozlišení</h3>
+<p><strong>Ztráta manévrovací schopnosti ≠ tíseň (nouze).</strong> Porucha kormidla nebo motoru je technický stav — ostatní plavidla musí ustoupit a pomoct, ale nejde o přímé ohrožení životů (jako požár nebo potopení). Signalizace je proto odlišná od tísňových signálů.</p>
+
+<h3>Praktická aplikace</h3>
+<p>Typická situace: říční motorový člun dostane poruchu kormidla a unáší ho proud. Lodník vystoupí na palubu a začne kývat červenou vlajkou v půlkruhu — ostatní plavidla i obsluha plavební komory ihned vědí, že se loď nemůže řídit, a udělají místo nebo přijedou pomoct.</p>
+
+<h3>Zdroje</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — ustanovení o vizuální nouzové signalizaci.</p>

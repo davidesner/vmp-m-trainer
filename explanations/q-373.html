@@ -1,0 +1,125 @@
+<h2>Drenážní soustava</h2>
+
+<p><strong>Drenážní soustava</strong> je potrubní systém sloužící k vyčerpání vody z dnových prostorů lodě (tzv. sintiny / bilge). Jde o jeden ze základních bezpečnostních systémů každého plavidla.</p>
+
+<h3>Co je sintinová voda a odkud se bere?</h3>
+<ul>
+  <li>Drobné netěsnosti trupem a spojovacím potrubím</li>
+  <li>Kondenzace vlhkosti</li>
+  <li>Úniky chladicí kapaliny nebo paliva</li>
+  <li>Zalití vodou za nepříznivého počasí</li>
+</ul>
+<p>Voda se hromadí v nejnižším místě trupu — dnových prostorech (sintině). Drenážní čerpadla ji odtud odčerpávají, aby trup zůstal suchý a loď bezpečná.</p>
+
+<h3>Vizualizace — tři palubní soustavy</h3>
+
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;background:#f0f4f8;border-radius:10px;padding:4px">
+  <!-- DRENÁŽNÍ SOUSTAVA -->
+  <rect x="10" y="10" width="200" height="300" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="110" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">DRENÁŽNÍ SOUSTAVA</text>
+
+  <!-- Ship cross section -->
+  <path d="M30 220 Q110 270 190 220" fill="#bbdefb" stroke="#1565c0" stroke-width="2"/>
+  <path d="M30 220 L40 160 L180 160 L190 220" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- water in bilge -->
+  <path d="M55 215 Q110 240 165 215 L165 225 Q110 250 55 225 Z" fill="#64b5f6" opacity="0.7"/>
+  <text x="110" y="237" text-anchor="middle" font-size="10" fill="#0d47a1">sintinová voda</text>
+  <!-- pipe going up -->
+  <line x1="110" y1="215" x2="110" y2="155" stroke="#388e3c" stroke-width="3"/>
+  <polygon points="104,158 110,140 116,158" fill="#388e3c"/>
+  <text x="125" y="150" font-size="10" fill="#2e7d32">VEN</text>
+  <!-- pump symbol -->
+  <circle cx="110" cy="188" r="10" fill="#a5d6a7" stroke="#2e7d32" stroke-width="2"/>
+  <text x="110" y="192" text-anchor="middle" font-size="9" fill="#1b5e20">P</text>
+
+  <text x="110" y="295" text-anchor="middle" font-size="10" fill="#1b5e20">✔ odčerpává vodu</text>
+  <text x="110" y="310" text-anchor="middle" font-size="10" fill="#1b5e20">z dnových prostorů</text>
+
+  <!-- BALASTNÍ SOUSTAVA -->
+  <rect x="240" y="10" width="200" height="300" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="340" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#bf360c">BALASTNÍ SOUSTAVA</text>
+
+  <!-- Ship from top showing tanks -->
+  <rect x="270" y="60" width="60" height="70" rx="5" fill="#ffcc80" stroke="#e65100" stroke-width="1.5"/>
+  <text x="300" y="100" text-anchor="middle" font-size="10" fill="#bf360c">nádrž</text>
+  <text x="300" y="115" text-anchor="middle" font-size="10" fill="#bf360c">příď</text>
+  <rect x="350" y="60" width="60" height="70" rx="5" fill="#ffcc80" stroke="#e65100" stroke-width="1.5"/>
+  <text x="380" y="100" text-anchor="middle" font-size="10" fill="#bf360c">nádrž</text>
+  <text x="380" y="115" text-anchor="middle" font-size="10" fill="#bf360c">záď</text>
+  <!-- Arrow between tanks -->
+  <line x1="335" y1="95" x2="345" y2="95" stroke="#e65100" stroke-width="2"/>
+  <polygon points="340,90 348,95 340,100" fill="#e65100"/>
+  <!-- trim arrow -->
+  <path d="M265 155 Q340 180 415 145" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="340" y="200" text-anchor="middle" font-size="10" fill="#bf360c">přečerpání = změna</text>
+  <text x="340" y="215" text-anchor="middle" font-size="10" fill="#bf360c">ponoru / náklonu</text>
+
+  <text x="340" y="295" text-anchor="middle" font-size="10" fill="#bf360c">✘ NE drenáž</text>
+  <text x="340" y="310" text-anchor="middle" font-size="10" fill="#bf360c">regulace náklonu lodi</text>
+
+  <!-- PALIVOVÝCH KALŮ -->
+  <rect x="470" y="10" width="200" height="300" rx="10" fill="#fce4ec" stroke="#880e4f" stroke-width="2"/>
+  <text x="570" y="27" text-anchor="middle" font-size="13" font-weight="bold" fill="#880e4f">SOUSTAVA PALIV.</text>
+  <text x="570" y="43" text-anchor="middle" font-size="13" font-weight="bold" fill="#880e4f">KALŮ (sludge)</text>
+
+  <!-- Fuel tank -->
+  <rect x="510" y="70" width="120" height="80" rx="6" fill="#f8bbd0" stroke="#880e4f" stroke-width="2"/>
+  <text x="570" y="105" text-anchor="middle" font-size="11" fill="#880e4f">palivová</text>
+  <text x="570" y="120" text-anchor="middle" font-size="11" fill="#880e4f">nádrž</text>
+  <!-- Sludge layer at bottom of tank -->
+  <rect x="510" y="133" width="120" height="17" rx="0" fill="#795548" opacity="0.7"/>
+  <text x="570" y="145" text-anchor="middle" font-size="9" fill="white">kaly (sludge)</text>
+  <!-- pump and pipe -->
+  <line x1="570" y1="150" x2="570" y2="185" stroke="#880e4f" stroke-width="3"/>
+  <circle cx="570" cy="195" r="10" fill="#f48fb1" stroke="#880e4f" stroke-width="2"/>
+  <text x="570" y="199" text-anchor="middle" font-size="9" fill="#880e4f">P</text>
+  <line x1="570" y1="205" x2="570" y2="230" stroke="#880e4f" stroke-width="3"/>
+  <polygon points="564,227 570,245 576,227" fill="#880e4f"/>
+  <text x="570" y="260" text-anchor="middle" font-size="10" fill="#880e4f">kalová jímka</text>
+
+  <text x="570" y="295" text-anchor="middle" font-size="10" fill="#880e4f">✘ NE drenáž</text>
+  <text x="570" y="310" text-anchor="middle" font-size="10" fill="#880e4f">odčerpání palivových kalů</text>
+</svg>
+
+<h3>Klíčové odlišení tří soustav</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Soustava</th>
+      <th>Účel</th>
+      <th>Médium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Drenážní</strong></td>
+      <td>Odčerpání vody z dnových prostorů (sintiny)</td>
+      <td>Sintinová / bilge voda</td>
+    </tr>
+    <tr>
+      <td>Balastní</td>
+      <td>Regulace ponoru a podélného/příčného náklonu</td>
+      <td>Čistá voda v balastních nádržích</td>
+    </tr>
+    <tr>
+      <td>Palivových kalů</td>
+      <td>Odčerpání sedimentů z palivových nádrží</td>
+      <td>Palivové kaly (sludge)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ostatní varianty nesedí</h3>
+<ul>
+  <li><strong>Varianta o dodávce vody při změně ponoru a vyrovnávání náklonu</strong> — popisuje <em>balastní soustavu</em>. Balastní čerpadla přečerpávají vodu mezi nádržemi, aby se upravil trim (podélný náklon) nebo list (příčný náklon). S odvodněním dnových prostorů to nesouvisí.</li>
+  <li><strong>Varianta o odčerpání kalů z dna palivových nádrží</strong> — popisuje <em>sludge soustavu</em>. Kaly (sludge) jsou sedimenty a emulgovaná voda oddělená z paliva; čerpají se do kalové jímky a likvidují separátně. Opět jiný účel i médium.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Plavební předpisy vyžadují, aby loď měla funkční drenážní soustavu — je to jedna z podmínek způsobilosti k provozu. Kapitán je povinen pravidelně kontrolovat sintinu a zajistit odčerpání vody. Sintinová voda nesmí být vypouštěna bez úpravy, pokud obsahuje ropné látky (podléhá předpisům MARPOL v mezinárodní plavbě, na vnitrozemí zákon č. 114/1995 Sb. a prováděcí předpisy).</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě (způsobilost plavidel)</li>
+  <li>Technické normy konstrukčních požadavků na plavidla vnitrozemské plavby (ES 2006/87/EC, Příloha II)</li>
+</ul>

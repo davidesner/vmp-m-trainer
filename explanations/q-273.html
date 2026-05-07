@@ -1,0 +1,84 @@
+<h2>Směrová tabule — příkaz ke straně plavební dráhy po pravém boku</h2>
+
+<p>Tabule zobrazuje šipku zahýbající se doprava a mířící nahoru v červeném rámečku. Jde o <strong>směrovou tabuli PP4</strong> dle vyhlášky č. 67/2015 Sb., která přikazuje plout ke straně plavební dráhy, která je po pravém boku plavidla.</p>
+
+<h3>Klíčový rozdíl: plavební dráha ≠ pravý břeh</h3>
+
+<div style="margin: 16px 0;">
+<svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;">
+  <!-- Řeka -->
+  <rect x="0" y="0" width="520" height="200" fill="#d0e8f5"/>
+  <!-- Levý břeh -->
+  <rect x="0" y="0" width="520" height="30" fill="#8B7355"/>
+  <text x="10" y="22" font-size="13" fill="white" font-family="sans-serif">levý břeh</text>
+  <!-- Pravý břeh -->
+  <rect x="0" y="170" width="520" height="30" fill="#8B7355"/>
+  <text x="10" y="189" font-size="13" fill="white" font-family="sans-serif">pravý břeh</text>
+
+  <!-- Plavební dráha — vytyčena vlevo od středu -->
+  <rect x="60" y="30" width="200" height="140" fill="rgba(0,120,200,0.18)" rx="4"/>
+  <line x1="60" y1="30" x2="60" y2="170" stroke="#0078c8" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="260" y1="30" x2="260" y2="170" stroke="#0078c8" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="90" y="108" font-size="13" fill="#0055a0" font-family="sans-serif" font-weight="bold">plavební</text>
+  <text x="97" y="124" font-size="13" fill="#0055a0" font-family="sans-serif" font-weight="bold">dráha</text>
+
+  <!-- Plavidlo -->
+  <g transform="translate(100,95)">
+    <polygon points="-28,-12 28,-12 34,0 28,12 -28,12" fill="#333" stroke="#555" stroke-width="1"/>
+    <text x="-10" y="5" font-size="11" fill="white" font-family="sans-serif">▶</text>
+  </g>
+
+  <!-- Šipka "pravý bok plavební dráhy" — pravá polovina plavební dráhy -->
+  <rect x="160" y="30" width="100" height="140" fill="rgba(0,180,80,0.22)" rx="4"/>
+  <text x="167" y="95" font-size="11" fill="#006020" font-family="sans-serif">pravá strana</text>
+  <text x="167" y="110" font-size="11" fill="#006020" font-family="sans-serif">plavební dráhy</text>
+  <text x="175" y="125" font-size="11" fill="#006020" font-family="sans-serif">✓ SPRÁVNĚ</text>
+
+  <!-- Pravý břeh — označení chybné varianty -->
+  <text x="340" y="108" font-size="12" fill="#c00000" font-family="sans-serif">pravý břeh</text>
+  <text x="345" y="126" font-size="12" fill="#c00000" font-family="sans-serif">✗ ŠPATNĚ</text>
+  <text x="330" y="144" font-size="10" fill="#c00000" font-family="sans-serif">(mělčina, mimo dráhu)</text>
+</svg>
+<p style="font-size:12px;color:#555;margin-top:4px;">Plavební dráha je v tomto příkladu blíž levého břehu — příkaz zní přesunout se na její pravou stranu, nikoliv k fyzickému pravému břehu řeky.</p>
+</div>
+
+<h3>Vizualizace tabule a jejího výkladu</h3>
+
+<div style="margin: 16px 0;">
+<svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;display:block;">
+  <!-- Tabule PP4 -->
+  <rect x="20" y="20" width="100" height="120" fill="white" stroke="#c0392b" stroke-width="8" rx="4"/>
+  <!-- Šipka zahnutá doprava + nahoru -->
+  <path d="M60 125 C60 90, 90 90, 90 55 L82 55 L100 45 L82 35 L82 55" fill="none" stroke="#222" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="25" y="155" font-size="11" fill="#555" font-family="sans-serif">tabule PP4</text>
+
+  <!-- Šipka vysvětlení -->
+  <line x1="135" y1="80" x2="165" y2="80" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Výklad -->
+  <rect x="170" y="30" width="210" height="100" fill="#f0f8e8" stroke="#5a9a3a" stroke-width="1.5" rx="6"/>
+  <text x="185" y="55" font-size="13" font-weight="bold" fill="#2a6a10" font-family="sans-serif">PŘÍKAZ:</text>
+  <text x="185" y="75" font-size="12" fill="#333" font-family="sans-serif">Přesuň se na pravou</text>
+  <text x="185" y="92" font-size="12" fill="#333" font-family="sans-serif">stranu plavební dráhy</text>
+  <text x="185" y="112" font-size="11" fill="#888" font-family="sans-serif">(dle § vyhlášky 67/2015 Sb.)</text>
+</svg>
+</div>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>„příkaz plout k pravému břehu"</strong> — špatně. Plavební dráha může být kdekoli v průřezu řeky, nemusí sahat k pravému břehu. Příkaz se vztahuje k dráze, ne k fyzickému břehu.</li>
+  <li><strong>„možnost předjíždět po pravém boku předjížděného plavidla"</strong> — špatně. Předjíždění má vlastní signalizaci (zvukové nebo světelné signály); tato tabule se předjíždění netýká.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Tabule se instaluje před mosty, zúženími nebo místy, kde se plavební dráha posouvá doprava. Velitel reaguje přesunem plavidla na pravou část vytyčeného kanálu — aby uvolnil levou část protijedoucím nebo se vešel do průjezdního profilu.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha o plavebních znacích a tabulích</li>
+</ul>

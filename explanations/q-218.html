@@ -1,0 +1,177 @@
+<h2>Rybolovné plavidlo — výzbroj přesahující 150 m od boku</h2>
+
+<p>
+  Otázka ukazuje pohled na plavidlo <strong>zepředu (od přídě)</strong>. Kombinace světel na stožáru
+  a výložníku má přesný právní výklad — jde o plavidlo při rybolovu, jehož rybolovné zařízení
+  (sítě, vlec) <strong>zasahuje více než 150 m od boku</strong>.
+</p>
+
+<h3>Jak číst tato světla</h3>
+
+<div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;margin:20px 0;">
+
+  <!-- LEFT: schematic matching the test image -->
+  <div style="flex:0 0 auto;">
+    <p style="margin:0 0 6px 0;font-size:0.85em;color:#888;text-align:center;">Co vidíš v testu</p>
+    <svg width="180" height="220" viewBox="0 0 180 220" style="background:#111;border-radius:8px;">
+      <!-- Hull outline (bow-on) -->
+      <polygon points="90,160 40,200 140,200" fill="none" stroke="#aaa" stroke-width="1.5"/>
+      <rect x="55" y="160" width="70" height="30" fill="none" stroke="#aaa" stroke-width="1.5"/>
+      <!-- cabin windows -->
+      <rect x="62" y="165" width="10" height="8" fill="none" stroke="#888" stroke-width="1"/>
+      <rect x="76" y="165" width="10" height="8" fill="none" stroke="#888" stroke-width="1"/>
+      <rect x="90" y="165" width="10" height="8" fill="none" stroke="#888" stroke-width="1"/>
+      <rect x="104" y="165" width="10" height="8" fill="none" stroke="#888" stroke-width="1"/>
+      <!-- Mast -->
+      <line x1="90" y1="160" x2="90" y2="60" stroke="#aaa" stroke-width="2"/>
+      <!-- Yardarm / crossbar -->
+      <line x1="50" y1="90" x2="130" y2="90" stroke="#aaa" stroke-width="1.5"/>
+      <!-- RED light – top of mast -->
+      <circle cx="90" cy="62" r="9" fill="#e53e3e" stroke="#fff" stroke-width="1"/>
+      <!-- WHITE light – on yardarm left (gear side) -->
+      <circle cx="52" cy="90" r="8" fill="#fff" stroke="#ccc" stroke-width="1"/>
+      <!-- WHITE light – mast below red (fishing pair) -->
+      <circle cx="90" cy="90" r="8" fill="#fff" stroke="#ccc" stroke-width="1"/>
+      <!-- Port light (red, right side of image = vessel's port) -->
+      <rect x="128" y="188" width="14" height="10" rx="2" fill="#e53e3e"/>
+      <!-- Starboard light (green, left side of image = vessel's starboard) -->
+      <rect x="38" y="188" width="14" height="10" rx="2" fill="#38a169"/>
+      <!-- Wave suggestion -->
+      <path d="M30,210 Q50,205 70,210 Q90,215 110,210 Q130,205 150,210" fill="none" stroke="#4a90d9" stroke-width="1.5" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <!-- RIGHT: annotated explanation -->
+  <div style="flex:0 0 auto;">
+    <p style="margin:0 0 6px 0;font-size:0.85em;color:#888;text-align:center;">Co každé světlo znamená</p>
+    <svg width="280" height="220" viewBox="0 0 280 220" style="background:#1a1a2e;border-radius:8px;">
+      <!-- Mast outline -->
+      <line x1="90" y1="165" x2="90" y2="60" stroke="#555" stroke-width="2"/>
+      <line x1="50" y1="90" x2="130" y2="90" stroke="#555" stroke-width="1.5"/>
+
+      <!-- RED light -->
+      <circle cx="90" cy="62" r="9" fill="#e53e3e" stroke="#fff" stroke-width="1"/>
+      <!-- WHITE mast light -->
+      <circle cx="90" cy="90" r="8" fill="#fff" stroke="#ccc" stroke-width="1"/>
+      <!-- Brace line: pair -->
+      <line x1="102" y1="62" x2="115" y2="62" stroke="#e53e3e" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="102" y1="90" x2="115" y2="90" stroke="#fff" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="115" y1="62" x2="115" y2="90" stroke="#aaa" stroke-width="1"/>
+      <!-- Label pair -->
+      <text x="118" y="80" fill="#e8e8e8" font-size="11" font-family="sans-serif">červená nad bílou</text>
+      <text x="118" y="93" fill="#aaa" font-size="10" font-family="sans-serif">= plavidlo při rybolovu</text>
+
+      <!-- WHITE yardarm light -->
+      <circle cx="52" cy="90" r="8" fill="#fff" stroke="#ccc" stroke-width="1"/>
+      <line x1="44" y1="100" x2="30" y2="118" stroke="#fff" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="4" y="130" fill="#e8e8e8" font-size="11" font-family="sans-serif">bílé boční světlo</text>
+      <text x="4" y="143" fill="#aaa" font-size="10" font-family="sans-serif">= výzbroj &gt; 150 m</text>
+      <text x="4" y="155" fill="#aaa" font-size="10" font-family="sans-serif">  na této straně</text>
+
+      <!-- Nav lights row -->
+      <rect x="128" y="185" width="14" height="10" rx="2" fill="#e53e3e"/>
+      <text x="145" y="194" fill="#e8e8e8" font-size="10" font-family="sans-serif">levý bok (červená)</text>
+      <rect x="38" y="185" width="14" height="10" rx="2" fill="#38a169"/>
+      <text x="55" y="194" fill="#e8e8e8" font-size="10" font-family="sans-serif" display="none">pravý bok</text>
+
+      <!-- Danger zone arrow -->
+      <path d="M52,100 Q20,130 10,170" fill="none" stroke="#f6ad55" stroke-width="1.5" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#f6ad55"/>
+        </marker>
+      </defs>
+      <text x="2" y="180" fill="#f6ad55" font-size="10" font-family="sans-serif">nebezpečná</text>
+      <text x="2" y="191" fill="#f6ad55" font-size="10" font-family="sans-serif">strana</text>
+    </svg>
+  </div>
+
+  <!-- TOP view: danger zone -->
+  <div style="flex:0 0 auto;">
+    <p style="margin:0 0 6px 0;font-size:0.85em;color:#888;text-align:center;">Pohled shora — kde jsou sítě</p>
+    <svg width="200" height="220" viewBox="0 0 200 220" style="background:#0d1b2a;border-radius:8px;">
+      <!-- Water background suggestion -->
+      <rect width="200" height="220" fill="#0d1b2a"/>
+      <!-- Vessel top view -->
+      <ellipse cx="100" cy="110" rx="18" ry="30" fill="#3a3a5c" stroke="#aaa" stroke-width="1.5"/>
+      <!-- Direction arrow (vessel moving up) -->
+      <line x1="100" y1="75" x2="100" y2="50" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <defs>
+        <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#aaa"/>
+        </marker>
+      </defs>
+      <text x="107" y="60" fill="#aaa" font-size="10" font-family="sans-serif">směr</text>
+
+      <!-- Net extending left (>150m) -->
+      <line x1="82" y1="110" x2="10" y2="110" stroke="#f6ad55" stroke-width="2" stroke-dasharray="6,3"/>
+      <circle cx="10" cy="110" r="4" fill="#f6ad55"/>
+      <text x="5" y="125" fill="#f6ad55" font-size="10" font-family="sans-serif">&gt;150 m</text>
+      <!-- White light indicator -->
+      <circle cx="82" cy="110" r="5" fill="#fff"/>
+      <text x="50" y="100" fill="#fff" font-size="9" font-family="sans-serif">bílé světlo</text>
+
+      <!-- Safe side right -->
+      <text x="115" y="105" fill="#38a169" font-size="10" font-family="sans-serif">bezpečná</text>
+      <text x="115" y="118" fill="#38a169" font-size="10" font-family="sans-serif">strana</text>
+      <path d="M142,108 Q160,108 170,90" fill="none" stroke="#38a169" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+      <!-- Danger zone fill -->
+      <path d="M82,110 Q40,80 10,90 Q10,130 10,130 Q40,140 82,110" fill="#e53e3e" opacity="0.15"/>
+      <text x="20" y="88" fill="#e53e3e" font-size="9" font-family="sans-serif">nebezpečí</text>
+      <text x="20" y="100" fill="#e53e3e" font-size="9" font-family="sans-serif">(sítě)</text>
+    </svg>
+  </div>
+
+</div>
+
+<h3>Klíčové pravidlo</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Světla na stožáru</th>
+      <th>Typ plavidla</th>
+      <th>Proplutí</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>červená nad bílou</strong> (vertikálně)</td>
+      <td>Plavidlo při rybolovu — základ</td>
+      <td>Opatrnost, obeplout</td>
+    </tr>
+    <tr>
+      <td>červená nad bílou + <strong>extra bílá na boku</strong></td>
+      <td>Rybolov + výzbroj &gt; 150 m na té straně</td>
+      <td>Projet jen na <em>opačném</em> boku (kde bílá není)</td>
+    </tr>
+    <tr>
+      <td>červená–bílá–červená (tři světla)</td>
+      <td>Plavidlo s omezenou manévrovatelností</td>
+      <td>Bílé světlo = průjezdná strana</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ostatní varianty nesedí</h3>
+<ul>
+  <li>
+    <strong>Plavidlo s omezenou možností manévrování</strong> — tato plavidla nesou <em>tři světla vertikálně:
+    červená–bílá–červená</em>, ne dvě. Bílé boční světlo by tam skutečně ukazovalo průjezdnou stranu,
+    ale kombinace by vypadala jinak.
+  </li>
+  <li>
+    <strong>Stojící plavidlo s nebezpečnou kotvou</strong> — kotevní světelná signalizace je odlišná
+    (kotevní světlo = bílé vše­směrové); tato kombinace se pro kotevní signalizaci nepoužívá.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Pokud potkáš toto plavidlo, sítě nebo vlece mohou být více než 150 metrů na straně,
+  kde svítí extra bílé světlo — motorový člunek nebo motorová jachta by se mohly zachytit.
+  Projet je bezpečné jen na <strong>opačné straně</strong>, kde bílé boční světlo není.
+</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — příloha č. 3 (světelná signalizace plavidel při rybolovu).</p>

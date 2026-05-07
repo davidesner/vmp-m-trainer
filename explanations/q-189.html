@@ -1,0 +1,106 @@
+<h2>Převozní loď neplující volně</h2>
+
+<p><strong>Zelené světlo nad bílým světlem</strong> — obě stálá, viditelná ze všech stran — označuje <strong>převozní loď (přívoz), která nepluje volně</strong>. Plavidlo je vedeno kabelem, lanem nebo jiným způsobem omezeno v pohybu; přejíždí příčně přes vodní cestu po pevné dráze a nemůže volně měnit kurz.</p>
+
+<h3>Dekódování signálu</h3>
+
+<div style="display:flex; gap:32px; flex-wrap:wrap; align-items:flex-start; margin: 16px 0;">
+
+  <!-- Schéma z testu -->
+  <div>
+    <p style="margin:0 0 6px 0; font-size:0.85em; color:#666;">Schéma v testu</p>
+    <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Černé pozadí -->
+      <rect width="160" height="200" fill="#111"/>
+      <!-- Voda -->
+      <g stroke="#3a8fcc" stroke-width="1.5" fill="none">
+        <path d="M0,155 Q20,148 40,155 Q60,162 80,155 Q100,148 120,155 Q140,162 160,155"/>
+        <path d="M0,165 Q20,158 40,165 Q60,172 80,165 Q100,158 120,165 Q140,172 160,165"/>
+        <path d="M0,175 Q20,168 40,175 Q60,182 80,175 Q100,168 120,175 Q140,182 160,175"/>
+        <path d="M0,185 Q20,178 40,185 Q60,192 80,185 Q100,178 120,185 Q140,192 160,185"/>
+      </g>
+      <!-- Trup plavidla -->
+      <polygon points="20,150 140,150 150,140 130,130 30,130 10,140" fill="none" stroke="white" stroke-width="2"/>
+      <!-- Stěžeň -->
+      <line x1="80" y1="130" x2="80" y2="60" stroke="white" stroke-width="2"/>
+      <!-- Příčná ráhna (trojúhelníkový tvar) -->
+      <line x1="35" y1="140" x2="80" y2="115" stroke="white" stroke-width="1.5"/>
+      <line x1="125" y1="140" x2="80" y2="115" stroke="white" stroke-width="1.5"/>
+      <!-- Zelené světlo (nahoře) -->
+      <circle cx="80" cy="65" r="10" fill="#00cc44"/>
+      <!-- Bílé světlo (dole) -->
+      <circle cx="80" cy="88" r="10" fill="white"/>
+      <!-- Popisky -->
+      <text x="96" y="69" fill="#00cc44" font-size="11" font-family="sans-serif">zelená</text>
+      <text x="96" y="92" fill="white" font-size="11" font-family="sans-serif">bílá</text>
+    </svg>
+  </div>
+
+  <!-- Boční pohled s popisem -->
+  <div>
+    <p style="margin:0 0 6px 0; font-size:0.85em; color:#666;">Co to znamená</p>
+    <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="200" fill="#f0f7ff"/>
+
+      <!-- Břehy řeky -->
+      <rect x="0" y="150" width="320" height="20" fill="#8B6914" rx="2"/>
+      <rect x="0" y="20" width="320" height="20" fill="#8B6914" rx="2"/>
+
+      <!-- Voda -->
+      <rect x="0" y="40" width="320" height="110" fill="#c8e8f8"/>
+      <path d="M0,65 Q40,60 80,65 Q120,70 160,65 Q200,60 240,65 Q280,70 320,65" stroke="#90c8e8" stroke-width="1" fill="none"/>
+      <path d="M0,90 Q40,85 80,90 Q120,95 160,90 Q200,85 240,90 Q280,95 320,90" stroke="#90c8e8" stroke-width="1" fill="none"/>
+      <path d="M0,115 Q40,110 80,115 Q120,120 160,115 Q200,110 240,115 Q280,120 320,115" stroke="#90c8e8" stroke-width="1" fill="none"/>
+
+      <!-- Kabel/lano přívozní lodě -->
+      <line x1="10" y1="38" x2="310" y2="38" stroke="#996633" stroke-width="2.5" stroke-dasharray="6,3"/>
+
+      <!-- Trup přívozní lodě -->
+      <rect x="130" y="82" width="60" height="28" fill="#ddd" stroke="#555" stroke-width="2" rx="3"/>
+      <polygon points="130,82 190,82 196,70 124,70" fill="#ccc" stroke="#555" stroke-width="2"/>
+
+      <!-- Stěžeň -->
+      <line x1="160" y1="70" x2="160" y2="38" stroke="#555" stroke-width="2"/>
+      <!-- Zelené světlo -->
+      <circle cx="160" cy="44" r="7" fill="#00cc44"/>
+      <!-- Bílé světlo -->
+      <circle cx="160" cy="58" r="7" fill="white" stroke="#ccc" stroke-width="1"/>
+
+      <!-- Šipka pohybu (příčně) -->
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#e74c3c"/>
+        </marker>
+      </defs>
+      <line x1="200" y1="96" x2="290" y2="96" stroke="#e74c3c" stroke-width="2" marker-end="url(#arr)"/>
+      <text x="225" y="112" fill="#e74c3c" font-size="10" font-family="sans-serif">pohyb příčně</text>
+
+      <!-- Popisky světel -->
+      <text x="170" y="48" fill="#00aa33" font-size="11" font-family="sans-serif" font-weight="bold">zelená — nahoře</text>
+      <text x="170" y="63" fill="#555" font-size="11" font-family="sans-serif">bílá — dole</text>
+
+      <!-- Popis kabelu -->
+      <text x="10" y="35" fill="#663300" font-size="10" font-family="sans-serif">kabel / lano</text>
+
+      <!-- Břehy popis -->
+      <text x="5" y="147" fill="#5a3e00" font-size="10" font-family="sans-serif">břeh</text>
+      <text x="5" y="175" fill="#5a3e00" font-size="10" font-family="sans-serif">břeh</text>
+    </svg>
+  </div>
+
+</div>
+
+<h3>Klíčové pravidlo</h3>
+<p>Pořadí světel na stěžni je snadné si zapamatovat: <strong>G</strong>reen = <strong>G</strong>o přes (zelená = přívoz jede napříč). Bílá pod zelenou doplňuje kombinaci, která je vyhrazena jen pro tento typ plavidla.</p>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Vlečené plavidlo přepravující nebezpečný náklad</strong> nese modré zábleskové světlo dle předpisů ADN — zcela odlišná kombinace.</li>
+  <li><strong>Plavidlo, které ztratilo manévrovací schopnost</strong>, na vnitrozemských vodních cestách nemá standardizovaný světelný kód zelená+bílá. Zelená nad bílou je vyhrazena výhradně pro přívoz neplující volně.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Když v noci uvidíte tuto kombinaci světel, víte, že plavidlo přejíždí příčně přes řeku a <strong>nemůže změnit kurz ani uhnout</strong>. Povinnost předejití je na vás — přívoz má omezené manévrování dané kabelem nebo lanem.</p>
+
+<h3>Zdroje</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, § 3.27 (signalizace převozních lodí)</p>

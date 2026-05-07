@@ -1,0 +1,64 @@
+<h2>Příkazová tabule se šipkou</h2>
+
+<p>Otázka ukazuje bílý obdélník s červeným rámem a černou šipkou (v testu šipka míří doprava). Jde o <strong>obecný příkazový znak</strong> — příkaz plout ve směru šipky.</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levý panel: reprodukce znaku z testu -->
+  <div style="text-align:center;">
+    <svg width="140" height="110" viewBox="0 0 140 110">
+      <!-- červený rám -->
+      <rect x="4" y="4" width="132" height="102" rx="6" ry="6" fill="#cc2200"/>
+      <!-- bílý vnitřek -->
+      <rect x="14" y="14" width="112" height="82" rx="3" ry="3" fill="white"/>
+      <!-- černá šipka doprava -->
+      <polygon points="45,42 45,68 85,68 85,82 125,55 85,28 85,42" fill="#1a1a1a"/>
+    </svg>
+    <p style="font-size:0.82em; color:#555; margin-top:4px;">Znak v testu</p>
+  </div>
+
+  <!-- Pravý panel: dekódování -->
+  <div style="max-width:340px;">
+    <table style="border-collapse:collapse; font-size:0.9em;">
+      <thead>
+        <tr style="background:#f0f0f0;">
+          <th style="padding:6px 10px; border:1px solid #ccc; text-align:left;">Vizuální prvek</th>
+          <th style="padding:6px 10px; border:1px solid #ccc; text-align:left;">Význam</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:6px 10px; border:1px solid #ccc;">Červený rám</td>
+          <td style="padding:6px 10px; border:1px solid #ccc;">Příkaz — povinnost, ne doporučení</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 10px; border:1px solid #ccc;">Bílý podklad</td>
+          <td style="padding:6px 10px; border:1px solid #ccc;">Obecná příkazová kategorie</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 10px; border:1px solid #ccc;">Černá šipka</td>
+          <td style="padding:6px 10px; border:1px solid #ccc;">Povinný směr plavby</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>„Jednosměrná plavba"</strong> — má vlastní specifický znak, ne prostou šipku v červeném rámu.</li>
+  <li><strong>„Přidržovat se pravého boku plavební dráhy"</strong> — pro tento příkaz existuje jiný vyhrazený znak (modrá deska s pruhem/šipkou naznačující pravý bok). Šipka v červeném rámu říká pouze „jeď tímto směrem", neurčuje stranu dráhy.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Tabuli potkáš tam, kde nelze plavbu ponechat na vlastním uvážení — u stavidel, před průjezdem mostem s vymezením, nebo na větvení vodní cesty. Lodivod musí jet přesně ve směru šipky.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — příkazové tabule (obecné příkazové znaky)</li>
+</ul>

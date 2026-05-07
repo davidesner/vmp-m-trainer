@@ -1,0 +1,77 @@
+<h2>Signální znak: červené + bílé světlo</h2>
+
+<p>Signál zobrazuje dvě světla svisle nad sebou — <strong>červené nahoře</strong> a <strong>bílé dole</strong>. Tato kombinace znamená:</p>
+
+<h3>✓ Zákaz vytvářet vlnobití nebo sání</h3>
+
+<p>Jde o zákazový signál platný pro způsob plavby — musíte zpomalit na minimální plavební rychlost (jen tolik, abyste ovládali plavidlo), aby vaše plavidlo <strong>nevytvářelo vlny ani sání</strong>, které by mohly ohrozit jiná plavidla, plovoucí zařízení nebo objekty u břehu.</p>
+
+<div style="text-align:center; margin:24px 0;">
+  <svg width="320" height="260" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">
+
+    <!-- Obrázek ze zadání: replika signálu -->
+    <g>
+      <text x="80" y="20" font-size="12" fill="#666" text-anchor="middle">Signál v testu</text>
+      <!-- červené světlo -->
+      <circle cx="80" cy="70" r="34" fill="#e53e3e" stroke="#c53030" stroke-width="2"/>
+      <!-- bílé světlo -->
+      <circle cx="80" cy="160" r="34" fill="white" stroke="#333" stroke-width="3"/>
+      <!-- popisky -->
+      <text x="80" y="115" font-size="11" fill="#c53030" text-anchor="middle" font-weight="bold">červené</text>
+      <text x="80" y="205" font-size="11" fill="#555" text-anchor="middle">bílé</text>
+    </g>
+
+    <!-- Šipka -->
+    <line x1="140" y1="115" x2="165" y2="115" stroke="#888" stroke-width="2" marker-end="url(#arr)"/>
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#888"/>
+      </marker>
+    </defs>
+
+    <!-- Výklad: plavidlo a vlny -->
+    <g transform="translate(175,40)">
+      <text x="65" y="-20" font-size="12" fill="#666" text-anchor="middle">Realita na vodě</text>
+
+      <!-- břeh -->
+      <rect x="0" y="150" width="130" height="20" fill="#8B7355" rx="2"/>
+      <text x="65" y="165" font-size="10" fill="white" text-anchor="middle">BŘEH / PŘÍSTAV</text>
+
+      <!-- voda -->
+      <rect x="0" y="100" width="130" height="50" fill="#bee3f8" rx="0"/>
+
+      <!-- ukotvenost (malé plavidlo u břehu) -->
+      <rect x="5" y="88" width="30" height="16" fill="#e2e8f0" stroke="#555" stroke-width="1.5" rx="2"/>
+      <text x="20" y="84" font-size="9" fill="#555" text-anchor="middle">ukotveno</text>
+
+      <!-- projíždějící plavidlo s čárou -->
+      <rect x="60" y="93" width="50" height="14" fill="#4a90d9" stroke="#2b6cb0" stroke-width="1.5" rx="3"/>
+      <text x="85" y="104" font-size="9" fill="white" text-anchor="middle">→ plavidlo</text>
+
+      <!-- zakázané vlny (přeškrtnuté) -->
+      <path d="M 38 120 Q 50 113 62 120" stroke="#e53e3e" stroke-width="2" fill="none"/>
+      <path d="M 50 117 L 56 125" stroke="#e53e3e" stroke-width="2"/>
+      <path d="M 56 117 L 50 125" stroke="#e53e3e" stroke-width="2"/>
+      <text x="65" y="140" font-size="10" fill="#c53030" text-anchor="middle">no vlny / sání!</text>
+
+      <!-- signál u břehu -->
+      <circle cx="122" cy="60" r="8" fill="#e53e3e"/>
+      <circle cx="122" cy="80" r="8" fill="white" stroke="#333" stroke-width="1.5"/>
+      <line x1="122" y1="88" x2="122" y2="100" stroke="#555" stroke-width="2"/>
+      <text x="108" y="55" font-size="9" fill="#555" text-anchor="end">signál</text>
+    </g>
+  </svg>
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Průjezd zakázán"</strong> — zobrazuje se jako <em>tři červená světla</em> (trojúhelníkově nebo vodorovně), bez bílého světla. Úplně zakazuje průjezd místem.</li>
+  <li><strong>„Příkaz zůstat stát před tímto znakem"</strong> — zobrazuje se jako <em>jedno nebo dvě červená světla</em> bez bílé složky. Jde o stop-signál, ne omezení způsobu jízdy.</li>
+</ul>
+<p>Bílé světlo v kombinaci červená + bílá je rozpoznávacím prvkem právě pro <strong>zákaz vlnobití/sání</strong> — odlišuje ho od úplného zákazu průjezdu.</p>
+
+<h3>Prakticky</h3>
+<p>Tento signál se instaluje u zimovišť, přístavišť nebo míst s ukotvénými plavidly. Při jeho spatření zpomalíte na minimální plavební rychlost — takovou, abyste plavidlo ovládali, ale nevytvářeli vlny ani sání nebezpečné okolí.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha — signální znaky (plavební signalizace).</p>

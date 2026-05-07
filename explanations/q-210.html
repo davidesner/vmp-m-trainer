@@ -1,0 +1,114 @@
+<h2>Signalizační znak na plavidle — zákaz bočního stání</h2>
+
+<p>
+  Otázka se ptá na <strong>signalizační znak umístěný přímo na plavidle</strong>:
+  bílý štítek s červeným rámcem, přeškrtnutým <strong>P</strong> a číslem <strong>20</strong> pod ním
+  (tvar dolů zahroceného čtyřúhelníku — „visací štítek").
+</p>
+
+<h3>Správná odpověď</h3>
+<p>
+  Znak znamená <strong>zákaz bočního stání plavidel ve vzdálenosti vyznačené na znaku v metrech</strong>
+  — tedy jiná plavidla nesmí k tomuto plavidlu přistát <em>bokem</em> (bok na bok) ve vzdálenosti 20 m.
+</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levá část: znak z testu -->
+  <div style="text-align:center;">
+    <p style="font-size:0.8em; color:#555; margin-bottom:6px;">Jak vypadá znak</p>
+    <svg width="100" height="130" viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- Tělo znaku — zahrocený dolů -->
+      <polygon points="5,5 95,5 95,95 50,125 5,95" fill="white" stroke="#c0392b" stroke-width="5"/>
+      <!-- Červené pozadí pro P -->
+      <rect x="15" y="14" width="70" height="70" fill="#c0392b" rx="3"/>
+      <!-- Bílé P -->
+      <text x="50" y="68" font-size="52" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial,sans-serif">P</text>
+      <!-- Červená diagonální čára přes P -->
+      <line x1="18" y1="78" x2="82" y2="16" stroke="#c0392b" stroke-width="9"/>
+      <line x1="18" y1="78" x2="82" y2="16" stroke="white" stroke-width="5"/>
+      <!-- Číslo 20 -->
+      <text x="50" y="115" font-size="17" font-weight="bold" fill="#222" text-anchor="middle" font-family="Arial,sans-serif">20</text>
+    </svg>
+  </div>
+
+  <!-- Pravá část: pohled shora — schéma situace -->
+  <div style="text-align:center;">
+    <p style="font-size:0.8em; color:#555; margin-bottom:6px;">Co znak znamená — pohled shora</p>
+    <svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <rect width="320" height="180" fill="#cce7f5"/>
+
+      <!-- Hlavní plavidlo (se znakem) — uprostřed -->
+      <rect x="110" y="70" width="100" height="40" rx="6" fill="#2c3e50" stroke="#1a252f" stroke-width="2"/>
+      <text x="160" y="95" font-size="10" fill="white" text-anchor="middle" font-family="Arial,sans-serif">plavidlo se znakem</text>
+      <!-- Malá ikona znaku na plavidle -->
+      <polygon points="152,73 168,73 168,83 160,88 152,83" fill="white" stroke="#c0392b" stroke-width="1.5"/>
+      <text x="160" y="80" font-size="7" font-weight="bold" fill="#c0392b" text-anchor="middle" font-family="Arial,sans-serif">P̶</text>
+
+      <!-- Zakázaná zóna — boky (20 m = vizuálně ~30px) -->
+      <rect x="80" y="70" width="30" height="40" fill="#e74c3c" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4,3"/>
+      <rect x="210" y="70" width="30" height="40" fill="#e74c3c" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4,3"/>
+
+      <!-- Šipka 20m — levá strana -->
+      <line x1="80" y1="55" x2="110" y2="55" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="110" y1="55" x2="80" y2="55" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arr)"/>
+      <text x="95" y="51" font-size="9" fill="#c0392b" text-anchor="middle" font-family="Arial,sans-serif">20 m</text>
+
+      <!-- ZAKÁZÁNO text v zóně -->
+      <text x="95" y="93" font-size="7.5" fill="#c0392b" text-anchor="middle" font-family="Arial,sans-serif">ZÁKAZ</text>
+      <text x="225" y="93" font-size="7.5" fill="#c0392b" text-anchor="middle" font-family="Arial,sans-serif">ZÁKAZ</text>
+
+      <!-- Povoleno — přídě a záď -->
+      <rect x="50" y="78" width="30" height="24" fill="#27ae60" fill-opacity="0.18" stroke="#27ae60" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="65" y="92" font-size="7" fill="#27ae60" text-anchor="middle" font-family="Arial,sans-serif">OK</text>
+      <rect x="240" y="78" width="30" height="24" fill="#27ae60" fill-opacity="0.18" stroke="#27ae60" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="255" y="92" font-size="7" fill="#27ae60" text-anchor="middle" font-family="Arial,sans-serif">OK</text>
+
+      <!-- Legenda -->
+      <rect x="10" y="145" width="12" height="8" fill="#e74c3c" fill-opacity="0.35" stroke="#e74c3c" stroke-width="1"/>
+      <text x="26" y="153" font-size="9" fill="#333" font-family="Arial,sans-serif">zakázaná zóna (boky)</text>
+      <rect x="155" y="145" width="12" height="8" fill="#27ae60" fill-opacity="0.3" stroke="#27ae60" stroke-width="1"/>
+      <text x="171" y="153" font-size="9" fill="#333" font-family="Arial,sans-serif">stání povoleno (příď/záď)</text>
+
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#e74c3c"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li>
+    <strong>„Zákaz stání jiných plavidel"</strong> (bez přívlastku „bočního") je příliš obecná formulace —
+    zakazovala by i kotvení před přídí nebo zádí, což tento znak neznamená.
+    Přistání ze záďové či příďové strany zůstává povoleno.
+  </li>
+  <li>
+    <strong>„Zákaz stání před přídí a zádí"</strong> popisuje opačnou konfiguraci —
+    zabraňuje plavidlům kotvit v podélné ose plavidla (před / za ním), nikoli po jeho bocích.
+    Takový zákaz by byl vyjádřen jiným znakem.
+  </li>
+</ul>
+
+<h3>Číslo na znaku</h3>
+<p>
+  Číslo pod přeškrtnutým <strong>P</strong> je vzdálenost v metrech, do níž zákaz platí.
+  Hodnota 20 m je běžná. U plavidel přepravujících nebezpečný náklad (ADN) bývají
+  hodnoty výrazně větší — 50 m, 100 m i více.
+</p>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Znak uvidíš typicky na přívozech a trajektech při nakládání, na plavidlech s nebezpečným
+  nákladem nebo na servisních a technických plavidlech při práci na vodní cestě.
+  Při míjení takového plavidla musíš zachovat boční odstup alespoň v uvedené vzdálenosti.
+</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha — signalizační znaky na plavidlech.</p>

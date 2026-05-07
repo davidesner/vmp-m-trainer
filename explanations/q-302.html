@@ -1,0 +1,109 @@
+<h2>Plavební tabule — modrý čtverec s číslem 40</h2>
+
+<p>
+  Tabule zobrazuje <strong>modrý čtverec s bílým číslem 40</strong>. Správný výklad je:
+  <strong>stání povoleno v šířce 40 m</strong>.
+</p>
+
+<h3>Jak číst tento znak</h3>
+<p>
+  Barva a tvar tabule určují její kategorii:
+</p>
+<ul>
+  <li><strong>Modrý čtverec</strong> = dovolující / informační příkaz (podobně jako modré kruhové značky v silničním provozu)</li>
+  <li><strong>Číslo na tabuli</strong> = parametr, který se ke znaku váže — zde vzdálenost od břehu v metrech</li>
+</ul>
+<p>
+  Tabule tedy říká: v tomto úseku <strong>smíš stát (kotvit / přístavovat) v pásu 40 metrů od břehu</strong>.
+</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Znak samotný -->
+  <div style="text-align:center;">
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="8" fill="#5b9bd5"/>
+      <text x="50" y="68" font-size="48" font-weight="bold" fill="white"
+            text-anchor="middle" font-family="Arial, sans-serif">40</text>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:6px;">Tabule PP (stání povoleno)</div>
+  </div>
+
+  <!-- Schéma situace na vodě -->
+  <div style="text-align:center;">
+    <svg width="280" height="160" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <rect x="0" y="0" width="280" height="160" fill="#cce5ff"/>
+
+      <!-- Břeh -->
+      <rect x="0" y="0" width="40" height="160" fill="#c8a96e"/>
+      <text x="20" y="85" font-size="11" fill="#5a3e1b" text-anchor="middle"
+            font-family="Arial, sans-serif" transform="rotate(-90,20,85)">BŘEH</text>
+
+      <!-- Povolen pás 40 m -->
+      <rect x="40" y="0" width="100" height="160" fill="#a8d8f0" opacity="0.6"/>
+      <line x1="140" y1="0" x2="140" y2="160" stroke="#1a6ea8" stroke-width="2" stroke-dasharray="6,4"/>
+
+      <!-- Šipka + popis 40 m -->
+      <line x1="40" y1="20" x2="140" y2="20" stroke="#1a6ea8" stroke-width="1.5"
+            marker-start="url(#arr)" marker-end="url(#arr2)"/>
+      <text x="90" y="15" font-size="11" fill="#1a6ea8" text-anchor="middle"
+            font-family="Arial, sans-serif" font-weight="bold">40 m</text>
+
+      <!-- Loď (plavidlo) v povoleném pásmu -->
+      <ellipse cx="100" cy="90" rx="24" ry="10" fill="#2c7be5" opacity="0.9"/>
+      <rect x="100" y="78" width="2" height="14" fill="#1a3c6e"/>
+      <text x="100" y="120" font-size="10" fill="#1a3c6e" text-anchor="middle"
+            font-family="Arial, sans-serif">stojící plavidlo ✓</text>
+
+      <!-- Popis pásma -->
+      <text x="90" y="145" font-size="10" fill="#1a6ea8" text-anchor="middle"
+            font-family="Arial, sans-serif">povolená zóna stání</text>
+
+      <!-- Zbytek vody — bez povolení -->
+      <text x="210" y="85" font-size="10" fill="#666" text-anchor="middle"
+            font-family="Arial, sans-serif">volná voda</text>
+      <text x="210" y="100" font-size="10" fill="#666" text-anchor="middle"
+            font-family="Arial, sans-serif">(jiná pravidla)</text>
+
+      <!-- Šipkové markery -->
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M6,0 L0,3 L6,6" fill="none" stroke="#1a6ea8" stroke-width="1"/>
+        </marker>
+        <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse">
+          <path d="M6,0 L0,3 L6,6" fill="none" stroke="#1a6ea8" stroke-width="1"/>
+        </marker>
+      </defs>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:6px;">Situace na vodě — pohled shora</div>
+  </div>
+
+</div>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li>
+    <strong>„Nejvyšší povolená rychlost 40 km/h"</strong> — rychlostní omezení má na vodních cestách jiný grafický vzhled
+    (typicky červené ohraničení nebo odlišný tvar), ne prostý modrý čtverec s číslem.
+  </li>
+  <li>
+    <strong>„Plavební dráha je široká 40 m"</strong> — šířka plavební dráhy se neoznačuje touto tabulí;
+    uvádí se v plaveckých dokumentech nebo vytyčením bojemi.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Když uvidíte tuto tabuli u břehu, smíte stát (kotvit, přístavovat) v pásu do 40 m od toho břehu.
+  Je to typicky relevantní v úsecích, kde je stání jinak omezeno — například u průmyslových přístavů,
+  v zátoce nebo u rekreačních zón.
+</p>
+
+<h3>Zdroj</h3>
+<p>
+  Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách,
+  příloha č. 7 — plavební znaky (tabule skupiny PP).
+</p>

@@ -1,0 +1,143 @@
+<h2>Denní signalizační znaky pracujícího plavidla</h2>
+
+<p>
+  Otázka ukazuje loď s <strong>červenou koulí na levém boku</strong> a
+  <strong>dvěma zelenými kosočtverci na pravém boku</strong>. Tuto kombinaci nesou
+  <strong>plovoucí stroje nebo plavidla vykonávající práci na vodní cestě, kolem nichž lze proplout jen po jedné straně</strong>
+  (bagrování, pokládka kabelů, práce jeřábu apod.).
+</p>
+
+<h3>Jak znaky číst</h3>
+
+<!-- Vizualizace: vlevo "co vidíš v testu", vpravo "co to znamená" -->
+<div style="margin: 20px 0;">
+  <svg viewBox="0 0 620 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;display:block;margin:auto;font-family:sans-serif;">
+
+    <!-- === LEVÁ ČÁST: schéma z testu === -->
+    <rect x="0" y="0" width="300" height="260" rx="8" fill="#f0f4fa" stroke="#c0cce0" stroke-width="1.5"/>
+    <text x="150" y="22" text-anchor="middle" font-size="12" fill="#555" font-weight="bold">Co vidíš v testu</text>
+
+    <!-- loď trup -->
+    <polygon points="95,130 205,130 195,175 105,175" fill="#dce3ec" stroke="#555" stroke-width="2"/>
+    <!-- příď (špička) -->
+    <polygon points="105,130 195,130 150,110" fill="#c8d0dc" stroke="#555" stroke-width="2"/>
+    <!-- nástavba / most -->
+    <rect x="130" y="118" width="40" height="18" rx="2" fill="#bbb" stroke="#555" stroke-width="1.5"/>
+    <!-- stěžeň -->
+    <line x1="150" y1="80" x2="150" y2="118" stroke="#555" stroke-width="2.5"/>
+    <!-- ráhno vlevo -->
+    <line x1="150" y1="88" x2="110" y2="88" stroke="#555" stroke-width="2"/>
+    <!-- červená koule vlevo -->
+    <circle cx="108" cy="82" r="14" fill="#e53935" stroke="#b71c1c" stroke-width="2"/>
+    <!-- ráhno vpravo -->
+    <line x1="150" y1="88" x2="190" y2="88" stroke="#555" stroke-width="2"/>
+    <!-- zelený kosočtverec 1 vpravo (nahoře) -->
+    <polygon points="190,72 202,82 190,92 178,82" fill="#43a047" stroke="#2e7d32" stroke-width="1.5"/>
+    <!-- zelený kosočtverec 2 vpravo (dole) -->
+    <polygon points="190,95 202,105 190,115 178,105" fill="#43a047" stroke="#2e7d32" stroke-width="1.5"/>
+
+    <!-- kotevní řetěz -->
+    <line x1="150" y1="175" x2="150" y2="218" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
+    <!-- kotva -->
+    <text x="150" y="234" text-anchor="middle" font-size="22" fill="#444">⚓</text>
+
+    <!-- vlnky vody -->
+    <path d="M60,178 Q75,170 90,178 Q105,186 120,178 Q135,170 150,178 Q165,186 180,178 Q195,170 210,178 Q225,186 240,178" fill="none" stroke="#5b9bd5" stroke-width="2"/>
+
+    <!-- popisky -->
+    <text x="90" y="76" text-anchor="middle" font-size="11" fill="#c62828">●</text>
+    <text x="57" y="90" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">červená</text>
+    <text x="57" y="102" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">koule</text>
+
+    <text x="243" y="88" text-anchor="start" font-size="10" fill="#2e7d32" font-weight="bold">zelené</text>
+    <text x="243" y="100" text-anchor="start" font-size="10" fill="#2e7d32" font-weight="bold">kosočtverce</text>
+    <text x="243" y="112" text-anchor="start" font-size="10" fill="#2e7d32" font-weight="bold">(2 ks)</text>
+
+    <!-- === PRAVÁ ČÁST: co to znamená === -->
+    <rect x="320" y="0" width="300" height="260" rx="8" fill="#f0faf4" stroke="#c0ddc0" stroke-width="1.5"/>
+    <text x="470" y="22" text-anchor="middle" font-size="12" fill="#555" font-weight="bold">Co to znamená</text>
+
+    <!-- vodní cesta shora — pohled z ptačí perspektivy -->
+    <!-- břehy -->
+    <rect x="330" y="35" width="280" height="210" rx="6" fill="#d0e8f8"/>
+    <rect x="330" y="35" width="40" height="210" rx="4" fill="#c8b880"/>
+    <rect x="570" y="35" width="40" height="210" rx="4" fill="#c8b880"/>
+
+    <!-- pracující plavidlo (pohled shora) -->
+    <ellipse cx="470" cy="140" rx="28" ry="18" fill="#bbb" stroke="#555" stroke-width="2"/>
+    <text x="470" y="144" text-anchor="middle" font-size="11" fill="#333">⚙</text>
+
+    <!-- ZAKÁZANÝ průjezd vlevo -->
+    <line x1="375" y1="140" x2="440" y2="140" stroke="#e53935" stroke-width="2.5" stroke-dasharray="6,4"/>
+    <text x="407" y="130" text-anchor="middle" font-size="18" fill="#e53935">✕</text>
+    <text x="407" y="162" text-anchor="middle" font-size="9" fill="#c62828" font-weight="bold">NELZE PROJET</text>
+
+    <!-- POVOLEN průjezd vpravo -->
+    <!-- šipka průjezdu -->
+    <path d="M500,90 Q540,90 540,120 L540,155 Q540,185 500,190" fill="none" stroke="#43a047" stroke-width="2.5" stroke-dasharray="none"/>
+    <polygon points="498,85 510,90 498,95" fill="#43a047"/>
+    <polygon points="498,185 510,190 498,195" fill="#43a047"/>
+    <text x="560" y="142" text-anchor="middle" font-size="9" fill="#2e7d32" font-weight="bold">PROJET</text>
+    <text x="560" y="152" text-anchor="middle" font-size="9" fill="#2e7d32" font-weight="bold">TOUTO</text>
+    <text x="560" y="162" text-anchor="middle" font-size="9" fill="#2e7d32" font-weight="bold">STRANOU</text>
+
+    <!-- legenda -->
+    <circle cx="345" cy="228" r="7" fill="#e53935"/>
+    <text x="357" y="232" font-size="10" fill="#333">= průjezd zakázán</text>
+
+    <polygon points="345,243 352,250 345,257 338,250" fill="#43a047"/>
+    <text x="357" y="252" font-size="10" fill="#333">= průjezd povolen</text>
+  </svg>
+</div>
+
+<h3>Přehled znaků</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Strana plavidla</th>
+      <th>Denní znak</th>
+      <th>Pokyn pro ostatní</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Strana, kde průjezd <strong>není možný</strong></td>
+      <td>1× červená koule</td>
+      <td>Neprojíždět — překáží pracovní zařízení</td>
+    </tr>
+    <tr>
+      <td>Strana, kde průjezd <strong>je možný</strong></td>
+      <td>2× zelený kosočtverec</td>
+      <td>Projíždět touto stranou</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>Paměťová pomůcka:</strong> červená = stop, zelená = průjezd — stejná logika jako semafor.
+</p>
+
+<h3>Proč ostatní možnosti nesedí</h3>
+<ul>
+  <li>
+    <strong>Plavidlo, které ztratilo manévrovací schopnost</strong> — za dne nese
+    <em>3 černé koule ve svislé řadě</em>. Jde o nouzový stav, ne plánovanou pracovní operaci.
+  </li>
+  <li>
+    <strong>Plavidlo s omezenou možností manévrování vyžadující přistání pomocného plavidla k levému boku</strong> — tento stav se označuje odlišnou kombinací znaků;
+    červená koule + zelené kosočtverce specificky patří pracujícím plovoucím strojům.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Při setkání s bagrem, plovoucím jeřábem nebo dredgrem na řece projíždíš výhradně
+  ze strany zelených kosočtverců. Ke straně červené koule se nepřibližuješ —
+  může tam být ponořené pracovní zařízení, kabel, sací vedení nebo jiná podvodní překážka.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, § 6.27 (signalizace plovoucích strojů)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

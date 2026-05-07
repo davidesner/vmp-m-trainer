@@ -1,0 +1,90 @@
+<h2>Signální znak (plovatka) — označení překážky při pravém břehu</h2>
+
+<p>Na obrázku je plovatka s <strong>červeno-bílými vodorovnými pruhy</strong> a <strong>červeným čtvercovým topmarkem</strong>. Tato kombinace jednoznačně označuje <strong>překážku nebo nebezpečné místo u pravého břehu</strong>.</p>
+
+<h3>Barevný kód systému SIGNI</h3>
+
+<p>Česká vnitrozemská plavba používá evropský systém SIGNI. Jeho základní pravidlo:</p>
+<ul>
+  <li><strong>Červená</strong> = pravý břeh / pravá strana plavební dráhy</li>
+  <li><strong>Zelená</strong> = levý břeh / levá strana plavební dráhy</li>
+</ul>
+<p>Pravý a levý břeh se vždy určuje <strong>pohledem po proudu</strong> (ve směru toku).</p>
+
+<h3>Vizualizace: plovatka a její umístění</h3>
+
+<div style="display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start; margin:16px 0;">
+
+  <!-- Levá část: symbol jak je v testu -->
+  <div style="text-align:center;">
+    <p style="font-size:0.85em; color:#555; margin-bottom:8px;">Jak vypadá v testu</p>
+    <svg width="90" height="180" viewBox="0 0 90 180">
+      <!-- vlny -->
+      <path d="M5,155 Q20,145 35,155 Q50,165 65,155 Q80,145 90,155" fill="none" stroke="#5b9bd5" stroke-width="2.5"/>
+      <path d="M0,165 Q20,155 40,165 Q60,175 80,165 Q85,160 90,165" fill="none" stroke="#5b9bd5" stroke-width="2.5"/>
+      <!-- tyč plovatky -->
+      <rect x="42" y="30" width="6" height="120" fill="#ccc"/>
+      <!-- pruhy červeno-bílé shora dolů -->
+      <rect x="30" y="30" width="30" height="18" fill="#cc2222" rx="2"/>
+      <rect x="30" y="48" width="30" height="18" fill="white" stroke="#aaa" stroke-width="0.5" rx="2"/>
+      <rect x="30" y="66" width="30" height="18" fill="#cc2222" rx="2"/>
+      <rect x="30" y="84" width="30" height="18" fill="white" stroke="#aaa" stroke-width="0.5" rx="2"/>
+      <rect x="30" y="102" width="30" height="18" fill="#cc2222" rx="2"/>
+      <!-- topmark — červený čtverec -->
+      <rect x="33" y="14" width="24" height="18" fill="#cc2222" rx="2"/>
+    </svg>
+  </div>
+
+  <!-- Pravá část: pohled shora na vodní cestu -->
+  <div style="text-align:center;">
+    <p style="font-size:0.85em; color:#555; margin-bottom:8px;">Co značí na vodě (pohled shora)</p>
+    <svg width="280" height="180" viewBox="0 0 280 180">
+      <!-- voda -->
+      <rect x="0" y="0" width="280" height="180" fill="#d0e8f8"/>
+      <!-- levý břeh -->
+      <rect x="0" y="0" width="30" height="180" fill="#c8a96e"/>
+      <text x="15" y="95" font-size="10" fill="#6b4f1a" text-anchor="middle" transform="rotate(-90,15,95)">LEVÝ BŘEH</text>
+      <!-- pravý břeh -->
+      <rect x="250" y="0" width="30" height="180" fill="#c8a96e"/>
+      <text x="265" y="95" font-size="10" fill="#6b4f1a" text-anchor="middle" transform="rotate(90,265,95)">PRAVÝ BŘEH</text>
+      <!-- šipka směru proudu -->
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#4a90d9"/>
+        </marker>
+      </defs>
+      <line x1="80" y1="25" x2="200" y2="25" stroke="#4a90d9" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <text x="140" y="18" font-size="9" fill="#4a90d9" text-anchor="middle">směr proudu (po proudu)</text>
+      <!-- překážka u pravého břehu -->
+      <ellipse cx="230" cy="110" rx="20" ry="12" fill="#8B7355" opacity="0.7"/>
+      <text x="230" y="114" font-size="8" fill="#4a2c00" text-anchor="middle">překážka</text>
+      <!-- plovatka -->
+      <rect x="196" y="96" width="12" height="20" fill="#cc2222" rx="2"/>
+      <rect x="196" y="116" width="12" height="20" fill="white" stroke="#aaa" stroke-width="0.5" rx="2"/>
+      <rect x="196" y="136" width="12" height="10" fill="#cc2222" rx="2"/>
+      <rect x="198" y="90" width="8" height="6" fill="#cc2222" rx="1"/>
+      <!-- šipka "plavební dráha tudy" -->
+      <line x1="140" y1="100" x2="140" y2="155" stroke="#1a6e1a" stroke-width="2" marker-end="url(#arrow)"/>
+      <text x="110" y="132" font-size="9" fill="#1a6e1a">plavební</text>
+      <text x="110" y="143" font-size="9" fill="#1a6e1a">dráha</text>
+      <!-- legenda -->
+      <rect x="32" y="155" width="10" height="10" fill="#cc2222"/>
+      <text x="46" y="164" font-size="9" fill="#333">červeno-bílá plovatka = překážka vpravo</text>
+    </svg>
+  </div>
+</div>
+
+<h3>Proč ne ostatní možnosti?</h3>
+<ul>
+  <li><strong>Označení nebezpečného místa při levém břehu</strong> — pro levý břeh se používají <strong>zeleno-bílé</strong> pruhy (zelená = levá strana). Červená barva vždy patří pravé straně.</li>
+  <li><strong>Plovoucí vodočet</strong> — vodočetné plovatky mají zcela jiný vzhled: typicky jsou žluté nebo bíle označené s vyznačenou číselnou stupnicí pro měření hladiny vody. Žádné červeno-bílé pruhy ani topmark.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Jako vůdce plavidla: vidíš-li tuto červeno-bílou plovatku, <strong>nepřibližuj se k pravému břehu</strong> — za plovatkou (směrem k břehu) leží překážka. Plavební dráha vede <strong>nalevo od ní</strong>.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, příloha č. 7 (vytyčovací znaky)</li>
+  <li>Systém SIGNI (Signalisatie en Bebakening voor de Binnenwateren) — evropský standard pro označování vnitrozemských vodních cest</li>
+</ul>

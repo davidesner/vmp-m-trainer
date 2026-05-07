@@ -1,0 +1,70 @@
+<h2>Tabule: vzdálenost plavební dráhy od břehu</h2>
+
+<p>Na obrázku je <strong>červeně orámovaný čtverec s černobílým trojúhelníkem (šipka) a číslem 10</strong>. Tato tabule říká, že <strong>plavební dráha je vzdálena 10 m od pravého (levého) břehu</strong>.</p>
+
+<h3>Jak tabuli číst</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin: 16px 0;">
+
+  <!-- Levý panel: replika tabule -->
+  <div style="text-align:center;">
+    <svg width="120" height="120" viewBox="0 0 120 120">
+      <!-- červený rámeček -->
+      <rect x="2" y="2" width="116" height="116" rx="6" fill="#cc2200" />
+      <!-- bílé pole uvnitř -->
+      <rect x="10" y="10" width="100" height="100" rx="3" fill="white" />
+      <!-- černý trojúhelník šipka doleva -->
+      <polygon points="10,60 80,10 80,110" fill="black" />
+      <!-- číslo 10 -->
+      <text x="82" y="68" font-size="26" font-weight="bold" fill="black" font-family="sans-serif">10</text>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:4px;">Tabule v testu</p>
+  </div>
+
+  <!-- Pravý panel: pohled shora na vodní cestu -->
+  <div style="text-align:center;">
+    <svg width="320" height="160" viewBox="0 0 320 160">
+      <!-- voda -->
+      <rect x="0" y="0" width="320" height="160" fill="#c8e6f5" />
+      <!-- levý břeh -->
+      <rect x="0" y="0" width="40" height="160" fill="#a88060" />
+      <!-- pravý břeh -->
+      <rect x="280" y="0" width="40" height="160" fill="#a8a060" />
+      <!-- plavební dráha (kanál) -->
+      <rect x="100" y="30" width="130" height="100" rx="4" fill="none" stroke="#003399" stroke-width="2.5" stroke-dasharray="8,5" />
+      <text x="165" y="86" text-anchor="middle" font-size="11" fill="#003399" font-weight="bold" font-family="sans-serif">plavební</text>
+      <text x="165" y="100" text-anchor="middle" font-size="11" fill="#003399" font-weight="bold" font-family="sans-serif">dráha</text>
+
+      <!-- šipka od pravého břehu k dráze -->
+      <line x1="280" y1="80" x2="232" y2="80" stroke="#cc2200" stroke-width="2" />
+      <polygon points="232,75 232,85 222,80" fill="#cc2200" />
+      <text x="251" y="74" text-anchor="middle" font-size="11" fill="#cc2200" font-weight="bold" font-family="sans-serif">10 m</text>
+
+      <!-- tabule ikona u pravého břehu -->
+      <rect x="268" y="55" width="18" height="18" rx="2" fill="#cc2200" />
+      <polygon points="270,64 281,57 281,71" fill="black" />
+      <text x="283" y="68" font-size="8" fill="black" font-family="sans-serif">10</text>
+
+      <!-- popis břehů -->
+      <text x="20" y="84" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="sans-serif">levý</text>
+      <text x="20" y="96" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="sans-serif">břeh</text>
+      <text x="300" y="84" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="sans-serif">pravý</text>
+      <text x="300" y="96" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="sans-serif">břeh</text>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:4px;">Pohled shora — šipka ukazuje k blízkému břehu, číslo = vzdálenost v metrech</p>
+  </div>
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Stání povoleno do vzdálenosti 10 m"</strong> — znaky pro stání mají zcela jiný tvar (kotva nebo svislá šipka). Tato tabule se stáním nesouvisí.</li>
+  <li><strong>„Šířka plavebního profilu zúžena o 10 m"</strong> — zúžení má vlastní typ značky (zpravidla šikmé proužky nebo zákazová značka). Tabule s trojúhelníkem a číslem označuje vzdálenost od břehu, ne míru zúžení.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Tabule se osazuje u nebezpečných míst — mělčin, výběžků, pilířů mostů. Kapitán ví: <em>„Stoj! Pravý (levý) břeh je jen 10 metrů od hrany kanálu, nepřibližuj se."</em></p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — příloha definující informační tabule plavebního provozu</li>
+</ul>

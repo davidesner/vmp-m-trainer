@@ -1,0 +1,84 @@
+<h2>Zvukový signál „1 dlouhý + 1 krátký"</h2>
+
+<p><strong>Správná odpověď:</strong> Tento signál znamená <em>„mám v úmyslu provést obrat doprava."</em></p>
+
+<h3>Klíčové pravidlo</h3>
+<p>Ve vnitrozemské plavbě mají zvukové signály přesný rytmický kód:</p>
+<ul>
+  <li><strong>Krátký zvuk</strong> (~1 s) = aktuální pohyb kormidlem (pluji doprava / doleva)</li>
+  <li><strong>Dlouhý zvuk</strong> (~4 s) před krátkými = oznámení záměru <em>obratu</em> — chystám se otočit</li>
+</ul>
+
+<h3>Vizualizace signálů</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340" style="max-width:620px;width:100%;font-family:sans-serif;">
+  <!-- Background -->
+  <rect width="620" height="340" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <text x="310" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a2e">Manévrové zvukové signály — přehled</text>
+
+  <!-- Row 1: 1 krátký -->
+  <rect x="16" y="44" width="588" height="58" fill="#fff" rx="6" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- short pulse -->
+  <rect x="30" y="58" width="18" height="30" fill="#2196F3" rx="3"/>
+  <text x="30" y="98" font-size="10" fill="#555">▪</text>
+  <!-- label -->
+  <text x="70" y="68" font-size="13" font-weight="bold" fill="#2196F3">1 krátký</text>
+  <text x="70" y="85" font-size="12" fill="#333">Pluji doprava (kormidlo doprava, průběžně)</text>
+
+  <!-- Row 2: 2 krátké -->
+  <rect x="16" y="112" width="588" height="58" fill="#fff" rx="6" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="30" y="126" width="18" height="30" fill="#2196F3" rx="3"/>
+  <rect x="54" y="126" width="18" height="30" fill="#2196F3" rx="3"/>
+  <text x="70" y="136" font-size="13" font-weight="bold" fill="#2196F3">2 krátké</text>
+  <text x="70" y="153" font-size="12" fill="#333">Pluji doleva (kormidlo doleva, průběžně)</text>
+
+  <!-- Row 3: HIGHLIGHTED — 1 dlouhý + 1 krátký -->
+  <rect x="16" y="180" width="588" height="66" fill="#fff8e1" rx="6" stroke="#FFC107" stroke-width="2"/>
+  <text x="304" y="198" text-anchor="middle" font-size="10" fill="#e65100" font-weight="bold">✦ TATO OTÁZKA</text>
+  <!-- long pulse -->
+  <rect x="30" y="202" width="44" height="30" fill="#FF9800" rx="3"/>
+  <text x="30" y="242" font-size="10" fill="#555">▬</text>
+  <!-- short pulse after gap -->
+  <rect x="82" y="202" width="18" height="30" fill="#FF9800" rx="3"/>
+  <text x="82" y="242" font-size="10" fill="#555">▪</text>
+  <!-- label -->
+  <text x="116" y="212" font-size="13" font-weight="bold" fill="#e65100">1 dlouhý + 1 krátký</text>
+  <text x="116" y="230" font-size="12" fill="#333">Mám v úmyslu provést <strong>obrat doprava</strong></text>
+
+  <!-- Row 4: 1 dlouhý + 2 krátké -->
+  <rect x="16" y="256" width="588" height="68" fill="#fff" rx="6" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- long pulse -->
+  <rect x="30" y="272" width="44" height="30" fill="#9C27B0" rx="3"/>
+  <text x="30" y="314" font-size="10" fill="#555">▬</text>
+  <!-- 2 short pulses -->
+  <rect x="82" y="272" width="18" height="30" fill="#9C27B0" rx="3"/>
+  <rect x="106" y="272" width="18" height="30" fill="#9C27B0" rx="3"/>
+  <text x="82" y="314" font-size="10" fill="#555">▪ ▪</text>
+  <!-- label -->
+  <text x="140" y="282" font-size="13" font-weight="bold" fill="#9C27B0">1 dlouhý + 2 krátké</text>
+  <text x="140" y="299" font-size="12" fill="#333">Mám v úmyslu provést <strong>obrat doleva</strong></text>
+</svg>
+
+<h3>Proč „dlouhý" před krátkými?</h3>
+<p>
+  Obrat je velký manévr — plavidlo se přetočí přes celou šíři řeky. <strong>Dlouhý zvuk slouží jako varování</strong>:
+  ostatní plavidla dostávají čas reagovat dřív, než manévr začne.
+  Krátký zvuk(y) pak upřesňují, na kterou stranu se obrat provede.
+</p>
+<p>
+  Signál <em>„pluji doprava"</em> (pouhý 1 krátký) naproti tomu oznamuje průběžnou korekci kurzu — nikoliv celé otočení.
+  To je zásadní rozdíl, který tato otázka testuje.
+</p>
+
+<h3>Proč ne ostatní možnosti?</h3>
+<ul>
+  <li><strong>„Pluji doprava"</strong> — to je 1 krátký zvuk bez předcházejícího dlouhého.</li>
+  <li><strong>„Stojím při pravém břehu"</strong> — poloha u břehu se zvukovým manévrovým signálem neoznamuje vůbec.</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — manévrové zvukové signály</li>
+</ul>

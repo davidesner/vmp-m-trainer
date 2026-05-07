@@ -1,0 +1,117 @@
+<h2>Zákaz předjíždění — signální tabule</h2>
+
+<p>Tabule s červeným pozadím, dvěma šipkami ve stejném směru a diagonálním pruhem přes ně znamená <strong>zákaz předjíždění</strong>.</p>
+
+<h3>Jak číst znak</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <!-- Replika tabule z testu -->
+  <div style="text-align:center;">
+    <svg width="120" height="140" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Červené pozadí -->
+      <rect x="4" y="4" width="112" height="132" rx="6" fill="#cc2200" stroke="#8b1500" stroke-width="2"/>
+      <!-- Bílý rámeček -->
+      <rect x="10" y="10" width="100" height="120" rx="4" fill="none" stroke="white" stroke-width="3"/>
+      <!-- Šipka vlevo -->
+      <polygon points="38,115 28,85 34,85 34,30 42,30 42,85 48,85" fill="black"/>
+      <!-- Šipka vpravo -->
+      <polygon points="82,115 72,85 78,85 78,30 86,30 86,85 92,85" fill="black"/>
+      <!-- Diagonální pruh (zákaz) -->
+      <line x1="18" y1="18" x2="102" y2="122" stroke="#cc2200" stroke-width="14" stroke-linecap="round"/>
+      <line x1="18" y1="18" x2="102" y2="122" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:6px;">Tabule v testu</div>
+  </div>
+
+  <!-- Vysvětlení prvků -->
+  <div style="flex:1; min-width:220px;">
+    <svg width="260" height="140" viewBox="0 0 260 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Tabule zmenšená -->
+      <rect x="4" y="14" width="70" height="112" rx="5" fill="#cc2200" stroke="#8b1500" stroke-width="1.5"/>
+      <rect x="8" y="18" width="62" height="104" rx="3" fill="none" stroke="white" stroke-width="2"/>
+      <!-- Šipky -->
+      <polygon points="29,110 22,88 26,88 26,40 32,40 32,88 36,88" fill="black"/>
+      <polygon points="55,110 48,88 52,88 52,40 58,40 58,88 62,88" fill="black"/>
+      <!-- Diagonální pruh -->
+      <line x1="10" y1="20" x2="72" y2="122" stroke="#cc2200" stroke-width="10" stroke-linecap="round"/>
+      <line x1="10" y1="20" x2="72" y2="122" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+
+      <!-- Popisky s šipkami -->
+      <!-- Červené pozadí -->
+      <line x1="90" y1="30" x2="72" y2="50" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="92" y="28" font-size="11" fill="#cc2200" font-weight="bold">Červené pozadí</text>
+      <text x="92" y="40" font-size="10" fill="#555">= zákazová tabule</text>
+
+      <!-- Šipky stejným směrem -->
+      <line x1="90" y1="75" x2="65" y2="75" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="92" y="72" font-size="11" fill="#333" font-weight="bold">2 šipky → stejný směr</text>
+      <text x="92" y="84" font-size="10" fill="#555">= plavidla za sebou (předjíždění)</text>
+
+      <!-- Diagonální pruh -->
+      <line x1="90" y1="112" x2="72" y2="100" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="92" y="108" font-size="11" fill="#cc2200" font-weight="bold">Diagonální pruh</text>
+      <text x="92" y="120" font-size="10" fill="#555">= tato akce je zakázána</text>
+    </svg>
+  </div>
+</div>
+
+<h3>Srovnání se zaměnitelnými tabulemi</h3>
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Tato tabule - zákaz -->
+  <div style="text-align:center; border:2px solid #cc2200; border-radius:8px; padding:12px; min-width:130px;">
+    <svg width="80" height="96" viewBox="0 0 80 96" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="76" height="92" rx="5" fill="#cc2200" stroke="#8b1500" stroke-width="1.5"/>
+      <rect x="6" y="6" width="68" height="84" rx="3" fill="none" stroke="white" stroke-width="2"/>
+      <polygon points="28,80 21,60 25,60 25,22 31,22 31,60 35,60" fill="black"/>
+      <polygon points="52,80 45,60 49,60 49,22 55,22 55,60 59,60" fill="black"/>
+      <line x1="8" y1="8" x2="72" y2="88" stroke="#cc2200" stroke-width="9" stroke-linecap="round"/>
+      <line x1="8" y1="8" x2="72" y2="88" stroke="white" stroke-width="5.5" stroke-linecap="round" opacity="0.85"/>
+    </svg>
+    <div style="font-size:12px; font-weight:bold; color:#cc2200; margin-top:6px;">Zákaz předjíždění</div>
+    <div style="font-size:11px; color:#555;">červená + diagonála</div>
+    <div style="font-size:11px; color:#555;">šipky stejným směrem</div>
+  </div>
+
+  <!-- Konec zákazu -->
+  <div style="text-align:center; border:2px solid #aaa; border-radius:8px; padding:12px; min-width:130px;">
+    <svg width="80" height="96" viewBox="0 0 80 96" xmlns="http://www.w3.org/2000/svg">
+      <!-- Bílé pozadí s červeným rámem přeškrtnutým -->
+      <rect x="2" y="2" width="76" height="92" rx="5" fill="white" stroke="#cc2200" stroke-width="3"/>
+      <polygon points="28,80 21,60 25,60 25,22 31,22 31,60 35,60" fill="black"/>
+      <polygon points="52,80 45,60 49,60 49,22 55,22 55,60 59,60" fill="black"/>
+      <!-- Přeškrtnutí (dvě diagonály = konec zákazu) -->
+      <line x1="8" y1="8" x2="72" y2="88" stroke="#cc2200" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+      <line x1="72" y1="8" x2="8" y2="88" stroke="#cc2200" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    </svg>
+    <div style="font-size:12px; font-weight:bold; color:#555; margin-top:6px;">Konec zákazu</div>
+    <div style="font-size:11px; color:#555;">světlé pozadí</div>
+    <div style="font-size:11px; color:#555;">nebo červená s X</div>
+  </div>
+
+  <!-- Rozdělení dráhy -->
+  <div style="text-align:center; border:2px solid #aaa; border-radius:8px; padding:12px; min-width:130px;">
+    <svg width="80" height="96" viewBox="0 0 80 96" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="76" height="92" rx="5" fill="#cc2200" stroke="#8b1500" stroke-width="1.5"/>
+      <rect x="6" y="6" width="68" height="84" rx="3" fill="none" stroke="white" stroke-width="2"/>
+      <!-- Šipky v OPAČNÝCH směrech -->
+      <polygon points="28,22 21,42 25,42 25,80 31,80 31,42 35,42" fill="white"/>
+      <polygon points="52,80 45,60 49,60 49,22 55,22 55,60 59,60" fill="black"/>
+    </svg>
+    <div style="font-size:12px; font-weight:bold; color:#555; margin-top:6px;">Rozdělení dráhy</div>
+    <div style="font-size:11px; color:#555;">šipky v opačných</div>
+    <div style="font-size:11px; color:#555;">směrech (↑ ↓)</div>
+  </div>
+
+</div>
+
+<h3>Praktická aplikace</h3>
+<p>Tabule „zákaz předjíždění" se umísťuje zpravidla před úseky s omezenou průjezdností — přehlednost, zúžení, mosty, plavební komory. Platí od místa tabule až do odvolání (tabule „konec zákazu") nebo do konce příslušného úseku. Při porušení hrozí sankce podle zákona č. 114/1995 Sb. o vnitrozemské plavbě.</p>
+
+<h3>Zdroj</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha se zákazovými tabulemi (B.8)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

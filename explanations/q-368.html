@@ -1,0 +1,110 @@
+<h2>Plovatelnost — schopnost plavidla plout vlastním hydrostatickým vztlakem</h2>
+
+<p>
+  <strong>Plovatelnost</strong> je schopnost plavidla <em>plout působením vlastního hydrostatického vztlaku v dané poloze</em>.
+  Jde o jednu ze tří základních konstrukčních vlastností každého plavidla (spolu se stabilitou a ovladatelností).
+</p>
+
+<h3>Fyzikální princip — Archimédův zákon</h3>
+
+<p>
+  Plavidlo plave, protože trup vytlačuje objem vody, jehož tíha se rovná tíze plavidla.
+  Tento <strong>hydrostatický vztlak</strong> působí svisle nahoru a vyrovnává gravitaci.
+  Vše závisí na <strong>dané poloze</strong> — plavidlo je navrženo pro konkrétní ponor a trim (polohu na vodě),
+  ne pro libovolnou polohu.
+</p>
+
+<div style="text-align:center; margin: 1.5em 0;">
+<svg width="540" height="300" viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; border-radius:10px; background:#e8f4fd;">
+
+  <!-- Water fill -->
+  <rect x="0" y="160" width="540" height="140" fill="#2196F3" opacity="0.25"/>
+  <!-- Water surface line -->
+  <line x1="0" y1="160" x2="540" y2="160" stroke="#1565C0" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="10" y="156" font-size="12" fill="#1565C0" font-family="sans-serif">hladina vody</text>
+
+  <!-- Ship hull (simplified cross-section) -->
+  <path d="M160,100 L380,100 L400,160 L320,200 L220,200 L140,160 Z" fill="#78909C" stroke="#37474F" stroke-width="2"/>
+  <!-- Ship deck details -->
+  <rect x="180" y="80" width="180" height="20" rx="4" fill="#90A4AE" stroke="#37474F" stroke-width="1.5"/>
+  <!-- Mast -->
+  <line x1="270" y1="50" x2="270" y2="80" stroke="#37474F" stroke-width="2.5"/>
+  <!-- Waterline on hull -->
+  <line x1="140" y1="160" x2="400" y2="160" stroke="#E53935" stroke-width="2"/>
+  <text x="405" y="164" font-size="11" fill="#E53935" font-family="sans-serif">ponorová čára</text>
+
+  <!-- Gravity arrow (down) -->
+  <line x1="270" y1="95" x2="270" y2="135" stroke="#E53935" stroke-width="3"/>
+  <polygon points="270,145 262,130 278,130" fill="#E53935"/>
+  <text x="278" y="120" font-size="12" fill="#E53935" font-family="sans-serif" font-weight="bold">G (tíha)</text>
+
+  <!-- Buoyancy arrow (up) -->
+  <line x1="270" y1="210" x2="270" y2="170" stroke="#1565C0" stroke-width="3"/>
+  <polygon points="270,158 262,173 278,173" fill="#1565C0"/>
+  <text x="278" y="200" font-size="12" fill="#1565C0" font-family="sans-serif" font-weight="bold">F (vztlak)</text>
+
+  <!-- Equilibrium label -->
+  <rect x="150" y="232" width="240" height="28" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="1.5"/>
+  <text x="270" y="251" text-anchor="middle" font-size="13" fill="#1B5E20" font-family="sans-serif" font-weight="bold">Plovatelnost: G = F → plavidlo se udrží na hladině</text>
+
+  <!-- Labels for "daná poloha" -->
+  <text x="270" y="30" text-anchor="middle" font-size="14" fill="#37474F" font-family="sans-serif" font-weight="bold">Schéma průřezu plavidla — daná poloha</text>
+
+</svg>
+</div>
+
+<h3>Tři základní vlastnosti plavidla</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vlastnost</th>
+      <th>Co popisuje</th>
+      <th>Klíčový pojem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Plovatelnost</strong></td>
+      <td>Plavidlo se udrží na hladině díky hydrostatickému vztlaku v dané konstrukční poloze</td>
+      <td>vztlak = tíha</td>
+    </tr>
+    <tr>
+      <td><strong>Stabilita</strong></td>
+      <td>Plavidlo se vrátí do vzpřímené polohy po náklonu</td>
+      <td>metacentrum, moment stability</td>
+    </tr>
+    <tr>
+      <td><strong>Ovladatelnost</strong></td>
+      <td>Plavidlo lze řídit, otáčet, zastavit</td>
+      <td>kormidlo, výkon, manévr</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ostatní varianty nevyhovují</h3>
+
+<ul>
+  <li>
+    <strong>„Plout v jakékoliv poloze bez potopení"</strong> — to popisuje <em>nepotopitelnost</em>
+    (schopnost přežít poškození bez potopení). Plovatelnost je vázána na <em>danou</em> (konstrukční) polohu, ne na jakoukoli.
+  </li>
+  <li>
+    <strong>„Plout předepsaným způsobem a rychlostí"</strong> — to je definice <em>ovladatelnosti</em>,
+    nikoli plovatelnosti.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>
+  Při nakládání plavidla (přidávání zátěže) se sleduje, zda se plavidlo stále pohybuje
+  v rámci povolené ponorové čáry — tedy zda zachovává plovatelnost v <em>dané poloze</em>.
+  Překročení přípustného ponoru znamená ztrátu rezervy plovatelnosti a zvýšené riziko potopení.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě — základní pojmy a konstrukční požadavky</li>
+  <li>Technická terminologie námořní architektury — plovatelnost, stabilita, ovladatelnost</li>
+</ul>

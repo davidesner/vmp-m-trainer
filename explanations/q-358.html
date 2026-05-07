@@ -1,0 +1,115 @@
+<h2>Vazník — podélná výztuha lodního trupu</h2>
+
+<p><strong>Vazník</strong> je konstrukční prvek lodního trupu, který probíhá <strong>podélně</strong> (ve směru od přídě k zádi) a zajišťuje podélnou tuhost plavidla. Název pochází ze stavitelství (vazníkový krov), kde označuje nosný trámec.</p>
+
+<h3>Příklady vazníků na plavidle</h3>
+<ul>
+  <li><strong>Outorový vazník</strong> — probíhá podél oblomu dna (outoru), v místě přechodu dna v bok</li>
+  <li><strong>Palubní vazník (stringer)</strong> — podélný nosník pod palubou po stranách trupu</li>
+  <li><strong>Střední kýlový vazník</strong> — centrální podélný nosník nad kýlem</li>
+</ul>
+
+<h3>Schéma průřezu trupu plavidla</h3>
+
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:16px auto;font-family:sans-serif;">
+  <!-- Pozadí -->
+  <rect width="700" height="420" fill="#f0f4f8" rx="8"/>
+
+  <!-- Nadpis -->
+  <text x="350" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2a40">Příčný průřez trupu — kde jsou vazníky</text>
+
+  <!-- Trup plavidla — průřez (tvar U) -->
+  <!-- Dno -->
+  <path d="M 130 310 Q 350 370 570 310" stroke="#1a2a40" stroke-width="6" fill="none"/>
+  <!-- Levá strana -->
+  <line x1="130" y1="180" x2="130" y2="310" stroke="#1a2a40" stroke-width="6"/>
+  <!-- Pravá strana -->
+  <line x1="570" y1="180" x2="570" y2="310" stroke="#1a2a40" stroke-width="6"/>
+  <!-- Paluba -->
+  <line x1="100" y1="180" x2="600" y2="180" stroke="#1a2a40" stroke-width="6"/>
+
+  <!-- Žebra (příčné výztuhy) - pro kontext -->
+  <line x1="200" y1="180" x2="175" y2="335" stroke="#7c8fa6" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <line x1="300" y1="180" x2="270" y2="360" stroke="#7c8fa6" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <line x1="400" y1="180" x2="430" y2="360" stroke="#7c8fa6" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <line x1="500" y1="180" x2="525" y2="335" stroke="#7c8fa6" stroke-width="2.5" stroke-dasharray="6,3"/>
+
+  <!-- Popisek žeber -->
+  <text x="220" y="292" font-size="11" fill="#7c8fa6" transform="rotate(-75, 220, 292)">žebro (příčná výztuha)</text>
+
+  <!-- === VAZNÍKY (zvýrazněné) === -->
+
+  <!-- Střední kýlový vazník -->
+  <line x1="200" y1="357" x2="500" y2="357" stroke="#e63946" stroke-width="4"/>
+  <circle cx="200" cy="357" r="5" fill="#e63946"/>
+  <circle cx="500" cy="357" r="5" fill="#e63946"/>
+  <!-- Šipka a popisek -->
+  <line x1="350" y1="357" x2="350" y2="395" stroke="#e63946" stroke-width="1.5"/>
+  <text x="350" y="410" text-anchor="middle" font-size="12" font-weight="bold" fill="#e63946">střední kýlový vazník</text>
+
+  <!-- Outorový vazník levý -->
+  <line x1="145" y1="316" x2="240" y2="345" stroke="#2a9d8f" stroke-width="4"/>
+  <circle cx="145" cy="316" r="5" fill="#2a9d8f"/>
+  <circle cx="240" cy="345" r="5" fill="#2a9d8f"/>
+  <!-- Popisek vlevo -->
+  <line x1="145" y1="316" x2="60" y2="340" stroke="#2a9d8f" stroke-width="1.5"/>
+  <text x="55" y="337" text-anchor="end" font-size="12" font-weight="bold" fill="#2a9d8f">outorový</text>
+  <text x="55" y="351" text-anchor="end" font-size="12" font-weight="bold" fill="#2a9d8f">vazník</text>
+
+  <!-- Outorový vazník pravý (symetrie) -->
+  <line x1="555" y1="316" x2="460" y2="345" stroke="#2a9d8f" stroke-width="4"/>
+  <circle cx="555" cy="316" r="5" fill="#2a9d8f"/>
+  <circle cx="460" cy="345" r="5" fill="#2a9d8f"/>
+
+  <!-- Palubní vazník levý -->
+  <line x1="100" y1="180" x2="250" y2="180" stroke="#f4a261" stroke-width="5"/>
+  <circle cx="100" cy="180" r="5" fill="#f4a261"/>
+  <circle cx="250" cy="180" r="5" fill="#f4a261"/>
+  <!-- Popisek -->
+  <line x1="175" y1="180" x2="100" y2="140" stroke="#f4a261" stroke-width="1.5"/>
+  <text x="95" y="133" text-anchor="middle" font-size="12" font-weight="bold" fill="#f4a261">palubní vazník</text>
+  <text x="95" y="147" text-anchor="middle" font-size="11" fill="#f4a261">(stringer)</text>
+
+  <!-- Palubní vazník pravý (symetrie) -->
+  <line x1="450" y1="180" x2="600" y2="180" stroke="#f4a261" stroke-width="5"/>
+  <circle cx="450" cy="180" r="5" fill="#f4a261"/>
+  <circle cx="600" cy="180" r="5" fill="#f4a261"/>
+
+  <!-- Legenda -->
+  <rect x="420" y="55" width="260" height="105" rx="6" fill="white" stroke="#ccd5e0" stroke-width="1"/>
+  <text x="430" y="75" font-size="12" font-weight="bold" fill="#1a2a40">Legenda</text>
+  <!-- Střední kýlový -->
+  <line x1="430" y1="90" x2="460" y2="90" stroke="#e63946" stroke-width="4"/>
+  <text x="468" y="94" font-size="11" fill="#1a2a40">střední kýlový vazník</text>
+  <!-- Outorový -->
+  <line x1="430" y1="110" x2="460" y2="110" stroke="#2a9d8f" stroke-width="4"/>
+  <text x="468" y="114" font-size="11" fill="#1a2a40">outorový vazník</text>
+  <!-- Palubní -->
+  <line x1="430" y1="130" x2="460" y2="130" stroke="#f4a261" stroke-width="5"/>
+  <text x="468" y="134" font-size="11" fill="#1a2a40">palubní vazník</text>
+  <!-- Žebro -->
+  <line x1="430" y1="150" x2="460" y2="150" stroke="#7c8fa6" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="468" y="154" font-size="11" fill="#7c8fa6">žebro (příčná výztuha)</text>
+
+  <!-- Směrová osa -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#1a2a40"/>
+    </marker>
+  </defs>
+  <text x="350" y="60" text-anchor="middle" font-size="11" fill="#555">← příď &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; záď →</text>
+  <text x="350" y="72" text-anchor="middle" font-size="10" fill="#888">(vazníky probíhají v tomto směru — podélně)</text>
+</svg>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>„Zařízení na uvázání lan"</strong> — taková zařízení se nazývají bity, úvazné kování nebo lodní úvazy. Slovní asociace „vázat" je záměrně matoucí.</li>
+  <li><strong>„Lana pro vyvazování"</strong> — ta se nazývají vyvazovací lana nebo lodní lana, nikoli vazníky.</li>
+</ul>
+
+<h3>Paměťová zkratka</h3>
+<p><strong>Vazník = vazba trupu</strong> (konstrukční nosný prvek, ne věc na vázání lan).</p>
+<p>Analogie se stavitelstvím: vazníkový krov = nosná soustava střechy. Lodní vazník = nosná soustava trupu v podélném směru.</p>
+
+<h3>Zdroje</h3>
+<p>Nauticko-technická terminologie vnitrozemské plavby; základy konstrukce plavidel dle osnov zkoušek VMP.</p>

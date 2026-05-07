@@ -1,0 +1,119 @@
+<h2>Levobřežní přechodový signální znak</h2>
+
+<p><strong>Správná odpověď:</strong> levobřežní přechodový signální znak.</p>
+
+<h3>Co znak znamená</h3>
+<p>
+  Přechodové signální znaky říkají, že se <strong>plavební dráha přechází z jednoho břehu na druhý</strong>.
+  Tato tabule — <em>kosočtverec se žlutým pozadím a svislým černým pruhem uprostřed</em> — označuje
+  přechod k <strong>levému břehu</strong>. Od tohoto znaku dále (po směru plavby) vede plavební dráha
+  ke straně levého břehu.
+</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:48px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Samotná tabule -->
+  <div style="text-align:center;">
+    <svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+      <!-- bílý rámeček / okraj kosočtverce -->
+      <rect x="5" y="5" width="100" height="100" rx="4"
+            transform="rotate(45 55 55)"
+            fill="white" stroke="#555" stroke-width="1.5"/>
+      <!-- žluté pozadí kosočtverce -->
+      <rect x="9" y="9" width="92" height="92" rx="2"
+            transform="rotate(45 55 55)"
+            fill="#f5c800"/>
+      <!-- černý svislý pruh -->
+      <rect x="44" y="9" width="22" height="92" rx="2"
+            transform="rotate(45 55 55)"
+            fill="#1a1a1a"/>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:4px;">Tabule v testu</div>
+  </div>
+
+  <!-- Schéma přechodu dráhy -->
+  <div style="text-align:center;">
+    <svg width="280" height="140" viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Vodní tok -->
+      <rect x="0" y="20" width="280" height="100" fill="#b8d9f0"/>
+      <!-- Levý břeh (nahoře ve schématu) -->
+      <rect x="0" y="0" width="280" height="20" fill="#c8a96e"/>
+      <text x="8" y="14" font-size="11" fill="#5a3a00" font-weight="bold">LEVÝ BŘEH</text>
+      <!-- Pravý břeh (dole) -->
+      <rect x="0" y="120" width="280" height="20" fill="#c8a96e"/>
+      <text x="8" y="134" font-size="11" fill="#5a3a00" font-weight="bold">PRAVÝ BŘEH</text>
+
+      <!-- Plavební dráha před přechodem (vede u pravého břehu) -->
+      <path d="M0,95 Q80,90 120,70" stroke="#0044aa" stroke-width="5" fill="none" stroke-dasharray="8,4" opacity="0.7"/>
+      <!-- Plavební dráha po přechodu (vede u levého břehu) -->
+      <path d="M120,70 Q160,45 280,35" stroke="#0044aa" stroke-width="5" fill="none" stroke-dasharray="8,4" opacity="0.7"/>
+
+      <!-- Šipka směru plavby -->
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#0044aa"/>
+        </marker>
+      </defs>
+      <line x1="190" y1="53" x2="250" y2="38" stroke="#0044aa" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- Tabule přechodového znaku -->
+      <g transform="translate(108,58)">
+        <rect x="-10" y="-10" width="20" height="20" rx="1"
+              transform="rotate(45)"
+              fill="#f5c800" stroke="white" stroke-width="1.5"/>
+        <rect x="-3.5" y="-10" width="7" height="20" rx="1"
+              transform="rotate(45)"
+              fill="#1a1a1a"/>
+      </g>
+      <text x="118" y="88" font-size="10" fill="#333" text-anchor="middle">přechodový znak</text>
+
+      <!-- Popis dráhy -->
+      <text x="50" y="108" font-size="10" fill="#0044aa" font-style="italic">dráha u pravého břehu</text>
+      <text x="190" y="32" font-size="10" fill="#0044aa" font-style="italic">dráha u levého břehu</text>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:4px;">Přechod plavební dráhy k levému břehu</div>
+  </div>
+</div>
+
+<h3>Barevný a tvarový kód přechodových znaků</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Znak</th>
+      <th>Barvy</th>
+      <th>Přechod směrem k</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kosočtverec — černý svislý pruh na žluté</td>
+      <td>žlutá / černá</td>
+      <td><strong>levý břeh</strong></td>
+    </tr>
+    <tr>
+      <td>Kosočtverec — bílý svislý pruh na červené</td>
+      <td>červená / bílá</td>
+      <td><strong>pravý břeh</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Plavební dráha vede středem vodní cesty"</strong> — středový znak má odlišné grafické provedení (střídavé svislé pruhy červeno-bílé nebo žluto-černé), neshoduje se s touto tabulí.</li>
+  <li><strong>„Konec zákazu nebo příkazu"</strong> — znaky konce zákazu/příkazu mají zcela jiný tvar (zpravidla bílý terč s šikmým pruhem přes původní symbol); nejde o vytyčovací tabuli vodní cesty.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Plaveš-li po proudu a uvidíš tento znak, víš, že plavební dráha se za ním vine k levému břehu.
+  Musíš přizpůsobit kurz a sledovat další výtyčení (bóje, tabule) na levé straně.
+  Plavba mimo takto označenou dráhu hrozí mělčinou nebo kolizí s nevyznačenými překážkami.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 (výtyčení plavební dráhy — přechodové znaky)</li>
+</ul>

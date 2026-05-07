@@ -1,0 +1,100 @@
+<h2>Žebro — příčná tvarová výztuha boku a dna lodi</h2>
+
+<p><strong>Žebro</strong> (<em>frame</em>, <em>rib</em>) je příčný obloukový nosník, který obepíná dno a boky trupu plavidla od kýlu nahoru. Žebra jsou rozmístěna v pravidelných rozestupech po délce lodě a dávají trupu <strong>tvarovou pevnost</strong> — bez nich by se bok lodi deformoval pod tlakem vody.</p>
+
+<hr>
+
+<h3>Vizualizace — průřez trupu a kostra plavidla</h3>
+
+<div style="display:flex; gap:32px; flex-wrap:wrap; align-items:flex-start; margin:16px 0;">
+
+  <!-- Cross-section view -->
+  <div>
+    <p style="font-weight:bold; margin-bottom:6px;">Průřez trupu (čelní pohled)</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="220" height="200" viewBox="0 0 220 200">
+      <!-- Water line -->
+      <line x1="10" y1="140" x2="210" y2="140" stroke="#4a9eda" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <text x="215" y="144" font-size="10" fill="#4a9eda">WL</text>
+
+      <!-- Hull outline (cross-section) -->
+      <path d="M 40 40 Q 40 130 110 165 Q 180 130 180 40" fill="none" stroke="#555" stroke-width="2.5"/>
+
+      <!-- Deck line -->
+      <line x1="40" y1="40" x2="180" y2="40" stroke="#555" stroke-width="2"/>
+
+      <!-- Rib (the whole cross-section curve highlighted) -->
+      <path d="M 50 40 Q 50 125 110 158 Q 170 125 170 40" fill="none" stroke="#e05c2a" stroke-width="3.5"/>
+
+      <!-- Keel -->
+      <line x1="106" y1="163" x2="114" y2="163" stroke="#333" stroke-width="4"/>
+      <line x1="110" y1="163" x2="110" y2="175" stroke="#333" stroke-width="4"/>
+      <text x="115" y="185" font-size="10" fill="#333">kýl</text>
+
+      <!-- Label rib -->
+      <line x1="170" y1="90" x2="195" y2="70" stroke="#e05c2a" stroke-width="1"/>
+      <text x="125" y="67" font-size="11" fill="#e05c2a" font-weight="bold">žebro</text>
+
+      <!-- Deck label -->
+      <text x="85" y="34" font-size="10" fill="#555">paluba</text>
+    </svg>
+  </div>
+
+  <!-- Perspective skeleton view -->
+  <div>
+    <p style="font-weight:bold; margin-bottom:6px;">Kostra trupu (perspektiva)</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="280" height="200" viewBox="0 0 280 200">
+
+      <!-- Keel line (longitudinal) -->
+      <line x1="30" y1="155" x2="250" y2="120" stroke="#333" stroke-width="3"/>
+      <text x="252" y="118" font-size="10" fill="#333">kýl</text>
+
+      <!-- Ribs: 5 ribs drawn as arches along the keel -->
+      <!-- Rib 1 (back) -->
+      <path d="M 50 148 Q 52 110 72 98 Q 92 86 95 148" fill="none" stroke="#ccc" stroke-width="2"/>
+      <!-- Rib 2 -->
+      <path d="M 80 145 Q 82 103 105 89 Q 128 75 130 145" fill="none" stroke="#ccc" stroke-width="2"/>
+      <!-- Rib 3 (highlighted as main example) -->
+      <path d="M 115 141 Q 117 94 143 78 Q 169 62 170 141" fill="none" stroke="#e05c2a" stroke-width="3.5"/>
+      <!-- Rib 4 -->
+      <path d="M 150 137 Q 152 86 180 69 Q 208 52 210 137" fill="none" stroke="#ccc" stroke-width="2"/>
+      <!-- Rib 5 (front) -->
+      <path d="M 185 133 Q 187 78 218 59 Q 248 40 248 133" fill="none" stroke="#ccc" stroke-width="2"/>
+
+      <!-- Top strake (sheer line) left -->
+      <path d="M 50 148 Q 115 141 185 133 Q 220 129 248 133" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <!-- Top strake right -->
+      <path d="M 95 148 Q 130 145 170 141 Q 210 137 248 133" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+      <!-- Rib label -->
+      <line x1="143" y1="78" x2="155" y2="55" stroke="#e05c2a" stroke-width="1"/>
+      <text x="157" y="52" font-size="11" fill="#e05c2a" font-weight="bold">žebro</text>
+      <text x="157" y="63" font-size="9" fill="#e05c2a">(příčná výztuha)</text>
+
+      <!-- Direction arrow -->
+      <line x1="35" y1="175" x2="90" y2="175" stroke="#4a9eda" stroke-width="1.5" marker-end="url(#arr)"/>
+      <text x="38" y="189" font-size="9" fill="#4a9eda">délka lodi →</text>
+
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#4a9eda"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>Podélná výztuha kokpitu</strong> — podélné výztuhy se nazývají <em>stringery</em> nebo <em>podélnice</em>. Žebra jsou vždy <strong>příčná</strong>.</li>
+  <li><strong>Příčné nosníky paluby</strong> — to jsou <em>deckbeamy</em> (palubní příčníky). Nesou palubní desky, ale netvarují bok a dno trupu.</li>
+</ul>
+
+<h3>Jak si to zapamatovat</h3>
+<p>Stejně jako lidská <strong>žebra</strong> jsou příčné kosti obepínající hrudní koš, lodní <strong>žebra</strong> jsou příčné oblouky obepínající průřez trupu. Terminologie je záměrná.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Základy konstrukce plavidel — standardní terminologie (skupina TZ)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

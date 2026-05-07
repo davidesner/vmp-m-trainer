@@ -1,0 +1,115 @@
+<h2>Signalizační světla volně plující převozní lodi</h2>
+
+<p>Otázka ukazuje plavidlo z boku s konkrétní kombinací světel a ptá se, jakému typu plavidla tato světla patří. Správná odpověď je <strong>volně plující převozní loď</strong>.</p>
+
+<h3>Jak číst světla na obrázku</h3>
+
+<div style="margin: 16px 0;">
+  <svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;background:#0a0a1a;border-radius:8px;">
+
+    <!-- Vlny / voda -->
+    <path d="M0 200 Q30 190 60 200 Q90 210 120 200 Q150 190 180 200 Q210 210 240 200 Q270 190 300 200 Q330 210 360 200 Q390 190 420 200 Q450 210 480 200 Q510 190 520 200 L520 260 L0 260 Z" fill="#1a3a5c" opacity="0.7"/>
+
+    <!-- Trup plavidla -->
+    <rect x="60" y="165" width="340" height="35" rx="4" fill="#2d2d2d" stroke="#888" stroke-width="1.5"/>
+    <!-- Příď (zkosení) -->
+    <polygon points="400,165 420,200 60,200 60,165" fill="#2d2d2d" stroke="#888" stroke-width="1.5"/>
+    <!-- Záďová stěna (vlevo) -->
+    <rect x="55" y="155" width="12" height="45" fill="#2d2d2d" stroke="#888" stroke-width="1"/>
+
+    <!-- Nástavba / kabina -->
+    <rect x="90" y="130" width="120" height="38" rx="3" fill="#3a3a3a" stroke="#888" stroke-width="1"/>
+
+    <!-- Stěžeň (vpravo) -->
+    <line x1="330" y1="60" x2="330" y2="165" stroke="#aaa" stroke-width="2.5"/>
+    <!-- Příčník -->
+    <line x1="310" y1="100" x2="350" y2="100" stroke="#aaa" stroke-width="1.5"/>
+
+    <!-- === SVĚTLA === -->
+
+    <!-- 1. Zelené světlo na vrcholu stěžně (klíčový identifikátor) -->
+    <circle cx="330" cy="68" r="10" fill="#00e676" stroke="#fff" stroke-width="1.5"/>
+    <!-- záření -->
+    <circle cx="330" cy="68" r="16" fill="none" stroke="#00e676" stroke-width="1" opacity="0.4"/>
+
+    <!-- 2. Bílé topové světlo (pod zeleným na stěžni) -->
+    <circle cx="330" cy="100" r="9" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+    <circle cx="330" cy="100" r="14" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+
+    <!-- 3. Červené levobřežní světlo (střed paluby) -->
+    <rect x="185" y="148" width="14" height="14" rx="2" fill="#f44336" stroke="#fff" stroke-width="1"/>
+    <circle cx="192" cy="155" r="10" fill="none" stroke="#f44336" stroke-width="1" opacity="0.4"/>
+
+    <!-- 4. Zelené pravobřežní světlo (přídní část) -->
+    <rect x="290" y="160" width="13" height="13" rx="2" fill="#4caf50" stroke="#fff" stroke-width="1"/>
+    <circle cx="296" cy="167" r="9" fill="none" stroke="#4caf50" stroke-width="1" opacity="0.4"/>
+
+    <!-- 5. Bílé záďové světlo (vlevo) -->
+    <rect x="56" y="162" width="11" height="11" rx="2" fill="#eeeeee" stroke="#ccc" stroke-width="1"/>
+    <circle cx="62" cy="168" r="8" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+
+    <!-- === POPISKY === -->
+    <!-- Zelené na vrcholu -->
+    <line x1="346" y1="68" x2="420" y2="42" stroke="#00e676" stroke-width="1" stroke-dasharray="4,3"/>
+    <rect x="420" y="28" width="94" height="28" rx="3" fill="#00452e" stroke="#00e676" stroke-width="1"/>
+    <text x="467" y="40" text-anchor="middle" fill="#00e676" font-size="9" font-family="sans-serif" font-weight="bold">ZELENÉ – vrchol</text>
+    <text x="467" y="52" text-anchor="middle" fill="#00e676" font-size="9" font-family="sans-serif">identifikátor převozu</text>
+
+    <!-- Bílé topové -->
+    <line x1="344" y1="100" x2="420" y2="90" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+    <rect x="420" y="78" width="94" height="26" rx="3" fill="#2a2a2a" stroke="#888" stroke-width="1"/>
+    <text x="467" y="90" text-anchor="middle" fill="#ddd" font-size="9" font-family="sans-serif">BÍLÉ topové světlo</text>
+    <text x="467" y="101" text-anchor="middle" fill="#ddd" font-size="9" font-family="sans-serif">(standard. mot. plavidlo)</text>
+
+    <!-- Červené -->
+    <line x1="185" y1="155" x2="140" y2="130" stroke="#f44336" stroke-width="1" stroke-dasharray="4,3"/>
+    <rect x="30" y="118" width="110" height="24" rx="3" fill="#3a0a0a" stroke="#f44336" stroke-width="1"/>
+    <text x="85" y="129" text-anchor="middle" fill="#f44336" font-size="9" font-family="sans-serif">ČERVENÉ levobřežní</text>
+    <text x="85" y="140" text-anchor="middle" fill="#f44336" font-size="9" font-family="sans-serif">(portside running light)</text>
+
+    <!-- Zelené pravobřežní -->
+    <line x1="290" y1="167" x2="240" y2="220" stroke="#4caf50" stroke-width="1" stroke-dasharray="4,3"/>
+    <rect x="130" y="215" width="110" height="24" rx="3" fill="#0a300a" stroke="#4caf50" stroke-width="1"/>
+    <text x="185" y="226" text-anchor="middle" fill="#4caf50" font-size="9" font-family="sans-serif">ZELENÉ pravobřežní</text>
+    <text x="185" y="237" text-anchor="middle" fill="#4caf50" font-size="9" font-family="sans-serif">(starboard running light)</text>
+
+    <!-- Bílé záďové -->
+    <line x1="62" y1="168" x2="25" y2="200" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+    <rect x="0" y="196" width="80" height="24" rx="3" fill="#2a2a2a" stroke="#888" stroke-width="1"/>
+    <text x="40" y="207" text-anchor="middle" fill="#ddd" font-size="9" font-family="sans-serif">BÍLÉ záďové</text>
+    <text x="40" y="218" text-anchor="middle" fill="#ddd" font-size="9" font-family="sans-serif">světlo</text>
+
+  </svg>
+</div>
+
+<h3>Klíčový identifikátor: zelené světlo na vrcholu stěžně</h3>
+
+<p>Zelené světlo umístěné <strong>nejvýše ze všech navigačních světel</strong> — nad bílým topovým světlem — je povinný rozlišovací znak volně plující převozní lodi. Signalizuje ostatním účastníkům plavby, že plavidlo pravidelně kříží tok z břehu na břeh.</p>
+
+<p>Volně plující převozní loď = přívoz pohybující se vlastním pohonem (není veden lanem/kabelem přes vodní cestu). Nese:</p>
+<ul>
+  <li>Standardní navigační světla motorového plavidla (bílé topové, červené levobřežní, zelené pravobřežní, bílé záďové)</li>
+  <li><strong>+ 1 zelené světlo na vrcholu stěžně</strong> — rozlišovací znak převozu</li>
+</ul>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<div style="border-left:3px solid #666;padding:8px 12px;margin:10px 0;background:#1a1a1a;">
+  <strong>Tlačná sestava</strong> nese řadu bílých topových světel vpředu v uspořádání 2+1 (dvě světla na šíři vedle sebe, jedno výše na střed). Žádné zelené světlo na stěžni.
+</div>
+
+<div style="border-left:3px solid #2196f3;padding:8px 12px;margin:10px 0;background:#0a1a2a;">
+  <strong>Plavidlo přepravující nebezpečné věci</strong> nese za noci <strong>3 modrá světla</strong> (nebo 3 modré kužele ve dne) — modrá, ne zelená. A jsou to tři, ne jedno.
+</div>
+
+<h3>Praktická aplikace</h3>
+
+<p>Přijíždí-li ti vstříc plavidlo se zeleným světlem na vrcholu stěžně, jde o přívoz. Počítej s tím, že:</p>
+<ul>
+  <li>Kříží tok (pravidelná trasa břeh → břeh)</li>
+  <li>Má právo přednosti při odplouvání od přistání</li>
+  <li>Může přistávat i na neobvyklých místech (přístaviště přívozu)</li>
+</ul>
+
+<h3>Zdroje</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, § 3.31 — světla a znaky převozních lodí.</p>

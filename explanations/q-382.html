@@ -1,0 +1,122 @@
+<h2>Kdy ukončíme resuscitaci?</h2>
+
+<p>Resuscitaci ukončíme, jakmile <strong>postižený začne normálně dýchat</strong> — ne při jakémkoliv pohybu hrudníku, ale při obnovení pravidelného, dostatečného dýchání.</p>
+
+<hr>
+
+<h3>Klíčové rozlišení: normální dýchání vs. agonální dechy</h3>
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Agonální dechy -->
+  <div style="flex:1; min-width:220px; border:2px solid #e74c3c; border-radius:8px; padding:16px;">
+    <div style="font-weight:bold; color:#e74c3c; margin-bottom:8px;">⚠ Agonální dechy — NEPŘESTÁVEJ</div>
+    <svg viewBox="0 0 220 80" width="220" height="80" style="display:block; margin:0 auto 8px;">
+      <!-- Nepravidelný, slabý vzorec -->
+      <polyline points="0,60 20,60 25,30 30,65 35,55 40,60 70,60 75,20 80,65 120,60 125,45 130,62 160,60 165,25 170,63 220,60"
+        fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+      <line x1="0" y1="60" x2="220" y2="60" stroke="#ccc" stroke-width="1" stroke-dasharray="4"/>
+    </svg>
+    <p style="margin:0; font-size:0.9em;">Nepravidelné, záškubové pohyby. Mozek stále bez kyslíku. <strong>Pokračuj v KPR!</strong></p>
+  </div>
+
+  <!-- Normální dýchání -->
+  <div style="flex:1; min-width:220px; border:2px solid #27ae60; border-radius:8px; padding:16px;">
+    <div style="font-weight:bold; color:#27ae60; margin-bottom:8px;">✓ Normální dýchání — UKONČI</div>
+    <svg viewBox="0 0 220 80" width="220" height="80" style="display:block; margin:0 auto 8px;">
+      <!-- Pravidelný sinusový vzorec -->
+      <path d="M0,60 C15,60 20,15 35,15 C50,15 55,60 70,60 C85,60 90,15 105,15 C120,15 125,60 140,60 C155,60 160,15 175,15 C190,15 195,60 220,60"
+        fill="none" stroke="#27ae60" stroke-width="2.5"/>
+      <line x1="0" y1="60" x2="220" y2="60" stroke="#ccc" stroke-width="1" stroke-dasharray="4"/>
+    </svg>
+    <p style="margin:0; font-size:0.9em;">Pravidelné, tiché, dostatečné nádechy. Postižený se vrátil. <strong>Zastav KPR.</strong></p>
+  </div>
+
+</div>
+
+<hr>
+
+<h3>Rozhodovací strom během resuscitace</h3>
+
+<svg viewBox="0 0 560 420" width="100%" style="max-width:560px; display:block; margin:0 auto;">
+  <!-- Start -->
+  <rect x="180" y="10" width="200" height="40" rx="20" fill="#2980b9"/>
+  <text x="280" y="35" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Provádíš KPR</text>
+
+  <!-- Arrow down -->
+  <line x1="280" y1="50" x2="280" y2="90" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Diamond: normální dýchání? -->
+  <polygon points="280,90 390,140 280,190 170,140" fill="#f39c12"/>
+  <text x="280" y="133" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Postižený začal</text>
+  <text x="280" y="150" text-anchor="middle" fill="white" font-size="12" font-weight="bold">normálně dýchat?</text>
+
+  <!-- YES arrow right -->
+  <line x1="390" y1="140" x2="460" y2="140" stroke="#27ae60" stroke-width="2" marker-end="url(#arr-green)"/>
+  <text x="425" y="130" text-anchor="middle" fill="#27ae60" font-size="12">ANO</text>
+  <rect x="460" y="110" width="90" height="60" rx="8" fill="#27ae60"/>
+  <text x="505" y="137" text-anchor="middle" fill="white" font-size="12" font-weight="bold">UKONČI</text>
+  <text x="505" y="155" text-anchor="middle" fill="white" font-size="11">resuscitaci</text>
+
+  <!-- NO arrow down -->
+  <line x1="280" y1="190" x2="280" y2="230" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="295" y="215" fill="#e74c3c" font-size="12">NE</text>
+
+  <!-- Diamond: přijela ZZS? -->
+  <polygon points="280,230 390,280 280,330 170,280" fill="#8e44ad"/>
+  <text x="280" y="273" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Přijela ZZS nebo</text>
+  <text x="280" y="290" text-anchor="middle" fill="white" font-size="12" font-weight="bold">nemůžeš dál?</text>
+
+  <!-- YES arrow right -->
+  <line x1="390" y1="280" x2="460" y2="280" stroke="#27ae60" stroke-width="2" marker-end="url(#arr-green)"/>
+  <text x="425" y="270" text-anchor="middle" fill="#27ae60" font-size="12">ANO</text>
+  <rect x="460" y="250" width="90" height="60" rx="8" fill="#27ae60"/>
+  <text x="505" y="277" text-anchor="middle" fill="white" font-size="12" font-weight="bold">UKONČI</text>
+  <text x="505" y="295" text-anchor="middle" fill="white" font-size="11">resuscitaci</text>
+
+  <!-- NO arrow down -->
+  <line x1="280" y1="330" x2="280" y2="370" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="295" y="355" fill="#e74c3c" font-size="12">NE</text>
+
+  <!-- Continue box -->
+  <rect x="180" y="370" width="200" height="40" rx="8" fill="#2980b9"/>
+  <text x="280" y="395" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Pokračuj v KPR</text>
+
+  <!-- Arrow from continue back up -->
+  <path d="M180,390 Q60,390 60,140 Q60,90 170,90" fill="none" stroke="#2980b9" stroke-width="2" stroke-dasharray="6" marker-end="url(#arr-blue)"/>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2980b9"/>
+    </marker>
+  </defs>
+</svg>
+
+<hr>
+
+<h3>Proč ostatní možnosti nejsou správné</h3>
+
+<ul>
+  <li>
+    <strong>„Jakmile se postižený aspoň jednou nadechne"</strong> — jeden nádech nestačí. Agonální dechy vypadají jako nádech, ale jde o reflexní záškuby; mozek stále hyne bez kyslíku. Přestat by znamenalo nechat postiženého zemřít.
+  </li>
+  <li>
+    <strong>„Pokud nemůžeme dýchat z plic do plic"</strong> — moderní první pomoc jasně říká: nelze-li provádět umělé dýchání (zranění obličeje, hygiena, neochota), <em>pokračujeme kompresemi hrudníku</em> (hands-only CPR). Samotné komprese jsou výrazně lepší než vůbec nic, zvláště v prvních minutách, kdy je v krvi ještě zásobní kyslík.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Po každých 2 minutách (nebo 5 cyklech 30:2) si krátce zkontroluj, zda postižený nezačal dýchat normálně. Nekontroluj po každé kompresi — zbytečně přerušuješ krevní oběh. Normální dýchání poznáš jako pravidelné, tiché, bez záškubů.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Guidelines ERC (European Resuscitation Council) 2021 — základní resuscitace dospělých (BLS)</li>
+  <li>ČČK — standardy první pomoci pro laické záchranáře</li>
+</ul>

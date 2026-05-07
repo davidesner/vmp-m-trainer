@@ -1,0 +1,148 @@
+<h2>Signální tabule PP4 — vedlejší vodní cesta → hlavní vodní cesta</h2>
+
+<p>
+  Tabule je <strong>signální znak</strong> (dle vyhlášky č. 67/2015 Sb.), který plavidlo vystavuje
+  nebo doprovází zvukovým signálem při přijíždění na křižovatku vodních cest.
+  Graficky zobrazuje geometrii křižovatky z pohledu plavidla.
+</p>
+
+<h3>Jak číst tabuli</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:20px 0;">
+
+  <!-- Replika tabule z testu -->
+  <div style="text-align:center;">
+    <p style="font-weight:bold; margin-bottom:8px;">Tabule v testu</p>
+    <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Rámeček -->
+      <rect x="2" y="2" width="136" height="136" rx="4" ry="4" fill="white" stroke="#aaa" stroke-width="2"/>
+      <!-- Nahoře: velký modrý obdélník = hlavní vodní cesta -->
+      <rect x="10" y="10" width="120" height="54" rx="2" ry="2" fill="#5b9bd5"/>
+      <!-- Bílý pruh = místo křížení -->
+      <rect x="10" y="68" width="120" height="8" fill="white"/>
+      <!-- Dole vlevo: menší modrý = vedlejší vodní cesta -->
+      <rect x="10" y="80" width="55" height="50" rx="2" ry="2" fill="#5b9bd5"/>
+      <!-- Dole vpravo: menší modrý = vedlejší vodní cesta -->
+      <rect x="75" y="80" width="55" height="50" rx="2" ry="2" fill="#5b9bd5"/>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Zkratka PP4</p>
+  </div>
+
+  <!-- Legenda -->
+  <div>
+    <table style="border-collapse:collapse; font-size:0.95em;">
+      <thead>
+        <tr style="background:#f0f0f0;">
+          <th style="padding:6px 12px; border:1px solid #ccc; text-align:left;">Část tabule</th>
+          <th style="padding:6px 12px; border:1px solid #ccc; text-align:left;">Tvar</th>
+          <th style="padding:6px 12px; border:1px solid #ccc; text-align:left;">Vodní cesta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:6px 12px; border:1px solid #ccc;"><strong>Nahoře</strong> (kam jedu)</td>
+          <td style="padding:6px 12px; border:1px solid #ccc;">1× velký obdélník</td>
+          <td style="padding:6px 12px; border:1px solid #ccc;"><strong>Hlavní</strong> vodní cesta</td>
+        </tr>
+        <tr style="background:#f9f9f9;">
+          <td style="padding:6px 12px; border:1px solid #ccc;"><strong>Bílý pruh</strong></td>
+          <td style="padding:6px 12px; border:1px solid #ccc;">vodorovný pás</td>
+          <td style="padding:6px 12px; border:1px solid #ccc;">místo napojení / křížení</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 12px; border:1px solid #ccc;"><strong>Dole</strong> (odkud jedu)</td>
+          <td style="padding:6px 12px; border:1px solid #ccc;">2× menší obdélníky</td>
+          <td style="padding:6px 12px; border:1px solid #ccc;"><strong>Vedlejší</strong> vodní cesta</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Pohled shora na křižovatku -->
+<h3>Situace na vodě — pohled shora</h3>
+
+<svg width="420" height="260" viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto 16px;">
+  <!-- Hlavní vodní cesta — vodorovný pruh -->
+  <rect x="0" y="90" width="420" height="80" fill="#cce5ff" rx="0"/>
+  <text x="10" y="84" font-size="13" fill="#1a5276" font-family="sans-serif" font-weight="bold">Hlavní vodní cesta</text>
+  <text x="10" y="98" font-size="11" fill="#1a5276" font-family="sans-serif">(vyšší řád)</text>
+
+  <!-- Vedlejší vodní cesta — svislý pruh přijíždějící zdola -->
+  <rect x="175" y="170" width="70" height="90" fill="#d5e8d4" rx="0"/>
+  <text x="178" y="245" font-size="11" fill="#27623d" font-family="sans-serif">Vedlejší</text>
+  <text x="178" y="258" font-size="11" fill="#27623d" font-family="sans-serif">vod. cesta</text>
+
+  <!-- Napojení vedlejší na hlavní — přechod -->
+  <rect x="175" y="170" width="70" height="80" fill="#aed9c2" rx="0"/>
+
+  <!-- Plavidlo na vedlejší cestě (přijíždí zdola) -->
+  <!-- Tělo plavidla (elipsa) -->
+  <ellipse cx="210" cy="210" rx="20" ry="10" fill="#e67e22" stroke="#a04000" stroke-width="1.5"/>
+  <!-- Příď (trojúhelník nahoru) -->
+  <polygon points="210,195 200,205 220,205" fill="#e67e22" stroke="#a04000" stroke-width="1.5"/>
+  <!-- Šipka pohybu -->
+  <line x1="210" y1="192" x2="210" y2="155" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <polygon points="210,145 205,158 215,158" fill="#c0392b"/>
+  <text x="222" y="187" font-size="11" fill="#c0392b" font-family="sans-serif">směr</text>
+  <text x="222" y="200" font-size="11" fill="#c0392b" font-family="sans-serif">jízdy</text>
+
+  <!-- Tabule PP4 (miniatura) u plavidla -->
+  <g transform="translate(248, 200)">
+    <rect x="0" y="0" width="36" height="36" rx="2" fill="white" stroke="#888" stroke-width="1"/>
+    <rect x="3" y="3" width="30" height="13" rx="1" fill="#5b9bd5"/>
+    <rect x="3" y="18" width="30" height="2" fill="white"/>
+    <rect x="3" y="22" width="13" height="11" rx="1" fill="#5b9bd5"/>
+    <rect x="20" y="22" width="13" height="11" rx="1" fill="#5b9bd5"/>
+    <text x="18" y="48" font-size="10" fill="#333" font-family="sans-serif" text-anchor="middle">PP4</text>
+  </g>
+
+  <!-- Ostatní plavidla na hlavní cestě (ilustrace provozu) -->
+  <ellipse cx="80" cy="130" rx="22" ry="9" fill="#8e44ad" stroke="#5b2780" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="102,130 90,124 90,136" fill="#8e44ad" stroke="#5b2780" stroke-width="1.5" opacity="0.7"/>
+
+  <ellipse cx="330" cy="130" rx="22" ry="9" fill="#8e44ad" stroke="#5b2780" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="308,130 320,124 320,136" fill="#8e44ad" stroke="#5b2780" stroke-width="1.5" opacity="0.7"/>
+
+  <text x="55" y="155" font-size="10" fill="#5b2780" font-family="sans-serif">provoz na hlavní cestě</text>
+  <text x="55" y="167" font-size="10" fill="#5b2780" font-family="sans-serif">(má přednost)</text>
+
+  <!-- Legenda plavidla s PP4 -->
+  <text x="10" y="222" font-size="11" fill="#c0392b" font-family="sans-serif" font-weight="bold">Plavidlo s tabulí PP4</text>
+  <text x="10" y="236" font-size="10" fill="#c0392b" font-family="sans-serif">vjíždí z vedlejší → dává přednost</text>
+</svg>
+
+<h3>Správná odpověď</h3>
+<p>
+  <strong>Plavidlo pluje po vedlejší vodní cestě na hlavní vodní cestu.</strong>
+</p>
+<p>
+  Jeden velký obdélník v horní části tabule = <strong>hlavní</strong> vodní cesta (cíl jízdy, vyšší řád, větší prostor).
+  Dva menší obdélníky v dolní části = <strong>vedlejší</strong> vodní cesta (odkud plavidlo přijíždí).
+</p>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li>
+    Varianta <em>"z hlavní na vedlejší"</em> by měla rozložení přesně opačné:
+    nahoře dvě menší pole (cíl = vedlejší cesta), dole jedno velké (zdroj = hlavní cesta).
+  </li>
+  <li>
+    Varianta <em>"vedlejší → vedlejší stejného řádu"</em> by měla symetrická pole nahoře i dole —
+    například dvě nahoře a dvě dole.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Plavidlo vystavující tabuli PP4 <strong>dává přednost</strong> veškeré plavbě na hlavní vodní cestě.
+  Ostatní plavci vidí tabuli a ví, co manévrující plavidlo hodlá provést — mohou se přizpůsobit.
+  Kombinace vizuálního znaku (tabule) a zvukového signálu zajišťuje bezpečný průjezd křižovatkou
+  i při omezené viditelnosti.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 (signální znaky)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

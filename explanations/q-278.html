@@ -1,0 +1,102 @@
+<h2>Signální tabule: červený rámeček + černá vodorovná čára</h2>
+
+<p><strong>Správná odpověď:</strong> příkaz zůstat stát v případech stanovených pravidly plavebního provozu.</p>
+
+<div style="display:flex; gap:40px; flex-wrap:wrap; margin:24px 0; align-items:flex-start;">
+
+  <!-- Vizualizace: samotná tabule -->
+  <div style="text-align:center;">
+    <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Červený rámeček -->
+      <rect x="4" y="4" width="132" height="132" rx="6" fill="#cc2200"/>
+      <!-- Bílé vnitřní pole -->
+      <rect x="18" y="18" width="104" height="104" rx="2" fill="#ffffff"/>
+      <!-- Černá vodorovná čára -->
+      <rect x="28" y="59" width="84" height="22" rx="3" fill="#1a1a1a"/>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Tabule na vodní cestě<br>(zadání testu)</p>
+  </div>
+
+  <!-- Vizualizace: situace u plavební komory -->
+  <div style="text-align:center;">
+    <svg width="300" height="180" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <rect x="0" y="100" width="300" height="80" fill="#5aa8d0" opacity="0.4"/>
+      <!-- Stěny komory -->
+      <rect x="0" y="60" width="60" height="120" fill="#8b7355"/>
+      <rect x="240" y="60" width="60" height="120" fill="#8b7355"/>
+      <!-- Vrata komory (zavřená) -->
+      <line x1="60" y1="60" x2="60" y2="180" stroke="#5a3e1b" stroke-width="6"/>
+      <line x1="240" y1="60" x2="240" y2="180" stroke="#5a3e1b" stroke-width="6"/>
+      <!-- Vrata: zkřížené latě -->
+      <line x1="60" y1="80" x2="100" y2="110" stroke="#5a3e1b" stroke-width="3"/>
+      <line x1="100" y1="80" x2="60" y2="110" stroke="#5a3e1b" stroke-width="3"/>
+      <line x1="200" y1="80" x2="240" y2="110" stroke="#5a3e1b" stroke-width="3"/>
+      <line x1="240" y1="80" x2="200" y2="110" stroke="#5a3e1b" stroke-width="3"/>
+      <!-- Stožár se signální tabulí -->
+      <line x1="42" y1="20" x2="42" y2="100" stroke="#444" stroke-width="3"/>
+      <!-- Tabule na stožáru (zmenšená) -->
+      <rect x="8" y="14" width="34" height="34" rx="2" fill="#cc2200"/>
+      <rect x="13" y="19" width="24" height="24" rx="1" fill="#ffffff"/>
+      <rect x="16" y="28" width="18" height="6" rx="1" fill="#1a1a1a"/>
+      <!-- Plavidlo čekající před komorou -->
+      <ellipse cx="170" cy="130" rx="40" ry="12" fill="#4466aa" opacity="0.8"/>
+      <rect x="145" y="108" width="50" height="24" rx="3" fill="#3355aa" opacity="0.9"/>
+      <line x1="170" y1="108" x2="170" y2="90" stroke="#333" stroke-width="2"/>
+      <!-- Šipka "stůj" -->
+      <line x1="130" y1="130" x2="105" y2="130" stroke="#cc2200" stroke-width="2.5" stroke-dasharray="4,3"/>
+      <polygon points="105,125 95,130 105,135" fill="#cc2200"/>
+      <!-- Popis -->
+      <text x="90" y="170" font-size="11" fill="#333" text-anchor="middle">Plavidlo čeká (stůj)</text>
+      <text x="28" y="58" font-size="10" fill="#333" text-anchor="middle">tabule</text>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Typické použití — vjezd do plavební komory</p>
+  </div>
+
+  <!-- Porovnání se sousedními znaky -->
+  <div>
+    <p style="font-weight:bold; margin-bottom:8px;">Porovnání podobných signálních tabulí:</p>
+    <svg width="260" height="130" viewBox="0 0 260 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- Tabule 1: STŮJ (tato otázka) -->
+      <rect x="10" y="10" width="60" height="60" rx="4" fill="#cc2200"/>
+      <rect x="18" y="18" width="44" height="44" rx="2" fill="#ffffff"/>
+      <rect x="23" y="33" width="34" height="10" rx="2" fill="#1a1a1a"/>
+      <text x="40" y="88" font-size="10" fill="#333" text-anchor="middle">Stůj</text>
+      <text x="40" y="100" font-size="9" fill="#555" text-anchor="middle">(tato otázka)</text>
+
+      <!-- Tabule 2: VOLNO / POKRAČUJ — zelená -->
+      <rect x="100" y="10" width="60" height="60" rx="4" fill="#228822"/>
+      <rect x="108" y="18" width="44" height="44" rx="2" fill="#ffffff"/>
+      <rect x="113" y="33" width="34" height="10" rx="2" fill="#228822"/>
+      <text x="130" y="88" font-size="10" fill="#333" text-anchor="middle">Volno</text>
+      <text x="130" y="100" font-size="9" fill="#555" text-anchor="middle">(pokračuj)</text>
+
+      <!-- Tabule 3: POZOR / ZVLÁŠTNÍ POZORNOST — žlutá s vykřičníkem -->
+      <rect x="190" y="10" width="60" height="60" rx="4" fill="#e8a800"/>
+      <rect x="198" y="18" width="44" height="44" rx="2" fill="#ffffff"/>
+      <text x="220" y="50" font-size="26" fill="#1a1a1a" text-anchor="middle" font-weight="bold">!</text>
+      <text x="220" y="88" font-size="10" fill="#333" text-anchor="middle">Zvláštní</text>
+      <text x="220" y="100" font-size="9" fill="#555" text-anchor="middle">pozornost</text>
+    </svg>
+    <p style="font-size:0.83em; color:#555; margin-top:4px;">Červená + černá čára = stop. Zelená = volno. Žlutá + ! = pozornost.</p>
+  </div>
+
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Zachovávat zvláštní pozornost"</strong> — výstražné tabule mají jiný grafický kód (typicky žluté pozadí nebo vykřičník). Černá vodorovná čára je znakem zákazu/příkazu zastavení, ne varování.</li>
+  <li><strong>„Dát zvukový signál jeden dlouhý zvuk"</strong> — tabule nařizující zvukový signál zobrazuje symbol rohu nebo trumpety. Horizontální čára žádný zvuk nepředepisuje.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Tuto tabuli uvidíš nejčastěji na stožáru nebo zdi u <strong>vjezdu do plavební komory</strong> nebo u pohyblivého mostu. Je-li zobrazena, <strong>zastav plavidlo, kotvuj nebo manévruj na místě</strong> a vyčkej na „volno" (obvykle zelená signální tabule nebo zelené světlo). Pokud bys nezastavil, dopouštíš se závažného porušení pravidel plavebního provozu.</p>
+
+<h3>Mnemotechnika</h3>
+<p>Černá čára přes bílé pole = <strong>závora přes vodní cestu</strong>. Dokud se neotevře, stojíš.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — příloha č. 7 (signální znaky a tabule), § 8 odst. 4 (signalizace u plavebních komor)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

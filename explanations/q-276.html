@@ -1,0 +1,101 @@
+<h2>Signální tabule „přeplutí na levý bok plavební dráhy"</h2>
+
+<p>Tabule přikazuje všem plavidlům přeplout na stranu plavební dráhy, která je <strong>po levém boku</strong>.</p>
+
+<h3>Jak tabuli číst</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levá část: schéma tabule 1:1 -->
+  <div style="text-align:center;">
+    <div style="font-size:12px; color:#555; margin-bottom:6px;">Tabule v testu</div>
+    <svg width="120" height="140" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- červený rámeček -->
+      <rect x="2" y="2" width="116" height="136" rx="8" ry="8" fill="#cc2200" />
+      <rect x="10" y="10" width="100" height="120" rx="4" ry="4" fill="white" />
+      <!-- Levá šipka - dolů vlevo, pak kříží a jde nahoru vpravo -->
+      <!-- šipka 1: přichází shora-vlevo, kříží se, odchází dolů-vpravo -->
+      <path d="M30,20 C30,20 30,55 60,70 C90,85 90,110 90,120"
+            fill="none" stroke="black" stroke-width="7" stroke-linecap="round"/>
+      <!-- šipka 2: přichází shora-vpravo, kříží se, odchází dolů-vlevo -->
+      <path d="M90,20 C90,20 90,55 60,70 C30,85 30,110 30,120"
+            fill="none" stroke="black" stroke-width="7" stroke-linecap="round"/>
+      <!-- šipky nahoře -->
+      <polygon points="22,30 30,14 38,30" fill="black"/>
+      <polygon points="82,30 90,14 98,30" fill="black"/>
+      <!-- šipky dole -->
+      <polygon points="22,110 30,126 38,110" fill="black"/>
+      <polygon points="82,110 90,126 98,110" fill="black"/>
+    </svg>
+  </div>
+
+  <!-- Pravá část: situace na vodě -->
+  <div style="text-align:center;">
+    <div style="font-size:12px; color:#555; margin-bottom:6px;">Co to znamená na vodě</div>
+    <svg width="220" height="160" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- voda -->
+      <rect x="0" y="0" width="220" height="160" fill="#cce8f4"/>
+      <!-- břehy -->
+      <rect x="0" y="0" width="220" height="20" fill="#a0855a"/>
+      <rect x="0" y="140" width="220" height="20" fill="#a0855a"/>
+      <!-- popisky břehů -->
+      <text x="110" y="14" text-anchor="middle" font-size="10" fill="white" font-weight="bold">levý břeh</text>
+      <text x="110" y="154" text-anchor="middle" font-size="10" fill="white" font-weight="bold">pravý břeh</text>
+      <!-- středová osa -->
+      <line x1="0" y1="80" x2="220" y2="80" stroke="#fff" stroke-width="1" stroke-dasharray="6,4"/>
+      <!-- tabule - ikona -->
+      <rect x="96" y="62" width="28" height="36" rx="3" fill="#cc2200"/>
+      <rect x="100" y="66" width="20" height="28" rx="2" fill="white"/>
+      <text x="110" y="85" text-anchor="middle" font-size="14" fill="black">✕</text>
+
+      <!-- Plavidlo 1: jede zprava (protiproud) - bylo na pravém (spodním) → jde na levý (horní) -->
+      <!-- před tabulí -->
+      <rect x="150" y="95" width="30" height="14" rx="3" fill="#1a5fa8"/>
+      <polygon points="150,102 142,98 142,106" fill="#1a5fa8"/>
+      <text x="165" y="89" text-anchor="middle" font-size="9" fill="#1a5fa8">➀</text>
+      <!-- šipka: přechod na levý bok -->
+      <path d="M145,102 Q110,102 90,55" fill="none" stroke="#1a5fa8" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr1)"/>
+
+      <!-- Plavidlo 2: jede zleva (po proudu) - bylo na pravém (horním) → jde na levý (spodní) — ale čekáme -->
+      <!-- vlastně obě jdou na LEVÝ BOK = každé na svůj levý bok -->
+      <!-- plavidlo 2 jede doleva => levý bok = spodní pás -->
+      <rect x="40" y="44" width="30" height="14" rx="3" fill="#2a7a2a"/>
+      <polygon points="70,51 78,47 78,55" fill="#2a7a2a"/>
+      <text x="55" y="40" text-anchor="middle" font-size="9" fill="#2a7a2a">➁</text>
+      <!-- šipka -->
+      <path d="M75,51 Q110,51 130,102" fill="none" stroke="#2a7a2a" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+
+      <!-- popisek levý bok -->
+      <text x="12" y="36" font-size="8" fill="#555">← levý bok ➀</text>
+      <text x="12" y="130" font-size="8" fill="#555">← levý bok ➁</text>
+
+      <defs>
+        <marker id="arr1" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#1a5fa8"/>
+        </marker>
+        <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#2a7a2a"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Třetí část: legenda -->
+  <div style="font-size:13px; max-width:200px;">
+    <p><strong>Červený rámeček</strong> = příkazová tabule (závazný pokyn)</p>
+    <p><strong>Křížící se šipky</strong> = obě plavidla přecházejí — každé na svůj levý bok</p>
+    <p>Po projetí tabulí jedou obě plavidla blíže k levému břehu</p>
+  </div>
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>Obratiště plavidel</strong> — ta tabule má šipku opisující oblouk (otočení na místě), nikoliv dvě křížící se linie přechodu.</li>
+  <li><strong>Zákaz potkávání</strong> — zákazové tabule mají odlišný grafický prvek (zpravidla přeškrtnuté nebo oddělené symboly); tato tabule potkávání nebrání, jen ho prostorově organizuje.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Tabuli potkáte v úsecích, kde je plavební dráha příliš úzká pro běžné míjení vpravo-vpravo. Obě plavidla — bez ohledu na směr plavby — jsou povinna přejít na levý bok před setkáním.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 8 (tabulové znaky — příkazové tabule).</p>

@@ -1,0 +1,91 @@
+<h2>Kývání červeným světlem v půlkruhu</h2>
+
+<p><strong>Správná odpověď:</strong> plavidlo ztratilo manévrovací schopnost.</p>
+
+<h3>Co tento signál znamená?</h3>
+<p>
+  Kývání červeným světlem v půlkruhu (na malém plavidle lze použít bílé světlo) je
+  <strong>specifický vizuální signál</strong>, který říká ostatním plavidlům:
+  <em>„Nemohu manévrovat — dejte mi prostor."</em> Příčinou může být porucha motoru,
+  závada řízení nebo jiná situace, kdy plavidlo ztratilo schopnost ovládat svůj pohyb.
+</p>
+
+<!-- Vizualizace: vlevo schéma (jak to vypadá v testu), vpravo překlad do reality -->
+<div style="display:flex; gap:32px; flex-wrap:wrap; margin:24px 0; align-items:flex-start;">
+
+  <!-- Levý panel: schéma signálu -->
+  <div style="flex:1; min-width:200px; text-align:center;">
+    <p style="font-size:0.85em; color:#666; margin-bottom:8px;">Schéma signálu</p>
+    <svg viewBox="0 0 220 160" width="220" height="160" style="background:#0a0a1a; border-radius:8px;">
+      <!-- vlny pod lodí -->
+      <polyline points="10,130 25,120 40,130 55,120 70,130 85,120 100,130 115,120 130,130 145,120 160,130 175,120 190,130 205,120 210,130" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.5"/>
+      <!-- trup lodi -->
+      <path d="M30,115 L190,115 L175,130 L45,130 Z" fill="none" stroke="#fff" stroke-width="2"/>
+      <!-- paluba -->
+      <line x1="30" y1="115" x2="190" y2="115" stroke="#fff" stroke-width="1.5"/>
+      <!-- figura -->
+      <circle cx="110" cy="88" r="8" fill="none" stroke="#fff" stroke-width="2"/>
+      <line x1="110" y1="96" x2="110" y2="115" stroke="#fff" stroke-width="2"/>
+      <line x1="110" y1="100" x2="95" y2="108" stroke="#fff" stroke-width="2"/>
+      <line x1="110" y1="100" x2="125" y2="108" stroke="#fff" stroke-width="2"/>
+      <!-- červené světlo v ruce -->
+      <circle cx="95" cy="108" r="6" fill="#e53935" stroke="#fff" stroke-width="1"/>
+      <!-- šipky půlkruhu (kývání) -->
+      <path d="M70,105 A40,40 0 0,1 150,105" fill="none" stroke="#e53935" stroke-width="2" stroke-dasharray="5,3"/>
+      <polygon points="150,105 143,98 157,98" fill="#e53935"/>
+      <polygon points="70,105 63,98 77,98" fill="#e53935"/>
+      <!-- popisek -->
+      <text x="110" y="150" text-anchor="middle" fill="#e53935" font-size="11" font-family="sans-serif">červené světlo, půlkruh</text>
+    </svg>
+  </div>
+
+  <!-- Pravý panel: co to znamená v reálu -->
+  <div style="flex:2; min-width:220px;">
+    <p style="font-size:0.85em; color:#666; margin-bottom:8px;">Co signál říká okolí</p>
+    <table style="border-collapse:collapse; width:100%; font-size:0.9em;">
+      <thead>
+        <tr style="background:#f5f5f5;">
+          <th style="padding:8px; border:1px solid #ddd; text-align:left;">Signál</th>
+          <th style="padding:8px; border:1px solid #ddd; text-align:left;">Zpráva</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#ffebee;">
+          <td style="padding:8px; border:1px solid #ddd;">🔴 kývání červeným světlem v půlkruhu</td>
+          <td style="padding:8px; border:1px solid #ddd;"><strong>Ztratil jsem manévrovací schopnost</strong> — dejte mi prostor</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #ddd;">🆘 opakované zdvíhání a spouštění paží / rakety / MAYDAY</td>
+          <td style="padding:8px; border:1px solid #ddd;">Plavidlo v nouzi, potřebuji záchrannou pomoc</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #ddd;">🔊 1 dlouhý + 3 krátké / 1 dlouhý + 2 krátké (zvuk/světlo)</td>
+          <td style="padding:8px; border:1px solid #ddd;">Předjetí není možné / je možné jen z dané strany</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h3>Proč ostatní možnosti nesedí</h3>
+<ul>
+  <li>
+    <strong>„Plavidlo v nouzi, které potřebuje pomoc"</strong> — tísňové signály jsou odlišné
+    (opakované zdvíhání paží, oranžový kouř, rakety, záblesk SOS, rádiový MAYDAY).
+    Ztráta manévrovací schopnosti je konkrétní navigační stav — vážný, ale nesignalizuje
+    žádost o záchranáře.
+  </li>
+  <li>
+    <strong>„Předjetí není možné"</strong> — tento zákaz se signalizuje zvukovými nebo
+    blikavými světelnými signály, nikoliv kýváním světlem v půlkruhu.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Pokud vidíte tento signál na vodě, musíte plavidlu uvolnit cestu a nepřibližovat se —
+  lodník nemůže ustoupit ani změnit kurz. Typická příčina: porucha motoru nebo kormidla.
+</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 — vizuální signály.</p>

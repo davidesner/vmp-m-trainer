@@ -1,0 +1,102 @@
+<h2>Signální tabule — blesk se šipkou dolů</h2>
+
+<p>Otázka ukazuje <strong>modrou čtvercovou tabuli s bílým bleskem a šipkou dolů</strong>. Tato tabule znamená: <strong>elektrické vedení přes vodní cestu.</strong></p>
+
+<hr>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levá část: přesná replika tabule -->
+  <div style="text-align:center;">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="120" rx="8" fill="#1a6bbf"/>
+      <!-- Blesk: bílý symbol elektřiny se šipkou dolů -->
+      <polygon points="68,12 40,62 58,62 52,108 80,58 62,58" fill="white"/>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Tabule jak je v testu</p>
+  </div>
+
+  <!-- Pravá část: schéma situace na vodní cestě -->
+  <div style="text-align:center;">
+    <svg width="280" height="160" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- Obloha -->
+      <rect width="280" height="160" fill="#e8f4f8"/>
+
+      <!-- Elektrické sloupy na břehu -->
+      <!-- Levý sloup -->
+      <rect x="10" y="40" width="8" height="80" fill="#8B6914"/>
+      <line x1="14" y1="48" x2="14" y2="40" stroke="#8B6914" stroke-width="2"/>
+      <line x1="4" y1="48" x2="24" y2="48" stroke="#8B6914" stroke-width="3"/>
+
+      <!-- Pravý sloup -->
+      <rect x="262" y="40" width="8" height="80" fill="#8B6914"/>
+      <line x1="266" y1="48" x2="266" y2="40" stroke="#8B6914" stroke-width="2"/>
+      <line x1="256" y1="48" x2="276" y2="48" stroke="#8B6914" stroke-width="3"/>
+
+      <!-- Elektrické vedení (kabely) -->
+      <path d="M24,48 Q140,38 256,48" stroke="#555" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+      <path d="M24,52 Q140,42 256,52" stroke="#555" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+
+      <!-- Blesk symbol u kabelu (označení el. vedení) -->
+      <polygon points="142,26 134,39 140,39 138,52 146,39 140,39" fill="#e8a500" stroke="#c07000" stroke-width="1"/>
+
+      <!-- Voda -->
+      <rect x="0" y="108" width="280" height="52" fill="#4a90d9" rx="0"/>
+      <path d="M0,110 Q35,106 70,110 Q105,114 140,110 Q175,106 210,110 Q245,114 280,110" stroke="#6ab0f0" stroke-width="2" fill="none"/>
+
+      <!-- Plavidlo (pohled ze strany) -->
+      <!-- Trup -->
+      <polygon points="80,108 90,98 190,98 200,108" fill="#c0392b"/>
+      <rect x="100" y="82" width="70" height="16" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+      <!-- Stěžeň -->
+      <line x1="140" y1="82" x2="140" y2="56" stroke="#7f8c8d" stroke-width="2"/>
+      <!-- Anténa na stěžni -->
+      <line x1="136" y1="58" x2="144" y2="58" stroke="#7f8c8d" stroke-width="1.5"/>
+
+      <!-- Šipka výšky průjezdu -->
+      <line x1="220" y1="52" x2="220" y2="100" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <polygon points="220,52 216,62 224,62" fill="#e74c3c"/>
+      <polygon points="220,100 216,90 224,90" fill="#e74c3c"/>
+      <text x="225" y="80" font-size="10" fill="#e74c3c" font-family="sans-serif">výška</text>
+      <text x="225" y="91" font-size="10" fill="#e74c3c" font-family="sans-serif">průjezdu</text>
+
+      <!-- Popis -->
+      <text x="85" y="135" font-size="11" fill="white" font-family="sans-serif" font-weight="bold">Plavidlo se stěžněm</text>
+      <text x="60" y="148" font-size="10" fill="#d0e8ff" font-family="sans-serif">musí zkontrolovat výšku před průjezdem</text>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Situace na vodní cestě</p>
+  </div>
+
+</div>
+
+<hr>
+
+<h3>Jádro vysvětlení</h3>
+
+<ul>
+  <li><strong>Blesk</strong> = elektřina (symbol napětí/vedení)</li>
+  <li><strong>Šipka dolů</strong> = vedení visí shora přes vodní cestu</li>
+  <li><strong>Modrý podklad</strong> = informační/výstražná tabule na vodní cestě</li>
+</ul>
+
+<p>Tabule upozorňuje na <strong>elektrické vedení natažené napříč vodní cestou</strong> (např. vysokonapěťové nebo distribuční kabely). Vůdce plavidla musí před průjezdem ověřit, zda výška jeho plavidla (stěžeň, anténa, jeřáb, nástavba) nepřesahuje <strong>povolenou průjezdní výšku</strong> pod vedením.</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>„Břehová přípojka elektrického napětí"</strong> — ta by označovala místo, kde lze plavidlo připojit na břehový proud (zásuvka, terminál); sign by ukazoval k břehu, ne dolů přes vodní cestu.</li>
+  <li><strong>„Zóna atmosférických poruch / výpadky rádiového spojení"</strong> — taková plavební tabule v systému CEVNI/české legislativě neexistuje; blesk se jako symbol rádiového rušení na plavebních značkách nepoužívá.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Při plavbě pod elektrickým vedením hrozí zkrat nebo mechanické poškození stěžně. Na řekách a kanálech jsou vedení označena na obou březích touto tabulí a zpravidla i vedle ní číselnou tabulí s maximální průjezdní výškou v metrech.</p>
+
+<h3>Zdroje</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu — příloha: plavební znaky a tabule</li>
+  <li>CEVNI (Code Européen des Voies de la Navigation Intérieure) — evropský standard pro značení vnitrozemských vodních cest</li>
+</ul>

@@ -1,0 +1,113 @@
+<h2>Převozní lodě plují volně</h2>
+
+<p>
+  <strong>Modrá tabule s bílou siluetou lodi</strong> znamená:
+  <em>„Převozní lodě plují volně."</em>
+  Tento signální znak varuje ostatní plavce, že v daném úseku přejíždějí
+  přívozní čluny přes vodní cestu a mají přednost.
+</p>
+
+<!-- Vizualizace: vlevo tabule tak jak ji vidíš v testu, vpravo co znamená na vodě -->
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <!-- Tabule 1:1 -->
+  <div style="text-align:center;">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="120" rx="8" fill="#5b9bd5"/>
+      <!-- silueta lodi -->
+      <g fill="white">
+        <!-- trup -->
+        <rect x="20" y="68" width="80" height="18" rx="3"/>
+        <!-- příď šikmá -->
+        <polygon points="20,86 12,86 20,68"/>
+        <!-- záď šikmá -->
+        <polygon points="100,86 108,86 100,68"/>
+        <!-- nástavba/kabina -->
+        <rect x="42" y="52" width="36" height="18" rx="2"/>
+        <!-- komín/stěžeň -->
+        <rect x="57" y="42" width="6" height="12" rx="1"/>
+      </g>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Tabule v testu</p>
+  </div>
+
+  <!-- Schéma situace na vodě -->
+  <div style="text-align:center;">
+    <svg width="280" height="140" viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- voda -->
+      <rect width="280" height="140" fill="#d6eaf8"/>
+      <!-- levý břeh -->
+      <rect x="0" y="0" width="30" height="140" fill="#a0785a"/>
+      <!-- pravý břeh -->
+      <rect x="250" y="0" width="30" height="140" fill="#a0785a"/>
+
+      <!-- tabule na břehu -->
+      <rect x="3" y="50" width="24" height="24" rx="3" fill="#5b9bd5"/>
+      <g fill="white" transform="translate(4,51)">
+        <rect x="2" y="11" width="20" height="5" rx="1"/>
+        <rect x="7" y="6" width="9" height="7" rx="1"/>
+        <rect x="10" y="2" width="3" height="5" rx="1"/>
+      </g>
+
+      <!-- přívozní loď přejíždí přes tok (šipka zleva doprava) -->
+      <!-- loď -->
+      <g transform="translate(100,58)">
+        <rect x="0" y="10" width="60" height="14" rx="3" fill="#e8e8e8" stroke="#555" stroke-width="1"/>
+        <polygon points="0,24 -8,24 0,10" fill="#e8e8e8" stroke="#555" stroke-width="1"/>
+        <polygon points="60,24 68,24 60,10" fill="#e8e8e8" stroke="#555" stroke-width="1"/>
+        <rect x="18" y="2" width="24" height="12" rx="2" fill="#ccc" stroke="#555" stroke-width="1"/>
+        <!-- šipka pohybu -->
+        <line x1="30" y1="-12" x2="30" y2="-2" stroke="#e74c3c" stroke-width="2.5" marker-end="url(#arr)"/>
+      </g>
+
+      <!-- šipka pro marker -->
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#e74c3c"/>
+        </marker>
+        <marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#2980b9"/>
+        </marker>
+      </defs>
+
+      <!-- jiné plavidlo plující po toku — čeká -->
+      <g transform="translate(190,90)">
+        <rect x="0" y="0" width="50" height="12" rx="2" fill="#f9e79f" stroke="#888" stroke-width="1"/>
+        <polygon points="0,12 -6,12 0,0" fill="#f9e79f" stroke="#888" stroke-width="1"/>
+        <rect x="14" y="-8" width="16" height="10" rx="1" fill="#f0d060" stroke="#888" stroke-width="1"/>
+      </g>
+      <!-- šipka „stojí/čeká" -->
+      <line x1="215" y1="85" x2="215" y2="78" stroke="#888" stroke-width="2" stroke-dasharray="4,3"/>
+
+      <!-- popisky -->
+      <text x="130" y="40" font-size="11" fill="#c0392b" text-anchor="middle" font-family="sans-serif">přívoz → přednost</text>
+      <text x="215" y="128" font-size="10" fill="#555" text-anchor="middle" font-family="sans-serif">ostatní čekají</text>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Co to znamená na vodě</p>
+  </div>
+</div>
+
+<h3>Proč jsou ostatní možnosti nesprávné</h3>
+<ul>
+  <li>
+    <strong>Přístaviště osobních lodí</strong> má jiný symbol — zpravidla
+    kotviště nebo siluetu lodi u pontonu s označením přístupového místa;
+    nesouvisí s průjezdní předností přívozů.
+  </li>
+  <li>
+    <strong>Povolené stání plavidel</strong> se označuje modrou tabulí
+    s kotvou nebo vodorovnými pruhy — ne siluetou plující lodi.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Uvidíš-li tuto tabuli, zkontroluj, zda přívoz právě přejíždí vodní cestu.
+  Pokud ano: zpomal, neobíhej trasu, nepředjíždíš — přívoz má přednost
+  a pluje volně (bez ohledu na standardní pravidla míjení).
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, příloha č. 7 (signální znaky — tabule)</li>
+</ul>

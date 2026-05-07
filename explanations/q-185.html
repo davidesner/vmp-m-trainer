@@ -1,0 +1,102 @@
+<h2>Kužel hrotem dolů — motor-sailer</h2>
+
+<p>Na obrázku je plachetnice s <strong>kuželem (hrotem dolů) na vrcholu stěžně</strong>. Jde o <em>denní značku</em> — tvar viditelný za denního světla bez nutnosti světel.</p>
+
+<p><strong>Správná odpověď:</strong> Kužel nese <em>malé plavidlo plující pomocí plachet a strojního pohonu současně</em> — tzv. motor-sailer.</p>
+
+<hr>
+
+<h3>Vizualizace: co kužel říká ostatním</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levá část: co vidíte v testu -->
+  <div style="text-align:center; flex:1; min-width:160px;">
+    <div style="font-size:12px; font-weight:bold; color:#555; margin-bottom:8px;">CO VIDÍTE V TESTU</div>
+    <svg width="140" height="160" viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <path d="M0,120 Q17,112 35,120 Q52,128 70,120 Q87,112 105,120 Q122,128 140,120 L140,160 L0,160 Z" fill="#a8d4f5"/>
+      <!-- Trup -->
+      <path d="M20,110 Q30,118 70,118 Q110,118 120,110 L115,105 L25,105 Z" fill="#e8e0d0" stroke="#333" stroke-width="1.5"/>
+      <!-- Kabina -->
+      <rect x="38" y="93" width="30" height="14" rx="2" fill="#d0c8b8" stroke="#333" stroke-width="1.5"/>
+      <!-- Stěžeň -->
+      <line x1="85" y1="30" x2="85" y2="108" stroke="#333" stroke-width="2"/>
+      <!-- Plachta -->
+      <path d="M85,35 L85,105 L40,100 Z" fill="white" stroke="#555" stroke-width="1.5" opacity="0.9"/>
+      <!-- Kužel hrotem dolů na vrcholu stěžně -->
+      <polygon points="85,30 75,46 95,46" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+      <!-- Popis kužele -->
+      <text x="100" y="42" font-size="10" fill="#c00" font-weight="bold">▼ kužel</text>
+      <!-- Motor (propeller symbol) -->
+      <ellipse cx="70" cy="116" rx="6" ry="3" fill="none" stroke="#555" stroke-width="1.5"/>
+      <text x="48" y="130" font-size="9" fill="#555">⚙ motor běží</text>
+    </svg>
+    <div style="font-size:11px; color:#666; margin-top:4px;">Plachetnice s kuželem na stěžni</div>
+  </div>
+
+  <!-- Pravá část: co to znamená -->
+  <div style="flex:2; min-width:220px;">
+    <div style="font-size:12px; font-weight:bold; color:#555; margin-bottom:8px;">CO TO ZNAMENÁ</div>
+    <svg width="280" height="160" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- Plachta + motor => pravidla jako motorové plavidlo -->
+
+      <!-- Box 1: čistá plachetnice -->
+      <rect x="5" y="10" width="80" height="60" rx="6" fill="#e8f4e8" stroke="#4a9" stroke-width="1.5"/>
+      <text x="45" y="28" font-size="9" text-anchor="middle" fill="#333">Čistá</text>
+      <text x="45" y="40" font-size="9" text-anchor="middle" fill="#333">plachetnice</text>
+      <text x="45" y="55" font-size="20" text-anchor="middle">⛵</text>
+
+      <!-- Box 2: motor-sailer -->
+      <rect x="5" y="90" width="80" height="60" rx="6" fill="#fff3cd" stroke="#e6a817" stroke-width="1.5"/>
+      <text x="45" y="108" font-size="9" text-anchor="middle" fill="#333">Plachty</text>
+      <text x="45" y="120" font-size="9" text-anchor="middle" fill="#333">+ motor</text>
+      <text x="45" y="140" font-size="16" text-anchor="middle">⛵ + ⚙</text>
+
+      <!-- Šipky doprava -->
+      <path d="M90,40 L110,40" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+      <path d="M90,120 L110,120" stroke="#e6a817" stroke-width="2" marker-end="url(#arr2)"/>
+
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#666"/>
+        </marker>
+        <marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#e6a817"/>
+        </marker>
+      </defs>
+
+      <!-- Pravá strana: výsledek -->
+      <rect x="115" y="10" width="160" height="55" rx="6" fill="#e8f4e8" stroke="#4a9" stroke-width="1.5"/>
+      <text x="195" y="28" font-size="9" text-anchor="middle" fill="#2a7a2a">→ Má přednost před</text>
+      <text x="195" y="40" font-size="9" text-anchor="middle" fill="#2a7a2a">motorovými plavidly</text>
+      <text x="195" y="55" font-size="9" text-anchor="middle" fill="#2a7a2a">(za určitých podmínek)</text>
+
+      <rect x="115" y="90" width="160" height="55" rx="6" fill="#ffe0e0" stroke="#c55" stroke-width="1.5"/>
+      <polygon points="195,97 187,111 203,111" fill="#1a1a1a"/>
+      <text x="195" y="118" font-size="8" text-anchor="middle" fill="#c00">musí nést kužel ▼</text>
+      <text x="195" y="130" font-size="9" text-anchor="middle" fill="#a00">= platí pro něj pravidla</text>
+      <text x="195" y="142" font-size="9" text-anchor="middle" fill="#a00">motorového plavidla</text>
+    </svg>
+  </div>
+</div>
+
+<h3>Proč právě kužel?</h3>
+
+<p>Čistá plachetnice má za určitých podmínek <strong>přednost</strong> před motorovými plavidly. Jakmile skipper zapne motor — i jen přispívající — přestává se jeho plavidlo chovat jako plachetnice z hlediska pravidel plavby. <strong>Kužel hrotem dolů</strong> je jasný signál ostatním: <em>"Chovej se ke mně jako k motorovému plavidlu."</em></p>
+
+<p>Denní značka je povinná, protože za dne svítí slunce a světla nejsou dobře viditelná — tvary a barvy denních značek přebírají roli signalizace.</p>
+
+<h3>Proč ne ostatní varianty</h3>
+
+<ul>
+  <li><strong>Malé plavidlo stojící na volné vodní ploše</strong> — stojící nebo kotvící plavidlo nevystavuje kužel; k signalizaci kotvení slouží jiné znaky (kotevní koule), a malá plavidla jsou od kotvicí signalizace navíc osvobozena.</li>
+  <li><strong>Plachetnice nepřesahující délku 7 m</strong> — délka plavidla nesouvisí s povinností nést kužel. Kužel se váže výhradně na <em>kombinaci pohonu</em>, ne na rozměr.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Typická situace: plujete pod plachtami, vítr slábne, vytáhnete motor aby jste stihli přístav. V tu chvíli <strong>okamžitě vyvěste kužel hrotem dolů</strong> na stěžeň — i kdybyste motorem jen pomáhali. Ostatní plavidla tím vědí, jak vás mají v plavebním provozu zařadit.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, § 3.13 — denní znaky malých plavidel.</p>

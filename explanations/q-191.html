@@ -1,0 +1,112 @@
+<h2>Loďka nebo plovák nesoucí vodící lano převozní lodě</h2>
+
+<p>Na obrázku vidíš malou loďku (plovák) s <strong>jedním bílým kruhovým světlem</strong> na stožáru. Tato kombinace je ve vyhlášce vyhrazena výhradně pro <strong>loďku nebo plovák nesoucí vodící lano převozní lodě (přívozu na laně)</strong>.</p>
+
+<h3>Co je přívoz na laně?</h3>
+<p>Přívoz na laně je typ říční přepravy, při které se loď pohybuje po napjatém laně přetaženém přes vodní tok. Lano je přidržováno a označeno malou loďkou nebo plovoucem na straně, kde je ukotveno. Tato loďka nese právě jediné bílé všesměrové světlo.</p>
+
+<h3>Vizualizace</h3>
+
+<div style="background:#1a1a2e; padding:16px; border-radius:8px; margin:12px 0;">
+<svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:auto;">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#aaa"/>
+    </marker>
+  </defs>
+
+  <!-- Water background -->
+  <rect x="0" y="130" width="520" height="130" fill="#0d3b6e" rx="0"/>
+  <!-- Sky background -->
+  <rect x="0" y="0" width="520" height="130" fill="#1a1a2e"/>
+
+  <!-- Horizon line / water surface -->
+  <line x1="0" y1="150" x2="520" y2="150" stroke="#3a7bd5" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+
+  <!-- === LEVÁ STRANA: co vidíš v testu === -->
+  <!-- Label -->
+  <text x="110" y="22" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">V testu vidíš</text>
+
+  <!-- Small boat hull -->
+  <ellipse cx="110" cy="153" rx="38" ry="10" fill="#e8d5b0" stroke="#c4a97a" stroke-width="1.5"/>
+  <path d="M72,153 Q110,168 148,153" fill="#c4a97a"/>
+
+  <!-- Mast -->
+  <line x1="110" y1="110" x2="110" y2="153" stroke="#e8d5b0" stroke-width="2"/>
+
+  <!-- White all-round light (globe) -->
+  <circle cx="110" cy="104" r="10" fill="white" stroke="#ccc" stroke-width="1"/>
+  <circle cx="110" cy="104" r="10" fill="white" opacity="0.3"/>
+  <!-- Glow effect -->
+  <circle cx="110" cy="104" r="16" fill="white" opacity="0.08"/>
+
+  <!-- Waves around boat -->
+  <path d="M72,162 Q80,158 88,162 Q96,166 104,162 Q112,158 120,162 Q128,166 136,162 Q144,158 148,162" fill="none" stroke="#3a7bd5" stroke-width="1.5" opacity="0.7"/>
+  <path d="M72,172 Q80,168 88,172 Q96,176 104,172 Q112,168 120,172 Q128,176 136,172" fill="none" stroke="#3a7bd5" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Rope going right (underwater hint) -->
+  <path d="M148,153 Q200,160 250,155" fill="none" stroke="#c4a97a" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+
+  <!-- Light legend -->
+  <circle cx="110" cy="104" r="5" fill="white"/>
+  <text x="130" y="108" fill="#ddd" font-size="10" font-family="sans-serif">1× bílé</text>
+  <text x="130" y="120" fill="#ddd" font-size="10" font-family="sans-serif">světlo (360°)</text>
+
+  <!-- === SEPARATOR === -->
+  <line x1="260" y1="10" x2="260" y2="250" stroke="#555" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- === PRAVÁ STRANA: realita === -->
+  <text x="390" y="22" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">Co to znamená v realitě</text>
+
+  <!-- Left bank -->
+  <rect x="270" y="100" width="30" height="150" fill="#4a5e3a" rx="3"/>
+  <text x="285" y="95" text-anchor="middle" fill="#8dba6e" font-size="10" font-family="sans-serif">břeh</text>
+
+  <!-- Right bank -->
+  <rect x="480" y="100" width="30" height="150" fill="#4a5e3a" rx="3"/>
+  <text x="495" y="95" text-anchor="middle" fill="#8dba6e" font-size="10" font-family="sans-serif">břeh</text>
+
+  <!-- Water between banks -->
+  <rect x="300" y="100" width="180" height="150" fill="#0d3b6e"/>
+
+  <!-- Guide rope across river (horizontal) -->
+  <path d="M300,145 Q390,138 480,145" fill="none" stroke="#c4a97a" stroke-width="2.5"/>
+  <text x="390" y="133" text-anchor="middle" fill="#c4a97a" font-size="10" font-family="sans-serif">vodící lano</text>
+
+  <!-- Ferry boat (bigger) in middle -->
+  <rect x="365" y="155" width="50" height="22" fill="#8a9bb0" rx="4" stroke="#aaa" stroke-width="1.5"/>
+  <text x="390" y="170" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">přívoz</text>
+
+  <!-- Small buoy/boat with rope on left -->
+  <ellipse cx="320" cy="147" rx="14" ry="6" fill="#e8d5b0" stroke="#c4a97a" stroke-width="1.5"/>
+  <!-- Mast on buoy -->
+  <line x1="320" y1="125" x2="320" y2="147" stroke="#e8d5b0" stroke-width="1.5"/>
+  <!-- White light -->
+  <circle cx="320" cy="119" r="7" fill="white"/>
+  <circle cx="320" cy="119" r="11" fill="white" opacity="0.1"/>
+
+  <!-- Arrow: ferry movement -->
+  <path d="M350,166 L365,166" fill="none" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Labels -->
+  <text x="320" y="115" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">loďka</text>
+  <text x="320" y="105" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">s bílým světlem</text>
+
+  <!-- Waves in river area -->
+  <path d="M305,178 Q320,174 335,178 Q350,182 365,178 Q380,174 395,178 Q410,182 425,178 Q440,174 475,178" fill="none" stroke="#3a7bd5" stroke-width="1" opacity="0.5"/>
+  <path d="M305,192 Q320,188 335,192 Q350,196 365,192 Q380,188 395,192 Q410,196 425,192 Q440,188 475,192" fill="none" stroke="#3a7bd5" stroke-width="1" opacity="0.4"/>
+
+</svg>
+</div>
+
+<h3>Proč ne ostatní možnosti?</h3>
+<ul>
+  <li><strong>"Vyvázané plavidlo vykonávající práci na vodní cestě"</strong> — neslo by <em>žlutá světla</em> (zábleskující nebo stálá), nikoli jedno bílé.</li>
+  <li><strong>"Plavidlo zajišťující potápěče"</strong> — označuje se tuhým modelem vlajky „A" (bílo-modrá) přes den; v noci červeným a bílým světlem v předepsaném uspořádání.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Potkáš-li na řece plovák nebo loďku s jediným bílým světlem, <strong>nepřejíždej vodní cestu v daném místě</strong> — pod hladinou i nad ní se táhne lano přívozu. Musíš se mu vyhnout.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, § 3.32 — označení plavidel přívozů na laně.</p>

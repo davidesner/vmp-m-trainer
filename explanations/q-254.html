@@ -1,0 +1,97 @@
+<h2>Signální znak — zákaz stání s uvedenou vzdáleností v metrech</h2>
+
+<p>
+  Tabule zobrazuje <strong>červený čtverec s šikmou přeškrtávací čárou a číslem 40</strong>.
+  Jde o <strong>zákazovou tabuli</strong> — šikmá čára přes čtverec signalizuje "zakazuji".
+  Číslo udává vzdálenost v metrech, na kterou se zákaz vztahuje.
+</p>
+
+<h3>Správná odpověď</h3>
+<p>
+  <strong>Zákaz stání plavidel v šířce 40 metrů, počítáno od tabule.</strong>
+  Žádné plavidlo (ani jeho část) nesmí v tomto úseku kotvit ani čekat.
+</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levá část: schéma tabule 1:1 -->
+  <div style="text-align:center;">
+    <svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+      <!-- červený rámeček -->
+      <rect x="5" y="5" width="100" height="100" rx="4" ry="4" fill="white" stroke="#d32f2f" stroke-width="10"/>
+      <!-- šikmá čára (zákazový přeškrt) -->
+      <line x1="15" y1="15" x2="95" y2="95" stroke="#d32f2f" stroke-width="9" stroke-linecap="round"/>
+      <!-- číslo -->
+      <text x="55" y="65" text-anchor="middle" font-size="36" font-weight="bold" font-family="sans-serif" fill="#111">40</text>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:4px;">Tabule v testu</div>
+  </div>
+
+  <!-- Pravá část: schéma situace na vodě -->
+  <div style="text-align:center;">
+    <svg width="320" height="130" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- voda -->
+      <rect x="0" y="60" width="320" height="70" fill="#b3d9f7"/>
+      <!-- břeh -->
+      <rect x="0" y="50" width="320" height="15" fill="#8B7355"/>
+      <!-- tabule na břehu -->
+      <rect x="20" y="14" width="36" height="36" rx="2" ry="2" fill="white" stroke="#d32f2f" stroke-width="4"/>
+      <line x1="24" y1="18" x2="52" y2="46" stroke="#d32f2f" stroke-width="3.5" stroke-linecap="round"/>
+      <text x="38" y="38" text-anchor="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#111">40</text>
+      <!-- sloupek tabule -->
+      <line x1="38" y1="50" x2="38" y2="65" stroke="#555" stroke-width="2.5"/>
+      <!-- šipka 40 m -->
+      <line x1="38" y1="72" x2="158" y2="72" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <polygon points="158,68 168,72 158,76" fill="#d32f2f"/>
+      <text x="103" y="68" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">40 m zakázaná zóna</text>
+      <!-- plavidlo MIMO zónu — OK -->
+      <rect x="190" y="75" width="50" height="20" rx="5" fill="#2e7d32"/>
+      <polygon points="190,85 176,85 183,79" fill="#2e7d32"/>
+      <text x="215" y="108" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">✓ OK</text>
+      <!-- plavidlo V zóně — zakázáno -->
+      <rect x="80" y="75" width="50" height="20" rx="5" fill="#b71c1c" opacity="0.55"/>
+      <line x1="78" y1="73" x2="132" y2="97" stroke="#b71c1c" stroke-width="2.5"/>
+      <line x1="78" y1="97" x2="132" y2="73" stroke="#b71c1c" stroke-width="2.5"/>
+      <text x="105" y="108" text-anchor="middle" font-size="11" fill="#b71c1c" font-weight="bold">✗ zakázáno</text>
+    </svg>
+    <div style="font-size:12px; color:#555; margin-top:4px;">Situace na vodě — zóna 40 m od tabule</div>
+  </div>
+</div>
+
+<h3>Klíč k dekódování tabule</h3>
+<table>
+  <thead>
+    <tr><th>Prvek</th><th>Význam</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Čtverec (ne kruh)</td><td>plavební tabule — umísťovaná na břehu nebo plovoucí</td></tr>
+    <tr><td>Červený rámeček + šikmá čára</td><td>zákazový charakter (přeškrtnutí = "zakazuji")</td></tr>
+    <tr><td>Číslo uvnitř</td><td>vzdálenost v metrech od tabule</td></tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li>
+    <strong>Rychlostní omezení</strong> — příkaz nepřekračovat rychlost má jinou vizuální formu
+    (typicky kruhový tvar nebo jiná zákazová tabule); číslo by bylo v km/h, ne v metrech vzdálenosti.
+  </li>
+  <li>
+    <strong>Omezení šířky plavební dráhy</strong> — informace o průjezdném profilu je na
+    informační (ne zákazové) tabulce, bez přeškrtnutí. Číslo by označovalo šířku, ne vzdálenost od tabule.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Plavidlo nesmí stát ani kotvit v zóně 40 m od tabule — platí pro obě strany podél břehu
+  i pro délku plavidla (nesmí ani přesahovat do zakázané zóny). Typické umístění: před mosty,
+  přístavy, zdymadly nebo u míst s omezenou průjezdností.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — příloha (zákazové tabule, zákaz stání)</li>
+</ul>

@@ -1,0 +1,72 @@
+<h2>Zákazová tabule — zákaz vodního lyžování</h2>
+
+<p>Tabule ukazuje <strong>zákazovou plavební značku</strong>: čtvercová tabule s červeným rámem, bílým pozadím a červenou diagonálou přes piktogram vodního lyžaře.</p>
+
+<h3>Vizuální kód zákazových tabulí</h3>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- ZÁKAZOVÁ TABULE -->
+  <div style="text-align:center;">
+    <svg width="130" height="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- rám -->
+      <rect x="2" y="2" width="126" height="126" rx="6" fill="white" stroke="#d00" stroke-width="10"/>
+      <!-- lyžař (zjednodušená silueta) -->
+      <g fill="#333" stroke="none">
+        <!-- hlava -->
+        <circle cx="85" cy="32" r="8"/>
+        <!-- trup -->
+        <rect x="80" y="42" width="10" height="22" rx="3"/>
+        <!-- lano (šikmá čára nahoru doleva) -->
+        <line x1="80" y1="50" x2="35" y2="28" stroke="#333" stroke-width="3"/>
+        <!-- levá ruka (drží lano) -->
+        <line x1="80" y1="53" x2="35" y2="28" stroke="#333" stroke-width="3"/>
+        <!-- nohy + lyže -->
+        <line x1="82" y1="64" x2="70" y2="95" stroke="#333" stroke-width="4"/>
+        <line x1="88" y1="64" x2="100" y2="95" stroke="#333" stroke-width="4"/>
+        <!-- lyže -->
+        <rect x="55" y="93" width="32" height="5" rx="2" fill="#555"/>
+        <rect x="88" y="93" width="25" height="5" rx="2" fill="#555"/>
+      </g>
+      <!-- červená přeškrtávací diagonála -->
+      <line x1="10" y1="10" x2="120" y2="120" stroke="#d00" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+    <div style="font-size:13px; margin-top:6px; font-weight:bold; color:#d00;">ZÁKAZ vodního lyžování</div>
+  </div>
+
+  <!-- KONEC ZÁKAZU (pro srovnání) -->
+  <div style="text-align:center;">
+    <svg width="130" height="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- střídavé pruhy — konec zákazu -->
+      <rect x="2" y="2" width="126" height="126" rx="6" fill="white" stroke="#999" stroke-width="3"/>
+      <!-- šikmé pruhy červenobílé -->
+      <clipPath id="sq264"><rect x="4" y="4" width="122" height="122" rx="4"/></clipPath>
+      <g clip-path="url(#sq264)">
+        <rect x="-20" y="0" width="40" height="140" fill="#d00" transform="rotate(-45 65 65)"/>
+        <rect x="20" y="0" width="40" height="140" fill="#d00" transform="rotate(-45 65 65)"/>
+        <rect x="60" y="0" width="40" height="140" fill="#d00" transform="rotate(-45 65 65)"/>
+      </g>
+      <rect x="2" y="2" width="126" height="126" rx="6" fill="none" stroke="#999" stroke-width="3"/>
+    </svg>
+    <div style="font-size:13px; margin-top:6px; color:#555;">Konec zákazu<br>(střídavé pruhy)</div>
+  </div>
+
+  <!-- PRAVIDLO -->
+  <div style="max-width:220px; background:#fff8e1; border-left:4px solid #f9a825; padding:12px 14px; border-radius:4px; font-size:14px; line-height:1.6;">
+    <strong>Pravidlo zákazových tabulí:</strong><br>
+    červený rám + červená diagonála + piktogram = <strong>zákaz té činnosti</strong><br><br>
+    Totéž funguje jako u silničních zákazových značek (kruh s červeným okrajem).
+  </div>
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>Konec zákazu vodního lyžování</strong> — tabule konce zákazu má jiný formát (šikmé červenobílé pruhy), ne přeškrtnutý piktogram.</li>
+  <li><strong>Vodní lyžování na vlastní nebezpečí</strong> — taková kategorie zákazových tabulí neexistuje. Výstražné značky mají jiný tvar a barvu.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Tuto tabuli najdeš na březích nebo na plovoucích konstrukcích v místech, kde je vodní lyžování zakázáno (např. ochranná pásma, frekventované přístavy, úseky s říčním provozem). Po jejím umístění nesmí nikdo v daném úseku vodní lyžování provozovat.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha — přehled zákazových tabulí pro vnitrozemské vodní cesty.</p>

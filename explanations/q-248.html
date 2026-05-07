@@ -1,0 +1,89 @@
+<h2>Signální tabule potápěčů — zákaz vplutí</h2>
+
+<p>Na obrázku je <strong>červená tabule s bílým diagonálním pruhem</strong> (od levého dolního rohu k pravému hornímu rohu). Tato tabule znamená <strong>zákaz vplutí do prostoru vyhrazeného pro potápěče.</strong></p>
+
+<hr>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levá část: tabule tak jak ji vidí velitel plavidla -->
+  <div style="text-align:center;">
+    <p style="font-weight:bold; margin-bottom:8px;">Tabule (jak vypadá v testu i v praxi)</p>
+    <svg width="140" height="110" viewBox="0 0 140 110" xmlns="http://www.w3.org/2000/svg">
+      <!-- Červené pozadí -->
+      <rect x="5" y="5" width="130" height="100" fill="#cc1111" rx="3"/>
+      <!-- Bílý diagonální pruh: levý dolní roh → pravý horní roh -->
+      <polygon points="5,85 35,105 135,25 105,5" fill="white"/>
+      <!-- Rámeček -->
+      <rect x="5" y="5" width="130" height="100" fill="none" stroke="#555" stroke-width="2" rx="3"/>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:4px;">Červená tabule, bílý diagonální pruh</p>
+  </div>
+
+  <!-- Pravá část: schéma situace na vodě -->
+  <div style="text-align:center;">
+    <p style="font-weight:bold; margin-bottom:8px;">Situace na vodě</p>
+    <svg width="220" height="110" viewBox="0 0 220 110" xmlns="http://www.w3.org/2000/svg">
+      <!-- Hladina vody -->
+      <rect x="0" y="55" width="220" height="55" fill="#c8e8f8"/>
+      <!-- Nebe -->
+      <rect x="0" y="0" width="220" height="55" fill="#eaf6ff"/>
+
+      <!-- Bóje/vlajka potápěčů -->
+      <rect x="30" y="35" width="26" height="20" fill="#cc1111" rx="2"/>
+      <polygon points="30,35 50,45 30,55" fill="white"/>
+      <line x1="43" y1="55" x2="43" y2="90" stroke="#888" stroke-width="2"/>
+      <circle cx="43" cy="92" r="4" fill="#aaa"/>
+
+      <!-- Potápěč pod hladinou -->
+      <ellipse cx="65" cy="80" rx="10" ry="6" fill="#1a6fa8" opacity="0.7"/>
+      <circle cx="62" cy="76" r="4" fill="#f5c842"/>
+      <!-- bubliny -->
+      <circle cx="58" cy="70" r="2" fill="white" opacity="0.6"/>
+      <circle cx="56" cy="64" r="1.5" fill="white" opacity="0.5"/>
+
+      <!-- Plavidlo přijíždějící zprava -->
+      <polygon points="140,45 200,45 210,55 140,55" fill="#a0784e"/>
+      <rect x="155" y="35" width="30" height="10" fill="#c9a06a"/>
+      <!-- Šipka směru (doprava doleva, tedy přijíždí k bóji) ale zastavená -->
+      <line x1="130" y1="50" x2="108" y2="50" stroke="#cc0000" stroke-width="2" stroke-dasharray="4,3"/>
+      <!-- Stop / zákaz přiblížení -->
+      <text x="95" y="46" font-size="18" fill="#cc0000" font-family="Arial" font-weight="bold">✕</text>
+
+      <!-- Popisky -->
+      <text x="20" y="108" font-size="9" fill="#333" font-family="Arial">potápěči v prostoru</text>
+      <text x="140" y="30" font-size="9" fill="#333" font-family="Arial">plavidlo</text>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:4px;">Plavidlo nesmí vplouvat do označeného prostoru</p>
+  </div>
+
+</div>
+
+<hr>
+
+<h3>Proč je to správně</h3>
+<p>
+  Červená tabule s bílým diagonálním pruhem je mezinárodně uznávaný <strong>diver down flag</strong> — potápěčský signál. Velitel plavidla vidící tuto tabuli ví, že v označeném prostoru se pohybují potápěči pod hladinou, a <strong>nesmí do tohoto prostoru vplout</strong>.
+</p>
+<p>
+  Právní základ: <em>vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách.</em>
+</p>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Konec zákazu nebo příkazu platného pro plavbu v jednom směru"</strong> — to je jiná tabule (bílá nebo s horizontálním přeškrtnutím), nesouvisí s červenou vlajkou potápěčů.</li>
+  <li><strong>„Příkaz zachovávat zvláštní pozornost v průjezdném poli mostu"</strong> — taková tabule se umísťuje u pilířů mostů a má odlišné grafické provedení (zpravidla žlutá nebo modro-bílá).</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Když na vodní cestě nebo u přístaviště uvidíte tuto tabuli (případně vlajku na bóji), <strong>snižte rychlost, objeďte prostor s dostatečným odstupem a nepřibližujte se</strong>. Potápěč pod hladinou plavidlo nevidí a průjezd šroubu ho může vážně ohrozit.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách ČR</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

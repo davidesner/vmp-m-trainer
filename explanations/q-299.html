@@ -1,0 +1,97 @@
+<h2>Plavební tabule — vázaný přívoz</h2>
+
+<p>Modrá obdélníková tabule s bílou siluetou lodi označuje místo, kde přechází <strong>přívozní loď, která nepluje volně</strong> — tzv. vázaný přívoz. Loď je spojena s břehem lankem nebo řetězem nataženým přes celou šířku řeky a využívá sílu proudu ke křížení toku.</p>
+
+<!-- VIZUALIZACE: vlevo tabule z testu (1:1), vpravo schéma situace na vodě -->
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:20px 0;">
+
+  <!-- Tabule -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 8px 0; font-size:0.85em; color:#555;">Tabule v testu</p>
+    <svg width="120" height="90" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="90" rx="4" fill="#5b9bd5"/>
+      <!-- silueta lodi -->
+      <g fill="white">
+        <!-- trup -->
+        <rect x="22" y="52" width="76" height="16" rx="3"/>
+        <!-- příď (zašpičatělá) -->
+        <polygon points="98,52 112,60 98,68"/>
+        <!-- záď (lehce zkosená) -->
+        <polygon points="22,52 10,60 22,68"/>
+        <!-- nástavba/kabina -->
+        <rect x="38" y="38" width="38" height="14" rx="2"/>
+        <!-- komín / stožár -->
+        <rect x="58" y="28" width="6" height="10" rx="1"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Schéma situace na vodě -->
+  <div style="text-align:center; flex:1; min-width:260px;">
+    <p style="margin:0 0 8px 0; font-size:0.85em; color:#555;">Co to znamená na vodě (pohled shora)</p>
+    <svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- řeka — voda -->
+      <rect x="0" y="30" width="300" height="100" fill="#a8d4f0"/>
+      <!-- proudnice -->
+      <line x1="10" y1="60" x2="60" y2="60" stroke="#6ab0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <line x1="10" y1="80" x2="60" y2="80" stroke="#6ab0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <line x1="10" y1="100" x2="60" y2="100" stroke="#6ab0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <!-- šipky proudu -->
+      <polygon points="58,57 66,60 58,63" fill="#6ab0e0"/>
+      <polygon points="58,77 66,80 58,83" fill="#6ab0e0"/>
+      <polygon points="58,97 66,100 58,103" fill="#6ab0e0"/>
+      <!-- levý břeh -->
+      <rect x="0" y="0" width="300" height="30" fill="#c8a96e"/>
+      <text x="150" y="20" text-anchor="middle" font-size="11" fill="#5a3e1b" font-family="sans-serif">levý břeh</text>
+      <!-- pravý břeh -->
+      <rect x="0" y="130" width="300" height="30" fill="#c8a96e"/>
+      <text x="150" y="148" text-anchor="middle" font-size="11" fill="#5a3e1b" font-family="sans-serif">pravý břeh</text>
+      <!-- lano přívozní lodi (nakloněné, protože proud ho napíná) -->
+      <line x1="80" y1="30" x2="200" y2="130" stroke="#8B4513" stroke-width="2.5" stroke-dasharray="5,3"/>
+      <!-- přívozní loď uprostřed -->
+      <g transform="translate(130,78) rotate(45)">
+        <rect x="-18" y="-7" width="36" height="14" rx="3" fill="white" stroke="#333" stroke-width="1"/>
+        <polygon points="18,-7 26,0 18,7" fill="white" stroke="#333" stroke-width="1"/>
+      </g>
+      <!-- tabule na břehu -->
+      <rect x="64" y="12" width="22" height="16" rx="2" fill="#5b9bd5"/>
+      <g fill="white" transform="translate(75,20) scale(0.35)">
+        <rect x="-20" y="-6" width="40" height="12" rx="2"/>
+        <polygon points="20,-6 28,0 20,6" />
+        <polygon points="-20,-6 -28,0 -20,6"/>
+        <rect x="-8" y="-14" width="16" height="8" rx="1"/>
+      </g>
+      <!-- popis lana -->
+      <text x="218" y="88" font-size="10" fill="#5a3000" font-family="sans-serif">lano/řetěz</text>
+      <text x="218" y="100" font-size="10" fill="#5a3000" font-family="sans-serif">(napnuté proudem)</text>
+      <!-- popis lodi -->
+      <text x="158" y="72" font-size="10" fill="#222" font-family="sans-serif">přívoz</text>
+      <!-- šipka pohybu přívozní lodi -->
+      <path d="M135,90 Q175,110 195,128" stroke="#d44" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+          <polygon points="0,0 7,3.5 0,7" fill="#d44"/>
+        </marker>
+      </defs>
+      <text x="175" y="122" font-size="9" fill="#d44" font-family="sans-serif">směr jízdy</text>
+    </svg>
+  </div>
+</div>
+
+<h3>Klíčový princip</h3>
+<p>Vázaný přívoz <strong>neřídí svůj pohyb volně motorem</strong> — je pevně spojen lankem nebo řetězem nataženým šikmo přes celý tok. Lano se napíná proudem a může sahat těsně pod hladinou nebo nad ní. Pro ostatní lodě je tato tabule <strong>povinným varováním</strong>: výrazně snížit rychlost, nepřetínat dráhu přívozní lodi a počkat, dokud přívoz lanko neuvolní.</p>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Přístavní můstky pro osobní lodě</strong> — mají jiný symbol (schéma mola/pontónu u břehu), ne loď uprostřed toku.</li>
+  <li><strong>Doporučené místo ke spouštění plavidel</strong> — slipová rampa se označuje symbolem sklonu k vodě, nikoli siluetou plující lodi.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Vázané přívozy jsou běžné na menších řekách (Berounka, Sázava, Ohře). Přívoz může křižovat tok pomalu a řízen proudem — kotvičkové nebo rychlé plavidlo, které tabuli přehlédne, riskuje náraz do napnutého lana a vážnou nehodu. Lano musí přívoz vždy uvolnit, než projde jiné plavidlo.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, příloha č. 7 (tabulové a signální znaky)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

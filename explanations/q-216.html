@@ -1,0 +1,115 @@
+<h2>Signalizační světla rybářského plavidla s vlečnou sítí</h2>
+
+<p>Otázka ukazuje plavidlo v noci a ptá se, jaký typ plavidla tato světelná kombinace identifikuje. Správná odpověď je: <strong>plavidlo, které vleče rybářské sítě nebo jiné rybolovné zařízení.</strong></p>
+
+<h3>Co je na obrázku</h3>
+
+<p>Na schématu je plavidlo z bočního pohledu se světly:</p>
+<ul>
+  <li>Bílé světlo na vrcholu stěžně (stěžňové / navigační)</li>
+  <li>Dvě bílé světla vpravo nahoře (záďové a případná stěžňová)</li>
+  <li>Červený čtvereček na trupu — levobočné (portové) navigační světlo</li>
+  <li>Zelený čtvereček pod červeným — speciální rybářský signál (zelené všesměrové)</li>
+  <li>Malý bílý čtvereček vlevo dole — záďové světlo</li>
+</ul>
+
+<h3>Vizualizace světel na plavidle</h3>
+
+<div style="display:flex; gap:32px; flex-wrap:wrap; align-items:flex-start; margin:16px 0;">
+
+  <!-- Schéma plavidla s popsanými světly -->
+  <svg width="320" height="220" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" style="background:#0a0a1a; border-radius:8px; flex-shrink:0;">
+    <!-- Vlny -->
+    <path d="M0 175 Q20 165 40 175 Q60 185 80 175 Q100 165 120 175 Q140 185 160 175 Q180 165 200 175 Q220 185 240 175 Q260 165 280 175 Q300 185 320 175" stroke="#2255aa" stroke-width="2" fill="none"/>
+    <path d="M0 185 Q20 175 40 185 Q60 195 80 185 Q100 175 120 185 Q140 195 160 185 Q180 175 200 185 Q220 195 240 185 Q260 175 280 185 Q300 195 320 185" stroke="#2255aa" stroke-width="2" fill="none"/>
+
+    <!-- Trup plavidla -->
+    <rect x="50" y="140" width="220" height="35" rx="4" fill="#334" stroke="#556" stroke-width="1.5"/>
+    <!-- příď (pravý konec) -->
+    <polygon points="270,140 310,157 270,175" fill="#334" stroke="#556" stroke-width="1.5"/>
+    <!-- záď (levý konec) -->
+    <rect x="45" y="145" width="10" height="25" rx="2" fill="#334" stroke="#556" stroke-width="1"/>
+
+    <!-- Kabina / nástavba -->
+    <rect x="90" y="115" width="80" height="30" rx="3" fill="#445" stroke="#667" stroke-width="1"/>
+
+    <!-- Stěžeň -->
+    <line x1="170" y1="115" x2="170" y2="50" stroke="#aaa" stroke-width="2"/>
+
+    <!-- Stěžňové světlo (bílé, nahoře) -->
+    <circle cx="170" cy="50" r="8" fill="white" stroke="#fff" stroke-width="1"/>
+    <text x="182" y="54" fill="#ccc" font-size="9" font-family="sans-serif">stěžňové světlo</text>
+
+    <!-- Záďové světlo (bílé, vlevo dole) -->
+    <rect x="48" y="148" width="10" height="10" rx="2" fill="white"/>
+    <text x="18" y="145" fill="#ccc" font-size="8" font-family="sans-serif">záďové</text>
+
+    <!-- Levobočné světlo — červené -->
+    <rect x="108" y="148" width="14" height="14" rx="2" fill="#ff3333"/>
+    <text x="88" y="178" fill="#ff9999" font-size="9" font-family="sans-serif">červené</text>
+    <text x="88" y="189" fill="#ff9999" font-size="9" font-family="sans-serif">(levobok)</text>
+
+    <!-- Rybářský signál — zelené všesměrové pod červeným -->
+    <rect x="130" y="148" width="14" height="14" rx="2" fill="#00cc44"/>
+    <text x="148" y="158" fill="#66ff88" font-size="9" font-family="sans-serif">zelené</text>
+    <text x="148" y="168" fill="#66ff88" font-size="9" font-family="sans-serif">(rybolov)</text>
+
+    <!-- Popisky -->
+    <text x="55" y="210" fill="#888" font-size="9" font-family="sans-serif">záď</text>
+    <text x="275" y="210" fill="#888" font-size="9" font-family="sans-serif">příď</text>
+    <text x="90" y="112" fill="#aaa" font-size="9" font-family="sans-serif">kabina</text>
+  </svg>
+
+  <!-- Tabulka — co které světlo znamená -->
+  <div style="min-width:220px;">
+    <table style="border-collapse:collapse; font-size:13px; font-family:sans-serif;">
+      <thead>
+        <tr style="background:#1a2a3a; color:#aac;">
+          <th style="padding:6px 10px; border:1px solid #334; text-align:left;">Světlo</th>
+          <th style="padding:6px 10px; border:1px solid #334; text-align:left;">Funkce</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:5px 10px; border:1px solid #334;"><span style="color:white; font-weight:bold;">● bílé (stěžeň)</span></td>
+          <td style="padding:5px 10px; border:1px solid #334;">Stěžňové navigační světlo — viditelné 225° vpřed</td>
+        </tr>
+        <tr style="background:#111a22;">
+          <td style="padding:5px 10px; border:1px solid #334;"><span style="color:#ff4444; font-weight:bold;">■ červené (trup)</span></td>
+          <td style="padding:5px 10px; border:1px solid #334;">Levobočné (portové) světlo — viditelné 112,5° vlevo</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 10px; border:1px solid #334;"><span style="color:#00cc44; font-weight:bold;">■ zelené (trup)</span></td>
+          <td style="padding:5px 10px; border:1px solid #334;"><strong>Rybolovné označení</strong> — svislá dvojice (zelené + bílé) = vlečení sítí</td>
+        </tr>
+        <tr style="background:#111a22;">
+          <td style="padding:5px 10px; border:1px solid #334;"><span style="color:white; font-weight:bold;">■ bílé (záď)</span></td>
+          <td style="padding:5px 10px; border:1px solid #334;">Záďové světlo — viditelné 135° dozadu</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h3>Proč právě tato kombinace = vlečení sítí?</h3>
+
+<p>Rybářské plavidlo provozující <strong>vlečný rybolov (trawling)</strong> musí podle vyhlášky č. 67/2015 Sb. o pravidlech plavebního provozu nést <strong>dvě všesměrová světla svisle nad sebou — zelené nad bílým</strong>. Tato kombinace slouží jako varování pro ostatní účastníky plavby: za plavidlem se táhnou sítě zasahující do plavební dráhy, nelze projet za ním.</p>
+
+<p>Standardní navigační světla (bílé stěžňové, červené/zelené boční, bílé záďové) doplňují tuto speciální signalizaci.</p>
+
+<h3>Proč ne ostatní možnosti?</h3>
+
+<ul>
+  <li><strong>Volně plující převozní loď s předností v plavbě</strong> nosí <em>žluté blikající nebo skupinové světlo</em> a kombinace odpovídající přívozní signalizaci — žádná zeleno-červená svislá dvojice na trupu.</li>
+  <li><strong>Plavidlo vyžadující ochranu před vlnobitím</strong> nese za dne červený obdélníkový terč, v noci dvě červená světla svisle — zcela odlišná konfigurace bez zeleného prvku.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>Když za noci zpozorujete plavidlo s <strong>zeleným a bílým světlem svisle navíc</strong> (mimo boční navigační světla), dejte větší boční prostor a <strong>neprojíždějte za ním</strong> — vlečné sítě mohou za zádí sahat desítky metrů a jsou pod hladinou neviditelné.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — signalizace rybářských plavidel</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

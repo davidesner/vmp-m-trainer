@@ -1,0 +1,60 @@
+<h2>Plavební rejstřík malých plavidel — hranice 1 000 kg</h2>
+
+<p>Do plavebního rejstříku malých plavidel se zapisují jen ta malá plavidla, jejichž celková hmotnost <strong>přesahuje 1 000 kg</strong> včetně povoleného zatížení. Plavidla s hmotností 1 000 kg a méně zápisu nepodléhají.</p>
+
+<hr>
+
+<h3>Vizualizace — váhová hranice evidence</h3>
+
+<div style="overflow-x:auto;">
+<svg viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;width:100%;font-family:sans-serif;">
+
+  <!-- osa -->
+  <line x1="40" y1="80" x2="520" y2="80" stroke="#555" stroke-width="2"/>
+  <polygon points="520,75 530,80 520,85" fill="#555"/>
+
+  <!-- label osy -->
+  <text x="535" y="84" font-size="12" fill="#555">hmotnost</text>
+
+  <!-- dělítko 1000 kg -->
+  <line x1="280" y1="68" x2="280" y2="92" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="280" y="108" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="bold">1 000 kg</text>
+  <text x="280" y="122" font-size="10" fill="#e74c3c" text-anchor="middle">(hranice)</text>
+
+  <!-- levá část — bez evidence -->
+  <rect x="42" y="44" width="234" height="28" rx="6" fill="#27ae60" opacity="0.15"/>
+  <line x1="42" y1="44" x2="276" y2="44" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="42" y1="72" x2="276" y2="72" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="159" y="63" font-size="11" fill="#27ae60" text-anchor="middle">≤ 1 000 kg → evidence NENÍ povinná</text>
+
+  <!-- pravá část — evidence povinná -->
+  <rect x="284" y="44" width="234" height="28" rx="6" fill="#e74c3c" opacity="0.12"/>
+  <line x1="284" y1="44" x2="518" y2="44" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="284" y1="72" x2="518" y2="72" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="401" y="63" font-size="11" fill="#c0392b" text-anchor="middle">&#62; 1 000 kg → evidence POVINNÁ</text>
+
+  <!-- ikony lodí -->
+  <text x="159" y="36" font-size="20" text-anchor="middle">🛶</text>
+  <text x="401" y="36" font-size="20" text-anchor="middle">🚢</text>
+
+  <!-- popis celkové hmotnosti -->
+  <text x="280" y="148" font-size="10" fill="#888" text-anchor="middle">Celková hmotnost = vlastní hmotnost + povolené zatížení (osoby, náklad, palivo, výbava)</text>
+
+</svg>
+</div>
+
+<hr>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Varianta „1 000 kg a méně"</strong> — záměna strany nerovnosti. Lehká plavidla (pod prahem) povinné evidenci nepodléhají.</li>
+  <li><strong>Varianta „každé malé plavidlo"</strong> — malá plavidla jako kategorie zahrnují i nafukovací rafty nebo kajaky; evidence všech by byla administrativně nepraktická.</li>
+</ul>
+
+<h3>Prakticky</h3>
+<p>Celková hmotnost se počítá jako součet vlastní hmotnosti plavidla a povoleného zatížení (obvykle počet osob × 75 kg + náklad + palivo + povinná výbava). Nejde o aktuální naloženost, ale o zákonem stanovenou maximální přípustnou hodnotu.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>zákon č. 114/1995 Sb. o vnitrozemské plavbě — ustanovení o evidenci malých plavidel</li>
+</ul>

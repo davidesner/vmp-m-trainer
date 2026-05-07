@@ -1,0 +1,100 @@
+<h2>Kdy ukončit resuscitaci utonulého</h2>
+
+<p>Správná odpověď: <strong>při úplném vyčerpání zachránců</strong>.</p>
+
+<h3>Proč právě tohle?</h3>
+
+<p>Utonulý je <strong>speciální případ</strong> v resuscitaci. Zejména při tonutí ve studené vodě platí lékařská zásada:</p>
+
+<blockquote>„Nikdo není mrtvý, dokud není <em>teplý</em> a mrtvý."</blockquote>
+
+<p>Hypotermie výrazně zpomaluje metabolismus mozku a prodlužuje okno, ve kterém má resuscitace šanci na úspěch. Zaznamenané případy obnovy vědomí bez trvalého neurologického poškození existují i po 30–60 minutách KPR.</p>
+
+<p>Laický zachránce proto <strong>nesmí sám rozhodovat o zastavení</strong> na základě časového limitu ani administrativního úkonu. Resuscitaci ukončí pouze když:</p>
+
+<ul>
+  <li><strong>Dorazí záchranná služba nebo lékař</strong> — ti přebírají rozhodnutí.</li>
+  <li><strong>Zachránce je fyzicky zcela vyčerpán</strong> a není v jeho silách pokračovat.</li>
+</ul>
+
+<hr>
+
+<h3>Vizualizace — rozhodovací strom zachránce</h3>
+
+<div style="font-family: sans-serif; margin: 1rem 0;">
+<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" style="max-width:600px; width:100%; display:block; margin:0 auto;">
+  <!-- Start -->
+  <rect x="200" y="10" width="200" height="44" rx="22" fill="#1a6fc4" />
+  <text x="300" y="37" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Začínám resuscitaci</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="54" x2="300" y2="90" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Box: volat 155 -->
+  <rect x="190" y="90" width="220" height="40" rx="8" fill="#e8f0fb" stroke="#1a6fc4" stroke-width="1.5"/>
+  <text x="300" y="115" text-anchor="middle" fill="#1a6fc4" font-size="12">Zavolám 155 / požádám o pomoc</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="130" x2="300" y2="165" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Decision 1: ZZS arrived? -->
+  <polygon points="300,165 430,210 300,255 170,210" fill="#fff8e1" stroke="#e6a817" stroke-width="1.5"/>
+  <text x="300" y="205" text-anchor="middle" fill="#7a5800" font-size="12">Dorazila záchranná</text>
+  <text x="300" y="222" text-anchor="middle" fill="#7a5800" font-size="12">služba / lékař?</text>
+
+  <!-- Yes branch right -->
+  <line x1="430" y1="210" x2="510" y2="210" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="468" y="205" text-anchor="middle" fill="#2a7a2a" font-size="11">ANO</text>
+  <rect x="510" y="188" width="78" height="44" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="549" y="207" text-anchor="middle" fill="#155724" font-size="11">Předej</text>
+  <text x="549" y="222" text-anchor="middle" fill="#155724" font-size="11">záchranářům</text>
+
+  <!-- No branch down -->
+  <line x1="300" y1="255" x2="300" y2="290" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="312" y="275" fill="#c0392b" font-size="11">NE</text>
+
+  <!-- Decision 2: exhausted? -->
+  <polygon points="300,290 430,335 300,380 170,335" fill="#fff8e1" stroke="#e6a817" stroke-width="1.5"/>
+  <text x="300" y="329" text-anchor="middle" fill="#7a5800" font-size="12">Jsem úplně</text>
+  <text x="300" y="347" text-anchor="middle" fill="#7a5800" font-size="12">vyčerpán?</text>
+
+  <!-- No branch left: keep going -->
+  <line x1="170" y1="335" x2="90" y2="335" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="132" y="328" text-anchor="middle" fill="#2a7a2a" font-size="11">NE</text>
+  <rect x="10" y="313" width="80" height="44" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="50" y="332" text-anchor="middle" fill="#155724" font-size="11">Pokračuj</text>
+  <text x="50" y="347" text-anchor="middle" fill="#155724" font-size="11">v resuscitaci</text>
+
+  <!-- Yes branch right: stop -->
+  <line x1="430" y1="335" x2="510" y2="335" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="468" y="328" text-anchor="middle" fill="#c0392b" font-size="11">ANO</text>
+  <rect x="510" y="313" width="78" height="44" rx="8" fill="#f8d7da" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="549" y="332" text-anchor="middle" fill="#721c24" font-size="11">Ukončení</text>
+  <text x="549" y="347" text-anchor="middle" fill="#721c24" font-size="11">resuscitace</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+</svg>
+</div>
+
+<hr>
+
+<h3>Proč ne ostatní možnosti?</h3>
+
+<p><strong>„Po 20 minutách bez výsledku"</strong> — tento časový limit pro laické zachránce <em>neexistuje</em> a je zvláště nebezpečný u utonulých. Hypotermie prodlužuje dobu, po kterou má resuscitace smysl, takže 20 minut jako stop-signál nemá oporu v platných doporučeních ani pro teplou, ani pro studenou vodu.</p>
+
+<p><strong>„Pokud se podařilo spojit se záchrannou službou"</strong> — volání 155 je <em>povinnost</em>, nikoliv důvod přestat. Dispečink záchranné služby naopak zachránce v resuscitaci telefonicky vede a vyčkává na příjezd posádky. Zavolání neznamená konec — znamená posilu.</p>
+
+<h3>Praktická aplikace</h3>
+
+<p>V praxi: zahájíš KPR, voláš 155, resuscituješ. Zastavíš teprve tehdy, kdy záchranáři fyzicky přeberou péči — nebo kdy doslova nemáš sílu stisknout hrudník. Nic jiného laického zachránce nezbavuje povinnosti pokračovat.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Doporučené postupy KPR — European Resuscitation Council (ERC) Guidelines 2021, sekce tonutí</li>
+  <li>Zákon č. 374/2011 Sb. o zdravotnické záchranné službě</li>
+</ul>

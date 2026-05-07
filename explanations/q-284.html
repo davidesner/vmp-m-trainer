@@ -1,0 +1,88 @@
+<h2>Světelný signál na výjezdu z přístavu / přítoku</h2>
+
+<p>Otázka zobrazuje <strong>dvě blikající žlutá světla</strong> nad sebou — světelný signál umístěný na výjezdu z přístavu nebo přítoku.</p>
+
+<h3>Vizualizace: co vidíte v testu → co to znamená v realitě</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:20px 0;">
+
+  <!-- Levá část: symbol v testu -->
+  <div style="text-align:center;">
+    <p style="font-weight:bold; margin-bottom:8px;">Schéma v testu</p>
+    <svg width="80" height="180" viewBox="0 0 80 180" xmlns="http://www.w3.org/2000/svg">
+      <!-- horní blikající světlo -->
+      <circle cx="40" cy="40" r="34" fill="#f5c400" stroke="#333" stroke-width="2"/>
+      <path d="M40,6 L40,40 L6,40 Z" fill="#222"/>
+      <path d="M40,40 L74,40 L40,74 Z" fill="#222"/>
+      <!-- dolní blikající světlo -->
+      <circle cx="40" cy="130" r="34" fill="#f5c400" stroke="#333" stroke-width="2"/>
+      <path d="M40,96 L40,130 L6,130 Z" fill="#222"/>
+      <path d="M40,130 L74,130 L40,164 Z" fill="#222"/>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Dvě žluté<br>blikající světla</p>
+  </div>
+
+  <!-- Šipka -->
+  <div style="display:flex; align-items:center; font-size:2em; color:#888; padding-top:60px;">→</div>
+
+  <!-- Pravá část: situace na vodě -->
+  <div style="text-align:center; max-width:340px;">
+    <p style="font-weight:bold; margin-bottom:8px;">Situace na vodě</p>
+    <svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+      <!-- Hlavní vodní cesta -->
+      <rect x="0" y="60" width="320" height="80" fill="#b3d9f7" rx="4"/>
+      <text x="10" y="108" font-size="11" fill="#1a5276">Hlavní vodní cesta</text>
+
+      <!-- Přístav / přítok nahoře -->
+      <rect x="180" y="0" width="80" height="65" fill="#d6eaf8" stroke="#aaa" stroke-width="1" rx="3"/>
+      <text x="195" y="35" font-size="11" fill="#1a5276">Přístav</text>
+      <text x="193" y="50" font-size="11" fill="#1a5276">/ přítok</text>
+
+      <!-- Plavidlo vyjíždějící z přístavu -->
+      <polygon points="220,62 240,68 220,74 215,68" fill="#e67e22" stroke="#a04000" stroke-width="1.2"/>
+      <text x="246" y="71" font-size="10" fill="#a04000">↓ vyjíždí</text>
+
+      <!-- Světelný signál u výjezdu -->
+      <circle cx="195" cy="58" r="5" fill="#f5c400" stroke="#333" stroke-width="1"/>
+      <circle cx="195" cy="46" r="5" fill="#f5c400" stroke="#333" stroke-width="1"/>
+      <text x="155" y="44" font-size="9" fill="#7d6608">2× žluté</text>
+      <text x="155" y="56" font-size="9" fill="#7d6608">blikají</text>
+
+      <!-- Plavidlo na hlavní cestě -->
+      <polygon points="60,88 100,96 60,104 52,96" fill="#2874a6" stroke="#1a4a7a" stroke-width="1.2"/>
+      <text x="108" y="100" font-size="10" fill="#1a4a7a">→ přizpůsobí se</text>
+
+      <!-- Šipka "zpomalit / odklonit" -->
+      <line x1="100" y1="96" x2="130" y2="96" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+          <polygon points="0,0 8,3 0,6" fill="#e74c3c"/>
+        </marker>
+      </defs>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Plavidlo na hlavní cestě musí<br>zpomalit nebo změnit kurz</p>
+  </div>
+
+</div>
+
+<h3>Správná odpověď</h3>
+<p>
+  Signál znamená, že <strong>plavidla plující po hlavní vodní cestě musí přizpůsobit svůj směr nebo rychlost plavby tak, aby umožnila výjezd plavidlům opouštějícím přístav nebo přítok.</strong>
+</p>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>„Doporučené proplouvání jen v jednom směru, protisměr zakázán"</strong> — tento zákaz se signalizuje jiným způsobem (červená světla nebo zákazová tabule), nikoli dvěma žlutými blikajícími světly.</li>
+  <li><strong>„Povolení proplutí — obecný signální znak"</strong> — obecné povolení se obvykle vyjadřuje zelenou barvou nebo specifickými tvarovými značkami, ne tímto vzorem. Dvě žlutá blikající světla mají konkrétní, specifický význam pro výjezd z přístavu.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Jedeš po hlavní vodní cestě a u ústí přístavu vidíš dvě blikající žlutá světla → <strong>musíš zpomalit nebo změnit kurz</strong>, aby plavidlo z přístavu mohlo bezpečně vyjet. Přístav má v tu chvíli dočasnou přednost výjezdu.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — světelné signály na přístavech a přítocích</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

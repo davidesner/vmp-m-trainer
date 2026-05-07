@@ -1,0 +1,95 @@
+<h2>Plavební značka PP4 — Zákaz vzájemného předjíždění sestav</h2>
+
+<p>Tabulka zobrazuje <strong>zákazovou plavební značku PP4</strong>: červený čtverec s bílou diagonální přeškrtávací lištou a dvěma šipkami (obě mířící stejným směrem, každá s dvojitou trojúhelníkovou hlavou — symbol <em>sestavy</em>). Správný výklad je <strong>zákaz vzájemného předjíždění sestav</strong>.</p>
+
+<!-- Vizualizace: vlevo znak jak je vidět v testu, vpravo překlad do reality -->
+<div style="display:flex; gap:32px; flex-wrap:wrap; margin:20px 0; align-items:flex-start;">
+
+  <!-- Panel 1: Replika značky -->
+  <div style="text-align:center;">
+    <p style="font-weight:bold; margin-bottom:8px;">Značka v testu</p>
+    <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Červený čtverec s bílým okrajem -->
+      <rect x="2" y="2" width="136" height="136" rx="6" fill="#cc1111" stroke="#fff" stroke-width="3"/>
+      <!-- Bílá diagonální přeškrtávací lišta (z pravého horního rohu do levého dolního) -->
+      <line x1="105" y1="10" x2="10" y2="128" stroke="white" stroke-width="22" stroke-linecap="round"/>
+      <!-- Šipka vlevo (sestava) -->
+      <g transform="translate(35,75)">
+        <!-- tělo šipky -->
+        <line x1="0" y1="35" x2="0" y2="-15" stroke="black" stroke-width="7" stroke-linecap="round"/>
+        <!-- hlavní hrot -->
+        <polygon points="0,-35 -9,-12 9,-12" fill="black"/>
+        <!-- druhý hrot (sestava = dvojitá hlava) -->
+        <polygon points="0,-18 -9,5 9,5" fill="black"/>
+      </g>
+      <!-- Šipka vpravo (sestava) -->
+      <g transform="translate(85,75)">
+        <line x1="0" y1="35" x2="0" y2="-15" stroke="black" stroke-width="7" stroke-linecap="round"/>
+        <polygon points="0,-35 -9,-12 9,-12" fill="black"/>
+        <polygon points="0,-18 -9,5 9,5" fill="black"/>
+      </g>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">PP4 — zákazová tabule</p>
+  </div>
+
+  <!-- Panel 2: Situace na vodě -->
+  <div style="text-align:center;">
+    <p style="font-weight:bold; margin-bottom:8px;">Co to znamená na vodě</p>
+    <svg width="260" height="140" viewBox="0 0 260 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Vodní plocha -->
+      <rect x="0" y="0" width="260" height="140" fill="#d0eaf8"/>
+      <!-- Břehy -->
+      <rect x="0" y="0" width="260" height="18" fill="#b8a96a"/>
+      <rect x="0" y="122" width="260" height="18" fill="#b8a96a"/>
+
+      <!-- Sestava A (vlevo, pluje doprava/nahoru) -->
+      <!-- motorové plavidlo -->
+      <rect x="20" y="50" width="38" height="18" rx="3" fill="#1a4a8a" stroke="#0a2a5a" stroke-width="1.5"/>
+      <!-- člun vlečený -->
+      <rect x="62" y="53" width="28" height="12" rx="2" fill="#2a6ab0" stroke="#0a2a5a" stroke-width="1"/>
+      <!-- vlečné lano -->
+      <line x1="58" y1="59" x2="62" y2="59" stroke="#333" stroke-width="1.5"/>
+      <!-- šipka směru A -->
+      <polygon points="14,59 22,54 22,64" fill="#1a4a8a"/>
+
+      <!-- Sestava B (vpravo, taky pluje doprava ale rychleji = pokouší se předjet) -->
+      <rect x="130" y="50" width="38" height="18" rx="3" fill="#7a1a1a" stroke="#4a0a0a" stroke-width="1.5"/>
+      <rect x="172" y="53" width="28" height="12" rx="2" fill="#9a3a3a" stroke="#4a0a0a" stroke-width="1"/>
+      <line x1="168" y1="59" x2="172" y2="59" stroke="#333" stroke-width="1.5"/>
+      <polygon points="124,59 132,54 132,64" fill="#7a1a1a"/>
+
+      <!-- Zákaz symbol mezi nimi -->
+      <circle cx="110" cy="59" r="14" fill="#cc1111" opacity="0.9"/>
+      <line x1="102" y1="51" x2="118" y2="67" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+      <!-- Popisky -->
+      <text x="39" y="82" text-anchor="middle" font-size="11" fill="#1a4a8a" font-weight="bold">Sestava A</text>
+      <text x="161" y="82" text-anchor="middle" font-size="11" fill="#7a1a1a" font-weight="bold">Sestava B</text>
+      <text x="110" y="96" text-anchor="middle" font-size="10" fill="#cc1111" font-weight="bold">ZAKÁZÁNO</text>
+      <text x="110" y="108" text-anchor="middle" font-size="9" fill="#555">vzájemně se předjíždět</text>
+    </svg>
+    <p style="font-size:0.85em; color:#555; margin-top:6px;">Ani jedna sestava nesmí předjet druhou</p>
+  </div>
+</div>
+
+<h3>Jak dekódovat značku</h3>
+<ul>
+  <li><strong>Červený čtverec</strong> = zákazová značka (něco je zakázáno)</li>
+  <li><strong>Bílá diagonální přeškrtávající lišta</strong> = přeškrtnutí/zákaz toho, co je na tabuli zobrazeno</li>
+  <li><strong>Dvojitá šipka (šipka s dvěma hroty)</strong> = symbol sestavy (tlačná nebo vlečená souprava plavidel)</li>
+  <li><strong>Dvě takové šipky</strong> = vzájemný zákaz (obě sestavy vůči sobě)</li>
+</ul>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Konec zákazu předjíždění sestav"</strong> — konec zákazů se vždy signalizuje zelenou barvou nebo specifickým symbolem konce (zelený čtverec s bílou šipkou), nikoli červeným přeškrtnutím.</li>
+  <li><strong>„Možnost předjíždět po pravém boku"</strong> — příkazové nebo informační značky mají modré pozadí s bílými symboly, ne červené přeškrtnutí.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Tabule PP4 se instaluje na úsecích, kde je vodní cesta příliš úzká nebo nepřehledná pro manévr předjíždění dvou souprav. Oba vůdci sestav jsou povinni přizpůsobit rychlost a vzájemný odstup tak, aby k předjetí nedošlo, dokud se nezačne platit konec zákazu.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, příloha č. 3 — zákazové plavební znaky (PP4)</li>
+</ul>

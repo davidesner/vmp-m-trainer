@@ -1,0 +1,86 @@
+<h2>Signální tabule: vodní lyžování</h2>
+
+<p>Otázka ukazuje <strong>modrou čtvercovou tabuli s bílou siluetou vodního lyžaře</strong> — bez jakéhokoliv červeného prvku. Tato tabule znamená: <strong>vodní lyžování povoleno</strong>.</p>
+
+<h3>Jak číst plavební tabule — vizuální klíč</h3>
+
+<div style="display:flex; gap:32px; flex-wrap:wrap; margin:16px 0; align-items:flex-start;">
+
+  <!-- POVOLENO -->
+  <div style="text-align:center; max-width:160px;">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="120" rx="8" fill="#1a73c8"/>
+      <!-- Vodní lyžař (zjednodušená silueta) -->
+      <circle cx="72" cy="28" r="9" fill="white"/>
+      <!-- tělo -->
+      <line x1="72" y1="37" x2="60" y2="68" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      <!-- levá ruka s lanem -->
+      <line x1="72" y1="47" x2="40" y2="38" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      <!-- pravá ruka -->
+      <line x1="72" y1="47" x2="85" y2="55" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      <!-- lano -->
+      <line x1="40" y1="38" x2="18" y2="28" stroke="white" stroke-width="2" stroke-dasharray="4,3" stroke-linecap="round"/>
+      <!-- lyže / nohy -->
+      <line x1="60" y1="68" x2="42" y2="85" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="68" x2="68" y2="88" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      <!-- vlny pod lyžemi -->
+      <path d="M30,92 Q38,86 46,92 Q54,98 62,92 Q70,86 78,92" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p style="margin:8px 0 4px; font-weight:bold; color:#1a73c8;">POVOLENO</p>
+    <p style="margin:0; font-size:0.85em; color:#444;">Modrý čtverec<br>Bílý piktogram<br><em>Žádný červený prvek</em></p>
+  </div>
+
+  <!-- ŠIPKA -->
+  <div style="display:flex; align-items:center; padding-top:40px; font-size:2em; color:#888;">→</div>
+
+  <!-- ZÁKAZ (jak by vypadal) -->
+  <div style="text-align:center; max-width:160px;">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="120" rx="8" fill="#1a73c8"/>
+      <!-- stejný lyžař -->
+      <circle cx="72" cy="28" r="9" fill="white"/>
+      <line x1="72" y1="37" x2="60" y2="68" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      <line x1="72" y1="47" x2="40" y2="38" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      <line x1="72" y1="47" x2="85" y2="55" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      <line x1="40" y1="38" x2="18" y2="28" stroke="white" stroke-width="2" stroke-dasharray="4,3" stroke-linecap="round"/>
+      <line x1="60" y1="68" x2="42" y2="85" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="68" x2="68" y2="88" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      <path d="M30,92 Q38,86 46,92 Q54,98 62,92 Q70,86 78,92" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <!-- červená zákazová šikmá čára přes celou tabuli -->
+      <line x1="16" y1="104" x2="104" y2="16" stroke="#e53935" stroke-width="10" stroke-linecap="round"/>
+    </svg>
+    <p style="margin:8px 0 4px; font-weight:bold; color:#e53935;">ZÁKAZ</p>
+    <p style="margin:0; font-size:0.85em; color:#444;">Modrý čtverec<br>Bílý piktogram<br><em>+ červená šikmá čára</em></p>
+  </div>
+
+</div>
+
+<h3>Pravidlo pro čtení tabulí</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Vizuální prvek</th>
+      <th>Význam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Modrý čtverec + bílý piktogram (bez červené)</td>
+      <td><strong>Povolení / informace</strong> — aktivita je zde dovolena</td>
+    </tr>
+    <tr>
+      <td>Modrý čtverec + bílý piktogram + červená šikmá čára</td>
+      <td><strong>Zákaz</strong> — aktivita je zakázána</td>
+    </tr>
+    <tr>
+      <td>Červený kruh / červené orámování</td>
+      <td><strong>Příkaz / omezení</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Praktická aplikace</h3>
+<p>Tuto tabuli uvidíš při vjezdu do úseku, kde je vodní lyžování povoleno (např. vyhrazená plocha jezera nebo vodní nádrže). Její přítomnost zároveň nepřímo říká, že jinde — kde tabule není — vodní lyžování povoleno být nemusí.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, příloha č. 7 (plavební znaky a tabule).</p>

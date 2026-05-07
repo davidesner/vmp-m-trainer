@@ -1,0 +1,106 @@
+<h2>Plovoucí signální znak — rozdělení plavební dráhy</h2>
+
+<p>Bóje s <strong>vodorovnými červeno-zelenými pruhy</strong> označuje <strong>rozdělení plavební dráhy</strong> (bifurkaci). Plavební kanál se v tomto místě větví na dvě větve.</p>
+
+<h3>Barevný kód laterálního vytyčení</h3>
+
+<div style="display:flex; gap:32px; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Červená bóje -->
+  <div style="text-align:center;">
+    <svg width="80" height="110" viewBox="0 0 80 110">
+      <!-- vlny -->
+      <path d="M0 85 Q10 78 20 85 Q30 92 40 85 Q50 78 60 85 Q70 92 80 85 L80 110 L0 110 Z" fill="#6ab4d8"/>
+      <!-- bóje -->
+      <ellipse cx="40" cy="68" rx="26" ry="28" fill="#cc2222"/>
+      <!-- lano -->
+      <line x1="40" y1="40" x2="40" y2="10" stroke="#888" stroke-width="2"/>
+    </svg>
+    <div style="font-size:13px; margin-top:4px;"><strong>Červená</strong><br>pravá strana</div>
+  </div>
+
+  <!-- Zelená bóje -->
+  <div style="text-align:center;">
+    <svg width="80" height="110" viewBox="0 0 80 110">
+      <path d="M0 85 Q10 78 20 85 Q30 92 40 85 Q50 78 60 85 Q70 92 80 85 L80 110 L0 110 Z" fill="#6ab4d8"/>
+      <ellipse cx="40" cy="68" rx="26" ry="28" fill="#228822"/>
+      <line x1="40" y1="40" x2="40" y2="10" stroke="#888" stroke-width="2"/>
+    </svg>
+    <div style="font-size:13px; margin-top:4px;"><strong>Zelená</strong><br>levá strana</div>
+  </div>
+
+  <!-- Červeno-zelená bóje = správná -->
+  <div style="text-align:center; border:2px solid #2a7a2a; border-radius:10px; padding:8px; background:#f0fff0;">
+    <svg width="80" height="110" viewBox="0 0 80 110">
+      <path d="M0 85 Q10 78 20 85 Q30 92 40 85 Q50 78 60 85 Q70 92 80 85 L80 110 L0 110 Z" fill="#6ab4d8"/>
+      <!-- bóje - pruhy červeno-zelené -->
+      <clipPath id="bojeClip">
+        <ellipse cx="40" cy="68" rx="26" ry="28"/>
+      </clipPath>
+      <ellipse cx="40" cy="68" rx="26" ry="28" fill="#cc2222"/>
+      <rect x="14" y="64" width="52" height="9" fill="#228822" clip-path="url(#bojeClip)"/>
+      <rect x="14" y="78" width="52" height="9" fill="#228822" clip-path="url(#bojeClip)"/>
+      <line x1="40" y1="40" x2="40" y2="10" stroke="#888" stroke-width="2"/>
+    </svg>
+    <div style="font-size:13px; margin-top:4px;"><strong>Červeno-zelená ✓</strong><br>rozdělení dráhy</div>
+  </div>
+
+</div>
+
+<h3>Co to znamená na vodě</h3>
+
+<svg width="100%" viewBox="0 0 420 180" style="max-width:420px; display:block; margin:12px 0;">
+  <!-- Voda -->
+  <rect width="420" height="180" fill="#d0eaf7"/>
+
+  <!-- Příjezdová větev (zdola) -->
+  <polygon points="160,180 260,180 260,110 160,110" fill="#a8d8f0" opacity="0.7"/>
+
+  <!-- Levá větev (horní levá) -->
+  <polygon points="60,110 160,110 80,20 0,20" fill="#a8d8f0" opacity="0.7"/>
+
+  <!-- Pravá větev (horní pravá) -->
+  <polygon points="260,110 360,110 420,20 320,20" fill="#a8d8f0" opacity="0.7"/>
+
+  <!-- Břeh / mělčina uprostřed -->
+  <polygon points="160,110 260,110 300,20 120,20" fill="#e8d8a0"/>
+
+  <!-- Šipka - příjezd -->
+  <line x1="210" y1="170" x2="210" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Šipka levá větev -->
+  <line x1="190" y1="108" x2="100" y2="40" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Šipka pravá větev -->
+  <line x1="230" y1="108" x2="330" y2="40" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Bifurkační bóje -->
+  <ellipse cx="210" cy="112" rx="13" ry="14" fill="#cc2222"/>
+  <rect x="197" y="112" width="26" height="5" fill="#228822"/>
+  <rect x="197" y="120" width="26" height="5" fill="#228822"/>
+  <line x1="210" y1="98" x2="210" y2="88" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Popis -->
+  <text x="210" y="155" text-anchor="middle" font-size="11" fill="#333">příjezd</text>
+  <text x="60" y="36" text-anchor="middle" font-size="11" fill="#333">levá větev</text>
+  <text x="360" y="36" text-anchor="middle" font-size="11" fill="#333">pravá větev</text>
+  <text x="210" y="65" text-anchor="middle" font-size="10" fill="#555">mělčina / ostrov</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+<h3>Tip: horní barva = preferovaná větev</h3>
+<p>
+  Horní pruh bifurkační bóje napovídá, která větev je <em>hlavní</em> (preferovaná) plavební dráha:
+</p>
+<ul>
+  <li><strong>Červená nahoře</strong> (jako v této otázce) → preferovaná větev je vpravo</li>
+  <li><strong>Zelená nahoře</strong> → preferovaná větev je vlevo</li>
+</ul>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 8 — vytyčení vodní cesty plovoucími znaky (laterální systém IALA).</p>

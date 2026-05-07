@@ -1,0 +1,108 @@
+<h2>Zvukový signál „1 dlouhý zvuk" za snížené viditelnosti</h2>
+
+<p>
+  Signál <strong>1 dlouhý zvuk opakovaný v intervalech ne delších než 1 minuta</strong> dává
+  <strong>samostatně plující plavidlo za snížené viditelnosti</strong> (mlha, hustý déšť, sněžení apod.).
+</p>
+
+<h3>Co signál znamená?</h3>
+<p>
+  Jeden dlouhý zvuk (trvání ≥ 4 s) opakovaný každou minutu říká okolí: <em>„Tady jsem, pohybuji se."</em>
+  Plavidlo tím upozorňuje ostatní, kteří ho na vodě nevidí.
+</p>
+
+<!-- Vizualizace rytmu signálu -->
+<div style="margin: 20px 0;">
+  <svg viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;">
+    <!-- Legenda -->
+    <text x="10" y="18" font-size="12" fill="#555" font-family="sans-serif">Rytmus signálu (1 minuta):</text>
+
+    <!-- Časová osa -->
+    <line x1="10" y1="75" x2="550" y2="75" stroke="#ccc" stroke-width="1"/>
+
+    <!-- Dlouhý zvuk - plavidlo plující (samo) -->
+    <!-- Zvuk 1 -->
+    <rect x="10" y="45" width="55" height="30" rx="5" fill="#2563eb"/>
+    <!-- pauza -->
+    <!-- Zvuk 2 (po ~1 minutě, zmenšený pro úspornost — "...") -->
+    <text x="80" y="64" font-size="20" fill="#888" font-family="sans-serif">· · ·</text>
+    <rect x="130" y="45" width="55" height="30" rx="5" fill="#2563eb"/>
+
+    <!-- Šipky / popis -->
+    <text x="10" y="100" font-size="11" fill="#2563eb" font-family="sans-serif" font-weight="bold">▬ dlouhý zvuk</text>
+    <text x="100" y="100" font-size="11" fill="#888" font-family="sans-serif">≤ 1 minuta pauza</text>
+    <text x="130" y="100" font-size="11" fill="#2563eb" font-family="sans-serif" font-weight="bold">           ▬ dlouhý zvuk ···</text>
+
+    <!-- Štítek -->
+    <rect x="340" y="42" width="210" height="36" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="445" y="57" font-size="11" fill="#1e40af" text-anchor="middle" font-family="sans-serif" font-weight="bold">Plavidlo pluje samostatně</text>
+    <text x="445" y="72" font-size="11" fill="#1e40af" text-anchor="middle" font-family="sans-serif">za snížené viditelnosti</text>
+  </svg>
+</div>
+
+<h3>Proč ne ostatní možnosti?</h3>
+
+<!-- Srovnávací tabulka signálů -->
+<div style="margin: 16px 0;">
+  <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;">
+    <!-- Hlavička -->
+    <rect x="0" y="0" width="560" height="30" rx="4" fill="#1e3a5f"/>
+    <text x="140" y="20" font-size="12" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">Situace</text>
+    <text x="420" y="20" font-size="12" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">Signál za snížené viditelnosti</text>
+
+    <!-- Řádek 1 – samostatně plující (SPRÁVNÁ) -->
+    <rect x="0" y="30" width="560" height="42" fill="#eff6ff"/>
+    <rect x="0" y="30" width="4" height="42" fill="#2563eb"/>
+    <text x="12" y="48" font-size="11" fill="#1e40af" font-family="sans-serif" font-weight="bold">Plavidlo pluje samostatně</text>
+    <text x="12" y="63" font-size="10" fill="#555" font-family="sans-serif">(bez radiolokátoru)</text>
+    <!-- Zvukový pattern -->
+    <rect x="280" y="37" width="50" height="18" rx="4" fill="#2563eb"/>
+    <text x="310" y="50" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">▬</text>
+    <text x="345" y="50" font-size="11" fill="#555" font-family="sans-serif">opak. ≤ 1 min</text>
+    <text x="490" y="50" font-size="11" fill="#16a34a" font-family="sans-serif" font-weight="bold">✓ SPRÁVNĚ</text>
+
+    <!-- Řádek 2 – malé plavidlo s radarem, po proudu -->
+    <rect x="0" y="72" width="560" height="42" fill="#fff7ed"/>
+    <rect x="0" y="72" width="4" height="42" fill="#ea580c"/>
+    <text x="12" y="90" font-size="11" fill="#9a3412" font-family="sans-serif" font-weight="bold">Plavidlo pluje po proudu s radiolokátorem</text>
+    <text x="12" y="105" font-size="10" fill="#555" font-family="sans-serif">(malé plavidlo nebo velké)</text>
+    <!-- Zvukový pattern: 1 dlouhý + 2 krátké -->
+    <rect x="280" y="79" width="50" height="18" rx="4" fill="#ea580c"/>
+    <text x="310" y="92" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">▬</text>
+    <rect x="335" y="82" width="16" height="12" rx="3" fill="#ea580c"/>
+    <text x="343" y="92" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">•</text>
+    <rect x="355" y="82" width="16" height="12" rx="3" fill="#ea580c"/>
+    <text x="363" y="92" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">•</text>
+    <text x="490" y="92" font-size="11" fill="#dc2626" font-family="sans-serif" font-weight="bold">✗ jiný signál</text>
+
+    <!-- Řádek 3 – stojící plavidlo -->
+    <rect x="0" y="114" width="560" height="42" fill="#fef9c3"/>
+    <rect x="0" y="114" width="4" height="42" fill="#ca8a04"/>
+    <text x="12" y="132" font-size="11" fill="#92400e" font-family="sans-serif" font-weight="bold">Plavidlo stojí / kotví</text>
+    <text x="12" y="147" font-size="10" fill="#555" font-family="sans-serif">(na pravé nebo levé straně dráhy)</text>
+    <!-- Zvon -->
+    <text x="285" y="135" font-size="20" fill="#ca8a04" font-family="sans-serif">🔔</text>
+    <text x="310" y="137" font-size="11" fill="#555" font-family="sans-serif">zvon (rychlý, ≤ 1 min)</text>
+    <text x="490" y="135" font-size="11" fill="#dc2626" font-family="sans-serif" font-weight="bold">✗ jiný signál</text>
+
+    <!-- Legenda -->
+    <text x="0" y="195" font-size="10" fill="#888" font-family="sans-serif">▬ = dlouhý zvuk (≥ 4 s)   • = krátký zvuk (≈ 1 s)</text>
+  </svg>
+</div>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Pokud za mlhy slyšíš každou minutu jeden dlouhý tón houkačky, víš, že někde pluje plavidlo —
+  pravděpodobně bez radaru nebo jako malé plavidlo bez povinnosti speciálního signálu.
+  Zvuk ti říká: <em>dej si pozor, přiblíž se opatrně, dávej sám signály zpět.</em>
+</p>
+<p>
+  Pokud slyšíš <em>„dlouhý + 2 krátké"</em>, jde o plavidlo s radiolokátorem jedoucí po proudu — sleduje
+  tě na radaru a signálem ti to sděluje.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — ustanovení o zvukových signálech za snížené viditelnosti</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

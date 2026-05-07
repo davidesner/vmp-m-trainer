@@ -1,0 +1,115 @@
+<h2>Dvě červená světla na stěžni — ztráta manévrovací schopnosti</h2>
+
+<p>Na obrázku vidíte plavidlo nesoucí na stěžni <strong>dvě červená světla svisle nad sebou</strong> (svítí stále, nejde o blikavý signál).</p>
+
+<h3>Správná odpověď</h3>
+<p>Tato světla nese <strong>plavidlo, které ztratilo manévrovací schopnost</strong> — tedy plavidlo, které z technického důvodu (selhání stroje, kormidla nebo jiné závady) nedokáže řízeně reagovat na provoz. Ostatní plavidla mu musí dát přednost a projet s dostatečnou bezpečnostní vzdáleností.</p>
+
+<h3>Vizualizace — dekódování signálu</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:20px 0;">
+
+  <!-- levý panel: schéma jako v testu -->
+  <div style="text-align:center;">
+    <p style="font-size:0.85em; color:#555; margin-bottom:8px;">Jak vypadá v testu</p>
+    <svg width="160" height="180" viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg">
+      <!-- voda -->
+      <rect x="0" y="130" width="160" height="50" fill="#1a3a5c"/>
+      <!-- vlnky -->
+      <polyline points="0,138 10,132 20,138 30,132 40,138 50,132 60,138 70,132 80,138 90,132 100,138 110,132 120,138 130,132 140,138 150,132 160,138" stroke="white" stroke-width="1.5" fill="none"/>
+      <polyline points="0,150 10,144 20,150 30,144 40,150 50,144 60,150 70,144 80,150 90,144 100,150 110,144 120,150 130,144 140,150 150,144 160,150" stroke="white" stroke-width="1.5" fill="none"/>
+      <!-- trup -->
+      <rect x="20" y="110" width="120" height="22" rx="4" fill="#ddd" stroke="#888" stroke-width="1"/>
+      <!-- nástavba -->
+      <rect x="35" y="88" width="45" height="24" rx="2" fill="#bbb" stroke="#888" stroke-width="1"/>
+      <!-- stěžeň -->
+      <line x1="118" y1="110" x2="118" y2="50" stroke="#888" stroke-width="2.5"/>
+      <!-- rameno pro světla -->
+      <line x1="118" y1="62" x2="130" y2="62" stroke="#888" stroke-width="1.5"/>
+      <line x1="118" y1="75" x2="130" y2="75" stroke="#888" stroke-width="1.5"/>
+      <!-- dvě červená světla -->
+      <circle cx="133" cy="62" r="7" fill="#e00"/>
+      <circle cx="133" cy="75" r="7" fill="#e00"/>
+    </svg>
+  </div>
+
+  <!-- pravý panel: co to znamená -->
+  <div style="max-width:280px;">
+    <p style="font-size:0.85em; color:#555; margin-bottom:8px;">Co signál znamená</p>
+    <svg width="260" height="180" viewBox="0 0 260 180" xmlns="http://www.w3.org/2000/svg">
+      <!-- pozadí -->
+      <rect width="260" height="180" fill="#f8f8f8" rx="8"/>
+      <!-- popisek světel -->
+      <circle cx="50" cy="50" r="12" fill="#e00"/>
+      <circle cx="50" cy="82" r="12" fill="#e00"/>
+      <line x1="50" y1="62" x2="50" y2="70" stroke="#aaa" stroke-width="1.5"/>
+      <text x="72" y="44" font-size="12" fill="#333">Červené světlo</text>
+      <text x="72" y="58" font-size="11" fill="#666">stálé (neblíká)</text>
+      <text x="72" y="76" font-size="12" fill="#333">Červené světlo</text>
+      <text x="72" y="90" font-size="11" fill="#666">stálé (neblíká)</text>
+      <text x="72" y="104" font-size="11" fill="#666">svisle nad sebou</text>
+      <!-- šipka -->
+      <line x1="130" y1="120" x2="130" y2="140" stroke="#c00" stroke-width="2" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#c00"/>
+        </marker>
+      </defs>
+      <!-- závěr -->
+      <rect x="20" y="143" width="220" height="28" rx="5" fill="#fdecea"/>
+      <text x="130" y="157" font-size="12" font-weight="bold" fill="#c00" text-anchor="middle">Plavidlo bez manévrovací schopnosti</text>
+      <text x="130" y="168" font-size="10" fill="#888" text-anchor="middle">ostatní se mu vyhnou</text>
+    </svg>
+  </div>
+
+  <!-- srovnávací tabulka -->
+  <div style="max-width:260px;">
+    <p style="font-size:0.85em; color:#555; margin-bottom:8px;">Záměna s jinými signály</p>
+    <table style="border-collapse:collapse; font-size:12px; width:100%;">
+      <thead>
+        <tr style="background:#eee;">
+          <th style="padding:5px 8px; border:1px solid #ccc; text-align:left;">Světlo / znak</th>
+          <th style="padding:5px 8px; border:1px solid #ccc; text-align:left;">Znamená</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fdecea;">
+          <td style="padding:5px 8px; border:1px solid #ccc;">
+            <svg width="30" height="36" viewBox="0 0 30 36" style="vertical-align:middle;">
+              <circle cx="15" cy="9" r="6" fill="#e00"/>
+              <circle cx="15" cy="27" r="6" fill="#e00"/>
+            </svg>
+            2× červená
+          </td>
+          <td style="padding:5px 8px; border:1px solid #ccc;">Ztráta manévrovací schopnosti</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 8px; border:1px solid #ccc;">
+            <svg width="30" height="36" viewBox="0 0 30 36" style="vertical-align:middle;">
+              <circle cx="15" cy="9" r="6" fill="#1a6fd4"/>
+              <circle cx="15" cy="27" r="6" fill="#1a6fd4"/>
+            </svg>
+            1–3× modrá
+          </td>
+          <td style="padding:5px 8px; border:1px solid #ccc;">Přeprava nebezpečných věcí</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 8px; border:1px solid #ccc;">
+            <svg width="30" height="36" viewBox="0 0 30 36" style="vertical-align:middle;">
+              <circle cx="15" cy="18" r="6" fill="#0a0"/>
+            </svg>
+            1× zelená
+          </td>
+          <td style="padding:5px 8px; border:1px solid #ccc;">Převozní loď s předností</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<h3>Praktická aplikace</h3>
+<p>Potkáte-li na vodní cestě plavidlo s tímto signálem (nebo kotvící s touto signalizací), <strong>nevyčkávejte, že ustoupí ono</strong> — nedokáže to. Obeplujte ho s rezervou a při potřebě snižte rychlost, abyste minimalizovali vlnu.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, § 6.29</p>

@@ -1,0 +1,169 @@
+<h2>Červená světla na plavební komoře — zákaz bez výjimek</h2>
+
+<p>
+  Jedno nebo dvě červená světla osazená na plavební komoře při vyplouvání znamenají jediné:
+  <strong>vyplutí není možné</strong> — absolutně, bez výjimky.
+</p>
+
+<hr>
+
+<h3>Vizualizace — signalizace plavební komory</h3>
+
+<div style="overflow-x:auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" width="620" height="320" font-family="sans-serif" font-size="13">
+
+  <!-- Background -->
+  <rect width="620" height="320" fill="#f0f4f8"/>
+
+  <!-- === SCÉNÁŘ 1: 2 červená světla === -->
+  <!-- Label -->
+  <text x="155" y="22" text-anchor="middle" font-weight="bold" font-size="14" fill="#b91c1c">1–2 červená světla</text>
+
+  <!-- Water -->
+  <rect x="20" y="200" width="270" height="60" fill="#60a5fa" opacity="0.5" rx="2"/>
+  <text x="155" y="235" text-anchor="middle" fill="#1e3a5f" font-size="12">voda</text>
+
+  <!-- Lock walls -->
+  <rect x="20" y="80" width="40" height="130" fill="#94a3b8" rx="3"/>
+  <rect x="250" y="80" width="40" height="130" fill="#94a3b8" rx="3"/>
+
+  <!-- Lock gate (closed) -->
+  <rect x="60" y="100" width="190" height="20" fill="#475569" rx="2"/>
+  <text x="155" y="115" text-anchor="middle" fill="white" font-size="11">VRATA (zavřeno)</text>
+
+  <!-- Red lights on left pillar -->
+  <circle cx="40" cy="90" r="10" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+  <circle cx="40" cy="110" r="10" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+  <text x="40" y="74" text-anchor="middle" fill="#b91c1c" font-size="11">●●</text>
+
+  <!-- Red lights on right pillar -->
+  <circle cx="270" cy="90" r="10" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+  <circle cx="270" cy="110" r="10" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+
+  <!-- Boat trying to exit -->
+  <polygon points="155,160 185,175 125,175" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+  <text x="155" y="195" text-anchor="middle" fill="#92400e" font-size="11">plavidlo</text>
+
+  <!-- STOP symbol -->
+  <circle cx="155" cy="250" r="28" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+  <text x="155" y="256" text-anchor="middle" fill="white" font-weight="bold" font-size="16">STOP</text>
+
+  <!-- Arrow blocked -->
+  <line x1="155" y1="178" x2="155" y2="218" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowred)"/>
+
+  <defs>
+    <marker id="arrowred" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowgreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <text x="155" y="296" text-anchor="middle" fill="#b91c1c" font-weight="bold" font-size="12">Absolutní zákaz</text>
+  <text x="155" y="312" text-anchor="middle" fill="#b91c1c" font-size="11">Žádné výjimky</text>
+
+  <!-- Divider -->
+  <line x1="310" y1="30" x2="310" y2="310" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- === SCÉNÁŘ 2: zelená světla === -->
+  <text x="465" y="22" text-anchor="middle" font-weight="bold" font-size="14" fill="#15803d">1–2 zelená světla</text>
+
+  <!-- Water -->
+  <rect x="330" y="200" width="270" height="60" fill="#60a5fa" opacity="0.5" rx="2"/>
+  <text x="465" y="235" text-anchor="middle" fill="#1e3a5f" font-size="12">voda</text>
+
+  <!-- Lock walls -->
+  <rect x="330" y="80" width="40" height="130" fill="#94a3b8" rx="3"/>
+  <rect x="560" y="80" width="40" height="130" fill="#94a3b8" rx="3"/>
+
+  <!-- Lock gate (open) -->
+  <rect x="370" y="100" width="40" height="20" fill="#475569" rx="2"/>
+  <rect x="550" y="100" width="40" height="20" fill="#475569" rx="2"/>
+  <text x="465" y="92" text-anchor="middle" fill="#475569" font-size="11">VRATA (otevřeno)</text>
+
+  <!-- Green lights on left pillar -->
+  <circle cx="350" cy="90" r="10" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+  <circle cx="350" cy="110" r="10" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+
+  <!-- Green lights on right pillar -->
+  <circle cx="575" cy="90" r="10" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+  <circle cx="575" cy="110" r="10" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+
+  <!-- Boat -->
+  <polygon points="465,160 495,175 435,175" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+  <text x="465" y="195" text-anchor="middle" fill="#92400e" font-size="11">plavidlo</text>
+
+  <!-- GO symbol -->
+  <circle cx="465" cy="250" r="28" fill="#22c55e" stroke="#14532d" stroke-width="2"/>
+  <text x="465" y="256" text-anchor="middle" fill="white" font-weight="bold" font-size="16">VOLNO</text>
+
+  <!-- Arrow going through -->
+  <line x1="465" y1="178" x2="465" y2="218" stroke="#22c55e" stroke-width="3" marker-end="url(#arrowgreen)"/>
+
+  <text x="465" y="296" text-anchor="middle" fill="#15803d" font-weight="bold" font-size="12">Vyplutí povoleno</text>
+  <text x="465" y="312" text-anchor="middle" fill="#15803d" font-size="11">Světlo vydala obsluha komory</text>
+
+</svg>
+</div>
+
+<hr>
+
+<h3>Proč je správná jen varianta „vyplutí není možné"</h3>
+
+<ul>
+  <li>
+    <strong>Bez výjimek.</strong> Červená světla jsou absolutní zákazový signál — stejně jako červená na semaforu na silnici.
+    Obsluha plavební komory nemůže verbálně odvolat zákaz; pokud je vyplutí povoleno, rozsvítí zelenou.
+  </li>
+  <li>
+    <strong>„Výjimku může povolit obsluha"</strong> — tento mechanismus neexistuje. Obsluha komunikuje výhradně signalizací.
+    Ústní povolení při červené by znamenalo, že signalizace ztrácí závaznost.
+  </li>
+  <li>
+    <strong>„Pootevřená vrata → malá plavidla smějí projít"</strong> — pootevřená vrata komory jsou nebezpečná situace
+    (silný proud mezi komorou a řekou, hrozba mechanického poškození). Právě proto svítí červená.
+    Malá plavidla nemají žádnou výjimku.
+  </li>
+</ul>
+
+<h3>Přehled signalizace plavební komory</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Signál</th>
+      <th>Význam</th>
+      <th>Výjimka?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1–2 červená světla</td>
+      <td>Zákaz vjezdu / vyplutí</td>
+      <td><strong>Ne — absolutní zákaz</strong></td>
+    </tr>
+    <tr>
+      <td>1 červené + 1 zelené</td>
+      <td>Přiblíž se, čekej u zábrany</td>
+      <td>Ne</td>
+    </tr>
+    <tr>
+      <td>1–2 zelená světla</td>
+      <td>Volno, vjezd / vyplutí povoleno</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Prakticky</h3>
+
+<p>
+  Při červeném signálu na plavební komoře <strong>zastavíš a čekáš</strong> na změnu signálu — nezáleží na tom,
+  zda jsou vrata pootevřena, zda obsluha gestikuluje nebo zda ses domníváš, že je průjezd bezpečný.
+</p>
+
+<h3>Zdroj</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, §32 (signalizace plavebních komor)</li>
+</ul>

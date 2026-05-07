@@ -1,0 +1,136 @@
+<h2>Tepenné krvácení</h2>
+
+<p>
+  <strong>Správná odpověď:</strong> <em>„vystřikuje jasně červená krev"</em>
+</p>
+
+<p>
+  Tepny vedou okysličenou krev <strong>od srdce do těla</strong> — pod vysokým tlakem, synchronizovaným s každým úderem srdce.
+  Při přerušení tepny krev <strong>vystřikuje pulzujícím proudem</strong> (každý tep = nový trysk).
+  Barva je <strong>jasně červená</strong> (šarlatová), protože tepenná krev je plná oxyhemoglobinu.
+</p>
+
+<hr>
+
+<h3>Vizualizace: tepna vs. žíla</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" style="max-width:560px;width:100%;display:block;margin:16px auto;">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#7b241c"/>
+    </marker>
+  </defs>
+
+  <!-- === LEVÁ STRANA: tepenné krvácení === -->
+  <rect x="0" y="0" width="275" height="260" rx="12" fill="#fff5f5" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="137" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">TEPENNÉ krvácení</text>
+
+  <!-- paže -->
+  <rect x="80" y="80" width="100" height="38" rx="18" fill="#f5cba7" stroke="#e59866" stroke-width="1.5"/>
+  <!-- rána -->
+  <rect x="127" y="90" width="10" height="18" rx="3" fill="#e74c3c"/>
+
+  <!-- vystřikující krev — pulzující trysky -->
+  <!-- trysk 1 (nejvyšší) -->
+  <line x1="132" y1="90" x2="185" y2="44" stroke="#e74c3c" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="185" cy="44" r="5" fill="#e74c3c"/>
+  <!-- trysk 2 (střední) -->
+  <line x1="132" y1="90" x2="178" y2="52" stroke="#e74c3c" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="178" cy="52" r="4" fill="#e74c3c"/>
+  <!-- trysk 3 (nejnižší) -->
+  <line x1="132" y1="90" x2="167" y2="62" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="167" cy="62" r="3" fill="#e74c3c"/>
+  <!-- kapky -->
+  <circle cx="190" cy="55" r="2.5" fill="#e74c3c"/>
+  <circle cx="195" cy="70" r="2" fill="#e74c3c"/>
+
+  <!-- popis -->
+  <text x="137" y="150" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">Tryská / vystřikuje</text>
+  <text x="137" y="166" text-anchor="middle" font-size="11" fill="#555">v rytmu tepů srdce</text>
+
+  <rect x="60" y="182" width="154" height="22" rx="6" fill="#e74c3c"/>
+  <text x="137" y="197" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">JASNĚ ČERVENÁ</text>
+  <text x="137" y="222" text-anchor="middle" font-size="10" fill="#888">okysličená krev (oxyhemoglobin)</text>
+  <text x="137" y="238" text-anchor="middle" font-size="10" fill="#888">vysoký tlak — od srdce</text>
+
+  <!-- === PRAVÁ STRANA: žilní krvácení === -->
+  <rect x="285" y="0" width="275" height="260" rx="12" fill="#fdf2f2" stroke="#922b21" stroke-width="1.5"/>
+  <text x="422" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#7b241c">ŽILNÍ krvácení</text>
+
+  <!-- paže -->
+  <rect x="365" y="80" width="100" height="38" rx="18" fill="#f5cba7" stroke="#e59866" stroke-width="1.5"/>
+  <!-- rána -->
+  <rect x="412" y="90" width="10" height="18" rx="3" fill="#922b21"/>
+
+  <!-- volně vytékající krev — stékající proud dolů -->
+  <path d="M417,108 Q418,130 416,155 Q415,175 418,190" stroke="#7b241c" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="417" cy="195" rx="8" ry="5" fill="#7b241c"/>
+  <!-- kaluž -->
+  <ellipse cx="417" cy="205" rx="18" ry="7" fill="#922b21" opacity="0.4"/>
+
+  <!-- popis -->
+  <text x="422" y="150" text-anchor="middle" font-size="12" font-weight="bold" fill="#7b241c">Volně vytéká</text>
+  <text x="422" y="166" text-anchor="middle" font-size="11" fill="#555">rovnoměrný, klidný tok</text>
+
+  <rect x="345" y="182" width="154" height="22" rx="6" fill="#7b241c"/>
+  <text x="422" y="197" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">TEMNĚ ČERVENÁ</text>
+  <text x="422" y="222" text-anchor="middle" font-size="10" fill="#888">odkysličená krev (deoxyhemoglobin)</text>
+  <text x="422" y="238" text-anchor="middle" font-size="10" fill="#888">nízký tlak — k srdci</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti?</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vlastnost</th>
+      <th>Tepna</th>
+      <th>Žíla</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tlak</td>
+      <td>vysoký (od srdce)</td>
+      <td>nízký (k srdci)</td>
+    </tr>
+    <tr>
+      <td>Tok</td>
+      <td><strong>vystřikuje, pulzuje</strong></td>
+      <td>volně vytéká</td>
+    </tr>
+    <tr>
+      <td>Barva</td>
+      <td><strong>jasně červená</strong> (okysličená)</td>
+      <td>temně červená (odkysličená)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <strong>„Volně vytéká temně červená krev"</strong> — popisuje přesně <em>žilní</em> krvácení.
+    Žilní krev se vrací odkysličená (tmavá) a teče bez pulzování.
+  </li>
+  <li>
+    <strong>„Volně vytéká jasně červená krev"</strong> — záměrný chytač.
+    Barva (jasná) odpovídá tepně, ale způsob toku (volně) odpovídá žíle — takovou kombinaci v praxi neuvidíš.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+
+<p>
+  Tepenné krvácení je život ohrožující — velká tepna může vyprázdnit oběh za minuty.
+  Poznáš ho podle <strong>stříkání v rytmu tepu</strong> a <strong>jasně červené barvy</strong>.
+  Léčba: <strong>silný přímý tlak na ránu</strong>; při krvácení z končetiny lze přiložit turniket
+  <em>nad</em> ránou (blíže k srdci).
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Základy první pomoci — standardní obsah výuky vnitrozemské plavby</li>
+</ul>

@@ -1,0 +1,159 @@
+<h2>Proplavování plavební komorou — pořadí vstupu</h2>
+
+<p><strong>Správná odpověď:</strong> Malá plavidla vplují do plavební komory
+<strong>až po</strong> plavidlech, která nejsou malými.</p>
+
+<h3>Proč je to tak?</h3>
+<p>Plavební komora je konstrukčně omezený prostor s malými vůlemi ke stěnám.
+Větší plavidla potřebují přesné umístění a hůře manévrují — proto mají prioritu při vstupu.
+Poté, co jsou uvnitř a ustálena, teprve mohou malá plavidla obsadit zbývající místo.</p>
+
+<p>Pořadí příjezdu k čekacímu místu (mostu, polu) nehraje roli.
+I kdyby malé plavidlo dorazilo ke komorovým vratům dříve než velké, stále čeká,
+dokud větší plavidlo nevstoupí jako první.</p>
+
+<h3>Vizualizace — tři fáze proplavování</h3>
+
+<svg width="540" height="490" viewBox="0 0 540 490" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- column header labels -->
+  <text x="70" y="14" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#666">přístup / čekání</text>
+  <text x="270" y="14" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#666">plavební komora</text>
+  <text x="470" y="14" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#666">odplutí</text>
+
+  <!-- ===== PHASE 1 ===== -->
+  <text x="5" y="32" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="bold" fill="#1a5fa8">① Obě plavidla čekají u zavřených vrat</text>
+
+  <!-- top walls -->
+  <rect x="0"   y="38" width="140" height="7" fill="#7a6040"/>
+  <rect x="150" y="38" width="240" height="7" fill="#7a6040"/>
+  <rect x="400" y="38" width="140" height="7" fill="#7a6040"/>
+  <!-- bottom walls -->
+  <rect x="0"   y="113" width="140" height="7" fill="#7a6040"/>
+  <rect x="150" y="113" width="240" height="7" fill="#7a6040"/>
+  <rect x="400" y="113" width="140" height="7" fill="#7a6040"/>
+  <!-- water: approach -->
+  <rect x="0"   y="45" width="140" height="68" fill="#c2dced"/>
+  <!-- water: lock chamber -->
+  <rect x="150" y="45" width="240" height="68" fill="#8bbcd4"/>
+  <!-- water: exit -->
+  <rect x="400" y="45" width="140" height="68" fill="#c2dced"/>
+  <!-- left gate closed -->
+  <rect x="140" y="38" width="10" height="82" fill="#3d2310"/>
+  <!-- right gate closed -->
+  <rect x="390" y="38" width="10" height="82" fill="#3d2310"/>
+
+  <!-- large vessel waiting near left gate -->
+  <rect x="30"  y="56" width="108" height="46" fill="#1d5c9f" rx="4"/>
+  <text x="84"  y="76" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="bold" fill="white">VELKÉ</text>
+  <text x="84"  y="88" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#c8def5">plavidlo čeká</text>
+
+  <!-- small vessel behind large -->
+  <rect x="2"   y="68" width="26" height="24" fill="#c86010" rx="3"/>
+  <text x="15"  y="80" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="white">malé</text>
+  <text x="15"  y="90" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="#fad0a0">čeká</text>
+
+  <!-- annotation -->
+  <text x="5" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#805000">▶ Vrata se otevřou. Kdo vstoupí?</text>
+
+  <!-- ===== PHASE 2 ===== -->
+  <text x="5" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="bold" fill="#1a5fa8">② Velké plavidlo vstupuje jako PRVNÍ</text>
+
+  <!-- top walls -->
+  <rect x="0"   y="146" width="140" height="7" fill="#7a6040"/>
+  <rect x="150" y="146" width="240" height="7" fill="#7a6040"/>
+  <rect x="400" y="146" width="140" height="7" fill="#7a6040"/>
+  <!-- bottom walls -->
+  <rect x="0"   y="221" width="140" height="7" fill="#7a6040"/>
+  <rect x="150" y="221" width="240" height="7" fill="#7a6040"/>
+  <rect x="400" y="221" width="140" height="7" fill="#7a6040"/>
+  <!-- water -->
+  <rect x="0"   y="153" width="140" height="68" fill="#c2dced"/>
+  <rect x="150" y="153" width="240" height="68" fill="#8bbcd4"/>
+  <rect x="400" y="153" width="140" height="68" fill="#c2dced"/>
+  <!-- left gate: open (vessel prošlo) — top + bottom stub -->
+  <rect x="140" y="146" width="10" height="26" fill="#3d2310"/>
+  <rect x="140" y="202" width="10" height="26" fill="#3d2310"/>
+  <!-- right gate: closed -->
+  <rect x="390" y="146" width="10" height="82" fill="#3d2310"/>
+
+  <!-- large vessel inside lock -->
+  <rect x="158" y="162" width="215" height="46" fill="#1d5c9f" rx="4"/>
+  <text x="265" y="182" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="bold" fill="white">VELKÉ plavidlo — uvnitř ✓</text>
+  <text x="265" y="195" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#c8def5">ustálené, připravené k proplavení</text>
+
+  <!-- small vessel still waiting -->
+  <rect x="2"   y="174" width="26" height="24" fill="#c86010" rx="3"/>
+  <text x="15"  y="186" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="white">malé</text>
+
+  <!-- wait annotation -->
+  <text x="32" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#c04000">↑ malé plavidlo stále čeká venku</text>
+
+  <!-- ===== PHASE 3 ===== -->
+  <text x="5" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="bold" fill="#1a5fa8">③ Malé plavidlo vstupuje AŽ POTÉ</text>
+
+  <!-- top walls -->
+  <rect x="0"   y="254" width="140" height="7" fill="#7a6040"/>
+  <rect x="150" y="254" width="240" height="7" fill="#7a6040"/>
+  <rect x="400" y="254" width="140" height="7" fill="#7a6040"/>
+  <!-- bottom walls -->
+  <rect x="0"   y="329" width="140" height="7" fill="#7a6040"/>
+  <rect x="150" y="329" width="240" height="7" fill="#7a6040"/>
+  <rect x="400" y="329" width="140" height="7" fill="#7a6040"/>
+  <!-- water -->
+  <rect x="0"   y="261" width="140" height="68" fill="#c2dced"/>
+  <rect x="150" y="261" width="240" height="68" fill="#8bbcd4"/>
+  <rect x="400" y="261" width="140" height="68" fill="#c2dced"/>
+  <!-- left gate: open stub (malé právě vstoupilo) -->
+  <rect x="140" y="254" width="10" height="26" fill="#3d2310"/>
+  <rect x="140" y="310" width="10" height="26" fill="#3d2310"/>
+  <!-- right gate: closed -->
+  <rect x="390" y="254" width="10" height="82" fill="#3d2310"/>
+
+  <!-- large vessel inside (shifted left) -->
+  <rect x="155" y="265" width="185" height="46" fill="#1d5c9f" rx="4"/>
+  <text x="247" y="285" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="bold" fill="white">VELKÉ</text>
+  <text x="247" y="298" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#c8def5">plavidlo</text>
+
+  <!-- small vessel entering, now inside lock -->
+  <rect x="347" y="277" width="38" height="30" fill="#c86010" rx="3"/>
+  <text x="366" y="291" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="white">malé</text>
+  <text x="366" y="302" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="#fad0a0">vstupuje</text>
+
+  <!-- success -->
+  <text x="5" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#1a7a30">✓ Malé vstoupilo až po velkém — pravidlo splněno, proplavení je bezpečné.</text>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="5" y="362" width="530" height="58" fill="#f5f5f5" rx="5"/>
+  <text x="15" y="379" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="bold" fill="#444">Legenda:</text>
+  <rect x="75" y="369" width="30" height="13" fill="#1d5c9f" rx="2"/>
+  <text x="110" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#333">Velké plavidlo (plavidlo, které není malým)</text>
+  <rect x="75" y="386" width="18" height="11" fill="#c86010" rx="2"/>
+  <text x="110" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#333">Malé plavidlo</text>
+  <rect x="75" y="403" width="8" height="13" fill="#3d2310" rx="1"/>
+  <text x="110" y="413" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#333">Vrata komory (zavřená / otevřená)</text>
+
+  <!-- ===== RULE BOX ===== -->
+  <rect x="5" y="430" width="530" height="55" fill="#fff8e0" rx="5" stroke="#e6a020" stroke-width="1.5"/>
+  <text x="270" y="449" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="bold" fill="#8a5000">Pravidlo — vyhl. č. 67/2015 Sb. (proplavování plavebními komorami)</text>
+  <text x="270" y="466" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6a3800">Malá plavidla vplují do plavební komory</text>
+  <text x="270" y="480" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="bold" fill="#6a3800">AŽ PO plavidlech, která nejsou malými.</text>
+
+</svg>
+
+<h3>Praktická situace</h3>
+<p>Přijíždíte s motorovým člunem k čekacímu mostu před komorou. U protějšího pole stojí nákladní bárka.
+Komora se otevře — bárka pluje první. Teprve až je uvnitř a uvázána, dostanete signál ke vstupu.
+Toto platí bez ohledu na to, kdo připlul k čekacímu místu dřív.</p>
+
+<h3>Proč ostatní možnosti nesedí</h3>
+<ul>
+  <li><strong>Vstup malého plavidla před velkým</strong> je nesprávný: velké plavidlo by pak manévrovalo v komoře, kde malé plavidlo už stojí — nebezpečná situace.</li>
+  <li><strong>Vstup v pořadí příjezdu k čekacím místům</strong> je nesprávný: zákon explicitně stanoví prioritu větších plavidel bez ohledu na pořadí příjezdu.</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — část o proplavování plavebními komorami</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě — definice malého plavidla</li>
+</ul>

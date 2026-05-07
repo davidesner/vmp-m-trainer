@@ -1,0 +1,104 @@
+<h2>Signální světelný znak — žlutý kruh</h2>
+
+<p>Otázka se ptá, co znamená signální světelný znak zobrazující <strong>jeden žlutý kruh (jedno žluté světlo)</strong> u překážky plavební dráhy.</p>
+
+<p><strong>Správná odpověď:</strong> jeden žlutý kruh = <em>doporučené proplouvání v obou směrech</em>.</p>
+
+<hr>
+
+<h3>Vizualizace — srovnání světelných signálů</h3>
+
+<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;display:block;margin:1rem auto;font-family:sans-serif;">
+  <!-- Pozadí -->
+  <rect width="520" height="300" fill="#f8f9fa" rx="12"/>
+
+  <!-- Levý panel: 1 žluté světlo -->
+  <rect x="10" y="10" width="230" height="280" fill="#e8f4e8" rx="10" stroke="#4caf50" stroke-width="2"/>
+  <text x="125" y="35" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">1 žluté světlo</text>
+
+  <!-- Světlo -->
+  <circle cx="125" cy="75" r="28" fill="#FFD700" stroke="#b8860b" stroke-width="2"/>
+
+  <!-- Šipky obousměrné -->
+  <text x="125" y="130" text-anchor="middle" font-size="12" fill="#333">Proplouvání dovoleno</text>
+  <text x="125" y="147" text-anchor="middle" font-size="12" fill="#333">v obou směrech</text>
+
+  <!-- Schéma průjezdu — mostem -->
+  <rect x="40" y="170" width="170" height="14" fill="#999" rx="2"/>
+  <rect x="40" y="200" width="170" height="14" fill="#999" rx="2"/>
+
+  <!-- Loďka doleva -->
+  <polygon points="70,186 95,179 95,193" fill="#1565C0"/>
+  <!-- Šipka doleva -->
+  <line x1="95" y1="186" x2="55" y2="186" stroke="#1565C0" stroke-width="2" marker-end="url(#arrowL)"/>
+
+  <!-- Loďka doprava -->
+  <polygon points="145,186 120,179 120,193" fill="#C62828"/>
+  <!-- Šipka doprava -->
+  <line x1="120" y1="186" x2="160" y2="186" stroke="#C62828" stroke-width="2" marker-end="url(#arrowR)"/>
+
+  <text x="125" y="235" text-anchor="middle" font-size="11" fill="#555">oba směry současně OK</text>
+  <text x="125" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">✓ Tato otázka</text>
+
+  <!-- Pravý panel: 2 žlutá světla -->
+  <rect x="280" y="10" width="230" height="280" fill="#fce8e8" rx="10" stroke="#e53935" stroke-width="2"/>
+  <text x="395" y="35" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">2 žlutá světla (nad sebou)</text>
+
+  <!-- Světla -->
+  <circle cx="395" cy="62" r="22" fill="#FFD700" stroke="#b8860b" stroke-width="2"/>
+  <circle cx="395" cy="95" r="22" fill="#FFD700" stroke="#b8860b" stroke-width="2"/>
+
+  <!-- Popis -->
+  <text x="395" y="138" text-anchor="middle" font-size="12" fill="#333">Proplouvání jen v jednom</text>
+  <text x="395" y="155" text-anchor="middle" font-size="12" fill="#333">směru — protisměr</text>
+  <text x="395" y="172" text-anchor="middle" font-size="12" fill="#b71c1c">zakázán!</text>
+
+  <!-- Schéma průjezdu jednosměrně -->
+  <rect x="310" y="195" width="170" height="14" fill="#999" rx="2"/>
+  <rect x="310" y="225" width="170" height="14" fill="#999" rx="2"/>
+
+  <!-- Loďka doprava -->
+  <polygon points="370,209 345,202 345,216" fill="#C62828"/>
+  <line x1="345" y1="209" x2="385" y2="209" stroke="#C62828" stroke-width="2" marker-end="url(#arrowR2)"/>
+
+  <!-- Stop (zakřížovaná šipka zpět) -->
+  <line x1="430" y1="209" x2="410" y2="209" stroke="#888" stroke-width="2" stroke-dasharray="4,3"/>
+  <line x1="424" y1="203" x2="436" y2="215" stroke="#b71c1c" stroke-width="2.5"/>
+  <line x1="436" y1="203" x2="424" y2="215" stroke="#b71c1c" stroke-width="2.5"/>
+
+  <text x="395" y="258" text-anchor="middle" font-size="11" fill="#555">protisměr musí čekat</text>
+
+  <!-- Šipky definice -->
+  <defs>
+    <marker id="arrowL" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1565C0"/>
+    </marker>
+    <marker id="arrowR" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#C62828"/>
+    </marker>
+    <marker id="arrowR2" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#C62828"/>
+    </marker>
+  </defs>
+</svg>
+
+<h3>Vysvětlení</h3>
+
+<p>Světelné signály u překážek plavební dráhy (úzké mosty, propustky, jednoproudová místa) informují vůdce plavidla o tom, zda může proplouvat a v jakém směru:</p>
+
+<ul>
+  <li><strong>Jedno žluté světlo (kruh)</strong> — průjezd je volný v obou směrech. Oba směry mohou proplouvat současně. Žádné omezení.</li>
+  <li><strong>Dvě žlutá světla nad sebou</strong> — průjezd v jednom směru je povolen, protisměr je zakázán. Vůdci musí vyčkat, až jim bude uděleno volno.</li>
+</ul>
+
+<p>Varianty o přechodu plavební dráhy z jednoho břehu na druhý patří do jiného systému — jsou zakódovány ve <strong>vytyčovacích znacích</strong> (bóje, topové znaky), nikoli ve světelných signálech u překážek.</p>
+
+<h3>Praktická aplikace</h3>
+
+<p>Na vodních cestách se tato signalizace nejčastěji vyskytuje u <strong>úzkých říčních mostů</strong> nebo <strong>plavebních komor</strong>, kde nelze projet obousměrně. Jedno žluté světlo znamená, že podmínky jsou v pořádku — oba směry mohou jet volně. Jakmile se situace změní (velká loď projíždí, komora plní), systém přepne na dvě světla a protisměr musí čekat.</p>
+
+<h3>Zdroj</h3>
+
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — signalizace u překážek plavební dráhy</li>
+</ul>

@@ -1,0 +1,116 @@
+<h2>Denní signalizace rybolovného zařízení</h2>
+
+<p>Otázka se ptá, co nese denní signalizaci zobrazenou na obrázku — žluté trojúhelníkové plováky viditelné nad hladinou vody.</p>
+
+<h3>Jádro</h3>
+<p>Správná odpověď je <strong>rybářská síť nebo jiné rybolovné zařízení</strong>. Síť leží pod hladinou a ostatní plavidla ji nemohou vidět. Aby nedošlo ke kolizi nebo zachycení lodního šroubu, musí být rybolovné zařízení v plavební dráze vyznačeno <strong>žlutými trojúhelníkovými plováky</strong> jako denní signalizace. Tuto signalizaci nesou přímo zařízení (sítě, vrše, dlouhé udice), nikoliv plavidlo samotné.</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:32px; flex-wrap:wrap; align-items:flex-start; margin:16px 0;">
+
+  <!-- Levý panel: co vidíte na vodě -->
+  <div style="flex:1; min-width:260px;">
+    <p style="font-weight:bold; margin-bottom:8px; text-align:center;">Co vidíte na vodní hladině</p>
+    <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:300px; display:block; margin:auto;">
+      <!-- Voda -->
+      <rect x="0" y="90" width="280" height="110" fill="#b3d9f7"/>
+      <!-- Vlnky -->
+      <path d="M0 95 Q20 88 40 95 Q60 102 80 95 Q100 88 120 95 Q140 102 160 95 Q180 88 200 95 Q220 102 240 95 Q260 88 280 95" stroke="#7ab8e0" stroke-width="1.5" fill="none"/>
+      <path d="M0 105 Q20 98 40 105 Q60 112 80 105 Q100 98 120 105 Q140 112 160 105 Q180 98 200 105 Q220 112 240 105 Q260 98 280 105" stroke="#7ab8e0" stroke-width="1.5" fill="none"/>
+
+      <!-- Síť pod hladinou -->
+      <rect x="30" y="110" width="220" height="60" fill="none" stroke="#5a4a1a" stroke-width="1" stroke-dasharray="6,4" opacity="0.6"/>
+      <!-- Mřížka sítě -->
+      <line x1="55" y1="110" x2="55" y2="170" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+      <line x1="80" y1="110" x2="80" y2="170" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+      <line x1="105" y1="110" x2="105" y2="170" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+      <line x1="130" y1="110" x2="130" y2="170" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+      <line x1="155" y1="110" x2="155" y2="170" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+      <line x1="180" y1="110" x2="180" y2="170" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+      <line x1="205" y1="110" x2="205" y2="170" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+      <line x1="30" y1="128" x2="250" y2="128" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+      <line x1="30" y1="146" x2="250" y2="146" stroke="#5a4a1a" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+
+      <!-- Popis sítě -->
+      <text x="140" y="143" text-anchor="middle" font-size="10" fill="#3a2a00" opacity="0.8">rybářská síť pod hladinou</text>
+
+      <!-- Žluté trojúhelníkové plováky -->
+      <!-- Plovák 1 -->
+      <line x1="50" y1="110" x2="50" y2="93" stroke="#888" stroke-width="1.5"/>
+      <polygon points="50,68 38,93 62,93" fill="#f5c518" stroke="#c8950a" stroke-width="1.5"/>
+      <!-- Plovák 2 -->
+      <line x1="100" y1="110" x2="100" y2="93" stroke="#888" stroke-width="1.5"/>
+      <polygon points="100,68 88,93 112,93" fill="#f5c518" stroke="#c8950a" stroke-width="1.5"/>
+      <!-- Plovák 3 -->
+      <line x1="150" y1="110" x2="150" y2="93" stroke="#888" stroke-width="1.5"/>
+      <polygon points="150,68 138,93 162,93" fill="#f5c518" stroke="#c8950a" stroke-width="1.5"/>
+      <!-- Plovák 4 -->
+      <line x1="200" y1="110" x2="200" y2="93" stroke="#888" stroke-width="1.5"/>
+      <polygon points="200,68 188,93 212,93" fill="#f5c518" stroke="#c8950a" stroke-width="1.5"/>
+
+      <!-- Šipka a popis plováků -->
+      <line x1="100" y1="55" x2="100" y2="65" stroke="#c00" stroke-width="1.5" marker-end="url(#arr)"/>
+      <text x="120" y="52" font-size="11" fill="#c00" font-weight="bold">žlutý trojúhelník</text>
+      <text x="120" y="64" font-size="10" fill="#c00">(denní signalizace)</text>
+
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#c00"/>
+        </marker>
+      </defs>
+
+      <!-- Hladina — vizuální dělič -->
+      <text x="4" y="107" font-size="9" fill="#555">hladina</text>
+      <line x1="0" y1="110" x2="280" y2="110" stroke="#4488aa" stroke-width="0.8" stroke-dasharray="3,3"/>
+    </svg>
+  </div>
+
+  <!-- Pravý panel: plavidlo se svou signalizací -->
+  <div style="flex:1; min-width:220px;">
+    <p style="font-weight:bold; margin-bottom:8px; text-align:center;">Plavidlo nese vlastní znak</p>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:220px; display:block; margin:auto;">
+      <!-- Voda -->
+      <rect x="0" y="140" width="200" height="60" fill="#b3d9f7"/>
+      <path d="M0 145 Q25 138 50 145 Q75 152 100 145 Q125 138 150 145 Q175 152 200 145" stroke="#7ab8e0" stroke-width="1.5" fill="none"/>
+
+      <!-- Trup plavidla -->
+      <ellipse cx="100" cy="148" rx="55" ry="12" fill="#d4a96a"/>
+      <rect x="50" y="136" width="100" height="14" rx="3" fill="#c8955a"/>
+      <path d="M50 140 Q100 130 150 140" fill="#b07840" stroke="none"/>
+
+      <!-- Stožár -->
+      <line x1="100" y1="136" x2="100" y2="55" stroke="#555" stroke-width="2"/>
+
+      <!-- Černá koule na stožáru -->
+      <circle cx="100" cy="45" r="13" fill="#222"/>
+      <text x="100" y="49" text-anchor="middle" font-size="9" fill="white">●</text>
+
+      <!-- Popis koule -->
+      <line x1="114" y1="38" x2="140" y2="25" stroke="#333" stroke-width="1"/>
+      <text x="142" y="22" font-size="10" fill="#333" font-weight="bold">černá koule</text>
+      <text x="142" y="34" font-size="9" fill="#555">= plavidlo loví</text>
+
+      <!-- Kotevní lano sítě -->
+      <line x1="50" y1="148" x2="10" y2="160" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="5" y="175" font-size="9" fill="#555">lano k síti</text>
+    </svg>
+    <p style="font-size:0.85em; color:#555; text-align:center; margin-top:4px;">Černá koule je <em>znak plavidla</em> — říká „lovím ryby". Žluté trojúhelníky jsou <em>znaky zařízení</em> — říkají „zde leží síť".</p>
+  </div>
+
+</div>
+
+<h3>Proč ne ostatní varianty</h3>
+<ul>
+  <li><strong>Síť při zneškodňování výbušnin:</strong> Tato operace se vyznačuje zákazovými plavebními znaky a červenými vlajkami uzavírajícími oblast — žluté trojúhelníkové plováky se nepoužívají.</li>
+  <li><strong>Ochranná síť potápěčů:</strong> Potápěčský prostor se označuje vlajkou „A" (bílo-modrý kosoúhlý prapor) nebo červenou vlajkou s bílým diagonálním pruhem, případně kombinací zvukových a světelných signálů z plavidla dozoru.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Pokud na vodě vidíte řadu žlutých trojúhelníkových plováků, vyhněte se tomuto prostoru — pod hladinou je rybolovné zařízení. Průjezd přes síť hrozí zachycením lodního šroubu nebo poškozením kormidla.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu (plavební předpis) — část o denní signalizaci plovoucích pracovních zařízení a rybolovného náčiní</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

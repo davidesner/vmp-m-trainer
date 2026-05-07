@@ -1,0 +1,86 @@
+<h2>Žlutý plovák s radarovým odražečem — k čemu slouží?</h2>
+
+<p>
+  Žlutý plovák (bóje) s radarovým odražečem značí <strong>kotvy plavidel, které mohou vytvářet nebezpečí pro plavbu</strong>.
+  Jde o povinné označení v situaci, kdy kotvový řetěz nebo lano leží na dně plavební dráhy tak, že ohrožuje ostatní plavidla
+  (propeler, kormidlo, trup může řetěz zachytit nebo přejet kotvu).
+</p>
+
+<h3>Proč jen nebezpečné kotvy?</h3>
+<p>
+  Ne každá zakotvená loď plovák potřebuje. Normální zakotvení u břehu nebo v zátoce mimo plavební dráhu riziko nevytváří
+  a žlutý plovák nevyžaduje. Označování se týká <em>výhradně</em> situací, kdy konfigurce kotevního řetězu představuje
+  potenciální nebezpečí pro ostatní provoz.
+</p>
+
+<h3>Proč ne ostatní varianty?</h3>
+<ul>
+  <li>
+    <strong>„Kotvy použité k zakotvení plavidel"</strong> — příliš široká formulace. Nezahrnuje podmínku nebezpečí;
+    implicitně by znamenala povinný plovák pro každé zakotvení, což pravidla nevyžadují.
+  </li>
+  <li>
+    <strong>„Všechny kotvy plavidel"</strong> — stejný problém. Označují se pouze kotvy ohrožující plavbu, ne kotvy obecně.
+  </li>
+</ul>
+
+<h3>Vizualizace</h3>
+
+<svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;display:block;margin:1em auto;">
+  <!-- Voda -->
+  <rect x="0" y="120" width="520" height="60" fill="#b3d9f7" rx="0"/>
+  <!-- Dno -->
+  <rect x="0" y="180" width="520" height="40" fill="#c8b89a"/>
+  <!-- Vlnky -->
+  <path d="M0,120 Q30,112 60,120 Q90,128 120,120 Q150,112 180,120 Q210,128 240,120 Q270,112 300,120 Q330,128 360,120 Q390,112 420,120 Q450,128 480,120 Q510,112 520,120" fill="none" stroke="#5aaed4" stroke-width="1.5"/>
+
+  <!-- Plavidlo -->
+  <rect x="30" y="85" width="110" height="38" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="4"/>
+  <rect x="55" y="68" width="50" height="20" fill="#ddd" stroke="#333" stroke-width="1.5" rx="2"/>
+  <!-- Příď (přední zaoblení) -->
+  <path d="M140,85 Q160,104 140,123" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+  <!-- Kotvový řetěz — jde doleva dolů ke dnu a pak doprava k plováku -->
+  <path d="M85,123 Q60,155 80,180 Q200,180 360,180 Q380,170 400,145" fill="none" stroke="#666" stroke-width="2.5" stroke-dasharray="6,4"/>
+
+  <!-- Kotva na dně -->
+  <g transform="translate(75,178)">
+    <line x1="0" y1="0" x2="0" y2="-10" stroke="#555" stroke-width="2"/>
+    <line x1="-8" y1="-5" x2="8" y2="-5" stroke="#555" stroke-width="2"/>
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="#555" stroke-width="2"/>
+  </g>
+
+  <!-- Žlutý plovák -->
+  <ellipse cx="400" cy="128" rx="14" ry="10" fill="#f5d000" stroke="#b8900a" stroke-width="2"/>
+  <!-- Radar odražeč (kosočtverec nahoře) -->
+  <polygon points="400,100 412,114 400,118 388,114" fill="#f5d000" stroke="#b8900a" stroke-width="1.5"/>
+  <!-- Spojení plováku s řetězem -->
+  <line x1="400" y1="138" x2="400" y2="148" stroke="#666" stroke-width="2"/>
+
+  <!-- Popisky -->
+  <text x="85" y="62" text-anchor="middle" font-size="12" fill="#333" font-family="sans-serif">plavidlo</text>
+  <text x="400" y="92" text-anchor="middle" font-size="12" fill="#b8900a" font-family="sans-serif" font-weight="bold">žlutý plovák</text>
+  <text x="400" y="80" text-anchor="middle" font-size="10" fill="#888" font-family="sans-serif">+ radarový odražeč</text>
+  <text x="200" y="198" text-anchor="middle" font-size="11" fill="#666" font-family="sans-serif">kotvový řetěz na dně</text>
+
+  <!-- Šipka nebezpečí -->
+  <text x="260" y="148" text-anchor="middle" font-size="11" fill="#c0392b" font-family="sans-serif">⚠ nebezpečí pro plavbu</text>
+</svg>
+
+<p style="font-size:0.9em;color:#555;">
+  Řetěz leží napříč plavební dráhou. Plovák označuje místo, kde řetěz vystupuje k hladině —
+  radarový odražeč zajišťuje viditelnost i v mlze nebo v noci.
+</p>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Typický případ: plavidlo zakotvilo přes kanál a kotvový řetěz přechází plavební dráhu.
+  Povinnost označit takový řetěz žlutým plovákem (s odražečem) chrání ostatní plavidla před
+  zachycením propeleru, kormidla nebo trupu.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb., o pravidlech plavebního provozu (označování kotev ohrožujících plavbu)</li>
+  <li>Zákon č. 114/1995 Sb., o vnitrozemské plavbě</li>
+</ul>

@@ -1,0 +1,140 @@
+<h2>Zvukový signál: 1 dlouhý + 2 krátké zvuky</h2>
+
+<p><strong>Správná odpověď:</strong> <em>„mám v úmyslu provést obrat doleva."</em></p>
+
+<p>
+  Klíčové slovo je <strong>„mám v úmyslu"</strong> — jde o <em>signál záměru</em>, ne o popis
+  aktuálního pohybu. Kapitán jej vydá <strong>před</strong> zahájením obratu, aby ostatní plavidla
+  věděla, co se chystá.
+</p>
+
+<h3>Vizualizace rytmu signálu</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" style="max-width:520px;width:100%;display:block;margin:12px 0;">
+  <!-- Background -->
+  <rect width="520" height="110" rx="10" fill="#1a1a2e"/>
+
+  <!-- Label -->
+  <text x="20" y="28" font-family="monospace" font-size="13" fill="#aaaacc">Rytmus:</text>
+
+  <!-- Long sound bar -->
+  <rect x="80" y="38" width="120" height="28" rx="5" fill="#4fc3f7"/>
+  <text x="140" y="57" font-family="monospace" font-size="12" fill="#1a1a2e" text-anchor="middle">DLOUHÝ</text>
+
+  <!-- pause -->
+  <text x="215" y="57" font-family="monospace" font-size="14" fill="#555577" text-anchor="middle">·</text>
+
+  <!-- Short sound 1 -->
+  <rect x="230" y="38" width="50" height="28" rx="5" fill="#81c784"/>
+  <text x="255" y="57" font-family="monospace" font-size="11" fill="#1a1a2e" text-anchor="middle">KRÁTKÝ</text>
+
+  <!-- pause -->
+  <text x="293" y="57" font-family="monospace" font-size="14" fill="#555577" text-anchor="middle">·</text>
+
+  <!-- Short sound 2 -->
+  <rect x="306" y="38" width="50" height="28" rx="5" fill="#81c784"/>
+  <text x="331" y="57" font-family="monospace" font-size="11" fill="#1a1a2e" text-anchor="middle">KRÁTKÝ</text>
+
+  <!-- Arrow -->
+  <text x="380" y="57" font-family="sans-serif" font-size="20" fill="#ffcc02" text-anchor="middle">→</text>
+
+  <!-- Meaning -->
+  <text x="410" y="48" font-family="sans-serif" font-size="12" fill="#ffcc02">obrat</text>
+  <text x="410" y="65" font-family="sans-serif" font-size="12" fill="#ffcc02">doleva</text>
+
+  <!-- Duration hint -->
+  <text x="80" y="90" font-family="monospace" font-size="10" fill="#666688">≥ 4 s</text>
+  <text x="230" y="90" font-family="monospace" font-size="10" fill="#666688">≥ 1 s</text>
+  <text x="306" y="90" font-family="monospace" font-size="10" fill="#666688">≥ 1 s</text>
+</svg>
+
+<h3>Srovnání: obraty doprava vs. doleva</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" style="max-width:520px;width:100%;display:block;margin:12px 0;">
+  <rect width="520" height="200" rx="10" fill="#12122a"/>
+
+  <!-- Right turn row -->
+  <text x="20" y="35" font-family="sans-serif" font-size="13" fill="#ffffff" font-weight="bold">Obrat doprava</text>
+
+  <rect x="20" y="45" width="100" height="22" rx="4" fill="#4fc3f7"/>
+  <text x="70" y="60" font-family="monospace" font-size="11" fill="#12122a" text-anchor="middle">DLOUHÝ</text>
+
+  <text x="132" y="60" font-family="monospace" font-size="12" fill="#555577">+</text>
+
+  <rect x="148" y="45" width="44" height="22" rx="4" fill="#81c784"/>
+  <text x="170" y="60" font-family="monospace" font-size="10" fill="#12122a" text-anchor="middle">KRÁTKÝ</text>
+
+  <!-- right arrow -->
+  <text x="220" y="62" font-family="sans-serif" font-size="13" fill="#aaaacc">→</text>
+
+  <!-- Ship turning right -->
+  <g transform="translate(250,56)">
+    <!-- vessel body -->
+    <ellipse cx="20" cy="10" rx="14" ry="7" fill="#4fc3f7" opacity="0.9"/>
+    <polygon points="20,3 34,10 20,17" fill="#2980b9"/>
+    <!-- turn arc right -->
+    <path d="M34,10 Q60,-10 60,20" stroke="#ffcc02" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+    <polygon points="62,17 58,23 56,16" fill="#ffcc02"/>
+    <text x="68" y="16" font-family="sans-serif" font-size="11" fill="#ffcc02">↱</text>
+  </g>
+
+  <text x="340" y="62" font-family="sans-serif" font-size="12" fill="#4fc3f7">1 krátký</text>
+  <text x="340" y="76" font-family="sans-serif" font-size="11" fill="#888899">= doprava</text>
+
+  <!-- Divider -->
+  <line x1="16" y1="98" x2="504" y2="98" stroke="#333355" stroke-width="1"/>
+
+  <!-- Left turn row -->
+  <text x="20" y="122" font-family="sans-serif" font-size="13" fill="#ffffff" font-weight="bold">Obrat doleva</text>
+
+  <rect x="20" y="132" width="100" height="22" rx="4" fill="#4fc3f7"/>
+  <text x="70" y="147" font-family="monospace" font-size="11" fill="#12122a" text-anchor="middle">DLOUHÝ</text>
+
+  <text x="132" y="147" font-family="monospace" font-size="12" fill="#555577">+</text>
+
+  <rect x="148" y="132" width="44" height="22" rx="4" fill="#81c784"/>
+  <text x="170" y="147" font-family="monospace" font-size="10" fill="#12122a" text-anchor="middle">KRÁTKÝ</text>
+
+  <text x="203" y="147" font-family="monospace" font-size="12" fill="#555577">+</text>
+
+  <rect x="218" y="132" width="44" height="22" rx="4" fill="#81c784"/>
+  <text x="240" y="147" font-family="monospace" font-size="10" fill="#12122a" text-anchor="middle">KRÁTKÝ</text>
+
+  <!-- left arrow -->
+  <text x="278" y="148" font-family="sans-serif" font-size="13" fill="#aaaacc">→</text>
+
+  <!-- Ship turning left -->
+  <g transform="translate(298,143)">
+    <ellipse cx="20" cy="10" rx="14" ry="7" fill="#4fc3f7" opacity="0.9"/>
+    <polygon points="20,3 34,10 20,17" fill="#2980b9"/>
+    <!-- turn arc left -->
+    <path d="M34,10 Q60,30 60,0" stroke="#ff7043" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+    <polygon points="62,3 58,-3 56,4" fill="#ff7043"/>
+    <text x="68" y="8" font-family="sans-serif" font-size="11" fill="#ff7043">↲</text>
+  </g>
+
+  <text x="378" y="148" font-family="sans-serif" font-size="12" fill="#81c784">2 krátké</text>
+  <text x="378" y="162" font-family="sans-serif" font-size="11" fill="#888899">= doleva</text>
+
+  <!-- Mnemonic -->
+  <text x="16" y="190" font-family="sans-serif" font-size="11" fill="#ffcc02" font-style="italic">Pamatuj: více krátkých = více doleva (1 = doprava, 2 = doleva)</text>
+</svg>
+
+<h3>Proč ostatní možnosti nesedí</h3>
+<ul>
+  <li><strong>„pluji doleva"</strong> — signály manévrů vždy oznamují <em>záměr</em> před provedením, ne průběžný pohyb. Fráze „pluji" by popisovala aktuální stav, k tomu tento signál neslouží.</li>
+  <li><strong>„stojím při levém břehu"</strong> — poloha u břehu se sděluje jiným způsobem (světelné výstrahy, informační značky), ne tímto zvukovým signálem.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Kapitán vydá tento signál těsně <strong>před</strong> zahájením obratu — například při manévrování
+  do přístavu, otočení před mostem nebo úzkým místem. Ostatní plavidla v blízkosti signál uslyší
+  a mohou zpomalit, zastavit nebo uvolnit prostor pro obrat.
+</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — příloha o zvukové signalizaci (signály manévrů)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

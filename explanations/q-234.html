@@ -1,0 +1,93 @@
+<h2>Zvukový signál: 3 dlouhé + 1 krátký</h2>
+
+<p>Tento signál znamená: <strong>„Mám v úmyslu vyplout z přístavu doprava."</strong></p>
+
+<h3>Vizualizace rytmu signálu</h3>
+
+<div style="overflow-x:auto;">
+<svg viewBox="0 0 520 110" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;display:block;margin:0 auto;">
+  <!-- pozadí -->
+  <rect width="520" height="110" fill="#f8f9fa" rx="8"/>
+
+  <!-- popis os -->
+  <text x="10" y="22" font-size="12" fill="#555" font-family="sans-serif">Signál:</text>
+
+  <!-- 1. dlouhý zvuk -->
+  <rect x="60" y="10" width="80" height="30" rx="4" fill="#1a6fb5"/>
+  <text x="100" y="30" font-size="11" fill="white" text-anchor="middle" font-family="sans-serif">DLOUHÝ</text>
+
+  <!-- mezera -->
+  <rect x="148" y="10" width="10" height="30" rx="2" fill="#dee2e6"/>
+
+  <!-- 2. dlouhý zvuk -->
+  <rect x="166" y="10" width="80" height="30" rx="4" fill="#1a6fb5"/>
+  <text x="206" y="30" font-size="11" fill="white" text-anchor="middle" font-family="sans-serif">DLOUHÝ</text>
+
+  <!-- mezera -->
+  <rect x="254" y="10" width="10" height="30" rx="2" fill="#dee2e6"/>
+
+  <!-- 3. dlouhý zvuk -->
+  <rect x="272" y="10" width="80" height="30" rx="4" fill="#1a6fb5"/>
+  <text x="312" y="30" font-size="11" fill="white" text-anchor="middle" font-family="sans-serif">DLOUHÝ</text>
+
+  <!-- mezera větší (oddělení skupin) -->
+  <rect x="360" y="10" width="20" height="30" rx="2" fill="#dee2e6"/>
+
+  <!-- 1. krátký zvuk -->
+  <rect x="388" y="10" width="40" height="30" rx="4" fill="#e07b00"/>
+  <text x="408" y="30" font-size="11" fill="white" text-anchor="middle" font-family="sans-serif">KRÁTKÝ</text>
+
+  <!-- popis délek -->
+  <text x="100" y="55" font-size="10" fill="#888" text-anchor="middle" font-family="sans-serif">~4 s</text>
+  <text x="206" y="55" font-size="10" fill="#888" text-anchor="middle" font-family="sans-serif">~4 s</text>
+  <text x="312" y="55" font-size="10" fill="#888" text-anchor="middle" font-family="sans-serif">~4 s</text>
+  <text x="408" y="55" font-size="10" fill="#888" text-anchor="middle" font-family="sans-serif">~1 s</text>
+
+  <!-- šipka a popis -->
+  <line x1="60" y1="78" x2="460" y2="78" stroke="#aaa" stroke-width="1"/>
+  <polygon points="460,74 470,78 460,82" fill="#aaa"/>
+  <text x="10" y="82" font-size="11" fill="#555" font-family="sans-serif">čas →</text>
+
+  <!-- výsledek -->
+  <rect x="60" y="88" width="390" height="16" rx="3" fill="#d4edda"/>
+  <text x="255" y="100" font-size="11" fill="#155724" text-anchor="middle" font-family="sans-serif">✓ Vyplouvám z přístavu doprava</text>
+</svg>
+</div>
+
+<h3>Klíč: počet krátkých zvuků = strana</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Signál</th>
+      <th>Počet krátkých</th>
+      <th>Význam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>▬ ▬ ▬ &nbsp;▬</td>
+      <td><strong>1 krátký</strong></td>
+      <td>Vyplouvám z přístavu <strong>doprava</strong></td>
+    </tr>
+    <tr>
+      <td>▬ ▬ ▬ &nbsp;▬ ▬</td>
+      <td><strong>2 krátké</strong></td>
+      <td>Vyplouvám z přístavu <strong>doleva</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>Obrat doprava</strong> — signál obratu je odlišný; 3 dlouhé zvuky jsou vyhrazeny pro vyplouvání z přístavu/kotviště/přístaviště, ne pro obrat na trati.</li>
+  <li><strong>Ukončení plavby při pravém břehu</strong> — to je přistávací záměr (vstup), zatímco signál 3 dlouhé + 1 krátký je výstupní signál (odplutí).</li>
+</ul>
+
+<h3>Praktické použití</h3>
+<p>Kapitán vydá signál <strong>před odplutím z přístavu</strong>, aby informoval ostatní plavidla v blízkosti. Ostatní tak vědí, kde vyjíždějící plavidlo očekávat a jak se mu vyhnout.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha — zvukové signály</li>
+</ul>

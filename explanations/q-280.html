@@ -1,0 +1,114 @@
+<h2>Signální tabule: černý kruh na bílém poli v červeném rámu</h2>
+
+<p>Tabule zobrazená v otázce — červený čtvercový rámeček, bílé pole, plný černý kruh uprostřed — je <strong>příkazová plavební značka s významem: dát zvukový signál</strong>.</p>
+
+<h3>Jak číst vizuální kód tabule</h3>
+
+<div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin:16px 0;">
+
+  <!-- Tabule z testu -->
+  <div style="text-align:center;">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="116" height="116" rx="6" ry="6" fill="#c0392b" />
+      <rect x="14" y="14" width="92" height="92" fill="white" />
+      <circle cx="60" cy="60" r="28" fill="#111" />
+    </svg>
+    <p style="margin:6px 0 0;font-size:0.85em;color:#555;">Co vidíš v testu</p>
+  </div>
+
+  <!-- Dekódování -->
+  <div style="flex:1;min-width:220px;">
+    <table style="border-collapse:collapse;width:100%;">
+      <thead>
+        <tr style="background:#f4f4f4;">
+          <th style="padding:6px 10px;border:1px solid #ddd;text-align:left;">Prvek</th>
+          <th style="padding:6px 10px;border:1px solid #ddd;text-align:left;">Význam</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:6px 10px;border:1px solid #ddd;">Červený čtvercový rámeček</td>
+          <td style="padding:6px 10px;border:1px solid #ddd;">Příkazová značka — plavidlo <em>musí</em> provést uvedený úkon</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 10px;border:1px solid #ddd;">Plný černý kruh</td>
+          <td style="padding:6px 10px;border:1px solid #ddd;">Symbol zvukového signálu (troubení)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h3>Kde a proč</h3>
+<p>Tabule se instaluje na místech se <strong>zhoršenou průhledností</strong> — před slepými zatáčkami, na vjezdech pod mosty, v úzkých průplavech. Každé procházející plavidlo je povinno použít zvukový signál (zpravidla <strong>jeden delší tón</strong>), čímž upozorní protijedoucí nebo předjíždějící provoz na svou přítomnost.</p>
+
+<div style="display:flex;gap:24px;flex-wrap:wrap;margin:16px 0;align-items:flex-start;">
+
+  <!-- Schéma situace na vodě -->
+  <div>
+    <svg width="280" height="140" viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- řeka / kanál -->
+      <rect x="0" y="0" width="280" height="140" fill="#e8f4fc" />
+
+      <!-- břehy -->
+      <rect x="0" y="0" width="280" height="22" fill="#8B7355" />
+      <rect x="0" y="118" width="280" height="22" fill="#8B7355" />
+
+      <!-- voda -->
+      <rect x="0" y="22" width="280" height="96" fill="#5b9abf" />
+
+      <!-- zatáčka (simulace) — překrytí pevniny -->
+      <rect x="130" y="22" width="80" height="96" fill="#8B7355" />
+      <ellipse cx="130" cy="70" rx="40" ry="48" fill="#5b9abf" />
+
+      <!-- tabule vlevo -->
+      <rect x="14" y="30" width="28" height="28" rx="3" fill="#c0392b" />
+      <rect x="18" y="34" width="20" height="20" fill="white" />
+      <circle cx="28" cy="44" r="6" fill="#111" />
+      <!-- sloupek tabule -->
+      <line x1="28" y1="58" x2="28" y2="75" stroke="#555" stroke-width="2" />
+
+      <!-- plavidlo jedoucí doprava -->
+      <ellipse cx="75" cy="70" rx="28" ry="10" fill="#2c3e50" />
+      <rect x="62" y="60" width="26" height="10" fill="#34495e" />
+      <!-- šipka pohybu -->
+      <line x1="108" y1="70" x2="122" y2="70" stroke="#e74c3c" stroke-width="2" marker-end="url(#arr)" />
+
+      <!-- zvukové vlny -->
+      <path d="M103 62 Q110 56 110 70 Q110 84 103 78" fill="none" stroke="#f39c12" stroke-width="2"/>
+      <path d="M108 58 Q118 50 118 70 Q118 90 108 82" fill="none" stroke="#f39c12" stroke-width="1.5"/>
+
+      <!-- plavidlo za zatáčkou (vpravo) -->
+      <ellipse cx="230" cy="70" rx="28" ry="10" fill="#27ae60" />
+      <rect x="217" y="60" width="26" height="10" fill="#2ecc71" />
+      <!-- šipka pohybu doleva -->
+      <line x1="196" y1="70" x2="182" y2="70" stroke="#27ae60" stroke-width="2" marker-end="url(#arr2)" />
+
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#e74c3c"/>
+        </marker>
+        <marker id="arr2" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto">
+          <path d="M6,0 L6,6 L0,3 z" fill="#27ae60"/>
+        </marker>
+      </defs>
+    </svg>
+    <p style="margin:4px 0 0;font-size:0.82em;color:#555;max-width:280px;">Tmavé plavidlo přijíždí k slepé zatáčce — tabule ho zavazuje troubením upozornit zelené plavidlo, které přichází ze slepého úseku.</p>
+  </div>
+
+</div>
+
+<h3>Proč ostatní možnosti neplatí</h3>
+<ul>
+  <li><strong>„Zůstat stát"</strong> — takový příkaz by měl odlišný symbol (typicky horizontální pruh nebo světelná závora). Černý plný kruh má zcela jiný vizuální kód.</li>
+  <li><strong>„Zachovávat zvláštní pozornost"</strong> — to bývá doporučující, nikoli příkazová tabule; symbol je odlišný (vykřičník nebo jiná grafika). Červený rámeček zde jasně říká: toto je <em>příkaz</em>, ne doporučení.</li>
+</ul>
+
+<h3>Praktická pomůcka</h3>
+<p>Červený rámeček + kruh = <em>„zatrub"</em>. Kruh si představ jako otevřená ústa lodního rohu (nebo reproduktor zepředu). Jeden delší tón — plavidla za zatáčkou slyší a reagují.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu — příloha plavebních tabulí, skupina příkazových značek (B)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

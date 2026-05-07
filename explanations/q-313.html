@@ -1,0 +1,101 @@
+<h2>Otázka #313 — Co znamená tato tabule?</h2>
+
+<p><strong>Správná odpověď:</strong> místo vyhrazené pro stání plavidel za účelem <strong>naložení nebo vyložení vozidla</strong>.</p>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;margin:16px 0;">
+
+  <!-- Levá část: tabule jak vypadá v testu -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 8px 0;font-weight:bold;font-size:0.9em;">Tabule v testu</p>
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Modrý čtverec -->
+      <rect x="4" y="4" width="112" height="112" rx="8" ry="8" fill="#3a7fc1" stroke="#1a4f80" stroke-width="2"/>
+      <!-- Auto — tělo -->
+      <rect x="22" y="58" width="62" height="28" rx="6" ry="6" fill="white"/>
+      <!-- Auto — střecha -->
+      <path d="M32 58 L38 40 L68 40 L76 58 Z" fill="white"/>
+      <!-- Auto — kola -->
+      <circle cx="36" cy="86" r="9" fill="#3a7fc1" stroke="white" stroke-width="3"/>
+      <circle cx="70" cy="86" r="9" fill="#3a7fc1" stroke="white" stroke-width="3"/>
+      <!-- Rampa (šikmá čára) -->
+      <line x1="88" y1="40" x2="88" y2="86" stroke="white" stroke-width="5" stroke-linecap="round"/>
+      <line x1="88" y1="86" x2="26" y2="86" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      <!-- Šikmá rampa -->
+      <line x1="88" y1="40" x2="100" y2="86" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <p style="font-size:0.8em;color:#555;margin:6px 0 0 0;">modrý čtverec, bílé auto + rampa</p>
+  </div>
+
+  <!-- Pravá část: co to znamená v reálu -->
+  <div style="flex:1;min-width:200px;">
+    <p style="margin:0 0 8px 0;font-weight:bold;font-size:0.9em;">Co to znamená v reálu</p>
+    <svg width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <rect x="0" y="80" width="260" height="40" fill="#a8d8f0"/>
+      <!-- Nápis voda -->
+      <text x="130" y="103" text-anchor="middle" font-size="11" fill="#3a7fc1">~ voda ~</text>
+      <!-- Nábřeží / pevnina -->
+      <rect x="0" y="60" width="70" height="20" fill="#c8a96e"/>
+      <text x="35" y="74" text-anchor="middle" font-size="10" fill="#5a3a00">pevnina</text>
+      <!-- Rampa (šikmý přechod) -->
+      <polygon points="70,60 110,80 70,80" fill="#a0855a" stroke="#7a6040" stroke-width="1"/>
+      <text x="75" y="92" font-size="9" fill="#5a3a00">rampa</text>
+      <!-- Plavidlo (trajekt) -->
+      <rect x="110" y="68" width="100" height="20" rx="4" ry="4" fill="#e8e8e8" stroke="#999" stroke-width="1.5"/>
+      <rect x="115" y="56" width="90" height="13" rx="3" ry="3" fill="#d0d0d0" stroke="#999" stroke-width="1"/>
+      <text x="160" y="66" text-anchor="middle" font-size="9" fill="#555">trajekt / plavidlo</text>
+      <!-- Auto na plavidle -->
+      <rect x="130" y="59" width="30" height="10" rx="2" ry="2" fill="#3a7fc1"/>
+      <rect x="134" y="55" width="22" height="5" rx="1" ry="1" fill="#5090d0"/>
+      <circle cx="136" cy="69" r="3" fill="#333"/>
+      <circle cx="156" cy="69" r="3" fill="#333"/>
+      <!-- Šipky znázorňující nakládání -->
+      <line x1="95" y1="70" x2="115" y2="70" stroke="#e74c3c" stroke-width="2" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#e74c3c"/>
+        </marker>
+      </defs>
+      <text x="90" y="63" font-size="9" fill="#e74c3c">nakládání</text>
+      <!-- Kotevní značka -->
+      <text x="210" y="75" font-size="9" fill="#555" text-anchor="middle">⚓ vyhrazené</text>
+      <text x="210" y="85" font-size="9" fill="#555" text-anchor="middle">kotviště</text>
+    </svg>
+    <p style="font-size:0.82em;color:#444;margin:6px 0 0 0;">
+      Plavidlo kotví u rampy, vozidla se po rampě nakládají nebo vykládají.<br>
+      Kotviště je <strong>vyhrazené</strong> — ostatní plavidla tu nestojí.
+    </p>
+  </div>
+</div>
+
+<h3>Klíč k rozpoznání</h3>
+<p>
+  Šikmá rampa vedle auta = přechod mezi pevninou a plavidlem. Bez rampy by šlo o libovolné přístaviště.
+  <strong>Rampa je rozlišovací znak</strong> — říká, že jde konkrétně o místo pro přepravu vozidel.
+</p>
+
+<h3>Proč ostatní možnosti nesedí</h3>
+<ul>
+  <li>
+    <strong>„Přístaviště poblíž silniční komunikace"</strong> — tato definice je příliš obecná.
+    Každý přístav je poblíž silnice; tabulí se ale označuje specificky nalodiště/vylodiště pro vozidla,
+    nikoli jakékoliv přístaviště u cesty.
+  </li>
+  <li>
+    <strong>„Povolená plavba obojživelných vozidel a vznášedel"</strong> — auto na obrázku
+    stojí na rampě a je nakládáno na plavidlo; nejezdí samo do vody. Pro obojživelná vozidla
+    a vznášedla existuje odlišný symbol.
+  </li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Tabulí je označeno kotvení trajektů nebo přívozů, které přepravují automobily (např. silniční trajekty
+  na řekách). Ostatní plavidla — čluny, hausbóty — sem nesmí zajet parkovat,
+  protože místo je vyhrazeno právě pro tento účel nakládání/vykládání.
+</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách, příloha č. 7 (plavební značky — informační tabule).</p>

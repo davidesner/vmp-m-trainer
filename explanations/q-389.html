@@ -1,0 +1,111 @@
+<h2>Pochybná dechová aktivita u bezvědomého</h2>
+
+<p>Správný postup: <strong>zahájíme resuscitaci — postupujeme, jako by nedýchal.</strong></p>
+
+<p>Klíčový princip: <em>in dubio pro resuscitatione</em> — při sebemenší pochybnosti o dýchání okamžitě zahajujeme KPR.</p>
+
+<h3>Proč vždy zahájit resuscitaci při pochybnostech?</h3>
+
+<p>Jde o záměrně asymetrické rozhodnutí — chyby nemají stejnou váhu:</p>
+
+<div style="overflow-x:auto; margin: 1em 0;">
+<table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+  <thead>
+    <tr style="background:#1a1a2e; color:#e0e0e0;">
+      <th style="padding:8px 12px; text-align:left; border:1px solid #444;">Situace</th>
+      <th style="padding:8px 12px; text-align:left; border:1px solid #444;">Zahájíš KPR</th>
+      <th style="padding:8px 12px; text-align:left; border:1px solid #444;">Nezahájíš KPR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px 12px; border:1px solid #444;"><strong>Skutečně nedýchá</strong></td>
+      <td style="padding:8px 12px; border:1px solid #444; color:#4caf50;">✅ Zachráníš život</td>
+      <td style="padding:8px 12px; border:1px solid #444; color:#f44336;">❌ Za 4–6 min mozkové poškození, smrt</td>
+    </tr>
+    <tr style="background:#1a1a2e22;">
+      <td style="padding:8px 12px; border:1px solid #444;"><strong>Skutečně dýchá</strong></td>
+      <td style="padding:8px 12px; border:1px solid #444; color:#ff9800;">⚠️ Drobné riziko, komprese lze přerušit</td>
+      <td style="padding:8px 12px; border:1px solid #444; color:#4caf50;">✅ Nic nehrozí</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Rozhodovací postup — schéma</h3>
+
+<svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:1em auto;font-family:sans-serif;">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#aaa"/>
+    </marker>
+  </defs>
+
+  <!-- Box 1: pacient nalezen v bezvědomí -->
+  <rect x="135" y="10" width="250" height="44" rx="8" fill="#2a2a4a" stroke="#6666aa" stroke-width="1.5"/>
+  <text x="260" y="27" text-anchor="middle" fill="#ddd" font-size="12">Pacient v bezvědomí</text>
+  <text x="260" y="44" text-anchor="middle" fill="#ddd" font-size="12">— nereaguje na oslovení</text>
+
+  <!-- Arrow down -->
+  <line x1="260" y1="54" x2="260" y2="80" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Box 2: zkontroluj dýchání -->
+  <rect x="135" y="80" width="250" height="44" rx="8" fill="#2a3a2a" stroke="#66aa66" stroke-width="1.5"/>
+  <text x="260" y="97" text-anchor="middle" fill="#ddd" font-size="12">Zkontroluj dýchání</text>
+  <text x="260" y="114" text-anchor="middle" fill="#aaa" font-size="11">max. 10 sekund — pohled + přiblíž tvář</text>
+
+  <!-- Arrow down -->
+  <line x1="260" y1="124" x2="260" y2="150" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Diamond: dýchá normálně? -->
+  <polygon points="260,150 360,190 260,230 160,190" fill="#2a2a3a" stroke="#8888cc" stroke-width="1.5"/>
+  <text x="260" y="185" text-anchor="middle" fill="#ddd" font-size="12">Dýchá</text>
+  <text x="260" y="201" text-anchor="middle" fill="#ddd" font-size="12">normálně?</text>
+
+  <!-- ANO branch — right -->
+  <line x1="360" y1="190" x2="440" y2="190" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="398" y="183" text-anchor="middle" fill="#4caf50" font-size="11">ANO</text>
+
+  <!-- Box: stabilizovaná poloha -->
+  <rect x="440" y="168" width="70" height="44" rx="6" fill="#1a3a1a" stroke="#4caf50" stroke-width="1.5"/>
+  <text x="475" y="185" text-anchor="middle" fill="#aaffaa" font-size="10">Stabiliz.</text>
+  <text x="475" y="199" text-anchor="middle" fill="#aaffaa" font-size="10">poloha</text>
+  <text x="475" y="213" text-anchor="middle" fill="#aaffaa" font-size="10">+ volej 155</text>
+
+  <!-- NE / NEJSEM SI JISTÝ branch — down -->
+  <line x1="260" y1="230" x2="260" y2="260" stroke="#f44336" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="275" y="248" text-anchor="left" fill="#f44336" font-size="11">NE / nejsem si jistý</text>
+
+  <!-- Box: zahaj KPR -->
+  <rect x="135" y="260" width="250" height="50" rx="8" fill="#3a1a1a" stroke="#f44336" stroke-width="2"/>
+  <text x="260" y="282" text-anchor="middle" fill="#ffaaaa" font-size="13" font-weight="bold">Zahaj KPR ihned!</text>
+  <text x="260" y="300" text-anchor="middle" fill="#ddd" font-size="11">30 kompresí : 2 vdechy + volej 155</text>
+
+  <!-- Note: lapavé dechy -->
+  <rect x="80" y="328" width="310" height="30" rx="6" fill="#2a1a00" stroke="#ff9800" stroke-width="1"/>
+  <text x="235" y="342" text-anchor="middle" fill="#ffcc80" font-size="10" font-style="italic">Lapavé (agonální) dechy = nepovažuj za normální dýchání → zahaj KPR</text>
+  <text x="235" y="354" text-anchor="middle" fill="#ffcc80" font-size="10" font-style="italic">Lapavé (agonální) dechy = nepovažuj za normální dýchání</text>
+
+  <!-- Legend note about uncertainty -->
+  <rect x="5" y="158" width="145" height="50" rx="6" fill="#1a1a2e" stroke="#8888cc" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="77" y="175" text-anchor="middle" fill="#aaaaff" font-size="10" font-weight="bold">Při pochybnostech:</text>
+  <text x="77" y="190" text-anchor="middle" fill="#ccccff" font-size="10">in dubio</text>
+  <text x="77" y="204" text-anchor="middle" fill="#ccccff" font-size="10">pro resuscitatione</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+
+<ul>
+  <li><strong>Varianta se zrcátkem nebo brýlemi:</strong> Zastaralý, nespolehlivý postup. Ztratíš drahocenné sekundy hledáním pomůcky. Slabý dech se nemusí projevit zamlžením. Moderní guidelines ERC (2021) tento postup neuznávají.</li>
+  <li><strong>Varianta „uložíme do stabilizované polohy a čekáme":</strong> Stabilizovaná poloha je určena pro spontánně dýchajícího pacienta v bezvědomí. Pokud pacient nedýchá a ty čekáš na záchranku, zemře — mozek odumírá za 4–6 minut bez kyslíku, záchranná služba přijede déle.</li>
+</ul>
+
+<h3>Kontrola dechu v praxi</h3>
+
+<p>Kontrolu provádíš <strong>maximálně 10 sekund</strong>: pohled na pohyb hrudníku a přiblíž tvář k ústům a nosu pacienta (cítíš proudění vzduchu?). Cokoliv, co není pravidelné a normální dýchání — nebo nevíš — bereš jako <em>nedýchá</em> a okamžitě zahajuješ KPR.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Doporučení European Resuscitation Council (ERC) 2021 — základní podpora života (BLS)</li>
+  <li>Metodické pokyny ČČK k první pomoci</li>
+</ul>

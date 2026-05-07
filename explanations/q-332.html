@@ -1,0 +1,108 @@
+<h2>Tabule VHF — informace o radiotelefonním kanálu</h2>
+
+<p>Modrá čtvercová tabule s nápisem <strong>VHF</strong> a číslem kanálu (v zadání kanál 11) je <strong>informační plavební značka</strong> skupiny E. Říká: <em>na tomto místě nebo úseku je k dispozici radiová informační služba — zavolej na uvedeném VHF kanálu a získáš informace</em> (stav hladiny, provoz plavební komory, situace v přístavu apod.).</p>
+
+<p>Tabule <strong>není příkaz</strong> — jen oznamuje dostupnost služby. A nemá nic společného s povolením pro windsurfy ani jiná plavidla.</p>
+
+<hr>
+
+<h3>Vizualizace</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:16px 0;">
+
+  <!-- Levá část: přesná replika tabule -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 8px 0; font-size:0.85em; color:#555;">Tabule v testu</p>
+    <svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+      <rect x="5" y="5" width="100" height="100" rx="6" ry="6" fill="#5b9ec9" stroke="#ccc" stroke-width="1.5"/>
+      <text x="55" y="48" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">VHF</text>
+      <text x="55" y="78" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle">11</text>
+    </svg>
+  </div>
+
+  <!-- Pravá část: co to znamená v reálu -->
+  <div style="flex:1; min-width:220px;">
+    <p style="margin:0 0 8px 0; font-size:0.85em; color:#555;">Co to znamená na vodě</p>
+    <svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- Voda -->
+      <rect x="0" y="110" width="300" height="50" fill="#cce5f5" opacity="0.6"/>
+      <!-- Břeh / molo -->
+      <rect x="0" y="95" width="300" height="18" fill="#b8a888"/>
+      <!-- Tyč tabule -->
+      <line x1="40" y1="95" x2="40" y2="30" stroke="#555" stroke-width="3"/>
+      <!-- Tabule na tyči -->
+      <rect x="15" y="18" width="50" height="38" rx="4" fill="#5b9ec9" stroke="#ccc" stroke-width="1"/>
+      <text x="40" y="33" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">VHF</text>
+      <text x="40" y="48" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">11</text>
+      <!-- Plavidlo -->
+      <ellipse cx="210" cy="108" rx="45" ry="10" fill="#e8d5a3" stroke="#888" stroke-width="1.5"/>
+      <rect x="185" y="80" width="50" height="28" rx="3" fill="#d4b96e" stroke="#888" stroke-width="1"/>
+      <!-- Anténa plavidla -->
+      <line x1="230" y1="80" x2="230" y2="55" stroke="#555" stroke-width="1.5"/>
+      <!-- Rádiová vlna -->
+      <path d="M 245 68 Q 255 60 245 52" fill="none" stroke="#e06030" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <path d="M 252 72 Q 268 60 252 48" fill="none" stroke="#e06030" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <!-- Šipka od plavidla k tabuli -->
+      <line x1="165" y1="90" x2="80" y2="65" stroke="#e06030" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e06030"/>
+        </marker>
+      </defs>
+      <!-- Popis -->
+      <text x="150" y="148" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Zavolej na VHF 11 → dispečer/přístav odpoví</text>
+    </svg>
+  </div>
+</div>
+
+<hr>
+
+<h3>Systém barev a tvarů plavebních značek</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tvar + barva</th>
+      <th>Kategorie</th>
+      <th>Příklad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Červený kruh</td>
+      <td><strong>Zákaz</strong></td>
+      <td>Zákaz plavby, zákaz předjíždění</td>
+    </tr>
+    <tr>
+      <td>Červený/bílý kruh</td>
+      <td><strong>Příkaz</strong></td>
+      <td>Přidržet se pravého břehu</td>
+    </tr>
+    <tr>
+      <td><strong>Modrý čtverec/obdélník</strong></td>
+      <td><strong>Informace / doporučení</strong></td>
+      <td><strong>VHF kanál, povolení pro plavidla atp.</strong></td>
+    </tr>
+    <tr>
+      <td>Žlutý kosočtverec</td>
+      <td>Doporučení</td>
+      <td>Doporučená rychlost</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Modrý čtverec = vždy informace nebo doporučení, <strong>nikdy příkaz</strong>.</p>
+
+<hr>
+
+<h3>Jak nezmýlit se</h3>
+<ul>
+  <li><strong>„Příkaz uvést do provozu rádiovou stanici"</strong> — příkazové znaky jsou kulaté s červeným prvkem, ne modré čtverce. Tato tabule není příkaz.</li>
+  <li><strong>„Povolení pro windsurfy v počtu na znaku"</strong> — zcela jiná grafika; číslo na VHF tabuli označuje kanál, ne počet plavidel.</li>
+</ul>
+
+<h3>Prakticky</h3>
+<p>Před vjezdem do přístavu nebo plavební komory tabule VHF říká, na jakém kanálu najdeš obsluhu. V Česku jsou nejčastější kanály 10, 11 a 16 (16 = mezinárodní tísňový a volací kanál).</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha č. 7 — znaky informační skupiny E (doporučující a informační tabule).</p>

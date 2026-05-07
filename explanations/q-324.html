@@ -1,0 +1,68 @@
+<h2>Tabule s lodní vrtulí — co znamená?</h2>
+
+<p>Otázka ukazuje modrý čtvercový panel s bílou lodní vrtulí (šroubem). Správná odpověď je: <strong>plavba plavidel s vlastním pohonem povolena.</strong></p>
+
+<h3>Jak značku dekódovat</h3>
+<ul>
+  <li><strong>Modrý čtvercový podklad</strong> = dovolující / příkazová plavební značka (typ E dle CEVNI) — říká „smíš"</li>
+  <li><strong>Bílá vrtule (lodní šroub)</strong> = přímý symbol pohonné soustavy plavidla = plavidlo s vlastním pohonem</li>
+</ul>
+
+<p>Kombinace tvoří <strong>značku E.1</strong> — oznámení, že daný úsek nebo pásmo vodní plochy je otevřen pro plavidla s vlastním pohonem. Typicky se umísťuje tam, kde předcházel zákaz (například za bezmotorovou zónou, za výjezdem z přehrady nebo z rekreačního pásma).</p>
+
+<h3>Vizualizace</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" style="max-width:520px;width:100%;font-family:sans-serif;">
+  <!-- Left: sign as in the test -->
+  <rect x="10" y="20" width="160" height="160" rx="12" fill="#5b9bd5"/>
+  <!-- Propeller blades (white) -->
+  <g transform="translate(90,100)">
+    <!-- Blade 1: up-right -->
+    <ellipse cx="0" cy="-32" rx="13" ry="28" fill="white" transform="rotate(-30)"/>
+    <!-- Blade 2: down-left -->
+    <ellipse cx="0" cy="-32" rx="13" ry="28" fill="white" transform="rotate(90)"/>
+    <!-- Blade 3: right -->
+    <ellipse cx="0" cy="-32" rx="13" ry="28" fill="white" transform="rotate(210)"/>
+    <!-- Hub -->
+    <circle cx="0" cy="0" r="9" fill="white"/>
+    <circle cx="0" cy="0" r="5" fill="#5b9bd5"/>
+  </g>
+  <text x="90" y="195" text-anchor="middle" font-size="12" fill="#333">Co vidíš v testu</text>
+  <text x="90" y="10" text-anchor="middle" font-size="11" fill="#555">Tabule E.1 (CEVNI)</text>
+
+  <!-- Arrow -->
+  <line x1="185" y1="100" x2="225" y2="100" stroke="#666" stroke-width="2" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Right: meaning -->
+  <rect x="235" y="20" width="270" height="160" rx="8" fill="#eef5fb" stroke="#5b9bd5" stroke-width="1.5"/>
+  <text x="370" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5276">Plavba s vlastním pohonem</text>
+  <text x="370" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5276">POVOLENA</text>
+  <!-- Boat icon (simple) -->
+  <path d="M295,130 Q370,105 445,130 L435,148 Q370,138 305,148 Z" fill="#2980b9" opacity="0.7"/>
+  <rect x="358" y="108" width="6" height="22" fill="#555"/>
+  <path d="M364,108 L390,118 L364,120 Z" fill="#e74c3c"/>
+  <!-- Water lines -->
+  <line x1="260" y1="152" x2="490" y2="152" stroke="#85c1e9" stroke-width="2"/>
+  <path d="M260,158 Q290,154 320,158 Q350,162 380,158 Q410,154 440,158 Q470,162 490,158" stroke="#85c1e9" stroke-width="1.5" fill="none"/>
+  <text x="370" y="180" text-anchor="middle" font-size="11" fill="#555">Motor zapnutý — od tabule smíš plout</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Místo vyhrazené pro stání malých plavidel s vlastním pohonem"</strong> — stání/kotvení by bylo označeno symbolem kotvy nebo plavidla v klidové poloze, ne pohonnou vrtulí. Vrtule symbolizuje pohyb, ne zastavení.</li>
+  <li><strong>„Místo určené pro opravy plavidel (loděnice, dok)"</strong> — opravárenské zázemí má vlastní označení (informační tabule s textem nebo piktogramem nářadí). Žádná standardní CEVNI značka nevyjadřuje loděnici vrtulí.</li>
+</ul>
+
+<h3>Paměťový trik</h3>
+<p><strong>Modrá + vrtule = motor smí.</strong> Modrá + přeškrtnutá vrtule = motor nesmí (zákazová varianta A.5).</p>
+
+<h3>Praktická aplikace</h3>
+<p>Tuto tabuli uvidíš na ústí přítoku, po opuštění přehrady nebo bezmotorové rekreační zóny. Říká ti, že od tohoto místa znovu platí normální plavební pravidla a motorem plout můžeš.</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha 6 — plavební znaky, skupina E (dovolující značky), značka E.1.</p>

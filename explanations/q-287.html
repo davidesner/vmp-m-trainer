@@ -1,0 +1,89 @@
+<h2>Signální znak omezené hloubky</h2>
+
+<p>
+  <strong>Správná odpověď:</strong> hloubka je omezena, číslo na signálním znaku stanoví hloubku v metrech.
+</p>
+
+<hr>
+
+<h3>Jak znak číst</h3>
+
+<div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; margin:20px 0;">
+
+  <!-- Levá část: replika znaku -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 6px 0; font-size:0.85em; color:#555;">Znak v testu</p>
+    <svg width="130" height="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- červený rámeček -->
+      <rect x="2" y="2" width="126" height="126" rx="6" ry="6" fill="#d0021b" />
+      <!-- bílé vnitřní pole -->
+      <rect x="12" y="12" width="106" height="106" rx="3" ry="3" fill="white" />
+      <!-- číslo -->
+      <text x="65" y="68" font-size="30" font-weight="bold" text-anchor="middle" fill="#111" font-family="Arial, sans-serif">2.20</text>
+      <!-- trojúhelník — dno -->
+      <polygon points="65,100 42,88 88,88" fill="#111" />
+    </svg>
+    <p style="margin:6px 0 0 0; font-size:0.8em; color:#555;">červený rámeček = omezení<br>trojúhelník = dno vodní cesty</p>
+  </div>
+
+  <!-- Pravá část: průřez vodní cestou -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 6px 0; font-size:0.85em; color:#555;">Co to znamená na vodě</p>
+    <svg width="260" height="160" viewBox="0 0 260 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- nebe / vzduch -->
+      <rect x="0" y="0" width="260" height="160" fill="#e8f4fc" />
+      <!-- voda -->
+      <rect x="0" y="40" width="260" height="80" fill="#5b9bd5" opacity="0.5" />
+      <!-- hladina -->
+      <line x1="0" y1="40" x2="260" y2="40" stroke="#2a6090" stroke-width="2" stroke-dasharray="6,3" />
+      <text x="5" y="36" font-size="11" fill="#2a6090" font-family="Arial, sans-serif">hladina</text>
+      <!-- dno -->
+      <rect x="0" y="120" width="260" height="40" fill="#b5935a" />
+      <text x="5" y="138" font-size="11" fill="#5a3a0a" font-family="Arial, sans-serif">dno</text>
+      <!-- šipka hloubky -->
+      <line x1="200" y1="42" x2="200" y2="118" stroke="#d0021b" stroke-width="2" />
+      <polygon points="200,42 196,54 204,54" fill="#d0021b" />
+      <polygon points="200,118 196,106 204,106" fill="#d0021b" />
+      <text x="208" y="85" font-size="13" font-weight="bold" fill="#d0021b" font-family="Arial, sans-serif">2.20 m</text>
+      <!-- plavidlo (zjednodušeně) -->
+      <rect x="60" y="55" width="80" height="28" rx="4" ry="4" fill="#f5f5f5" stroke="#444" stroke-width="1.5" />
+      <polygon points="60,83 50,83 60,70" fill="#f5f5f5" stroke="#444" stroke-width="1.5" />
+      <polygon points="140,83 150,83 140,70" fill="#f5f5f5" stroke="#444" stroke-width="1.5" />
+      <!-- čára ponoru plavidla -->
+      <line x1="48" y1="80" x2="152" y2="80" stroke="#444" stroke-width="1" stroke-dasharray="4,3" />
+      <!-- vzdálenost od dna pod kýlem -->
+      <line x1="100" y1="80" x2="100" y2="118" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="3,2" />
+      <text x="107" y="103" font-size="10" fill="#e67e22" font-family="Arial, sans-serif">rezerva!</text>
+      <!-- tabule v obrazci -->
+      <rect x="10" y="10" width="36" height="36" rx="3" fill="#d0021b" />
+      <rect x="15" y="15" width="26" height="26" rx="2" fill="white" />
+      <text x="28" y="29" font-size="8" font-weight="bold" text-anchor="middle" fill="#111" font-family="Arial, sans-serif">2.20</text>
+      <polygon points="28,37 20,33 36,33" fill="#111" />
+    </svg>
+    <p style="margin:6px 0 0 0; font-size:0.8em; color:#555;">Ponor plavidla musí být menší než udaná hloubka<br>(ideálně s bezpečnostní rezervou)</p>
+  </div>
+
+</div>
+
+<h3>Dekódování znaku</h3>
+<ul>
+  <li><strong>Červený rámeček</strong> — upozornění / omezení (podobná logika jako u silničního značení)</li>
+  <li><strong>Číslo (2.20)</strong> — dostupná hloubka plavební dráhy v metrech</li>
+  <li><strong>Černý trojúhelník špicí nahoru</strong> — symbolizuje dno; hrot narůstající odspodu znázorňuje mělčinu</li>
+</ul>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><em>"Překážky na dně od říčního km X"</em> — takový typ tabule neexistuje; překážky se označují plovoucími nebo pevnými plavebními značkami, ne číselnou tabulí s trojúhelníkem.</li>
+  <li><em>"Levobřežní plavební značení začíná ve vzdálenosti X km"</em> — začátek úseku plavebního značení se vyznačuje zcela jiným způsobem; číslo 2.20 by pro vzdálenost nedávalo smysl.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>
+  Plavidlo s ponorem blízkým 2,20 m musí v tomto úseku velmi dbát. Ponor musí být vždy
+  <strong>menší</strong> než udaná hloubka — a to s dostatečnou bezpečnostní rezervou, protože
+  hladina se mění (déšť, sucho, provoz plavebních komor).
+</p>
+
+<h3>Zdroj</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, příloha — tabulka signálních znaků (omezená hloubka).</p>

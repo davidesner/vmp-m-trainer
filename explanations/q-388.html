@@ -1,0 +1,84 @@
+<h2>Nezvratné poškození mozku při zástavě oběhu</h2>
+
+<p>Pokud není prováděna resuscitace, nastává nezvratné poškození mozku při zástavě cca po <strong>pěti minutách</strong>.</p>
+
+<h3>Proč právě pět minut?</h3>
+<p>Mozek je extrémně závislý na nepřetržitém přísunu kyslíku — spotřebovává přibližně 20 % veškerého kyslíku v těle, přestože tvoří jen asi 2 % tělesné hmotnosti. Při zástavě srdce přestane okamžitě proudit okysličená krev. Zásoby kyslíku v mozku se vyčerpají během sekund, zásoby glukózy přibližně do 2 minut.</p>
+<p><strong>Klíčový okamžik nastává přibližně ve 4–6. minutě</strong> — tehdy začíná nezvratný zánik mozkových buněk (neuronů). Protože test počítá s průměrem, správná hranice je „cca 5 minut".</p>
+
+<h3>Časová osa zástavy bez resuscitace</h3>
+
+<svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:1em auto;">
+  <!-- pozadí -->
+  <rect x="40" y="60" width="600" height="40" rx="6" fill="#e8e8e8"/>
+
+  <!-- zóna: 0–10s: zásoby O2 v mozku -->
+  <rect x="40" y="60" width="30" height="40" rx="4" fill="#f5c542"/>
+  <!-- zóna: 10s–2min: glukóza -->
+  <rect x="70" y="60" width="110" height="40" fill="#f5a442"/>
+  <!-- zóna: 2–5min: kritická, ale ještě hraniční -->
+  <rect x="180" y="60" width="130" height="40" fill="#f57242"/>
+  <!-- zóna: 5min+: nezvratné poškození -->
+  <rect x="310" y="60" width="330" height="40" rx="4" fill="#d9534f"/>
+
+  <!-- rysky na ose -->
+  <!-- 0 -->
+  <line x1="40" y1="100" x2="40" y2="110" stroke="#333" stroke-width="1.5"/>
+  <text x="40" y="122" text-anchor="middle" font-size="11" fill="#333">0</text>
+  <!-- 10s -->
+  <line x1="70" y1="100" x2="70" y2="107" stroke="#555" stroke-width="1"/>
+  <text x="70" y="118" text-anchor="middle" font-size="9" fill="#555">10 s</text>
+  <!-- 2 min -->
+  <line x1="180" y1="100" x2="180" y2="110" stroke="#333" stroke-width="1.5"/>
+  <text x="180" y="122" text-anchor="middle" font-size="11" fill="#333">2 min</text>
+  <!-- 5 min -->
+  <line x1="310" y1="55" x2="310" y2="110" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="310" y="122" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">5 min</text>
+  <!-- 10 min -->
+  <line x1="490" y1="100" x2="490" y2="110" stroke="#333" stroke-width="1.5"/>
+  <text x="490" y="122" text-anchor="middle" font-size="11" fill="#333">10 min</text>
+  <!-- 15 min -->
+  <line x1="640" y1="100" x2="640" y2="110" stroke="#333" stroke-width="1.5"/>
+  <text x="640" y="122" text-anchor="middle" font-size="11" fill="#333">15 min</text>
+
+  <!-- popisky zón -->
+  <text x="55" y="84" text-anchor="middle" font-size="9" fill="#333">O₂</text>
+  <text x="125" y="82" text-anchor="middle" font-size="9.5" fill="#fff">glukóza</text>
+  <text x="245" y="82" text-anchor="middle" font-size="9.5" fill="#fff">kritická zóna</text>
+  <text x="470" y="82" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">nezvratné poškození mozku</text>
+
+  <!-- šipka + popis "správná hranice" -->
+  <line x1="310" y1="45" x2="310" y2="58" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="310" y="40" text-anchor="middle" font-size="10.5" fill="#c0392b" font-weight="bold">správná hranice ≈ 5 min</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <!-- legenda -->
+  <rect x="40" y="145" width="14" height="12" fill="#f5c542"/>
+  <text x="58" y="155" font-size="10" fill="#333">zásoby O₂ v mozku (sekundy)</text>
+  <rect x="40" y="163" width="14" height="12" fill="#f5a442"/>
+  <text x="58" y="173" font-size="10" fill="#333">zásoby glukózy (~ 2 min)</text>
+  <rect x="300" y="145" width="14" height="12" fill="#f57242"/>
+  <text x="318" y="155" font-size="10" fill="#333">kritická, ale ještě hraniční zóna</text>
+  <rect x="300" y="163" width="14" height="12" fill="#d9534f"/>
+  <text x="318" y="173" font-size="10" fill="#333">nezvratné poškození neuronů</text>
+</svg>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Jedna minuta"</strong> — v té době je mozek ještě zachranitelný; dochází ke ztrátě vědomí a dočasné dysfunkci, ale neurony ještě hromadně neodumírají.</li>
+  <li><strong>„Patnáct minut"</strong> — příliš optimistické. Po 15 minutách bez oběhu je mozek téměř jistě neopravitelně poškozen a přežití bez těžkých neurologických následků je krajně nepravděpodobné.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Proto je v první pomoci prioritou zahájit KPR (kardiopulmonální resuscitaci) okamžitě — každá minuta bez KPR snižuje šanci na přežití bez poškození mozku přibližně o 10 %. Do příjezdu záchranky jde doslova o závod s časem.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Standardy první pomoci ERC (European Resuscitation Council)</li>
+  <li>Výukové materiály ČČK — kurzy základní KPR</li>
+</ul>

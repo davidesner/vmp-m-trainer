@@ -1,0 +1,81 @@
+<h2>Přechodový signální znak — pravobřežní</h2>
+
+<p>Otázka ukazuje <strong>žlutou tabuli s černým svislým pruhem uprostřed</strong>. Jde o <strong>pravobřežní přechodový signální znak</strong>.</p>
+
+<hr>
+
+<h3>Co „přechodový" znamená</h3>
+<p>Plavební dráha (bezpečná část řeky pro plavidla) neteče vždy rovně — v místě, kde je dno mělké, je tok zakřivený nebo kde je jiná překážka, plavební dráha <em>přechází</em> z jednoho břehu na druhý. Přechodový signální znak označuje místo a cíl tohoto přechodu.</p>
+
+<h3>Jak číst barvu pruhu</h3>
+<p><strong>Černý svislý pruh na žlutém pozadí</strong> = plavební dráha přechází k <strong>pravému břehu</strong>. Tabule stojí na pravém břehu a říká: „Dráha jde sem."</p>
+
+<div style="display:flex; gap:32px; flex-wrap:wrap; margin:16px 0; align-items:flex-start;">
+
+  <!-- Levý panel: replika tabule -->
+  <div style="text-align:center;">
+    <p style="margin:0 0 6px 0; font-size:13px; color:#555;">Tabule v testu</p>
+    <svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+      <rect width="110" height="110" fill="#FFE000"/>
+      <rect x="38" y="0" width="34" height="110" fill="#111"/>
+    </svg>
+  </div>
+
+  <!-- Pravý panel: schéma řeky s přechodem dráhy -->
+  <div style="text-align:center; flex:1; min-width:260px;">
+    <p style="margin:0 0 6px 0; font-size:13px; color:#555;">Co se děje na vodě</p>
+    <svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="11">
+
+      <!-- Řeka — šedé břehy -->
+      <rect x="0" y="0" width="320" height="40" fill="#c8b97a"/>
+      <rect x="0" y="140" width="320" height="40" fill="#c8b97a"/>
+      <!-- Voda -->
+      <rect x="0" y="40" width="320" height="100" fill="#a8d8f0"/>
+
+      <!-- Nápisy břehů -->
+      <text x="8" y="25" fill="#5a4a1a" font-weight="bold">LEVÝ BŘEH</text>
+      <text x="8" y="158" fill="#5a4a1a" font-weight="bold">PRAVÝ BŘEH</text>
+
+      <!-- Plavební dráha — přechod z levého k pravému -->
+      <polyline points="0,75 160,75 260,125 320,125" fill="none" stroke="#0044cc" stroke-width="3" stroke-dasharray="8,4"/>
+
+      <!-- Šipka na konci dráhy -->
+      <polygon points="320,125 305,118 305,132" fill="#0044cc"/>
+
+      <!-- Tabule na pravém břehu -->
+      <rect x="240" y="130" width="18" height="18" fill="#FFE000" stroke="#333" stroke-width="1"/>
+      <rect x="247" y="130" width="5" height="18" fill="#111"/>
+      <!-- tyč tabule -->
+      <line x1="249" y1="148" x2="249" y2="162" stroke="#555" stroke-width="2"/>
+
+      <!-- Popisek tabule -->
+      <text x="263" y="145" fill="#333">pravobřežní</text>
+      <text x="263" y="157" fill="#333">přechodový znak</text>
+
+      <!-- Loď (trojúhelník) -->
+      <polygon points="60,70 75,80 45,80" fill="#cc4400"/>
+      <text x="46" y="95" fill="#cc4400">plavidlo</text>
+
+      <!-- Popis dráhy -->
+      <text x="90" y="68" fill="#0044cc">plavební dráha přechází</text>
+      <text x="90" y="80" fill="#0044cc">k pravému břehu ↘</text>
+
+    </svg>
+  </div>
+
+</div>
+
+<h3>Proč ne ostatní možnosti</h3>
+<ul>
+  <li><strong>„Plavební dráha vede středem vodní cesty"</strong> — středová dráha se vyznačuje jinak (párovými bójemi nebo odlišnou tabulí). Přechodový znak vždy označuje <em>přechod</em>, nikoli průběh středem.</li>
+  <li><strong>„Místo častých plavebních nehod (havarijní kilometr)"</strong> — havarijní km má zcela jiný vizuální kód (typicky výstražný červený symbol), nikoliv žluto-černou kombinaci.</li>
+</ul>
+
+<h3>Praktická aplikace</h3>
+<p>Plavidlo jedoucí po vodní cestě musí sledovat přechodové znaky — ignorování přechodu může vést k najeti na mělčinu nebo na překážku v místě, kde dráha opustila dosavadní stranu řeky. Tabule stojí na cílovém břehu, kam dráha směřuje, takže velitel musí namířit k ní.</p>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu na vnitrozemských vodních cestách — příloha č. 7 (signální znaky)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+</ul>

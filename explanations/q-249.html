@@ -1,0 +1,131 @@
+<h2>Žlutá bóje s vrcholovým znakem — místo sestupu potápěčů</h2>
+
+<p><strong>Správná odpověď:</strong> označení místa sestupu potápěčů, zákaz plavby ve vzdálenosti menší než 25 m od bóje.</p>
+
+<hr>
+
+<h3>Co tato sestava znaků znamená</h3>
+
+<p>Na obrázku jsou tři prvky navrstvené na sobě — každý nese část informace:</p>
+
+<div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin:24px 0;">
+
+  <!-- Schéma bóje — dekódování prvků -->
+  <svg width="260" height="340" viewBox="0 0 260 340" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+    <!-- Hladina -->
+    <rect x="0" y="240" width="260" height="100" fill="#b3e5fc" rx="4"/>
+    <text x="130" y="330" text-anchor="middle" font-size="11" fill="#0277bd">hladina</text>
+
+    <!-- Vlajka A (červená s bílým pruhem) -->
+    <polygon points="60,60 180,60 180,120 60,120" fill="#e53935"/>
+    <polygon points="60,60 180,60 180,120" fill="white"/>
+    <!-- bílý pruh diagonálně -->
+    <line x1="60" y1="60" x2="180" y2="120" stroke="white" stroke-width="18"/>
+    <!-- vlajka rámeček -->
+    <rect x="60" y="60" width="120" height="60" fill="none" stroke="#999" stroke-width="1"/>
+
+    <!-- stožár vlajky -->
+    <line x1="60" y1="60" x2="60" y2="175" stroke="#555" stroke-width="3"/>
+
+    <!-- Tyč od bóje k vlajce -->
+    <line x1="130" y1="175" x2="130" y2="240" stroke="#555" stroke-width="3"/>
+    <line x1="60" y1="175" x2="130" y2="175" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
+
+    <!-- Vrcholový znak — kosočtverec (žlutý) -->
+    <polygon points="130,135 155,175 130,215 105,175" fill="#FFD600" stroke="#b8a000" stroke-width="2"/>
+
+    <!-- Bóje (žlutá koule) -->
+    <ellipse cx="130" cy="250" rx="38" ry="20" fill="#FFD600" stroke="#b8a000" stroke-width="2"/>
+    <ellipse cx="130" cy="240" rx="38" ry="20" fill="#FFD600" stroke="#b8a000" stroke-width="2"/>
+
+    <!-- Kotevní řetěz -->
+    <line x1="130" y1="260" x2="130" y2="290" stroke="#777" stroke-width="2" stroke-dasharray="4,3"/>
+
+    <!-- Popisky -->
+    <text x="188" y="95" font-size="12" fill="#c62828" font-weight="bold">vlajka A</text>
+    <text x="188" y="109" font-size="10" fill="#555">(potápěčská)</text>
+
+    <text x="188" y="175" font-size="12" fill="#b8a000" font-weight="bold">kosočtverec</text>
+    <text x="188" y="189" font-size="10" fill="#555">(vrcholový znak)</text>
+
+    <text x="188" y="245" font-size="12" fill="#b8a000" font-weight="bold">žlutá bóje</text>
+    <text x="188" y="259" font-size="10" fill="#555">(speciální znak)</text>
+
+    <!-- Šipky -->
+    <line x1="185" y1="93" x2="135" y2="85" stroke="#999" stroke-width="1" marker-end="url(#arr)"/>
+    <line x1="185" y1="173" x2="160" y2="170" stroke="#999" stroke-width="1" marker-end="url(#arr)"/>
+    <line x1="185" y1="243" x2="170" y2="243" stroke="#999" stroke-width="1" marker-end="url(#arr)"/>
+
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#999"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <!-- Pohled shora — zakázaná zóna 25 m -->
+  <svg width="260" height="340" viewBox="0 0 260 340" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+    <!-- Vodní plocha -->
+    <rect x="0" y="0" width="260" height="340" fill="#b3e5fc" rx="4"/>
+    <text x="130" y="20" text-anchor="middle" font-size="11" fill="#0277bd">pohled shora</text>
+
+    <!-- Zakázaná zóna -->
+    <circle cx="130" cy="170" r="90" fill="#ff525222" stroke="#e53935" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="130" y="90" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">zakázaná zóna</text>
+    <text x="130" y="104" text-anchor="middle" font-size="11" fill="#c62828">r = 25 m</text>
+
+    <!-- Bóje střed -->
+    <circle cx="130" cy="170" r="12" fill="#FFD600" stroke="#b8a000" stroke-width="2"/>
+    <text x="130" y="175" text-anchor="middle" font-size="9" fill="#5d4000">bóje</text>
+
+    <!-- Poloměr 25m -->
+    <line x1="130" y1="170" x2="220" y2="170" stroke="#c62828" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="175" y="163" text-anchor="middle" font-size="10" fill="#c62828">25 m</text>
+
+    <!-- Plavidlo — smí projet vně -->
+    <g transform="translate(30,230)">
+      <rect x="0" y="-10" width="40" height="20" rx="6" fill="#4caf50" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="20" y="4" text-anchor="middle" font-size="9" fill="white" font-weight="bold">✓</text>
+    </g>
+    <text x="50" y="255" text-anchor="middle" font-size="10" fill="#2e7d32">smí</text>
+
+    <!-- Plavidlo — nesmí dovnitř -->
+    <g transform="translate(145,120)">
+      <rect x="0" y="-8" width="34" height="16" rx="5" fill="#e53935" stroke="#b71c1c" stroke-width="1.5"/>
+      <text x="17" y="5" text-anchor="middle" font-size="9" fill="white" font-weight="bold">✗</text>
+    </g>
+    <text x="162" y="130" text-anchor="middle" font-size="10" fill="#b71c1c">nesmí</text>
+
+    <!-- Potápěč pod hladinou (symbolicky) -->
+    <circle cx="155" cy="185" r="7" fill="none" stroke="#0277bd" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="155" y="208" text-anchor="middle" font-size="9" fill="#0277bd">potápěč</text>
+    <text x="155" y="220" text-anchor="middle" font-size="9" fill="#0277bd">pod hladinou</text>
+  </svg>
+
+</div>
+
+<h3>Proč každý prvek něco říká</h3>
+
+<ul>
+  <li><strong>Žlutá barva bóje</strong> — žlutá = speciální znak; neoznačuje okraj plavební dráhy ani překážku, ale konkrétní místo se zvláštním režimem</li>
+  <li><strong>Kosočtverec (vrcholový znak)</strong> — diamantový topmark spolu se žlutou barvou jednoznačně identifikuje místo sestupu potápěčů; tvar a barva jsou definovány vyhláškou</li>
+  <li><strong>Vlajka A (Alpha)</strong> — mezinárodní kód signálů: „pod hladinou pracují potápěči, držte se v bezpečné vzdálenosti". Tato vlajka se vyvěšuje i na samotném plavidle, ze kterého potápěči sestupují</li>
+</ul>
+
+<h3>Proč 25 m?</h3>
+
+<p>Potápěč pod hladinou neslyší ani nevidí přibližující se plavidlo. Proud nebo drift ho může zanést mimo místo, kde ho povrch pozoruje. Minimální vzdálenost 25 m dává obsluze plavidla dostatečný čas bezpečně snížit rychlost nebo odřídit, pokud se potápěč nečekaně vynoří.</p>
+
+<h3>Proč ostatní možnosti nesedí</h3>
+
+<ul>
+  <li><strong>„Vrak, proplutí po pravé straně"</strong> — vraky se označují červenou nebo zelenou bójí (systém IALA/SIGNI) podle strany, po které se propluje; nikdy žlutou bójí s kosočtvercem a potápěčskou vlajkou</li>
+  <li><strong>„Konec vedlejší, začátek hlavní vodní cesty"</strong> — tato situace se označuje cestovními nebo směrovými bójemi; žlutá bóje s diamantem a vlajkou A s tím nemá nic společného</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, § 14 a přílohy (speciální plavební znaky)</li>
+  <li>Zákon č. 114/1995 Sb. o vnitrozemské plavbě</li>
+  <li>Mezinárodní kód signálů — vlajka A (Alpha)</li>
+</ul>

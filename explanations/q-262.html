@@ -1,0 +1,122 @@
+<h2>Značka PP4 — Zákaz plavby plavidel s vlastním pohonem</h2>
+
+<p>
+  Červený čtvercový rám se symbolem <strong>lodní vrtule</strong> a přeškrtnutím označuje
+  <strong>zákaz plavby plavidel s vlastním pohonem</strong> — tj. jakýchkoliv motorových plavidel.
+  Plavidla bez motoru (veslovice, kajaky, plachetnice bez motoru, šlapadla) mohou daný úsek
+  proplouvat bez omezení.
+</p>
+
+<hr>
+
+<h3>Vizualizace — jak dekódovat značku PP4</h3>
+
+<div style="overflow-x:auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 295" width="620" height="295" font-family="sans-serif" font-size="13">
+
+  <!-- Background -->
+  <rect width="620" height="295" fill="#f0f4f8"/>
+
+  <!-- ===== LEFT: Sign recreation ===== -->
+  <text x="100" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e293b">Značka v testu</text>
+
+  <!-- Red square (sign border) -->
+  <rect x="30" y="35" width="140" height="140" fill="#cc1111" rx="4"/>
+  <!-- White inner area -->
+  <rect x="42" y="47" width="116" height="116" fill="white"/>
+
+  <!-- Propeller centered at (100, 105) — drawn before diagonal so diagonal appears on top -->
+  <g transform="translate(100, 105)">
+    <!-- Three blades at 120° intervals, each blade is an ellipse offset above center then rotated -->
+    <ellipse cx="0" cy="-20" rx="12" ry="28" fill="#1a1a1a" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-20" rx="12" ry="28" fill="#1a1a1a" transform="rotate(120)"/>
+    <ellipse cx="0" cy="-20" rx="12" ry="28" fill="#1a1a1a" transform="rotate(240)"/>
+    <!-- Hub drawn last = appears on top of blade overlaps -->
+    <circle cx="0" cy="0" r="10" fill="#1a1a1a"/>
+  </g>
+
+  <!-- Red prohibition diagonal line (top-left → bottom-right of white area) -->
+  <line x1="42" y1="47" x2="158" y2="163" stroke="#cc1111" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Sign code -->
+  <text x="100" y="197" text-anchor="middle" font-size="11" fill="#64748b">Kód PP4</text>
+
+  <!-- Vertical divider -->
+  <line x1="200" y1="15" x2="200" y2="280" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- ===== RIGHT: Breakdown ===== -->
+  <text x="415" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#1e293b">Jak číst tuto značku</text>
+
+  <!-- Element 1: Red square frame → zákazová značka -->
+  <rect x="210" y="37" width="22" height="22" fill="#cc1111" rx="2"/>
+  <rect x="213" y="40" width="16" height="16" fill="white"/>
+  <text x="242" y="49" font-size="12" font-weight="bold" fill="#1e293b">Červený čtvercový rám</text>
+  <text x="242" y="64" font-size="11" fill="#64748b">= zákazová plavební značka</text>
+
+  <!-- Element 2: Propeller → motorized vessels -->
+  <g transform="translate(221, 90)">
+    <ellipse cx="0" cy="-7" rx="4" ry="10" fill="#1a1a1a" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-7" rx="4" ry="10" fill="#1a1a1a" transform="rotate(120)"/>
+    <ellipse cx="0" cy="-7" rx="4" ry="10" fill="#1a1a1a" transform="rotate(240)"/>
+    <circle cx="0" cy="0" r="4" fill="#1a1a1a"/>
+  </g>
+  <text x="242" y="83" font-size="12" font-weight="bold" fill="#1e293b">Symbol vrtule (lodního šroubu)</text>
+  <text x="242" y="98" font-size="11" fill="#64748b">= plavidla s vlastním pohonem (motorem)</text>
+
+  <!-- Element 3: Diagonal line → prohibition -->
+  <line x1="210" y1="113" x2="234" y2="137" stroke="#cc1111" stroke-width="7" stroke-linecap="round"/>
+  <text x="242" y="118" font-size="12" font-weight="bold" fill="#1e293b">Červená šikmá čára přes symbol</text>
+  <text x="242" y="133" font-size="11" fill="#64748b">= zákaz (přeškrtnutí symbolu)</text>
+
+  <!-- Horizontal separator -->
+  <line x1="206" y1="150" x2="614" y2="150" stroke="#cbd5e1" stroke-width="1"/>
+
+  <!-- ZAKÁZÁNO column -->
+  <rect x="208" y="158" width="196" height="26" fill="#fee2e2" rx="4"/>
+  <text x="306" y="175" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">ZAKÁZÁNO</text>
+
+  <text x="213" y="198" font-size="11" fill="#7f1d1d">&#x2715;  Motorový člun</text>
+  <text x="213" y="214" font-size="11" fill="#7f1d1d">&#x2715;  Motorová jachta / hausbót</text>
+  <text x="213" y="230" font-size="11" fill="#7f1d1d">&#x2715;  Motorová loď (jakákoliv)</text>
+  <text x="213" y="246" font-size="11" fill="#7f1d1d">&#x2715;  Vodní skútr</text>
+
+  <!-- NENÍ DOTČENO column -->
+  <rect x="412" y="158" width="200" height="26" fill="#dcfce7" rx="4"/>
+  <text x="512" y="175" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">NENÍ DOTČENO</text>
+
+  <text x="417" y="198" font-size="11" fill="#15803d">&#x2713;  Veslovice / veslice</text>
+  <text x="417" y="214" font-size="11" fill="#15803d">&#x2713;  Kajak / kánoe</text>
+  <text x="417" y="230" font-size="11" fill="#15803d">&#x2713;  Plachetnice (bez motoru)</text>
+  <text x="417" y="246" font-size="11" fill="#15803d">&#x2713;  Šlapadlo, surf</text>
+
+  <!-- Key insight box -->
+  <rect x="208" y="260" width="404" height="26" fill="#fef3c7" rx="4" stroke="#fcd34d" stroke-width="1"/>
+  <text x="410" y="277" text-anchor="middle" font-size="11" fill="#92400e">Klíčové: kritériem je přítomnost motoru — ne rekreační nebo sportovní charakter plavby</text>
+
+</svg>
+</div>
+
+<hr>
+
+<h3>Proč ostatní možnosti nesedí</h3>
+
+<ul>
+  <li>
+    <strong>„…všech sportovních a rekreačních plavidel"</strong> — Příliš široká kategorie:
+    kajaky, veslovice i plachetnice bez motoru jsou také sportovní a rekreační plavidla,
+    ale zákaz se na ně nevztahuje. Symbol vrtule cílí výhradně na <em>druh pohonu</em>,
+    nikoliv na účel plavby.
+  </li>
+  <li>
+    <strong>„konec zákazu plavby malých plavidel…"</strong> — Značky označující ukončení
+    zákazů mají v systému plavebního značení odlišné grafické kódování.
+    Červený rám se symbolem a přeškrtnutím vždy označuje <em>aktivní</em> zákaz,
+    nikoliv jeho konec.
+  </li>
+</ul>
+
+<hr>
+
+<h3>Zdroje</h3>
+<p>Vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu (zákazové plavební znaky);
+zákon č. 114/1995 Sb. o vnitrozemské plavbě.</p>
