@@ -2,6 +2,8 @@
 
 Lokální webová appka na trénink otázek pro zkoušku VMP M (Vůdce malého plavidla, kategorie M 2015).
 
+![Přehled](docs/images/home.png)
+
 ## Setup (jednorázově)
 
 ```bash
