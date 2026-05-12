@@ -3,6 +3,7 @@ import { logger } from 'hono/logger'
 import type { AppEnv } from './types'
 import type { Db } from './db/client'
 import { loadUser } from './auth/middleware'
+import { authRoutes, meRoute } from './auth/routes'
 
 export interface BuildAppOptions {
   db: Db
@@ -16,7 +17,8 @@ export function buildApp(opts: BuildAppOptions) {
 
   app.get('/api/health', c => c.json({ ok: true }))
 
-  // Auth routes mounted in Task 8
+  app.route('/api/auth', authRoutes(opts))
+  app.route('/api/me', meRoute())
   // Progress routes mounted in Task 10
 
   // For self-host: serve the built SPA. Skipped in dev (Vite serves it).
