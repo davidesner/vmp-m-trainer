@@ -140,7 +140,7 @@ src/                     # React app, mostly unchanged
 server/                  # NEW — all API + DB code
   index.ts               # Hono app: api routes + serveStatic(dist)
   vercel.ts              # `export default app.fetch` for Vercel
-  node.ts                # Node entrypoint (Bun/Node serve)
+  node.ts                # Node entrypoint (@hono/node-server)
   db/
     client.ts            # postgres.js + drizzle init
     schema.ts            # drizzle schema (mirrors SQL above)
