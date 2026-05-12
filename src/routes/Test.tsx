@@ -57,7 +57,7 @@ export default function Test() {
   const answeredCount = Object.keys(answers).length
 
   if (submitted) {
-    return <TestResults questions={sampled} answers={answers} onHome={() => navigate('/')} projectRoot={import.meta.env.VITE_PROJECT_ROOT ?? ''} />
+    return <TestResults questions={sampled} answers={answers} onHome={() => navigate('/')} />
   }
 
   return (
