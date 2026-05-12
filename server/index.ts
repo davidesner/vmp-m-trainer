@@ -5,6 +5,8 @@ import type { Db } from './db/client'
 import { loadUser } from './auth/middleware'
 import { authRoutes, meRoute } from './auth/routes'
 import { progressRoutes } from './routes/progress'
+import { attemptsRoutes } from './routes/attempts'
+import { testHistoryRoutes } from './routes/testHistory'
 
 export interface BuildAppOptions {
   db: Db
@@ -21,6 +23,8 @@ export function buildApp(opts: BuildAppOptions) {
   app.route('/api/auth', authRoutes(opts))
   app.route('/api/me', meRoute())
   app.route('/api/progress', progressRoutes(opts))
+  app.route('/api/attempts', attemptsRoutes(opts))
+  app.route('/api/test-history', testHistoryRoutes(opts))
 
   // For self-host: serve the built SPA. Skipped in dev (Vite serves it).
   // For Vercel: skipped (rewrites handle it).
