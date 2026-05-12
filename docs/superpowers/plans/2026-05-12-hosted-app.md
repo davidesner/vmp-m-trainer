@@ -513,7 +513,7 @@ import {
 } from './sessions'
 
 async function freshDb(): Promise<Db> {
-  const handle = createDb('file::memory:?cache=shared-' + Math.random())
+  const handle = createDb(':memory:')
   await handle.applyMigrations()
   await handle.db.insert(users).values({
     id: 'u1',
@@ -828,7 +828,7 @@ import { hashPassword } from './password'
 import { buildApp } from '../index'
 
 async function setup(): Promise<{ db: Db; app: ReturnType<typeof buildApp>['app'] }> {
-  const db = createDb('file::memory:?cache=shared-' + Math.random())
+  const db = createDb(':memory:')
   await db.applyMigrations()
   await db.db.insert(users).values({
     id: 'u1',
@@ -1131,7 +1131,7 @@ import { hashPassword } from '../auth/password'
 import { buildApp } from '../index'
 
 async function setup() {
-  const db = createDb('file::memory:?cache=shared-' + Math.random())
+  const db = createDb(':memory:')
   await db.applyMigrations()
   await db.db.insert(users).values({
     id: 'u1', email: 'a@b.c',
@@ -1321,7 +1321,7 @@ import { hashPassword } from '../auth/password'
 import { buildApp } from '../index'
 
 async function setup() {
-  const db = createDb('file::memory:?cache=shared-' + Math.random())
+  const db = createDb(':memory:')
   await db.applyMigrations()
   await db.db.insert(users).values({
     id: 'u1', email: 'a@b.c',
