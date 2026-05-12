@@ -4,6 +4,7 @@ import type { AppEnv } from './types'
 import type { Db } from './db/client'
 import { loadUser } from './auth/middleware'
 import { authRoutes, meRoute } from './auth/routes'
+import { progressRoutes } from './routes/progress'
 
 export interface BuildAppOptions {
   db: Db
@@ -19,7 +20,7 @@ export function buildApp(opts: BuildAppOptions) {
 
   app.route('/api/auth', authRoutes(opts))
   app.route('/api/me', meRoute())
-  // Progress routes mounted in Task 10
+  app.route('/api/progress', progressRoutes(opts))
 
   // For self-host: serve the built SPA. Skipped in dev (Vite serves it).
   // For Vercel: skipped (rewrites handle it).
