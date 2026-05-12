@@ -30,7 +30,12 @@ COPY --from=build /app/public ./public
 ENV NODE_ENV=production
 ENV DATABASE_URL=file:/data/app.db
 ENV PORT=3000
-ENV SESSION_COOKIE_SECURE=true
+# Default to false so the container works behind plain HTTP out of the box.
+# Operators MUST override this to `true` when serving behind HTTPS (e.g. via a
+# reverse proxy): `docker run -e SESSION_COOKIE_SECURE=true ...`. With the
+# default `Secure` flag, browsers silently drop the session cookie on HTTP,
+# producing a confusing "logged in but every request 401s" state.
+ENV SESSION_COOKIE_SECURE=false
 
 VOLUME ["/data"]
 EXPOSE 3000
