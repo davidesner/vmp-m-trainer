@@ -77,3 +77,29 @@ describe('DELETE /api/progress', () => {
     expect(after[0].userId).toBe('u2')
   })
 })
+
+describe('POST /api/progress/import', () => {
+  it('imports legacy localStorage shape', async () => {
+    const ctx = await setup()
+    const payload = {
+      questions: {
+        '1': { attempts: [{ at: '2025-01-01T00:00:00Z', correct: true,  mode: 'test'     }], lastSeen: '2025-01-01T00:00:00Z' },
+        '7': { attempts: [{ at: '2025-01-02T00:00:00Z', correct: false, mode: 'practice' }], lastSeen: '2025-01-02T00:00:00Z' },
+      },
+      testHistory: [
+        { at: '2025-01-03T00:00:00Z', score: 30, total: 35, durationSec: 1500, perGroup: {}, questionIds: [1, 7] },
+      ],
+    }
+    const res = await ctx.app.request('/api/progress/import', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', cookie: ctx.cookie },
+      body: JSON.stringify(payload),
+    })
+    expect(res.status).toBe(201)
+    const a = await ctx.db.db.select().from(attempts)
+    expect(a).toHaveLength(2)
+    const h = await ctx.db.db.select().from(testHistory)
+    expect(h).toHaveLength(1)
+    expect(h[0].score).toBe(30)
+  })
+})

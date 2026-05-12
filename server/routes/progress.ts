@@ -52,5 +52,46 @@ export function progressRoutes(opts: ProgressRoutesOptions) {
     return c.body(null, 204)
   })
 
+  r.post('/import', async c => {
+    const body = await c.req.json().catch(() => null) as {
+      questions?: Record<string, { attempts: { at: string; correct: boolean; mode: string }[] }>
+      testHistory?: { at: string; score: number; total: number; durationSec: number; perGroup: object; questionIds: number[] }[]
+    } | null
+    if (!body) return c.json({ error: 'bad request' }, 400)
+
+    const user = c.get('user')!
+    const attemptRows: typeof attempts.$inferInsert[] = []
+    for (const [qid, rec] of Object.entries(body.questions ?? {})) {
+      const questionId = Number(qid)
+      if (!Number.isFinite(questionId)) continue
+      for (const a of rec.attempts ?? []) {
+        if (a.mode !== 'test' && a.mode !== 'practice') continue
+        attemptRows.push({
+          userId: user.id,
+          questionId,
+          correct: Boolean(a.correct),
+          mode: a.mode,
+          at: a.at,
+        })
+      }
+    }
+    if (attemptRows.length) {
+      await opts.db.db.insert(attempts).values(attemptRows)
+    }
+
+    for (const h of body.testHistory ?? []) {
+      await opts.db.db.insert(testHistory).values({
+        userId: user.id,
+        at: h.at,
+        score: h.score,
+        total: h.total,
+        durationSec: h.durationSec,
+        perGroup: JSON.stringify(h.perGroup),
+        questionIds: JSON.stringify(h.questionIds),
+      })
+    }
+    return c.body(null, 201)
+  })
+
   return r
 }
