@@ -3,6 +3,7 @@ import { createDb, type Db } from '../db/client'
 import { users } from '../db/schema'
 import { hashPassword } from './password'
 import { buildApp } from '../index'
+import { _resetRateLimit } from './rateLimit'
 
 async function setup(): Promise<{ db: Db; app: ReturnType<typeof buildApp>['app'] }> {
   const db = createDb(':memory:')
@@ -80,5 +81,26 @@ describe('auth routes', () => {
     expect(out.headers.get('set-cookie')).toMatch(/sid=;.*Max-Age=0/i)
     const me = await ctx.app.request('/api/me', { headers: { cookie } })
     expect(me.status).toBe(401)
+  })
+})
+
+describe('rate limit', () => {
+  beforeEach(() => _resetRateLimit())
+  it('returns 429 after 5 failed attempts', async () => {
+    const ctx = await setup()
+    for (let i = 0; i < 5; i++) {
+      const res = await ctx.app.request('/api/auth/login', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-forwarded-for': '1.2.3.4' },
+        body: JSON.stringify({ email: 'a@b.c', password: 'wrong' }),
+      })
+      expect(res.status).toBe(401)
+    }
+    const res = await ctx.app.request('/api/auth/login', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-forwarded-for': '1.2.3.4' },
+      body: JSON.stringify({ email: 'a@b.c', password: 'wrong' }),
+    })
+    expect(res.status).toBe(429)
   })
 })

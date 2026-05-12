@@ -7,6 +7,7 @@ import { users } from '../db/schema'
 import { verifyPassword } from './password'
 import { createSession, deleteSession } from './sessions'
 import { COOKIE_NAME } from './middleware'
+import { checkRateLimit } from './rateLimit'
 
 export interface AuthRoutesOptions {
   db: Db
@@ -17,6 +18,11 @@ export function authRoutes(opts: AuthRoutesOptions) {
   const r = new Hono<AppEnv>()
 
   r.post('/login', async c => {
+    const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
+    const rl = checkRateLimit(`login:${ip}`)
+    if (!rl.allowed) {
+      return c.json({ error: 'too many attempts' }, 429, { 'retry-after': String(rl.retryAfterSec) })
+    }
     const body = await c.req.json().catch(() => null) as { email?: string; password?: string } | null
     if (!body?.email || !body?.password) return c.json({ error: 'bad request' }, 400)
 
