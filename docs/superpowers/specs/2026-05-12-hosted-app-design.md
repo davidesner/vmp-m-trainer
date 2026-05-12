@@ -8,8 +8,8 @@
 
 Turn the local-only VMP M trainer into a hostable web app with per-user accounts and server-persisted progress, while keeping the codebase as light as possible. Two supported deploy targets from one codebase:
 
-1. **Free hosted:** Vercel (SPA + serverless functions) + Neon (Postgres).
-2. **Self-host:** `docker compose up` — Node container + Postgres container with a mounted volume.
+1. **Free hosted:** Vercel (SPA + serverless functions) + **Turso** (libSQL / SQLite-compatible).
+2. **Self-host:** Single Docker container with a SQLite file in a mounted volume — no separate DB process.
 
 ## Non-goals
 
@@ -25,10 +25,10 @@ Turn the local-only VMP M trainer into a hostable web app with per-user accounts
 |---|---|---|
 | Frontend | Existing Vite + React 19 + Tailwind SPA | Keep current code; only swap router + progress hook. |
 | API server | [Hono](https://hono.dev) | Runs identically as a Node process and as a Vercel serverless function via `app.fetch`. |
-| DB | Postgres | User already has a working Vercel+Neon / docker-compose pattern. |
-| DB driver | `postgres` (postgres.js) | Lean, works in both Node and Vercel runtimes. |
-| ORM | Drizzle ORM | Typed schema, simple migrations, small footprint. |
-| Migrations | `drizzle-kit` | Generated SQL, run on app start or via `pnpm db:migrate`. |
+| DB | **libSQL** (SQLite dialect) | Single-file local; Turso hosts the same dialect with a generous free tier (9 GB, billions of reads). One driver, two backends. |
+| DB driver | `@libsql/client` | Targets either a local file (`file:./data/app.db`) or a Turso URL (`libsql://...`) by env var. |
+| ORM | Drizzle ORM (`drizzle-orm/libsql`) | Typed schema, simple migrations, small footprint. |
+| Migrations | `drizzle-kit` | Generated SQL, applied via `pnpm db:migrate` (and on app boot for self-host). |
 | Password hashing | `@node-rs/argon2` | Modern default; fast in Node. |
 | Sessions | Plain cookie (`sid=<random>`) + `sessions` table | ~50 lines; no library needed. |
 
@@ -39,49 +39,51 @@ Turn the local-only VMP M trainer into a hostable web app with per-user accounts
 │ Vite SPA (React) │ ────────────▶ │ Hono /api/*    │
 │  routes, hooks   │ ◀──────────── │ session middl. │
 └──────────────────┘     json      └──────┬─────────┘
-                                          │ drizzle (postgres.js)
+                                          │ drizzle (@libsql/client)
                                           ▼
-                          Postgres (Neon URL OR docker compose db)
+                          libSQL (Turso URL OR file:./data/app.db)
 ```
 
 Static assets that do not change per user — `public/data/questions.json`, question images, and the ~407 `public/explanations/*.html` files — are served directly. No DB rows for them.
 
 ## Data model
 
+SQLite dialect. UUIDs and timestamps are stored as `text` (ISO strings / `crypto.randomUUID()` results); booleans as `integer` (0/1); JSON blobs as `text` with `JSON.stringify`/`parse`. Drizzle's `sqlite-core` types map these idiomatically.
+
 ```sql
 CREATE TABLE users (
-  id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  id            text PRIMARY KEY,                      -- crypto.randomUUID() in app
   email         text UNIQUE NOT NULL,
   password_hash text NOT NULL,
-  created_at    timestamptz NOT NULL DEFAULT now()
+  created_at    text NOT NULL                          -- ISO 8601
 );
 
 CREATE TABLE sessions (
-  id         text PRIMARY KEY,                       -- random 32-byte hex; cookie value
-  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  expires_at timestamptz NOT NULL
+  id         text PRIMARY KEY,                         -- random 32-byte hex; cookie value
+  user_id    text NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  expires_at text NOT NULL                             -- ISO 8601
 );
 CREATE INDEX sessions_user_id_idx ON sessions(user_id);
 
 CREATE TABLE attempts (
-  id          bigserial PRIMARY KEY,
-  user_id     uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  id          integer PRIMARY KEY AUTOINCREMENT,
+  user_id     text NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   question_id integer NOT NULL,
-  correct     boolean NOT NULL,
+  correct     integer NOT NULL CHECK (correct IN (0, 1)),
   mode        text NOT NULL CHECK (mode IN ('test', 'practice')),
-  at          timestamptz NOT NULL DEFAULT now()
+  at          text NOT NULL                            -- ISO 8601
 );
 CREATE INDEX attempts_user_id_idx ON attempts(user_id);
 
 CREATE TABLE test_history (
-  id            bigserial PRIMARY KEY,
-  user_id       uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  at            timestamptz NOT NULL DEFAULT now(),
+  id            integer PRIMARY KEY AUTOINCREMENT,
+  user_id       text NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  at            text NOT NULL,                         -- ISO 8601
   score         integer NOT NULL,
   total         integer NOT NULL,
   duration_sec  integer NOT NULL,
-  per_group     jsonb NOT NULL,                      -- Record<GroupId, {correct, total}>
-  question_ids  jsonb NOT NULL                       -- number[]
+  per_group     text NOT NULL,                         -- JSON: Record<GroupId, {correct, total}>
+  question_ids  text NOT NULL                          -- JSON: number[]
 );
 CREATE INDEX test_history_user_id_at_idx ON test_history(user_id, at DESC);
 ```
@@ -142,7 +144,7 @@ server/                  # NEW — all API + DB code
   vercel.ts              # `export default app.fetch` for Vercel
   node.ts                # Node entrypoint (@hono/node-server)
   db/
-    client.ts            # postgres.js + drizzle init
+    client.ts            # @libsql/client + drizzle init
     schema.ts            # drizzle schema (mirrors SQL above)
     migrations/          # generated by drizzle-kit
   auth/
@@ -161,46 +163,58 @@ public/
 scripts/                 # unchanged (skill generation, scraping)
 docker/
   Dockerfile             # multi-stage: builds SPA + server, ~80 MB
-docker-compose.yml       # db + app, single command bring-up
 vercel.json              # rewrites: /api/* -> server/vercel.ts, else -> index.html
 drizzle.config.ts
 .env.example
 ```
 
+No `docker-compose.yml` needed — the self-host target is a single container with a volume.
+
 ## Two deploy modes from one codebase
 
-### Vercel + Neon (free)
+### Vercel + Turso (free)
 
 - Vercel project root = repo root. Build command: `pnpm build`. Output: `dist/` (SPA).
 - `vercel.json` rewrites `/api/(.*)` to a serverless function backed by `server/vercel.ts`; everything else falls through to `index.html`.
-- Env: `DATABASE_URL` (Neon), `SESSION_COOKIE_SECURE=true`, `NODE_ENV=production`.
-- Migrations: run via Vercel "build" step (`pnpm db:migrate` before `vite build`), or manually from local against the Neon URL.
+- Env on Vercel:
+  - `DATABASE_URL=libsql://<db>.turso.io`
+  - `DATABASE_AUTH_TOKEN=<turso token>`
+  - `SESSION_COOKIE_SECURE=true`
+- Migrations: run via Vercel build step (`pnpm db:migrate` before `vite build`). Drizzle-kit applies pending migrations against the Turso URL.
 
-### docker compose (self-host)
+### Single Docker container (self-host)
 
-```yaml
-# docker-compose.yml (sketch)
-services:
-  db:
-    image: postgres:16-alpine
-    volumes: ["./data/pg:/var/lib/postgresql/data"]
-    environment: { POSTGRES_PASSWORD: ..., POSTGRES_DB: vmp }
-  app:
-    build: { context: ., dockerfile: docker/Dockerfile }
-    environment:
-      DATABASE_URL: postgres://postgres:...@db:5432/vmp
-      SESSION_COOKIE_SECURE: "true"  # set false for plain http behind a tunnel
-    ports: ["3000:3000"]
-    depends_on: [db]
+```dockerfile
+# docker/Dockerfile (sketch)
+FROM node:22-alpine AS build
+WORKDIR /app
+COPY . .
+RUN corepack enable && pnpm install --frozen-lockfile && pnpm build
+
+FROM node:22-alpine
+WORKDIR /app
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/server ./server
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./
+ENV DATABASE_URL=file:/data/app.db
+EXPOSE 3000
+VOLUME ["/data"]
+CMD ["node", "server/node.js"]
 ```
 
-- `docker compose up --build` brings everything up.
-- App container runs `node server/node.ts` which: applies migrations on boot, then serves both `/api/*` and the built SPA on port 3000.
+Run with:
+```bash
+docker run -p 3000:3000 -v $(pwd)/data:/data vmp-trainer
+```
+
+- App container runs `node server/node.js` which: applies migrations on boot, then serves both `/api/*` and the built SPA on port 3000.
+- One container, one volume, no compose file. Persistent across restarts.
 
 ### Local dev
 
 - `pnpm dev` runs Vite (port 5400) and Hono (port 3001) concurrently. Vite's `server.proxy` forwards `/api/*` to Hono.
-- Local Postgres via `docker compose up db` (or any local Postgres). `DATABASE_URL` in `.env.local`.
+- DB: `DATABASE_URL=file:./data/app.db` in `.env.local`. File is created on first migration; no separate process to start.
 
 ## Error handling
 
@@ -208,11 +222,10 @@ services:
 |---|---|
 | Network drop while answering | Optimistic local update; POST retried up to 3× with backoff; on final failure show toast "Server unreachable — answer not saved" and revert the optimistic state. (No localStorage fallback by design — server is source of truth.) |
 | Two tabs open | Each tab writes its own attempts; on next page load `GET /api/progress` is source of truth |
-| DB unreachable on startup | App exits with non-zero; Vercel surfaces 500; docker-compose restarts per restart policy |
+| DB unreachable on startup | App exits with non-zero (Docker restart policy handles); Vercel surfaces 500 |
 | Session expired / cookie missing | 401 from any protected endpoint → frontend redirects to `/login`, preserving intended URL |
 | Login: wrong password | 401 with generic "invalid credentials" (no user-existence enumeration) |
-| Login: rate limiting | Simple in-memory: 5 failed attempts per IP per 15 min → 429. Acceptable for hand-managed user base. |
-
+| Login: rate limiting | Simple in-memory: 5 failed attempts per IP per 15 min → 429. Acceptable for hand-managed user base. Note: Vercel serverless instances are short-lived, so this is per-instance; acceptable given the tiny user count. |
 
 ## Testing
 
@@ -222,7 +235,7 @@ New tests:
 - `server/auth.test.ts` — login happy path, wrong password, session expiry, cookie set/cleared.
 - `server/progress.test.ts` — record attempt, fetch snapshot, delete-all.
 
-Both new test files use an ephemeral Postgres (testcontainers or a `DATABASE_URL` pointing at a disposable schema).
+Both new test files use an in-memory libSQL database (`DATABASE_URL=file::memory:` via `@libsql/client`) — fast, zero setup, no external dependency.
 
 ## Migration / rollout
 
@@ -237,13 +250,14 @@ Recommended: option 2, gated behind a "you'll want to do this once" notice, then
 
 - Next.js — overkill, brings rendering complexity for zero benefit on a client-rendered quiz app.
 - Auth.js / Lucia / NextAuth — 50 lines of session cookie handling is less code than configuring them.
-- Migrating the 407 static explanation HTML files into Postgres — they're immutable assets generated by an offline batch script; serving from disk is correct.
+- Migrating the 407 static explanation HTML files into the DB — they're immutable assets generated by an offline batch script; serving from disk is correct.
 - Registration / password reset / email verification flows.
 - Public sign-up.
 - Any Redis or cache layer.
+- A separate Postgres container or docker-compose file — libSQL means one container, one volume.
 
 ## Open implementation questions (deferred to plan)
 
-- Drizzle migrations applied via app-on-boot vs. external `db:migrate` step on Vercel? (Probably both: app-on-boot for docker, build-step for Vercel — both safe-idempotent.)
+- Drizzle migrations applied via app-on-boot vs. external `db:migrate` step on Vercel? (Probably both: app-on-boot for self-host, build-step for Vercel — both safe-idempotent.)
 - `attempts` snapshot endpoint: return everything (acceptable up to maybe 100k rows) or paginate? Will pick "return everything" for v1; revisit if a single user exceeds ~10k attempts.
 - Rate limiter — keep in-memory or pull `hono-rate-limiter`? Decide during implementation.
