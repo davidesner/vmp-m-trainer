@@ -39,7 +39,7 @@ V appce klikni "🧠 Vysvětlení" u otázky → otevře Cowork s předvyplněn�
 - **Slabiny** — automaticky vybere 20 otázek které pleteš
 - **Statistiky** — úspěšnost po skupinách + historie testů
 
-Progress je v localStorage prohlížeče. Vysvětlení se commitují do `explanations/`.
+Progress je v localStorage prohlížeče. Vysvětlení se commitují do `public/explanations/`.
 
 ## Skripty
 
