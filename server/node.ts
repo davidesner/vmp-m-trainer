@@ -1,4 +1,6 @@
-import 'dotenv/config'
+import { config } from 'dotenv'
+config({ path: '.env.local' })
+config()
 import { serve } from '@hono/node-server'
 import { serveStatic } from '@hono/node-server/serve-static'
 import path from 'node:path'

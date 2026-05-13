@@ -1,4 +1,6 @@
-import 'dotenv/config'
+import { config } from 'dotenv'
+config({ path: '.env.local' })
+config()
 import { randomUUID } from 'node:crypto'
 import readline from 'node:readline'
 import { Writable } from 'node:stream'

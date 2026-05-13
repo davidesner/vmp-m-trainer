@@ -1,3 +1,7 @@
+import { config } from 'dotenv'
+config({ path: '.env.local' })
+config()
+
 import { createDb } from './client'
 
 const url = process.env.DATABASE_URL
