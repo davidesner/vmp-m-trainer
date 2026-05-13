@@ -1,0 +1,7 @@
+{
+  "buildCommand": "pnpm db:migrate && pnpm build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/((?!api|explanations|data|assets|favicon.svg).*)", "destination": "/index.html" }
+  ]
+}

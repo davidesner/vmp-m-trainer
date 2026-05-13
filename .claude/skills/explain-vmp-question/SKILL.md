@@ -9,7 +9,7 @@ description: Vysvětli otázku z VMP M testu uživateli konverzačně, s vizuali
 
 ## Hard rule: nikdy neukládej bez výslovného souhlasu
 
-Soubory `explanations/q-{qid}.html` a `explanations/q-{qid}.meta.json` **nikdy nezapisuj ani nepřepisuj** bez toho, aby uživatel řekl "ano, ulož to" (nebo ekvivalent — "jo", "save it", "ulož", atp.). To platí **vždy** — pro nové vysvětlení i pro úpravu existujícího.
+Soubory `public/explanations/q-{qid}.html` a `public/explanations/q-{qid}.meta.json` **nikdy nezapisuj ani nepřepisuj** bez toho, aby uživatel řekl "ano, ulož to" (nebo ekvivalent — "jo", "save it", "ulož", atp.). To platí **vždy** — pro nové vysvětlení i pro úpravu existujícího.
 
 Pokud sis právě uvědomil, že chceš ukládat, nedělej to. **Zeptej se nejdřív.**
 
@@ -49,7 +49,7 @@ Cíl: rychlé, věcně správné vysvětlení. Web research zdvojnásobí čas r
 ## Krok 1 — Najdi otázku
 
 1. Identifikuj `qid` z promptu (např. "otázka #12"). Pokud nejednoznačné, zeptej se.
-2. **Spusť helper skript** — jediným voláním vytáhne text, options, správnou odpověď, image path (i s informací jestli existuje) a stav existujícího vysvětlení v `explanations/`:
+2. **Spusť helper skript** — jediným voláním vytáhne text, options, správnou odpověď, image path (i s informací jestli existuje) a stav existujícího vysvětlení v `public/explanations/`:
 
    ```bash
    python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid>
@@ -59,7 +59,7 @@ Cíl: rychlé, věcně správné vysvětlení. Web research zdvojnásobí čas r
 
    Skript hledá repo root automaticky (najde `public/data/questions.json` u sebe nebo u některého předka), takže ho můžeš volat odkudkoliv. **Nepokoušej se parsovat `questions.json` ručně** — má top-level objekt s polem `questions[]`, ne pole na top-levelu, a tohle si chytá skript za tebe.
 3. **Pokud helper hlásí, že obrázek existuje** (typicky `/data/images/q-{qid}.jpg` → soubor v `public/data/images/q-{qid}.jpg`), **přečti ho hned tooly Read** — neignoruj. Obrázek je často podstatnou částí zadání (schéma plavidla, plavební značka, světelný znak, situace na vodě, šipky popisující manévr) a bez něj odpověď často nepostavíš správně.
-4. Pokud helper hlásí, že existuje `explanations/q-{qid}.html`, přečti ho — viz sekci „Když HTML už existuje" níž.
+4. Pokud helper hlásí, že existuje `public/explanations/q-{qid}.html`, přečti ho — viz sekci „Když HTML už existuje" níž.
 
 ### Jak číst test images — konvence VMP
 
@@ -105,11 +105,11 @@ Vizualizace má **přidat hodnotu**. Pro otázky o definicích nebo prostých č
 
 **Až po vysvětlení** (a případných follow-up otázkách) **se zeptej**:
 
-> *"Chceš tohle uložit jako HTML do `explanations/q-{qid}.html`? Při dalším otevření v appce se zobrazí přímo v modalu."*
+> *"Chceš tohle uložit jako HTML do `public/explanations/q-{qid}.html`? Při dalším otevření v appce se zobrazí přímo v modalu."*
 
 Pokud má soubor už existovat a ty ho přepisuješ, formulace musí být jednoznačná, např.:
 
-> *"Tohle nahradí současný `explanations/q-{qid}.html`. Uložit?"*
+> *"Tohle nahradí současný `public/explanations/q-{qid}.html`. Uložit?"*
 
 **Počkej na výslovné potvrzení.** Mlčení nebo follow-up otázka **nikdy** neznamená souhlas.
 
@@ -127,8 +127,8 @@ Strukturu odvoď z toho, co dávalo smysl v chatu (kostra v `template.html` jen 
 
 **Soubory k uložení:**
 
-1. `explanations/q-{qid}.html` — sanitizovaný HTML obsah
-2. `explanations/q-{qid}.meta.json` — metadata:
+1. `public/explanations/q-{qid}.html` — sanitizovaný HTML obsah
+2. `public/explanations/q-{qid}.meta.json` — metadata:
 
    ```json
    {
@@ -139,7 +139,7 @@ Strukturu odvoď z toho, co dávalo smysl v chatu (kostra v `template.html` jen 
    }
    ```
 
-Potvrď jednou větou: *"Uloženo: explanations/q-{qid}.html"*
+Potvrď jednou větou: *"Uloženo: public/explanations/q-{qid}.html"*
 
 ### Když uživatel řekne ne (nebo se ptá dál)
 
@@ -149,7 +149,7 @@ Potvrď jednou větou: *"Uloženo: explanations/q-{qid}.html"*
 
 ## Když HTML už existuje
 
-1. Přečti existující `explanations/q-{qid}.html` a použij jeho obsah jako základ konverzace
+1. Přečti existující `public/explanations/q-{qid}.html` a použij jeho obsah jako základ konverzace
 2. Zeptej se uživatele, co potřebuje: *"Vysvětlení už existuje. Chceš ho rozšířit / upravit, nebo se chceš zeptat na něco konkrétního?"*
 3. Konverzuj normálně podle Kroku 2
-4. **Nikdy nepřepisuj soubor automaticky.** I když uživatel řekne "regeneruj" nebo "udělej nové", nejdřív vyrob navrhovanou verzi v chatu, pak se zeptej *"Tohle nahradí současný explanations/q-{qid}.html. Uložit?"* a počkej na potvrzení.
+4. **Nikdy nepřepisuj soubor automaticky.** I když uživatel řekne "regeneruj" nebo "udělej nové", nejdřív vyrob navrhovanou verzi v chatu, pak se zeptej *"Tohle nahradí současný public/explanations/q-{qid}.html. Uložit?"* a počkej na potvrzení.

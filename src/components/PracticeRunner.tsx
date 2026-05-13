@@ -14,7 +14,6 @@ export default function PracticeRunner({ questions, onDone }: Props) {
   const [idx, setIdx] = useState(0)
   const [selected, setSelected] = useState<'a'|'b'|'c'|null>(null)
   const [revealed, setRevealed] = useState(false)
-  const projectRoot = import.meta.env.VITE_PROJECT_ROOT ?? ''
   const q = questions[idx]
   const total = questions.length
 
@@ -44,7 +43,7 @@ export default function PracticeRunner({ questions, onDone }: Props) {
       />
 
       <div className="flex justify-between items-center mt-6">
-        <ExplainButton qid={q.id} projectRoot={projectRoot} />
+        <ExplainButton qid={q.id} />
         {!revealed ? (
           <button onClick={submit} disabled={selected === null}
             className="px-4 py-2 bg-primary text-white rounded text-sm font-semibold disabled:opacity-40">

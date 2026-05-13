@@ -1,36 +1,76 @@
 # VMP M Trenažér
 
-Lokální webová appka na trénink otázek pro zkoušku VMP M (Vůdce malého plavidla, kategorie M 2015).
+Webová appka na trénink otázek pro zkoušku VMP M (Vůdce malého plavidla, kategorie M 2015).
 
 ![Přehled](docs/images/home.png)
+
+## Architektura
+
+- Frontend: Vite + React 19 SPA
+- API: Hono + Drizzle ORM nad libSQL (SQLite dialect)
+- Auth: session cookie + argon2, uživatelé se zakládají ručně CLI
+- Deploy: Vercel + Turso (free), nebo single-container Docker (SQLite v volume)
 
 ## Setup (jednorázově)
 
 ```bash
 pnpm install
-pnpm scrape          # stáhne otázky a obrázky ze spspraha.cz
-cp .env.local.example .env.local
-# Edituj .env.local — nastav VITE_PROJECT_ROOT na absolutní cestu k tomuto folderu
+pnpm scrape                        # stáhne otázky a obrázky ze spspraha.cz
+cp .env.example .env.local
+pnpm db:migrate                    # vytvoří data/app.db
+pnpm user:add <email>              # založí prvního uživatele
 ```
 
-## Spuštění
+## Spuštění (lokálně)
 
 ```bash
-pnpm dev
+pnpm dev                           # vite + hono současně
 ```
 
-Otevře se `http://localhost:5400`.
+http://localhost:5400 — frontend (Vite). Vite proxy posílá `/api/*` do Hono na portu 3001.
 
-Případně dvojklik na `~/Desktop/VMP-Trainer.command` — spustí dev server, počká až nastartuje, a otevře prohlížeč. Zavřením okna Terminálu se server vypne.
+## Deploy: Vercel + Turso
 
-## Cowork skill (volitelně, pro AI vysvětlení)
+1. Založit Turso DB: `turso db create vmp` + token: `turso db tokens create vmp`.
+2. Na Vercelu nastavit env vars:
+   - `DATABASE_URL=libsql://<db>-<org>.turso.io`
+   - `DATABASE_AUTH_TOKEN=<token>`
+   - `SESSION_COOKIE_SECURE=true`
+3. `vercel deploy`. Build step (`vercel.json`) spustí `pnpm db:migrate` a pak `pnpm build`.
+4. Uživatele zakládat lokálně proti hostované DB:
+   ```bash
+   DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... pnpm user:add <email>
+   ```
 
-1. `pnpm package-skill` — vytvoří `dist-skill/explain-vmp-question.zip`
-2. Otevři Claude Desktop → **Cowork** → **Customize** → **Skills** → **Upload** → vyber ten ZIP.
-3. **Projects** → **Import existing** → vyber tento folder.
-4. Project instructions: *"Když uživatel požádá o vysvětlení otázky, použij skill explain-vmp-question."*
+## Deploy: Docker (self-host)
 
-V appce klikni "🧠 Vysvětlení" u otázky → otevře Cowork s předvyplněným promptem.
+```bash
+docker build -t vmp-trainer -f docker/Dockerfile .
+docker run -d -p 3000:3000 -v $(pwd)/data:/data vmp-trainer
+docker exec -it <container> pnpm user:add <email>
+```
+
+Volume `/data` drží SQLite soubor — přežije restart.
+
+## Skripty
+
+| Skript | Co dělá |
+|---|---|
+| `pnpm dev` | dev server (vite + hono) |
+| `pnpm dev:vite` | jen frontend |
+| `pnpm dev:api` | jen API |
+| `pnpm build` | produkční build do `dist/` |
+| `pnpm test` | spustí vitest |
+| `pnpm scrape` | scraper otázek |
+| `pnpm db:generate` | generuje migrace z drizzle schema |
+| `pnpm db:migrate` | aplikuje migrace |
+| `pnpm user:add <email>` | založí uživatele (interaktivně se zeptá na heslo) |
+| `pnpm package-skill` | zazipuje skill `explain-vmp-question` (pro batch generování vysvětlení) |
+| `pnpm batch-explanations` | batch generuje chybějící vysvětlení do `public/explanations/` |
+
+## Skill (jen pro generování vysvětlení)
+
+Skill `explain-vmp-question` (v `.claude/skills/`) používá pouze offline batch skript pro generování statických vysvětlení do `public/explanations/`. V samotné appce se nepoužívá — appka jen servíruje statické HTML soubory a tlačítko "💬 Zeptat se Claude" otevírá Claude Desktop deeplink pro doplňující dotazy.
 
 ## Módy
 
@@ -39,14 +79,4 @@ V appce klikni "🧠 Vysvětlení" u otázky → otevře Cowork s předvyplněn�
 - **Slabiny** — automaticky vybere 20 otázek které pleteš
 - **Statistiky** — úspěšnost po skupinách + historie testů
 
-Progress je v localStorage prohlížeče. Vysvětlení se commitují do `explanations/`.
-
-## Skripty
-
-| Skript | Co dělá |
-|---|---|
-| `pnpm dev` | dev server (vite) |
-| `pnpm build` | produkční build do `dist/` |
-| `pnpm test` | spustí vitest |
-| `pnpm scrape` | jednorázový scraper otázek |
-| `pnpm package-skill` | zazipuje Cowork skill do `dist-skill/` |
+Progress je v DB (libSQL), per-uživatel. Vysvětlení jsou statické HTML soubory committnuté v `public/explanations/`.

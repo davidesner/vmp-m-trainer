@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Backfill missing meta.json files for explanation HTMLs.
 
-For each .html in explanations/ that lacks a sibling .meta.json,
+For each .html in public/explanations/ that lacks a sibling .meta.json,
 extract source URLs from the HTML, then write a meta file with:
   - qid           (from filename)
   - generated_at  (file mtime, ISO 8601 Z)
@@ -41,7 +41,7 @@ def extract_sources(html: str) -> list[str]:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dir', default='explanations')
+    parser.add_argument('--dir', default='public/explanations')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
 

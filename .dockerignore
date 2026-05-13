@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-skill
+data
+.git
+.env
+.env.local
+*.log
+.DS_Store
+.claude
+docs

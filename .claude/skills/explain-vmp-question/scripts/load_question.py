@@ -2,7 +2,7 @@
 """
 Načte otázku z public/data/questions.json podle qid a vypíše vše, co skill
 potřebuje v Kroku 1 — text, možnosti, správnou odpověď, image path (pokud je),
-a stav existujícího vysvětlení v explanations/.
+a stav existujícího vysvětlení v public/explanations/.
 
 Použití (z kořene VMP_TEST repa nebo odkudkoliv):
     python3 .claude/skills/explain-vmp-question/scripts/load_question.py 26
@@ -72,8 +72,8 @@ def main() -> None:
                 image_exists = True
                 break
 
-    expl_html = repo_root / "explanations" / f"q-{qid}.html"
-    expl_meta = repo_root / "explanations" / f"q-{qid}.meta.json"
+    expl_html = repo_root / "public" / "explanations" / f"q-{qid}.html"
+    expl_meta = repo_root / "public" / "explanations" / f"q-{qid}.meta.json"
 
     payload = {
         "qid": qid,

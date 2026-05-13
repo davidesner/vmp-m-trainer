@@ -28,3 +28,4 @@ dist-ssr
 .superpowers/
 .env
 .env.local
+/data/

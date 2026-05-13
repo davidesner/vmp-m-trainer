@@ -36,7 +36,7 @@ cd "$ROOT"
 CONCURRENCY="${1:-3}"
 MAX_ROUNDS="${2:-5}"
 QUESTIONS_JSON="public/data/questions.json"
-EXPLANATIONS_DIR="explanations"
+EXPLANATIONS_DIR="public/explanations"
 LOG_DIR="dist-skill/batch-logs"
 
 ONLY_WITH_IMAGE="${ONLY_WITH_IMAGE:-0}"

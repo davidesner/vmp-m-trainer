@@ -1,23 +1,63 @@
 import { useState } from 'react'
 import { useProgress } from '../hooks/useProgress'
+import { useAuth } from '../hooks/useAuth'
+
+const LEGACY_KEY = 'vmp:progress'
 
 export default function Settings() {
   const { reset } = useProgress()
-  const projectRoot = import.meta.env.VITE_PROJECT_ROOT ?? ''
+  const { user, logout } = useAuth()
   const [confirmReset, setConfirmReset] = useState(false)
+  const [importMsg, setImportMsg] = useState<string | null>(null)
+
+  const legacy = (() => {
+    try { return localStorage.getItem(LEGACY_KEY) } catch { return null }
+  })()
+
+  async function doImport() {
+    if (!legacy) return
+    let parsed: unknown
+    try { parsed = JSON.parse(legacy) } catch { setImportMsg('Neplatný JSON v localStorage.'); return }
+    setImportMsg('Importuji…')
+    const res = await fetch('/api/progress/import', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify(parsed),
+    })
+    if (res.ok) {
+      try { localStorage.removeItem(LEGACY_KEY) } catch { /* ignore */ }
+      setImportMsg('Import OK. Obnov stránku.')
+    } else {
+      setImportMsg(`Import selhal: HTTP ${res.status}`)
+    }
+  }
 
   return (
     <div className="max-w-2xl p-8">
       <h2 className="text-2xl font-bold mb-6">Nastavení</h2>
 
       <div className="bg-white border border-neutral-200 rounded p-4 mb-4">
-        <div className="text-xs uppercase tracking-wide text-neutral-500 mb-1">Cesta k repu (VITE_PROJECT_ROOT)</div>
-        <code className="block bg-neutral-100 rounded p-2 text-sm break-all">{projectRoot || '(nenastaveno)'}</code>
-        <p className="text-xs text-neutral-500 mt-2">
-          Nastaveno přes <code>.env.local</code>. Po změně restartuj <code>pnpm dev</code>.
-          Tato cesta jde do parametru <code>folder</code> u Cowork deep linku.
-        </p>
+        <div className="text-sm">Přihlášen jako <strong>{user?.email}</strong></div>
+        <button onClick={() => void logout()}
+          className="mt-3 px-3 py-2 border border-neutral-300 rounded text-sm hover:bg-neutral-50">
+          Odhlásit
+        </button>
       </div>
+
+      {legacy && (
+        <div className="bg-white border border-amber-300 rounded p-4 mb-4">
+          <div className="text-sm font-semibold mb-2">Najít starý progress v prohlížeči?</div>
+          <p className="text-xs text-neutral-600 mb-3">
+            V localStorage je uložený progress z předchozí lokální verze. Můžeš ho jednorázově importovat na server.
+          </p>
+          <button onClick={() => void doImport()}
+            className="px-3 py-2 bg-accent text-white rounded text-sm">
+            Importovat
+          </button>
+          {importMsg && <div className="mt-2 text-sm">{importMsg}</div>}
+        </div>
+      )}
 
       <div className="bg-white border border-neutral-200 rounded p-4">
         <div className="text-sm font-semibold mb-2">Smazat veškerý progress</div>
@@ -28,7 +68,7 @@ export default function Settings() {
         ) : (
           <div className="flex gap-2 items-center">
             <span className="text-sm text-danger">Opravdu? Toto smaže celou historii.</span>
-            <button onClick={() => { reset(); setConfirmReset(false) }} className="px-3 py-2 bg-danger text-white rounded text-sm">Ano, smazat</button>
+            <button onClick={() => { void reset(); setConfirmReset(false) }} className="px-3 py-2 bg-danger text-white rounded text-sm">Ano, smazat</button>
             <button onClick={() => setConfirmReset(false)} className="px-3 py-2 border border-neutral-300 rounded text-sm">Zpět</button>
           </div>
         )}

@@ -8,11 +8,10 @@ const groupName = (id: GroupId) => GROUPS.find(g => g.id === id)?.name ?? id
 interface Props {
   questions: Question[]
   answers: Record<number, 'a'|'b'|'c'>
-  projectRoot: string
   onHome: () => void
 }
 
-export default function TestResults({ questions, answers, projectRoot, onHome }: Props) {
+export default function TestResults({ questions, answers, onHome }: Props) {
   const score = questions.filter(q => answers[q.id] === q.correct).length
   const passed = score >= 30
   const perGroup: Record<GroupId, { correct: number; total: number }> = {} as any
@@ -45,7 +44,7 @@ export default function TestResults({ questions, answers, projectRoot, onHome }:
         {questions.map(q => (
           <div key={q.id} className="bg-white border border-neutral-200 rounded p-5">
             <QuestionCard question={q} selectedKey={answers[q.id] ?? null} revealedCorrect={q.correct} onSelect={() => {}} />
-            <div className="mt-3"><ExplainButton qid={q.id} projectRoot={projectRoot} /></div>
+            <div className="mt-3"><ExplainButton qid={q.id} /></div>
           </div>
         ))}
       </div>

@@ -3,10 +3,9 @@ import ExplainModal from './ExplainModal'
 
 interface Props {
   qid: number
-  projectRoot: string
 }
 
-export default function ExplainButton({ qid, projectRoot }: Props) {
+export default function ExplainButton({ qid }: Props) {
   const [open, setOpen] = useState(false)
   return (
     <>
@@ -17,7 +16,7 @@ export default function ExplainButton({ qid, projectRoot }: Props) {
       >
         🧠 Vysvětlení
       </button>
-      <ExplainModal qid={qid} open={open} onClose={() => setOpen(false)} projectRoot={projectRoot} />
+      <ExplainModal qid={qid} open={open} onClose={() => setOpen(false)} />
     </>
   )
 }
