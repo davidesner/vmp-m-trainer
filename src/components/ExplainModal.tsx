@@ -25,28 +25,29 @@ export default function ExplainModal({ qid, open, onClose }: Props) {
   const followupUrl = buildFollowupLink({ qid })
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-6" onClick={onClose}>
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 sm:p-6" onClick={onClose}>
       <div
-        className="bg-white rounded-lg shadow-2xl w-full max-w-5xl h-full max-h-[92vh] flex flex-col overflow-hidden"
+        className="bg-white sm:rounded-lg shadow-2xl w-full max-w-5xl h-full sm:max-h-[92vh] flex flex-col overflow-hidden"
         onClick={e => e.stopPropagation()}
       >
-        <header className="flex justify-between items-center px-6 py-4 border-b border-neutral-200 shrink-0">
-          <h3 className="text-lg font-semibold">Vysvětlení k otázce #{qid}</h3>
-          <div className="flex items-center gap-2">
+        <header className="flex justify-between items-center gap-2 px-4 sm:px-6 py-3 sm:py-4 border-b border-neutral-200 shrink-0">
+          <h3 className="text-base sm:text-lg font-semibold truncate">Vysvětlení k otázce #{qid}</h3>
+          <div className="flex items-center gap-2 shrink-0">
             {result?.status === 'hit' && (
               <a
                 href={followupUrl}
-                className="px-3 py-2 bg-accent text-white text-sm rounded hover:opacity-90 transition"
+                className="px-3 py-2 bg-accent text-white text-xs sm:text-sm rounded hover:opacity-90 transition whitespace-nowrap"
                 title="Doplňující dotaz v Claude Desktop"
               >
-                💬 Zeptat se Claude ↗
+                <span className="sm:hidden">💬 Claude ↗</span>
+                <span className="hidden sm:inline">💬 Zeptat se Claude ↗</span>
               </a>
             )}
-            <button onClick={onClose} className="px-2 py-1 text-xl text-neutral-500 hover:text-neutral-900 leading-none">✕</button>
+            <button onClick={onClose} aria-label="Zavřít" className="w-10 h-10 flex items-center justify-center text-xl text-neutral-500 hover:text-neutral-900 leading-none">✕</button>
           </div>
         </header>
 
-        <div className="flex-1 overflow-auto px-8 py-6">
+        <div className="flex-1 overflow-auto px-4 sm:px-8 py-4 sm:py-6">
           {loading && <div className="text-sm text-neutral-500">Načítám…</div>}
 
           {!loading && result?.status === 'hit' && (

@@ -21,7 +21,7 @@ export default function QuestionCard({ question, selectedKey, revealedCorrect, o
           const isSelected = selectedKey === opt.key
           const isCorrect = revealedCorrect === opt.key
           const isWrongChosen = revealedCorrect !== null && isSelected && !isCorrect
-          let cls = 'border rounded px-4 py-3 text-sm cursor-pointer transition'
+          let cls = 'border rounded px-4 py-3 text-sm cursor-pointer transition text-left'
           if (revealedCorrect !== null) {
             cls += isCorrect ? ' border-primary bg-primary-light'
                  : isWrongChosen ? ' border-danger bg-danger-light'

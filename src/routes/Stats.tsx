@@ -6,7 +6,7 @@ export default function Stats() {
   const { data, loading } = useQuestions()
   const { store } = useProgress()
 
-  if (loading || !data) return <div className="p-8">Načítám…</div>
+  if (loading || !data) return <div className="p-4 md:p-8">Načítám…</div>
 
   const perGroup: Record<GroupId, { count: number; attempts: number; correct: number; lastSeen: string | null }> = {} as any
   for (const g of data.groups) {
@@ -26,37 +26,61 @@ export default function Stats() {
   const history = store.testHistory.slice(0, 10).reverse()
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
+    <div className="max-w-4xl mx-auto p-4 md:p-8">
       <h2 className="text-2xl font-bold mb-6">Statistiky</h2>
 
-      <div className="bg-white border border-neutral-200 rounded p-4 mb-6 overflow-x-auto">
+      <div className="bg-white border border-neutral-200 rounded p-4 mb-6">
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Po skupinách</div>
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="text-left text-neutral-500">
-              <th className="py-2">Skupina</th>
-              <th className="py-2">Otázek</th>
-              <th className="py-2">Pokusů</th>
-              <th className="py-2">Úspěšnost</th>
-              <th className="py-2">Naposledy</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.groups.map(g => {
-              const s = perGroup[g.id]
-              const pct = s.attempts > 0 ? Math.round((s.correct / s.attempts) * 100) : null
-              return (
-                <tr key={g.id} className="border-t border-neutral-100">
-                  <td className="py-2">{g.name}</td>
-                  <td className="py-2">{s.count}</td>
-                  <td className="py-2">{s.attempts}</td>
-                  <td className="py-2 tabular-nums">{pct === null ? '—' : `${pct}%`}</td>
-                  <td className="py-2 text-neutral-500">{s.lastSeen ? new Date(s.lastSeen).toLocaleDateString() : '—'}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+
+        {/* Mobile: cards */}
+        <div className="sm:hidden flex flex-col gap-3">
+          {data.groups.map(g => {
+            const s = perGroup[g.id]
+            const pct = s.attempts > 0 ? Math.round((s.correct / s.attempts) * 100) : null
+            return (
+              <div key={g.id} className="border-t border-neutral-100 pt-3 first:border-t-0 first:pt-0 text-sm">
+                <div className="flex justify-between items-baseline gap-2">
+                  <div className="font-medium">{g.name}</div>
+                  <div className="tabular-nums">{pct === null ? '—' : `${pct}%`}</div>
+                </div>
+                <div className="mt-1 flex justify-between text-xs text-neutral-500 tabular-nums">
+                  <span>{s.count} otázek · {s.attempts} pokusů</span>
+                  <span>{s.lastSeen ? new Date(s.lastSeen).toLocaleDateString() : '—'}</span>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* sm+: table */}
+        <div className="hidden sm:block overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-neutral-500">
+                <th className="py-2">Skupina</th>
+                <th className="py-2">Otázek</th>
+                <th className="py-2">Pokusů</th>
+                <th className="py-2">Úspěšnost</th>
+                <th className="py-2">Naposledy</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.groups.map(g => {
+                const s = perGroup[g.id]
+                const pct = s.attempts > 0 ? Math.round((s.correct / s.attempts) * 100) : null
+                return (
+                  <tr key={g.id} className="border-t border-neutral-100">
+                    <td className="py-2">{g.name}</td>
+                    <td className="py-2">{s.count}</td>
+                    <td className="py-2">{s.attempts}</td>
+                    <td className="py-2 tabular-nums">{pct === null ? '—' : `${pct}%`}</td>
+                    <td className="py-2 text-neutral-500">{s.lastSeen ? new Date(s.lastSeen).toLocaleDateString() : '—'}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div className="bg-white border border-neutral-200 rounded p-4">

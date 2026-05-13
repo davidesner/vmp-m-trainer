@@ -13,7 +13,7 @@ export default function Home() {
 
   const recent = store.testHistory.slice(0, 5)
 
-  if (loading || !data || !pass || !cov) return <div className="p-8">Načítám…</div>
+  if (loading || !data || !pass || !cov) return <div className="p-4 md:p-8">Načítám…</div>
 
   const passPct = Math.round(pass.passProbability * 100)
   const expScore = Math.round(pass.expectedScore * 10) / 10  // 1 decimal
@@ -25,15 +25,15 @@ export default function Home() {
   const passBg    = passPct >= 80 ? 'bg-primary'        : passPct >= 50 ? 'bg-amber-500'   : 'bg-danger'
 
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="p-4 md:p-8 max-w-5xl">
       <h2 className="text-2xl font-bold mb-6">Přehled</h2>
 
       {/* Hero: pass probability + expected score + CTA */}
       <div className="bg-white border border-neutral-200 rounded-lg overflow-hidden mb-6">
-        <div className="p-6 flex items-start justify-between gap-6 flex-wrap">
+        <div className="p-5 md:p-6 flex flex-col sm:flex-row items-start sm:justify-between gap-4 sm:gap-6">
           <div>
             <div className="text-xs uppercase tracking-wide text-neutral-500 mb-1">Odhad úspěchu u zkoušky</div>
-            <div className={`text-5xl font-bold ${passColor}`}>{passPct}%</div>
+            <div className={`text-4xl md:text-5xl font-bold ${passColor}`}>{passPct}%</div>
             <div className="text-sm text-neutral-600 mt-1">
               pravděpodobnost dosáhnout ≥ 30 / 35
             </div>
@@ -45,7 +45,7 @@ export default function Home() {
               Pokrytí otázek: <strong>{cov.overall.seen} / {cov.overall.total}</strong> ({covOverallPct}%)
             </div>
           </div>
-          <Link to="/test" className="px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition shrink-0">
+          <Link to="/test" className="w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition shrink-0">
             ▶ Spustit ostrý test
           </Link>
         </div>
@@ -56,9 +56,40 @@ export default function Home() {
       </div>
 
       {/* Per-group breakdown */}
-      <div className="bg-white border border-neutral-200 rounded-lg p-5 mb-6">
+      <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-5 mb-6">
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-3">Po skupinách</div>
-        <table className="w-full text-sm">
+
+        {/* Mobile: stacked cards */}
+        <div className="sm:hidden flex flex-col gap-3">
+          {data.groups.map(g => {
+            const c = cov.perGroup[g.id]
+            const covPct = c.total > 0 ? Math.round((c.seen / c.total) * 100) : 0
+            const accPct = c.accuracy === null ? null : Math.round(c.accuracy * 100)
+            const inTest = data.testStructure.reduce((sum, seg) => sum + (seg.groups.includes(g.id) ? seg.count : 0), 0)
+            const accColor = accPct === null ? 'text-neutral-400'
+                            : accPct >= 80 ? 'text-primary-dark'
+                            : accPct >= 50 ? 'text-amber-600'
+                            : 'text-danger'
+            return (
+              <div key={g.id} className="border-t border-neutral-100 pt-3 first:border-t-0 first:pt-0">
+                <div className="flex justify-between items-baseline gap-2">
+                  <div className="text-sm font-medium">{g.name}</div>
+                  <div className={`text-sm tabular-nums font-medium ${accColor}`}>{accPct === null ? '—' : `${accPct}%`}</div>
+                </div>
+                <div className="mt-1 flex justify-between text-xs text-neutral-500 tabular-nums">
+                  <span>Pokrytí {c.seen}/{c.total} ({covPct}%)</span>
+                  <span>V testu: {inTest > 0 ? inTest : '—'}</span>
+                </div>
+                <div className="mt-2 h-1.5 bg-neutral-100 rounded">
+                  <div className="h-1.5 bg-primary rounded" style={{ width: `${covPct}%` }}/>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* sm+ : table */}
+        <table className="hidden sm:table w-full text-sm">
           <thead>
             <tr className="text-left text-neutral-500">
               <th className="py-2 font-normal">Skupina</th>
@@ -98,24 +129,27 @@ export default function Home() {
 
       {/* Recent tests */}
       {recent.length > 0 && (
-        <div className="bg-white border border-neutral-200 rounded-lg p-5">
-          <div className="flex items-center justify-between mb-3">
+        <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-5">
+          <div className="flex items-center justify-between mb-3 gap-3">
             <div className="text-xs uppercase tracking-wide text-neutral-500">
               {recent.length === 1 ? 'Poslední test' : `Posledních ${recent.length} ${recent.length < 5 ? 'testy' : 'testů'}`}
             </div>
-            <Link to="/stats" className="text-xs text-accent hover:underline">Více ve Statistikách →</Link>
+            <Link to="/stats" className="text-xs text-accent hover:underline whitespace-nowrap">Více ve Statistikách →</Link>
           </div>
           <div className="flex flex-col gap-2">
             {recent.map((t, i) => {
               const pct = (t.score / t.total) * 100
               const passed = t.score >= 30
               return (
-                <div key={i} className="flex items-center gap-3 text-sm">
-                  <span className="text-neutral-500 w-32 tabular-nums">{new Date(t.at).toLocaleString('cs-CZ', { dateStyle: 'short', timeStyle: 'short' })}</span>
-                  <div className="flex-1 bg-neutral-100 h-3 rounded overflow-hidden">
+                <div key={i} className="flex items-center gap-2 sm:gap-3 text-sm">
+                  <span className="text-neutral-500 tabular-nums shrink-0 w-20 sm:w-32 text-xs sm:text-sm">
+                    <span className="sm:hidden">{new Date(t.at).toLocaleDateString('cs-CZ', { dateStyle: 'short' })}</span>
+                    <span className="hidden sm:inline">{new Date(t.at).toLocaleString('cs-CZ', { dateStyle: 'short', timeStyle: 'short' })}</span>
+                  </span>
+                  <div className="flex-1 bg-neutral-100 h-3 rounded overflow-hidden min-w-0">
                     <div className={`h-3 rounded ${passed ? 'bg-primary' : 'bg-danger'}`} style={{ width: `${pct}%` }}/>
                   </div>
-                  <span className="font-semibold tabular-nums w-14 text-right">{t.score}/{t.total}</span>
+                  <span className="font-semibold tabular-nums w-12 sm:w-14 text-right shrink-0">{t.score}/{t.total}</span>
                 </div>
               )
             })}

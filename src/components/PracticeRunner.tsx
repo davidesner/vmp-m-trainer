@@ -29,7 +29,7 @@ export default function PracticeRunner({ questions, onDone }: Props) {
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-8">
+    <div className="max-w-3xl mx-auto p-4 md:p-8">
       <div className="text-sm text-neutral-500 mb-2">Otázka <strong>{idx + 1} / {total}</strong> · {q.group}</div>
       <div className="h-1 bg-neutral-200 rounded mb-6">
         <div className="h-1 bg-primary rounded" style={{ width: `${((idx+1)/total)*100}%` }}/>
@@ -42,15 +42,15 @@ export default function PracticeRunner({ questions, onDone }: Props) {
         onSelect={k => setSelected(k)}
       />
 
-      <div className="flex justify-between items-center mt-6">
+      <div className="flex flex-wrap justify-between items-center gap-2 mt-6">
         <ExplainButton qid={q.id} />
         {!revealed ? (
           <button onClick={submit} disabled={selected === null}
-            className="px-4 py-2 bg-primary text-white rounded text-sm font-semibold disabled:opacity-40">
+            className="px-4 py-2 bg-primary text-white rounded text-sm font-semibold disabled:opacity-40 ml-auto">
             Odpovědět
           </button>
         ) : (
-          <button onClick={next} className="px-4 py-2 bg-primary text-white rounded text-sm font-semibold">
+          <button onClick={next} className="px-4 py-2 bg-primary text-white rounded text-sm font-semibold ml-auto">
             {idx + 1 >= total ? 'Konec' : 'Další otázka →'}
           </button>
         )}

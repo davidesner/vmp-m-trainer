@@ -18,8 +18,8 @@ export default function Practice() {
   const [selectedGroups, setSelectedGroups] = useState<GroupId[]>([])
   const [run, setRun] = useState<Question[] | null>(null)
 
-  if (loading) return <div className="p-8">Načítám…</div>
-  if (error) return <div className="p-8 text-danger">{error.message}</div>
+  if (loading) return <div className="p-4 md:p-8">Načítám…</div>
+  if (error) return <div className="p-4 md:p-8 text-danger">{error.message}</div>
   if (!data) return null
 
   if (run) return <PracticeRunner questions={run} onDone={() => setRun(null)} />
@@ -47,10 +47,10 @@ export default function Practice() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-8">
+    <div className="max-w-3xl mx-auto p-4 md:p-8">
       <h2 className="text-2xl font-bold mb-6">Procvičování</h2>
 
-      <div className="grid grid-cols-2 gap-3 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
         <button onClick={() => setSubMode('structure')}
           className={`text-left rounded-lg p-4 border-2 ${subMode === 'structure' ? 'border-primary bg-primary-light' : 'border-neutral-200'}`}>
           <div className={`text-sm font-semibold ${subMode === 'structure' ? 'text-primary-dark' : ''}`}>● Struktura ostrého testu</div>
@@ -75,7 +75,7 @@ export default function Practice() {
               </span>
             </label>
           ))}
-          <div className="mt-3 flex items-center gap-2">
+          <div className="mt-3 flex flex-wrap items-center gap-2">
             <span className="text-sm text-neutral-600">Počet:</span>
             {[10, 25, 50, -1].map(n => (
               <button key={n} onClick={() => setCount(n === -1 ? 99999 : n)}
@@ -89,7 +89,7 @@ export default function Practice() {
 
       <div className="mb-6">
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Zaměření výběru</div>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           {([['random','Náhodně'],['mix','⚖ Mix slabiny + známé'],['weak','Hlavně slabiny']] as const).map(([m, label]) => (
             <button key={m} onClick={() => setMix(m)}
               className={`px-3 py-3 rounded text-sm border-2 ${mix === m ? 'border-primary bg-primary-light text-primary-dark font-semibold' : 'border-neutral-200'}`}>
@@ -104,10 +104,10 @@ export default function Practice() {
         )}
       </div>
 
-      <div className="text-right">
+      <div className="sm:text-right">
         <button onClick={start}
           disabled={subMode === 'groups' && selectedGroups.length === 0}
-          className="px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold disabled:opacity-50">
+          className="w-full sm:w-auto px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold disabled:opacity-50">
           ▶ Spustit procvičování
         </button>
       </div>

@@ -19,9 +19,9 @@ export default function Weak() {
     setRun(picked.map(q => shuffleQuestionOptions(q)))
   }, [data, store.questions])
 
-  if (loading || !run) return <div className="p-8">Načítám…</div>
+  if (loading || !run) return <div className="p-4 md:p-8">Načítám…</div>
   if (run.length === 0) return (
-    <div className="p-8">
+    <div className="p-4 md:p-8">
       <h2 className="text-xl font-semibold">Žádné slabiny zatím nemáme.</h2>
       <p className="text-neutral-600 mt-2">Udělej pár testů a vrať se sem.</p>
       <button onClick={() => navigate('/')} className="mt-4 px-4 py-2 bg-primary text-white rounded">Domů</button>
