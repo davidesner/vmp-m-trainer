@@ -3,13 +3,14 @@ config({ path: '.env.local' })
 config()
 
 import { createDb } from './client'
+import { getDatabaseAuthToken, getDatabaseUrl } from '../env'
 
-const url = process.env.DATABASE_URL
+const url = getDatabaseUrl()
 if (!url) {
-  console.error('DATABASE_URL not set')
+  console.error('No database URL set — expected DATABASE_URL or TURSO_DATABASE_URL')
   process.exit(1)
 }
 
-const { applyMigrations } = createDb(url, process.env.DATABASE_AUTH_TOKEN)
+const { applyMigrations } = createDb(url, getDatabaseAuthToken())
 await applyMigrations()
 console.log('Migrations applied:', url)
