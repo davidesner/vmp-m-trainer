@@ -1,5 +1,4 @@
 import type { IncomingMessage, ServerResponse } from 'node:http'
-import { Readable } from 'node:stream'
 import app from '../server/vercel.js'
 
 /**
@@ -25,10 +24,18 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     }
 
     const method = (req.method ?? 'GET').toUpperCase()
-    const init: RequestInit & { duplex?: 'half' } = { method, headers }
+    const init: RequestInit = { method, headers }
     if (method !== 'GET' && method !== 'HEAD') {
-      init.body = Readable.toWeb(req) as unknown as BodyInit
-      init.duplex = 'half'
+      // Buffer the body fully — streaming via Readable.toWeb hangs in Vercel's
+      // Node runtime because Vercel-parsed bodies behave differently than raw
+      // Node streams. A Uint8Array body is universally consumable.
+      const chunks: Buffer[] = []
+      for await (const chunk of req) {
+        chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk)
+      }
+      if (chunks.length > 0) {
+        init.body = new Uint8Array(Buffer.concat(chunks))
+      }
     }
 
     const webRes = await app.fetch(new Request(url, init))
