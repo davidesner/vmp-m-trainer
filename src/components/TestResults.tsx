@@ -22,8 +22,8 @@ export default function TestResults({ questions, answers, onHome }: Props) {
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-8">
-      <div className={`rounded-lg p-6 mb-6 text-white ${passed ? 'bg-primary' : 'bg-danger'}`}>
+    <div className="max-w-3xl mx-auto p-4 md:p-8">
+      <div className={`rounded-lg p-5 md:p-6 mb-6 text-white ${passed ? 'bg-primary' : 'bg-danger'}`}>
         <div className="text-sm opacity-90">{passed ? 'Splněno!' : 'Nesplněno'}</div>
         <div className="text-3xl font-bold mt-1">{score} / {questions.length}</div>
         <div className="text-sm opacity-90 mt-1">Pro splnění je potřeba minimálně 30 bodů.</div>
@@ -42,7 +42,7 @@ export default function TestResults({ questions, answers, onHome }: Props) {
       <h3 className="text-lg font-semibold mb-3">Otázky</h3>
       <div className="flex flex-col gap-6">
         {questions.map(q => (
-          <div key={q.id} className="bg-white border border-neutral-200 rounded p-5">
+          <div key={q.id} className="bg-white border border-neutral-200 rounded p-4 sm:p-5">
             <QuestionCard question={q} selectedKey={answers[q.id] ?? null} revealedCorrect={q.correct} onSelect={() => {}} />
             <div className="mt-3"><ExplainButton qid={q.id} /></div>
           </div>

@@ -49,9 +49,9 @@ export default function Test() {
     })
   }, [sampled, answers, startedAt, recordAttempt, recordTestHistory])
 
-  if (loading) return <div className="p-8">Načítám otázky…</div>
-  if (error) return <div className="p-8 text-danger">Chyba: {error.message}</div>
-  if (!data || sampled.length === 0) return <div className="p-8">Žádné otázky.</div>
+  if (loading) return <div className="p-4 md:p-8">Načítám otázky…</div>
+  if (error) return <div className="p-4 md:p-8 text-danger">Chyba: {error.message}</div>
+  if (!data || sampled.length === 0) return <div className="p-4 md:p-8">Žádné otázky.</div>
 
   const q = sampled[idx]
   const answeredCount = Object.keys(answers).length
@@ -61,9 +61,9 @@ export default function Test() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-8">
-      <div className="flex justify-between items-center mb-2 text-sm">
-        <span className="text-neutral-500">Otázka <strong className="text-neutral-900">{idx + 1} / {sampled.length}</strong> · {q.group}</span>
+    <div className="max-w-3xl mx-auto p-4 md:p-8">
+      <div className="flex justify-between items-center mb-2 text-sm gap-2">
+        <span className="text-neutral-500 truncate">Otázka <strong className="text-neutral-900">{idx + 1} / {sampled.length}</strong> · {q.group}</span>
         <Timer remainingSec={TIMER_SEC - Math.round((Date.now() - startedAt) / 1000)} ticking onExpire={submit} />
       </div>
       <div className="h-1 bg-neutral-200 rounded mb-6">
@@ -77,14 +77,14 @@ export default function Test() {
         onSelect={(k) => setAnswers(a => ({ ...a, [q.id]: k }))}
       />
 
-      <div className="flex justify-between items-center mt-6">
+      <div className="mt-6 flex flex-wrap items-center gap-2 sm:justify-between">
         <button onClick={() => setIdx(i => Math.max(0, i - 1))} className="px-4 py-2 border border-neutral-300 rounded text-sm" disabled={idx === 0}>← Předchozí</button>
-        <span className="text-xs text-neutral-500">Odpovězeno: {answeredCount} / {sampled.length}</span>
         {idx < sampled.length - 1 ? (
-          <button onClick={() => setIdx(i => i + 1)} className="px-4 py-2 bg-primary text-white rounded text-sm">Další →</button>
+          <button onClick={() => setIdx(i => i + 1)} className="px-4 py-2 bg-primary text-white rounded text-sm order-3 sm:order-none ml-auto">Další →</button>
         ) : (
-          <button onClick={submit} className="px-4 py-2 bg-primary text-white rounded text-sm font-semibold">Odeslat test</button>
+          <button onClick={submit} className="px-4 py-2 bg-primary text-white rounded text-sm font-semibold order-3 sm:order-none ml-auto">Odeslat test</button>
         )}
+        <span className="text-xs text-neutral-500 w-full sm:w-auto sm:order-none order-2 text-center sm:text-left">Odpovězeno: {answeredCount} / {sampled.length}</span>
       </div>
     </div>
   )
