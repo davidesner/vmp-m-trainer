@@ -1,13 +1,13 @@
 import { Hono } from 'hono'
 import { setCookie, deleteCookie } from 'hono/cookie'
 import { eq } from 'drizzle-orm'
-import type { AppEnv } from '../types'
-import type { Db } from '../db/client'
-import { users } from '../db/schema'
-import { verifyPassword } from './password'
-import { createSession, deleteSession } from './sessions'
-import { COOKIE_NAME } from './middleware'
-import { checkRateLimit } from './rateLimit'
+import type { AppEnv } from '../types.js'
+import type { Db } from '../db/client.js'
+import { users } from '../db/schema.js'
+import { verifyPassword } from './password.js'
+import { createSession, deleteSession } from './sessions.js'
+import { COOKIE_NAME } from './middleware.js'
+import { checkRateLimit } from './rateLimit.js'
 
 export interface AuthRoutesOptions {
   db: Db

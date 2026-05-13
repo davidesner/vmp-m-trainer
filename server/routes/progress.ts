@@ -1,9 +1,9 @@
 import { Hono } from 'hono'
 import { and, eq, desc } from 'drizzle-orm'
-import type { AppEnv } from '../types'
-import type { Db } from '../db/client'
-import { attempts, testHistory } from '../db/schema'
-import { requireAuth } from '../auth/middleware'
+import type { AppEnv } from '../types.js'
+import type { Db } from '../db/client.js'
+import { attempts, testHistory } from '../db/schema.js'
+import { requireAuth } from '../auth/middleware.js'
 
 export interface ProgressRoutesOptions { db: Db }
 

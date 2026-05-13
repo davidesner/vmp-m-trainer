@@ -1,8 +1,8 @@
 import { Hono } from 'hono'
-import type { AppEnv } from '../types'
-import type { Db } from '../db/client'
-import { testHistory } from '../db/schema'
-import { requireAuth } from '../auth/middleware'
+import type { AppEnv } from '../types.js'
+import type { Db } from '../db/client.js'
+import { testHistory } from '../db/schema.js'
+import { requireAuth } from '../auth/middleware.js'
 
 export function testHistoryRoutes(opts: { db: Db }) {
   const r = new Hono<AppEnv>()

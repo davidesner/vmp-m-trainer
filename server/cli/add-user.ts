@@ -5,10 +5,10 @@ import { randomUUID } from 'node:crypto'
 import readline from 'node:readline'
 import { Writable } from 'node:stream'
 import { eq } from 'drizzle-orm'
-import { createDb } from '../db/client'
-import { users } from '../db/schema'
-import { hashPassword } from '../auth/password'
-import { getDatabaseAuthToken, getDatabaseUrl } from '../env'
+import { createDb } from '../db/client.js'
+import { users } from '../db/schema.js'
+import { hashPassword } from '../auth/password.js'
+import { getDatabaseAuthToken, getDatabaseUrl } from '../env.js'
 
 const email = process.argv[2]?.toLowerCase()
 if (!email || !email.includes('@')) {

@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { createDb, type Db } from '../db/client'
-import { users } from '../db/schema'
-import { hashPassword } from './password'
-import { buildApp } from '../index'
-import { _resetRateLimit } from './rateLimit'
+import { createDb, type Db } from '../db/client.js'
+import { users } from '../db/schema.js'
+import { hashPassword } from './password.js'
+import { buildApp } from '../index.js'
+import { _resetRateLimit } from './rateLimit.js'
 
 async function setup(): Promise<{ db: Db; app: ReturnType<typeof buildApp>['app'] }> {
   const db = createDb(':memory:')

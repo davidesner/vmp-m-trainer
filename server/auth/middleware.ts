@@ -1,8 +1,8 @@
 import type { MiddlewareHandler } from 'hono'
 import { getCookie } from 'hono/cookie'
-import type { AppEnv } from '../types'
-import type { Db } from '../db/client'
-import { lookupSession, maybeExtendSession } from './sessions'
+import type { AppEnv } from '../types.js'
+import type { Db } from '../db/client.js'
+import { lookupSession, maybeExtendSession } from './sessions.js'
 
 export const COOKIE_NAME = 'sid'
 

@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { createDb, type Db } from '../db/client'
-import { users, attempts, testHistory } from '../db/schema'
-import { hashPassword } from '../auth/password'
-import { buildApp } from '../index'
+import { createDb, type Db } from '../db/client.js'
+import { users, attempts, testHistory } from '../db/schema.js'
+import { hashPassword } from '../auth/password.js'
+import { buildApp } from '../index.js'
 
 async function setup() {
   const db = createDb(':memory:')
