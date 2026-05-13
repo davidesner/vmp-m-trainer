@@ -1,7 +1,7 @@
 import { randomBytes } from 'node:crypto'
 import { eq } from 'drizzle-orm'
-import type { Db } from '../db/client'
-import { sessions, users } from '../db/schema'
+import type { Db } from '../db/client.js'
+import { sessions, users } from '../db/schema.js'
 
 export const SESSION_TTL_MS = 30 * 86400_000  // 30 days
 export const SLIDE_WINDOW_MS = 7 * 86400_000  // extend if expiring within 7 days

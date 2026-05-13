@@ -1,12 +1,12 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { createDb, type Db } from '../db/client'
-import { users } from '../db/schema'
+import { createDb, type Db } from '../db/client.js'
+import { users } from '../db/schema.js'
 import {
   createSession,
   lookupSession,
   deleteSession,
   maybeExtendSession,
-} from './sessions'
+} from './sessions.js'
 
 async function freshDb(): Promise<Db> {
   const handle = createDb(':memory:')

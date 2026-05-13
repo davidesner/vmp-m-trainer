@@ -2,8 +2,8 @@ import { config } from 'dotenv'
 config({ path: '.env.local' })
 config()
 
-import { createDb } from './client'
-import { getDatabaseAuthToken, getDatabaseUrl } from '../env'
+import { createDb } from './client.js'
+import { getDatabaseAuthToken, getDatabaseUrl } from '../env.js'
 
 const url = getDatabaseUrl()
 if (!url) {

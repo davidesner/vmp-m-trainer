@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { createDb } from './client'
+import { createDb } from './client.js'
 
 describe('createDb', () => {
   it('creates a db client and applies migrations', async () => {

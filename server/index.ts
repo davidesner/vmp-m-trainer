@@ -1,12 +1,12 @@
 import { Hono } from 'hono'
 import { logger } from 'hono/logger'
-import type { AppEnv } from './types'
-import type { Db } from './db/client'
-import { loadUser } from './auth/middleware'
-import { authRoutes, meRoute } from './auth/routes'
-import { progressRoutes } from './routes/progress'
-import { attemptsRoutes } from './routes/attempts'
-import { testHistoryRoutes } from './routes/testHistory'
+import type { AppEnv } from './types.js'
+import type { Db } from './db/client.js'
+import { loadUser } from './auth/middleware.js'
+import { authRoutes, meRoute } from './auth/routes.js'
+import { progressRoutes } from './routes/progress.js'
+import { attemptsRoutes } from './routes/attempts.js'
+import { testHistoryRoutes } from './routes/testHistory.js'
 
 export interface BuildAppOptions {
   db: Db

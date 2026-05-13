@@ -1,6 +1,6 @@
-import { createDb } from './db/client'
-import { buildApp } from './index'
-import { getDatabaseAuthToken, getDatabaseUrl } from './env'
+import { createDb } from './db/client.js'
+import { buildApp } from './index.js'
+import { getDatabaseAuthToken, getDatabaseUrl } from './env.js'
 
 const url = getDatabaseUrl()
 if (!url) {
