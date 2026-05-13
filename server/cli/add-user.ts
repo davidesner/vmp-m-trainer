@@ -8,6 +8,7 @@ import { eq } from 'drizzle-orm'
 import { createDb } from '../db/client'
 import { users } from '../db/schema'
 import { hashPassword } from '../auth/password'
+import { getDatabaseAuthToken, getDatabaseUrl } from '../env'
 
 const email = process.argv[2]?.toLowerCase()
 if (!email || !email.includes('@')) {
@@ -31,10 +32,10 @@ function promptPassword(label: string): Promise<string> {
   })
 }
 
-const url = process.env.DATABASE_URL
-if (!url) { console.error('DATABASE_URL not set'); process.exit(1) }
+const url = getDatabaseUrl()
+if (!url) { console.error('No database URL set — expected DATABASE_URL or TURSO_DATABASE_URL'); process.exit(1) }
 
-const db = createDb(url, process.env.DATABASE_AUTH_TOKEN)
+const db = createDb(url, getDatabaseAuthToken())
 await db.applyMigrations()
 
 const existing = await db.db.select().from(users).where(eq(users.email, email)).limit(1)

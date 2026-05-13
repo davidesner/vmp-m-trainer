@@ -1,10 +1,13 @@
 import { createDb } from './db/client'
 import { buildApp } from './index'
+import { getDatabaseAuthToken, getDatabaseUrl } from './env'
 
-const url = process.env.DATABASE_URL
-if (!url) throw new Error('DATABASE_URL not set on Vercel')
+const url = getDatabaseUrl()
+if (!url) {
+  throw new Error('No database URL set — expected DATABASE_URL or TURSO_DATABASE_URL')
+}
 
-const db = createDb(url, process.env.DATABASE_AUTH_TOKEN)
+const db = createDb(url, getDatabaseAuthToken())
 
 // Migrations are run via the build step (`pnpm db:migrate`) before deploy.
 // We do NOT run migrations per-request — that would slow cold starts.
