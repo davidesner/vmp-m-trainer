@@ -51,12 +51,19 @@ export function sampleByMix(
   for (const b of Object.keys(buckets) as Bucket[]) buckets[b] = shuffle(buckets[b], rng)
 
   if (mode === 'weak') {
+    // Weakness = questions you got wrong (weak) AND questions you haven't seen yet (new).
+    // Fall back to stale before known so frequently-correct material comes last.
     const result: Question[] = []
-    for (const q of buckets.weak) { if (result.length < count) result.push(q) }
-    for (const b of FILL_ORDER) {
+    const taken = new Set<Question>()
+    const priority = shuffle([...buckets.weak, ...buckets.new], rng)
+    for (const q of priority) {
+      if (result.length >= count) break
+      if (!taken.has(q)) { result.push(q); taken.add(q) }
+    }
+    for (const b of ['stale', 'known'] as Bucket[]) {
       for (const q of buckets[b]) {
         if (result.length >= count) break
-        if (!result.includes(q)) result.push(q)
+        if (!taken.has(q)) { result.push(q); taken.add(q) }
       }
     }
     return shuffle(result, rng).slice(0, count)
