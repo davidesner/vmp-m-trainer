@@ -86,6 +86,59 @@ describe('sampleByMix', () => {
     expect(out).toHaveLength(10)
   })
 
+  it('"weak" treats unseen (new) questions as weakness, not just high-error ones', () => {
+    // 5 weak (id 1-5), 5 known (id 6-10), rest (id 11-100) are new (unseen).
+    const progress: ProgressStore['questions'] = {}
+    for (let i = 1; i <= 5; i++) progress[i] = {
+      attempts: [
+        { at: '2026-05-01T00:00:00Z', correct: false, mode: 'practice' },
+        { at: '2026-05-02T00:00:00Z', correct: false, mode: 'practice' },
+      ],
+      lastSeen: '2026-05-02T00:00:00Z',
+    }
+    for (let i = 6; i <= 10; i++) progress[i] = {
+      attempts: [{ at: '2026-05-03T00:00:00Z', correct: true, mode: 'practice' }],
+      lastSeen: '2026-05-03T00:00:00Z',
+    }
+
+    const out = sampleByMix(all, progress, 'weak', 20, NOW, () => 0.5)
+    expect(out).toHaveLength(20)
+    // All 5 weak + 15 new should be picked before any of the 5 known.
+    const knownPicked = out.filter(q => q.id >= 6 && q.id <= 10)
+    expect(knownPicked).toHaveLength(0)
+    const weakPicked = out.filter(q => q.id <= 5)
+    const newPicked = out.filter(q => q.id >= 11)
+    expect(weakPicked).toHaveLength(5)
+    expect(newPicked).toHaveLength(15)
+  })
+
+  it('"weak" falls back to stale before known when weak+new is exhausted', () => {
+    // 2 weak (id 1-2), 30 stale (id 3-32), 30 known (id 33-62), 38 new (id 63-100).
+    const progress: ProgressStore['questions'] = {}
+    for (let i = 1; i <= 2; i++) progress[i] = {
+      attempts: [
+        { at: '2026-05-01T00:00:00Z', correct: false, mode: 'practice' },
+        { at: '2026-05-02T00:00:00Z', correct: false, mode: 'practice' },
+      ],
+      lastSeen: '2026-05-02T00:00:00Z',
+    }
+    for (let i = 3; i <= 32; i++) progress[i] = {
+      attempts: [{ at: '2026-04-20T00:00:00Z', correct: true, mode: 'practice' }],
+      lastSeen: '2026-04-20T00:00:00Z',
+    }
+    for (let i = 33; i <= 62; i++) progress[i] = {
+      attempts: [{ at: '2026-05-03T00:00:00Z', correct: true, mode: 'practice' }],
+      lastSeen: '2026-05-03T00:00:00Z',
+    }
+    // ids 63-100 are new
+
+    // Ask for 60: should consume 2 weak + 38 new + 20 stale, with NO known.
+    const out = sampleByMix(all, progress, 'weak', 60, NOW, () => 0.5)
+    expect(out).toHaveLength(60)
+    const knownPicked = out.filter(q => q.id >= 33 && q.id <= 62)
+    expect(knownPicked).toHaveLength(0)
+  })
+
   it('"mix" respects bucket targets and cascade-fills overflow proportionally', () => {
     // Pool: 100 questions
     // 30 weak (id 1-30), 30 known (id 31-60), 30 stale (id 61-90), 10 new (id 91-100)
