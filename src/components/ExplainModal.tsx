@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useExplanations, type ExplanationFetchResult } from '../hooks/useExplanations'
 import { sanitizeExplanationHtml } from '../lib/sanitize'
 import { buildFollowupLink } from '../lib/claudeDesktopLink'
@@ -13,12 +13,31 @@ export default function ExplainModal({ qid, open, onClose }: Props) {
   const { fetchExplanation } = useExplanations()
   const [result, setResult] = useState<ExplanationFetchResult | null>(null)
   const [loading, setLoading] = useState(false)
+  const onCloseRef = useRef(onClose)
+
+  useEffect(() => { onCloseRef.current = onClose }, [onClose])
 
   useEffect(() => {
     if (!open) return
     setLoading(true)
     fetchExplanation(qid).then(r => { setResult(r); setLoading(false) })
   }, [open, qid, fetchExplanation])
+
+  // Intercept the mobile back-swipe so it closes the modal instead of leaving the test.
+  useEffect(() => {
+    if (!open) return
+    window.history.pushState({ explainModal: true }, '')
+    let poppedByBrowser = false
+    const handlePopState = () => {
+      poppedByBrowser = true
+      onCloseRef.current()
+    }
+    window.addEventListener('popstate', handlePopState)
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+      if (!poppedByBrowser) window.history.back()
+    }
+  }, [open])
 
   if (!open) return null
 
