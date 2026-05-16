@@ -7,6 +7,7 @@ import { authRoutes, meRoute } from './auth/routes.js'
 import { progressRoutes } from './routes/progress.js'
 import { attemptsRoutes } from './routes/attempts.js'
 import { testHistoryRoutes } from './routes/testHistory.js'
+import { feedbackRoutes } from './routes/feedback.js'
 
 export interface BuildAppOptions {
   db: Db
@@ -25,6 +26,7 @@ export function buildApp(opts: BuildAppOptions) {
   app.route('/api/progress', progressRoutes(opts))
   app.route('/api/attempts', attemptsRoutes(opts))
   app.route('/api/test-history', testHistoryRoutes(opts))
+  app.route('/api/feedback', feedbackRoutes())
 
   // For self-host: serve the built SPA. Skipped in dev (Vite serves it).
   // For Vercel: skipped (rewrites handle it).

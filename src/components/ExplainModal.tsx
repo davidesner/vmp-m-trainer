@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useExplanations, type ExplanationFetchResult } from '../hooks/useExplanations'
 import { sanitizeExplanationHtml } from '../lib/sanitize'
 import { buildFollowupLink } from '../lib/claudeDesktopLink'
+import FeedbackForm from './FeedbackForm'
 
 interface Props {
   qid: number
@@ -70,10 +71,13 @@ export default function ExplainModal({ qid, open, onClose }: Props) {
           {loading && <div className="text-sm text-neutral-500">Načítám…</div>}
 
           {!loading && result?.status === 'hit' && (
-            <article
-              className="prose prose-neutral max-w-none prose-headings:text-neutral-900 prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-6 prose-h2:mb-3 prose-h3:text-base prose-h3:mt-4 prose-h3:mb-2 prose-p:my-3 prose-p:leading-relaxed prose-a:text-accent prose-strong:text-neutral-900 prose-img:rounded prose-img:border prose-img:border-neutral-200 [&_svg]:max-w-full [&_svg]:h-auto [&_svg]:my-4 [&_svg]:rounded [&_svg]:border [&_svg]:border-neutral-200 [&_svg]:bg-white [&_table]:text-sm [&_th]:bg-neutral-100"
-              dangerouslySetInnerHTML={{ __html: sanitizeExplanationHtml(result.html ?? '') }}
-            />
+            <>
+              <article
+                className="prose prose-neutral max-w-none prose-headings:text-neutral-900 prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-6 prose-h2:mb-3 prose-h3:text-base prose-h3:mt-4 prose-h3:mb-2 prose-p:my-3 prose-p:leading-relaxed prose-a:text-accent prose-strong:text-neutral-900 prose-img:rounded prose-img:border prose-img:border-neutral-200 [&_svg]:max-w-full [&_svg]:h-auto [&_svg]:my-4 [&_svg]:rounded [&_svg]:border [&_svg]:border-neutral-200 [&_svg]:bg-white [&_table]:text-sm [&_th]:bg-neutral-100"
+                dangerouslySetInnerHTML={{ __html: sanitizeExplanationHtml(result.html ?? '') }}
+              />
+              <FeedbackForm qid={qid} />
+            </>
           )}
 
           {!loading && result?.status === 'miss' && (
