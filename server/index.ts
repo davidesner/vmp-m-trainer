@@ -12,6 +12,8 @@ import { feedbackRoutes } from './routes/feedback.js'
 export interface BuildAppOptions {
   db: Db
   cookieSecure: boolean
+  /** Shared invite code required for self-registration. Unset disables signup. */
+  signupCode?: string
 }
 
 export function buildApp(opts: BuildAppOptions) {

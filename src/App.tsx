@@ -9,6 +9,7 @@ import Weak from './routes/Weak'
 import Stats from './routes/Stats'
 import Settings from './routes/Settings'
 import Login from './routes/Login'
+import Register from './routes/Register'
 
 function Shell({ children }: { children: React.ReactNode }) {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/" element={<RequireAuth><Shell><Home /></Shell></RequireAuth>} />
           <Route path="/test" element={<RequireAuth><Shell><Test /></Shell></RequireAuth>} />
           <Route path="/practice" element={<RequireAuth><Shell><Practice /></Shell></RequireAuth>} />

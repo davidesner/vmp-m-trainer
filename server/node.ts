@@ -7,7 +7,7 @@ import path from 'node:path'
 import fs from 'node:fs'
 import { createDb } from './db/client.js'
 import { buildApp } from './index.js'
-import { getDatabaseAuthToken, getDatabaseUrl } from './env.js'
+import { getDatabaseAuthToken, getDatabaseUrl, getSignupCode } from './env.js'
 
 const url = getDatabaseUrl() ?? 'file:./data/app.db'
 const cookieSecure = process.env.SESSION_COOKIE_SECURE === 'true'
@@ -16,7 +16,7 @@ const port = Number(process.env.PORT ?? 3001)
 const db = createDb(url, getDatabaseAuthToken())
 await db.applyMigrations()
 
-const { app } = buildApp({ db, cookieSecure })
+const { app } = buildApp({ db, cookieSecure, signupCode: getSignupCode() })
 
 // Serve built SPA + static assets from dist/ if it exists (production).
 const distDir = path.resolve('dist')
