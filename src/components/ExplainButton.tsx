@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import ExplainModal from './ExplainModal'
+import type { Question } from '../types'
 
 interface Props {
-  qid: number
+  question: Question
+  userAnswer?: 'a' | 'b' | 'c' | null
 }
 
-export default function ExplainButton({ qid }: Props) {
+export default function ExplainButton({ question, userAnswer }: Props) {
   const [open, setOpen] = useState(false)
   return (
     <>
@@ -16,7 +18,7 @@ export default function ExplainButton({ qid }: Props) {
       >
         🧠 Vysvětlení
       </button>
-      <ExplainModal qid={qid} open={open} onClose={() => setOpen(false)} />
+      <ExplainModal question={question} userAnswer={userAnswer} open={open} onClose={() => setOpen(false)} />
     </>
   )
 }

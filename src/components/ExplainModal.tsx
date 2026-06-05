@@ -2,15 +2,18 @@ import { useEffect, useRef, useState } from 'react'
 import { useExplanations, type ExplanationFetchResult } from '../hooks/useExplanations'
 import { sanitizeExplanationHtml } from '../lib/sanitize'
 import { buildFollowupLink } from '../lib/claudeDesktopLink'
+import type { Question } from '../types'
 import FeedbackForm from './FeedbackForm'
 
 interface Props {
-  qid: number
+  question: Question
+  userAnswer?: 'a' | 'b' | 'c' | null
   open: boolean
   onClose: () => void
 }
 
-export default function ExplainModal({ qid, open, onClose }: Props) {
+export default function ExplainModal({ question, userAnswer, open, onClose }: Props) {
+  const qid = question.id
   const { fetchExplanation } = useExplanations()
   const [result, setResult] = useState<ExplanationFetchResult | null>(null)
   const [loading, setLoading] = useState(false)
@@ -42,7 +45,7 @@ export default function ExplainModal({ qid, open, onClose }: Props) {
 
   if (!open) return null
 
-  const followupUrl = buildFollowupLink({ qid })
+  const followupUrl = buildFollowupLink({ question, userAnswer })
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 sm:p-6" onClick={onClose}>
@@ -56,8 +59,10 @@ export default function ExplainModal({ qid, open, onClose }: Props) {
             {result?.status === 'hit' && (
               <a
                 href={followupUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-3 py-2 bg-accent text-white text-xs sm:text-sm rounded hover:opacity-90 transition whitespace-nowrap"
-                title="Doplňující dotaz v Claude Desktop"
+                title="Doplňující dotaz v Claude"
               >
                 <span className="sm:hidden">💬 Claude ↗</span>
                 <span className="hidden sm:inline">💬 Zeptat se Claude ↗</span>
@@ -83,7 +88,7 @@ export default function ExplainModal({ qid, open, onClose }: Props) {
           {!loading && result?.status === 'miss' && (
             <div className="bg-amber-50 border border-amber-200 rounded p-5">
               <p className="text-base">Vysvětlení k téhle otázce zatím nemáme. Můžeš se zeptat Claude přímo:</p>
-              <a href={followupUrl} className="inline-flex mt-3 items-center justify-center px-4 py-3 bg-primary text-white rounded font-medium hover:bg-primary-dark transition">
+              <a href={followupUrl} target="_blank" rel="noopener noreferrer" className="inline-flex mt-3 items-center justify-center px-4 py-3 bg-primary text-white rounded font-medium hover:bg-primary-dark transition">
                 ▶ Otevřít Claude
               </a>
             </div>

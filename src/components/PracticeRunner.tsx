@@ -43,7 +43,7 @@ export default function PracticeRunner({ questions, onDone }: Props) {
       />
 
       <div className="flex flex-wrap justify-between items-center gap-2 mt-6">
-        <ExplainButton qid={q.id} />
+        <ExplainButton question={q} userAnswer={revealed ? selected : null} />
         {!revealed ? (
           <button onClick={submit} disabled={selected === null}
             className="px-4 py-2 bg-primary text-white rounded text-sm font-semibold disabled:opacity-40 ml-auto">

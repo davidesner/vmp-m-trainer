@@ -44,7 +44,7 @@ export default function TestResults({ questions, answers, onHome }: Props) {
         {questions.map(q => (
           <div key={q.id} className="bg-white border border-neutral-200 rounded p-4 sm:p-5">
             <QuestionCard question={q} selectedKey={answers[q.id] ?? null} revealedCorrect={q.correct} onSelect={() => {}} />
-            <div className="mt-3"><ExplainButton qid={q.id} /></div>
+            <div className="mt-3"><ExplainButton question={q} userAnswer={answers[q.id] ?? null} /></div>
           </div>
         ))}
       </div>
