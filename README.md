@@ -8,7 +8,7 @@ Webová appka na trénink otázek pro zkoušku VMP M (Vůdce malého plavidla, k
 
 - Frontend: Vite + React 19 SPA
 - API: Hono + Drizzle ORM nad libSQL (SQLite dialect)
-- Auth: session cookie + argon2, uživatelé se zakládají ručně CLI
+- Auth: session cookie + argon2; uživatelé se zakládají CLI nebo self-service registrací s pozvánkovým kódem
 - Deploy: Vercel + Turso (free), nebo single-container Docker (SQLite v volume)
 
 ## Setup (jednorázově)
@@ -20,6 +20,25 @@ cp .env.example .env.local
 pnpm db:migrate                    # vytvoří data/app.db
 pnpm user:add <email>              # založí prvního uživatele
 ```
+
+## Další uživatelé (registrace pozvánkovým kódem)
+
+Kromě CLI (`pnpm user:add`) se uživatelé mohou zaregistrovat sami na `/register`,
+pokud je nastavený sdílený kód:
+
+```bash
+SIGNUP_CODE=nejaky-tajny-kod      # v .env.local nebo env varech na Vercelu
+```
+
+- Když je `SIGNUP_CODE` nastavený, na přihlašovací stránce se objeví odkaz
+  „Vytvořit účet". Kdo zná kód, založí si účet sám (email + heslo ≥ 8 znaků).
+- Když je prázdný/nenastavený, registrace je vypnutá a `/register` to oznámí —
+  uživatele pak zakládáš jen přes `pnpm user:add`.
+- Endpoint `POST /api/auth/register` je rate-limitovaný (5 pokusů / 15 min / IP)
+  a kód se porovnává v konstantním čase.
+
+Kód kdykoli změníš (nebo smažeš, čímž registraci zase vypneš) — existující účty
+to neovlivní.
 
 ## Spuštění (lokálně)
 
@@ -64,7 +83,7 @@ Volume `/data` drží SQLite soubor — přežije restart.
 | `pnpm scrape` | scraper otázek |
 | `pnpm db:generate` | generuje migrace z drizzle schema |
 | `pnpm db:migrate` | aplikuje migrace |
-| `pnpm user:add <email>` | založí uživatele (interaktivně se zeptá na heslo) |
+| `pnpm user:add <email>` | založí uživatele z CLI (interaktivně se zeptá na heslo); alternativa k registraci kódem |
 | `pnpm package-skill` | zazipuje skill `explain-vmp-question` (pro batch generování vysvětlení) |
 | `pnpm batch-explanations` | batch generuje chybějící vysvětlení do `public/explanations/` |
 

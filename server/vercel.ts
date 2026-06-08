@@ -1,6 +1,6 @@
 import { createDb } from './db/client.js'
 import { buildApp } from './index.js'
-import { getDatabaseAuthToken, getDatabaseUrl } from './env.js'
+import { getDatabaseAuthToken, getDatabaseUrl, getSignupCode } from './env.js'
 
 const url = getDatabaseUrl()
 if (!url) {
@@ -12,6 +12,6 @@ const db = createDb(url, getDatabaseAuthToken())
 // Migrations are run via the build step (`pnpm db:migrate`) before deploy.
 // We do NOT run migrations per-request — that would slow cold starts.
 
-const { app } = buildApp({ db, cookieSecure: true })
+const { app } = buildApp({ db, cookieSecure: true, signupCode: getSignupCode() })
 
 export default app

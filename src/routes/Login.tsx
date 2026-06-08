@@ -1,11 +1,11 @@
 import { useState, type FormEvent } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 
 interface LocationState { from?: { pathname?: string } }
 
 export default function Login() {
-  const { login } = useAuth()
+  const { login, signupEnabled } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
   const [email, setEmail] = useState('')
@@ -48,6 +48,12 @@ export default function Login() {
           className="w-full bg-primary text-white rounded py-2 hover:bg-primary-dark disabled:opacity-50">
           {busy ? 'Přihlašuji…' : 'Přihlásit'}
         </button>
+        {signupEnabled && (
+          <p className="text-sm text-neutral-600 mt-4 text-center">
+            Nemáš účet?{' '}
+            <Link to="/register" className="text-primary hover:underline">Vytvořit účet</Link>
+          </p>
+        )}
       </form>
     </div>
   )
