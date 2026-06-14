@@ -13,7 +13,7 @@ export const GROUPS: Group[] = [
   { id: 'plavebni-provoz',             name: 'Plavební provoz',                              zkratky: ['PP1'] },
   { id: 'nocni-denni-signalizace',     name: 'Noční a denní signalizace',                    zkratky: ['PP2'] },
   { id: 'signalizace-rizeni-plavby',   name: 'Signalizace pro řízení plavby na vodní cestě', zkratky: ['PP3'] },
-  { id: 'zvukove-signaly',             name: 'Zvukové signály',                              zkratky: ['PP4'] },
+  { id: 'zvukove-signaly',             name: 'Zvukové signály a signální znaky',             zkratky: ['PP4'] },
   { id: 'vytyceni-vodnich-cest',       name: 'Vytyčení vodních cest',                        zkratky: []      },
   { id: 'zaklady-konstrukce-plavidel', name: 'Základy konstrukce plavidel',                  zkratky: ['TZ']  },
   { id: 'zaklady-prvni-pomoci',        name: 'Základy první pomoci',                         zkratky: ['ZP']  },
