@@ -1,0 +1,78 @@
+<article class="vmp-explanation">
+  <h2>Poledník na námořní mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Poledník spojuje body se stejnou <strong>zeměpisnou délkou</strong>. Jde o imaginární půlkružnici
+    táhnoucí se od severního k jižnímu pólu, přičemž všechny body ležící na jednom poledníku sdílejí
+    tutéž hodnotu geografické délky (longitude) vyjádřenou ve stupních od 0° (nultý poledník, Greenwich)
+    do 180° východně nebo západně.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Souřadnicová síť zemského povrchu se skládá ze dvou druhů čar:
+  </p>
+  <ul>
+    <li><strong>Rovnoběžky (paralely)</strong> — vodorovné kružnice rovnoběžné s rovníkem; spojují místa
+      se stejnou <em>zeměpisnou šířkou</em> (latitude). Rovník je nultá rovnoběžka (0°), póly jsou 90° S/J.</li>
+    <li><strong>Poledníky (meridiány)</strong> — svislé půlkružnice procházející oběma póly; spojují místa
+      se stejnou <em>zeměpisnou délkou</em> (longitude).</li>
+  </ul>
+  <p>
+    Na Mercatorově projekci (nejběžnější námořní mapě) jsou poledníky zobrazeny jako svislé rovnoběžné přímky
+    a rovnoběžky jako vodorovné přímky. Tato projekce zachovává úhly (je úhlověrná/konformní), takže kurz
+    odečtený úhloměrem z mapy je přímo použitelný na kompasu.
+  </p>
+  <p>
+    Izobáty (čáry stejné hloubky) jsou zcela jiný typ vrstevnicové čáry — nesouvisí se zeměpisnými
+    souřadnicemi, ale s bathymetrií mořského dna.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;display:block;margin:12px auto;">
+    <!-- Pozadí -->
+    <rect x="0" y="0" width="340" height="220" fill="#e8f4fb" rx="8"/>
+    <!-- Rovnoběžky (vodorovné) -->
+    <line x1="20" y1="55" x2="320" y2="55" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <line x1="20" y1="110" x2="320" y2="110" stroke="#c0392b" stroke-width="2.5"/>
+    <line x1="20" y1="165" x2="320" y2="165" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <!-- Poledníky (svislé) -->
+    <line x1="80" y1="10" x2="80" y2="210" stroke="#2471a3" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <line x1="170" y1="10" x2="170" y2="210" stroke="#2471a3" stroke-width="2.5"/>
+    <line x1="260" y1="10" x2="260" y2="210" stroke="#2471a3" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <!-- Popisky rovnoběžek -->
+    <text x="325" y="59" font-size="11" fill="#c0392b" text-anchor="start">φ</text>
+    <text x="325" y="114" font-size="11" fill="#c0392b" text-anchor="start" font-weight="bold">0° (rovník)</text>
+    <text x="325" y="169" font-size="11" fill="#c0392b" text-anchor="start">φ</text>
+    <!-- Popisky poledníků -->
+    <text x="80" y="8" font-size="11" fill="#2471a3" text-anchor="middle">λ</text>
+    <text x="170" y="8" font-size="11" fill="#2471a3" text-anchor="middle" font-weight="bold">0° (Greenwich)</text>
+    <text x="260" y="8" font-size="11" fill="#2471a3" text-anchor="middle">λ</text>
+    <!-- Legenda -->
+    <rect x="10" y="178" width="200" height="36" fill="white" fill-opacity="0.8" rx="4"/>
+    <line x1="18" y1="190" x2="40" y2="190" stroke="#2471a3" stroke-width="2.5"/>
+    <text x="45" y="194" font-size="11" fill="#2471a3">Poledník — stejná délka (λ)</text>
+    <line x1="18" y1="207" x2="40" y2="207" stroke="#c0392b" stroke-width="2.5"/>
+    <text x="45" y="211" font-size="11" fill="#c0392b">Rovnoběžka — stejná šířka (φ)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při práci s námořní mapou (papírovou i elektronickou ECDIS) navigátor určuje polohu lodě pomocí
+    zeměpisné šířky a délky. Zeměpisná délka se odečítá podél <em>vodorovné</em> osy mapy (spodní nebo
+    horní okraj) a odpovídá poledníkům (svislým čarám). Zeměpisná šířka se odečítá podél <em>svislé</em>
+    osy (pravý nebo levý okraj) a odpovídá rovnoběžkám (vodorovným čarám).
+  </p>
+  <p>
+    Praktická pomůcka: <em>„Poledník jde od pólu k pólu"</em> — jako poledne Slunce stojí nejvýše
+    na poledníku daného místa. Poledníky tedy svírají pravý úhel s rovníkem a procházejí oběma póly.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Bowditch — <em>American Practical Navigator</em>, kap. 2 (Geodézie a souřadnicové systémy)</li>
+    <li>ČSN 73 0401 / ISO 6709 — definice zeměpisných souřadnic</li>
+    <li>Admiralty Manual of Navigation, Vol. 1, kap. 1 (The Earth and its Co-ordinates)</li>
+  </ol>
+</article>

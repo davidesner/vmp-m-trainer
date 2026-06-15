@@ -1,0 +1,7 @@
+{
+  "qid": 157,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["WMO Technické předpisy WMO-No. 49", "Bowditch — American Practical Navigator (Pub. No. 9)", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-sonnet-4-6"
+}

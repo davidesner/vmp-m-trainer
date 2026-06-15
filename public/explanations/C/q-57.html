@@ -1,0 +1,93 @@
+<article class="vmp-explanation">
+  <h2>Křižující se kurzy dvou lodí se strojním pohonem</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správnou odpovědí je, že <strong>loď X musí uvolnit cestu</strong>. Pravidlo COLREG 15 stanoví, že při křižujících se kursech musí uvolnit cestu ta loď, která má druhou loď na svém <strong>pravém boku</strong>. Z obrázku je patrné, že loď X má loď Y po pravém boku — loď X proto musí dát přednost a uhnout.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972) upravují chování lodí při křižování kursů v <strong>Pravidle 15 – Křižující se kursy</strong>:
+  </p>
+  <blockquote>
+    Jestliže se kursy dvou plavidel se strojním pohonem kříží tak, že hrozí nebezpečí srážky, musí plavidlo, které má druhé plavidlo po své pravé straně, uvolnit cestu a pokud je to možné, vyhnout se přeplutí přídě druhého plavidla.
+  </blockquote>
+  <p>
+    Loď, které je dána přednost (zde loď Y), je označována jako <em>privileged vessel</em> (privilegované plavidlo) a musí zachovat svůj kurs a rychlost (Pravidlo 17). Loď, která ustupuje (loď X), je <em>give-way vessel</em> a je povinna provést včasný, výrazný manévr — zpravidla odklonění doprava (vpravo), aby proplula za zádí privilegovaného plavidla.
+  </p>
+  <p>
+    Odpověď „obě musí změnit směr plavby vpravo" popisuje situaci při protijedoucích kursech (Pravidlo 14), nikoli křižování kursů, a je proto <strong>nesprávná</strong>.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Situace pohledem shora — šipky ukazují původní kursy, loď X má loď Y na svém pravém boku:</p>
+
+  <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;width:100%;display:block;margin:0 auto;">
+    <defs>
+      <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#1a73e8;" />
+      </marker>
+      <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#d32f2f;" />
+      </marker>
+      <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#888;" />
+      </marker>
+    </defs>
+
+    <!-- Loď X (vlevo dole) -->
+    <g transform="translate(60,180)">
+      <rect x="-18" y="-10" width="36" height="20" rx="4" style="fill:#1a73e8;stroke:#0d47a1;stroke-width:1.5;" />
+      <polygon points="18,-8 30,0 18,8" style="fill:#0d47a1;" />
+      <text x="0" y="35" text-anchor="middle" style="font-size:15px;font-weight:bold;fill:#1a73e8;">X</text>
+      <text x="0" y="50" text-anchor="middle" style="font-size:11px;fill:#555;">(ustupuje)</text>
+    </g>
+
+    <!-- Loď Y (vpravo dole) -->
+    <g transform="translate(360,180)">
+      <rect x="-18" y="-10" width="36" height="20" rx="4" style="fill:#d32f2f;stroke:#b71c1c;stroke-width:1.5;" />
+      <polygon points="-18,-8 -30,0 -18,8" style="fill:#b71c1c;" />
+      <text x="0" y="35" text-anchor="middle" style="font-size:15px;font-weight:bold;fill:#d32f2f;">Y</text>
+      <text x="0" y="50" text-anchor="middle" style="font-size:11px;fill:#555;">(má přednost)</text>
+    </g>
+
+    <!-- Původní kurs X (šikmo vpravo nahoru, přerušovaně) -->
+    <line x1="90" y1="170" x2="230" y2="60" stroke="#1a73e8" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowBlue)" />
+
+    <!-- Původní kurs Y (šikmo vlevo nahoru, přerušovaně) -->
+    <line x1="330" y1="170" x2="200" y2="60" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowRed)" />
+
+    <!-- Průsečík kursů -->
+    <circle cx="215" cy="65" r="7" style="fill:#ff9800;stroke:#e65100;stroke-width:1.5;" />
+    <text x="225" y="58" style="font-size:11px;fill:#e65100;font-weight:bold;">nebezpečí srážky</text>
+
+    <!-- Ustupovací manévr lodi X (zahnutí doprava, za záď Y) -->
+    <path d="M90,170 Q170,220 310,155" stroke="#1a73e8" stroke-width="2" fill="none" stroke-dasharray="3,3" marker-end="url(#arrowBlue)" />
+    <text x="170" y="235" text-anchor="middle" style="font-size:11px;fill:#1a73e8;">manévr lodi X (uhne vpravo — za záď Y)</text>
+
+    <!-- Popis "pravý bok X = strana kde je Y" -->
+    <text x="210" y="195" text-anchor="middle" style="font-size:11px;fill:#555;">Y je na pravém boku X</text>
+    <text x="210" y="210" text-anchor="middle" style="font-size:11px;fill:#555;">⟹ X musí uvolnit cestu</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V reálné plavbě kapitán lodi X musí:
+  </p>
+  <ol>
+    <li>Co nejdříve identifikovat, zda druhá loď leží na jeho <strong>pravém nebo levém boku</strong> — pokud vpravo a kursy se kříží, je loď X v roli ustupujícího plavidla.</li>
+    <li>Provést <strong>včasný a výrazný manévr</strong> — ideálně odklon vpravo tak, aby proplul za zádí lodi Y.</li>
+    <li>Pokud situace neumožňuje bezpečné uhnutí, je možné i zpomalení nebo zastavení.</li>
+    <li>Loď Y (privilegovaná) udržuje kurs a rychlost, ale pokud loď X zjevně neustupuje, musí i loď Y přijmout opatření k odvrácení srážky (Pravidlo 17c).</li>
+  </ol>
+  <p>
+    Navigátoři si pravidlo snadno zapamatují: <em>„Červené světlo (přívěsní světlo na pravém boku) = Stop — dej přednost!"</em>
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, <strong>Pravidlo 15</strong> (Křižující se kursy), <strong>Pravidlo 17</strong> (Jednání privilegovaného plavidla)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, §&nbsp;25 (inkorporace COLREG do českého práva)</li>
+  </ol>
+</article>

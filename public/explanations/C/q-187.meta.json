@@ -1,0 +1,7 @@
+{
+  "qid": 187,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["WMO Manual on Codes WMO-No. 306", "WMO Manual on the Global Observing System WMO-No. 544", "COLREG 1972 pravidlo 19", "zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-sonnet-4-6"
+}

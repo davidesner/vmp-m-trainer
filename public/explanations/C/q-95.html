@@ -1,0 +1,83 @@
+<article class="vmp-explanation">
+  <h2>Měření rychlosti plavidla metodou bočního logu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>4 uzle</strong>. Při metodě bočního logu se měří čas, za který plavidlo urazí svou vlastní délku. Rychlost se pak vypočítá jako délka plavidla dělená naměřeným časem a výsledek se převede na uzly. Pro plavidlo délky 6 metrů a čas 3 sekundy vychází rychlost přibližně <strong>3,88 uzlu ≈ 4 uzly</strong>.
+  </p>
+
+  <h3>Výpočet krok za krokem</h3>
+  <ol>
+    <li>Rychlost v m/s = délka ÷ čas = 6 m ÷ 3 s = <strong>2 m/s</strong></li>
+    <li>Převod na uzly: 1 uzel = 0,5144 m/s</li>
+    <li>Rychlost v uzlech = 2 ÷ 0,5144 ≈ <strong>3,88 uzlu</strong>, zaokrouhleno na <strong>4 uzly</strong></li>
+  </ol>
+
+  <p>
+    Praktická pomůcka: počet uzlů ≈ délka v metrech (m) × 2 ÷ čas (s). Pro 6 m a 3 s: 6 × 2 ÷ 3 = 4 uzly. Tato aproximace vychází z toho, že 1 uzel ≈ 0,5 m/s.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" style="max-width:520px;width:100%;background:#f0f8ff;border-radius:8px;">
+    <!-- Vodní hladina -->
+    <rect x="0" y="120" width="520" height="80" fill="#a8d8ea" opacity="0.5"/>
+    <!-- Vlnky -->
+    <polyline points="0,120 30,115 60,120 90,115 120,120 150,115 180,120 210,115 240,120 270,115 300,120 330,115 360,120 390,115 420,120 450,115 480,120 510,115 520,120" fill="none" stroke="#5ab4d6" stroke-width="1.5"/>
+
+    <!-- Plavidlo (obdélník schematicky) -->
+    <rect x="60" y="90" width="120" height="35" rx="5" fill="#e8c170" stroke="#8b6914" stroke-width="2"/>
+    <polygon points="180,90 210,107 180,125" fill="#e8c170" stroke="#8b6914" stroke-width="2"/>
+    <text x="120" y="112" text-anchor="middle" font-size="12" fill="#4a3800">Plavidlo</text>
+
+    <!-- Šipka délky -->
+    <line x1="60" y1="75" x2="210" y2="75" stroke="#c0392b" stroke-width="2" marker-end="url(#arrowRed)" marker-start="url(#arrowRedStart)"/>
+    <text x="135" y="68" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">6 m</text>
+
+    <!-- Čas a výsledek vpravo -->
+    <rect x="290" y="60" width="200" height="100" rx="8" fill="white" stroke="#5ab4d6" stroke-width="2"/>
+    <text x="390" y="85" text-anchor="middle" font-size="13" fill="#2c3e50" font-weight="bold">Boční log – výpočet</text>
+    <text x="390" y="108" text-anchor="middle" font-size="12" fill="#333">v = 6 m ÷ 3 s = 2 m/s</text>
+    <text x="390" y="128" text-anchor="middle" font-size="12" fill="#333">2 m/s ÷ 0,5144 ≈ 3,88 kn</text>
+    <text x="390" y="150" text-anchor="middle" font-size="14" fill="#c0392b" font-weight="bold">≈ 4 uzly</text>
+
+    <!-- Definice šipek -->
+    <defs>
+      <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#c0392b"/>
+      </marker>
+      <marker id="arrowRedStart" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto-start-reverse">
+        <path d="M0,0 L0,6 L8,3 z" fill="#c0392b"/>
+      </marker>
+    </defs>
+
+    <!-- Čas -->
+    <text x="135" y="175" text-anchor="middle" font-size="12" fill="#2c3e50">Čas průjezdu: <tspan font-weight="bold">3 sekundy</tspan></text>
+  </svg>
+
+  <h3>Pozadí</h3>
+  <p>
+    <strong>Boční log</strong> (anglicky <em>Dutchman's log</em> nebo <em>chip log</em>) je jedna z nejstarších metod měření rychlosti plavidla. Princip spočívá v tom, že na záď (nebo příď) plavidla se hodí plovák nebo se označí místo na vodní hladině a pak se měří čas, za který plavidlo urazí svou vlastní délku. Metoda nevyžaduje žádné přístroje — stačí stopky a znalost délky plavidla.
+  </p>
+  <p>
+    Uzel (kn, knot) je námořní jednotka rychlosti rovná jedné námořní míli za hodinu (1 852 m/h = 0,5144 m/s). Přepočet z m/s na uzly: <strong>v [kn] = v [m/s] ÷ 0,5144</strong>.
+  </p>
+  <p>
+    Aproximační vzorec pro rychlou navigační praxi: <strong>v [kn] ≈ délka [m] × 2 ÷ čas [s]</strong>. Tato aproximace funguje díky tomu, že 1 kn ≈ 0,5 m/s (přesněji 0,5144 m/s), chyba je jen asi 3 %.
+  </p>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li><strong>Záložní metoda při poruše logu</strong> — pokud elektronický log nebo GPS selže, boční log poskytne alespoň přibližnou rychlost pro výpočet polohy odhadem (dead reckoning).</li>
+    <li><strong>Kalibrace přístrojů</strong> — boční log se tradičně používal k ověření přesnosti taffrail logu nebo elektronických čidel.</li>
+    <li><strong>Malá plavidla a přístaviště</strong> — pro jachty a motorové čluny, kde moderní log nemusí být přesný v mělkých vodách, je to praktická a rychlá pomůcka.</li>
+    <li><strong>Zkoušky a certifikace</strong> — metoda je součástí osnov námořních zkoušek (kategorie C — příbřežní plavba), kde se ověřuje schopnost navigátora vypočítat rychlost bez přístrojů.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Bowditch — <em>American Practical Navigator</em>, kap. 18 (Speed Measurement, Dutchman's Log)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — požadavky na navigační vybavení a způsobilost</li>
+    <li>Vyhláška č. 315/2000 Sb. — technické požadavky na plavidla</li>
+    <li>Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972), pravidlo 6 — bezpečná rychlost</li>
+  </ol>
+</article>

@@ -1,0 +1,76 @@
+<article class="vmp-explanation">
+  <h2>Hloubka na metrické námořní mapě: čtení číslice 6<sub>3</sub></h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>„6 metrů 3 decimetry"</strong>. Na metrických námořních mapách se hloubky zapisují jako složené číslo, kde velká číslice udává celé metry a malá dolní index udává decimetry. Zápis <strong>6<sub>3</sub></strong> tedy označuje hloubku <strong>6,3 m</strong> (šest metrů a tři decimetry), nikoli 63 metrů ani 6 metrů 3 centimetry.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní mapy vydávané podle standardů Mezinárodní hydrografické organizace (IHO — publikace S-4, S-52) rozlišují dva konvenční systémy záznamu hloubek:
+  </p>
+  <ul>
+    <li><strong>Metrické mapy</strong> — velká číslice = metry, malý dolní index = decimetry. Rozlišení je tedy 0,1 m (1 dm). Centimetry se na námořních mapách neuvádějí, protože nejsou hydrograficky relevantní.</li>
+    <li><strong>Sáhové mapy (starší britský standard)</strong> — číslice udává sáhy a stopy; ty jsou dnes z velké části nahrazeny metrickými verzemi.</li>
+  </ul>
+  <p>
+    Pravidlo pro čtení metrických hloubek platí celosvětově a přejímají ho všechny mapy vydávané SHOM, BSH, UKHO, Vojenský geografický ústav ČR apod. Česká úprava vychází z vyhlášky č. 315/2000 Sb. o posádce lodí a odborné způsobilosti námořníků, která přejímá mezinárodní konvence o nautické dokumentaci.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center; margin: 1em 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="340" height="200" viewBox="0 0 340 200" role="img" aria-label="Vysvětlení zápisu hloubky na metrické mapě">
+      <!-- pozadí -->
+      <rect x="0" y="0" width="340" height="200" rx="10" ry="10" fill="#e8f4fb" stroke="#2979a8" stroke-width="1.5"/>
+
+      <!-- symbol číslice jako na mapě -->
+      <text x="85" y="95" font-size="52" font-weight="bold" font-family="serif" fill="#1a1a1a">6</text>
+      <text x="115" y="110" font-size="30" font-family="serif" fill="#1a1a1a">3</text>
+
+      <!-- šipky a popisky -->
+      <!-- levá šipka na "6" -->
+      <line x1="60" y1="75" x2="88" y2="75" stroke="#d44" stroke-width="2" marker-end="url(#arr)"/>
+      <text x="5" y="72" font-size="11" fill="#d44" font-family="sans-serif">metry</text>
+      <text x="5" y="84" font-size="11" fill="#d44" font-family="sans-serif">(6 m)</text>
+
+      <!-- pravá šipka na "3" -->
+      <line x1="180" y1="108" x2="134" y2="103" stroke="#1a7abf" stroke-width="2" marker-end="url(#arr2)"/>
+      <text x="182" y="105" font-size="11" fill="#1a7abf" font-family="sans-serif">decimetry</text>
+      <text x="182" y="117" font-size="11" fill="#1a7abf" font-family="sans-serif">(3 dm = 0,3 m)</text>
+
+      <!-- výsledek -->
+      <rect x="30" y="140" width="280" height="42" rx="6" ry="6" fill="#2979a8" opacity="0.15" stroke="#2979a8" stroke-width="1"/>
+      <text x="170" y="158" font-size="13" font-family="sans-serif" text-anchor="middle" fill="#1a3a5c" font-weight="bold">Celková hloubka = 6 m + 0,3 m = 6,3 m</text>
+      <text x="170" y="174" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#1a3a5c">(šest metrů tři decimetry)</text>
+
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#d44"/>
+        </marker>
+        <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#1a7abf"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <h3>Proč ne ostatní možnosti?</h3>
+  <ul>
+    <li><strong>„63 metrů"</strong> — tato interpretace by ignorovala odlišnou velikost písma. Kdyby šlo o 63 m, obě číslice by byly stejně velké a psaly by se jako „63" bez dolního indexu.</li>
+    <li><strong>„6 metrů 3 centimetry"</strong> — centimetry se na námořních mapách nepoužívají. Nejmenší jednotkou v metrickém zápisu je decimetr (0,1 m). Centimetrová přesnost nemá pro bezpečnou plavbu praktický význam a hydrografické měření ji ani nezajišťuje.</li>
+  </ul>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování trasy v mělkých vodách (přistaviště, průlivy, rejdy) navigátor odečítá hloubku zapsanou na mapě a porovnává ji s aktuálním ponorem plavidla, přičítá zásobu vody (safety margin) a zohledňuje aktuální výšku hladiny (přílivová oprava z přílivových tabulek). Číst zápis hloubky přesně na decimetry je proto kriticky důležité: záměna 6,3 m za 63 m by vedla k falešnému pocitu bezpečí, záměna za 6,03 m by byla zanedbatelná, ale stále chybná.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>IHO S-4 — Regulations of the IHO for International (INT) Charts and Chart Specifications of the IHO, zejm. oddíl B-373 (zápis hloubek na metrických mapách)</li>
+    <li>IHO S-52 — Specifications for Chart Content and Display Aspects of ECDIS</li>
+    <li>Vyhláška č. 315/2000 Sb. o posádce lodí a odborné způsobilosti námořníků (ČR), která přejímá mezinárodní standardy nautické dokumentace</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, §&nbsp;2 (definice a technické normy)</li>
+  </ol>
+</article>

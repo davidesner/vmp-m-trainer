@@ -1,0 +1,12 @@
+{
+  "qid": 86,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "SOLAS 1974, Kapitola V, Pravidlo 19",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Bowditch — American Practical Navigator (NIMA Pub. No. 9)",
+    "IMO Resolution A.382(X) — Magnetic Compasses"
+  ],
+  "model": "claude-opus-4-7"
+}

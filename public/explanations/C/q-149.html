@@ -1,0 +1,116 @@
+<article class="vmp-explanation">
+  <h2>Bóje bezpečné vody v systému IALA</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Bóje bezpečné vody (anglicky <em>Safe Water Mark</em>) má v systému IALA charakteristické
+    <strong>červené a bílé svislé pruhy</strong>. Tato kombinace barev jednoznačně odlišuje bóji
+    bezpečné vody od ostatních typů bójí a signalizuje, že voda všude kolem bóje je splavná
+    — jedná se typicky o středové bóje, vstupní bóje do přístavů nebo bóje označující landfally.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Systém IALA (International Association of Marine Aids to Navigation and Lighthouse Authorities)
+    definuje pět základních typů námořních značek, přičemž každý typ má přesně stanovenou barevnou
+    kombinaci:
+  </p>
+  <ul>
+    <li><strong>Boční značky (Lateral marks)</strong> — červená nebo zelená (závisí na oblasti IALA-A nebo IALA-B)</li>
+    <li><strong>Kardinální značky (Cardinal marks)</strong> — černá a žlutá</li>
+    <li><strong>Izolované nebezpečí (Isolated Danger marks)</strong> — černá se širokými červenými vodorovnými pruhy</li>
+    <li><strong>Bezpečná voda (Safe Water marks)</strong> — červené a bílé svislé pruhy</li>
+    <li><strong>Speciální značky (Special marks)</strong> — žlutá</li>
+  </ul>
+  <p>
+    Bóje s <strong>černou barvou a jedním nebo více širokými červenými vodorovnými pruhy</strong>
+    označují izolované nebezpečí (mělčinu, skálu nebo jiné překážky), nikoli bezpečnou vodu.
+    <strong>Žlutá</strong> barva náleží speciálním značkám (výcvikové oblasti, dumpingové zóny, kabelové trasy apod.).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;display:block;margin:12px auto;">
+    <!-- Safe Water buoy -->
+    <g transform="translate(70,20)">
+      <!-- Buoy body: vertical red and white stripes -->
+      <ellipse cx="40" cy="110" rx="38" ry="12" fill="#ccc"/>
+      <!-- Stripes on buoy body -->
+      <rect x="2" y="55" width="10" height="55" fill="#cc0000"/>
+      <rect x="12" y="55" width="10" height="55" fill="#ffffff"/>
+      <rect x="22" y="55" width="10" height="55" fill="#cc0000"/>
+      <rect x="32" y="55" width="10" height="55" fill="#ffffff"/>
+      <rect x="42" y="55" width="10" height="55" fill="#cc0000"/>
+      <rect x="52" y="55" width="10" height="55" fill="#ffffff"/>
+      <rect x="62" y="55" width="10" height="55" fill="#cc0000"/>
+      <!-- Buoy outline -->
+      <rect x="2" y="55" width="76" height="55" fill="none" stroke="#333" stroke-width="2" rx="10"/>
+      <!-- Top sphere -->
+      <ellipse cx="40" cy="55" rx="20" ry="10" fill="#cc0000" stroke="#333" stroke-width="1.5"/>
+      <!-- Mast -->
+      <line x1="40" y1="10" x2="40" y2="55" stroke="#333" stroke-width="2"/>
+      <!-- Red ball topmark -->
+      <circle cx="40" cy="10" r="8" fill="#cc0000" stroke="#333" stroke-width="1.5"/>
+      <!-- Anchor chain -->
+      <line x1="40" y1="122" x2="40" y2="150" stroke="#666" stroke-width="2" stroke-dasharray="4,3"/>
+      <text x="40" y="170" text-anchor="middle" font-size="11" fill="#333" font-family="sans-serif">Bezpečná voda</text>
+      <text x="40" y="185" text-anchor="middle" font-size="10" fill="#cc0000" font-family="sans-serif">(červeno-bílé svislé pruhy)</text>
+    </g>
+
+    <!-- Isolated Danger buoy -->
+    <g transform="translate(200,20)">
+      <ellipse cx="40" cy="110" rx="38" ry="12" fill="#ccc"/>
+      <!-- Black body with red horizontal bands -->
+      <rect x="2" y="55" width="76" height="55" fill="#222" rx="10"/>
+      <rect x="2" y="70" width="76" height="12" fill="#cc0000"/>
+      <rect x="2" y="93" width="76" height="12" fill="#cc0000"/>
+      <rect x="2" y="55" width="76" height="55" fill="none" stroke="#333" stroke-width="2" rx="10"/>
+      <!-- Mast -->
+      <line x1="40" y1="10" x2="40" y2="55" stroke="#333" stroke-width="2"/>
+      <!-- Two black balls topmark -->
+      <circle cx="40" cy="20" r="7" fill="#222" stroke="#333" stroke-width="1.5"/>
+      <circle cx="40" cy="7" r="7" fill="#222" stroke="#333" stroke-width="1.5"/>
+      <!-- Anchor chain -->
+      <line x1="40" y1="122" x2="40" y2="150" stroke="#666" stroke-width="2" stroke-dasharray="4,3"/>
+      <text x="40" y="170" text-anchor="middle" font-size="11" fill="#333" font-family="sans-serif">Izolované nebezpečí</text>
+      <text x="40" y="185" text-anchor="middle" font-size="10" fill="#222" font-family="sans-serif">(černá + červené pruhy)</text>
+    </g>
+
+    <!-- Special mark -->
+    <g transform="translate(330,20)">
+      <ellipse cx="40" cy="110" rx="38" ry="12" fill="#ccc"/>
+      <rect x="2" y="55" width="76" height="55" fill="#f5c518" rx="10" stroke="#333" stroke-width="2"/>
+      <!-- Mast -->
+      <line x1="40" y1="10" x2="40" y2="55" stroke="#333" stroke-width="2"/>
+      <!-- X topmark -->
+      <line x1="33" y1="3" x2="47" y2="17" stroke="#f5c518" stroke-width="3"/>
+      <line x1="47" y1="3" x2="33" y2="17" stroke="#f5c518" stroke-width="3"/>
+      <circle cx="40" cy="10" r="9" fill="none" stroke="#f5c518" stroke-width="2"/>
+      <!-- Anchor chain -->
+      <line x1="40" y1="122" x2="40" y2="150" stroke="#666" stroke-width="2" stroke-dasharray="4,3"/>
+      <text x="40" y="170" text-anchor="middle" font-size="11" fill="#333" font-family="sans-serif">Speciální značka</text>
+      <text x="40" y="185" text-anchor="middle" font-size="10" fill="#b8920a" font-family="sans-serif">(žlutá)</text>
+    </g>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V námořní praxi se bóje bezpečné vody (červeno-bílé svislé pruhy) umísťují typicky na:
+  </p>
+  <ul>
+    <li><strong>Středu průplavů a průchodů</strong> — označují osu plavební dráhy, kde je bezpečná hloubka.</li>
+    <li><strong>Vstupy do přístavů</strong> — navigátor je míjí uprostřed nebo dle instrukce přístavních pravidel.</li>
+    <li><strong>Landfall bójích</strong> — první bóje, na které plavidlo narazí při připlutí z moře.</li>
+  </ul>
+  <p>
+    Při spatření bóje s červeno-bílými svislými pruhy navigátor ví, že může bezpečně projet na
+    obě strany bóje (na rozdíl od bočních značek, kde záleží na straně průjezdu). Noční světlo
+    bóje bezpečné vody je izofázní, okultní nebo jedno dlouhé záblesky (Morse „A") v bílé barvě.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>IALA Maritime Buoyage System — Region A, Kategorie „Safe Water Marks" (Section 4)</li>
+    <li>Vyhláška č. 315/2000 Sb. o technické způsobilosti a vybavení plavidel, Příloha — plavební značky</li>
+    <li>Bowditch — American Practical Navigator, kapitola o Aid to Navigation</li>
+  </ol>
+</article>

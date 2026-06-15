@@ -1,0 +1,106 @@
+<article class="vmp-explanation">
+  <h2>Nízké oblaky: stratocumulus a stratus</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Mezi nízké oblaky (základna typicky pod 2 000 m) patří <strong>stratocumulus</strong> a <strong>stratus</strong>.
+    Altocumulus a altostratus jsou oblaky středního patra (2 000–6 000 m) a cirrus s cirrostratem patří do vysokého patra (nad 6 000 m).
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Meteorologie rozděluje oblaky do tří výškových pater podle výšky základny:
+  </p>
+  <ul>
+    <li><strong>Vysoké patro</strong> (nad 6 000 m / nad 20 000 ft): cirrus (Ci), cirrostratus (Cs), cirrocumulus (Cc)</li>
+    <li><strong>Střední patro</strong> (2 000–6 000 m / 6 500–20 000 ft): altocumulus (Ac), altostratus (As)</li>
+    <li><strong>Nízké patro</strong> (pod 2 000 m / pod 6 500 ft): stratus (St), stratocumulus (Sc), nimbostratus (Ns)</li>
+    <li><strong>Oblaky svislého vývoje</strong>: cumulus (Cu), cumulonimbus (Cb) — zasahují do více pater</li>
+  </ul>
+  <p>
+    <strong>Stratus</strong> tvoří rovnoměrnou šedou vrstvu podobnou mlze, která se nevznáší k zemi. Může přinášet mrholení.
+    <strong>Stratocumulus</strong> je nejběžnější typ oblaku vůbec — tvoří nepravidelné bloky nebo válce s tmavšími spodními částmi, uspořádané do skupin nebo vln.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" style="max-width:500px;width:100%;background:#e8f4fd;border-radius:8px;">
+    <!-- Sky background gradient areas -->
+    <!-- High level zone -->
+    <rect x="0" y="0" width="500" height="80" style="fill:#b8d4f0;opacity:0.5;"/>
+    <!-- Mid level zone -->
+    <rect x="0" y="80" width="500" height="100" style="fill:#c8e0f4;opacity:0.5;"/>
+    <!-- Low level zone -->
+    <rect x="0" y="180" width="500" height="90" style="fill:#d8ecf8;opacity:0.5;"/>
+    <!-- Ground -->
+    <rect x="0" y="270" width="500" height="50" style="fill:#8BC34A;"/>
+    <!-- Sea surface detail -->
+    <rect x="0" y="270" width="500" height="8" style="fill:#4fc3f7;opacity:0.6;"/>
+
+    <!-- Zone labels on right -->
+    <text x="480" y="40" text-anchor="end" style="font-size:11px;fill:#1565C0;font-weight:bold;">Vysoké patro</text>
+    <text x="480" y="52" text-anchor="end" style="font-size:10px;fill:#1565C0;">&gt; 6 000 m</text>
+
+    <text x="480" y="125" text-anchor="end" style="font-size:11px;fill:#0277BD;font-weight:bold;">Střední patro</text>
+    <text x="480" y="137" text-anchor="end" style="font-size:10px;fill:#0277BD;">2 000–6 000 m</text>
+
+    <text x="480" y="210" text-anchor="end" style="font-size:11px;fill:#01579B;font-weight:bold;">Nízké patro</text>
+    <text x="480" y="222" text-anchor="end" style="font-size:10px;fill:#01579B;">&lt; 2 000 m</text>
+
+    <!-- Dashed dividers -->
+    <line x1="0" y1="80" x2="380" y2="80" style="stroke:#90CAF9;stroke-width:1.5;stroke-dasharray:6,4;"/>
+    <line x1="0" y1="180" x2="380" y2="180" style="stroke:#90CAF9;stroke-width:1.5;stroke-dasharray:6,4;"/>
+
+    <!-- HIGH clouds: cirrus (wispy lines) -->
+    <g style="stroke:#CFD8DC;stroke-width:2;fill:none;">
+      <path d="M30 25 Q55 18 80 28"/>
+      <path d="M90 18 Q120 12 145 22"/>
+      <path d="M155 28 Q175 20 200 25"/>
+    </g>
+    <text x="30" y="45" style="font-size:10px;fill:#546E7A;">Ci, Cs, Cc</text>
+
+    <!-- MID clouds: altocumulus (rounded puffs) -->
+    <g style="fill:#B0BEC5;opacity:0.9;">
+      <ellipse cx="60" cy="120" rx="28" ry="14"/>
+      <ellipse cx="95" cy="115" rx="24" ry="12"/>
+      <ellipse cx="125" cy="120" rx="22" ry="12"/>
+      <ellipse cx="160" cy="118" rx="26" ry="13"/>
+      <ellipse cx="193" cy="122" rx="20" ry="11"/>
+    </g>
+    <text x="30" y="155" style="font-size:10px;fill:#37474F;">Ac, As</text>
+
+    <!-- LOW clouds -->
+    <!-- Stratus: flat grey layer -->
+    <rect x="20" y="215" width="200" height="25" rx="5" style="fill:#90A4AE;opacity:0.85;"/>
+    <text x="25" y="228" style="font-size:10px;fill:#fff;font-weight:bold;">Stratus (St)</text>
+
+    <!-- Stratocumulus: bumpy layer -->
+    <g style="fill:#78909C;opacity:0.9;">
+      <ellipse cx="270" cy="222" rx="30" ry="16"/>
+      <ellipse cx="305" cy="218" rx="26" ry="14"/>
+      <ellipse cx="335" cy="223" rx="24" ry="13"/>
+      <ellipse cx="363" cy="219" rx="22" ry="13"/>
+    </g>
+    <text x="265" y="248" style="font-size:10px;fill:#263238;font-weight:bold;">Stratocumulus (Sc)</text>
+
+    <!-- Highlight box for correct answer -->
+    <rect x="10" y="195" width="390" height="65" rx="6" style="fill:none;stroke:#4CAF50;stroke-width:2.5;stroke-dasharray:5,3;"/>
+    <text x="18" y="207" style="font-size:10px;fill:#2E7D32;font-weight:bold;">✓ NÍZKÉ OBLAKY (správná odpověď)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Pro námořníka na příbřežní plavbě je identifikace druhu oblačnosti důležitá pro předpověď počasí:
+  </p>
+  <ul>
+    <li><strong>Stratus</strong> signalizuje stabilní, vlhké počasí s možností mrholení a omezenou dohledností — nebezpečné při navigaci v blízkosti pobřeží.</li>
+    <li><strong>Stratocumulus</strong> je nejčastějším typem oblaku v mírných zeměpisných šířkách; obvykle nepřináší silné srážky, ale může snižovat dohlednost.</li>
+    <li>Rozpoznání patra oblačnosti pomáhá správně číst synoptické mapy a předvídat změny tlakových soustav při plánování trasy.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>WMO — International Cloud Atlas (Světová meteorologická organizace, Atlas oblaků), Vol. I, klasifikace oblaků podle výšky patra</li>
+    <li>ICAO — Annex 3 (Meteorologické služby pro mezinárodní leteckou navigaci) — výškové definice pater oblaků</li>
+    <li>Bowditch — American Practical Navigator, kap. Meteorology (klasifikace oblačnosti pro námořní navigaci)</li>
+  </ol>
+</article>

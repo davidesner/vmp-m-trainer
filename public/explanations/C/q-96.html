@@ -1,0 +1,108 @@
+<article class="vmp-explanation">
+
+  <h2>Měření rychlosti metodou bočního logu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>4 uzle</strong>. Plavidlo délky 8 metrů propluje vlastní délku za 4 sekundy,
+    což odpovídá rychlosti 2 m/s. Po přepočtu: 1 uzel = 0,5144 m/s, tedy 2 ÷ 0,5144 ≈ <strong>3,89 uzlů</strong>,
+    které se zaokrouhlí na 4 uzly.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    <strong>Boční log</strong> (anglicky <em>Dutchman's log</em> nebo <em>chip log</em>) je jednoduchá metoda
+    měření rychlosti plavidla bez elektroniky. Postup:
+  </p>
+  <ol>
+    <li>Hoďte plovák (nebo jiný předmět) ze zádě plavidla.</li>
+    <li>Změřte čas, za který plovák urazí vzdálenost rovnou délce plavidla (od zádi k přídi).</li>
+    <li>Vypočítejte rychlost ze vzorce: <code>v = L / t</code> (v m/s), poté převeďte na uzly.</li>
+  </ol>
+  <p>
+    Vzorec pro přepočet rychlosti na uzly:
+  </p>
+  <blockquote>
+    <strong>v [uzly] = (L [m] / t [s]) × 1,9438</strong>
+  </blockquote>
+  <p>
+    Pro tuto úlohu: <code>v = (8 m / 4 s) × 1,9438 = 2 × 1,9438 ≈ 3,89 uzlů ≈ 4 uzly</code>.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;display:block;margin:1em auto;" role="img" aria-label="Diagram bočního logu">
+    <!-- voda -->
+    <rect x="0" y="120" width="520" height="80" fill="#cceeff" rx="4"/>
+    <!-- plavidlo -->
+    <polygon points="20,100 20,120 380,120 400,110 380,100" fill="#8B6914" stroke="#5a4010" stroke-width="2"/>
+    <!-- přídě -->
+    <polygon points="380,100 400,110 380,120" fill="#a07820" stroke="#5a4010" stroke-width="1"/>
+    <!-- záď (zadní část) -->
+    <rect x="18" y="100" width="4" height="20" fill="#5a4010"/>
+    <!-- délka šipka -->
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#333"/>
+      </marker>
+      <marker id="arr2" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto">
+        <path d="M8,0 L8,6 L0,3 z" fill="#333"/>
+      </marker>
+    </defs>
+    <line x1="22" y1="90" x2="398" y2="90" stroke="#333" stroke-width="1.5" marker-end="url(#arr)" marker-start="url(#arr2)" stroke-dasharray="4,3"/>
+    <text x="210" y="85" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif">L = 8 m</text>
+    <!-- plovák (předmět hozený ze zádi) -->
+    <circle cx="22" cy="130" r="7" fill="#ff6600" stroke="#cc4400" stroke-width="1.5"/>
+    <text x="22" y="155" text-anchor="middle" font-size="11" fill="#cc4400" font-family="sans-serif">plovák</text>
+    <!-- šipka směru pohybu -->
+    <line x1="420" y1="110" x2="490" y2="110" stroke="#0055aa" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="455" y="105" text-anchor="middle" font-size="11" fill="#0055aa" font-family="sans-serif">směr jízdy</text>
+    <!-- čas -->
+    <text x="210" y="145" text-anchor="middle" font-size="12" fill="#444" font-family="sans-serif">t = 4 s → v = 8/4 × 1,944 ≈ 4 uzly</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Boční log se používá jako záložní metoda měření rychlosti, pokud selže elektronický log nebo GPS.
+    Je obzvláště užitečný na menších plavidlech a plachetnicích, kde posádka potřebuje znát přibližnou
+    rychlost při navigaci podle odhadované polohy (<em>dead reckoning</em>). Metoda je spolehlivá na klidné
+    vodě; vlny a proud mohou výsledek zkreslovat.
+  </p>
+  <p>
+    Pro přesné výpočty v praxi: <strong>1 uzel = 1 námořní míle za hodinu = 1 852 m/hod = 0,5144 m/s</strong>.
+    Přepočtový koeficient 1,9438 je převrácená hodnota 0,5144.
+  </p>
+  <table style="border-collapse:collapse;width:100%;max-width:400px;">
+    <thead>
+      <tr>
+        <th style="border:1px solid #ccc;padding:6px;background:#f0f4f8;">Délka (m)</th>
+        <th style="border:1px solid #ccc;padding:6px;background:#f0f4f8;">Čas (s)</th>
+        <th style="border:1px solid #ccc;padding:6px;background:#f0f4f8;">Rychlost (uzly)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:1px solid #ccc;padding:6px;">8</td>
+        <td style="border:1px solid #ccc;padding:6px;">4</td>
+        <td style="border:1px solid #ccc;padding:6px;"><strong>≈ 4</strong></td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ccc;padding:6px;">8</td>
+        <td style="border:1px solid #ccc;padding:6px;">8</td>
+        <td style="border:1px solid #ccc;padding:6px;">≈ 2</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ccc;padding:6px;">8</td>
+        <td style="border:1px solid #ccc;padding:6px;">2</td>
+        <td style="border:1px solid #ccc;padding:6px;">≈ 8</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Bowditch — <em>American Practical Navigator</em> (Pub. No. 9), kapitola o měření rychlosti a odhadované poloze (dead reckoning)</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě — obecné požadavky na navigaci plavidel</li>
+    <li>Vyhláška č. 315/2000 Sb. — technické požadavky na námořní plavidla</li>
+  </ol>
+
+</article>

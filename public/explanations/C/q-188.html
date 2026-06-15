@@ -1,0 +1,95 @@
+<article class="vmp-explanation">
+  <h2>Pevninská bríza — směr vánku</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že pevninská bríza vane <strong>večer a v noci z pevniny na moře</strong>.
+    Pevnina se po západu slunce ochlazuje rychleji než moře, nad pevninou se vytváří oblast
+    vyššího tlaku a vzduch proudí od pevniny směrem k moři, kde je vzduch relativně teplejší a
+    teplak nižší tlak.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Brízy jsou lokální větry způsobené rozdílnou tepelnou kapacitou pevniny a moře:
+  </p>
+  <ul>
+    <li>
+      <strong>Mořská bríza</strong> — nastává přes den (ráno až odpoledne). Pevnina se ohřívá
+      rychleji než moře, teplý vzduch nad pevninou stoupá, a chladnější vzduch přitéká z moře na
+      pevninu.
+    </li>
+    <li>
+      <strong>Pevninská bríza</strong> — nastává večer a v noci. Pevnina vychladne rychleji,
+      vzduch nad ní klesá a proudí od pevniny na moře. Začíná zpravidla krátce po západu slunce a
+      přetrvává do ranních hodin.
+    </li>
+  </ul>
+  <p>
+    Ostatní nabízené možnosti jsou chybné: tvrzení „ráno a dopoledne z moře na pevninu" popisuje
+    <em>mořskou</em> brízu, nikoliv pevninskou. Tvrzení „v noci a dopoledne z moře na pevninu"
+    kombinuje nesprávný směr s nesprávnou dobou.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="520" height="220" aria-label="Schéma pevninské brízy v noci">
+    <defs>
+      <marker id="arrow-sea" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#1a6fa3;" />
+      </marker>
+    </defs>
+
+    <!-- Obloha / noc -->
+    <rect x="0" y="0" width="520" height="220" style="fill:#0d1b2a;" />
+
+    <!-- Měsíc -->
+    <circle cx="470" cy="35" r="18" style="fill:#f0e070;" />
+    <circle cx="480" cy="28" r="14" style="fill:#0d1b2a;" />
+
+    <!-- Pevnina -->
+    <rect x="0" y="130" width="250" height="90" style="fill:#5a4020;" />
+    <text x="10" y="195" style="fill:#c8a870;font-size:13px;font-family:sans-serif;">PEVNINA (ochlazená)</text>
+
+    <!-- Moře -->
+    <rect x="250" y="150" width="270" height="70" style="fill:#1a6fa3;" />
+    <text x="260" y="195" style="fill:#aae0ff;font-size:13px;font-family:sans-serif;">MOŘE (teplejší)</text>
+
+    <!-- Nízký tlak nad mořem -->
+    <text x="330" y="145" style="fill:#aae0ff;font-size:12px;font-family:sans-serif;">↓ nižší tlak</text>
+
+    <!-- Vysoký tlak nad pevninou -->
+    <text x="30" y="125" style="fill:#c8a870;font-size:12px;font-family:sans-serif;">↑ vyšší tlak</text>
+
+    <!-- Šipky větru (z pevniny na moře) -->
+    <line x1="60"  y1="100" x2="200" y2="100" style="stroke:#f0c040;stroke-width:2.5;" marker-end="url(#arrow-sea)" />
+    <line x1="80"  y1="115" x2="240" y2="115" style="stroke:#f0c040;stroke-width:2.5;" marker-end="url(#arrow-sea)" />
+    <line x1="100" y1="82"  x2="240" y2="82"  style="stroke:#f0c040;stroke-width:2.5;" marker-end="url(#arrow-sea)" />
+
+    <!-- Popis větru -->
+    <text x="100" y="68" style="fill:#f0c040;font-size:13px;font-family:sans-serif;font-weight:bold;">Pevninská bríza (noc)</text>
+
+    <!-- Teplotní značky -->
+    <text x="30"  y="155" style="fill:#ff8080;font-size:13px;font-family:sans-serif;">🌡 chladná</text>
+    <text x="350" y="140" style="fill:#80cfff;font-size:13px;font-family:sans-serif;">🌡 teplejší</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Námořník plující v pobřežních oblastech může využít pevninskou brízu k výjezdu z přístavu nebo
+    zálivu v nočních hodinách — vítr ze zádi usnadňuje odplutí od pobřeží. Naopak při plánování
+    kotvení je třeba počítat s tím, že pevninská bríza může navát vlny nebo zvýšit sklon lodi.
+    Brízy jsou nejsilnější za klidného počasí s malým gradientovým větrem; při silnějším
+    synoptickém větru se jejich efekt potlačuje.
+  </p>
+  <p>
+    Přechod mezi mořskou a pevninskou brízou bývá v podvečer krátké bezvětří (nazývané
+    <em>calma</em>), než se noční proudění ustálí.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Námořní meteorologie — základy (IMO model course 7.03, sekce lokální větry)</li>
+    <li>Bowditch — American Practical Navigator, kap. 31 (Local and Special Winds)</li>
+    <li>WMO — Guide to Meteorological Instruments and Methods of Observation, část o pobřežních cirkulacích</li>
+  </ol>
+</article>

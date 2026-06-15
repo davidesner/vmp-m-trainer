@@ -1,0 +1,84 @@
+<article class="vmp-explanation">
+  <h2>Znak na námořní mapě — skály ve výši hladiny</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Zobrazený znak (křížek obklopený tečkovaným kroužkem) označuje na námořní mapě <strong>skály ve výši hladiny</strong>, tedy skály, jejichž vrchol je přibližně v úrovni střední hladiny moře. Nejde o navigační světlo ani o vysílač — ty mají na mapách zcela odlišné symboly.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní standardy pro námořní mapy vydává Mezinárodní hydrografická organizace (IHO). Symboly a zkratky používané na námořních mapách jsou definovány v publikaci <strong>IHO S-57 / INT 1 (Chart 1)</strong> — mezinárodním klíči kartografických symbolů. Křížek v tečkovaném kroužku patří do sekce věnované nebezpečím a skálám (anglicky <em>rock awash</em> nebo <em>rock at or near the surface</em>), kde různé varianty křížkových symbolů rozlišují:
+  </p>
+  <ul>
+    <li><strong>Skály vždy pod hladinou</strong> — samotný křížek bez kroužku</li>
+    <li><strong>Skály ve výši hladiny</strong> — křížek obklopený tečkovaným kroužkem (tento případ)</li>
+    <li><strong>Skály vždy nad hladinou</strong> — kroužek s tečkami nebo skalní ikonka</li>
+  </ul>
+  <p>
+    Navigační světlo se na mapě zakresluje jako paprskovitý vějíř nebo hvězdička s popisem sektoru a charakteristiky světla. Radiotechnický vysílač (radiomajáky, DECCA, apod.) má symbol sloupu/věže s vlnkami.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center; margin: 1em 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220" aria-label="Srovnání námořních symbolů">
+      <!-- Symbol 1: skály ve výši hladiny -->
+      <g transform="translate(60,80)">
+        <!-- tečkovaný kroužek -->
+        <circle cx="0" cy="0" r="28" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="4,5"/>
+        <!-- křížek -->
+        <line x1="-14" y1="0" x2="14" y2="0" stroke="#222" stroke-width="2.5"/>
+        <line x1="0" y1="-14" x2="0" y2="14" stroke="#222" stroke-width="2.5"/>
+        <!-- malý čtvereček uprostřed -->
+        <rect x="-3" y="-3" width="6" height="6" fill="#222"/>
+        <text x="0" y="52" text-anchor="middle" font-size="11" fill="#333">Skály ve výši hladiny</text>
+        <text x="0" y="66" text-anchor="middle" font-size="10" fill="#888">(správná odpověď)</text>
+        <rect x="-50" y="-50" width="100" height="130" rx="6" fill="none" stroke="#2a7" stroke-width="1.5"/>
+      </g>
+
+      <!-- Symbol 2: skály pod hladinou -->
+      <g transform="translate(170,80)">
+        <!-- jen křížek, bez kroužku -->
+        <line x1="-14" y1="0" x2="14" y2="0" stroke="#555" stroke-width="2.5"/>
+        <line x1="0" y1="-14" x2="0" y2="14" stroke="#555" stroke-width="2.5"/>
+        <rect x="-3" y="-3" width="6" height="6" fill="#555"/>
+        <text x="0" y="52" text-anchor="middle" font-size="11" fill="#555">Skály pod hladinou</text>
+        <rect x="-50" y="-50" width="100" height="130" rx="6" fill="none" stroke="#aaa" stroke-width="1"/>
+      </g>
+
+      <!-- Symbol 3: navigační světlo (paprsek) -->
+      <g transform="translate(280,80)">
+        <!-- paprsek -->
+        <line x1="0" y1="0" x2="18" y2="-24" stroke="#e88" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <line x1="0" y1="0" x2="24" y2="0" stroke="#e88" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <line x1="0" y1="0" x2="18" y2="24" stroke="#e88" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <circle cx="0" cy="0" r="5" fill="#e55"/>
+        <text x="0" y="52" text-anchor="middle" font-size="11" fill="#555">Nav. světlo</text>
+        <rect x="-42" y="-50" width="85" height="130" rx="6" fill="none" stroke="#aaa" stroke-width="1"/>
+      </g>
+
+      <!-- Nadpis -->
+      <text x="160" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Srovnání symbolů na námořní mapě</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Skály ve výši hladiny jsou extrémně nebezpečné pro plavidla s jakýmkoliv ponorem, protože jsou viditelné jen za příznivého počasí a mohou být zcela zakryty vlnami. Navigátor musí:
+  </p>
+  <ul>
+    <li>Při plánování trasy tyto symboly identifikovat na mapě a zachovat dostatečný bezpečnostní odstup.</li>
+    <li>V mlze nebo špatné viditelnosti počítat s tím, že skálu nemusí včas spatřit vizuálně.</li>
+    <li>Mít vždy aktuální mapový podklad — IHO vydává opravy mapových symbolů prostřednictvím Notices to Mariners (NtM).</li>
+  </ul>
+  <p>
+    Zaměnění tohoto symbolu za „navigační světlo" nebo „vysílač" by mohlo vést k podcenění nebezpečí a havárii plavidla.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO Publication S-4 / INT 1 (Chart No. 1)</strong> — Mezinárodní klíč kartografických symbolů a zkratek používaných na námořních mapách, sekce K (Skály a nebezpečí)</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — povinnost navigovat s aktuálními mapovými podklady</li>
+    <li><strong>Bowditch — American Practical Navigator, kap. 3</strong> — výklad kartografických symbolů a topografie mořského dna</li>
+  </ol>
+</article>

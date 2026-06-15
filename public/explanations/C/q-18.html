@@ -1,0 +1,128 @@
+<article class="vmp-explanation">
+  <h2>Úzký průplav — povinnost držet se pravé strany dráhy</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Loď plující úzkým průplavem nebo úzkým průchodem se musí držet
+    <strong>co nejblíže k vnějšímu okraji plavební dráhy, který leží na straně jejího pravoboku</strong>
+    (tj. pravé boční strany plavidla). Toto pravidlo platí, pokud je to bezpečné a proveditelné,
+    a zajišťuje protijedoucím lodím průjezd levou stranou průplavu bez rizika srážky.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Povinnost vyplývá z <strong>Pravidla 9 COLREG 1972</strong> (Mezinárodní předpisy pro zabránění
+    srážkám na moři), které upravuje plavbu v úzkých průplavech a průchodech:
+  </p>
+  <ul>
+    <li>
+      <strong>Pravidlo 9(a):</strong> Plavidlo plující úzkým průplavem nebo úzkým průchodem
+      se musí, pokud je to bezpečné a proveditelné, držet co nejblíže k vnějšímu okraji
+      průplavu nebo průchodu ležícímu na jeho pravoboku.
+    </li>
+    <li>
+      <strong>Pravidlo 9(b):</strong> Plavidla kratší než 20 metrů a plachtící plavidla
+      nesmějí bránit proplutí plavidla, které může bezpečně proplouvat jen v mezích úzkého průplavu.
+    </li>
+    <li>
+      <strong>Pravidlo 9(d):</strong> Plavidlo nesmí přeplout úzký průplav, pokud tím brání
+      průjezdu plavidla, které může proplouvat pouze v mezích průplavu.
+    </li>
+  </ul>
+  <p>
+    Logika pravidla odpovídá silničnímu provozu — v dvousměrném silničním provozu jedeme
+    pravou stranou vozovky, aby protijedoucí vozidla mohla bezpečně projet levou stranou.
+    V námořní plavbě platí totéž: plavidlo se drží pravoboku průplavu, čímž protijedoucímu
+    plavidlu nechává volnou cestu na jeho pravoboku.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="overflow-x:auto;">
+    <svg viewBox="0 0 520 260" width="520" height="260" xmlns="http://www.w3.org/2000/svg" aria-label="Schéma plavby v úzkém průplavu — obě lodě se drží svého pravoboku">
+      <!-- Průplav - břehy -->
+      <rect x="0" y="0" width="520" height="260" fill="#d0eaff"/>
+      <!-- Horní břeh -->
+      <rect x="0" y="0" width="520" height="55" fill="#8B7355"/>
+      <!-- Dolní břeh -->
+      <rect x="0" y="205" width="520" height="55" fill="#8B7355"/>
+      <!-- Voda průplavu -->
+      <rect x="0" y="55" width="520" height="150" fill="#4a90d9"/>
+
+      <!-- Střední osa průplavu (přerušovaná) -->
+      <line x1="0" y1="130" x2="520" y2="130" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="10,8" opacity="0.6"/>
+
+      <!-- Loď 1: pluje doprava, drží se dolní strany (pravoboku = dolní okraj průplavu) -->
+      <!-- Trup -->
+      <polygon points="80,165 200,158 210,162 200,168 80,175" fill="#e8d44d" stroke="#b8941d" stroke-width="1.5"/>
+      <!-- Palubní nástavba -->
+      <rect x="110" y="155" width="60" height="12" rx="3" fill="#f5e89a" stroke="#b8941d" stroke-width="1"/>
+      <!-- Směr: šipka doprava -->
+      <defs>
+        <marker id="arrow-right" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+          <polygon points="0,0 8,4 0,8" fill="#1a5276"/>
+        </marker>
+        <marker id="arrow-left" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto">
+          <polygon points="8,0 0,4 8,8" fill="#922b21"/>
+        </marker>
+      </defs>
+      <line x1="215" y1="166" x2="270" y2="166" stroke="#1a5276" stroke-width="2.5" marker-end="url(#arrow-right)"/>
+      <!-- Popis lodě 1 -->
+      <text x="120" y="195" font-size="11" fill="#ffffff" text-anchor="middle" font-family="sans-serif">Loď A → drží se pravoboku</text>
+      <text x="120" y="207" font-size="10" fill="#ffe082" text-anchor="middle" font-family="sans-serif">(dolní okraj průplavu)</text>
+
+      <!-- Loď 2: pluje doleva, drží se horní strany (pravoboku = horní okraj průplavu) -->
+      <!-- Trup -->
+      <polygon points="440,85 320,92 310,88 320,82 440,75" fill="#e84343" stroke="#922b21" stroke-width="1.5"/>
+      <!-- Palubní nástavba -->
+      <rect x="350" y="80" width="60" height="12" rx="3" fill="#f5a9a9" stroke="#922b21" stroke-width="1"/>
+      <!-- Směr: šipka doleva -->
+      <line x1="305" y1="87" x2="250" y2="87" stroke="#922b21" stroke-width="2.5" marker-end="url(#arrow-left)"/>
+      <!-- Popis lodě 2 -->
+      <text x="375" y="70" font-size="11" fill="#ffffff" text-anchor="middle" font-family="sans-serif">Loď B ← drží se pravoboku</text>
+      <text x="375" y="60" font-size="10" fill="#ffcdd2" text-anchor="middle" font-family="sans-serif">(horní okraj průplavu)</text>
+
+      <!-- Popisky břehů -->
+      <text x="260" y="35" font-size="12" fill="#fffde7" text-anchor="middle" font-family="sans-serif" font-weight="bold">Břeh</text>
+      <text x="260" y="240" font-size="12" fill="#fffde7" text-anchor="middle" font-family="sans-serif" font-weight="bold">Břeh</text>
+
+      <!-- Legenda -->
+      <rect x="5" y="130" width="160" height="46" rx="4" fill="rgba(0,0,0,0.45)"/>
+      <rect x="12" y="137" width="14" height="8" rx="2" fill="#e8d44d"/>
+      <text x="32" y="145" font-size="10" fill="#ffffff" font-family="sans-serif">Loď A — pluje doprava</text>
+      <rect x="12" y="152" width="14" height="8" rx="2" fill="#e84343"/>
+      <text x="32" y="160" font-size="10" fill="#ffffff" font-family="sans-serif">Loď B — pluje doleva</text>
+      <text x="10" y="172" font-size="9" fill="#ffe082" font-family="sans-serif">Každá loď: vlastní pravobok → okraj průplavu</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li>
+      <strong>Průjezd kanálem nebo fjordem:</strong> Velitelé lodí automaticky zaujímají
+      pravobokovou polohu v průplavu; protijedoucí plavidla se pak míjejí levými boky
+      (jako auta na silnici — každý jede svou pravou stranou).
+    </li>
+    <li>
+      <strong>Rušný průliv (např. Doverský průliv):</strong> Kombinace pravidla 9 COLREG
+      a systémů oddělení dopravy (TSS) zajišťuje, že každá loď pluje svým pruhem
+      a nedochází k čelním srážkám.
+    </li>
+    <li>
+      <strong>Malá plavidla a plachetnice:</strong> Nesmějí bránit průjezdu větším plavidlům,
+      která jsou omezena svým ponorem a nemohou opustit plavební dráhu.
+    </li>
+    <li>
+      <strong>Signalizace:</strong> Plavidlo, které hodlá předjet jiné v úzkém průplavu,
+      signalizuje zvukovými signály (Pravidlo 34 COLREG) a může předjet teprve
+      po souhlasu předjížděného.
+    </li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Pravidlo 9: Úzké průplavy (Narrow channels)</li>
+    <li><strong>COLREG 1972</strong> — Pravidlo 34: Manévrovací a výstražné zvukové signály</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — § 25 (dodržování mezinárodních předpisů)</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o posádkách námořních plavidel</li>
+  </ol>
+</article>

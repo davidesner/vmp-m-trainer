@@ -1,0 +1,7 @@
+{
+  "qid": 186,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["WMO-No. 485 Manual on Codes FM 12-XIV SYNOP", "WMO-No. 306 Manual on Codes tabulka ww", "COLREG 1972 Pravidlo 19", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-opus-4-7"
+}

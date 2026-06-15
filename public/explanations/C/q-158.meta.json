@@ -1,0 +1,12 @@
+{
+  "qid": 158,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO Technické předpisy WMO-No. 49 — definice směru větru",
+    "SOLAS 1974, Hlava V, pravidlo 5",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Bowditch — American Practical Navigator, kapitola 31"
+  ],
+  "model": "claude-opus-4-7"
+}

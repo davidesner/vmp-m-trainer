@@ -1,0 +1,7 @@
+{
+  "qid": 80,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["Zákon č. 61/2000 Sb. o námořní plavbě", "Yorsko-Antverpská pravidla (York-Antwerp Rules 2016)", "Mezinárodní úmluva o záchraně 1989 (Salvage Convention)"],
+  "model": "claude-opus-4-7"
+}

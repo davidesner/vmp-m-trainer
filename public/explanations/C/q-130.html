@@ -1,0 +1,97 @@
+<article class="vmp-explanation">
+  <h2>Bóje IALA-A — hlavní plavební dráha vlevo (plujete z moře)</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>„zelená kuželová s jedním širokým vodorovným červeným pásem"</strong>.
+    Jde o bóji <em>preferovaného kanálu</em> (preferred channel mark) systému IALA-A, kde zelená barva
+    a kuželový tvar signalizují, že plavidlo plující z moře (tj. ve směru přítoku) může projet po
+    levoboku bóje — přičemž hlavní (preferovaná) dráha leží právě vlevo od bóje.
+    Červený pás uprostřed indikuje, že existuje i vedlejší dráha napravo.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Systém IALA-A (platný v Evropě, Africe, Asii, Austrálii) rozděluje bóje do kategorií.
+    Bóje bočního označení (lateral marks) se řídí pravidlem <strong>červená = levý bok ve směru
+    z moře, zelená = pravý bok ve směru z moře</strong> (red = port, green = starboard when entering
+    from seaward).
+  </p>
+  <p>
+    Bóje <em>preferovaného kanálu</em> (modified lateral mark) kombinuje barvy obou stran:
+  </p>
+  <ul>
+    <li><strong>Preferovaný kanál vpravo</strong> (hlavní dráha je napravo): červená s jedním zeleným pásem, válcový tvar — projíždí se levoboku bóje.</li>
+    <li><strong>Preferovaný kanál vlevo</strong> (hlavní dráha je nalevo): <em>zelená s jedním červeným pásem, kuželový tvar</em> — projíždí se pravoboku bóje.</li>
+  </ul>
+  <p>
+    Tvar kužele (apex nahoře) odpovídá zelenému laterálnímu znaku stb. strany v systému IALA-A.
+    Červená válcová s zeleným pásem by znamenala preferovaný kanál vpravo — tedy opak situace v otázce.
+    Zelená válcová s červeným pásem kombinuje nesprávný tvar (válec místo kužele) se správnou barvou — taková kombinace v IALA-A neexistuje.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;width:100%;display:block;margin:1em auto;">
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#333;" />
+      </marker>
+    </defs>
+
+    <!-- Voda -->
+    <rect x="0" y="130" width="320" height="70" style="fill:#cce8f4;" />
+
+    <!-- Šipka směru plavby (z moře do přístavu = zleva doprava) -->
+    <line x1="20" y1="155" x2="280" y2="155" style="stroke:#0055aa;stroke-width:2;" marker-end="url(#arr)" />
+    <text x="30" y="172" style="font-size:11px;fill:#0055aa;">z moře →  → → přístav</text>
+
+    <!-- Bóje — kužel zelený s červeným pásem, uprostřed kanálu -->
+    <g transform="translate(155,80)">
+      <!-- tělo kužele: zelená, vrchol nahoře -->
+      <polygon points="0,-45 -18,20 18,20" style="fill:#2a9d2a;stroke:#155215;stroke-width:1.5;" />
+      <!-- červený pás přes střed kužele -->
+      <polygon points="-9,-12 9,-12 18,20 -18,20" style="fill:#cc2222;" />
+      <!-- Přemalovat spodní část zpět zelenou (aby byl pás jen uprostřed) -->
+      <polygon points="-18,5 18,5 18,20 -18,20" style="fill:#2a9d2a;stroke:none;" />
+      <!-- podstavec / stonka -->
+      <rect x="-3" y="20" width="6" height="18" style="fill:#555;" />
+      <!-- plovák -->
+      <ellipse cx="0" cy="38" rx="14" ry="7" style="fill:#2a9d2a;stroke:#155215;stroke-width:1;" />
+      <!-- červený pás na plováku -->
+      <ellipse cx="0" cy="38" rx="14" ry="3" style="fill:#cc2222;" />
+    </g>
+
+    <!-- Popis bóje -->
+    <text x="190" y="75" style="font-size:11px;fill:#155215;font-weight:bold;">Zelená kuželová</text>
+    <text x="190" y="89" style="font-size:11px;fill:#cc2222;">+ červený pás</text>
+
+    <!-- Šipky kanálů -->
+    <!-- Levý (hlavní) kanál -->
+    <text x="50" y="135" style="font-size:10px;fill:#006600;font-weight:bold;">HLAVNÍ</text>
+    <text x="42" y="147" style="font-size:10px;fill:#006600;">kanál (vlevo)</text>
+    <!-- Pravý (vedlejší) kanál -->
+    <text x="215" y="135" style="font-size:10px;fill:#888;">vedlejší</text>
+    <text x="210" y="147" style="font-size:10px;fill:#888;">kanál (vpravo)</text>
+
+    <!-- Legenda -->
+    <rect x="5" y="5" width="175" height="40" rx="4" style="fill:#fffbe6;stroke:#ccc;stroke-width:1;" />
+    <text x="12" y="20" style="font-size:10px;fill:#333;">IALA-A: preferovaný kanál vlevo</text>
+    <text x="12" y="34" style="font-size:10px;fill:#333;">Projíždíte po PRAVOBOKU bóje →</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plachtění nebo motorizovaném vstupu do přístavu: jakmile uvidíte tuto bóji (zelená, kuželová,
+    červený pás), víte, že <strong>hlavní, bezpečnější dráha je nalevo od vás</strong> — jednoduše
+    ji míjíte po pravé ruce. Pokud byste ji omylem míjeli vlevo, dostanete se do vedlejšího kanálu,
+    kde může být menší hloubka nebo jiná omezení. Nezaměňujte s červenou válcovou (červený pás zelený),
+    která značí opačnou situaci — hlavní dráhu napravo.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IALA Maritime Buoyage System — Region A</strong>, sekce 2: Lateral Marks &amp; Preferred Channel Marks</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong>, § 32 (plavební značení)</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o plavebních znacích (implementace IALA-A pro českou námořní plavbu)</li>
+  </ol>
+</article>

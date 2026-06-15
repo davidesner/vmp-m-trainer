@@ -1,0 +1,98 @@
+<article class="vmp-explanation">
+  <h2>Kdy musí být dodržována pravidla o světlech?</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Pravidla týkající se světel musí být dodržena <strong>od západu do východu slunce</strong> a zároveň
+    <strong>po celou dobu plavby v podmínkách snížené viditelnosti</strong> — tedy i přes den, pokud je viditelnost omezena (mlha, hustý déšť, sněžení apod.).
+    Pevný časový interval „od 18:00 do 6:00" ani spoléhání na plavební situaci bez tohoto pravidla nejsou správné.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Povinnost používat světla vychází z <strong>COLREG 1972 — Pravidlo 20 (Application)</strong>:
+  </p>
+  <blockquote>
+    „Pravidla obsažená v této části jsou dodržována za každého počasí. Pravidla týkající se světel musí být dodržována od západu do východu slunce, a v takové době nesmějí být ukazována žádná jiná světla, která by mohla být zaměněna se světly předepsanými v těchto Pravidlech, nebo by mohla zhoršovat jejich viditelnost či charakteristiku, nebo by mohla zaslepit hlídku, nebo bránit řádnému sledování. Předepsaná světla mohou být ukazována i od východu do západu slunce v podmínkách snížené viditelnosti a mohou být ukazována i v jiných případech, kdy to považuje lodní velitel za nutné."
+  </blockquote>
+  <p>
+    Z tohoto pravidla vyplývají dva povinné okamžiky/situace:
+  </p>
+  <ul>
+    <li><strong>Noční hodiny</strong> — od západu do východu slunce (bez ohledu na aktuální viditelnost).</li>
+    <li><strong>Podmínky snížené viditelnosti</strong> — kdykoli přes den i v noci, pokud viditelnost klesne (mlha, mrholení, hustý déšť, sněžení, písečná bouře apod.).</li>
+  </ul>
+  <p>
+    Pravidlo 3(l) COLREG definuje „podmínky snížené viditelnosti" jako jakékoli podmínky, při nichž je viditelnost omezena mlhou, mžením, sněžením, silným deštěm, písečnými bouřemi nebo jinými podobnými příčinami.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" style="max-width:600px;width:100%;display:block;margin:16px auto;" aria-label="Časová osa: povinnost světel">
+    <!-- Pozadí -->
+    <rect width="600" height="220" fill="#f8f9fa" rx="10"/>
+
+    <!-- Osa dne: 0..600 = 0..24 hodin -->
+    <!-- Noc 1: 0-6h = 0-150px -->
+    <rect x="0" y="60" width="150" height="40" fill="#1a237e" rx="4"/>
+    <!-- Den: 6-20h = 150-500px -->
+    <rect x="150" y="60" width="350" height="40" fill="#ffe082" rx="0"/>
+    <!-- Noc 2: 20-24h = 500-600px -->
+    <rect x="500" y="60" width="100" height="40" fill="#1a237e" rx="4"/>
+
+    <!-- Popisky časů -->
+    <text x="0" y="55" font-size="12" fill="#333">00:00</text>
+    <text x="140" y="55" font-size="12" fill="#333">06:00</text>
+    <text x="286" y="55" font-size="12" fill="#333">12:00</text>
+    <text x="480" y="55" font-size="12" fill="#333">20:00</text>
+    <text x="565" y="55" font-size="12" fill="#333">24:00</text>
+
+    <!-- Svislé čáry -->
+    <line x1="150" y1="55" x2="150" y2="110" stroke="#555" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="325" y1="55" x2="325" y2="110" stroke="#555" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="500" y1="55" x2="500" y2="110" stroke="#555" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Ikonka slunce - východ -->
+    <circle cx="150" cy="75" r="8" fill="#f9a825"/>
+    <text x="155" y="79" font-size="9" fill="#333">↑ východ</text>
+
+    <!-- Ikonka slunce - západ -->
+    <circle cx="500" cy="75" r="8" fill="#f9a825"/>
+    <text x="465" y="79" font-size="9" fill="#333">západ ↓</text>
+
+    <!-- Popisky úseků -->
+    <text x="60" y="86" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">NOC</text>
+    <text x="325" y="86" text-anchor="middle" font-size="12" fill="#555">DEN</text>
+    <text x="550" y="86" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">NOC</text>
+
+    <!-- Povinnost světel - noční úseky -->
+    <rect x="0" y="115" width="150" height="18" fill="#e53935" rx="3"/>
+    <rect x="500" y="115" width="100" height="18" fill="#e53935" rx="3"/>
+    <text x="75" y="128" text-anchor="middle" font-size="11" fill="#fff">SVĚTLA POVINNÁ</text>
+    <text x="550" y="128" text-anchor="middle" font-size="11" fill="#fff">POVINNÁ</text>
+
+    <!-- Snížená viditelnost - přes den -->
+    <rect x="150" y="115" width="350" height="18" fill="#ffa726" rx="3" stroke="#e65100" stroke-width="1" stroke-dasharray="5,3"/>
+    <text x="325" y="128" text-anchor="middle" font-size="11" fill="#333">POVINNÁ při snížené viditelnosti (mlha, déšť…)</text>
+
+    <!-- Legenda -->
+    <rect x="20" y="160" width="16" height="12" fill="#e53935" rx="2"/>
+    <text x="42" y="171" font-size="12" fill="#333">Světla povinná vždy (noc)</text>
+    <rect x="20" y="180" width="16" height="12" fill="#ffa726" rx="2" stroke="#e65100" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="42" y="191" font-size="12" fill="#333">Světla povinná při snížené viditelnosti (přes den i v noci)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Lodní velitel musí mít světla zapnutá automaticky po celou noc — jakmile slunce zapadne, světla se rozsvítí bez ohledu na to, zda je viditelnost dobrá. Přes den musí sledovat podmínky: jakmile začne klesat viditelnost (přijíždí mlhový bank, hustý déšť), světla je třeba rozsvítit okamžitě, i když je denní světlo.
+  </p>
+  <p>
+    Časový interval „od 18:00 do 6:00" je nesprávný, protože v létě slunce zapadá například až kolem 21:00 (severní zeměpisné šířky) a v zimě naopak již kolem 16:00. Pravidla COLREG jsou proto vázána na astronomický západ/východ slunce, nikoli na pevnou hodinu.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Pravidlo 20 (Application of lights), Pravidlo 3(l) (definice snížené viditelnosti)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — §&nbsp;16 (povinnosti velitele lodě)</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o uznání COLREG v českém právním řádu</li>
+  </ol>
+</article>

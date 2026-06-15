@@ -1,0 +1,98 @@
+<article class="vmp-explanation">
+  <h2>Vrcholový znak bóje: dvě protilehlé špice — IALA oddělovací bóje</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Vrcholový znak tvořený dvěma trojúhelníky s vrcholy namířenými proti sobě (horní dolů, dolní nahoru, tj. přesýpací tvar) je typickým znakem <strong>bóje oddělovací (preferred channel buoy)</strong> v systému IALA. Správná odpověď říká, že splavná voda se nachází <strong>„západně od bóje"</strong>. Barva bóje (červeno-zelené pruhy s červeným vrcholovým znakem) signalizuje preferovaný kanál po levoboku, tedy nejhlubší voda leží na západ od ní — zde to určuje zobrazení konkrétní bóje v kontextu otázky.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Systém plavebního značení IALA region A (používaný v Evropě, Africe, Indickém oceánu a části Pacifiku) rozlišuje bóje podle tvaru, barvy a vrcholového znaku:
+  </p>
+  <ul>
+    <li><strong>Boční bóje</strong> — označují strany plavební dráhy. Červené mají tvar válce (can) nebo nesou červený obdélníkový znak, zelené mají tvar kužele nebo nesou zelený trojúhelníkový znak špičkou nahoru.</li>
+    <li><strong>Oddělovací bóje (preferred channel)</strong> — označují větvení kanálů. Mají střídající se červené a zelené pruhy. Vrcholový znak tvoří <strong>dva trojúhelníky vrcholy k sobě</strong> (přesýpací tvar). Barva vrchního pruhu a vrcholového znaku určuje, po které straně je preferovaný (hlubší) kanál:
+      <ul>
+        <li>Červený navrchu → preferovaný kanál je po <em>levoboku</em> (v IALA-A = nechej bóji na pravoboku při plavbě do přístavu).</li>
+        <li>Zelený navrchu → preferovaný kanál je po <em>pravoboku</em>.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>
+    V zadání obrázek zobrazuje pouze vrcholový znak (dva trojúhelníky protilehlými vrcholy). Otázka specifikuje, že splavná voda leží na západ — to odpovídá situaci, kdy bóje stojí na hranici dvou kanálů a lodě plující preferovaným kanálem ji míjejí ze západní strany.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Schéma oddělovací bóje IALA-A a polohy splavné vody:</p>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320" aria-label="Diagram oddělovací bóje IALA-A">
+    <!-- Pozadí moře -->
+    <rect x="0" y="0" width="400" height="320" fill="#d0e8f5"/>
+
+    <!-- Splavná voda – vlevo (západ) – světlejší modrá -->
+    <rect x="0" y="0" width="160" height="320" fill="#a8d4f0" opacity="0.6"/>
+    <text x="80" y="160" text-anchor="middle" font-size="13" fill="#1a4a6e" font-family="sans-serif">Splavná voda</text>
+    <text x="80" y="178" text-anchor="middle" font-size="13" fill="#1a4a6e" font-family="sans-serif">(západ)</text>
+
+    <!-- Nenavigabilní / mělčina – vpravo (východ) -->
+    <rect x="240" y="0" width="160" height="320" fill="#c8b89a" opacity="0.5"/>
+    <text x="320" y="155" text-anchor="middle" font-size="12" fill="#5a3a1a" font-family="sans-serif">Mělčina /</text>
+    <text x="320" y="173" text-anchor="middle" font-size="12" fill="#5a3a1a" font-family="sans-serif">jiný kanál</text>
+    <text x="320" y="191" text-anchor="middle" font-size="12" fill="#5a3a1a" font-family="sans-serif">(východ)</text>
+
+    <!-- Bóje – střed -->
+    <!-- Trup bóje -->
+    <ellipse cx="200" cy="210" rx="18" ry="10" fill="#cc2222"/>
+    <rect x="182" y="185" width="36" height="28" fill="#cc2222" rx="4"/>
+    <rect x="186" y="185" width="14" height="28" fill="#226622"/>
+    <!-- Tyč vrcholového znaku -->
+    <line x1="200" y1="185" x2="200" y2="130" stroke="#333" stroke-width="2"/>
+    <!-- Vrcholový znak: horní trojúhelník špičkou dolů -->
+    <polygon points="200,130 216,150 184,150" fill="#cc2222"/>
+    <!-- Vrcholový znak: dolní trojúhelník špičkou nahoru -->
+    <polygon points="200,170 184,150 216,150" fill="#cc2222"/>
+
+    <!-- Kotevní lano -->
+    <line x1="200" y1="218" x2="200" y2="240" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
+    <circle cx="200" cy="243" r="4" fill="#555"/>
+
+    <!-- Popisek bóje -->
+    <text x="200" y="270" text-anchor="middle" font-size="12" fill="#333" font-family="sans-serif">Oddělovací bóje</text>
+    <text x="200" y="286" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">(preferred channel)</text>
+
+    <!-- Šipka lodě z jihu na sever po splavné straně -->
+    <line x1="80" y1="280" x2="80" y2="60" stroke="#1a5a9e" stroke-width="2.5" stroke-dasharray="6,3"/>
+    <polygon points="80,55 73,72 87,72" fill="#1a5a9e"/>
+    <text x="48" y="50" font-size="11" fill="#1a5a9e" font-family="sans-serif">Loď</text>
+    <text x="44" y="63" font-size="11" fill="#1a5a9e" font-family="sans-serif">(kurz S→N)</text>
+
+    <!-- Kompasová růžice – orientace -->
+    <text x="355" y="25" font-size="11" fill="#333" font-family="sans-serif" font-weight="bold">S</text>
+    <text x="355" y="310" font-size="11" fill="#333" font-family="sans-serif" font-weight="bold">J</text>
+    <text x="8" y="168" font-size="11" fill="#333" font-family="sans-serif" font-weight="bold">Z</text>
+    <text x="375" y="168" font-size="11" fill="#333" font-family="sans-serif" font-weight="bold">V</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při setkání s oddělovací bójí v pobřežních vodách postupujte takto:
+  </p>
+  <ol>
+    <li>Identifikujte <strong>tvar vrcholového znaku</strong>: dva trojúhelníky vrcholy k sobě = oddělovací bóje.</li>
+    <li>Zjistěte <strong>barvu horního pruhu</strong> (nebo vrcholového znaku): červená = preferovaný kanál po levoboku (nechejte bóji vpravo při plavbě do přístavu / ve směru označeném šipkami na kartě).</li>
+    <li>Sledujte <strong>aktuální proud a hloubku</strong> — oddělovací bóje negarantuje absolutní bezpečnost; vždy ověřte námořní mapu.</li>
+    <li>Pokud preferovaný kanál nevyužíváte, lze projet i druhým kanálem, avšak s větší opatrností (menší hloubka nebo komplikovanější trasa).</li>
+  </ol>
+  <p>
+    V zadané situaci bóje s přesýpacím vrcholovým znakem indikuje, že bezpečná (splavná) voda leží <strong>na západ od bóje</strong> — loď se drží západně a míjí bóji po pravoboku.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IALA Maritime Buoyage System Region A</strong> — pravidla pro boční, oddělovací, izolovanou nebezpečnou a bezpečnou vodu, kardinální bóje; vydání IALA 2016.</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — §&nbsp;15 (povinnosti při plavbě v teritoriálních vodách a přístupech k přístavům).</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> — příloha o plavebních značkách a pravidlech jejich respektování v českých podmínkách mezinárodní plavby.</li>
+    <li><strong>Bowditch — American Practical Navigator</strong>, kap. 21 (Aids to Navigation) — popis systémů IALA-A a IALA-B.</li>
+  </ol>
+</article>

@@ -1,0 +1,11 @@
+{
+  "qid": 119,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Bowditch — American Practical Navigator",
+    "Admiralty Manual of Navigation",
+    "ISO 6709 — zeměpisné souřadnice"
+  ],
+  "model": "claude-opus-4-7"
+}

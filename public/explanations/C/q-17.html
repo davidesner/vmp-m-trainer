@@ -1,0 +1,98 @@
+<article class="vmp-explanation">
+  <h2>Snížení rychlosti nebo zastavení k zabránění srážce</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že plavidlo musí <strong>zmenšit rychlost nebo přerušit plavbu zastavením hlavních strojů nebo použitím zpětného chodu hlavních strojů</strong>. Jde o základní manévrovací zásadu COLREG: pokud hrozí srážka nebo je potřeba více času na vyhodnocení situace, první a klíčový krok je <em>snížit rychlost</em>, nikoli ji zvyšovat. Zmenšení rychlosti dává posádce i druhé straně více času na reakci a celkově snižuje potenciální škody.
+  </p>
+  <p>
+    Odpověď o okamžitém oznámení pochybností pěti krátkými tóny popisuje varovný/poplachový signál (signál pochybnosti dle COLREG pravidlo 34d), jenž může být použit <em>souběžně</em>, ale není primárním manévrovacím opatřením. Odpověď o zvýšení rychlosti je v přímém rozporu s COLREG.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972) upravují chování plavidel při nebezpečí srážky:
+  </p>
+  <ul>
+    <li>
+      <strong>COLREG pravidlo 8 – Opatření k zabránění srážce:</strong> Odst. (e) výslovně stanoví, že je-li nutno získat více času k vyhodnocení situace, může plavidlo snížit rychlost nebo úplně zastavit chod strojů pomocí zpětného chodu.
+    </li>
+    <li>
+      <strong>COLREG pravidlo 6 – Bezpečná rychlost:</strong> Plavidlo musí vždy plout bezpečnou rychlostí, při níž může provést účinná opatření k zabránění srážce a zastavit v přiměřené vzdálenosti.
+    </li>
+    <li>
+      <strong>COLREG pravidlo 34(d) – Manévrové a varovné signály:</strong> Pět nebo více krátkých tónů houkačkou je signálem pochybnosti/nebezpečí (výstražný akustický signál), nikoli primárním manévrem.
+    </li>
+    <li>
+      <strong>COLREG pravidlo 16 – Opatření ustupujícího plavidla:</strong> Plavidlo, které je povinno ustoupit, musí provést včasný a výrazný manévr — typicky změnu kurzu nebo snížení rychlosti.
+    </li>
+  </ul>
+
+  <h3>Vizualizace</h3>
+  <div style="overflow-x:auto;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="520" height="220" aria-label="Diagram: snížení rychlosti při hrozící srážce">
+      <!-- Plavidlo A – přijíždí zleva, zpomaluje -->
+      <g>
+        <!-- šipka pohybu A – kratší (zpomalení) -->
+        <line x1="80" y1="110" x2="200" y2="110" stroke="#2563eb" stroke-width="3" marker-end="url(#arrowBlue)"/>
+        <!-- symbol plavidla A -->
+        <polygon points="55,100 80,110 55,120" fill="#2563eb"/>
+        <text x="30" y="105" font-size="13" fill="#2563eb" font-family="sans-serif">Plavidlo A</text>
+        <text x="105" y="100" font-size="11" fill="#2563eb" font-family="sans-serif">zpomaluje ↓</text>
+      </g>
+
+      <!-- Plavidlo B – přijíždí zprava -->
+      <g>
+        <line x1="440" y1="110" x2="320" y2="110" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+        <polygon points="465,100 440,110 465,120" fill="#dc2626"/>
+        <text x="440" y="100" font-size="13" fill="#dc2626" font-family="sans-serif">Plavidlo B</text>
+      </g>
+
+      <!-- Bod potenciální srážky -->
+      <circle cx="260" cy="110" r="16" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+      <text x="252" y="114" font-size="12" fill="#92400e" font-family="sans-serif" font-weight="bold">!</text>
+
+      <!-- Popis bezpečného manévru -->
+      <rect x="90" y="148" width="340" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+      <text x="260" y="165" font-size="12" fill="#15803d" font-family="sans-serif" text-anchor="middle" font-weight="bold">Správný manévr (COLREG pr. 8e):</text>
+      <text x="260" y="181" font-size="11" fill="#15803d" font-family="sans-serif" text-anchor="middle">Snížit rychlost / zastavit stroje / použít zpětný chod</text>
+
+      <!-- Šipka špatného manévru (zvýšení rychlosti) – přeškrtnutá -->
+      <line x1="80" y1="55" x2="240" y2="55" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowRed)"/>
+      <text x="115" y="45" font-size="11" fill="#dc2626" font-family="sans-serif">Nesprávně: zvýšit rychlost</text>
+      <line x1="75" y1="40" x2="245" y2="68" stroke="#dc2626" stroke-width="2.5"/>
+      <line x1="245" y1="40" x2="75" y2="68" stroke="#dc2626" stroke-width="2.5"/>
+
+      <defs>
+        <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#dc2626"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi nastane tato situace například při plavbě v mlze, v úzkém průlivu nebo na frekventované námořní trase. Pokud lodní důstojník zjistí, že se náměr na přibližující se plavidlo nemění (tzn. plavidla jedou na kolizním kurzu), okamžitě sníží rychlost nebo zastaví stroje, aby:
+  </p>
+  <ul>
+    <li>získal více času na vyhodnocení situace a komunikaci (VHF, radarové sledování),</li>
+    <li>umožnil druhé lodi provést vlastní manéver,</li>
+    <li>snížil kinetickou energii a tím i případné škody při srážce.</li>
+  </ul>
+  <p>
+    Zpětný chod (záďový pohon) je nejúčinnější způsob rychlého snížení rychlosti a zastavení námořního plavidla a je standardním nouzovým manévrem. Zvýšení rychlosti je nebezpečné a v rozporu s COLREG.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> – Mezinárodní pravidla pro zabránění srážkám na moři, Pravidlo 8(e) (opatření k zabránění srážce – snížení rychlosti)</li>
+    <li><strong>COLREG 1972</strong> – Pravidlo 6 (bezpečná rychlost)</li>
+    <li><strong>COLREG 1972</strong> – Pravidlo 34(d) (varovný signál pochybnosti – 5 krátkých tónů)</li>
+    <li><strong>COLREG 1972</strong> – Pravidlo 16 (opatření ustupujícího plavidla)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě, § 6 (povinnosti velitele plavidla)</li>
+  </ol>
+</article>

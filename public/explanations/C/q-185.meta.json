@@ -1,0 +1,12 @@
+{
+  "qid": 185,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO-No. 306 — Manual on Codes, FM 12-XIV SYNOP, kódy ww 50–59 (mrholení)",
+    "WMO-No. 485 — Manual on the Global Data-processing and Forecasting System",
+    "COLREG 1972 — Pravidlo 19",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-sonnet-4-6"
+}

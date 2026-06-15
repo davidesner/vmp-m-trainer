@@ -1,0 +1,105 @@
+<article class="vmp-explanation">
+  <h2>Zelená kuželovitá bója — IALA systém A</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správnou odpovědí je, že bóji <strong>musíte minout na pravoboku</strong> (po pravé straně).
+    Zelená kuželovitá bója je v systému IALA-A <em>pravostranná označovací bója</em> (port-hand → ne; přesněji: zelená kuželovitá = <em>starboard-hand</em>). Při plavbě z moře do přístavu (tedy ve směru přílivu) musí navigátor ponechat tuto bóji vždy po pravé straně plavidla — bója tak zůstane na pravoboku.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    V Evropě (a ve většině světa) se používá <strong>systém IALA-A</strong> (bójkový systém A) pro laterální označení plavební dráhy:
+  </p>
+  <ul>
+    <li><strong>Pravostranné bóje (starboard side)</strong> — zelená barva, tvar <em>kužel</em> (kuželovitý), světlo zelené. Minout na <strong>pravoboku</strong> při vstupu do přístavu (z moře).</li>
+    <li><strong>Levostranné bóje (port side)</strong> — červená barva, tvar <em>válec</em> (tyčová nebo válcovitá), světlo červené. Minout na <strong>levoboku</strong> při vstupu do přístavu.</li>
+  </ul>
+  <p>
+    Směr „z moře do přístavu" (konvenčně nazývaný směr přílivu nebo <em>conventional direction of buoyage</em>) je definující pro výběr strany. V opačném směru (z přístavu na moře) se strany obrátí.
+  </p>
+  <p>
+    Pravidlo vychází z doporučení <strong>IALA Maritime Buoyage System (Region A)</strong>, které bylo přijato v roce 1977 a platí pro vody Evropy, Afriky, Asie a Austrálie. Česká republika jako signatář Úmluvy o SOLAS a zákonem č. 61/2000 Sb. o námořní plavbě toto označení uznává a implementuje.
+  </p>
+
+  <h3>Vizualizace</h3>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" style="max-width:100%;border:1px solid #ccc;border-radius:6px;background:#e8f4fc;">
+    <!-- Voda -->
+    <rect x="0" y="200" width="480" height="120" fill="#a8d8ea" />
+    <!-- Plavební dráha šipky -->
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#1a5276" />
+      </marker>
+    </defs>
+
+    <!-- Plavidlo (zjednodušený tvar) -->
+    <g transform="translate(60,160)">
+      <!-- trup -->
+      <polygon points="0,30 10,0 60,0 70,30" fill="#2c3e50" />
+      <!-- kabina -->
+      <rect x="20" y="-15" width="25" height="15" fill="#7f8c8d" />
+      <!-- stěžeň -->
+      <line x1="32" y1="-15" x2="32" y2="-40" stroke="#7f8c8d" stroke-width="2" />
+      <text x="35" y="50" font-size="11" fill="#1a5276" font-family="Arial,sans-serif">Plavidlo</text>
+    </g>
+
+    <!-- Šipka směru plavby -->
+    <line x1="160" y1="175" x2="370" y2="175" stroke="#1a5276" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrow)" />
+    <text x="230" y="168" font-size="11" fill="#1a5276" font-family="Arial,sans-serif" font-weight="bold">směr: z moře → přístav</text>
+
+    <!-- Zelená kuželovitá bója -->
+    <g transform="translate(370,130)">
+      <!-- tyč bóje -->
+      <line x1="0" y1="60" x2="0" y2="90" stroke="#555" stroke-width="3" />
+      <!-- plovák -->
+      <ellipse cx="0" cy="90" rx="14" ry="8" fill="#2ecc40" />
+      <!-- kužel nahoře -->
+      <polygon points="-18,60 18,60 0,10" fill="#27ae60" />
+      <!-- kotevní řetěz -->
+      <line x1="0" y1="98" x2="0" y2="115" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2" />
+      <text x="-30" y="130" font-size="11" fill="#1a5276" font-family="Arial,sans-serif">Zelená</text>
+      <text x="-30" y="143" font-size="11" fill="#1a5276" font-family="Arial,sans-serif">kuželovitá bója</text>
+    </g>
+
+    <!-- Popis stran -->
+    <text x="370" y="105" font-size="12" fill="#c0392b" font-family="Arial,sans-serif" font-weight="bold">PRAVOBOKK ←</text>
+
+    <!-- Šipka k pravoboku plavidla -->
+    <line x1="370" y1="175" x2="340" y2="155" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arrow)" />
+
+    <!-- Legenda -->
+    <rect x="10" y="215" width="200" height="90" rx="6" fill="white" fill-opacity="0.8" />
+    <text x="20" y="232" font-size="12" font-weight="bold" fill="#1a5276" font-family="Arial,sans-serif">Systém IALA-A</text>
+    <rect x="20" y="240" width="14" height="14" fill="#27ae60" />
+    <text x="40" y="252" font-size="11" fill="#333" font-family="Arial,sans-serif">Zelená kužel = pravobokk</text>
+    <rect x="20" y="260" width="14" height="14" fill="#e74c3c" />
+    <text x="40" y="272" font-size="11" fill="#333" font-family="Arial,sans-serif">Červený válec = levobokk</text>
+    <text x="20" y="292" font-size="10" fill="#555" font-family="Arial,sans-serif">(směr: z moře do přístavu)</text>
+
+    <!-- Přístav label -->
+    <text x="410" y="195" font-size="12" fill="#1a5276" font-family="Arial,sans-serif" font-weight="bold">PŘÍSTAV</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při vstupu do přístavu nebo plavebního kanálu navigátor sleduje barvu a tvar bójí:
+  </p>
+  <ul>
+    <li>Vidí-li před sebou <strong>zelenou kuželovitou bóji</strong>, musí ji nechat na svém <strong>pravoboku</strong> — tj. projet nalevo od ní (bója zůstane vpravo od plavidla). Tím zůstane v bezpečné plavební dráze.</li>
+    <li>Při opačné plavbě (z přístavu na moře) platí opak — zelenou bóji míjí po <strong>levoboku</strong>.</li>
+    <li>Zaměnění stran hrozí nasednutím na mělčinu nebo překážku, protože bóje ohraničuje okraj bezpečné dráhy.</li>
+  </ul>
+  <p>
+    Praktická pomůcka: <em>„Do přístavu — zelená vpravo, červená vlevo"</em> (v systému IALA-A).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IALA Maritime Buoyage System — Region A</strong> (International Association of Lighthouse Authorities, 1977, aktualizováno 2016): laterální systém označení, definice barev a tvarů bójí.</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — § 22 a násl.: bezpečnost plavby, povinnost dodržovat plavební značky.</li>
+    <li><strong>COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 1 a Příloha IV: aplikovatelnost pravidel v pobřežních vodách; označení plavební dráhy není přímo součástí COLREG, ale doplňuje je.</li>
+    <li><strong>Bowditch — American Practical Navigator</strong>, kap. 29: Aids to Navigation, popis systému IALA-A a IALA-B.</li>
+  </ol>
+</article>

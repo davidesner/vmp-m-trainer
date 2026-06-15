@@ -1,0 +1,81 @@
+<article class="vmp-explanation">
+  <h2>Výpočet doby plavby z rychlosti a vzdálenosti</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>0,5 hodiny</strong>. Platí základní navigační vzorec
+    <em>čas = vzdálenost ÷ rychlost</em>. Dosadíme: 2 námořní míle ÷ 4 uzly = 0,5 hodiny (tj. 30 minut).
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    V námořní navigaci se používají tři vzájemně propojené veličiny:
+  </p>
+  <ul>
+    <li><strong>Rychlost (Speed)</strong> — udávaná v uzlech (kn); 1 uzel = 1 námořní míle za hodinu.</li>
+    <li><strong>Vzdálenost (Distance)</strong> — udávaná v námořních mílích (NM); 1 NM ≈ 1 852 m.</li>
+    <li><strong>Čas (Time)</strong> — udávaný v hodinách nebo minutách.</li>
+  </ul>
+  <p>Vzájemná závislost (tzv. DST trojúhelník):</p>
+  <ul>
+    <li><code>Vzdálenost = Rychlost × Čas</code></li>
+    <li><code>Čas = Vzdálenost ÷ Rychlost</code></li>
+    <li><code>Rychlost = Vzdálenost ÷ Čas</code></li>
+  </ul>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="420" height="180" aria-label="DST trojúhelník a výpočet">
+    <!-- DST triangle -->
+    <rect x="10" y="10" width="120" height="50" rx="6" fill="#1a73e8" />
+    <text x="70" y="30" text-anchor="middle" fill="white" font-size="13" font-weight="bold">D</text>
+    <text x="70" y="50" text-anchor="middle" fill="white" font-size="11">Vzdálenost</text>
+    <text x="70" y="65" text-anchor="middle" fill="white" font-size="11">2 NM</text>
+
+    <rect x="10" y="80" width="55" height="50" rx="6" fill="#34a853" />
+    <text x="37" y="100" text-anchor="middle" fill="white" font-size="13" font-weight="bold">S</text>
+    <text x="37" y="115" text-anchor="middle" fill="white" font-size="11">Rychlost</text>
+    <text x="37" y="130" text-anchor="middle" fill="white" font-size="11">4 kn</text>
+
+    <rect x="75" y="80" width="55" height="50" rx="6" fill="#fbbc04" />
+    <text x="102" y="100" text-anchor="middle" fill="#333" font-size="13" font-weight="bold">T</text>
+    <text x="102" y="115" text-anchor="middle" fill="#333" font-size="11">Čas</text>
+    <text x="102" y="130" text-anchor="middle" fill="#333" font-size="11">? hod</text>
+
+    <!-- Dividing line in triangle -->
+    <line x1="10" y1="80" x2="130" y2="80" stroke="#555" stroke-width="1.5"/>
+
+    <!-- Arrow -->
+    <line x1="155" y1="90" x2="195" y2="90" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+      </marker>
+    </defs>
+
+    <!-- Calculation box -->
+    <rect x="200" y="50" width="200" height="90" rx="8" fill="#f1f3f4" stroke="#ccc" stroke-width="1"/>
+    <text x="300" y="75" text-anchor="middle" fill="#333" font-size="13" font-weight="bold">Výpočet</text>
+    <text x="300" y="97" text-anchor="middle" fill="#333" font-size="12">T = D ÷ S</text>
+    <text x="300" y="115" text-anchor="middle" fill="#333" font-size="12">T = 2 NM ÷ 4 kn</text>
+    <text x="300" y="133" text-anchor="middle" fill="#1a73e8" font-size="14" font-weight="bold">T = 0,5 hod (30 min)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Navigátor tuto trojici používá nepřetržitě při vedení plavidla:
+  </p>
+  <ul>
+    <li><strong>Odhad doby příjezdu (ETA):</strong> Znám-li vzdálenost do přístavu a průměrnou rychlost, spočítám, kdy dorazím — důležité pro přílivové tabulky nebo nástup pilota.</li>
+    <li><strong>Plánování průjezdu:</strong> Úzký průliv, kde je omezena viditelnost, chci projet za světla. Zjistím, zda stihnu dorazit před setměním.</li>
+    <li><strong>Kontrola GPS:</strong> Výpočet z logu a chronometru slouží jako záložní ověření GPS dat.</li>
+  </ul>
+  <p>
+    Výsledek 0,5 hodiny vylučuje odpovědi „1 hodinu" (platilo by pro vzdálenost 4 NM nebo rychlost 2 kn) i „2 hodiny" (platilo by pro rychlost 1 kn).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Bowditch — <em>American Practical Navigator</em>, kap. 18 (Speed, Time and Distance).</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — příloha (základní navigační pojmy a jednotky).</li>
+  </ol>
+</article>

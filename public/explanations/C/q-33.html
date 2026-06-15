@@ -1,0 +1,114 @@
+<article class="vmp-explanation">
+  <h2>Pravidlo 17 COLREG – Práva a povinnosti přednostní lodě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že přednostní loď (ta, které má být uvolněna cesta) může
+    <strong>sama přijmout opatření pro zabránění srážky vlastním vhodným manévrem</strong>.
+    Pravidlo 17 COLREG totiž přednostní lodi výslovně umožňuje – a za určitých podmínek
+    i ukládá – provést manévr k zabránění srážky, pokud ustupující loď nekoná.
+    Volba konkrétního manévru (směr, rychlost) závisí na situaci; pravidlo neurčuje
+    žádný pevný směr vpravo ani vlevo.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    <strong>COLREG 1972, Pravidlo 17 – Jednání přednostní lodě</strong>:
+  </p>
+  <ul>
+    <li>
+      <strong>17(a)(i)</strong> – Přednostní loď si zachovává svůj kurz a rychlost.
+    </li>
+    <li>
+      <strong>17(a)(ii)</strong> – Zjistí-li přednostní loď, že ustupující loď zjevně
+      nekoná podle pravidel, <em>může</em> provést manévr, aby srážce zabránila.
+    </li>
+    <li>
+      <strong>17(b)</strong> – Dospěje-li přednostní loď k závěru, že srážce nelze
+      zabránit samotným jednáním ustupující lodě, <em>musí</em> provést takový manévr,
+      který nejlépe napomůže vyhnutí se srážce.
+    </li>
+    <li>
+      <strong>17(c)</strong> – Pravidlo 17 nezbavuje ustupující loď její povinnosti
+      uvolnit cestu.
+    </li>
+  </ul>
+  <p>
+    Zákaz manévrovat doleva (vlevo) platí jen v případě lodi nalevo (Pravidlo 16 + 17),
+    a i tehdy to není absolutní – jde o obecnou zásadu, nikoliv o výlučné omezení
+    platné za všech okolností. Pravidlo 17 tedy nediktuje žádný konkrétní pevný směr
+    manévru.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="520" height="260" aria-label="Diagram pravidla 17 COLREG">
+    <!-- Pozadí – moře -->
+    <rect width="520" height="260" fill="#d6eaf8" rx="8"/>
+
+    <!-- Ustupující loď (vlevo dole) – nekoná -->
+    <g transform="translate(80,180)">
+      <!-- trup -->
+      <polygon points="0,-14 30,0 0,14 -30,0" fill="#e74c3c" stroke="#c0392b" stroke-width="1.5"/>
+      <!-- šipka směru (přímo dopředu – neodklání se) -->
+      <line x1="30" y1="0" x2="80" y2="0" stroke="#c0392b" stroke-width="2" stroke-dasharray="6,3"
+            marker-end="url(#arrow-red)"/>
+      <text x="-30" y="32" font-size="11" fill="#922b21" font-family="sans-serif">Ustupující loď</text>
+      <text x="-30" y="44" font-size="10" fill="#922b21" font-family="sans-serif">(nekoná – stále kříží dráhu)</text>
+    </g>
+
+    <!-- Přednostní loď (vpravo nahoře) -->
+    <g transform="translate(380,80)">
+      <!-- trup -->
+      <polygon points="0,-14 30,0 0,14 -30,0" fill="#2ecc71" stroke="#27ae60" stroke-width="1.5"/>
+      <!-- šipka manévru – odklon -->
+      <line x1="-30" y1="0" x2="-120" y2="50" stroke="#1a5276" stroke-width="2"
+            marker-end="url(#arrow-blue)"/>
+      <text x="10" y="-20" font-size="11" fill="#1a5276" font-family="sans-serif">Přednostní loď</text>
+      <text x="10" y="-8" font-size="10" fill="#1a5276" font-family="sans-serif">(přijme vhodný manévr)</text>
+    </g>
+
+    <!-- Kolizní bod (bez manévru) -->
+    <circle cx="220" cy="130" r="16" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="240" y="128" font-size="10" fill="#922b21" font-family="sans-serif">Možná</text>
+    <text x="240" y="140" font-size="10" fill="#922b21" font-family="sans-serif">srážka</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="10" width="200" height="56" fill="white" fill-opacity="0.75" rx="5"/>
+    <text x="18" y="28" font-size="11" font-weight="bold" fill="#333" font-family="sans-serif">COLREG Pravidlo 17</text>
+    <line x1="18" y1="38" x2="48" y2="38" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="54" y="41" font-size="10" fill="#333" font-family="sans-serif">Ustupující – stále kříží dráhu</text>
+    <line x1="18" y1="54" x2="48" y2="54" stroke="#1a5276" stroke-width="2"/>
+    <text x="54" y="57" font-size="10" fill="#333" font-family="sans-serif">Přednostní – provede manévr</text>
+
+    <!-- Definice šipek -->
+    <defs>
+      <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#c0392b"/>
+      </marker>
+      <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#1a5276"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Situaci si lze představit například jako křižování kursů dvou plavidel: ustupující
+    loď by měla změnit kurz nebo zpomalit, ale z jakéhokoliv důvodu (nepozornost,
+    porucha) tak nečiní. Přednostní loď pak nesmí pasivně čekat na srážku; v souladu
+    s Pravidlem 17(a)(ii) a 17(b) musí zvolit <em>nejvhodnější dostupný manévr</em>
+    – zpravidla odbočení doprava nebo snížení rychlosti, ale záleží na konkrétní
+    situaci. Pevně předepsaný směr (vpravo nebo vlevo) pravidlo nestanovuje.
+  </p>
+  <p>
+    Kapitán přednostní lodě musí průběžně vyhodnocovat situaci (Pravidlo 5 – hlídka,
+    Pravidlo 7 – posuzování nebezpečí srážky) a jednat dostatečně včas, aby manévr
+    byl účinný.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 – Úmluva o mezinárodních pravidlech pro zabránění srážkám na moři, <strong>Pravidlo 17</strong> (Jednání přednostní lodě), <strong>Pravidlo 5</strong> (Hlídka), <strong>Pravidlo 7</strong> (Nebezpečí srážky), <strong>Pravidlo 16</strong> (Jednání ustupující lodě)</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě – § 5 (povinnost dodržovat COLREG)</li>
+  </ol>
+</article>

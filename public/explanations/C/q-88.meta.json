@@ -1,0 +1,11 @@
+{
+  "qid": 88,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Bowditch — American Practical Navigator (NIMA Pub. No. 9)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "SOLAS — Kapitola V (Bezpečnost plavby)"
+  ],
+  "model": "claude-opus-4-7"
+}

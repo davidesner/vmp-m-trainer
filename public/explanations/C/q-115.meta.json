@@ -1,0 +1,7 @@
+{
+  "qid": 115,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["INT 1 — Symbols, Abbreviations and Terms used on Charts (IHO S-4, sekce K)", "COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-opus-4-7"
+}

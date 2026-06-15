@@ -1,0 +1,12 @@
+{
+  "qid": 182,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO Technical Regulations WMO-No. 49 / Manual on Codes WMO-No. 306",
+    "SOLAS 1974, kapitola V",
+    "Bowditch — American Practical Navigator, kapitola 37",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

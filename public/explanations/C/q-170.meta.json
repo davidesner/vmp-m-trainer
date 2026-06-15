@@ -1,0 +1,11 @@
+{
+  "qid": 170,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — Mezinárodní atlas oblaků (WMO-No. 407)",
+    "WMO — Meteorological codes FM-15 METAR / FM-16 SPECI",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-sonnet-4-6"
+}

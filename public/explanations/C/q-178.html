@@ -1,0 +1,95 @@
+<article class="vmp-explanation">
+  <h2>Výška vlny se měří mezi prohlubní a hřbetem</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že výška vlny se měří <strong>mezi prohlubní a hřbetem</strong>.
+    Prohlubně (trough) je nejnižší bod vlny a hřbet (crest) je nejvyšší bod vlny.
+    Výška vlny (wave height) je tedy svislá vzdálenost mezi těmito dvěma body na téže vlně.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Ve fyzice a oceanografii se vlna popisuje několika základními parametry:
+  </p>
+  <ul>
+    <li><strong>Hřbet (crest)</strong> — nejvyšší bod vlny nad klidovou hladinou.</li>
+    <li><strong>Prohlubně / údolí (trough)</strong> — nejnižší bod vlny pod klidovou hladinou.</li>
+    <li><strong>Výška vlny (H)</strong> — svislá vzdálenost od prohlubně k hřbetu. Je to tedy součet amplitudy nad a pod klidovou hladinou.</li>
+    <li><strong>Amplituda (A)</strong> — vzdálenost hřbetu (nebo prohlubně) od klidové hladiny; platí H = 2A.</li>
+    <li><strong>Délka vlny (λ)</strong> — vodorovná vzdálenost dvou sousedních hřbetů (nebo prohlubní).</li>
+    <li><strong>Perioda (T)</strong> — čas, za který projde jeden kompletní cyklus daným bodem.</li>
+  </ul>
+  <p>
+    Výška vlny <em>není</em> měřena od dna moře ani od pobřežní linie — tyto veličiny se výškou vlny vůbec nesouvisí.
+    Měření od dna by popisovalo hloubku vody, nikoli parametr vlny samotné.
+  </p>
+  <p>
+    Tato definice je standardizována v mezinárodní námořní meteorologii a používá ji WMO (Světová meteorologická organizace)
+    i IMO pro popis stavu moře ve zprávách GRIB, SYNOP a bulletinech NAVTEX.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" role="img" aria-label="Diagram výšky vlny">
+    <!-- Klidová hladina -->
+    <line x1="20" y1="110" x2="500" y2="110" stroke="#90b8d4" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="22" y="106" font-size="12" fill="#4a7fa5">klidová hladina</text>
+
+    <!-- Vlnová křivka (přibližný sinus) pomocí path -->
+    <path d="M20,110
+             C55,110 70,40 110,40
+             C150,40 165,180 205,180
+             C245,180 260,40 300,40
+             C340,40 355,180 395,180
+             C435,180 450,110 500,110"
+          fill="none" stroke="#1a6fa8" stroke-width="2.5"/>
+
+    <!-- Hřbet vlny — první vrchol -->
+    <line x1="110" y1="40" x2="110" y2="180" stroke="#e04040" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Prohlubně — první údolí -->
+    <line x1="205" y1="40" x2="205" y2="180" stroke="#e04040" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+    <!-- Šipka výška vlny -->
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/>
+      </marker>
+      <marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse">
+        <path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/>
+      </marker>
+    </defs>
+    <line x1="155" y1="40" x2="155" y2="180"
+          stroke="#c0392b" stroke-width="2"
+          marker-start="url(#arr2)" marker-end="url(#arr)"/>
+    <text x="160" y="115" font-size="13" fill="#c0392b" font-weight="bold">H</text>
+    <text x="158" y="128" font-size="11" fill="#c0392b">(výška vlny)</text>
+
+    <!-- Popisky -->
+    <text x="100" y="32" font-size="12" fill="#1a6fa8" text-anchor="middle">hřbet</text>
+    <text x="100" y="22" font-size="11" fill="#555" text-anchor="middle">(crest)</text>
+    <circle cx="110" cy="40" r="4" fill="#1a6fa8"/>
+
+    <text x="205" y="198" font-size="12" fill="#1a6fa8" text-anchor="middle">prohlubně</text>
+    <text x="205" y="210" font-size="11" fill="#555" text-anchor="middle">(trough)</text>
+    <circle cx="205" cy="180" r="4" fill="#1a6fa8"/>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Znalost definice výšky vlny je nezbytná pro:
+  </p>
+  <ul>
+    <li><strong>Čtení námořních předpovědí</strong> — vlhkostní a vlnové bulletiny (NAVTEX, GRIB) uvádějí výšku vlny v metrech jako H₁/₃ (tzv. signifikantní výška vlny — průměr třetiny nejvyšších vln).</li>
+    <li><strong>Posouzení bezpečnosti plavby</strong> — výška vlny 2 m u plavidla s malým výtlakem může být kritická; kapitán musí umět tuto hodnotu správně interpretovat.</li>
+    <li><strong>Ústní hlášení stavu moře</strong> — při VHF komunikaci s MRCC nebo jinými plavidly se výška vlny hlásí v metrech; záměna s jiným rozměrem (hloubka, vzdálenost od břehu) by vedla k chybné informaci.</li>
+    <li><strong>Douglasova stupnice stavu moře</strong> — každý stupeň je definován rozsahem výšky vlny (H) v metrech.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>WMO No. 306 — Manual on Codes (SYNOP, SHIP) — definice výšky vlny a stavu moře</li>
+    <li>IMO MSC/Circ. 1023 — Guidelines for Formal Safety Assessment, příloha o mořském prostředí</li>
+    <li>Bowditch — American Practical Navigator, kap. 37 (Oceanography — Waves)</li>
+    <li>ČSN ISO 19901-1 — Offshore structures: Met-ocean design and operating conditions (definice parametrů vlny)</li>
+  </ol>
+</article>

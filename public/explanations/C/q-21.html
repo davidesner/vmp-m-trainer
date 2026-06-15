@@ -1,0 +1,95 @@
+<article class="vmp-explanation">
+  <h2>Střet dvou plachetnic — pravidla přednosti</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že mají-li obě plachetnice vítr z různých stran, musí cestu uvolnit ta, která má vítr z <strong>levé strany</strong>. Toto pravidlo platí bez ohledu na vzájemnou polohu lodí — rozhodující je pouze z které strany přichází vítr ke každé z plavidel. Loď s větrem zprava (z pravé strany) má přednost.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Situace je upravena <strong>COLREG 1972, pravidlo 12 (Plachetnice)</strong>:
+  </p>
+  <ul>
+    <li><strong>Pravidlo 12(a)(i):</strong> Mají-li dvě plachetnice vítr z různých stran, pak loď s větrem z levé strany musí uvolnit cestu druhé lodi.</li>
+    <li><strong>Pravidlo 12(a)(ii):</strong> Mají-li obě plachetnice vítr ze stejné strany, pak loď na návětrné straně (blíže ke zdroji větru) musí uvolnit cestu lodi na závětrné straně.</li>
+    <li><strong>Pravidlo 12(b):</strong> Nemůže-li loď s větrem z levé strany určit, ze které strany má vítr druhá loď, musí uvolnit cestu druhé lodi.</li>
+  </ul>
+  <p>
+    Možnost „obě plachetnice změnit svůj směr vlevo" je <em>nesprávná</em> — COLREG nestanoví žádné takové univerzální pravidlo pro plachetnice a v praxi by mohlo dojít ke srážce.
+  </p>
+  <p>
+    Druhá nabízená možnost popisuje situaci obráceně — říká, že loď na <em>závětrné</em> straně musí uvolnit cestu lodi na <em>návětrné</em> straně. To je opak toho, co pravidlo 12(a)(ii) stanoví (při stejném větru u obou plavidel musí přednost dát loď <em>návětrná</em> lodi <em>závětrné</em>). Jde tedy o záměnu stran, a proto je tato možnost chybná.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Schéma ukazuje dvě plachetnice (A a B) s větrem přicházejícím z různých stran:</p>
+
+  <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;background:#e8f4f8;border-radius:8px;">
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#2c7bb6;"/>
+      </marker>
+      <marker id="wind-arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#27ae60;"/>
+      </marker>
+    </defs>
+
+    <!-- Vítr šipky -->
+    <text x="20" y="25" style="font-size:13px;fill:#27ae60;font-weight:bold;">VÍTR</text>
+
+    <!-- Vítr pro loď A (zleva - z levé strany) -->
+    <line x1="30" y1="120" x2="110" y2="120" style="stroke:#27ae60;stroke-width:2;" marker-end="url(#wind-arrow)"/>
+    <text x="32" y="112" style="font-size:11px;fill:#27ae60;">vítr z LEVA</text>
+
+    <!-- Vítr pro loď B (zprava - z pravé strany) -->
+    <line x1="450" y1="180" x2="370" y2="180" style="stroke:#27ae60;stroke-width:2;" marker-end="url(#wind-arrow)"/>
+    <text x="355" y="172" style="font-size:11px;fill:#27ae60;">vítr z PRAVA</text>
+
+    <!-- Loď A (musí dát přednost) -->
+    <g transform="translate(140,100)">
+      <polygon points="0,40 15,0 30,40" style="fill:#e74c3c;stroke:#c0392b;stroke-width:1.5;"/>
+      <line x1="15" y1="0" x2="15" y2="40" style="stroke:#c0392b;stroke-width:2;"/>
+      <text x="-5" y="58" style="font-size:13px;fill:#c0392b;font-weight:bold;">A</text>
+      <text x="-28" y="72" style="font-size:10px;fill:#c0392b;">(dá přednost)</text>
+    </g>
+
+    <!-- Loď B (má přednost) -->
+    <g transform="translate(310,150)">
+      <polygon points="0,40 15,0 30,40" style="fill:#2980b9;stroke:#1a5276;stroke-width:1.5;"/>
+      <line x1="15" y1="0" x2="15" y2="40" style="stroke:#1a5276;stroke-width:2;"/>
+      <text x="-5" y="58" style="font-size:13px;fill:#2980b9;font-weight:bold;">B</text>
+      <text x="-22" y="72" style="font-size:10px;fill:#2980b9;">(má přednost)</text>
+    </g>
+
+    <!-- Šipka pohybu lodí (přibližují se k sobě) -->
+    <line x1="185" y1="130" x2="305" y2="155" style="stroke:#555;stroke-width:1.5;stroke-dasharray:5,4;" marker-end="url(#arrow)"/>
+    <line x1="315" y1="165" x2="195" y2="140" style="stroke:#555;stroke-width:1.5;stroke-dasharray:5,4;" marker-end="url(#arrow)"/>
+
+    <!-- Legenda -->
+    <rect x="10" y="245" width="460" height="45" style="fill:rgba(255,255,255,0.7);rx:4;ry:4;"/>
+    <text x="20" y="263" style="font-size:11px;fill:#333;">Loď A má vítr z levé strany → musí uvolnit cestu.</text>
+    <text x="20" y="280" style="font-size:11px;fill:#333;">Loď B má vítr z pravé strany → má přednost (COLREG, pravidlo 12a-i).</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při setkání dvou plachetnic na moři si každý kormidelník musí okamžitě určit:
+  </p>
+  <ol>
+    <li>Ze které strany přichází vítr k <em>mé</em> lodi?</li>
+    <li>Ze které strany přichází vítr k <em>druhé</em> lodi?</li>
+  </ol>
+  <p>
+    Pokud mám vítr z levé strany a druhá loď má vítr z pravé strany, <strong>musím manévrovat já</strong> — odpadlím, zpomalím nebo změním kurz tak, abych bezpečně minul druhé plavidlo. Loď s větrem zprava pokračuje.
+  </p>
+  <p>
+    Pozor: V situaci, kdy nelze zjistit, ze které strany má vítr druhá loď (např. ji vidím pouze přídí), COLREG pravidlo 12(b) nařizuje být opatrný a považovat ji za loď s větrem z pravé strany — tj. dát jí přednost.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 12 (Plachetnice), čl. (a)(i), (a)(ii), (b)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — §&nbsp;25 (odkaz na COLREG)</li>
+  </ol>
+</article>

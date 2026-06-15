@@ -1,0 +1,80 @@
+<article class="vmp-explanation">
+  <h2>Izobata — linie stejných hloubek na námořní mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>izobata</strong>. Izobata (z řeckého <em>isos</em> = stejný, <em>bathos</em> = hloubka) je linie na námořní mapě spojující všechna místa se stejnou hloubkou vody pod hladinou moře. Pomáhá navigátorovi rychle odečíst tvar mořského dna a bezpečnou hloubku pro průjezd plavidla.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní mapy (nautické charty) jsou vydávány a standardizovány organizací IHO (International Hydrographic Organization) dle publikace S-4 (Regulations of the IHO for International (INT) Charts). Izobaty jsou na mapách zobrazeny jako plynulé čáry, obvykle doprovázené číselnou hodnotou hloubky v metrech (nebo sázích u starších map). Standardní izobaty se kreslí pro hloubky 5, 10, 20, 50, 100, 200, 500, 1000 m a jejich násobky.
+  </p>
+  <p>
+    Je důležité neplestat si izobatu s příbuznými pojmy:
+  </p>
+  <ul>
+    <li><strong>Izobara</strong> — linie stejného atmosferického tlaku (meteorologie, synoptické mapy).</li>
+    <li><strong>Izohypsa</strong> — linie stejné nadmořské výšky na topografických (pevninských) mapách; na souši plní analogickou roli jako izobata na moři.</li>
+  </ul>
+
+  <h3>Vizualizace</h3>
+  <p>Schematický průřez mořským dnem s izobatami:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" style="max-width:520px;width:100%;background:#e8f4fb;border-radius:8px;display:block;margin:0 auto;">
+    <!-- Hladina moře -->
+    <rect x="0" y="0" width="520" height="40" style="fill:#b0d8f0;" />
+    <text x="10" y="25" style="font-size:13px;fill:#1a4a70;font-weight:bold;">Hladina moře (0 m)</text>
+
+    <!-- Mořské dno - organický tvar -->
+    <polygon points="0,40 0,260 520,260 520,40 460,80 400,100 340,130 280,160 220,150 160,120 100,90 40,70 0,40"
+             style="fill:#c8a86b;" />
+
+    <!-- Izobata 10 m -->
+    <polyline points="30,50 90,58 160,72 230,88 300,105 370,95 430,78 490,65"
+              style="fill:none;stroke:#1a6fa8;stroke-width:2;stroke-dasharray:6,3;" />
+    <text x="492" y="69" style="font-size:11px;fill:#1a6fa8;">10 m</text>
+
+    <!-- Izobata 20 m -->
+    <polyline points="20,60 80,75 150,95 220,118 295,138 365,120 425,100 490,88"
+              style="fill:none;stroke:#1a6fa8;stroke-width:2;stroke-dasharray:6,3;" />
+    <text x="492" y="92" style="font-size:11px;fill:#1a6fa8;">20 m</text>
+
+    <!-- Izobata 50 m -->
+    <polyline points="10,90 70,110 140,135 210,158 280,175 350,155 415,135 490,120"
+              style="fill:none;stroke:#1a6fa8;stroke-width:2;stroke-dasharray:6,3;" />
+    <text x="492" y="124" style="font-size:11px;fill:#1a6fa8;">50 m</text>
+
+    <!-- Šipky hloubky -->
+    <line x1="240" y1="40" x2="240" y2="158" style="stroke:#333;stroke-width:1.5;marker-end:url(#arrow);" />
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#333;" />
+      </marker>
+    </defs>
+    <text x="244" y="105" style="font-size:11px;fill:#333;">hloubka</text>
+
+    <!-- Popisky -->
+    <text x="10" y="250" style="font-size:11px;fill:#4a3010;">Mořské dno</text>
+    <text x="10" y="190" style="font-size:12px;fill:#1a5a8a;font-style:italic;">izobaty = linie stejné hloubky</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování plavby navigátor sleduje izobaty, aby:
+  </p>
+  <ol>
+    <li>Udržel bezpečný ponor plavidla — vyhýbá se mělčinám, kde hloubka klesá pod minimální bezpečný ponor.</li>
+    <li>Prováděl plavbu podél izobaty jako orientační linii při navigaci v příbřežních vodách (<em>contour navigation</em>).</li>
+    <li>Identifikoval podmořské terénní prvky (příkopy, hřbety, plošiny), které mohou ovlivnit kotevní místo nebo průjezd.</li>
+  </ol>
+  <p>
+    Například izobata 20 m v blízkosti pobřeží signalizuje oblast, kde je třeba zpomalit a zvýšit ostražitost zejména za nízké viditelnosti nebo ve špatném počasí.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>IHO — publikace S-4: <em>Regulations of the IHO for International (INT) Charts and Chart Specifications of the IHO</em> (definice kartografických prvků námořní mapy, včetně izobat).</li>
+    <li>Bowditch — <em>American Practical Navigator</em>, kap. 3 (Nautical Charts) — výklad pojmů námořní kartografie.</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — vymezení pojmů a povinností navigátora při plavbě v příbřežních vodách.</li>
+  </ol>
+</article>

@@ -1,0 +1,102 @@
+<article class="vmp-explanation">
+  <h2>Zabránění srážce: plavidlo X musí uvolnit cestu plavidlu Y</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že <strong>plavidlo X musí uvolnit cestu</strong>. Z obrázku je patrné, že plavidlo X (motorové plavidlo) se sbližuje s plavidlem Y (plachetnicí) a plavidlo Y je na straně, které přísluší přednost. Podle COLREG platí, že motorové plavidlo musí vždy uvolnit cestu plachetnici plující pod plachtami. Plavidlo X je tedy „ustupující plavidlo" (<em>give-way vessel</em>) a musí se vyhnout nebo zastavit.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Situaci upravuje <strong>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři)</strong>, konkrétně:
+  </p>
+  <ul>
+    <li><strong>Pravidlo 18 – Vzájemné povinnosti plavidel:</strong> motorové plavidlo plující na volném moři musí uvolnit cestu plachetnici (plující pouze pod plachtami).</li>
+    <li><strong>Pravidlo 16 – Jednání ustupujícího plavidla:</strong> plavidlo povinné uvolnit cestu musí manévrovat včas, výrazně a jednoznačně tak, aby se bezpečně odvrátilo.</li>
+    <li><strong>Pravidlo 17 – Jednání přednostního plavidla:</strong> plavidlo, které má přednost (Y), zachovává kurz a rychlost; může jednat pouze tehdy, pokud je zřejmé, že druhé plavidlo vhodně nekoriguje.</li>
+  </ul>
+  <p>
+    Podmínka platí výhradně, pokud Y opravdu pluje <em>pouze pod plachtami</em> (bez zapnutého motoru). Pokud by měla plachetnice zapnutý motor, i kdyby nesla plachty, řídila by se pravidly pro motorové plavidlo a situace by se hodnotila jinak (pravidlo 25).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" width="460" height="220" role="img" aria-label="Diagram srážkové situace plavidel X a Y">
+    <defs>
+      <marker id="arrow-x" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#e63946;" />
+      </marker>
+      <marker id="arrow-y" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#2a9d8f;" />
+      </marker>
+      <marker id="arrow-avoid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#f4a261;" />
+      </marker>
+    </defs>
+
+    <!-- Background -->
+    <rect width="460" height="220" style="fill:#daf0f7;" />
+
+    <!-- Plavidlo X - motorové (vlevo dole) -->
+    <ellipse cx="90" cy="155" rx="34" ry="16" style="fill:#a8c8e8;stroke:#555;stroke-width:1.5;" />
+    <rect x="75" y="140" width="30" height="10" style="fill:#6a9fc0;stroke:#555;stroke-width:1;" />
+    <!-- anténa / stěžeň -->
+    <line x1="90" y1="140" x2="90" y2="120" style="stroke:#333;stroke-width:1.5;" />
+    <text x="90" y="180" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#c1121f;">X</text>
+    <text x="90" y="193" text-anchor="middle" style="font-size:10px;fill:#555;">(motorové)</text>
+
+    <!-- Plavidlo Y - plachetnice (vpravo nahoře) -->
+    <ellipse cx="350" cy="70" rx="30" ry="13" style="fill:#b7e4c7;stroke:#555;stroke-width:1.5;" />
+    <!-- Plachta -->
+    <line x1="350" y1="57" x2="350" y2="30" style="stroke:#333;stroke-width:1.5;" />
+    <polygon points="350,30 370,57 350,57" style="fill:#f0f0f0;stroke:#555;stroke-width:1;" />
+    <text x="350" y="92" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#2a9d8f;">Y</text>
+    <text x="350" y="105" text-anchor="middle" style="font-size:10px;fill:#555;">(plachetnice – přednost)</text>
+
+    <!-- Čerchovaná linie sbližování -->
+    <line x1="120" y1="145" x2="322" y2="80" style="stroke:#999;stroke-width:1.5;stroke-dasharray:8,4;" />
+
+    <!-- Kurz Y (zachovává kurz - šipka doleva dolů) -->
+    <line x1="350" y1="70" x2="210" y2="130" style="stroke:#2a9d8f;stroke-width:2.5;" marker-end="url(#arrow-y)" />
+    <text x="255" y="125" style="font-size:10px;fill:#2a9d8f;">kurz Y</text>
+
+    <!-- Kurz X původní (k Y - přeškrtnutý) -->
+    <line x1="90" y1="155" x2="230" y2="100" style="stroke:#e63946;stroke-width:2;" stroke-dasharray="5,3" marker-end="url(#arrow-x)" />
+    <text x="145" y="118" style="font-size:10px;fill:#e63946;">původní kurz X</text>
+
+    <!-- Vyhýbací manévr X (otočit vpravo / zpomalit) -->
+    <line x1="90" y1="155" x2="90" y2="210" style="stroke:#f4a261;stroke-width:2.5;" marker-end="url(#arrow-avoid)" />
+    <text x="96" y="208" style="font-size:10px;fill:#f4a261;">X ustoupí</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="8" width="170" height="48" rx="4" style="fill:white;opacity:0.85;stroke:#ccc;stroke-width:1;" />
+    <line x1="18" y1="22" x2="40" y2="22" style="stroke:#e63946;stroke-width:2;stroke-dasharray:5,3;" />
+    <text x="44" y="26" style="font-size:10px;fill:#333;">X: ustupující plavidlo</text>
+    <line x1="18" y1="36" x2="40" y2="36" style="stroke:#2a9d8f;stroke-width:2;" />
+    <text x="44" y="40" style="font-size:10px;fill:#333;">Y: přednostní plavidlo</text>
+    <line x1="18" y1="50" x2="40" y2="50" style="stroke:#f4a261;stroke-width:2;" />
+    <text x="44" y="54" style="font-size:10px;fill:#333;">X: vyhýbací manévr</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Velitel plavidla X (motorového) musí situaci vyhodnotit dostatečně brzy — typicky když vzdálenost klesne pod bezpečnou hranici a riziko srážky začne být reálné (COLREG Pravidlo 8: „Vyhýbací manévr musí být proveden včas a výrazně"). V praxi se doporučuje:
+  </p>
+  <ol>
+    <li>Výrazně změnit kurz vpravo (nebo zpomalit/zastavit) tak, aby byl manévr jednoznačně čitelný i pro posádku plavidla Y.</li>
+    <li>Neprovádět malé, nejednoznačné korekce kurzu, které by plachetnici mohly dezorientovat.</li>
+    <li>Případně dát zvukový signál (jedno krátké zahoukání = otáčím se vpravo), pokud to situace vyžaduje.</li>
+  </ol>
+  <p>
+    Plachetnice Y by měla zachovávat svůj kurz a rychlost, dokud se motorové plavidlo bezpečně neodvrátí. Pouze v případě bezprostředního nebezpečí může i plachetnice Y manévrovat (Pravidlo 17b).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> – Pravidlo 18 (Vzájemné povinnosti plavidel: motorové plavidlo ustupuje plachetnici)</li>
+    <li><strong>COLREG 1972</strong> – Pravidlo 16 (Jednání ustupujícího plavidla)</li>
+    <li><strong>COLREG 1972</strong> – Pravidlo 17 (Jednání přednostního plavidla)</li>
+    <li><strong>COLREG 1972</strong> – Pravidlo 8 (Jednání pro zabránění srážce: včasný a výrazný manévr)</li>
+    <li><strong>COLREG 1972</strong> – Pravidlo 25 (Plachetnice: podmínka pro status plachetnice — motor musí být vypnutý)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong>, o námořní plavbě (implementace COLREG do českého práva)</li>
+  </ol>
+</article>

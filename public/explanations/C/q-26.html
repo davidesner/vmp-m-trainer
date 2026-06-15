@@ -1,0 +1,86 @@
+<article class="vmp-explanation">
+  <h2>Předjíždějící loď – definice podle COLREG</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Loď je považována za předjíždějící, přibližuje-li se k druhé lodi <strong>ze směru, který je více než 22,5 stupně za traversem</strong> (tj. z „zadního sektoru"). Tento sektor odpovídá úhlu, v němž předjíždějící loď nevidí ani levobočné (červené), ani pravobočné (zelené) poziční světlo druhé lodi, ale pouze záďové bílé světlo. Samotné traversové nebo přední přiblížení situaci předjíždění nevytváří – tam platí pravidla o křížícím se nebo protikurzovém provozu.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Pravidlo 13 COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) definuje předjíždění takto:
+  </p>
+  <blockquote>
+    „Každá loď, která dohání druhou loď, je loď předjíždějící. Loď se považuje za dohánějící druhou loď, jestliže přichází ze směru, který je více než 22,5 stupně za příčnou osou (traversem) předjížděné lodi…"
+  </blockquote>
+  <p>
+    Úhel 22,5° za traversem je zároveň hranicí záďového bílého světla (Pravidlo 21 COLREG), které pokrývá oblouk 135° – tedy 67,5° na každou stranu od zádi. Pokud přijíždějící loď vidí pouze toto bílé záďové světlo, musí jednat jako předjíždějící a dát druhé lodi přednost (ustoupit a neohrožovat ji).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center; margin: 1.2em 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" width="420" height="320" aria-label="Diagram sektorů světel a předjíždění">
+      <!-- Předjížděná loď (uprostřed) -->
+      <g transform="translate(210,160)">
+        <!-- Zelený sektor (pravobočný) 0°–112,5° -->
+        <path d="M0,0 L110,0 A110,110 0 0,0 42,-100 Z" fill="#90ee90" opacity="0.55"/>
+        <!-- Červený sektor (levobočný) 247,5°–360° (nebo -112,5°–0°) -->
+        <path d="M0,0 L-110,0 A110,110 0 0,1 -42,-100 Z" fill="#ffaaaa" opacity="0.55"/>
+        <!-- Bílý záďový sektor 112,5°–247,5° (dole) -->
+        <path d="M0,0 L110,0 A110,110 0 0,1 -110,0 Z" fill="#ffffcc" opacity="0.7"/>
+
+        <!-- Loď – trup -->
+        <polygon points="0,-30 12,20 -12,20" fill="#4a4a8a" stroke="#333" stroke-width="1.5"/>
+
+        <!-- Traversové čáry -->
+        <line x1="-125" y1="0" x2="125" y2="0" stroke="#555" stroke-width="1" stroke-dasharray="6,4"/>
+
+        <!-- 22,5° čáry za traversem (záďový sektor hranice) -->
+        <!-- Pravá strana: 90+22,5 = 112,5° od nosu, tj. směr (sin112.5°, cos112.5°) = (0.924, -0.383) -->
+        <line x1="0" y1="0" x2="102" y2="42" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <!-- Levá strana -->
+        <line x1="0" y1="0" x2="-102" y2="42" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+        <!-- Popis sektorů -->
+        <text x="60" y="-55" font-size="11" fill="#2a7a2a" font-family="sans-serif">Zelené</text>
+        <text x="60" y="-43" font-size="11" fill="#2a7a2a" font-family="sans-serif">světlo</text>
+        <text x="-88" y="-55" font-size="11" fill="#aa2222" font-family="sans-serif">Červené</text>
+        <text x="-88" y="-43" font-size="11" fill="#aa2222" font-family="sans-serif">světlo</text>
+        <text x="-22" y="80" font-size="11" fill="#888800" font-family="sans-serif">Záďové</text>
+        <text x="-22" y="92" font-size="11" fill="#888800" font-family="sans-serif">bílé světlo</text>
+
+        <!-- Šipka předjíždějící lodi -->
+        <g transform="translate(80, 90)">
+          <polygon points="0,-14 7,4 -7,4" fill="#e05000" stroke="#b03000" stroke-width="1" transform="rotate(160)"/>
+          <text x="12" y="5" font-size="11" fill="#e05000" font-family="sans-serif" font-weight="bold">Předjíždějící</text>
+        </g>
+
+        <!-- 22,5° oblouk naznačení -->
+        <path d="M0,42 A42,42 0 0,0 -16,39" fill="none" stroke="#333" stroke-width="1"/>
+        <text x="5" y="52" font-size="10" fill="#333" font-family="sans-serif">22,5°</text>
+        <path d="M0,42 A42,42 0 0,1 16,39" fill="none" stroke="#333" stroke-width="1"/>
+
+        <!-- Sever / nos lodi -->
+        <text x="-6" y="-116" font-size="12" fill="#333" font-family="sans-serif" font-weight="bold">▲ Nos</text>
+        <text x="-8" y="118" font-size="12" fill="#333" font-family="sans-serif" font-weight="bold">▼ Záď</text>
+      </g>
+
+      <text x="210" y="16" text-anchor="middle" font-size="13" font-weight="bold" fill="#222" font-family="sans-serif">Sektory pozičních světel a zóna předjíždění</text>
+      <text x="210" y="305" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">Šedé přerušované čáry = hranice záďového sektoru (22,5° za traversem)</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li>Pokud váš loď vidí na dohánějící lodi <em>pouze záďové bílé světlo</em> (žádné poziční světlo na bocích), jste v záďovém sektoru a máte povinnost ustoupit jako předjíždějící.</li>
+    <li>Předjíždějící loď musí dát volný průjezd předjížděné lodi a nesmí ji přinutit ke změně kurzu nebo rychlosti (COLREG, Pravidlo 13c).</li>
+    <li>Pokud vzniknou pochybnosti, zda jde o předjíždění (přechodná zóna), COLREG předepisuje chovat se jako předjíždějící — tedy raději ustoupit (COLREG, Pravidlo 13d).</li>
+    <li>Pravidlo platí i za denního světla – vizuální úhel přiblížení se posuzuje geometricky, ne jen podle viditelnosti světel.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> – Mezinárodní pravidla pro zabránění srážkám na moři, Pravidlo 13 (Předjíždění), Pravidlo 21 (Definice světel – záďové světlo 135°)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě – § 9 (implementace COLREG do českého práva)</li>
+  </ol>
+</article>

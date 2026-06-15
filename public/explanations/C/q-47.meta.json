@@ -1,0 +1,12 @@
+{
+  "qid": 47,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Příloha IV (Tísňové signály)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb.",
+    "SOLAS kapitola III"
+  ],
+  "model": "claude-opus-4-7"
+}

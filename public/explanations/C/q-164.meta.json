@@ -1,0 +1,7 @@
+{
+  "qid": 164,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["WMO International Cloud Atlas", "ICAO Annex 3", "Bowditch — American Practical Navigator"],
+  "model": "claude-opus-4-7"
+}

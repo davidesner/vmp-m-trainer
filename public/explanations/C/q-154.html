@@ -1,0 +1,64 @@
+<article class="vmp-explanation">
+  <h2>Izobarové mapy a synoptická meteorologie</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Na synoptické mapě je rozložení tlaku vzduchu znázorněno pomocí <strong>izobar</strong> — čar spojujících místa se stejným atmosférickým tlakem (přepočítaným na hladinu moře). Izobarami se zobrazují tlakové útvary: níže (cyklony), výše (anticyklony), sedla a hřbety, které určují počasí v dané oblasti.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Synoptická mapa (povětrnostní mapa) je klíčovým nástrojem meteorologické navigace. Tlaková pole na ní jsou vyjádřena izobarami v hektopascalech (hPa), zpravidla po 4 nebo 5 hPa.
+  </p>
+  <ul>
+    <li><strong>Izobary</strong> — čáry stejného atmosférického tlaku; znázorňují tlakové pole a umožňují odvodit směr a přibližnou sílu větru (geostrofický vítr teče podél izobar, v severní polokouli s nízkým tlakem vlevo).</li>
+    <li><strong>Izobaty</strong> — čáry stejné hloubky vody; používají se na námořních mapách, nikoliv na synoptických mapách.</li>
+    <li><strong>Izohypsy</strong> — čáry stejné nadmořské výšky (vrstevnice) na topografických mapách; v meteorologii označují výšku izobarické plochy na výškových mapách (letecká meteorologie), nikoli přízemní tlak.</li>
+  </ul>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;display:block;margin:1em auto;background:#e8f4fd;border-radius:8px;padding:8px;">
+    <!-- Isobary - uzavřené elipsy kolem níže -->
+    <ellipse cx="140" cy="130" rx="110" ry="80" fill="none" stroke="#1a6bb5" stroke-width="2" stroke-dasharray="0"/>
+    <ellipse cx="140" cy="130" rx="78" ry="55" fill="none" stroke="#1a6bb5" stroke-width="2"/>
+    <ellipse cx="140" cy="130" rx="46" ry="32" fill="none" stroke="#1a6bb5" stroke-width="2"/>
+    <!-- Popisky izobar -->
+    <text x="252" y="95" font-size="12" fill="#1a6bb5" font-family="sans-serif">1000 hPa</text>
+    <text x="220" y="106" font-size="12" fill="#1a6bb5" font-family="sans-serif">1004 hPa</text>
+    <text x="188" y="118" font-size="12" fill="#1a6bb5" font-family="sans-serif">1008 hPa</text>
+    <!-- Střed níže -->
+    <text x="120" y="135" font-size="18" font-weight="bold" fill="#c0392b" font-family="sans-serif">L</text>
+    <text x="116" y="150" font-size="10" fill="#c0392b" font-family="sans-serif">996 hPa</text>
+    <!-- Výše napravo -->
+    <ellipse cx="320" cy="130" rx="68" ry="50" fill="none" stroke="#27ae60" stroke-width="2"/>
+    <ellipse cx="320" cy="130" rx="40" ry="28" fill="none" stroke="#27ae60" stroke-width="2"/>
+    <text x="302" y="135" font-size="18" font-weight="bold" fill="#27ae60" font-family="sans-serif">H</text>
+    <text x="290" y="150" font-size="10" fill="#27ae60" font-family="sans-serif">1020 hPa</text>
+    <!-- Vítr (šipky podél izobar) -->
+    <line x1="175" y1="56" x2="200" y2="50" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="105" y1="54" x2="130" y2="47" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arr)"/>
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#e67e22"/>
+      </marker>
+    </defs>
+    <!-- Legenda -->
+    <line x1="20" y1="220" x2="50" y2="220" stroke="#1a6bb5" stroke-width="2"/>
+    <text x="55" y="224" font-size="11" fill="#333" font-family="sans-serif">izobara (hPa)</text>
+    <line x1="20" y1="238" x2="50" y2="238" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="55" y="242" font-size="11" fill="#333" font-family="sans-serif">směr větru</text>
+    <text x="20" y="20" font-size="13" font-weight="bold" fill="#333" font-family="sans-serif">Synoptická mapa — izobary</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Námořník (i rekreační jachtař) čte synoptické mapy pro předpověď počasí na otevřeném moři. Z hustoty izobar odhaduje sílu větru — čím blíže k sobě jsou izobary, tím silnější vítr. Z orientace izobar a polohy níže/výše odvodí očekávaný směr větru na své trase. Správné čtení synoptické mapy je základní bezpečnostní dovedností při příbřežní plavbě i přeplavbách.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>WMO (Světová meteorologická organizace) — Příručka synoptické meteorologie, definice izobar jako čar stejného tlaku přepočteného na hladinu moře.</li>
+    <li>Bowditch — American Practical Navigator, kapitola Meteorology (Weather Maps and Forecasts).</li>
+    <li>Vyhláška č. 315/2000 Sb. o navigaci a bezpečnosti plavby — povinnost sledovat meteorologické informace při plavbě na moři.</li>
+  </ol>
+</article>

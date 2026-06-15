@@ -1,0 +1,80 @@
+<article class="vmp-explanation">
+  <h2>Studená vzduchová hmota</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Vzduchová hmota se klasifikuje podle <strong>teplotního rozdílu vůči podkladu, nad nímž se pohybuje</strong>, nikoli podle absolutní teploty. Pokud hmota proudí nad teplejší povrch, než je oblast jejího vzniku, přijímá teplo zdola — přesto se nazývá <strong>studená</strong>, protože je chladnější než okolní podklad. Správná odpověď je tedy „studená".
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Meteorologie dělí vzduchové hmoty podle jejich termodynamické vlastnosti vůči podloží:
+  </p>
+  <ul>
+    <li><strong>Studená vzduchová hmota (k — kalt)</strong> — proudí nad teplejší povrch. Zahřívá se zdola, vzniká konvekce, počasí je nestabilní, typické jsou přeháňky, bouřky, dobrá dohlednost mimo srážky.</li>
+    <li><strong>Teplá vzduchová hmota (w — warm)</strong> — proudí nad chladnější povrch. Ochlazuje se zdola, vznikají inverze a mlhy, počasí je stabilní, špatná dohlednost.</li>
+    <li><strong>Místní vzduchová hmota</strong> — termín vyjadřující, že hmota je v rovnováze s podkladem (již se přizpůsobila); nepatří do běžné dvoupólové klasifikace studená/teplá.</li>
+  </ul>
+  <p>
+    Klíčový princip: označení <em>studená / teplá</em> popisuje vztah vzduchové hmoty k podloží, ne její absolutní teplotu. Arktická hmota proudící na jih nad teplejší moře je tedy studená, i když může mít 5 °C.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200" aria-label="Studená vzduchová hmota nad teplejším podkladem">
+    <!-- Teplejší povrch moře -->
+    <rect x="0" y="150" width="480" height="50" style="fill:#4fc3f7;" />
+    <text x="240" y="175" text-anchor="middle" style="font-size:13px;fill:#003c6b;font-weight:bold;">TEPLEJŠÍ POVRCH (moře / pevnina)</text>
+
+    <!-- Vzduchová hmota -->
+    <rect x="40" y="40" width="400" height="100" rx="18" style="fill:#b3e5fc;opacity:0.85;" />
+    <text x="240" y="80" text-anchor="middle" style="font-size:14px;fill:#01579b;font-weight:bold;">STUDENÁ VZDUCHOVÁ HMOTA</text>
+    <text x="240" y="100" text-anchor="middle" style="font-size:12px;fill:#0277bd;">(chladnější než podklad)</text>
+
+    <!-- Šipky: proudění zleva doprava -->
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#01579b;" />
+      </marker>
+    </defs>
+    <line x1="30" y1="90" x2="430" y2="90" style="stroke:#01579b;stroke-width:2;" marker-end="url(#arr)" />
+    <text x="30" y="85" style="font-size:11px;fill:#01579b;">proudění</text>
+
+    <!-- Šipky tepla zdola nahoru -->
+    <line x1="160" y1="148" x2="160" y2="115" style="stroke:#e53935;stroke-width:2;" marker-end="url(#arr2)" />
+    <line x1="240" y1="148" x2="240" y2="115" style="stroke:#e53935;stroke-width:2;" marker-end="url(#arr2)" />
+    <line x1="320" y1="148" x2="320" y2="115" style="stroke:#e53935;stroke-width:2;" marker-end="url(#arr2)" />
+    <defs>
+      <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#e53935;" />
+      </marker>
+    </defs>
+    <text x="345" y="140" style="font-size:11px;fill:#e53935;">teplo ze zdola</text>
+
+    <!-- Konvektivní nestabilita — bublinky -->
+    <circle cx="160" cy="100" r="6" style="fill:none;stroke:#e53935;stroke-dasharray:3,2;stroke-width:1.5;" />
+    <circle cx="240" cy="95" r="7" style="fill:none;stroke:#e53935;stroke-dasharray:3,2;stroke-width:1.5;" />
+    <circle cx="320" cy="102" r="5" style="fill:none;stroke:#e53935;stroke-dasharray:3,2;stroke-width:1.5;" />
+    <text x="100" y="55" style="font-size:11px;fill:#e53935;">⬆ konvekce, nestabilita</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při námořní plavbě v oblasti, kam přichází studená vzduchová hmota (typicky za studenou frontou), moreplavec očekává:
+  </p>
+  <ul>
+    <li>Náhlé přeháňky a přechody — viditelnost mimo srážky je výborná.</li>
+    <li>Silné, poryvité větry; na volném moři rychlý nástup bouřkové aktivity.</li>
+    <li>Kumulonimby (Cb) s rizikem kroupového squalu.</li>
+    <li>Po přechodu studené fronty zpravidla rychlé uklidnění a dobré podmínky.</li>
+  </ul>
+  <p>
+    Naopak, při teplé vzduchové hmotě (Atlantik proudící nad studenou La Manche) vznikají zakalené podmínky a přímořské mlhy — situace nebezpečnější z hlediska dohlednosti.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>WMO (Světová meteorologická organizace) — definice vzduchových hmot a jejich klasifikace (WMO-No. 8, Guide to Meteorological Instruments and Methods of Observation).</li>
+    <li>Bowditch — American Practical Navigator, kap. 36 (Weather at Sea) — vzduchové hmoty a fronty.</li>
+    <li>Učebnice námořní meteorologie pro příbřežní plavbu — klasifikace vzduchových hmot podle teplotního rozdílu vůči podloží.</li>
+  </ol>
+</article>

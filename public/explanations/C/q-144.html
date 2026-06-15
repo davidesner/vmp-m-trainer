@@ -1,0 +1,171 @@
+<article class="vmp-explanation">
+
+  <h2>Kardinální bóje – bez vrcholového znaku: orientace splavné vody</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Správná odpověď je, že splavná voda se nachází <strong>východně od bóje</strong>.
+      Bóje s černým zbarvením a jedním žlutým širokým vodorovným pruhem uprostřed (bez vrcholového znaku)
+      je <strong>kardinální bóje Sever</strong>. Kardinální bóje Sever znamená, že plavidlo má bezpečně
+      plout <em>severně</em> od bóje — tedy splavná (bezpečná) voda leží na severu. Otázka se ale ptá
+      <em>jinak</em>: pokud bóje udává, že se ke splavné vodě dostanete procházením severně od bóje,
+      pak je z hlediska <strong>umístění nebezpečí</strong> kardinální bóje Sever správně interpretována tak,
+      že nebezpečí leží na ostatních stranách a bezpečná voda je na severu.
+    </p>
+    <p>
+      <strong>Korekce:</strong> Ve skutečnosti barva <em>černá s jedním žlutým širokým vodorovným pruhem</em>
+      (žlutý pruh uprostřed, černá nahoře i dole) odpovídá <strong>kardinální bóji Sever</strong>.
+      Avšak systém IALA-A definuje čtyři kardinální bóje takto:
+    </p>
+    <ul>
+      <li><strong>Sever:</strong> černá nahoře, žlutá dole — vrcholový znak: dva kužele hrotem nahoru</li>
+      <li><strong>Jih:</strong> žlutá nahoře, černá dole — vrcholový znak: dva kužele hrotem dolů</li>
+      <li><strong>Východ:</strong> černá–žlutá–černá (pruh uprostřed) — vrcholový znak: dva kužele základnou k sobě</li>
+      <li><strong>Západ:</strong> žlutá–černá–žlutá (pruhy nahoře a dole) — vrcholový znak: dva kužele hrotem k sobě</li>
+    </ul>
+    <p>
+      Bóje popsaná v otázce — <em>černá s jedním žlutým širokým vodorovným pruhem</em> — odpovídá
+      vzoru <strong>černá–žlutá–černá</strong>, tedy <strong>kardinální bóji Východ</strong>.
+      Kardinální bóje Východ říká: plujte <strong>východně</strong> od bóje — splavná voda je na východě.
+      To odpovídá správné odpovědi.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Kardinální systém je součástí <strong>IALA systému plavebního značení</strong> (IALA Maritime Buoyage System),
+      konkrétně systému IALA-A platného v Evropě, Africe, Asii a Austrálii. Kardinální bóje označují
+      polohu nebezpečí (mělčiny, skály, vraky) a udávají, na které světové straně od bóje je bezpečná voda.
+    </p>
+    <p>
+      Barvy kardinálních bójí bez vrcholových znaků se rozlišují takto:
+    </p>
+    <ul>
+      <li><strong>Kardinální Sever:</strong> černá (nahoře) + žlutá (dole) — přičemž černá část je dominantnější nahoře</li>
+      <li><strong>Kardinální Jih:</strong> žlutá (nahoře) + černá (dole)</li>
+      <li><strong>Kardinální Východ:</strong> tři části — černá / žlutá / černá (žlutý pruh uprostřed, černá nahoře i dole)</li>
+      <li><strong>Kardinální Západ:</strong> tři části — žlutá / černá / žlutá (žluté pruhy nahoře a dole, černá uprostřed)</li>
+    </ul>
+    <p>
+      Pravidlo pro zapamatování orientace kužel-vrcholových znaků: <em>„černá barva ukazuje na špičky kuželů"</em>.
+      U Východní bóje jsou kužele základnami k sobě (vejce) — černé části jsou nahoře i dole.
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+
+    <!-- Přehled kardinálních bójí -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" style="max-width:100%;background:#f0f8ff;border-radius:8px;">
+      <!-- Nadpis -->
+      <text x="260" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Kardinální bóje IALA-A — barevné vzory</text>
+
+      <!-- Bóje SEVER -->
+      <g transform="translate(60,50)">
+        <text x="0" y="0" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a1a8c">SEVER</text>
+        <!-- vrcholový znak: 2 kužele hrotem nahoru -->
+        <polygon points="-7,10 7,10 0,-5" fill="#1a1a1a"/>
+        <polygon points="-7,22 7,22 0,8" fill="#1a1a1a"/>
+        <!-- tělo bóje: černá nahoře, žlutá dole -->
+        <rect x="-18" y="25" width="36" height="35" fill="#1a1a1a" rx="3"/>
+        <rect x="-18" y="60" width="36" height="35" fill="#FFD700" rx="3"/>
+        <rect x="-3" y="95" width="6" height="30" fill="#888"/>
+        <text x="0" y="140" text-anchor="middle" font-size="10" fill="#555">Bezpečná voda</text>
+        <text x="0" y="152" text-anchor="middle" font-size="10" fill="#555">na SEVERU</text>
+      </g>
+
+      <!-- Bóje JIH -->
+      <g transform="translate(185,50)">
+        <text x="0" y="0" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a1a8c">JIH</text>
+        <!-- vrcholový znak: 2 kužele hrotem dolů -->
+        <polygon points="-7,-5 7,-5 0,10" fill="#1a1a1a"/>
+        <polygon points="-7,8 7,8 0,23" fill="#1a1a1a"/>
+        <!-- tělo bóje: žlutá nahoře, černá dole -->
+        <rect x="-18" y="25" width="36" height="35" fill="#FFD700" rx="3"/>
+        <rect x="-18" y="60" width="36" height="35" fill="#1a1a1a" rx="3"/>
+        <rect x="-3" y="95" width="6" height="30" fill="#888"/>
+        <text x="0" y="140" text-anchor="middle" font-size="10" fill="#555">Bezpečná voda</text>
+        <text x="0" y="152" text-anchor="middle" font-size="10" fill="#555">na JIHU</text>
+      </g>
+
+      <!-- Bóje VÝCHOD — ZVÝRAZNĚNA -->
+      <g transform="translate(315,50)">
+        <text x="0" y="0" text-anchor="middle" font-size="11" font-weight="bold" fill="#cc0000">VÝCHOD ✓</text>
+        <!-- vrcholový znak: 2 kužele základnou k sobě -->
+        <polygon points="-7,5 7,5 0,-8" fill="#1a1a1a"/>
+        <polygon points="-7,17 7,17 0,30" fill="#1a1a1a"/>
+        <!-- tělo bóje: černá / žlutá / černá -->
+        <rect x="-18" y="25" width="36" height="22" fill="#1a1a1a" rx="3"/>
+        <rect x="-18" y="47" width="36" height="24" fill="#FFD700"/>
+        <rect x="-18" y="71" width="36" height="24" fill="#1a1a1a" rx="3"/>
+        <rect x="-3" y="95" width="6" height="30" fill="#888"/>
+        <!-- rám -->
+        <rect x="-22" y="-5" width="44" height="105" fill="none" stroke="#cc0000" stroke-width="2" rx="4"/>
+        <text x="0" y="140" text-anchor="middle" font-size="10" fill="#cc0000" font-weight="bold">Bezpečná voda</text>
+        <text x="0" y="152" text-anchor="middle" font-size="10" fill="#cc0000" font-weight="bold">na VÝCHODĚ</text>
+      </g>
+
+      <!-- Bóje ZÁPAD -->
+      <g transform="translate(445,50)">
+        <text x="0" y="0" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a1a8c">ZÁPAD</text>
+        <!-- vrcholový znak: 2 kužele hrotem k sobě -->
+        <polygon points="-7,-8 7,-8 0,5" fill="#1a1a1a"/>
+        <polygon points="-7,27 7,27 0,14" fill="#1a1a1a"/>
+        <!-- tělo bóje: žlutá / černá / žlutá -->
+        <rect x="-18" y="25" width="36" height="22" fill="#FFD700" rx="3"/>
+        <rect x="-18" y="47" width="36" height="24" fill="#1a1a1a"/>
+        <rect x="-18" y="71" width="36" height="24" fill="#FFD700" rx="3"/>
+        <rect x="-3" y="95" width="6" height="30" fill="#888"/>
+        <text x="0" y="140" text-anchor="middle" font-size="10" fill="#555">Bezpečná voda</text>
+        <text x="0" y="152" text-anchor="middle" font-size="10" fill="#555">na ZÁPADĚ</text>
+      </g>
+
+      <!-- Legenda -->
+      <rect x="10" y="170" width="500" height="60" fill="#fffde7" rx="6" stroke="#ccaa00" stroke-width="1"/>
+      <text x="20" y="188" font-size="11" fill="#555" font-weight="bold">Mnemotechnická pomůcka:</text>
+      <text x="20" y="204" font-size="11" fill="#333">Sever/Jih: dvě barvy (N = černá nahoře; S = žlutá nahoře)</text>
+      <text x="20" y="218" font-size="11" fill="#333">Východ/Západ: tři části — Východ má černou nahoře i dole (jako písmeno E — krajní barvy)</text>
+
+      <!-- Detailní pohled na bóji z otázky -->
+      <rect x="10" y="240" width="500" height="70" fill="#e8f5e9" rx="6" stroke="#388e3c" stroke-width="1"/>
+      <text x="20" y="258" font-size="11" fill="#1b5e20" font-weight="bold">Bóje z otázky (bez vrcholového znaku):</text>
+      <rect x="20" y="265" width="20" height="8" fill="#1a1a1a" rx="1"/>
+      <rect x="20" y="273" width="20" height="10" fill="#FFD700"/>
+      <rect x="20" y="283" width="20" height="8" fill="#1a1a1a" rx="1"/>
+      <text x="50" y="278" font-size="11" fill="#333">černá / žlutá / černá = kardinální bóje VÝCHOD</text>
+      <text x="50" y="294" font-size="11" fill="#1b5e20" font-weight="bold">→ Splavná voda leží na VÝCHODĚ od bóje</text>
+    </svg>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <p>
+      Pokud za plavby přijdete o výhled na vrcholový znak bóje (mlha, vlnění, vzdálenost), stále dokážete
+      určit typ kardinální bóje <strong>pouze podle barevného vzoru</strong>. Při přiblížení k bóji
+      s vzorem černá–žlutá–černá (žlutý pruh uprostřed) víte, že:
+    </p>
+    <ul>
+      <li>Bóje označuje <strong>kardinální bod Východ</strong>.</li>
+      <li>Bezpečná (splavná) voda je <strong>na východní straně</strong> od bóje.</li>
+      <li>Nebezpečí (mělčina, skála, vrak) leží na <strong>ostatních stranách</strong> — severně, jižně nebo západně od bóje.</li>
+      <li>Správný manévr: udržujte bóji na svém <strong>levém boku</strong>, pokud plujete na sever, nebo na <strong>pravém boku</strong>, pokud plujete na jih — tak zůstanete ve splavné vodě na východní straně od bóje.</li>
+    </ul>
+    <p>
+      V praxi kardinální bóje doplňují laterální systém (červené/zelené bóje) a jsou typické pro pobřežní
+      vody s rozptýlenými nebezpečími, kde je nutné přesně označit nebezpečné místo ze všech světových stran.
+    </p>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li><strong>IALA Maritime Buoyage System (systém IALA-A)</strong> — definice kardinálních bójí, barevné vzory, vrcholové znaky a světelné charakteristiky</li>
+      <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — § 26 (plavební bezpečnost, povinnost znát plavební značení)</li>
+      <li><strong>COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 15 a příloha IV; IALA systém jako doplňkový standard</li>
+      <li><strong>Bowditch — American Practical Navigator</strong>, kapitola o plavebním značení a kardinálním systému</li>
+    </ol>
+  </section>
+
+</article>

@@ -1,0 +1,13 @@
+{
+  "qid": 163,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — International Cloud Atlas, Volume I (2017)",
+    "WMO No. 49 — Technical Regulations, Volume II",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "ICAO Standard Atmosphere (ICAO Doc 7488)",
+    "Bowditch — American Practical Navigator (Pub. No. 9)"
+  ],
+  "model": "claude-opus-4-7"
+}

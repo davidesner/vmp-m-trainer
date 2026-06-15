@@ -1,0 +1,80 @@
+<article class="vmp-explanation">
+  <h2>Převod rychlosti: metry za sekundu na uzly</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Rychlost 2 m/s odpovídá přibližně <strong>4 uzlům</strong>. Jeden uzel je definován jako 1 námořní míle za hodinu (1 852 m/h), což je přibližně 0,5144 m/s. Proto platí: 2 m/s ÷ 0,5144 ≈ 3,89 uzlů ≈ <strong>4 uzly</strong>.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Uzel (knot, zkratka <em>kn</em> nebo <em>kt</em>) je mezinárodně uznávaná jednotka rychlosti používaná v námořní a letecké navigaci. Vychází z délky námořní míle, která byla historicky odvozena z délky jedné úhlové minuty zeměpisné šířky na povrchu Země.
+  </p>
+  <p>
+    Přepočtový vztah:
+  </p>
+  <ul>
+    <li>1 uzel = 1 námořní míle/hodina = 1 852 m/h ≈ 0,5144 m/s</li>
+    <li>1 m/s ≈ 1,9438 uzlů</li>
+    <li>2 m/s ≈ 3,887 uzlů ≈ <strong>4 uzly</strong></li>
+  </ul>
+  <p>
+    Přibližné pravidlo pro rychlý odhad v terénu: <strong>1 m/s ≈ 2 uzly</strong> (přesněji 1,94 uzlu). Toto pravidlo dává 2 m/s ≈ 4 uzly, což odpovídá správné odpovědi.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:1em auto;">
+    <!-- Pozadí -->
+    <rect width="480" height="200" fill="#f0f7ff" rx="10"/>
+
+    <!-- Nadpis -->
+    <text x="240" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a3a5c">Převodní tabulka: m/s ↔ uzly</text>
+
+    <!-- Záhlaví tabulky -->
+    <rect x="40" y="45" width="180" height="30" fill="#1a3a5c" rx="4"/>
+    <rect x="260" y="45" width="180" height="30" fill="#1a3a5c" rx="4"/>
+    <text x="130" y="65" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Rychlost (m/s)</text>
+    <text x="350" y="65" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Uzly (kn)</text>
+
+    <!-- Řádek 1 -->
+    <rect x="40" y="75" width="180" height="28" fill="#d9ecff" rx="2"/>
+    <rect x="260" y="75" width="180" height="28" fill="#d9ecff" rx="2"/>
+    <text x="130" y="94" text-anchor="middle" font-size="13" fill="#333">0,5 m/s</text>
+    <text x="350" y="94" text-anchor="middle" font-size="13" fill="#333">≈ 1 uzel</text>
+
+    <!-- Řádek 2 - zvýrazněný -->
+    <rect x="40" y="103" width="180" height="30" fill="#ff9900" rx="2"/>
+    <rect x="260" y="103" width="180" height="30" fill="#ff9900" rx="2"/>
+    <text x="130" y="123" text-anchor="middle" font-size="14" fill="white" font-weight="bold">2 m/s</text>
+    <text x="350" y="123" text-anchor="middle" font-size="14" fill="white" font-weight="bold">≈ 4 uzly ✓</text>
+
+    <!-- Řádek 3 -->
+    <rect x="40" y="133" width="180" height="28" fill="#d9ecff" rx="2"/>
+    <rect x="260" y="133" width="180" height="28" fill="#d9ecff" rx="2"/>
+    <text x="130" y="152" text-anchor="middle" font-size="13" fill="#333">5 m/s</text>
+    <text x="350" y="152" text-anchor="middle" font-size="13" fill="#333">≈ 10 uzlů</text>
+
+    <!-- Šipka / pravidlo -->
+    <text x="240" y="185" text-anchor="middle" font-size="12" fill="#555" font-style="italic">Pravidlo: 1 m/s ≈ 2 uzly (přesněji 1,944 kn)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V námořní praxi se rychlost plavidla vždy udává v uzlech. Pokud lodní přístroj (např. GPS nebo palbový počítač) zobrazuje rychlost v m/s (nebo pokud slyšíte hodnotu v m/s z jiného zdroje), je nutné ji převést. Pamatujte si:
+  </p>
+  <ul>
+    <li>Ekonomická rychlost malého sportovního plavidla: 5–6 uzlů (≈ 2,5–3 m/s)</li>
+    <li>Průměrná rychlost plachetnice: 4–7 uzlů (≈ 2–3,6 m/s)</li>
+    <li>Rychlostní limit v přístavech a pobřežních oblastech: typicky 5 uzlů (≈ 2,6 m/s)</li>
+  </ul>
+  <p>
+    Převod je důležitý také při hlášení srážkových situací podle COLREG, kde musíte odhadnout relativní rychlost blížícího se plavidla a čas dostupný pro manévr vyhnutí.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>Bowditch — American Practical Navigator</strong> (NIMA Pub. No. 9), kapitola o jednotkách a mírách — definice uzlu a námořní míle</li>
+    <li><strong>COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři) — obecný kontext navigační rychlosti</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — závaznost COLREG pro plavidla pod českou vlajkou</li>
+  </ol>
+</article>

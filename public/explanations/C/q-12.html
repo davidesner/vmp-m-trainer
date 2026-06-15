@@ -1,0 +1,83 @@
+<article class="vmp-explanation">
+  <h2>Kdy je nutné považovat nebezpečí srážky za jisté</h2>
+
+  <h3>Jádro</h3>
+  <p>Správná odpověď je <strong>„nemění-li se výrazně náměr na přibližující se plavidlo"</strong>. Pokud zaměřujeme blížící se plavidlo a kompasový náměr (bearing) na něj zůstává prakticky stejný, znamená to, že se obě plavidla pohybují po sbíhajících se kurzech vedoucích do jednoho bodu — tedy do místa srážky. <em>Stálý náměr + zmenšující se vzdálenost = riziko kolize.</em></p>
+
+  <h3>Pozadí</h3>
+  <p>Toto je klasické pravidlo známé jako <strong>„constant bearing, decreasing range" (CBDR)</strong> a je výslovně zakotveno v <strong>COLREG 1972, Pravidlo 7 — Riziko srážky (Risk of collision)</strong>, písm. d):</p>
+  <blockquote>
+    <p>„Při určování, zda existuje nebezpečí srážky, je třeba se zejména řídit těmito úvahami:<br>
+    (i) takové nebezpečí má být pokládáno za jisté, jestliže se kompasový náměr na blížící se plavidlo výrazně nemění;<br>
+    (ii) takové nebezpečí může existovat i při znatelné změně náměru, zejména při přibližování se k velmi velkému plavidlu, vleku nebo k plavidlu na malou vzdálenost."</p>
+  </blockquote>
+  <p>Druhá nabízená varianta („mění-li se výrazně náměr na jakékoli plavidlo před traversem") je nesmyslná — měnící se náměr naopak znamená, že plavidla mine. Třetí varianta je přímým opakem správné odpovědi.</p>
+
+  <h3>Vizualizace</h3>
+  <p>Vlastní plavidlo (modře) sleduje cizí plavidlo (červeně) ve třech časových okamžicích T1, T2, T3. Náměr (úhel z přídě / od severu) zůstává stejný, ale vzdálenost klesá — kurzy se protnou.</p>
+  <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram CBDR — stálý náměr, klesající vzdálenost">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" style="fill:#444"></path>
+      </marker>
+    </defs>
+    <!-- moře -->
+    <rect x="0" y="0" width="480" height="320" style="fill:#eaf4fb"></rect>
+
+    <!-- vlastní plavidlo - pozice -->
+    <g>
+      <circle cx="90" cy="240" r="8" style="fill:#1565c0;stroke:#0d3c70;stroke-width:2"></circle>
+      <text x="60" y="265" style="fill:#0d3c70;font-family:sans-serif;font-size:12px;font-weight:bold">Vlastní</text>
+    </g>
+
+    <!-- kurz vlastního plavidla -->
+    <line x1="90" y1="240" x2="360" y2="120" style="stroke:#1565c0;stroke-width:2;stroke-dasharray:5,4" marker-end="url(#arr)"></line>
+    <text x="200" y="195" style="fill:#1565c0;font-family:sans-serif;font-size:11px">kurz vlastní</text>
+
+    <!-- pozice cizího plavidla T1, T2, T3 (na společné spojnici s vlastním = stálý náměr) -->
+    <!-- linie náměru z vlastního plavidla -->
+    <line x1="90" y1="240" x2="430" y2="60" style="stroke:#888;stroke-width:1;stroke-dasharray:2,3"></line>
+    <text x="300" y="155" style="fill:#666;font-family:sans-serif;font-size:11px;font-style:italic">stálý náměr</text>
+
+    <!-- cizí T1 -->
+    <circle cx="400" cy="78" r="7" style="fill:#c62828;stroke:#7a1414;stroke-width:2"></circle>
+    <text x="410" y="74" style="fill:#7a1414;font-family:sans-serif;font-size:11px">cizí T1</text>
+
+    <!-- cizí T2 -->
+    <circle cx="330" cy="115" r="7" style="fill:#c62828;stroke:#7a1414;stroke-width:2"></circle>
+    <text x="340" y="111" style="fill:#7a1414;font-family:sans-serif;font-size:11px">T2</text>
+
+    <!-- cizí T3 -->
+    <circle cx="260" cy="153" r="7" style="fill:#c62828;stroke:#7a1414;stroke-width:2"></circle>
+    <text x="270" y="149" style="fill:#7a1414;font-family:sans-serif;font-size:11px">T3</text>
+
+    <!-- kurz cizího plavidla -->
+    <line x1="430" y1="60" x2="210" y2="180" style="stroke:#c62828;stroke-width:2;stroke-dasharray:5,4"></line>
+    <text x="290" y="80" style="fill:#c62828;font-family:sans-serif;font-size:11px">kurz cizího</text>
+
+    <!-- bod průsečíku -->
+    <circle cx="225" cy="172" r="10" style="fill:none;stroke:#e65100;stroke-width:2;stroke-dasharray:3,3"></circle>
+    <text x="155" y="175" style="fill:#e65100;font-family:sans-serif;font-size:12px;font-weight:bold">místo srážky</text>
+
+    <!-- severka -->
+    <g transform="translate(440,280)">
+      <line x1="0" y1="15" x2="0" y2="-15" style="stroke:#333;stroke-width:1.5" marker-end="url(#arr)"></line>
+      <text x="-5" y="-20" style="fill:#333;font-family:sans-serif;font-size:11px;font-weight:bold">N</text>
+    </g>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li><strong>Měření:</strong> Pravidelně (např. každou minutu) odečítej kompasový náměr na cílové plavidlo přes ručku kompasu (peloryskop) nebo na radaru pomocí EBL (Electronic Bearing Line).</li>
+    <li><strong>Vyhodnocení:</strong> Pokud se náměr nemění o víc než cca 2–3° a vzdálenost klesá → jsi na kolizním kurzu a musíš jednat podle COLREG (vyhýbací plavidlo: kurzový či rychlostní manévr; plavidlo s předností: udržet kurz a rychlost, ale být připraven zasáhnout).</li>
+    <li><strong>Velká plavidla a vleky:</strong> Pravidlo 7(d)(ii) varuje, že u velkých lodí nebo vleků může nebezpečí trvat i při zjevně se měnícím náměru — pozor zejména na koncové body vleku, který může být dlouhý stovky metrů.</li>
+    <li><strong>Když máš pochybnost:</strong> COLREG, Pravidlo 7(a) — „Pokud existuje nějaká pochybnost, je třeba toto nebezpečí pokládat za jisté."</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři), <strong>Pravidlo 7 — Riziko srážky</strong>, zejména písm. (a) a (d).</li>
+    <li>COLREG 1972, <strong>Pravidlo 5 — Pozorování</strong> (povinnost udržovat řádné vizuální a sluchové pozorování i pomocí všech dostupných prostředků včetně radaru).</li>
+    <li>Bowditch — <em>The American Practical Navigator</em>, kapitola o vyhýbání srážkám a metodě CBDR (constant bearing, decreasing range).</li>
+  </ol>
+</article>

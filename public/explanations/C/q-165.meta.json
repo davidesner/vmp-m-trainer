@@ -1,0 +1,12 @@
+{
+  "qid": 165,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — International Cloud Atlas, Volume I (2017)",
+    "WMO — Guide to Meteorological Instruments and Methods of Observation (WMO-No. 8)",
+    "IMO — SOLAS (1974), kapitola V, pravidlo 5",
+    "Bowditch — American Practical Navigator (Pub. 9), kapitola 37"
+  ],
+  "model": "claude-opus-4-7"
+}

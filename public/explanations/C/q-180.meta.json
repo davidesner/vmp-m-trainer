@@ -1,0 +1,11 @@
+{
+  "qid": 180,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO Glossary of Meteorology — lokální větry (Mistral, Sirocco, Foehn)",
+    "Bowditch — American Practical Navigator, kap. 31 (Weather)",
+    "Námořní meteorologie — výukový standard pro plavbu na moři"
+  ],
+  "model": "claude-sonnet-4-6"
+}

@@ -1,0 +1,107 @@
+<article class="vmp-explanation">
+  <h2>Nasednutí lodi na dno — hodnocení ohrožení</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď popisuje, že stupeň ohrožení a další postup závisí na
+    <strong>rozsahu poškození lodě, jejím využitelném vybavení pro daný účel, druhu dna, poloze mělčiny vůči větru a na stavu moře</strong>.
+    Jde o komplexní hodnocení situace — pouhý typ kotvy nebo výkon motoru sám o sobě nestačí k posouzení nebezpečí; rozhodující je celková technická i hydrometeorologická situace.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Nasednutí na mělčinu (grounding/stranding) je jedna z nejzávažnějších nouzových situací na moři.
+    Velitel lodě musí okamžitě vyhodnotit více faktorů najednou:
+  </p>
+  <ul>
+    <li>
+      <strong>Rozsah poškození trupu</strong> — zda dochází k zaplavování, zda jsou poškozeny kormidlo, hřídel nebo vrtule; bez toho nelze rozhodnout o vlastním vyproštění.
+    </li>
+    <li>
+      <strong>Využitelné vybavení</strong> — funkčnost čerpadel, záchranných prostředků, motorů a komunikace přímo ovlivňuje možnosti manévrování i vyproštění.
+    </li>
+    <li>
+      <strong>Druh dna</strong> — měkké dno (písek, bahno) způsobuje menší poškození a usnadňuje vyprostit se vlastními silami; skalnaté nebo korálové dno hrozí proražením trupu.
+    </li>
+    <li>
+      <strong>Poloha mělčiny vůči větru</strong> — vítr vanoucí na mělčinu tlačí loď hlouběji; vítr z mělčiny naopak pomáhá. Poloha vzhledem k proudu a přílivu/odlivu je rovněž zásadní.
+    </li>
+    <li>
+      <strong>Stav moře</strong> — vlnění a výška vln rozhodují o tom, zda je bezpečné zůstat na mělčině nebo se pokusit o vyproštění, případně zda hrozí další poškození úderem vln.
+    </li>
+  </ul>
+  <p>
+    Tyto faktory jsou zakotveny v námořní praxi i v postupech SOLAS — velitel je povinen provést bezodkladné hodnocení situace a přijmout opatření k záchraně posádky a lodě.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram faktorů nasednutí na dno">
+    <!-- Sea background -->
+    <rect x="0" y="0" width="480" height="260" rx="8" style="fill:#e8f4f8;"/>
+    <!-- Seabed -->
+    <rect x="0" y="190" width="480" height="70" style="fill:#c2a06e;"/>
+    <!-- Water surface -->
+    <rect x="0" y="100" width="480" height="90" style="fill:#5b9bd5;opacity:0.55;"/>
+    <!-- Wave lines -->
+    <polyline points="0,110 30,105 60,110 90,105 120,110 150,105 180,110 210,105 240,110 270,105 300,110 330,105 360,110 390,105 420,110 450,105 480,110" style="fill:none;stroke:#2e6fa3;stroke-width:2;"/>
+    <!-- Grounded boat (simplified hull) -->
+    <polygon points="160,165 180,140 300,140 320,165 240,175" style="fill:#d9d9d9;stroke:#555;stroke-width:2;"/>
+    <!-- Mast -->
+    <line x1="240" y1="140" x2="240" y2="90" style="stroke:#555;stroke-width:2;"/>
+    <!-- Wind arrow -->
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" style="fill:#d44;"/>
+      </marker>
+    </defs>
+    <line x1="30" y1="75" x2="160" y2="120" style="stroke:#d44;stroke-width:2;marker-end:url(#arrowhead);"/>
+    <text x="15" y="70" style="font-size:12px;fill:#d44;font-family:sans-serif;">Vítr</text>
+
+    <!-- Factor labels -->
+    <!-- Damage -->
+    <rect x="330" y="135" width="140" height="22" rx="4" style="fill:#fff7cc;stroke:#c8a200;stroke-width:1;"/>
+    <text x="335" y="150" style="font-size:11px;fill:#5a4a00;font-family:sans-serif;">Poškození trupu</text>
+    <line x1="320" y1="152" x2="333" y2="148" style="stroke:#c8a200;stroke-width:1;"/>
+
+    <!-- Seabed type -->
+    <rect x="330" y="195" width="140" height="22" rx="4" style="fill:#f5e6d0;stroke:#a0703a;stroke-width:1;"/>
+    <text x="335" y="210" style="font-size:11px;fill:#5a2a00;font-family:sans-serif;">Druh dna</text>
+    <line x1="320" y1="200" x2="333" y2="207" style="stroke:#a0703a;stroke-width:1;"/>
+
+    <!-- Sea state -->
+    <rect x="5" y="112" width="130" height="22" rx="4" style="fill:#d0e8ff;stroke:#2e6fa3;stroke-width:1;"/>
+    <text x="10" y="127" style="font-size:11px;fill:#003366;font-family:sans-serif;">Stav moře / vlnění</text>
+
+    <!-- Position vs wind -->
+    <rect x="155" y="50" width="160" height="22" rx="4" style="fill:#fce8e8;stroke:#c0392b;stroke-width:1;"/>
+    <text x="160" y="65" style="font-size:11px;fill:#6b0000;font-family:sans-serif;">Poloha vůči větru</text>
+    <line x1="220" y1="72" x2="235" y2="90" style="stroke:#c0392b;stroke-width:1;"/>
+
+    <!-- Equipment -->
+    <rect x="155" y="200" width="155" height="22" rx="4" style="fill:#e0f7e0;stroke:#2e7d32;stroke-width:1;"/>
+    <text x="160" y="215" style="font-size:11px;fill:#1b4a1b;font-family:sans-serif;">Využitelné vybavení</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Jakmile loď nasedne na dno, velitel postupuje takto:
+  </p>
+  <ol>
+    <li>Zastaví stroje a zkontroluje, zda nedochází k zaplavování (poškození trupu).</li>
+    <li>Vyhodnotí druh dna — vizuálně, echoloten, tyčí nebo sondou.</li>
+    <li>Zjistí meteorologickou situaci — směr a sílu větru, stav moře, tendenci počasí.</li>
+    <li>Zkontroluje dostupné vybavení: čerpadla, záchranné vory, VHF, kotvy, odnímatelné zátěže.</li>
+    <li>Zvažuje možnosti: vlastní vyprostění (zpět přes záď / boky), vyčkání na příliv, přivolání pomoci (Mayday/PAN PAN).</li>
+  </ol>
+  <p>
+    Pokud například vítr fouká <em>na</em> mělčinu a vlnění je silné, je vlastní vyproštění motorovou silou riskantnější a je třeba rychle zajistit posádku a přivolat pomoc. Naopak při tichém počasí, písčitém dně a malém poškození lze zpravidla zvýšit otáčky a vydat se zpět do hloubky.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>SOLAS (Mezinárodní úmluva o bezpečnosti lidského života na moři) — Kapitola V, Pravidlo 33 (záchranné akce) a Pravidlo 34 (nebezpečné situace).</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — § 25 (povinnosti velitele v případě nebezpečí).</li>
+    <li>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) — jako doplňkový kontext pro nouzové světelné a zvukové signály.</li>
+    <li>Bowditch — American Practical Navigator, Kapitola o nouzových postupech (grounding procedures).</li>
+  </ol>
+</article>

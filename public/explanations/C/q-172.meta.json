@@ -1,0 +1,11 @@
+{
+  "qid": 172,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — International Cloud Atlas (2017)",
+    "Bowditch — American Practical Navigator (Pub. 9)",
+    "WMO-No. 182 — Meteopraxis pro námořníky"
+  ],
+  "model": "claude-opus-4-7"
+}

@@ -1,0 +1,84 @@
+<article class="vmp-explanation">
+  <h2>Vzdálené izobary na synoptické mapě → slabý vítr</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Jsou-li izobary na synoptické mapě od sebe <strong>značně vzdáleny</strong>, gradient tlaku vzduchu je malý — tlak se mění pomalu s vzdáleností. Čím menší tlakový gradient, tím slabší pohyb vzduchových hmot, a tedy lze očekávat <strong>slabý vítr</strong>. Hustě uložené izobary naopak signalizují strmý gradient a silný vítr.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Synoptická mapa zobrazuje rozložení atmosferického tlaku pomocí izobar — křivek spojujících místa se stejným tlakem (obvykle po 4 nebo 5 hPa). Vítr vane v důsledku tlakového gradientu: vzduch proudí z oblasti vyššího tlaku do oblasti nižšího. Rychlost větru je přímo úměrná <em>horizontálnímu tlakovému gradientu</em>, tj. rozdílu tlaku na jednotku vzdálenosti.
+  </p>
+  <ul>
+    <li><strong>Hustě uložené izobary</strong> = velký tlakový gradient = silný vítr (bouře, vichřice).</li>
+    <li><strong>Vzdáleně uložené izobary</strong> = malý tlakový gradient = slabý nebo žádný vítr (klid, bezvětří).</li>
+  </ul>
+  <p>
+    Toto je základní pravidlo synoptické meteorologie, zakotvené v učebnicích námořní meteorologie a využívané při analýze synoptických map vydávaných meteorologickými úřady (ECMWF, DWD, SHMI apod.).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:16px auto;">
+    <!-- Left side: dense isobars = strong wind -->
+    <rect x="0" y="0" width="230" height="220" fill="#eaf4fb" rx="8"/>
+    <text x="115" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a5276">Husté izobary</text>
+    <text x="115" y="38" text-anchor="middle" font-size="11" fill="#555">→ silný vítr</text>
+    <!-- Isobars dense -->
+    <line x1="20" y1="60" x2="210" y2="60" stroke="#2980b9" stroke-width="2"/>
+    <text x="215" y="64" font-size="10" fill="#2980b9">1020</text>
+    <line x1="20" y1="80" x2="210" y2="80" stroke="#2980b9" stroke-width="2"/>
+    <text x="215" y="84" font-size="10" fill="#2980b9">1016</text>
+    <line x1="20" y1="100" x2="210" y2="100" stroke="#2980b9" stroke-width="2"/>
+    <text x="215" y="104" font-size="10" fill="#2980b9">1012</text>
+    <line x1="20" y1="120" x2="210" y2="120" stroke="#2980b9" stroke-width="2"/>
+    <text x="215" y="124" font-size="10" fill="#2980b9">1008</text>
+    <line x1="20" y1="140" x2="210" y2="140" stroke="#2980b9" stroke-width="2"/>
+    <text x="215" y="144" font-size="10" fill="#2980b9">1004</text>
+    <!-- Wind arrows (strong) -->
+    <line x1="40" y1="170" x2="100" y2="170" stroke="#c0392b" stroke-width="3" marker-end="url(#arrow-red)"/>
+    <line x1="60" y1="190" x2="130" y2="190" stroke="#c0392b" stroke-width="3" marker-end="url(#arrow-red)"/>
+    <text x="115" y="210" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">Silný vítr ⚡</text>
+
+    <!-- Right side: sparse isobars = weak wind -->
+    <rect x="250" y="0" width="230" height="220" fill="#eafaf1" rx="8"/>
+    <text x="365" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e8449">Vzdálené izobary</text>
+    <text x="365" y="38" text-anchor="middle" font-size="11" fill="#555">→ slabý vítr</text>
+    <!-- Isobars sparse -->
+    <line x1="260" y1="65" x2="460" y2="65" stroke="#27ae60" stroke-width="2"/>
+    <text x="462" y="69" font-size="10" fill="#27ae60">1020</text>
+    <line x1="260" y1="105" x2="460" y2="105" stroke="#27ae60" stroke-width="2"/>
+    <text x="462" y="109" font-size="10" fill="#27ae60">1016</text>
+    <line x1="260" y1="145" x2="460" y2="145" stroke="#27ae60" stroke-width="2"/>
+    <text x="462" y="149" font-size="10" fill="#27ae60">1012</text>
+    <!-- Wind arrows (weak) -->
+    <line x1="290" y1="175" x2="320" y2="175" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-green)"/>
+    <line x1="310" y1="195" x2="335" y2="195" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-green)"/>
+    <text x="365" y="210" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">Slabý vítr 🌿</text>
+
+    <defs>
+      <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#c0392b"/>
+      </marker>
+      <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování plavby na moři je analýza synoptické mapy jedním ze základních nástrojů. Pokud námořník vidí na mapě izobar, které jsou od sebe vzdáleny (řídce rozloženy), může počítat s klidnými podmínkami — malou rychlostí větru, menšími vlnami a bezpečnějším výjezdem. Naopak hustě nakupené izobary (zejm. kolem tlakových níží) jsou varovným signálem: hrozí silný vítr, bouře nebo vichřice.
+  </p>
+  <p>
+    V praxi námořník porovná aktuální synoptickou mapu (vydávanou např. Norským meteorologickým ústavem, DWD nebo ECMWF) s předpověďmi a podle vzdálenosti izobar odhaduje potřebnou velikost plachet, bezpečnost kurzu a nutnost vyhledání útočiště.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Námořní meteorologie — základní principy synoptické analýzy (standardní učebnice námořní meteorologie, kap. Tlakový gradient a vítr)</li>
+    <li>WMO (World Meteorological Organization) — Guide to Marine Meteorological Services, kap. 3 (Surface analysis charts)</li>
+    <li>Bowditch — American Practical Navigator, kap. 31 (Weather Routing and Meteorology)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — příloha: meteorologické požadavky na příbřežní plavbu</li>
+  </ol>
+</article>

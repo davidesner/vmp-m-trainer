@@ -1,0 +1,91 @@
+<article class="vmp-explanation">
+  <h2>Předjíždění plachetnicí motorovou loď</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Při předjíždění platí zvláštní pravidlo: <strong>plavidlo, které předjíždí, je vždy plavidlem povinným dát přednost</strong>, bez ohledu na to, zda jde o plachetnici nebo motorové plavidlo. Plachetnice předjíždějící loď se strojním pohonem se proto musí <strong>držet mimo dráhu lodi se strojním pohonem</strong>. Obecná výhoda plachetnice (jako plachtícího plavidla před motorovým) je v tomto případě potlačena situační povinností předjíždějícího.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) stanoví hierarchii přednosti mezi různými třídami plavidel — obvykle má plachetnice přednost před motorovým plavidlem (Pravidlo 18). Avšak <strong>Pravidlo 13 – Předjíždění</strong> tuto obecnou hierarchii přebíjí:
+  </p>
+  <blockquote>
+    <em>„Každé plavidlo dohánějící jiné plavidlo musí držet mimo dráhu dohánějícího plavidla."</em>
+    (COLREG, Pravidlo 13 odst. a)
+  </blockquote>
+  <p>
+    Za předjíždění se považuje situace, kdy se přibližující plavidlo nachází v sektoru více než 22,5° za travers předjížděného plavidla (Pravidlo 13 odst. b). Pravidlo 13 je speciální normou a aplikuje se přednostně před Pravidlem 18 (Povinnosti mezi různými třídami plavidel). Předjíždějící plavidlo musí zůstat stranou, dokud není bezpečně mimo dosah předjížděného.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" width="480" height="260" aria-label="Diagram předjíždění – plachetnice musí ustoupit motorové lodi">
+      <!-- Motorová loď (předjížděná) – uprostřed vpravo -->
+      <g transform="translate(310,130)">
+        <!-- Trup motorové lodi -->
+        <polygon points="40,0 10,-14 -20,-12 -24,0 -20,12 10,14" fill="#4a90d9" stroke="#1a5276" stroke-width="1.5"/>
+        <!-- Směrová šipka motorová loď -->
+        <line x1="40" y1="0" x2="75" y2="0" stroke="#1a5276" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="-5" y="28" font-size="11" fill="#1a5276" text-anchor="middle">Motorová loď</text>
+        <text x="-5" y="40" font-size="10" fill="#555" text-anchor="middle">(předjížděná)</text>
+      </g>
+
+      <!-- Plachetnice (předjíždějící) – vlevo za traversou -->
+      <g transform="translate(100,180)">
+        <!-- Trup plachetnice -->
+        <polygon points="36,0 8,-10 -18,-9 -22,0 -18,9 8,10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+        <!-- Stožár + plachta -->
+        <line x1="10" y1="0" x2="10" y2="-38" stroke="#2e7d32" stroke-width="1.5"/>
+        <polygon points="10,-38 10,-5 32,-14" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+        <!-- Směrová šipka plachetnice -->
+        <line x1="36" y1="0" x2="71" y2="0" stroke="#2e7d32" stroke-width="2" marker-end="url(#arr2)"/>
+        <text x="5" y="24" font-size="11" fill="#2e7d32" text-anchor="middle">Plachetnice</text>
+        <text x="5" y="36" font-size="10" fill="#555" text-anchor="middle">(předjíždějící)</text>
+      </g>
+
+      <!-- Šipka úhybného manévru plachetnice dolů -->
+      <path d="M 170,180 Q 220,230 270,210" stroke="#c0392b" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arr3)"/>
+      <text x="210" y="248" font-size="11" fill="#c0392b" text-anchor="middle">plachetnice ustupuje</text>
+
+      <!-- Zákaz – plachetnice nesmí jet rovně přes dráhu -->
+      <line x1="190" y1="130" x2="260" y2="130" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+      <circle cx="225" cy="130" r="14" fill="none" stroke="#c0392b" stroke-width="2.5" opacity="0.5"/>
+      <line x1="215" y1="120" x2="235" y2="140" stroke="#c0392b" stroke-width="2.5" opacity="0.5"/>
+
+      <!-- Sektor 22.5° za traversou (ilustrační) -->
+      <path d="M 350,130 L 220,200 L 220,60 Z" fill="#4a90d9" fill-opacity="0.08" stroke="#4a90d9" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="198" y="118" font-size="9" fill="#4a90d9">sektor</text>
+      <text x="192" y="129" font-size="9" fill="#4a90d9">předjíždění</text>
+      <text x="192" y="140" font-size="9" fill="#4a90d9">(&gt;22,5° za traversou)</text>
+
+      <!-- Definice šipek -->
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#1a5276"/>
+        </marker>
+        <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
+        </marker>
+        <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#c0392b"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li>Plachtíte za motorovým plavidlem a dohánějíte ho: <strong>vy musíte uhýbat</strong> — přejít za záď, nebo zpomalit — bez ohledu na to, že jste plachetnice.</li>
+    <li>Pravidlo 13 se používá vždy, když existuje pochybnost, zda jde o předjíždění: situace se považuje za předjíždění, dokud není jasně vyloučena.</li>
+    <li>Povinnost předjíždějícího vyhýbat se trvá, dokud není bezpečně a zcela mimo předjížděné plavidlo.</li>
+    <li>Signál záměru předjíždět v úzkém průlivu (vpravo — 2 krátké + 1 dlouhý, vlevo — 2 krátké + 2 dlouhé zvukové signály) se provádí dle Pravidla 34d.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Pravidlo 13 (Předjíždění)</li>
+    <li><strong>COLREG 1972</strong> — Pravidlo 18 (Povinnosti mezi různými třídami plavidel)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — § 9 (implementace COLREG do českého práva)</li>
+  </ol>
+</article>

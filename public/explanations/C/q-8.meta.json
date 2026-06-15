@@ -1,0 +1,12 @@
+{
+  "qid": 8,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Pravidlo 5 (Look-out)",
+    "COLREG 1972 — Pravidlo 6, 7, 35",
+    "SOLAS kapitola V, pravidlo 14 a 24",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

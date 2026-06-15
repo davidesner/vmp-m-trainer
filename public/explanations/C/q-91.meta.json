@@ -1,0 +1,12 @@
+{
+  "qid": 91,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři",
+    "Bowditch — American Practical Navigator",
+    "ISO 31-1 / SI jednotky",
+    "zákon č. 61/2000 Sb., o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

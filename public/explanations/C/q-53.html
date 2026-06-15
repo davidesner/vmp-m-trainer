@@ -1,0 +1,105 @@
+<article class="vmp-explanation">
+  <h2>Dvě plachetnice v kurzu střetu — kdo uvolní cestu?</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že <strong>plachetnice Y musí uvolnit cestu</strong>. Z obrázku plyne, že vítr fouká zleva (šipka vlevo dole), přičemž plachetnice X jede s větrem na levém boku (vítr z levé strany) a plachetnice Y pluje s větrem na pravém boku. Podle COLREG pravidla 12 platí: plavidlo s větrem na pravém boku má přednost; plavidlo s větrem na levém boku musí uvolnit cestu. Plachetnice X má vítr z pravé strany — má přednost. Plachetnice Y má vítr z levé strany — musí uhýbat.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Situaci řeší <strong>COLREG 1972, Pravidlo 12 — Plachetnice</strong>:
+  </p>
+  <ul>
+    <li><strong>Pravidlo 12(a)(i):</strong> Přibližují-li se dvě plachetnice tak, že vzniká nebezpečí srážky, musí jedna z nich ustoupit druhé — a to ta, která má vítr na levém boku.</li>
+    <li><strong>Pravidlo 12(a)(ii):</strong> Mají-li obě plachetnice vítr na téže straně, musí ustoupit ta, která je po návětrné straně (blíže větru).</li>
+    <li><strong>Pravidlo 12(b):</strong> Nemůže-li plachetnice s větrem na levém boku zjistit, na které straně má vítr druhá plachetnice, musí ustoupit ona.</li>
+  </ul>
+  <p>
+    Na obrázku fouká vítr ze severovýchodu (šipka vlevo dole ukazuje směr pohybu vzduchu). Plachetnice X pluje s větrem přicházejícím zprava (startboard tack = pravý halz), plachetnice Y má vítr z levé strany (port tack = levý halz). Pravidlo 12(a)(i) proto jednoznačně určuje, že Y musí uhýbat.
+  </p>
+  <p>
+    Možnost, že by „obě změnily směr vpravo", COLREG nezná — toto pravidlo v kolizní situaci dvou plachetnic neexistuje.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300" aria-label="Diagram: dvě plachetnice, vítr a právo přednosti">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+      </marker>
+      <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#1a73e8" />
+      </marker>
+      <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32" />
+      </marker>
+      <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#c62828" />
+      </marker>
+    </defs>
+
+    <!-- Vítr -->
+    <line x1="30" y1="150" x2="100" y2="150" stroke="#888" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow)" />
+    <text x="30" y="140" font-size="13" fill="#555" font-family="sans-serif">VÍTR</text>
+
+    <!-- Plachetnice X (pravý halz — přednost) -->
+    <g transform="translate(150,110)">
+      <!-- trup -->
+      <ellipse cx="0" cy="20" rx="30" ry="10" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5" />
+      <!-- plachta — vítr zprava, plachta vlevo -->
+      <line x1="0" y1="20" x2="0" y2="-30" stroke="#2e7d32" stroke-width="2" />
+      <polygon points="0,-30 -25,15 0,15" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1" />
+      <text x="-12" y="40" font-size="14" font-weight="bold" fill="#2e7d32" font-family="sans-serif">X</text>
+      <!-- vítr zprava — šipka na pravou stranu -->
+      <line x1="45" y1="5" x2="15" y2="5" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrowGreen)" />
+      <text x="48" y="9" font-size="11" fill="#2e7d32" font-family="sans-serif">vítr</text>
+    </g>
+    <text x="110" y="175" font-size="11" fill="#2e7d32" font-family="sans-serif" font-style="italic">pravý halz (přednost)</text>
+
+    <!-- Plachetnice Y (levý halz — musí uhýbat) -->
+    <g transform="translate(370,190)">
+      <!-- trup -->
+      <ellipse cx="0" cy="20" rx="30" ry="10" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5" />
+      <!-- plachta — vítr zleva, plachta vpravo -->
+      <line x1="0" y1="20" x2="0" y2="-30" stroke="#c62828" stroke-width="2" />
+      <polygon points="0,-30 25,15 0,15" fill="#ef9a9a" stroke="#c62828" stroke-width="1" />
+      <text x="-8" y="40" font-size="14" font-weight="bold" fill="#c62828" font-family="sans-serif">Y</text>
+      <!-- vítr zleva — šipka na levou stranu -->
+      <line x1="-45" y1="5" x2="-15" y2="5" stroke="#c62828" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrowRed)" />
+      <text x="-70" y="9" font-size="11" fill="#c62828" font-family="sans-serif">vítr</text>
+    </g>
+    <text x="325" y="255" font-size="11" fill="#c62828" font-family="sans-serif" font-style="italic">levý halz (uhýbá)</text>
+
+    <!-- Kurzy lodí k sobě -->
+    <line x1="182" y1="135" x2="355" y2="195" stroke="#1a73e8" stroke-width="1.5" stroke-dasharray="8,4" marker-end="url(#arrowBlue)" />
+    <line x1="362" y1="193" x2="196" y2="148" stroke="#1a73e8" stroke-width="1.5" stroke-dasharray="8,4" marker-end="url(#arrowBlue)" />
+
+    <!-- Legenda -->
+    <rect x="10" y="265" width="500" height="28" rx="4" fill="#f5f5f5" stroke="#ccc" stroke-width="1" />
+    <text x="20" y="283" font-size="12" fill="#333" font-family="sans-serif">
+      <tspan fill="#2e7d32" font-weight="bold">X (pravý halz)</tspan>
+      <tspan fill="#333"> — má přednost   </tspan>
+      <tspan fill="#c62828" font-weight="bold">Y (levý halz)</tspan>
+      <tspan fill="#333"> — musí uvolnit cestu (COLREG pravidlo 12)</tspan>
+    </text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plachtění na moři je rozpoznání halzu (pravý × levý) klíčovou dovedností:
+  </p>
+  <ul>
+    <li><strong>Pravý halz</strong> (starboard tack): vítr přichází zpravá — boom je na levé straně. Tato loď má přednost a udržuje svůj kurz.</li>
+    <li><strong>Levý halz</strong> (port tack): vítr přichází zleva — boom je na pravé straně. Tato loď musí včas manévrovat, aby se vyhnula srážce.</li>
+    <li>Uhnutí provádí loď Y typicky otočením na pravobok (odvrácení od kurzu kolize) nebo přibrzdění.</li>
+    <li>Loď X by měla udržovat kurz, dokud kolize nehrozí bezprostředně (pak platí Pravidlo 17 o vlastní bezpečnosti).</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Úmluva o mezinárodních pravidlech pro zabránění srážkám na moři, <strong>Pravidlo 12</strong> (Plachetnice)</li>
+    <li>COLREG 1972, <strong>Pravidlo 17</strong> (Jednání přednostního plavidla)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 15 (zapracování COLREG do českého práva)</li>
+  </ol>
+</article>

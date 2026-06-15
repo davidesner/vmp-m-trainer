@@ -1,0 +1,12 @@
+{
+  "qid": 189,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "WMO-No. 182 Mezinárodní meteorologická slovníková příručka",
+    "Bowditch — American Practical Navigator",
+    "HHI — Nautical Guide to the Adriatic"
+  ],
+  "model": "claude-sonnet-4-6"
+}

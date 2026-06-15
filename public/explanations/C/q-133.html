@@ -1,0 +1,123 @@
+<article class="vmp-explanation">
+  <h2>Bóje s červenými a bílými svislými pruhy — bezpečná voda</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Kulová bóje s červenými a bílými <strong>svislými pruhy</strong> je podle systému IALA bójí pro bezpečnou vodu (Safe Water Mark). Označuje, že kolem ní — a zejména přímo pod ní — je splavná voda bez skrytých překážek. Plavidlo může bóji minout z obou stran.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Systém IALA (International Association of Marine Aids to Navigation and Lighthouse Authorities) definuje pět základních typů námořních bójí. Bóje bezpečné vody (Safe Water Mark) má tyto charakteristiky:
+  </p>
+  <ul>
+    <li><strong>Tvar:</strong> kulová (spherical) nebo sférická bóje, případně s tyčí a kulovým vrcholkovým znakem</li>
+    <li><strong>Zbarvení:</strong> červené a bílé svislé pruhy</li>
+    <li><strong>Světlo (pokud je osvícena):</strong> bílé izofázní, okultní nebo Morse(A) s pomalou frekvencí</li>
+    <li><strong>Vrcholový znak:</strong> jedna červená kulička</li>
+  </ul>
+  <p>
+    Tento typ bóje se typicky staví na vstupu do průplavu, na středu kanálu, nebo v otevřeném moři k označení bezpečného prostoru pro plavbu.
+  </p>
+  <p>
+    Naopak bóje s <em>izolovaným nebezpečím</em> (Isolated Danger Mark) má černé a červené vodorovné pruhy a dva černé koule jako vrcholový znak — to je jiný typ s odlišným významem.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center; margin: 1em 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" aria-label="Bóje bezpečné vody — červené a bílé svislé pruhy">
+      <!-- Moře -->
+      <rect x="0" y="130" width="320" height="70" fill="#b0d8f0" rx="0"/>
+      <text x="160" y="185" text-anchor="middle" font-size="12" fill="#1a6090">splavná voda — bezpečné ze všech stran</text>
+
+      <!-- Bóje tělo (kruh) -->
+      <circle cx="160" cy="100" r="50" fill="white" stroke="#555" stroke-width="2"/>
+      <!-- Červené svislé pruhy (3 pruhy přes kruh, oříznuté kruhem) -->
+      <defs>
+        <clipPath id="bojeClip">
+          <circle cx="160" cy="100" r="50"/>
+        </clipPath>
+      </defs>
+      <!-- Červené svislé pruhy -->
+      <g clip-path="url(#bojeClip)">
+        <rect x="110" y="50" width="20" height="100" fill="#cc0000"/>
+        <rect x="150" y="50" width="20" height="100" fill="#cc0000"/>
+        <rect x="190" y="50" width="20" height="100" fill="#cc0000"/>
+      </g>
+      <circle cx="160" cy="100" r="50" fill="none" stroke="#555" stroke-width="2"/>
+
+      <!-- Tyč nahoru -->
+      <line x1="160" y1="50" x2="160" y2="20" stroke="#555" stroke-width="3"/>
+      <!-- Vrcholový znak: červená kulička -->
+      <circle cx="160" cy="14" r="7" fill="#cc0000" stroke="#555" stroke-width="1.5"/>
+
+      <!-- Kotevní lano dolů -->
+      <line x1="160" y1="150" x2="160" y2="175" stroke="#555" stroke-width="2" stroke-dasharray="5,3"/>
+
+      <!-- Popisky -->
+      <text x="230" y="18" font-size="11" fill="#333">červená kulička</text>
+      <text x="230" y="38" font-size="10" fill="#888">(vrcholový znak)</text>
+
+      <text x="10" y="95" font-size="11" fill="#cc0000" font-weight="bold">červené</text>
+      <text x="10" y="110" font-size="11" fill="#cc0000">svislé</text>
+      <text x="10" y="125" font-size="11" fill="#cc0000">pruhy</text>
+
+      <text x="222" y="100" font-size="11" fill="#888">+ bílé pruhy</text>
+      <text x="222" y="115" font-size="10" fill="#888">mezi červenými</text>
+
+      <!-- Šipky po stranách "průjezd OK" -->
+      <text x="50" y="165" font-size="11" fill="#1a6090">← OK</text>
+      <text x="245" y="165" font-size="11" fill="#1a6090">OK →</text>
+    </svg>
+  </div>
+
+  <h3>Srovnání — nezaměňuj s izolovaným nebezpečím</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Typ bóje</th>
+        <th>Zbarvení</th>
+        <th>Tvar</th>
+        <th>Vrcholový znak</th>
+        <th>Význam</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Bezpečná voda</strong></td>
+        <td>Červené + bílé <em>svislé</em> pruhy</td>
+        <td>Kulová</td>
+        <td>1 červená kulička</td>
+        <td>Kolem je splavná voda</td>
+      </tr>
+      <tr>
+        <td>Izolované nebezpečí</td>
+        <td>Černé + červené <em>vodorovné</em> pruhy</td>
+        <td>Různý</td>
+        <td>2 černé koule</td>
+        <td>Nebezpečí přímo pod bójí</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plachtění z přístavu na moře je setkání s bójí bezpečné vody (červenobílá svislá pruhy, kulový tvar) signálem, že navigujete správně — nacházíte se ve splavném prostoru. Bóji lze minout z obou stran. V praxi ji najdete:
+  </p>
+  <ul>
+    <li>Na začátku/konci přístavního průplavu nebo plavební dráhy</li>
+    <li>Uprostřed otevřeného kanálu jako orientační bod</li>
+    <li>Na středu přístupu k přístaviště</li>
+  </ul>
+  <p>
+    Pokud bóje bliká, světlo je <strong>bílé izofázní, okultní nebo Morse(A)</strong> — žádné červené ani zelené světlo, které by mohlo upozorňovat na překážku.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IALA Maritime Buoyage System — Region A</strong> (platný v Evropě, Africe, Asii a Austrálii): definice Safe Water Mark (bóje bezpečné vody)</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — obecný rámec plavební bezpečnosti a signalizace</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> — technické podmínky pro plavbu a navigaci na moři</li>
+    <li><strong>COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 1 a přílohy o světlech a tvarech plavidel (kontext navigační bezpečnosti)</li>
+  </ol>
+</article>

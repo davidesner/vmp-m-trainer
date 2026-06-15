@@ -1,0 +1,12 @@
+{
+  "qid": 6,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972, Pravidlo 3 písm. l) – definice snížené viditelnosti",
+    "COLREG 1972, Pravidlo 19 – plavba ve snížené viditelnosti",
+    "COLREG 1972, Pravidlo 35 – zvukové signály ve snížené viditelnosti",
+    "Zákon č. 61/2000 Sb., o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

@@ -1,0 +1,7 @@
+{
+  "qid": 199,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["Mezinárodní meteorologická terminologie (WMO)", "Bowditch — American Practical Navigator", "Vyhláška č. 315/2000 Sb.", "SOLAS kapitola V pravidlo 5"],
+  "model": "claude-sonnet-4-6"
+}

@@ -1,0 +1,7 @@
+{
+  "qid": 104,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["IHO S-4 (Regulations for International Charts)", "IHO S-52 (ECDIS Chart Specifications)", "Vyhláška č. 315/2000 Sb. o posádce lodí a odborné způsobilosti námořníků", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-sonnet-4-6"
+}

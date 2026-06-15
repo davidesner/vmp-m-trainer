@@ -1,0 +1,14 @@
+{
+  "qid": 58,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 – Pravidlo 18 (Vzájemné povinnosti plavidel)",
+    "COLREG 1972 – Pravidlo 16 (Jednání ustupujícího plavidla)",
+    "COLREG 1972 – Pravidlo 17 (Jednání přednostního plavidla)",
+    "COLREG 1972 – Pravidlo 8 (Vyhýbací manévr)",
+    "COLREG 1972 – Pravidlo 25 (Plachetnice)",
+    "Zákon č. 61/2000 Sb., o námořní plavbě"
+  ],
+  "model": "claude-sonnet-4-6"
+}

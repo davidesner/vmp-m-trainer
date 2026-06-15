@@ -1,0 +1,11 @@
+{
+  "qid": 120,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Bowditch — American Practical Navigator (Pub. 9)",
+    "ČSN 01 3411 — Námořní mapy a navigační názvosloví",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

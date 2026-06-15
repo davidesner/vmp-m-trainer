@@ -1,0 +1,71 @@
+<article class="vmp-explanation">
+  <h2>Bezpečná rychlost plavidla na moři</h2>
+
+  <h3>Jádro</h3>
+  <p>Správná je odpověď, která uvádí <strong>"stav viditelnosti, hustotu provozu včetně soustředění rybářských či jiných lodí a manévrovací schopnost plavidla s ohledem na vzdálenost potřebnou k úplnému zastavení plavidla"</strong>. Přesně tyto faktory jmenuje COLREG 1972, Pravidlo 6 jako základní hlediska, která musí brát v úvahu <em>každé</em> plavidlo (tj. u všech plavidel, bez ohledu na typ pohonu, velikost či plavební oblast).</p>
+  <p>Odpovědi zmiňující <em>"hodnotu plavidla a počet osob"</em> nebo <em>"hodnotu nákladu a vzdálenost od místa bezpečného přistání"</em> jsou chybné — komerční či majetková kritéria nejsou součástí definice bezpečné rychlosti podle COLREG. Bezpečná rychlost je čistě <strong>navigačně-bezpečnostní pojem</strong>, ne ekonomický.</p>
+
+  <h3>Pozadí</h3>
+  <p><strong>COLREG 1972, Pravidlo 6 (Safe speed)</strong> stanoví, že každé plavidlo musí <em>za všech okolností</em> plout bezpečnou rychlostí, aby mohlo provést náležitý a účinný manévr k zabránění srážce a aby mohlo zastavit ve vzdálenosti přiměřené převládajícím okolnostem a podmínkám.</p>
+  <p>Pravidlo 6 přímo vyjmenovává faktory, které musí <strong>u všech plavidel</strong> vzít navigátor v úvahu při stanovení bezpečné rychlosti:</p>
+  <ul>
+    <li>stav viditelnosti,</li>
+    <li>hustota provozu (včetně soustředění rybářských nebo jiných plavidel),</li>
+    <li>manévrovací schopnost plavidla, zejména vzdálenost potřebná k zastavení a poloměr otáčení v daných podmínkách,</li>
+    <li>v noci přítomnost pozadí světel (břeh, vlastní světla),</li>
+    <li>stav větru, moře a proudů, blízkost navigačních nebezpečí,</li>
+    <li>ponor plavidla ve vztahu k dostupné hloubce vody.</li>
+  </ul>
+  <p>Pro plavidla vybavená radarem Pravidlo 6 přidává další specifické faktory (vlastnosti radaru, omezení dosahu, rušení, identifikace cílů atd.).</p>
+
+  <h3>Vizualizace — faktory bezpečné rychlosti</h3>
+  <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram faktorů bezpečné rychlosti podle COLREG Pravidla 6">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" style="fill:#1f4e79"/>
+      </marker>
+    </defs>
+    <rect x="0" y="0" width="600" height="360" style="fill:#f4f8fb;stroke:#cdd9e5;stroke-width:1"/>
+    <ellipse cx="300" cy="180" rx="90" ry="38" style="fill:#1f4e79;stroke:#0d2d4a;stroke-width:2"/>
+    <text x="300" y="178" text-anchor="middle" style="fill:#ffffff;font-family:sans-serif;font-size:14px;font-weight:bold">BEZPEČNÁ</text>
+    <text x="300" y="194" text-anchor="middle" style="fill:#ffffff;font-family:sans-serif;font-size:14px;font-weight:bold">RYCHLOST</text>
+
+    <rect x="20" y="30" width="160" height="50" rx="6" style="fill:#ffffff;stroke:#1f4e79;stroke-width:1.5"/>
+    <text x="100" y="52" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#0d2d4a;font-weight:bold">Stav viditelnosti</text>
+    <text x="100" y="68" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#0d2d4a">mlha, déšť, noc</text>
+    <line x1="180" y1="55" x2="220" y2="160" style="stroke:#1f4e79;stroke-width:1.5" marker-end="url(#arr)"/>
+
+    <rect x="420" y="30" width="160" height="50" rx="6" style="fill:#ffffff;stroke:#1f4e79;stroke-width:1.5"/>
+    <text x="500" y="52" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#0d2d4a;font-weight:bold">Hustota provozu</text>
+    <text x="500" y="68" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#0d2d4a">rybářské lodě, koridory</text>
+    <line x1="420" y1="55" x2="380" y2="160" style="stroke:#1f4e79;stroke-width:1.5" marker-end="url(#arr)"/>
+
+    <rect x="20" y="280" width="160" height="50" rx="6" style="fill:#ffffff;stroke:#1f4e79;stroke-width:1.5"/>
+    <text x="100" y="302" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#0d2d4a;font-weight:bold">Manévr. schopnost</text>
+    <text x="100" y="318" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#0d2d4a">dráha zastavení, otáčení</text>
+    <line x1="180" y1="305" x2="220" y2="210" style="stroke:#1f4e79;stroke-width:1.5" marker-end="url(#arr)"/>
+
+    <rect x="420" y="280" width="160" height="50" rx="6" style="fill:#ffffff;stroke:#1f4e79;stroke-width:1.5"/>
+    <text x="500" y="302" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#0d2d4a;font-weight:bold">Vítr, moře, proudy</text>
+    <text x="500" y="318" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#0d2d4a">ponor / hloubka vody</text>
+    <line x1="420" y1="305" x2="380" y2="210" style="stroke:#1f4e79;stroke-width:1.5" marker-end="url(#arr)"/>
+
+    <text x="300" y="350" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555;font-style:italic">COLREG 1972 — Pravidlo 6</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>V reálu to znamená, že navigátor neplaví "konstantní cestovní rychlostí", ale aktivně ji upravuje:</p>
+  <ul>
+    <li><strong>Mlha / zhoršená viditelnost:</strong> rychlost se snižuje tak, aby loď byla schopná zastavit v polovině viditelné vzdálenosti (klasická zásada "stop within half the visibility").</li>
+    <li><strong>Rybářská flotila / hustý provoz:</strong> i za jasného dne má vést k razantnímu snížení rychlosti, protože rybářské lodě často nemanévrují podle COLREG (jsou omezené svojí činností).</li>
+    <li><strong>Velké plavidlo s dlouhou zastavovací drahou:</strong> nákladní loď potřebuje i přes 1 NM k úplnému zastavení — musí proto plout pomaleji v úžinách a v blízkosti pobřeží než malá jachta.</li>
+    <li><strong>Při zkoušce VMP:</strong> ekonomická kritéria (hodnota lodi, hodnota nákladu) jsou typický distraktor — bezpečná rychlost je vždy o <em>navigační bezpečnosti</em>, nikoli o tom, "kolik bys ztratil při havárii".</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, <strong>Pravidlo 6 (Safe Speed)</strong>.</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě — § 30 (povinnosti velitele lodi při zajištění bezpečnosti plavby).</li>
+    <li>Vyhláška č. 315/2000 Sb., o technické způsobilosti a vybavenosti námořních plavidel a o průkazu způsobilosti.</li>
+  </ol>
+</article>

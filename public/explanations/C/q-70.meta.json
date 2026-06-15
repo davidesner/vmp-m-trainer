@@ -1,0 +1,12 @@
+{
+  "qid": 70,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Pravidlo 28 (plavidlo omezené svým ponorem)",
+    "COLREG 1972 — Pravidlo 27 (plavidla neovladatelná)",
+    "COLREG 1972 — Pravidlo 30 (plavidla zakotvená)",
+    "Zákon č. 61/2000 Sb., o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

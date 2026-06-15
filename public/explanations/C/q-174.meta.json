@@ -1,0 +1,11 @@
+{
+  "qid": 174,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO-No. 8 Guide to Meteorological Instruments and Methods of Observation",
+    "Bowditch — American Practical Navigator, kap. 36",
+    "Učebnice námořní meteorologie — klasifikace vzduchových hmot"
+  ],
+  "model": "claude-opus-4-7"
+}

@@ -1,0 +1,117 @@
+<article class="vmp-explanation">
+  <h2>Střelka magnetického kompasu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Střelka magnetického kompasu se natáčí k <strong>magnetickému severnímu pólu</strong> Země,
+    nikoli ke geografickému (pravému) severnímu pólu. Její ukazovaný směr je proto ovlivněn
+    dvěma chybami: <strong>deklinací</strong> (úhlový rozdíl mezi magnetickým a pravým severem,
+    závislý na poloze na Zemi a čase) a <strong>deviací</strong> (odchylka způsobená magnetickými
+    materiály a elektrickými vlivy samotného plavidla). Odpověď „k severnímu pólu a je ovlivněna
+    deklinací a deviací" je tedy správná.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Magnetický kompas patří mezi základní navigační přístroje povinně vybavující mořská plavidla.
+    Jeho princip spočívá v zarovnání magnetizované střelky (nebo systému magnetů) s horizontální
+    složkou zemského magnetického pole.
+  </p>
+  <ul>
+    <li>
+      <strong>Deklinace (magnetická odchylka)</strong> — úhel mezi magnetickým meridiánem
+      a zeměpisným meridiánem v daném místě. Hodnoty deklinace jsou zakresleny na námořních
+      mapách (izogoné) a v ročních tabulkách (např. HO-229 nebo britský Admiralty NP). Mění se
+      s geografickou polohou a s časem (sekulární změna ~0,1° / rok).
+    </li>
+    <li>
+      <strong>Deviace</strong> — odchylka způsobená lodními magnety, kovovou konstrukcí,
+      elektrickými zařízeními a nákladem. Je specifická pro každé plavidlo a každý kurs;
+      stanovuje se kompenzací a zaznamenává do deviační tabulky nebo deviační křivky.
+    </li>
+    <li>
+      Přepočet: <code>Pravý kurs = Magnetický kurs + Deklinace (W+, E−) + Deviace (W+, E−)</code>
+      (konvence závisí na použité metodě; v praxi se střelka nejprve opraví o deviaci → magnetický
+      kurs, pak o deklinaci → pravý kurs).
+    </li>
+  </ul>
+  <p>
+    Povinná výbava mořských plavidel magnetickým kompasem vychází z <strong>SOLAS, kapitola V,
+    pravidlo 19</strong> (navigační vybavení). Správné užívání a korekce kompasu upravuje
+    zákon č. 61/2000 Sb. o námořní plavbě a příslušné technické normy IMO.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" style="max-width:480px;width:100%;background:#f8f9ff;border-radius:8px;" aria-label="Schéma deklinace a deviace magnetického kompasu">
+    <!-- Geografický sever -->
+    <line x1="240" y1="280" x2="240" y2="30" stroke="#2c3e50" stroke-width="2" stroke-dasharray="6,3"/>
+    <polygon points="240,22 235,36 245,36" fill="#2c3e50"/>
+    <text x="246" y="34" font-size="12" fill="#2c3e50" font-family="sans-serif">Pravý sever (Ng)</text>
+
+    <!-- Magnetický sever (deklinace ~12° vlevo = západ) -->
+    <line x1="240" y1="280" x2="198" y2="32" stroke="#e67e22" stroke-width="2" stroke-dasharray="6,3"/>
+    <polygon points="198,22 193,36 203,36" fill="#e67e22"/>
+    <text x="90" y="38" font-size="12" fill="#e67e22" font-family="sans-serif">Magnetický sever (Nm)</text>
+
+    <!-- Kompasový sever (deviace ~8° doprava od Nm) -->
+    <line x1="240" y1="280" x2="218" y2="32" stroke="#27ae60" stroke-width="2"/>
+    <polygon points="218,22 213,36 223,36" fill="#27ae60"/>
+    <text x="138" y="58" font-size="11" fill="#27ae60" font-family="sans-serif">Kompasový sever (Nk)</text>
+
+    <!-- Oblouky pro úhly -->
+    <!-- Deklinace oblouk (Ng→Nm) -->
+    <path d="M 240 180 A 60 60 0 0 0 219 124" stroke="#e67e22" stroke-width="1.5" fill="none"/>
+    <text x="196" y="158" font-size="11" fill="#e67e22" font-family="sans-serif">Deklinace (W)</text>
+
+    <!-- Deviace oblouk (Nm→Nk) -->
+    <path d="M 219 124 A 45 45 0 0 1 230 112" stroke="#27ae60" stroke-width="1.5" fill="none"/>
+    <text x="222" y="138" font-size="11" fill="#27ae60" font-family="sans-serif">Deviace (E)</text>
+
+    <!-- Střelka kompasu (symbolická) -->
+    <ellipse cx="240" cy="280" rx="22" ry="22" fill="#ecf0f1" stroke="#7f8c8d" stroke-width="1.5"/>
+    <polygon points="240,262 237,275 243,275" fill="#c0392b"/>
+    <polygon points="240,298 237,285 243,285" fill="#7f8c8d"/>
+
+    <!-- Legenda -->
+    <rect x="10" y="285" width="460" height="28" rx="4" fill="#eee"/>
+    <line x1="18" y1="299" x2="40" y2="299" stroke="#2c3e50" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="45" y="303" font-size="11" fill="#2c3e50" font-family="sans-serif">Pravý sever</text>
+    <line x1="118" y1="299" x2="140" y2="299" stroke="#e67e22" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="145" y="303" font-size="11" fill="#e67e22" font-family="sans-serif">Magnetický sever</text>
+    <line x1="248" y1="299" x2="270" y2="299" stroke="#27ae60" stroke-width="2"/>
+    <text x="275" y="303" font-size="11" fill="#27ae60" font-family="sans-serif">Kompasový sever</text>
+  </svg>
+  <p style="font-size:0.85em;color:#555;">
+    Schéma (zjednodušeno): pravý sever (geografický), magnetický sever a kompasový sever jsou tři
+    různé směry. Deklinace odděluje pravý a magnetický sever; deviace odděluje magnetický
+    a kompasový sever.
+  </p>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li>
+      Před každou plavbou navigátor zjistí aktuální <strong>deklinaci</strong> z námořní mapy
+      nebo pilotního průvodce a zapíše ji do navigačního deníku.
+    </li>
+    <li>
+      <strong>Deviační tabulka</strong> plavidla (vyhotovená kompasérem) obsahuje hodnoty deviace
+      pro různé kursy. Bez její znalosti nelze kompasový kurs správně přepočítat na pravý kurs.
+    </li>
+    <li>
+      Při změně nákladu, instalaci nových elektrospotřebičů nebo přesunu do jiné oblasti se
+      deviace i deklinace mohou výrazně změnit — pravidelná kontrola je bezpečnostní povinností.
+    </li>
+    <li>
+      Na námořních mapách jsou deklinační hodnoty zpravidla v růžici a obvykle obsahují i roční
+      změnu, aby si navigátor mohl deklinaci sám aktualizovat.
+    </li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>SOLAS 1974 (konsolidované znění), Kapitola V, Pravidlo 19 — Navigační vybavení</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, zejm. § 7 (technické vybavení plavidel)</li>
+    <li>Bowditch — American Practical Navigator (NIMA Pub. No. 9), Kapitola 5 (Magnetický kompas, deklinace, deviace)</li>
+    <li>IMO Resolution A.382(X) — Magnetic Compasses, Carriage and Performance Standards</li>
+  </ol>
+</article>

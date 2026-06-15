@@ -1,0 +1,81 @@
+<article class="vmp-explanation">
+  <h2>Pochybnosti o předjíždění — pravidlo COLREG</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že loď <strong>musí se za předjíždějící považovat a jednat podle toho</strong>.
+    Jde o zásadní bezpečnostní princip: pokud existuje jakákoli pochybnost, je nutné přijmout opatrnější postoj a chovat se jako předjíždějící — tedy dát přednost předjížděné lodi a nenechat se zmást nejistotou situace.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Toto pravidlo pochází přímo z <strong>COLREG 1972 — Mezinárodních pravidel pro zabránění srážkám na moři</strong>, konkrétně z <strong>Pravidla 13 (Předjíždění)</strong>:
+  </p>
+  <blockquote>
+    „Jsou-li pochybnosti o tom, zda se jedná o případ předjíždění, musí se lodní velitel řídit tím, že se jedná o předjíždění, a jednat podle toho."
+  </blockquote>
+  <p>
+    Předjíždění (overtaking) nastává tehdy, když loď přichází k jiné lodi ze směru větší než 22,5° za traverz zádi (tj. ze sektoru záčepního světla — bílého světla na zádi). Protože za noci nebo za špatné viditelnosti nelze vždy s jistotou určit přesný úhel, pravidlo 13(d) výslovně stanoví, že pochybnost = předjíždění.
+  </p>
+  <p>
+    Předjíždějící loď je povinna ustoupit a nesmí přejít před předjižděnou lodí ani ji ohrožovat, dokud ji zcela nepředjede a bezpečně se od ní nevzdálí.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:1em auto;" aria-label="Diagram předjíždění — sektor záčepního světla">
+    <!-- Předjížděná loď (uprostřed) -->
+    <g transform="translate(240,130)">
+      <!-- trup lodi -->
+      <polygon points="0,-30 18,10 0,20 -18,10" fill="#2a6496" stroke="#1a3f5f" stroke-width="2"/>
+      <!-- záčepní bílé světlo (záď) -->
+      <circle cx="0" cy="20" r="6" fill="white" stroke="#888" stroke-width="1.5"/>
+      <!-- sektor záčepního světla: 135° na každou stranu za záď -->
+      <!-- Sektor předjíždění (šedý výsek za záď) -->
+      <path d="M 0 20
+               L -90 130
+               A 112 112 0 0 0 90 130
+               Z"
+            fill="rgba(255,200,0,0.18)" stroke="rgba(200,150,0,0.5)" stroke-width="1" stroke-dasharray="6,4"/>
+      <!-- Čára osy zádi -->
+      <line x1="0" y1="20" x2="0" y2="115" stroke="#aaa" stroke-width="1" stroke-dasharray="4,4"/>
+      <!-- Úhel 22,5° vlevo -->
+      <line x1="0" y1="20" x2="-90" y2="130" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <!-- Úhel 22,5° vpravo -->
+      <line x1="0" y1="20" x2="90" y2="130" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,4"/>
+    </g>
+
+    <!-- Předjíždějící loď (vpravo-zezadu) -->
+    <g transform="translate(340,210) rotate(-30)">
+      <polygon points="0,-14 8,5 0,10 -8,5" fill="#e74c3c" stroke="#a93226" stroke-width="1.5"/>
+    </g>
+
+    <!-- Popis -->
+    <text x="240" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">Sektor předjíždění (záčepní světlo)</text>
+    <text x="240" y="258" text-anchor="middle" font-size="11" fill="#555">Červená loď se blíží ze sektoru záčepního světla → pochybnost = předjíždění</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="30" width="14" height="14" fill="rgba(255,200,0,0.3)" stroke="rgba(200,150,0,0.5)" stroke-width="1"/>
+    <text x="28" y="42" font-size="11" fill="#555">Sektor záčepního světla (135° za záď)</text>
+
+    <polygon points="155,60 163,76 155,80 147,76" fill="#2a6496" stroke="#1a3f5f" stroke-width="1"/>
+    <text x="170" y="74" font-size="11" fill="#2a6496">Předjížděná loď</text>
+
+    <polygon points="155,90 163,106 155,110 147,106" fill="#e74c3c" stroke="#a93226" stroke-width="1"/>
+    <text x="170" y="104" font-size="11" fill="#e74c3c">Předjíždějící loď</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi se tato situace vyskytuje zejména v podmínkách snížené viditelnosti nebo při komplexní situaci v přístavním průlivu, kde není zcela jasné, z jakého sektoru se jiná loď přibližuje. Velitel lodi, který si není jistý, nesmí spoléhat na to, „že to asi není předjíždění" — naopak, musí jednat opatrně a dát přednost druhé lodi, jako by ji předjížděl.
+  </p>
+  <p>
+    Toto pravidlo eliminuje nebezpečné situace, kdy by se obě lodě navzájem domnívaly, že mají přednost, a žádná by neustoupila.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Pravidlo 13 (Předjíždění), odst. (d): pochybnost o předjíždění</li>
+    <li><strong>COLREG 1972</strong> — Pravidlo 13, odst. (b): definice sektoru záčepního světla (22,5° za traverz zádi)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — implementace COLREG do českého práva</li>
+  </ol>
+</article>

@@ -1,0 +1,7 @@
+{
+  "qid": 50,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["COLREG 1972 — Příloha IV (Distress Signals)", "Zákon č. 61/2000 Sb. o námořní plavbě", "SOLAS Kapitola III, Pravidlo 35"],
+  "model": "claude-opus-4-7"
+}

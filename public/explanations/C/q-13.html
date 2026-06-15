@@ -1,0 +1,73 @@
+<article class="vmp-explanation">
+  <h2>Nebezpečí srážky i při měnícím se náměru</h2>
+
+  <h3>Jádro</h3>
+  <p>Správná odpověď je <strong>"výrazně se měnícím náměru"</strong>. COLREG 1972 v Pravidle 7 (Nebezpečí srážky) výslovně varuje, že <em>i když se zaměřený kompasový směr (náměr) na blížící se loď znatelně mění, nebezpečí srážky někdy existovat může</em> — zejména při sblížení s <strong>velmi velkou lodí</strong>, <strong>vlekem</strong> nebo při sblížení na <strong>malou vzdálenost</strong>. Ostatní možnosti (rostoucí vzdálenost, měnící se viditelnost) nejsou v tomto kontextu výjimkou definovanou pravidlem.</p>
+
+  <h3>Pozadí</h3>
+  <p>COLREG 1972 — Pravidlo 7 písm. d) stanoví dvě základní vodítka pro posouzení nebezpečí srážky:</p>
+  <ol>
+    <li><strong>Pravidlo 7(d)(i):</strong> Nebezpečí srážky se má považovat za existující, jestliže se kompasový náměr blížícího se plavidla znatelně nemění (tzv. <em>"constant bearing, decreasing range" — CBDR</em>).</li>
+    <li><strong>Pravidlo 7(d)(ii):</strong> Takové nebezpečí <em>může někdy existovat i tehdy, jestliže je zřejmá znatelná změna náměru</em>, zvláště při sblížení s velmi velkou lodí nebo s vlekem nebo při sblížení na malou vzdálenost.</li>
+  </ol>
+  <p>Důvod: u dlouhého plavidla nebo vleku se náměr může měnit, protože "zaměřujeme" různé části dlouhého útvaru (příď vs. záď vleku táhnoucího se stovky metrů). Vizuálně to vypadá jako bezpečné rozcházení, ale ve skutečnosti se kurzy stále kříží. Na malou vzdálenost pak i rychlá úhlová změna nemusí stačit k bezpečnému minutí.</p>
+
+  <h3>Vizualizace</h3>
+  <p>Diagram ukazuje sblížení vlastní lodi (V) s dlouhým vlekem. Náměry na <em>příď</em> tažné lodi a <em>záď</em> vlečeného plavidla se postupně mění, ale celý útvar se i tak může dostat do kolizní zóny.</p>
+  <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#f6fbff;border:1px solid #cfd8dc;border-radius:8px;">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" style="fill:#37474f;"/>
+      </marker>
+    </defs>
+    <text x="300" y="22" text-anchor="middle" style="font-family:sans-serif;font-size:14px;fill:#263238;font-weight:bold;">Sblížení s vlekem — náměr se mění, srážka stále hrozí</text>
+
+    <!-- Vlastní lod V -->
+    <polygon points="80,300 110,290 110,310" style="fill:#1976d2;stroke:#0d47a1;stroke-width:1.5;"/>
+    <text x="95" y="328" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#0d47a1;font-weight:bold;">V (my)</text>
+    <line x1="110" y1="300" x2="200" y2="300" style="stroke:#1976d2;stroke-width:1.5;stroke-dasharray:4 3;" marker-end="url(#arr)"/>
+    <text x="155" y="294" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#1976d2;">náš kurz</text>
+
+    <!-- Vlek: tažná lod + 2 vlecene + lano -->
+    <!-- Tažná lod (předek vleku) -->
+    <polygon points="500,80 525,72 525,88" style="fill:#c62828;stroke:#7f1d1d;stroke-width:1.2;"/>
+    <text x="540" y="78" style="font-family:sans-serif;font-size:11px;fill:#7f1d1d;">tažná loď (příď vleku)</text>
+    <!-- vlečené -->
+    <rect x="450" y="120" width="22" height="10" style="fill:#c62828;stroke:#7f1d1d;stroke-width:1;"/>
+    <rect x="410" y="160" width="22" height="10" style="fill:#c62828;stroke:#7f1d1d;stroke-width:1;"/>
+    <polygon points="380,200 402,192 402,208" style="fill:#c62828;stroke:#7f1d1d;stroke-width:1.2;"/>
+    <text x="420" y="225" style="font-family:sans-serif;font-size:11px;fill:#7f1d1d;">záď vleku</text>
+    <!-- vlečné lano -->
+    <polyline points="500,80 461,125 421,165 401,200" style="fill:none;stroke:#7f1d1d;stroke-width:1;stroke-dasharray:2 2;"/>
+    <!-- kurz vleku -->
+    <line x1="500" y1="80" x2="370" y2="210" style="stroke:#c62828;stroke-width:1.5;stroke-dasharray:4 3;" marker-end="url(#arr)"/>
+
+    <!-- Náměry z V na příď a záď vleku -->
+    <line x1="110" y1="300" x2="500" y2="80" style="stroke:#388e3c;stroke-width:1.2;"/>
+    <line x1="110" y1="300" x2="395" y2="200" style="stroke:#f57c00;stroke-width:1.2;"/>
+    <text x="320" y="170" style="font-family:sans-serif;font-size:11px;fill:#388e3c;">náměr na příď</text>
+    <text x="240" y="252" style="font-family:sans-serif;font-size:11px;fill:#f57c00;">náměr na záď</text>
+
+    <!-- Predikovaná kolizní zóna -->
+    <circle cx="305" cy="190" r="28" style="fill:#fff3e0;stroke:#e65100;stroke-width:1.5;stroke-dasharray:3 3;"/>
+    <text x="305" y="194" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#e65100;font-weight:bold;">kolizní zóna</text>
+
+    <text x="300" y="345" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#37474f;">Náměr na příď se zvětšuje, na záď zmenšuje — útvar přesto protíná naši dráhu.</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li><strong>Dlouhý vlek nebo tlačná sestava</strong> může mít celkovou délku přes 200 m. I když náměr na tažnou loď „odplouvá" doprava, záď vleku stále směřuje přímo na nás.</li>
+    <li><strong>Velké lodě (VLCC, kontejnerové lodě 350+ m)</strong> mají velmi velký vlastní rozměr; měnící se náměr na příď neznamená bezpečné minutí — záď ještě může do nás zasáhnout.</li>
+    <li><strong>Sblížení na malou vzdálenost (close-quarters situation)</strong> — i rychlá úhlová změna nemusí stačit, protože časová rezerva je krátká.</li>
+    <li><strong>Doporučení v praxi:</strong> vždy zaměřuj <em>oba konce</em> dlouhého plavidla/vleku, používej radar/ARPA (CPA a TCPA na celý útvar), a pokud je pochybnost, jednej podle COLREG Pravidla 8 (Manévr k zabránění srážky) — výrazně, včas a tak, aby byl manévr zřejmý druhému plavidlu.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, Pravidlo 7 písm. d) bod (ii) — Nebezpečí srážky.</li>
+    <li>COLREG 1972 — Pravidlo 5 (Pozorování) a Pravidlo 8 (Manévr k zabránění srážky).</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě — odkaz na mezinárodní pravidla pro zabránění srážkám na moři.</li>
+    <li>Bowditch — <em>The American Practical Navigator</em>, kap. o vyhodnocování CPA/TCPA a CBDR.</li>
+  </ol>
+</article>

@@ -1,0 +1,85 @@
+<article class="vmp-explanation">
+  <h2>Převod rychlosti: uzly na metry za sekundu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>přibližně 2,5 m/s</strong>. Jeden uzel (1 kn) odpovídá přesně
+    1 852 m/h, tedy přibližně 0,514 m/s. Pět uzlů je tedy 5 × 0,514 ≈ <strong>2,57 m/s</strong>,
+    což se zaokrouhlí na přibližně 2,5 m/s.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Uzel (knot, zkratka <em>kn</em>) je mezinárodní jednotka rychlosti používaná v námořní
+    a letecké dopravě. Je definován jako jedna <strong>námořní míle za hodinu</strong>.
+    Námořní míle (International Nautical Mile) má přesně <strong>1 852 metrů</strong>,
+    což odpovídá délce jedné obloukové minuty na referenčním meridiánu.
+  </p>
+  <p>
+    Přepočet na SI jednotky:
+  </p>
+  <ul>
+    <li>1 kn = 1 852 m/h</li>
+    <li>1 kn = 1 852 / 3 600 m/s ≈ <strong>0,5144 m/s</strong></li>
+    <li>5 kn = 5 × 0,5144 m/s ≈ <strong>2,57 m/s</strong> (≈ 2,5 m/s)</li>
+  </ul>
+  <p>
+    Používání uzlů jako jednotky rychlosti v námořní dopravě vychází ze zvyklostí
+    kodifikovaných mezinárodními úmluvami, včetně SOLAS (Mezinárodní úmluva o bezpečnosti
+    lidského života na moři) a COLREG 1972.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:1em auto;">
+    <!-- Background -->
+    <rect width="480" height="200" rx="10" ry="10" fill="#f0f4f8" />
+
+    <!-- Title -->
+    <text x="240" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a3a5c">Porovnání rychlostí</text>
+
+    <!-- Bar: 5 kn = 2.5 m/s -->
+    <rect x="40" y="50" width="180" height="40" rx="6" fill="#2a7ab8" />
+    <text x="230" y="76" text-anchor="start" font-size="13" fill="#1a3a5c" font-weight="bold">  5 kn ≈ 2,57 m/s</text>
+
+    <!-- Bar: 10 m/s reference -->
+    <rect x="40" y="110" width="360" height="40" rx="6" fill="#b8d0e8" />
+    <text x="410" y="136" text-anchor="start" font-size="13" fill="#1a3a5c">  10 m/s</text>
+
+    <!-- Scale axis -->
+    <line x1="40" y1="165" x2="400" y2="165" stroke="#888" stroke-width="1.5"/>
+    <text x="40" y="180" text-anchor="middle" font-size="11" fill="#555">0</text>
+    <text x="220" y="180" text-anchor="middle" font-size="11" fill="#555">5 m/s</text>
+    <text x="400" y="180" text-anchor="middle" font-size="11" fill="#555">10 m/s</text>
+    <!-- tick marks -->
+    <line x1="40" y1="162" x2="40" y2="168" stroke="#888" stroke-width="1.5"/>
+    <line x1="220" y1="162" x2="220" y2="168" stroke="#888" stroke-width="1.5"/>
+    <line x1="400" y1="162" x2="400" y2="168" stroke="#888" stroke-width="1.5"/>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Znalost převodu uzlů na m/s je důležitá při:
+  </p>
+  <ul>
+    <li><strong>Výpočtu bezpečné bezpečnostní vzdálenosti</strong> — při kolizním manévru
+      si lodník musí umět rychle přepočítat, jak daleko plavidlo ujede za daný čas.</li>
+    <li><strong>Navigačních výpočtech</strong> — vzdálenost = rychlost × čas;
+      5 kn po dobu 1 hodiny = 5 námořních mil ≈ 9 260 m.</li>
+    <li><strong>Komunikaci s pobřežní stráží nebo VTS</strong> — hlášení polohy a rychlosti
+      probíhá vždy v uzlech.</li>
+    <li><strong>Posouzení rizika srážky</strong> — rychlejší plavidlo se přiblíží k jinému
+      plavidlu za kratší dobu; přepočet na m/s pomáhá pochopit, jak málo času je k reakci.</li>
+  </ul>
+  <p>
+    Praktická pomůcka pro rychlý převod: <em>1 kn ≈ 0,5 m/s</em>, tedy rychlost v uzlech
+    vydělte dvěma a dostanete přibližnou hodnotu v m/s.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři (obecný rámec pro rychlost a bezpečnost plavby, pravidlo 6)</li>
+    <li>SOLAS — Mezinárodní úmluva o bezpečnosti lidského života na moři, kapitola V (Bezpečná rychlost)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — definice a jednotky používané v ČR pro námořní dopravu</li>
+    <li>Mezinárodní systém jednotek (SI) — definice metru za sekundu; 1 námořní míle = 1 852 m (ISO 80000-3)</li>
+  </ol>
+</article>

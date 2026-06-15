@@ -1,0 +1,105 @@
+<article class="vmp-explanation">
+  <h2>Zvukový signál „jeden prodloužený tón" při snížené viditelnosti</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Signál <strong>jeden prodloužený tón v intervalech kratších než dvě minuty</strong> vysílá
+    <strong>loď se strojním pohonem, která se pohybuje vzhledem k vodě</strong> — tedy pluje vpřed
+    (nebo vzad) a je v pohybu vůči vodní ploše. Signál informuje okolní plavidla o přítomnosti
+    pohybující se motorové lodi za mlhy nebo jinak snížené viditelnosti.
+  </p>
+  <p>
+    Loď se strojním pohonem, která <em>se nepohybuje</em> (stojí na místě se zastavenými stroji),
+    dává jiný signál — dva prodloužené tóny za sebou. Plavidlo omezované ponorem má rovněž
+    odlišný předepsaný signál.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Pravidlo vychází z <strong>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři,
+    Pravidlo 35 (Zvukové signály při snížené viditelnosti)</strong>:
+  </p>
+  <ul>
+    <li>
+      <strong>Pravidlo 35 písm. a)</strong> — Loď se strojním pohonem pohybující se vzhledem
+      k vodě dává jeden prodloužený tón v intervalech nepřesahujících 2 minuty.
+    </li>
+    <li>
+      <strong>Pravidlo 35 písm. b)</strong> — Loď se strojním pohonem pohybující se, ale stojící
+      (stopped vessel) dává dva prodloužené tóny v intervalech nepřesahujících 2 minuty,
+      s přestávkou přibližně 2 sekundy mezi tóny.
+    </li>
+    <li>
+      <strong>Pravidlo 35 písm. c)</strong> — Plavidlo bez strojního pohonu, loď zakotvená,
+      plavidlo s omezenou manévrovací schopností apod. mají každé svůj specifický signál.
+    </li>
+  </ul>
+  <p>
+    „Prodloužený tón" (prolonged blast) je tón trvající 4–6 sekund
+    (COLREG 1972, Pravidlo 32 písm. c)).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" role="img" aria-label="Porovnání zvukových signálů za snížené viditelnosti">
+    <!-- Pozadí -->
+    <rect width="520" height="200" fill="#f0f4f8" rx="8"/>
+
+    <!-- Nadpis -->
+    <text x="260" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a2a3a">Zvukové signály za snížené viditelnosti (COLREG Pravidlo 35)</text>
+
+    <!-- Legenda: pohybující se loď -->
+    <rect x="20" y="45" width="220" height="70" fill="#dbeafe" rx="6" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="130" y="63" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">Pohybující se loď (strojní pohon)</text>
+    <!-- Tón 1 -->
+    <rect x="40" y="75" width="50" height="20" fill="#2563eb" rx="3"/>
+    <text x="65" y="89" text-anchor="middle" font-size="10" fill="#fff">4–6 s</text>
+    <!-- Ticho -->
+    <line x1="90" y1="85" x2="200" y2="85" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Popis -->
+    <text x="130" y="112" text-anchor="middle" font-size="10" fill="#1e40af">1 prodloužený tón (&lt; 2 min)</text>
+    <!-- Correct badge -->
+    <rect x="80" y="120" width="100" height="18" fill="#16a34a" rx="4"/>
+    <text x="130" y="132" text-anchor="middle" font-size="10" fill="#fff">✓ SPRÁVNÁ ODPOVĚĎ</text>
+
+    <!-- Legenda: stojící loď -->
+    <rect x="280" y="45" width="220" height="70" fill="#fef9c3" rx="6" stroke="#ca8a04" stroke-width="1.5"/>
+    <text x="390" y="63" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f">Stojící loď (zastavené stroje)</text>
+    <!-- Tón 1 -->
+    <rect x="295" y="75" width="35" height="20" fill="#ca8a04" rx="3"/>
+    <text x="312" y="89" text-anchor="middle" font-size="10" fill="#fff">4–6 s</text>
+    <!-- Ticho -->
+    <line x1="330" y1="85" x2="347" y2="85" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- Tón 2 -->
+    <rect x="347" y="75" width="35" height="20" fill="#ca8a04" rx="3"/>
+    <text x="364" y="89" text-anchor="middle" font-size="10" fill="#fff">4–6 s</text>
+    <!-- Ticho -->
+    <line x1="382" y1="85" x2="470" y2="85" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Popis -->
+    <text x="390" y="112" text-anchor="middle" font-size="10" fill="#78350f">2 prodloužené tóny (&lt; 2 min)</text>
+
+    <!-- Časová osa -->
+    <line x1="20" y1="165" x2="500" y2="165" stroke="#64748b" stroke-width="1"/>
+    <text x="260" y="180" text-anchor="middle" font-size="10" fill="#64748b">čas →</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Za mlhy, hustého deště nebo v jiných podmínkách snížené viditelnosti musí každá
+    <strong>pohybující se motorová loď</strong> zapnout zvukovou signalizaci a vysílat
+    jeden prodloužený tón nejpozději každé 2 minuty — bez ohledu na to, zda jsou k dispozici
+    radiolokátor či jiné elektronické prostředky. Signál nelze nahradit VHF rádiovou komunikací.
+  </p>
+  <p>
+    Kapitán musí také dbát na to, aby loď neplula vyšší rychlostí, než která odpovídá
+    podmínkám viditelnosti — to vyplývá z <strong>COLREG 1972, Pravidlo 19</strong>
+    (Jednání plavidel za podmínek snížené viditelnosti).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, <strong>Pravidlo 35</strong> (Zvukové signály při snížené viditelnosti)</li>
+    <li>COLREG 1972, <strong>Pravidlo 32 písm. c)</strong> — definice prodlouženého tónu (4–6 s)</li>
+    <li>COLREG 1972, <strong>Pravidlo 19</strong> — jednání za snížené viditelnosti</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — implementace COLREG do českého práva</li>
+  </ol>
+</article>

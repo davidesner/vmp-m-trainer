@@ -1,0 +1,10 @@
+{
+  "qid": 78,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Zákon č. 61/2000 Sb., o námořní plavbě",
+    "IMO MSC-MEPC.3/Circ.4 — Code of the International Standards and Recommended Practices for a Safety Investigation into a Marine Casualty or Marine Incident"
+  ],
+  "model": "claude-opus-4-7"
+}

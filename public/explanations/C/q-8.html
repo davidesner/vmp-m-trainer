@@ -1,0 +1,60 @@
+<article class="vmp-explanation">
+  <h2>Nepřetržité pozorování na moři — kdo a kdy</h2>
+
+  <h3>Jádro</h3>
+  <p>Správná je odpověď <strong>„každá loď podle převládajících okolností a podmínek"</strong>. Povinnost vést nepřetržité vizuální i sluchové pozorování platí <em>pro všechna plavidla, vždy</em> — nikoli pouze v noci nebo pouze pro malá plavidla. Charakter pozorování (použité prostředky, intenzita) se však <strong>přizpůsobuje aktuálním podmínkám</strong> (viditelnost, hustota provozu, denní doba, povětrnost).</p>
+
+  <h3>Pozadí</h3>
+  <p>Otázku přímo upravuje <strong>Pravidlo 5 COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři, anglicky <em>Look-out</em>):</p>
+  <blockquote>„Každé plavidlo musí vždy vést řádné pozorování zrakem i sluchem, jakož i všemi dostupnými prostředky odpovídajícími převládajícím okolnostem a podmínkám, aby bylo možno plně vyhodnotit situaci a riziko srážky."</blockquote>
+  <p>Klíčová slova jsou tři: <strong>„every vessel"</strong> (každé plavidlo, bez výjimek pro velikost), <strong>„at all times"</strong> (vždy, ne jen v noci) a <strong>„appropriate in the prevailing circumstances and conditions"</strong> (přiměřeně podmínkám). Tím spadají odpovědi „jen v noci a za snížené viditelnosti" a „jen malá plavidla" mimo platné znění pravidla.</p>
+  <p>Pravidlo 5 je <em>obecné</em> a slouží jako základ pro hodnocení dalších pravidel (Pravidlo 6 — bezpečná rychlost, Pravidlo 7 — riziko srážky, Pravidlo 8 — vyhýbací manévr). Bez řádného pozorování nelze tato pravidla plnit. V judikatuře (např. <em>The Maloja II</em>, britské admirálské soudy) je porušení Pravidla 5 jednou z nejčastěji zjištěných příčin srážek.</p>
+
+  <h3>Vizualizace</h3>
+  <p>Pozorování zahrnuje celou půlsféru kolem plavidla — zrak (360°), sluch (zejména mlhové signály), radar/AIS, případně VHF naslouchání.</p>
+  <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma pozorování okolo plavidla">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" style="fill:#1f4e79"></path>
+      </marker>
+    </defs>
+    <!-- Sea -->
+    <rect x="0" y="0" width="420" height="260" style="fill:#eaf3fb"></rect>
+    <!-- 360 zone -->
+    <circle cx="210" cy="130" r="100" style="fill:#cfe3f5;stroke:#1f4e79;stroke-width:1;stroke-dasharray:4 3;opacity:0.6"></circle>
+    <text x="210" y="35" text-anchor="middle" style="font:600 12px sans-serif;fill:#1f4e79">Pozorování 360° — vždy</text>
+    <!-- Vessel -->
+    <polygon points="210,110 222,150 210,160 198,150" style="fill:#1f4e79;stroke:#0b2c47;stroke-width:1"></polygon>
+    <text x="210" y="180" text-anchor="middle" style="font:600 11px sans-serif;fill:#0b2c47">plavidlo</text>
+    <!-- Sensor arrows -->
+    <line x1="210" y1="130" x2="300" y2="60" style="stroke:#1f4e79;stroke-width:1.5" marker-end="url(#arr)"></line>
+    <text x="305" y="55" style="font:11px sans-serif;fill:#1f4e79">zrak</text>
+    <line x1="210" y1="130" x2="320" y2="160" style="stroke:#1f4e79;stroke-width:1.5" marker-end="url(#arr)"></line>
+    <text x="325" y="165" style="font:11px sans-serif;fill:#1f4e79">sluch (mlhové signály)</text>
+    <line x1="210" y1="130" x2="110" y2="70" style="stroke:#1f4e79;stroke-width:1.5" marker-end="url(#arr)"></line>
+    <text x="40" y="65" style="font:11px sans-serif;fill:#1f4e79">radar / AIS</text>
+    <line x1="210" y1="130" x2="100" y2="190" style="stroke:#1f4e79;stroke-width:1.5" marker-end="url(#arr)"></line>
+    <text x="20" y="195" style="font:11px sans-serif;fill:#1f4e79">VHF naslouchání</text>
+    <!-- Condition labels -->
+    <text x="210" y="230" text-anchor="middle" style="font:600 11px sans-serif;fill:#0b2c47">den · noc · mlha · déšť · hustý provoz</text>
+    <text x="210" y="248" text-anchor="middle" style="font:italic 10px sans-serif;fill:#444">prostředky pozorování přizpůsobeny převládajícím podmínkám</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li><strong>Za dne, dobrá viditelnost, otevřené moře:</strong> stačí jeden pozorný kormidelník/strážný — ale stále musí vést pozorování zrakem i sluchem.</li>
+    <li><strong>V noci nebo za snížené viditelnosti (mlha, déšť):</strong> velitel je povinen <em>posílit</em> hlídku — vyčlenit samostatného pozorovatele (lookout) bez dalších úkolů, zapnout radar, naslouchat mlhovým signálům (Pravidlo 35 COLREG).</li>
+    <li><strong>V hustém provozu / blízko pobřeží / TSS:</strong> aktivní využití radaru, ARPA, AIS a VHF; častější kontrola zezadu (přibližující se rychlejší lodě).</li>
+    <li><strong>Sólová plavba na jachtě:</strong> Pravidlo 5 platí stejně — proto je dlouhá nepřetržitá sólová plavba bez systému monitorování (radar s alarmem, AIS s CPA alarmem) z hlediska COLREG problematická.</li>
+    <li>Při vyšetřování srážky je dotaz „<em>kdo držel hlídku a co viděl?</em>" jednou z prvních otázek vyšetřovatele MAIB/BSU/Námořního úřadu.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, <strong>Pravidlo 5 (Look-out / Pozorování)</strong>.</li>
+    <li>COLREG 1972 — <strong>Pravidlo 6 (Safe speed)</strong> a <strong>Pravidlo 7 (Risk of collision)</strong> — navazují na povinnost pozorování.</li>
+    <li>COLREG 1972 — <strong>Pravidlo 35</strong> — zvukové signály za snížené viditelnosti (souvisí se sluchovou složkou pozorování).</li>
+    <li>SOLAS, kapitola V, pravidlo 14 a 24 — požadavky na složení hlídky a obsazení můstku.</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — povinnosti velitele lodi.</li>
+  </ol>
+</article>

@@ -1,0 +1,11 @@
+{
+  "qid": 194,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Bowditch — American Practical Navigator",
+    "WMO — manuály pro námořní meteorologii",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-sonnet-4-6"
+}

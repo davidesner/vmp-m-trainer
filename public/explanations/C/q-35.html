@@ -1,0 +1,130 @@
+<article class="vmp-explanation">
+  <h2>Křížení kursů plachetnice a rybářského plavidla</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že <strong>plachetnice musí uvolnit cestu plavidlu provádějícímu lov ryb</strong>.
+    Podle COLREG (Mezinárodní pravidla pro zabránění srážkám na moři) existuje pevná hierarchie priority:
+    plavidlo provádějící lov ryb má přednost před plavidlem pohybujícím se pod plachtami.
+    Plachetnice tedy musí manévrovat tak, aby rybářskému plavidlu nepřekážela — bez ohledu na to,
+    ze které strany přichází.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    COLREG 1972 stanoví v <strong>Pravidle 18 (Povinnosti lodí vůči sobě navzájem)</strong> pořadí priority
+    pro plavidla za viditelnosti. Hierarchie od „má přednost" po „musí ustoupit" je tato:
+  </p>
+  <ol>
+    <li>Plavidlo neschopné manévrovat (<em>not under command</em>)</li>
+    <li>Plavidlo s omezenou manévrovatelností (<em>restricted in ability to manoeuvre</em>)</li>
+    <li>Plavidlo provádějící lov ryb (<em>vessel engaged in fishing</em>)</li>
+    <li>Plachetnice (<em>sailing vessel</em>)</li>
+    <li>Plavidlo s mechanickým pohonem (<em>power-driven vessel</em>)</li>
+  </ol>
+  <p>
+    Rybářské plavidlo je tedy v hierarchii <strong>výše</strong> než plachetnice — to jest plachetnice mu musí dát přednost.
+    Pravidlo 18 písmeno b) říká: „Plachetnice musí uvolnit cestu plavidlům provádějícím rybolov."
+  </p>
+  <p>
+    Pravidlo o „lodi po pravé straně" (COLREG Pravidlo 15 a 16) se vztahuje na situace,
+    kdy se kříží dvě plavidla <em>stejné kategorie</em>. Pokud jsou plavidla různých kategorií,
+    použije se Pravidlo 18, které má přednost.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:1em auto;">
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#333;" />
+      </marker>
+      <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#c0392b;" />
+      </marker>
+      <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#2980b9;" />
+      </marker>
+    </defs>
+
+    <!-- Pozadí moře -->
+    <rect x="0" y="0" width="520" height="300" style="fill:#e8f4f8;" />
+
+    <!-- Rybářské plavidlo vpravo nahoře -->
+    <g transform="translate(360,80)">
+      <!-- Trup -->
+      <ellipse cx="0" cy="10" rx="30" ry="10" style="fill:#8B4513;stroke:#333;stroke-width:1.5;" />
+      <!-- Kabina -->
+      <rect x="-12" y="-5" width="24" height="14" style="fill:#c0c0c0;stroke:#333;stroke-width:1;" />
+      <!-- Stěžeň s vlajkou -->
+      <line x1="0" y1="-5" x2="0" y2="-35" style="stroke:#333;stroke-width:2;" />
+      <polygon points="0,-35 15,-28 0,-21" style="fill:#e74c3c;" />
+      <!-- Rybářský košík / označení -->
+      <circle cx="0" cy="-42" r="5" style="fill:#2ecc71;stroke:#333;stroke-width:1;" />
+      <line x1="-5" y1="-42" x2="5" y2="-42" style="stroke:#333;stroke-width:1.5;" />
+      <line x1="0" y1="-47" x2="0" y2="-37" style="stroke:#333;stroke-width:1.5;" />
+    </g>
+    <!-- Popis rybářského plavidla -->
+    <text x="360" y="140" text-anchor="middle" style="font-size:12px;font-weight:bold;fill:#2c3e50;">Rybářské plavidlo</text>
+    <text x="360" y="155" text-anchor="middle" style="font-size:11px;fill:#7f8c8d;">(lov ryb — vyšší priorita)</text>
+
+    <!-- Kurs rybářského plavidla doleva dolů -->
+    <line x1="345" y1="95" x2="220" y2="170" style="stroke:#2980b9;stroke-width:2;stroke-dasharray:6,3;" marker-end="url(#arrow-blue)" />
+
+    <!-- Plachetnice vlevo dole -->
+    <g transform="translate(130,195)">
+      <!-- Trup -->
+      <ellipse cx="0" cy="8" rx="28" ry="9" style="fill:#d4a017;stroke:#333;stroke-width:1.5;" />
+      <!-- Stěžeň -->
+      <line x1="0" y1="-5" x2="0" y2="-55" style="stroke:#333;stroke-width:2;" />
+      <!-- Hlavní plachta -->
+      <polygon points="0,-55 25,-5 0,-5" style="fill:white;stroke:#333;stroke-width:1;" />
+      <!-- Přední plachta -->
+      <polygon points="0,-45 -20,-5 0,-5" style="fill:white;stroke:#333;stroke-width:1;" />
+    </g>
+    <!-- Popis plachetnice -->
+    <text x="130" y="255" text-anchor="middle" style="font-size:12px;font-weight:bold;fill:#2c3e50;">Plachetnice</text>
+    <text x="130" y="270" text-anchor="middle" style="font-size:11px;fill:#c0392b;">(musí uvolnit cestu)</text>
+
+    <!-- Kurs plachetnice doprava nahoru -->
+    <line x1="155" y1="185" x2="290" y2="120" style="stroke:#c0392b;stroke-width:2;stroke-dasharray:6,3;" marker-end="url(#arrow-red)" />
+
+    <!-- Bod křížení -->
+    <circle cx="258" cy="148" r="10" style="fill:none;stroke:#e74c3c;stroke-width:2.5;" />
+    <line x1="252" y1="142" x2="264" y2="154" style="stroke:#e74c3c;stroke-width:2;" />
+    <line x1="264" y1="142" x2="252" y2="154" style="stroke:#e74c3c;stroke-width:2;" />
+    <text x="258" y="135" text-anchor="middle" style="font-size:11px;fill:#e74c3c;font-weight:bold;">nebezpečí srážky</text>
+
+    <!-- Šipka ústupu plachetnice -->
+    <line x1="150" y1="215" x2="100" y2="240" style="stroke:#27ae60;stroke-width:2;" marker-end="url(#arrow)" />
+    <text x="65" y="255" text-anchor="middle" style="font-size:10px;fill:#27ae60;font-weight:bold;">plachetnice</text>
+    <text x="65" y="268" text-anchor="middle" style="font-size:10px;fill:#27ae60;">ustoupí</text>
+
+    <!-- Legenda priority -->
+    <rect x="10" y="10" width="175" height="72" rx="6" style="fill:white;stroke:#bdc3c7;stroke-width:1;" />
+    <text x="97" y="27" text-anchor="middle" style="font-size:11px;font-weight:bold;fill:#2c3e50;">Hierarchie COLREG 18</text>
+    <text x="20" y="42" style="font-size:10px;fill:#2c3e50;">1. Neschopné manévrovat</text>
+    <text x="20" y="54" style="font-size:10px;fill:#2c3e50;">2. Omezená manévrovatelnost</text>
+    <text x="20" y="66" style="font-size:10px;font-weight:bold;fill:#2980b9;">3. Lov ryb ← vyšší priorita</text>
+    <text x="20" y="78" style="font-size:10px;font-weight:bold;fill:#c0392b;">4. Plachetnice ← ustupuje</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi to znamená: kdykoli kapitán plachetnice zpozoruje rybářské plavidlo (poznáte ho
+    například podle světel — zelená ryba nad bílým světlem, nebo denní signály), které provádí
+    rybolov, <strong>musí plachetnice manévrovat</strong> tak, aby rybářskému plavidlu uvolnila
+    dostatečný prostor. Rybářské plavidlo má totiž omezené možnosti manévrování — táhne za sebou
+    sítě nebo vlečné lanko, a nemůže rychle změnit kurs.
+  </p>
+  <p>
+    Pravidlo o přednosti „lodi po pravé straně" <em>nelze použít</em>, pokud se kříží plavidla
+    různých kategorií. V takovém případě platí výhradně hierarchie z Pravidla 18.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Pravidlo 18 písm. b): Povinnosti plachetnic vůči plavidlům provádějícím rybolov</li>
+    <li><strong>COLREG 1972</strong> — Pravidlo 15, 16: Křížení kursů (platí jen pro plavidla stejné kategorie)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — zapracování COLREG do českého práva</li>
+  </ol>
+</article>

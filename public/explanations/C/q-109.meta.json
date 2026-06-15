@@ -1,0 +1,7 @@
+{
+  "qid": 109,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["IHO INT 1 — Symbols, Abbreviations and Terms used on Charts", "SOLAS 1974 kapitola V pravidlo 27", "Zákon č. 61/2000 Sb. o námořní plavbě § 26"],
+  "model": "claude-sonnet-4-6"
+}

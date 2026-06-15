@@ -1,0 +1,94 @@
+<article class="vmp-explanation">
+  <h2>Měření tlaku vzduchu na malých plavidlech</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Na malých plavidlech se k měření tlaku vzduchu nejčastěji používá <strong>aneroid</strong> (aneroidu). Aneroid je kompaktní, lehký a nevyžaduje kapalinu — na rozdíl od rtuťového tlakoměru, který je těžký, křehký a pro lodní použití prakticky nevhodný. Anemometr naopak měří <em>rychlost větru</em>, nikoliv tlak vzduchu, a proto je pro tento účel zcela nevhodný.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    <strong>Aneroid</strong> (z řeckého „bez kapaliny") je mechanický barometr, jehož senzorem je kovová kapsula (sylfonová nebo vlnovková), z níž byl vyčerpán vzduch. Změna atmosferického tlaku způsobuje deformaci kapsle, která je přes převodový mechanismus přenášena na stupnici.
+  </p>
+  <p>
+    Výhody aneroidu oproti alternativám:
+  </p>
+  <ul>
+    <li><strong>Oproti rtuťovému tlakoměru:</strong> aneroid je kompaktní, odolný vůči pohybům a vibracím lodi, nepotřebuje toxickou rtuť. Rtuťový barometr je citlivý na náklon a otřesy — na palubě plavidla téměř nepoužitelný.</li>
+    <li><strong>Oproti anemometru:</strong> anemometr měří rychlost proudění vzduchu (vítr), nikoli atmosferický tlak. Jsou to zcela odlišné meteorologické veličiny.</li>
+  </ul>
+  <p>
+    Atmosferický tlak je klíčovou veličinou pro předpověď počasí: rychlý pokles tlaku signalizuje příchod bouře, stabilní nebo rostoucí tlak indikuje příznivé počasí.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center; margin: 1em 0;">
+    <svg width="380" height="200" viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" aria-label="Porovnání přístrojů pro měření počasí">
+      <!-- Aneroid -->
+      <rect x="20" y="40" width="100" height="120" rx="8" fill="#d0eaff" stroke="#2266aa" stroke-width="2"/>
+      <text x="70" y="25" text-anchor="middle" font-size="12" font-weight="bold" fill="#2266aa">Aneroid</text>
+      <circle cx="70" cy="100" r="38" fill="#ffffff" stroke="#2266aa" stroke-width="2"/>
+      <circle cx="70" cy="100" r="30" fill="#eaf4ff" stroke="#6699cc" stroke-width="1"/>
+      <!-- stupnice -->
+      <text x="70" y="75" text-anchor="middle" font-size="9" fill="#555">960</text>
+      <text x="95" y="105" text-anchor="middle" font-size="9" fill="#555">1013</text>
+      <text x="70" y="132" text-anchor="middle" font-size="9" fill="#555">1040</text>
+      <text x="45" y="105" text-anchor="middle" font-size="9" fill="#555">990</text>
+      <!-- ručička -->
+      <line x1="70" y1="100" x2="90" y2="88" stroke="#cc2200" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="70" cy="100" r="3" fill="#cc2200"/>
+      <text x="70" y="160" text-anchor="middle" font-size="10" fill="#2266aa">tlak vzduchu</text>
+      <text x="70" y="172" text-anchor="middle" font-size="10" fill="#2266aa">(hPa)</text>
+      <rect x="25" y="180" width="90" height="18" rx="4" fill="#2266aa"/>
+      <text x="70" y="193" text-anchor="middle" font-size="11" fill="white" font-weight="bold">✓ SPRÁVNĚ</text>
+
+      <!-- Rtuťový tlakoměr -->
+      <rect x="140" y="40" width="100" height="120" rx="8" fill="#ffe0e0" stroke="#aa2222" stroke-width="2"/>
+      <text x="190" y="25" text-anchor="middle" font-size="12" font-weight="bold" fill="#aa2222">Rtuťový</text>
+      <!-- trubice -->
+      <rect x="180" y="55" width="18" height="90" rx="3" fill="#fff" stroke="#aa2222" stroke-width="1.5"/>
+      <rect x="181" y="85" width="16" height="58" rx="2" fill="#b0b0c0"/>
+      <!-- nádoba -->
+      <ellipse cx="189" cy="148" rx="20" ry="8" fill="#b0b0c0" stroke="#aa2222" stroke-width="1.5"/>
+      <text x="190" y="168" text-anchor="middle" font-size="9" fill="#aa2222">rtutí nádobka</text>
+      <text x="190" y="178" text-anchor="middle" font-size="9" fill="#aa2222">křehké, těžké</text>
+      <rect x="145" y="180" width="90" height="18" rx="4" fill="#cc4444"/>
+      <text x="190" y="193" text-anchor="middle" font-size="11" fill="white" font-weight="bold">✗ nevhodné</text>
+
+      <!-- Anemometr -->
+      <rect x="260" y="40" width="100" height="120" rx="8" fill="#fff5cc" stroke="#997700" stroke-width="2"/>
+      <text x="310" y="25" text-anchor="middle" font-size="12" font-weight="bold" fill="#997700">Anemometr</text>
+      <!-- rotující mískovitý anemometr - schéma -->
+      <line x1="310" y1="85" x2="310" y2="130" stroke="#997700" stroke-width="2"/>
+      <line x1="285" y1="107" x2="335" y2="107" stroke="#997700" stroke-width="2"/>
+      <ellipse cx="286" cy="107" rx="10" ry="6" fill="#ffdd66" stroke="#997700" stroke-width="1.5"/>
+      <ellipse cx="334" cy="107" rx="10" ry="6" fill="#ffdd66" stroke="#997700" stroke-width="1.5"/>
+      <ellipse cx="310" cy="86" rx="10" ry="6" fill="#ffdd66" stroke="#997700" stroke-width="1.5"/>
+      <circle cx="310" cy="107" r="4" fill="#997700"/>
+      <text x="310" y="150" text-anchor="middle" font-size="10" fill="#997700">rychlost větru</text>
+      <text x="310" y="162" text-anchor="middle" font-size="10" fill="#997700">(m/s, kn)</text>
+      <rect x="265" y="180" width="90" height="18" rx="4" fill="#cc8800"/>
+      <text x="310" y="193" text-anchor="middle" font-size="11" fill="white" font-weight="bold">✗ jiná veličina</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Námořní velitel by měl sledovat aneroid pravidelně — ideálně každou hodinu při proměnlivém počasí. Orientační pravidla pro interpretaci:
+  </p>
+  <ul>
+    <li><strong>Pokles o více než 3 hPa/3 hodiny</strong> — blíží se silné větry nebo bouře; doporučuje se vyhledat přístav.</li>
+    <li><strong>Pokles 1–2 hPa/3 hodiny</strong> — zhoršování počasí, zvýšená bdělost.</li>
+    <li><strong>Stabilní nebo rostoucí tlak</strong> — počasí se stabilizuje nebo zlepšuje.</li>
+  </ul>
+  <p>
+    Na malém plavidle je aneroid typicky umístěn v kabině nebo na navigačním stole, kde není vystaven přímým srážkám. Moderní lodní počasím stanice ho mohou kombinovat s digitálním barometrem.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o technické způsobilosti plavidel (vybavení plavidel meteorologickými přístroji)</li>
+    <li><strong>Bowditch — American Practical Navigator</strong>, kap. Meteorology (barometry a předpověď počasí)</li>
+    <li><strong>WMO Guide to Meteorological Instruments</strong> — definice a použití aneroidu</li>
+  </ol>
+</article>

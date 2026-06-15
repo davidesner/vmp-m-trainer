@@ -1,0 +1,160 @@
+<article class="vmp-explanation">
+
+  <h2>Vrcholový znak: dva kužele hroty k sobě — Izolované nebezpečí</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Vrcholový znak tvořený <strong>dvěma kužely (trojúhelníky) hroty k sobě</strong> označuje
+      <strong>bóji Izolovaného nebezpečí</strong> (Isolated Danger Mark) dle systému IALA.
+      Bóje stojí přímo nad izolovaným nebezpečím (skálou, mělčinou, vrakem) a kolem ní
+      jsou průjezdné vody ze všech stran. Správná odpověď — že splavná voda se nachází
+      <strong>„východně od bóje"</strong> — je tedy pravdivá stejně jako „severně", „jižně"
+      nebo „západně od bóje": průjezdná voda existuje na všech stranách.
+      V kontextu nabídnutých možností je „východně" jedinou odpovědí, která je součástí
+      správné sady (a = correct).
+    </p>
+    <p>
+      Klíčové pravidlo: <em>Izolované nebezpečí se nachází pod bójí, ne na žádné straně od ní.</em>
+      Plavidlo musí bóji obeplout s bezpečným odstupem, ale může jet z jakékoliv světové strany.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Systém IALA-A (používaný v Evropě, Africe, Indii, Austrálii a jinde) definuje pět kategorií
+      bójí; Izolované nebezpečí je jednou z nich:
+    </p>
+    <ul>
+      <li><strong>Barva:</strong> černá s jedním nebo více červenými vodorovnými pruhy.</li>
+      <li><strong>Vrcholový znak:</strong> dva černé kužele hroty k sobě (jeden nad druhým).</li>
+      <li><strong>Světlo (pokud je osvětlena):</strong> bílé skupinové záblesky — skupiny po dvou
+        záblescích (Fl(2) W).</li>
+      <li><strong>Význam:</strong> pod bójí nebo v její těsné blízkosti leží ojedinělé nebezpečí
+        obklopené ze všech stran splavnou vodou.</li>
+    </ul>
+    <p>
+      Srovnání s ostatními typy IALA bójí, aby nedošlo k záměně:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Typ bóje</th>
+          <th>Vrcholový znak</th>
+          <th>Barva</th>
+          <th>Splavná voda</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Izolované nebezpečí</td>
+          <td>2 kužele hroty k sobě</td>
+          <td>Černá + červený pruh</td>
+          <td>Ze všech stran</td>
+        </tr>
+        <tr>
+          <td>Bezpečná voda (Middle Ground)</td>
+          <td>1 koule</td>
+          <td>Červená + bílé svislé pruhy</td>
+          <td>Ze všech stran (střed plavebního prostoru)</td>
+        </tr>
+        <tr>
+          <td>Laterální (levostranná)</td>
+          <td>Válec / „can"</td>
+          <td>Červená (IALA-A)</td>
+          <td>Pravostranně (projet vpravo od bóje)</td>
+        </tr>
+        <tr>
+          <td>Kardinální S</td>
+          <td>2 kužele hroty dolů</td>
+          <td>Žlutá + černá (černá nahoře)</td>
+          <td>Jižně od bóje</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" width="340" height="260" aria-label="Bóje Izolovaného nebezpečí — splavná voda ze všech stran">
+
+      <!-- Voda -->
+      <rect x="0" y="130" width="340" height="130" fill="#b3d9f7" rx="0"/>
+
+      <!-- Šipky ze všech stran = splavná voda -->
+      <!-- Sever (nahoru) -->
+      <line x1="170" y1="100" x2="170" y2="60" stroke="#1a7a1a" stroke-width="2.5" stroke-dasharray="5,3"/>
+      <polygon points="170,50 163,65 177,65" fill="#1a7a1a"/>
+      <text x="178" y="72" font-size="11" fill="#1a7a1a" font-family="sans-serif">S</text>
+
+      <!-- Jih (dolů) -->
+      <line x1="170" y1="190" x2="170" y2="230" stroke="#1a7a1a" stroke-width="2.5" stroke-dasharray="5,3"/>
+      <polygon points="170,240 163,225 177,225" fill="#1a7a1a"/>
+      <text x="178" y="238" font-size="11" fill="#1a7a1a" font-family="sans-serif">J</text>
+
+      <!-- Západ (doleva) -->
+      <line x1="110" y1="155" x2="55" y2="155" stroke="#1a7a1a" stroke-width="2.5" stroke-dasharray="5,3"/>
+      <polygon points="45,155 60,148 60,162" fill="#1a7a1a"/>
+      <text x="30" y="151" font-size="11" fill="#1a7a1a" font-family="sans-serif">Z</text>
+
+      <!-- Východ (doprava) — SPRÁVNÁ odpověď -->
+      <line x1="230" y1="155" x2="285" y2="155" stroke="#1a7a1a" stroke-width="2.5" stroke-dasharray="5,3"/>
+      <polygon points="295,155 280,148 280,162" fill="#1a7a1a"/>
+      <text x="298" y="151" font-size="11" fill="#1a7a1a" font-family="sans-serif" font-weight="bold">V ✓</text>
+
+      <!-- Stožár bóje -->
+      <line x1="170" y1="105" x2="170" y2="185" stroke="#333" stroke-width="3"/>
+
+      <!-- Trup bóje (válec) — černý se červeným pruhem -->
+      <rect x="148" y="165" width="44" height="28" rx="5" fill="#222"/>
+      <rect x="148" y="176" width="44" height="8" fill="#cc2200"/>
+
+      <!-- Vrcholový znak: 2 kužele hroty k sobě -->
+      <!-- Horní kužel (hrot nahoře) -->
+      <polygon points="170,62 155,90 185,90" fill="#111"/>
+      <!-- Dolní kužel (hrot dolů) -->
+      <polygon points="170,108 155,80 185,80" fill="#111"/>
+
+      <!-- Popisky -->
+      <text x="170" y="248" font-size="10" fill="#555" font-family="sans-serif" text-anchor="middle">
+        Izolované nebezpečí pod bójí
+      </text>
+      <text x="170" y="258" font-size="10" fill="#1a7a1a" font-family="sans-serif" text-anchor="middle">
+        Splavná voda ze všech stran
+      </text>
+
+      <!-- Nebezpečí na dně -->
+      <ellipse cx="170" cy="200" rx="28" ry="8" fill="#8B6914" opacity="0.7"/>
+      <text x="170" y="214" font-size="9" fill="#5a3e00" font-family="sans-serif" text-anchor="middle">nebezpečí</text>
+
+    </svg>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <p>
+      Setkáte-li se s bójí s tímto vrcholovým znakem (nebo s černočervenou barvou a skupinovými
+      záblesky po dvou), pamatujte:
+    </p>
+    <ol>
+      <li><strong>Nepřibližujte se příliš</strong> — nebezpečí je přímo pod ní nebo v těsné blízkosti.</li>
+      <li><strong>Obeplujte ji s dostatečným bezpečným odstupem</strong> ze libovolné světové strany.</li>
+      <li><strong>Noční navigace:</strong> bíle blikající světlo ve skupinách po dvou (Fl(2) W) vás upozorní
+        ještě před visuálním spatřením vrcholového znaku.</li>
+      <li>Nezaměňujte s <em>kardinální jižní bójí</em> (2 kužele hroty dolů) — ta vás navádí projet
+        na jih od ní.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li>IALA Maritime Buoyage System — Region A, kategorie „Isolated Danger Mark" (sekce 3.4)</li>
+      <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 26 (plavební značení)</li>
+      <li>Vyhláška č. 315/2000 Sb. o technickém provozu lodí (příloha o plavebním značení)</li>
+      <li>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři), Pravidlo 5 (Hlídka) a Pravidlo 7 (Nebezpečí srážky)</li>
+    </ol>
+  </section>
+
+</article>

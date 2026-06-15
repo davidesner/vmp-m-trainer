@@ -1,0 +1,7 @@
+{
+  "qid": 110,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["IHO Publication S-4 / INT 1 (Chart No. 1)", "Zákon č. 61/2000 Sb. o námořní plavbě", "Bowditch — American Practical Navigator"],
+  "model": "claude-sonnet-4-6"
+}

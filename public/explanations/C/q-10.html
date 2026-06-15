@@ -1,0 +1,78 @@
+<article class="vmp-explanation">
+  <h2>Použití všech dostupných prostředků k určení nebezpečí srážky</h2>
+
+  <h3>Jádro</h3>
+  <p>Správná odpověď je <strong>„každá loď, podle převládajících okolností a podmínek“</strong>. Povinnost využít všech dostupných prostředků (zrak, sluch, radar, ARPA, AIS, VHF atd.) k vyhodnocení rizika srážky platí pro <em>všechna</em> plavidla — nikoli jen pro lodě se strojním pohonem a nikoli jen za snížené viditelnosti nebo v noci. Tuto povinnost ukládá <strong>Pravidlo 7 písm. a) COLREG 1972</strong>.</p>
+
+  <h3>Pozadí</h3>
+  <p>Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972, IMO) v <strong>Pravidle 7 — Nebezpečí srážky</strong> stanoví:</p>
+  <blockquote>„Každá loď použije všech prostředků dostupných za převládajících okolností a podmínek k určení, zda existuje nebezpečí srážky. Existuje-li jakákoli pochybnost, nebezpečí srážky se má za to, že existuje.“</blockquote>
+  <p>Slovo <em>„každá loď“</em> (anglicky <em>„every vessel“</em>) je klíčové — pravidlo se vztahuje na všechna plavidla bez ohledu na typ pohonu, velikost nebo vlajku, a platí <strong>za jakékoli viditelnosti</strong> (kapitola B Pravidel se aplikuje univerzálně). Formulace <em>„podle převládajících okolností a podmínek“</em> znamená, že rozsah použitých prostředků se přizpůsobí situaci (např. v mlze patří radar mezi prostředky, jejichž nepoužití by bylo porušením povinnosti).</p>
+  <p>Pravidlo 7 dále v písm. b) výslovně požaduje řádné používání radaru včetně systematického vyhodnocení (radarového plotování nebo ekvivalentního pozorování cílů), a v písm. c) zakazuje vyvozovat závěry z nedostatečných údajů, zejména z radarových.</p>
+
+  <h3>Vizualizace</h3>
+  <p>Schéma ukazuje vlastní loď ve středu a zdroje informací, které je třeba <em>kombinovat</em> pro spolehlivé určení rizika srážky:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="100%" role="img" aria-label="Diagram zdrojů informací pro určení rizika srážky">
+    <defs>
+      <marker id="arrC10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" style="fill:#1f4e8a"/>
+      </marker>
+    </defs>
+    <circle cx="260" cy="180" r="38" style="fill:#dbe9ff;stroke:#1f4e8a;stroke-width:2"/>
+    <text x="260" y="178" text-anchor="middle" style="font-family:sans-serif;font-size:13px;font-weight:bold;fill:#1f4e8a">Vlastní</text>
+    <text x="260" y="194" text-anchor="middle" style="font-family:sans-serif;font-size:13px;font-weight:bold;fill:#1f4e8a">loď</text>
+
+    <g style="font-family:sans-serif;font-size:12px;fill:#222">
+      <rect x="20" y="20" width="130" height="44" rx="6" style="fill:#fff;stroke:#1f4e8a;stroke-width:1.5"/>
+      <text x="85" y="40" text-anchor="middle" style="font-weight:bold">Zrak</text>
+      <text x="85" y="56" text-anchor="middle">vizuální pozorování</text>
+
+      <rect x="370" y="20" width="130" height="44" rx="6" style="fill:#fff;stroke:#1f4e8a;stroke-width:1.5"/>
+      <text x="435" y="40" text-anchor="middle" style="font-weight:bold">Sluch</text>
+      <text x="435" y="56" text-anchor="middle">zvukové signály</text>
+
+      <rect x="20" y="160" width="130" height="44" rx="6" style="fill:#fff;stroke:#1f4e8a;stroke-width:1.5"/>
+      <text x="85" y="180" text-anchor="middle" style="font-weight:bold">Radar / ARPA</text>
+      <text x="85" y="196" text-anchor="middle">plotování cílů</text>
+
+      <rect x="370" y="160" width="130" height="44" rx="6" style="fill:#fff;stroke:#1f4e8a;stroke-width:1.5"/>
+      <text x="435" y="180" text-anchor="middle" style="font-weight:bold">AIS</text>
+      <text x="435" y="196" text-anchor="middle">identifikace, CPA/TCPA</text>
+
+      <rect x="20" y="300" width="130" height="44" rx="6" style="fill:#fff;stroke:#1f4e8a;stroke-width:1.5"/>
+      <text x="85" y="320" text-anchor="middle" style="font-weight:bold">VHF</text>
+      <text x="85" y="336" text-anchor="middle">rádiová komunikace</text>
+
+      <rect x="370" y="300" width="130" height="44" rx="6" style="fill:#fff;stroke:#1f4e8a;stroke-width:1.5"/>
+      <text x="435" y="320" text-anchor="middle" style="font-weight:bold">Mapa, ECDIS</text>
+      <text x="435" y="336" text-anchor="middle">poloha, trasa, hloubka</text>
+    </g>
+
+    <g style="stroke:#1f4e8a;stroke-width:1.5;fill:none" marker-end="url(#arrC10)">
+      <line x1="150" y1="55" x2="230" y2="155"/>
+      <line x1="370" y1="55" x2="290" y2="155"/>
+      <line x1="150" y1="182" x2="220" y2="182"/>
+      <line x1="370" y1="182" x2="300" y2="182"/>
+      <line x1="150" y1="305" x2="230" y2="210"/>
+      <line x1="370" y1="305" x2="290" y2="210"/>
+    </g>
+
+    <text x="260" y="20" text-anchor="middle" style="font-family:sans-serif;font-size:13px;font-weight:bold;fill:#1f4e8a">COLREG 1972, Pravidlo 7</text>
+    <text x="260" y="350" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">„Každá loď použije všech dostupných prostředků...“</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li><strong>Za dobré viditelnosti:</strong> systematické vizuální pozorování (kompasový azimut na blížící se plavidlo — stálý azimut = riziko srážky), kontrola AIS a radaru pro lodě mimo zorné pole.</li>
+    <li><strong>Za snížené viditelnosti / v noci:</strong> radar s plotováním nebo ARPA musí být využit, pokud je na palubě a funkční; samotná identifikace polohových světel nestačí.</li>
+    <li><strong>Plachetnice nebo malé plavidlo bez radaru:</strong> povinnost stále platí — využije se vše, co je <em>dostupné</em> (zrak, sluch, ruční kompas, AIS přijímač, VHF).</li>
+    <li><strong>Pochybnost = nebezpečí:</strong> pokud kapitán nedokáže s jistotou určit, že srážka nehrozí, musí postupovat tak, jako by hrozila (manévr podle Pravidel 8, 13–17).</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, <strong>Pravidlo 7 — Nebezpečí srážky</strong> (písm. a–d).</li>
+    <li>COLREG 1972, <strong>Pravidlo 5 — Pozorování</strong> (povinnost trvalého pozorování zrakem, sluchem a všemi dostupnými prostředky).</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě, ve znění pozdějších předpisů (povinnost dodržovat COLREG na palubě plavidel pod českou vlajkou).</li>
+  </ol>
+</article>

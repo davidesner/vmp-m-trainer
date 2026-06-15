@@ -1,0 +1,7 @@
+{
+  "qid": 45,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["COLREG 1972 — Příloha IV, bod 2", "Zákon č. 61/2000 Sb. o námořní plavbě, § 33", "SOLAS 1974, Kapitola V, Pravidlo 33"],
+  "model": "claude-opus-4-7"
+}

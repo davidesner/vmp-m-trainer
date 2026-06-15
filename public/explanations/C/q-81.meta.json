@@ -1,0 +1,11 @@
+{
+  "qid": 81,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Mezinárodní úmluva o záchraně z roku 1989 (Salvage Convention 1989)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Zákon č. 42/2003 Sb."
+  ],
+  "model": "claude-sonnet-4-6"
+}

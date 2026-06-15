@@ -1,0 +1,75 @@
+<article class="vmp-explanation">
+  <h2>Izobara – čára stejného tlaku vzduchu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>„izobara"</strong>. Izobara je čára na meteorologické mapě spojující místa se stejnou hodnotou atmosférického tlaku vzduchu, přepočítaného na hladinu moře. Právě izobary jsou základním nástrojem synoptické meteorologie – jejich tvar a hustota prozrazují charakter a intenzitu tlakových útvarů.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Terminologie vychází z řečtiny: předpona <em>iso-</em> znamená „stejný" a <em>baros</em> znamená „tíha, tlak". Odlišit je třeba tři podobné pojmy:
+  </p>
+  <ul>
+    <li><strong>Izobara</strong> – čára stejného <em>tlaku vzduchu</em> (meteorologie, synoptické mapy).</li>
+    <li><strong>Izobata</strong> – čára stejné <em>hloubky vody</em> (námořní navigace, lodní mapy).</li>
+    <li><strong>Izohypsa</strong> – čára stejné <em>nadmořské výšky terénu</em> (topografické mapy).</li>
+  </ul>
+  <p>
+    Na námořních synoptických mapách (SYNOP, faksimilové mapy) se tlak vzduchu standardně přepočítává na hladinu moře (QNH / Mean Sea Level Pressure – MSLP), aby bylo možné porovnávat stanice v různých nadmořských výškách. Standardní tlak na hladině moře je 1013,25 hPa (podle ICAO Standard Atmosphere).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Schematická synoptická mapa s izobarami a typickými tlakovými útvary:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" width="520" height="320" aria-label="Synoptická mapa s izobarami">
+    <!-- Pozadí – moře -->
+    <rect x="0" y="0" width="520" height="320" fill="#d0e8f5" rx="8"/>
+
+    <!-- Oblast vysokého tlaku (H) – soustředné elipsy -->
+    <ellipse cx="370" cy="160" rx="120" ry="90" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="0"/>
+    <ellipse cx="370" cy="160" rx="90" ry="65" fill="none" stroke="#c0392b" stroke-width="1.8"/>
+    <ellipse cx="370" cy="160" rx="60" ry="42" fill="none" stroke="#c0392b" stroke-width="1.8"/>
+    <ellipse cx="370" cy="160" rx="32" ry="22" fill="none" stroke="#c0392b" stroke-width="1.8"/>
+    <text x="370" y="165" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b">H</text>
+    <text x="370" y="200" text-anchor="middle" font-size="11" fill="#c0392b">1030 hPa</text>
+    <text x="310" y="108" text-anchor="middle" font-size="10" fill="#c0392b">1020 hPa</text>
+    <text x="290" y="90" text-anchor="middle" font-size="10" fill="#c0392b">1010 hPa</text>
+
+    <!-- Oblast nízkého tlaku (L) – soustředné elipsy -->
+    <ellipse cx="130" cy="150" rx="100" ry="80" fill="none" stroke="#2471a3" stroke-width="1.8"/>
+    <ellipse cx="130" cy="150" rx="72" ry="55" fill="none" stroke="#2471a3" stroke-width="1.8"/>
+    <ellipse cx="130" cy="150" rx="45" ry="33" fill="none" stroke="#2471a3" stroke-width="1.8"/>
+    <ellipse cx="130" cy="150" rx="22" ry="16" fill="none" stroke="#2471a3" stroke-width="1.8"/>
+    <text x="130" y="155" text-anchor="middle" font-size="22" font-weight="bold" fill="#2471a3">L</text>
+    <text x="130" y="192" text-anchor="middle" font-size="11" fill="#2471a3">990 hPa</text>
+    <text x="185" y="105" text-anchor="middle" font-size="10" fill="#2471a3">1000 hPa</text>
+    <text x="200" y="88" text-anchor="middle" font-size="10" fill="#2471a3">1010 hPa</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="270" width="500" height="40" fill="rgba(255,255,255,0.7)" rx="4"/>
+    <line x1="20" y1="290" x2="60" y2="290" stroke="#c0392b" stroke-width="2"/>
+    <text x="66" y="294" font-size="11" fill="#333">Izobara – vysoký tlak (H)</text>
+    <line x1="210" y1="290" x2="250" y2="290" stroke="#2471a3" stroke-width="2"/>
+    <text x="256" y="294" font-size="11" fill="#333">Izobara – nízký tlak (L)</text>
+    <text x="20" y="308" font-size="10" fill="#555">Hustota izobar = gradient tlaku = síla větru (Bf)</text>
+  </svg>
+  <p style="font-size:0.88em; color:#555;">
+    Šipky větru na synoptické mapě obíhají kolem tlakových útvarů: kolem minima (L) <em>cyklonálně</em> (na sev. polokouli proti směru hod. ručiček), kolem maxima (H) <em>anticyklonálně</em>.
+  </p>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Námořník čte synoptické mapy denně při plánování plavby. Hustě seskupené izobary signalizují velký tlakový gradient → silný vítr. Rozestoupené izobary → klidné podmínky. Pozice a pohyb front a tlakových útvarů (cyklón, anticyklón) lze sledovat právě podle tvarů izobar. Lodní velitel tak dokáže předpovědět, kdy a odkud udeří silný vítr nebo bouře, a přizpůsobit kurz nebo vyhledat úkryt.
+  </p>
+  <p>
+    Prakticky: pokud izobary nad Biskajskem tvoří těsné soustředné křivky kolem minima pod 980 hPa, lze očekávat vítr síly 7–9 Bf – situace, kdy malé plavidlo raději zůstane v přístavu.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>ICAO Standard Atmosphere (Doc 7488) – standardní tlak na MSL 1013,25 hPa; definice výšky tlaku.</li>
+    <li>WMO (Světová meteorologická organizace) – publikace č. 306 (FM-12 SYNOP), definice izobar na synoptických mapách.</li>
+    <li>Bowditch – American Practical Navigator, kap. 37 (Meteorology) – synoptická meteorologie, izobary, tlakové útvary.</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě – § 47 (povinnosti velitele, sledování předpovědi počasí před vyplutím).</li>
+  </ol>
+</article>

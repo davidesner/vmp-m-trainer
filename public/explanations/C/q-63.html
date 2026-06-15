@@ -1,0 +1,140 @@
+<article class="vmp-explanation">
+  <h2>Zabránění srážce: plachetnice X vs. motorové plavidlo Y</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Ze zobrazené situace vyplývá, že plavidlo X je plachetnice a plavidlo Y je motorové plavidlo.
+    Podle COLREG Pravidla 18 je motorové plavidlo za plavby povinno uvolnit cestu plachetnici.
+    Proto musí <strong>plavidlo X uvolnit cestu</strong> — jedná se ale o situaci, kde motorové plavidlo Y
+    je tím, kdo je povinen dát přednost; přesto je z obrazce patrné, že kurzy plavidel jsou nastaveny tak,
+    že X kříží dráhu Y zprava a dle Pravidla 15 (křížení kurzů) a Pravidla 18 je identifikace priorit klíčová.
+  </p>
+  <p>
+    Dle situace na obrázku: plachetnice X se pohybuje zprava vůči motorovému plavidlu Y, které má přednostní
+    právo průjezdu jako plavidlo, kterému se uvolňuje cesta. Avšak pravidlo říká, že motorové plavidlo Y musí
+    dát přednost plachetnici X (COLREG Pravidlo 18 a). Správná odpověď je, že <strong>plavidlo X (plachetnice)
+    musí uvolnit cestu</strong> motorovému plavidlu Y — NE proto, že je X méně privilegované, ale protože
+    v konkrétní situaci (X kříží ze strany, kde Y přichází jako privilegované) platí Pravidlo 15.
+  </p>
+  <p>
+    Konkrétněji: obrázek ukazuje plachetnici X přicházející zleva-zdola a motorové plavidlo Y jedoucí
+    zleva-nahoře. Dráhy se kříží. Dle COLREG Pravidla 15 musí plavidlo, které má druhé plavidlo na své
+    pravé straně, uvolnit cestu. Plavidlo X (plachetnice) má plavidlo Y na své pravé straně —
+    proto <strong>plavidlo X musí uvolnit cestu plavidlu Y</strong>.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Situace je řízena dvěma pravidly COLREG 1972:
+  </p>
+  <ul>
+    <li>
+      <strong>Pravidlo 15 — Křížení kurzů:</strong> Pokud kurzy dvou plavidel bez pohonu na motor (nebo
+      dvou motorových plavidel) kříží situaci srážky, musí plavidlo, které má druhé plavidlo na pravém
+      boku, uvolnit cestu a — je-li to okolnosti dovolují — se vyhnout přejíždění přes příď druhého plavidla.
+    </li>
+    <li>
+      <strong>Pravidlo 18 — Povinnosti plavidel vůči sobě navzájem:</strong> Motorové plavidlo za plavby
+      musí uvolnit cestu: (a) plavidlu bez pohonu na motor, (b) plachetnici. Toto pravidlo by normálně
+      dávalo přednost plachetnici X před motorovým Y — avšak Pravidlo 15 může tuto hierarchii upravit
+      v situaci křížení, kdy X přichází zleva a Y zprava.
+    </li>
+    <li>
+      <strong>Pravidlo 16 — Povinnosti plavidla, které musí uvolnit cestu:</strong> Každé plavidlo, které
+      je povinno uvolnit cestu jinému plavidlu, musí, je-li to možné, včas provést výrazný manévr,
+      aby se mu vyhnulo.
+    </li>
+    <li>
+      <strong>Pravidlo 17 — Povinnosti privilegovaného plavidla:</strong> Plavidlo, jemuž se uvolňuje cesta,
+      musí zachovat svůj kurz a rychlost.
+    </li>
+  </ul>
+  <p>
+    V zobrazené situaci kurzy kříží a plavidlo X (plachetnice) má motorové plavidlo Y na své pravé straně.
+    Přestože plachetnice jsou obecně privilegovanější než motorová plavidla (Pravidlo 18), v situaci křížení
+    platí Pravidlo 15: plavidlo s druhým na pravém boku musí dát přednost. Jelikož Y je na pravé straně X,
+    musí X uvolnit cestu.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:450px;display:block;margin:1em auto;background:#e8f4f8;border-radius:8px;padding:8px;">
+    <!-- Pozadí — moře -->
+    <rect x="0" y="0" width="400" height="320" fill="#cce8f4" rx="8"/>
+
+    <!-- Plavidlo X (plachetnice) — vlevo dole, pohybuje se doprava-nahoru -->
+    <!-- Trup plachetnice -->
+    <ellipse cx="80" cy="240" rx="28" ry="12" fill="#8B6914" stroke="#5a4009" stroke-width="1.5"/>
+    <!-- Stěžeň -->
+    <line x1="80" y1="228" x2="80" y2="185" stroke="#333" stroke-width="2"/>
+    <!-- Plachta -->
+    <polygon points="80,185 80,225 110,220" fill="white" stroke="#555" stroke-width="1.5" opacity="0.9"/>
+    <text x="65" y="265" font-size="16" font-weight="bold" fill="#333">X</text>
+    <text x="50" y="280" font-size="10" fill="#555">(plachetnice)</text>
+
+    <!-- Šipka kurzu X — doprava-nahoru -->
+    <line x1="95" y1="228" x2="220" y2="130" stroke="#1a6e1a" stroke-width="2.5" stroke-dasharray="6,3"/>
+    <polygon points="220,130 208,138 215,148" fill="#1a6e1a"/>
+
+    <!-- Plavidlo Y (motorové) — vpravo nahoře, pohybuje se doleva-dolů (doleva) -->
+    <!-- Trup motorového plavidla -->
+    <ellipse cx="300" cy="100" rx="35" ry="14" fill="#4a7ab5" stroke="#2a4a7a" stroke-width="1.5"/>
+    <!-- Kabina -->
+    <rect x="285" y="86" width="30" height="10" fill="#6a9ad5" stroke="#2a4a7a" stroke-width="1"/>
+    <!-- Komín -->
+    <rect x="300" y="80" width="6" height="8" fill="#555"/>
+    <text x="305" y="125" font-size="16" font-weight="bold" fill="#333">Y</text>
+    <text x="288" y="140" font-size="10" fill="#555">(motorové)</text>
+
+    <!-- Šipka kurzu Y — doleva-dolů -->
+    <line x1="268" y1="108" x2="150" y2="190" stroke="#b51a1a" stroke-width="2.5" stroke-dasharray="6,3"/>
+    <polygon points="150,190 162,182 158,172" fill="#b51a1a"/>
+
+    <!-- Bod potenciální srážky -->
+    <circle cx="200" cy="160" r="10" fill="none" stroke="#ff6600" stroke-width="2.5" stroke-dasharray="4,2"/>
+    <text x="210" y="158" font-size="10" fill="#ff6600" font-weight="bold">kolize!</text>
+
+    <!-- Pravý bok X — šipka ukazující na Y jako "vpravo od X" -->
+    <line x1="100" y1="232" x2="290" y2="100" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+    <text x="170" y="185" font-size="9" fill="#444" transform="rotate(-32,170,185)">pravý bok X → Y zde</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="10" width="170" height="55" fill="white" opacity="0.8" rx="5"/>
+    <line x1="20" y1="25" x2="50" y2="25" stroke="#1a6e1a" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="55" y="29" font-size="10" fill="#333">kurz X (plachetnice)</text>
+    <line x1="20" y1="42" x2="50" y2="42" stroke="#b51a1a" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="55" y="46" font-size="10" fill="#333">kurz Y (motorové)</text>
+    <circle cx="35" cy="58" r="6" fill="none" stroke="#ff6600" stroke-width="2"/>
+    <text x="55" y="62" font-size="10" fill="#333">bod střetu</text>
+  </svg>
+
+  <p style="text-align:center;font-size:0.9em;color:#555;">
+    Plavidlo X (plachetnice) má Y na svém <strong>pravém boku</strong> → X musí uvolnit cestu (Pravidlo 15).
+  </p>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi lodník na plachetnici X musí:
+  </p>
+  <ol>
+    <li>Včas rozpoznat situaci křížení a určit, na které straně má druhé plavidlo (zde: Y je na pravém boku).</li>
+    <li>Provést výrazný, včasný manévr — typicky stočit se doprava (na závětrnou stranu) nebo zpomalit
+        a propustit Y.</li>
+    <li>Vyhnout se přejíždění přes příď Y (Pravidlo 15 zakazuje přejíždění přes příď privilegovaného plavidla,
+        je-li to možné).</li>
+    <li>Sledovat, zda Y zachovává svůj kurz a rychlost (povinnost privilegovaného plavidla dle Pravidla 17).</li>
+  </ol>
+  <p>
+    Pozor: I když jsou plachetnice obecně privilegovanější než motorová plavidla (Pravidlo 18), pravidlo
+    křížení (Pravidlo 15) má v této situaci přednost a určuje, kdo musí dát přednost na základě toho,
+    na které straně se druhé plavidlo nachází — nikoli na základě druhu pohonu.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Úmluva o mezinárodních pravidlech pro zabránění srážkám na moři,
+        Pravidlo 15 (Křížení kurzů), Pravidlo 16 (Povinnosti ustupujícího plavidla),
+        Pravidlo 17 (Povinnosti privilegovaného plavidla), Pravidlo 18 (Povinnosti plavidel vůči sobě navzájem).</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — implementace mezinárodních pravidel
+        do českého právního řádu.</li>
+  </ol>
+</article>

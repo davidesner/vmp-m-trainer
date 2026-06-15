@@ -1,0 +1,86 @@
+<article class="vmp-explanation">
+  <h2>Plachetnice s větrem z leva vidí druhou plachetnici z návětrné strany — neznámá strana větru</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>uvolnit cestu</strong> druhé plachetnici. COLREG pravidlo 12 písm. b) výslovně stanoví, že plachetnice, která má vítr z levé strany a vidí druhou plachetnici z návětrné strany, ale nemůže určit, z které strany má tato plachetnice vítr, se považuje za <em>podřízenou</em> a musí uvolnit cestu. Jde o preventivní zásadu: v pochybnostech má přednost bezpečnost.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Pravidlo 12 COLREG 1972 (Mezinárodní předpisy pro zabránění srážkám na moři) řeší priority mezi dvěma plachetnicemi:
+  </p>
+  <ul>
+    <li><strong>Pravidlo 12 písm. a):</strong> Plachetnice s větrem z různých stran — loď s větrem z levé strany uvolňuje cestu.</li>
+    <li><strong>Pravidlo 12 písm. a) bod ii):</strong> Plachetnice s větrem ze stejné strany — závodní plachetnice (návětrná) ustupuje závodní plachetnici (závětrné).</li>
+    <li><strong>Pravidlo 12 písm. b):</strong> Pokud plachetnice s větrem z levé strany <em>nemůže rozeznat</em>, z které strany má druhá loď vítr, musí jí <strong>uvolnit cestu</strong>. Loď totiž nemůže vědět, zda je podřízená nebo nadřízená — a v pochybnostech se chová jako podřízená.</li>
+  </ul>
+  <p>
+    Změna kurzu doleva nebo doprava by nebyla správná, protože pravidlo nevyžaduje konkrétní manévr, pouze povinnost nepřekážet. Navíc neoprávněná změna kurzu by mohla situaci zkomplikovat.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" style="max-width:100%;background:#e8f4f8;border-radius:8px;">
+    <!-- Vítr šipky vlevo nahoře -->
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#4a90d9;" />
+      </marker>
+      <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#888;" />
+      </marker>
+      <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#c0392b;" />
+      </marker>
+    </defs>
+
+    <!-- Nadpis -->
+    <text x="260" y="22" text-anchor="middle" style="font-size:13px;font-weight:bold;fill:#1a3a5c;">COLREG pravidlo 12 písm. b) — Neznámá strana větru</text>
+
+    <!-- === Naše plachetnice (dole, vítr z LEVA) === -->
+    <!-- Trup -->
+    <ellipse cx="130" cy="220" rx="40" ry="13" style="fill:#d4a843;stroke:#8b6914;stroke-width:1.5;" />
+    <!-- Stěžeň -->
+    <line x1="130" y1="207" x2="130" y2="155" style="stroke:#555;stroke-width:2;" />
+    <!-- Plachta (vítr z leva = plachta vpravo) -->
+    <polygon points="130,158 170,185 130,205" style="fill:rgba(255,255,255,0.85);stroke:#555;stroke-width:1.5;" />
+    <!-- Vítr šipka (přichází zleva) -->
+    <line x1="60" y1="185" x2="108" y2="185" style="stroke:#4a90d9;stroke-width:2;" marker-end="url(#arrow)" />
+    <text x="55" y="181" text-anchor="end" style="font-size:11px;fill:#4a90d9;font-weight:bold;">VÍTR</text>
+    <!-- Popisek -->
+    <text x="130" y="245" text-anchor="middle" style="font-size:11px;fill:#1a3a5c;font-weight:bold;">Naše loď</text>
+    <text x="130" y="259" text-anchor="middle" style="font-size:10px;fill:#1a3a5c;">(vítr z leva = podřízená?)</text>
+
+    <!-- === Druhá plachetnice (nahoře, strana větru NEZNÁMÁ) === -->
+    <!-- Trup -->
+    <ellipse cx="370" cy="100" rx="40" ry="13" style="fill:#c0d6b5;stroke:#4a7a3a;stroke-width:1.5;" />
+    <!-- Stěžeň -->
+    <line x1="370" y1="87" x2="370" y2="35" style="stroke:#555;stroke-width:2;" />
+    <!-- Plachta (neznámá strana — nakreslit neutrálně) -->
+    <polygon points="370,38 410,65 370,85" style="fill:rgba(200,200,200,0.7);stroke:#888;stroke-width:1.5;stroke-dasharray:4,2;" />
+    <!-- Otazník - neznámá strana větru -->
+    <text x="420" y="65" style="font-size:26px;fill:#c0392b;font-weight:bold;">?</text>
+    <!-- Popisek -->
+    <text x="370" y="125" text-anchor="middle" style="font-size:11px;fill:#1a3a5c;font-weight:bold;">Druhá loď</text>
+    <text x="370" y="139" text-anchor="middle" style="font-size:10px;fill:#c0392b;">(strana větru neznámá)</text>
+
+    <!-- Pohled naší lodi na druhou (z návětrné strany) — přerušovaná čára -->
+    <line x1="155" y1="207" x2="345" y2="113" style="stroke:#888;stroke-width:1.5;stroke-dasharray:6,3;" marker-end="url(#arrow-gray)" />
+    <text x="255" y="150" text-anchor="middle" style="font-size:10px;fill:#555;">vidí ji z návětrné strany</text>
+
+    <!-- Výsledná akce — šipka dolu naznačující ustoupení -->
+    <rect x="10" y="265" width="500" height="28" rx="6" style="fill:#fef9e7;stroke:#f0c040;stroke-width:1.5;" />
+    <text x="260" y="284" text-anchor="middle" style="font-size:12px;fill:#7d6008;font-weight:bold;">Naše loď MUSÍ uvolnit cestu — pravidlo 12 b) COLREG 1972</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi nastane tato situace za snížené viditelnosti, v noci nebo při nepříznivém úhlu pohledu — plavčík nevidí, na kterou stranu má druhá plachetnice plachty. Místo toho, aby spekuloval a riskoval, musí bezpečně uvolnit cestu: zpomalit, stočit se nebo dát přednost průjezdu druhé lodi. Pravidlo tak chrání před srážkou v okamžiku, kdy jedna z lodí nemá dostatek informací pro správné rozhodnutí.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní předpisy pro zabránění srážkám na moři, Pravidlo 12 (Plachetnice), odst. b)</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě, §&nbsp;6 (odkaz na mezinárodní předpisy)</li>
+  </ol>
+</article>

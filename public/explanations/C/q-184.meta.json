@@ -1,0 +1,11 @@
+{
+  "qid": 184,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO Guide to Meteorological Instruments and Methods of Observation (No. 8)",
+    "Beaufortova stupnice",
+    "Zákon č. 61/2000 Sb., o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

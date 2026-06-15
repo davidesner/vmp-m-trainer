@@ -1,0 +1,101 @@
+<article class="vmp-explanation">
+  <h2>Nejúčinnější opatření k zabránění srážce</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Pokud je dostatečně velká volná vodní plocha, nejúčinnějším opatřením je <strong>dostatečně velká, včas provedená změna kursu, která nevyvolá přílišné přiblížení k jiným plavidlům</strong>. Velká a jednoznačná změna kursu je pro druhé plavidlo snadno viditelná na radaru i vizuálně, zatímco série malých postupných změn může být jen těžko rozpoznatelná a vytváří nebezpečí záměny za náhodné odchylky. Zastavení strojů nebo zpětný chod je méně účinné, protože brzdná dráha lodě je dlouhá a změna pohybu je pro okolní plavidla hůře patrná.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Tato zásada vychází z <strong>COLREG 1972, Pravidlo 8 – Opatření k zabránění srážce</strong>. Pravidlo 8(b) výslovně stanoví, že každá změna kursu nebo rychlosti prováděná za účelem zabránění srážce musí být <em>dostatečně velká, aby ji jiné plavidlo snadno postřehlo</em> vizuálně nebo radarem. Pravidlo dále varuje před sérií malých postupných změn.
+  </p>
+  <p>
+    Pravidlo 8(c) umožňuje snížení rychlosti nebo zastavení plavidla pomocí strojů, ale jen jako doplňkové opatření nebo tehdy, když je k dispozici dostatek času. Na otevřeném moři s dostatkem prostoru je primárním nástrojem změna kursu.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="overflow-x:auto;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" width="520" height="280" aria-label="Diagram porovnání změny kursu">
+      <defs>
+        <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" style="fill:#1d6fa4;" />
+        </marker>
+        <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" style="fill:#c0392b;" />
+        </marker>
+        <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" style="fill:#27ae60;" />
+        </marker>
+        <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" style="fill:#e67e22;" />
+        </marker>
+      </defs>
+
+      <!-- Background -->
+      <rect x="0" y="0" width="520" height="280" rx="8" style="fill:#e8f4fb;" />
+
+      <!-- Title -->
+      <text x="260" y="22" style="font-size:13px;font-weight:bold;fill:#1a1a2e;text-anchor:middle;">Porovnání manévrů podle COLREG Pravidlo 8</text>
+
+      <!-- Left panel: velká změna kursu -->
+      <rect x="10" y="32" width="240" height="230" rx="6" style="fill:#d5eaf7;stroke:#1d6fa4;stroke-width:1.5;" />
+      <text x="130" y="52" style="font-size:11px;font-weight:bold;fill:#1d6fa4;text-anchor:middle;">✓ Velká jednorázová změna kursu</text>
+
+      <!-- Vessel A (naše loď) approaching -->
+      <!-- Původní kurs doleva -->
+      <line x1="60" y1="200" x2="60" y2="100" style="stroke:#1d6fa4;stroke-width:2;stroke-dasharray:4,3;" />
+      <!-- Naše loď symbol -->
+      <polygon points="60,200 53,215 67,215" style="fill:#1d6fa4;" />
+      <text x="60" y="228" style="font-size:9px;fill:#1d6fa4;text-anchor:middle;">Naše loď</text>
+
+      <!-- Nový kurs po změně (velká změna doprava) -->
+      <line x1="60" y1="170" x2="160" y2="100" style="stroke:#27ae60;stroke-width:2.5;marker-end:url(#arrow-green);" />
+      <text x="130" y="95" style="font-size:9px;fill:#27ae60;text-anchor:middle;">Nový kurs</text>
+
+      <!-- Jiná loď -->
+      <polygon points="80,90 73,75 87,75" style="fill:#c0392b;transform:rotate(180deg);transform-origin:80px 83px;" />
+      <text x="80" y="70" style="font-size:9px;fill:#c0392b;text-anchor:middle;">Jiná loď</text>
+      <line x1="80" y1="90" x2="80" y2="175" style="stroke:#c0392b;stroke-width:1.5;stroke-dasharray:3,3;" marker-end="url(#arrow-red);" />
+
+      <text x="130" y="245" style="font-size:9px;fill:#27ae60;text-anchor:middle;font-style:italic;">Jasně viditelná, jednoznačná</text>
+
+      <!-- Right panel: série malých změn -->
+      <rect x="268" y="32" width="240" height="230" rx="6" style="fill:#fde9e9;stroke:#c0392b;stroke-width:1.5;" />
+      <text x="388" y="52" style="font-size:11px;font-weight:bold;fill:#c0392b;text-anchor:middle;">✗ Série malých změn kursu</text>
+
+      <!-- Naše loď -->
+      <polygon points="310" y="200" />
+      <polygon points="310,200 303,215 317,215" style="fill:#e67e22;" />
+      <text x="310" y="228" style="font-size:9px;fill:#e67e22;text-anchor:middle;">Naše loď</text>
+
+      <!-- Série malých změn -->
+      <polyline points="310,195 316,175 320,155 325,135 332,115 342,100" style="stroke:#e67e22;stroke-width:2;fill:none;stroke-dasharray:4,2;marker-end:url(#arrow-orange);" />
+
+      <!-- Jiná loď -->
+      <polygon points="340,85 333,70 347,70" style="fill:#c0392b;transform:rotate(180deg);transform-origin:340px 78px;" />
+      <text x="340" y="65" style="font-size:9px;fill:#c0392b;text-anchor:middle;">Jiná loď</text>
+      <line x1="340" y1="85" x2="340" y2="175" style="stroke:#c0392b;stroke-width:1.5;stroke-dasharray:3,3;marker-end:url(#arrow-red);" />
+
+      <text x="388" y="245" style="font-size:9px;fill:#c0392b;text-anchor:middle;font-style:italic;">Špatně rozpoznatelná, nebezpečná</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi navigátor posuzuje situaci s dostatečným předstihem (COLREG Pravidlo 8(a) – <em>opatření musí být přijato včas</em>). Na otevřeném moři s dostatkem prostoru platí:
+  </p>
+  <ul>
+    <li><strong>Jednoznačná změna kursu</strong> – nejlépe o 30° a více – je okamžitě viditelná na radarové stopě druhého plavidla i vizuálně.</li>
+    <li>Série drobných korekcí po 5–10° může být na radaru snadno zaměněna za normální navigační odchylky a druhé plavidlo si nemusí být vědomo, že probíhá vyhýbací manévr.</li>
+    <li>Zastavení nebo zpětný chod je vyhrazeno pro situace s nedostatečným prostorem nebo jako doplněk ke změně kursu, protože změna rychlosti je na radaru méně viditelná a brzdná dráha lodě je mnohem delší než u automobilu.</li>
+    <li>Výsledný kurs po manévru musí udržovat bezpečnou vzdálenost od všech ostatních plavidel (COLREG Pravidlo 8(d)).</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> – Úmluva o mezinárodních pravidlech pro zabránění srážkám na moři, Pravidlo 8 (Opatření k zabránění srážce), odst. (b), (c), (d)</li>
+    <li><strong>COLREG 1972</strong> – Pravidlo 6 (Bezpečná rychlost) – kontext pro volbu manévru v závislosti na podmínkách</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě – §&nbsp;5 (povinnost dodržovat COLREG při plavbě pod českou vlajkou)</li>
+  </ol>
+</article>

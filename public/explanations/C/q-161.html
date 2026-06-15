@@ -1,0 +1,88 @@
+<article class="vmp-explanation">
+  <h2>Vznik oblaků — ochlazování stoupající vzduchové masy</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Oblaky vznikají <strong>ochlazováním stoupající masy vzduchu</strong>. Když vzduch stoupá do vyšších vrstev atmosféry, tlak klesá a vzduch se adiabaticky rozpíná — tím se ochlazuje. Jakmile teplota klesne na rosný bod (bod nasycení), vodní pára kondenzuje na drobné kapičky nebo ledové krystalky, které tvoří oblak.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Proces tvorby oblaků je řízen <em>adiabatickým teplotním gradientem</em>:
+  </p>
+  <ul>
+    <li><strong>Suchoadiabatický gradient</strong> (~1 °C / 100 m) platí, dokud vzduch není nasycen vodní párou.</li>
+    <li><strong>Vlhkoadiabatický gradient</strong> (~0,5–0,6 °C / 100 m) platí po dosažení rosného bodu, kdy kondenzace uvolňuje latentní teplo a zpomaluje ochlazování.</li>
+  </ul>
+  <p>
+    Stoupání vzduchu může být vyvoláno:
+  </p>
+  <ul>
+    <li><strong>Konvekcí</strong> — přehřátý povrch ohřívá vzduch zdola (kumuly, bouřkové oblaky).</li>
+    <li><strong>Orografickým zdvihem</strong> — vzduch je nucen stoupat přes horský hřeben.</li>
+    <li><strong>Frontálním zdvihem</strong> — teplý vzduch stoupá po klínu studeného vzduchu na atmosférické frontě.</li>
+    <li><strong>Konvergencí</strong> — střetávání vzduchových mas nutí vzduch stoupat.</li>
+  </ul>
+  <p>
+    Možnosti „oteplování klesající masy" nebo „oteplování stoupající masy" jsou fyzikálně nesprávné: klesající vzduch se adiabaticky <em>zahřívá</em> a oblaky se v něm naopak <em>rozpadají</em>.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260" role="img" aria-label="Diagram vzniku oblaku stoupající vzduchovou masou">
+    <!-- Obloha / pozadí -->
+    <rect x="0" y="0" width="420" height="260" fill="#e8f4fd" />
+    <!-- Zemský povrch -->
+    <rect x="0" y="220" width="420" height="40" fill="#8B6914" />
+    <!-- Sluneční záření / ohřev povrchu -->
+    <line x1="60" y1="10" x2="60" y2="220" stroke="#FFA500" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="65" y="30" font-size="11" fill="#b8620a">sluneční záření</text>
+    <!-- Šipky stoupajícího vzduchu -->
+    <defs>
+      <marker id="arrow-up" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,8 L4,0 L8,8" fill="#2196F3" />
+      </marker>
+    </defs>
+    <line x1="200" y1="210" x2="200" y2="80" stroke="#2196F3" stroke-width="2.5" marker-end="url(#arrow-up)" />
+    <line x1="185" y1="210" x2="185" y2="100" stroke="#2196F3" stroke-width="1.5" marker-end="url(#arrow-up)" />
+    <line x1="215" y1="210" x2="215" y2="100" stroke="#2196F3" stroke-width="1.5" marker-end="url(#arrow-up)" />
+    <!-- Popis teploty -->
+    <text x="230" y="215" font-size="11" fill="#333">T = 25 °C</text>
+    <text x="230" y="155" font-size="11" fill="#555">T = 15 °C</text>
+    <text x="230" y="100" font-size="11" fill="#1a6fc4">T = rosný bod</text>
+    <!-- Rosný bod / hladina kondenzace -->
+    <line x1="130" y1="95" x2="290" y2="95" stroke="#1a6fc4" stroke-width="1" stroke-dasharray="5,4" />
+    <text x="10" y="98" font-size="10" fill="#1a6fc4">hladina kondenzace</text>
+    <!-- Oblak -->
+    <ellipse cx="200" cy="68" rx="55" ry="22" fill="#cce8ff" stroke="#6ab0e0" stroke-width="1.5" />
+    <ellipse cx="175" cy="72" rx="30" ry="16" fill="#cce8ff" stroke="#6ab0e0" stroke-width="1" />
+    <ellipse cx="225" cy="72" rx="30" ry="16" fill="#cce8ff" stroke="#6ab0e0" stroke-width="1" />
+    <text x="155" y="70" font-size="12" fill="#1a6fc4" font-weight="bold">OBLAK</text>
+    <!-- Popisy -->
+    <text x="5" y="195" font-size="11" fill="#333">Teplý vzduch</text>
+    <text x="5" y="208" font-size="11" fill="#333">stoupá vzhůru</text>
+    <text x="5" y="221" font-size="11" fill="#555">a ochlazuje se</text>
+    <!-- Teplotní gradient šipka -->
+    <line x1="380" y1="220" x2="380" y2="60" stroke="#888" stroke-width="1" marker-end="url(#arrow-up)" />
+    <text x="355" y="50" font-size="10" fill="#666">výška</text>
+    <text x="350" y="240" font-size="10" fill="#666">↓ teplota</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Pro mořeplavce je pochopení vzniku oblaků klíčové při předpovědi počasí bez meteorologických přístrojů:
+  </p>
+  <ul>
+    <li><strong>Kumulonimby (Cb)</strong> — rychle rostoucí konvektivní oblaky signalizují blížící se bouřku; plavec by měl hledat přístav nebo se připravit na silný vítr a srážky.</li>
+    <li><strong>Cirrus (Ci)</strong> — vysoké vláknitě oblaky ze zmrzlých krystalků vznikají na frontách; jejich výskyt může předznamenávat zhoršení počasí za 12–24 hodin.</li>
+    <li><strong>Stratokumuly (Sc)</strong> — nízká vrstva oblaků typická pro stacionární nebo anticyklonální situace; déšť méně pravděpodobný, ale viditelnost může být snížena.</li>
+    <li>Oblaky <strong>nevznikají ani při klesání vzduchu</strong> (föhnový efekt, teplé sektory anticyklón) — porozumění tomuto principu pomáhá odlišit zlepšení počasí od jeho zhoršení.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>WMO — Mezinárodní atlas oblaků</strong> (International Cloud Atlas, 2017) — klasifikace a vznik oblaků, kap. 1.</li>
+    <li><strong>Bowditch — American Practical Navigator</strong> (NIMA Pub. No. 9), kap. 31 „Weather Observations" — meteorologie pro námořníky.</li>
+    <li><strong>ICAO Standard Atmosphere</strong> (Doc 7488) — adiabatické teplotní gradienty a vrstvení atmosféry.</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o technické způsobilosti a vybavení námořních plavidel — požadavek na meteorologické vybavení a znalosti posádky.</li>
+  </ol>
+</article>

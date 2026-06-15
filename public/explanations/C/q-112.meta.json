@@ -1,0 +1,7 @@
+{
+  "qid": 112,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["IHO INT 1 – Symbols, Abbreviations and Terms used on Charts", "IHO S-57 – Transfer Standard for Digital Hydrographic Data", "SOLAS 1974 kap. V", "Admiralty Chart 5011"],
+  "model": "claude-opus-4-7"
+}

@@ -1,0 +1,131 @@
+<article class="vmp-explanation">
+  <h2>Červené okraje oblaků při západu slunce — předpověď počasí</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Správná odpověď je ta, která říká, že lze očekávat <strong>pravděpodobnost, že se zhorší počasí</strong>.
+      Husté tmavé oblaky s červeně zbarvenými okraji při západu slunce jsou klasickým příznakem blížící se frontální poruchy — vlhkých vzduchových hmot přinášejících srážky a vítr. Toto pozorování má v námořní meteorologii empiricky ověřenou platnost.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Lidové i odborné pozorování oblohy při východu a západu slunce patří k nejstarším metodám krátkodobé předpovědi počasí na moři.
+      Klíčový je <em>typ</em> oblaků a jejich barva:
+    </p>
+    <ul>
+      <li>
+        <strong>Husté tmavé oblaky</strong> (typicky Nimbostratus, Cumulonimbus nebo Altostratus) signalizují vysoký obsah vodních kapek a ledu — podmínku pro srážky.
+      </li>
+      <li>
+        <strong>Červeně zbarvené okraje</strong> při západu slunce vznikají lomem slunečního světla v atmosféře. Jsou-li okraje výrazně červené a oblaky tmavé a husté (nikoli průsvitné), nasvědčuje to přítomnosti aerosolů a vlhkosti v nižší atmosféře naváté od západu — odkud v mírných zeměpisných šířkách přichází většina poruch.
+      </li>
+      <li>
+        Naopak <em>jasná červeň při východu</em> (červánky ráno) varuje před zhoršením. Červánky večer (čistý červený západ) bez tmavých oblaků naznačují klidný den následující — to ale není případ popsaný v otázce.
+      </li>
+    </ul>
+    <p>
+      Odborná meteorologie klasifikuje toto pozorování jako <strong>synoptický příznak blížící se teplé nebo okluzní fronty</strong>: cirrus a altostratus předcházejí frontě desítky hodin, avšak tmavé husté oblaky s červenými okraji znamenají, že fronta je blíže a srážky přijdou brzy.
+    </p>
+    <p>
+      V rámci SOLAS (Mezinárodní úmluva o bezpečnosti lidského života na moři) a pravidel ISM kódu je velitel plavidla povinen sledovat meteorologické podmínky a přijímat preventivní opatření — vizuální pozorování oblohy je přijatou metodou vedle barometrických měření.
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" style="width:100%;max-width:480px;display:block;margin:1em auto;" role="img" aria-label="Západ slunce s tmavými oblaky — příznak zhoršení počasí">
+      <!-- Obloha -->
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+          <stop offset="60%" style="stop-color:#8b2500;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#ff6600;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" style="stop-color:#1a3a5c;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#0a1a2e;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <!-- Obloha -->
+      <rect x="0" y="0" width="480" height="160" fill="url(#skyGrad)" />
+      <!-- Moře -->
+      <rect x="0" y="155" width="480" height="45" fill="url(#seaGrad)" />
+      <!-- Horizont -->
+      <line x1="0" y1="155" x2="480" y2="155" stroke="#ff8800" stroke-width="2" />
+      <!-- Slunce (poloviční za obzorem) -->
+      <circle cx="240" cy="158" r="22" fill="#ff6600" style="opacity:0.9" />
+      <circle cx="240" cy="158" r="18" fill="#ffcc00" style="opacity:0.7" />
+      <!-- Tmavé husté oblaky -->
+      <!-- Levý oblak -->
+      <ellipse cx="100" cy="100" rx="70" ry="35" fill="#1a1a1a" />
+      <ellipse cx="70" cy="105" rx="45" ry="28" fill="#111111" />
+      <ellipse cx="130" cy="108" rx="50" ry="25" fill="#1a1a1a" />
+      <!-- Červené okraje levého oblaku (spodní lem) -->
+      <ellipse cx="100" cy="125" rx="68" ry="12" fill="none" stroke="#cc3300" stroke-width="3" style="opacity:0.8" />
+      <ellipse cx="70" cy="128" rx="43" ry="9" fill="none" stroke="#ff4400" stroke-width="2" style="opacity:0.7" />
+      <!-- Pravý oblak -->
+      <ellipse cx="360" cy="90" rx="80" ry="38" fill="#111111" />
+      <ellipse cx="330" cy="98" rx="55" ry="28" fill="#0d0d0d" />
+      <ellipse cx="400" cy="96" rx="50" ry="26" fill="#1a1a1a" />
+      <!-- Červené okraje pravého oblaku -->
+      <ellipse cx="360" cy="118" rx="78" ry="12" fill="none" stroke="#cc3300" stroke-width="3" style="opacity:0.8" />
+      <ellipse cx="330" cy="122" rx="53" ry="9" fill="none" stroke="#ff4400" stroke-width="2" style="opacity:0.7" />
+      <!-- Střední oblak nad sluncem -->
+      <ellipse cx="240" cy="80" rx="60" ry="28" fill="#0d0d0d" />
+      <ellipse cx="220" cy="88" rx="40" ry="22" fill="#111111" />
+      <ellipse cx="265" cy="87" rx="42" ry="20" fill="#0d0d0d" />
+      <!-- Červené okraje středního oblaku -->
+      <ellipse cx="240" cy="104" rx="58" ry="10" fill="none" stroke="#cc2200" stroke-width="3" style="opacity:0.85" />
+      <!-- Odraz na moři -->
+      <ellipse cx="240" cy="165" rx="25" ry="5" fill="#ff6600" style="opacity:0.4" />
+      <rect x="225" y="158" width="30" height="14" fill="#ff4400" style="opacity:0.15" />
+      <!-- Plavidlo na obzoru (silueta) -->
+      <rect x="195" y="148" width="30" height="7" fill="#000000" style="opacity:0.9" />
+      <polygon points="210,148 213,135 216,148" fill="#000000" style="opacity:0.9" />
+      <!-- Popisky -->
+      <text x="240" y="18" text-anchor="middle" fill="#ffddaa" font-size="13" font-family="sans-serif" font-weight="bold">Západ slunce — příznak zhoršení počasí</text>
+      <text x="100" y="145" text-anchor="middle" fill="#ff6633" font-size="10" font-family="sans-serif">červené okraje</text>
+      <text x="360" y="138" text-anchor="middle" fill="#ff6633" font-size="10" font-family="sans-serif">husté tmavé oblaky</text>
+      <text x="240" y="186" text-anchor="middle" fill="#88aacc" font-size="10" font-family="sans-serif">→ Očekávat zhoršení počasí</text>
+    </svg>
+    <p style="text-align:center;font-size:0.85em;color:#666;">Husté tmavé oblaky s červenými okraji při západu slunce — příznak blížící se frontální poruchy.</p>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <p>
+      Při příbřežní plavbě na moři:
+    </p>
+    <ol>
+      <li>
+        <strong>Zaznamenejte pozorování</strong> do lodního deníku s časem, popisem oblaků a barometrickým tlakem.
+      </li>
+      <li>
+        <strong>Zkontrolujte barometr</strong> — klesající tlak (zvláště rychle o více než 3 hPa/3 hodiny) v kombinaci s tmavými oblaky potvrzuje přicházející poruchu.
+      </li>
+      <li>
+        <strong>Přijměte preventivní opatření</strong>: zkraťte plachtoví, vyhledejte bezpečný přístav nebo kotviště, zkontrolujte polohu na mapě s ohledem na chráněné vody, informujte posádku.
+      </li>
+      <li>
+        <strong>Sledujte NAVTEX a VHF kanál 16</strong> pro meteorologická varování příslušného námořního záchranného koordinačního centra (MRCC).
+      </li>
+      <li>
+        Nepodceňujte tento příznak na základě toho, že počasí je v danou chvíli ještě klidné — frontální systémy přicházejí postupně, ale jejich postup může být rychlý.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li>Bowditch — <em>The American Practical Navigator</em> (NGA Pub. 9), kap. 34 (Weather Observations), sekce o vizuálních příznacích počasí a interpretaci oblohy</li>
+      <li>WMO — <em>Guide to Meteorological Instruments and Methods of Observation</em> (WMO-No. 8), kap. o pozorování oblaků a oblohy</li>
+      <li>SOLAS 1974 (Mezinárodní úmluva o bezpečnosti lidského života na moři), Pravidlo V/34 — povinnosti velitele (safe navigation and avoidance of dangerous situations)</li>
+      <li>ISM kód (International Safety Management Code), odst. 8 — nouzové situace a prevence; odst. 11 — zprávy a analýza</li>
+      <li>Zákon č. 61/2000 Sb., o námořní plavbě, § 26 — povinnosti velitele plavidla</li>
+    </ol>
+  </section>
+</article>

@@ -1,0 +1,91 @@
+<article class="vmp-explanation">
+  <h2>Znaky pro nebezpečné skály na námořní mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Zobrazené znaky — kříž v tečkovaném kruhu a samostatný kříž — označují na námořní mapě
+    <strong>nebezpečné skalní útesy pod vodou</strong>. Kříž v tečkovaném kruhu znázorňuje
+    skálu nebo překážku, jejíž existence je pochybná nebo nepřesně zaměřená, zatímco
+    samostatný kříž (bez kruhu) označuje potopený skalní útvar s potvrzenou polohou.
+    Obě varianty upozorňují plavce na podvodní nebezpečí, které je třeba obeplout bezpečnou vzdáleností.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mapové znaky na námořních mapách jsou mezinárodně standardizovány publikací
+    <strong>INT 1 (Symbols, Abbreviations and Terms used on Charts)</strong>, vydávanou
+    Mezinárodní hydrografickou organizací (IHO). Česká republika a ostatní námořní státy
+    používají stejnou sadu symbolů, aby námořní mapy byly čitelné bez ohledu na vydavatele.
+  </p>
+  <ul>
+    <li>
+      <strong>Kříž v tečkovaném kruhu</strong> (INT 1, sekce K — Rocks): skála nebo
+      překážka s nejistou polohou či hloubkou (angl. „rock awash or submerged, existence
+      doubtful").
+    </li>
+    <li>
+      <strong>Samostatný kříž</strong> (INT 1, sekce K): potvrzený skalní útvar pod
+      hladinou (angl. „submerged rock, depth known/unknown").
+    </li>
+  </ul>
+  <p>
+    Radarový odražeč má na mapě jiný symbol (šesticípá hvězdice nebo speciální piktogram)
+    a nachází se zpravidla na plovoucích nebo pevných objektech nad hladinou.
+    Bóje pravé strany plavební dráhy (IALA systém A — červená bóje) má opět odlišný
+    symbol — kotvicový bod s ikonou bóje a písmeny charakterizující barvu/tvar.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" width="420" height="220" aria-label="Příklady mapových znaků">
+    <!-- Background -->
+    <rect width="420" height="220" fill="#e8f4f8" rx="8"/>
+
+    <!-- Title -->
+    <text x="210" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a3a5c">Mapové znaky — podvodní skály (INT 1, sekce K)</text>
+
+    <!-- Symbol 1: kříž v tečkovaném kruhu -->
+    <g transform="translate(100,110)">
+      <!-- dotted circle -->
+      <circle cx="0" cy="0" r="32" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,4"/>
+      <!-- cross -->
+      <line x1="-14" y1="0" x2="14" y2="0" stroke="#c0392b" stroke-width="2.5"/>
+      <line x1="0" y1="-14" x2="0" y2="14" stroke="#c0392b" stroke-width="2.5"/>
+    </g>
+    <text x="100" y="158" text-anchor="middle" font-size="11" fill="#1a3a5c">Skála — nejistá poloha</text>
+    <text x="100" y="172" text-anchor="middle" font-size="10" fill="#555">(existence doubtful)</text>
+
+    <!-- Symbol 2: samostatný kříž -->
+    <g transform="translate(280,110)">
+      <line x1="-14" y1="0" x2="14" y2="0" stroke="#c0392b" stroke-width="2.5"/>
+      <line x1="0" y1="-14" x2="0" y2="14" stroke="#c0392b" stroke-width="2.5"/>
+    </g>
+    <text x="280" y="158" text-anchor="middle" font-size="11" fill="#1a3a5c">Skála — potvrzená poloha</text>
+    <text x="280" y="172" text-anchor="middle" font-size="10" fill="#555">(submerged rock)</text>
+
+    <!-- Arrow with label -->
+    <text x="210" y="200" text-anchor="middle" font-size="11" fill="#e74c3c" font-weight="bold">⚠ Obě značky = podvodní nebezpečí, vyhnout se!</text>
+
+    <!-- Divider -->
+    <line x1="190" y1="70" x2="190" y2="150" stroke="#aac" stroke-width="1" stroke-dasharray="4,3"/>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování plavby je nutné před každou trasou zkontrolovat námořní mapu na výskyt
+    těchto křížových symbolů. Pravidlo bezpečné navigace (COLREG, Rule 8 — Action to avoid
+    collision; pro vlastní bezpečnost) vyžaduje ponechat podvodním skalám dostatečný boční
+    odstup, minimálně dle doporučení pilotního průvodce (Sailing Directions) pro danou oblast.
+  </p>
+  <p>
+    Kříž v tečkovaném kruhu je zvlášť nebezpečný, protože přesná hloubka ani poloha není
+    ověřena — vždy ho obeplujte s maximálním bezpečnostním odstupem a nepovažujte zaznamenanou
+    souřadnici za definitivní.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>INT 1 — Symbols, Abbreviations and Terms used on Charts</strong>, IHO Publication S-4, sekce K (Rocks, Wrecks, Obstructions)</li>
+    <li><strong>COLREG 1972</strong> — Mezinárodní pravidla pro zabránění srážkám na moři, Rule 8 (Action to avoid collision)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — povinnosti velitele při navigaci</li>
+  </ol>
+</article>

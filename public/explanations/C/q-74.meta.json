@@ -1,0 +1,11 @@
+{
+  "qid": 74,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "UNCLOS 1982 — Úmluva OSN o mořském právu, čl. 2–16, 17–32, 111, 33",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb. o lodních listinách"
+  ],
+  "model": "claude-opus-4-7"
+}

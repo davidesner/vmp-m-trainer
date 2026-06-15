@@ -1,0 +1,12 @@
+{
+  "qid": 89,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři",
+    "SOLAS — Mezinárodní úmluva o bezpečnosti lidského života na moři",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "ISO 80000-3 — Mezinárodní systém jednotek (SI)"
+  ],
+  "model": "claude-opus-4-7"
+}

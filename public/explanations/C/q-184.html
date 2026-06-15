@@ -1,0 +1,71 @@
+<article class="vmp-explanation">
+  <h2>Měření rychlosti větru anemometrem</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Rychlost větru se měří anemometrem v <strong>metrech za sekundu (m/s)</strong>. Tato fyzikální jednotka je součástí soustavy SI a vyjadřuje, kolik metrů vzduch urazí za jednu sekundu. Hektopascaly (hPa) jsou jednotkou tlaku, nikoli rychlosti; procenta nejsou fyzikální jednotkou rychlosti.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Anemometr je meteorologický přístroj určený k měření rychlosti proudění vzduchu. Nejrozšířenějším typem je <em>miskovitý anemometr</em> (cup anemometer), jehož rotující misky zachycují proud vzduchu a počet otáček se přepočítává na rychlost v m/s.
+  </p>
+  <p>
+    V námořní meteorologii se rychlost větru vyjadřuje také v <em>uzlech</em> (kn = námořní míle za hodinu) nebo pomocí <em>Beaufortovy stupnice</em> (stupně 0–12), která každému stupni přiřazuje odpovídající rozsah rychlosti v m/s i v uzlech. Například stupeň 6 (silný vítr) odpovídá 10,8–13,8 m/s (21–27 kn). Pro navigaci je znalost přepočtu m/s ↔ kn důležitá.
+  </p>
+  <p>
+    Hektopascaly (hPa) měří <em>atmosferický tlak</em> — sleduje se barometrem nebo tlakoměrem. Tlak a rychlost větru jsou sice vzájemně provázány (vítr vane z oblasti vyššího tlaku do oblasti nižšího), ale každá veličina má vlastní jednotku a přístroj.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220" aria-label="Schéma miskovitého anemometru">
+      <!-- Stojan -->
+      <rect x="152" y="130" width="16" height="70" rx="3" fill="#888"/>
+      <!-- Základna -->
+      <rect x="120" y="195" width="80" height="14" rx="5" fill="#666"/>
+      <!-- Osa -->
+      <circle cx="160" cy="130" r="8" fill="#555"/>
+      <!-- Ramena (3x 120°) -->
+      <!-- Rameno 1 (nahoru) -->
+      <line x1="160" y1="130" x2="160" y2="80" stroke="#555" stroke-width="4"/>
+      <ellipse cx="160" cy="68" rx="18" ry="12" fill="#d94f3d" transform="rotate(-20 160 68)"/>
+      <!-- Rameno 2 (vpravo dolů) -->
+      <line x1="160" y1="130" x2="207" y2="155" stroke="#555" stroke-width="4"/>
+      <ellipse cx="218" cy="162" rx="18" ry="12" fill="#d94f3d" transform="rotate(60 218 162)"/>
+      <!-- Rameno 3 (vlevo dolů) -->
+      <line x1="160" y1="130" x2="113" y2="155" stroke="#555" stroke-width="4"/>
+      <ellipse cx="102" cy="162" rx="18" ry="12" fill="#d94f3d" transform="rotate(-60 102 162)"/>
+      <!-- Šipka větru -->
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#2a7ae2"/>
+        </marker>
+      </defs>
+      <line x1="30" y1="100" x2="95" y2="100" stroke="#2a7ae2" stroke-width="3" marker-end="url(#arrow)"/>
+      <text x="10" y="96" font-size="12" fill="#2a7ae2" font-family="sans-serif">vítr</text>
+      <!-- Výstup -->
+      <rect x="195" y="60" width="110" height="46" rx="6" fill="#f0f8e8" stroke="#4caf50" stroke-width="2"/>
+      <text x="250" y="80" font-size="13" fill="#2d6a2d" font-family="sans-serif" text-anchor="middle" font-weight="bold">m/s</text>
+      <text x="250" y="98" font-size="11" fill="#555" font-family="sans-serif" text-anchor="middle">rychlost větru</text>
+      <line x1="195" y1="83" x2="175" y2="95" stroke="#4caf50" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <!-- Popis -->
+      <text x="160" y="17" font-size="12" fill="#333" font-family="sans-serif" text-anchor="middle">Miskovitý anemometr</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li>Na palubě plavidla nebo v přístavu sledujete vítr pomocí anemometru — výstup je v m/s (případně kn).</li>
+    <li>Meteorologické stanice vydávají METAR, TAF nebo námořní výstrahy s rychlostí větru v uzlech; 1 uzel ≈ 0,514 m/s.</li>
+    <li>Při hodnocení podmínek pro vyplutí nebo kotvení porovnáváte naměřenou rychlost (m/s nebo kn) s Beaufortovou stupnicí — ta určuje, jaký mají podmínky vliv na moře a plavbu.</li>
+    <li>Na atmosferický tlak (hPa) se díváte na barometr — klesající tlak může předvídat blížící se bouři bez ohledu na aktuální rychlost větru.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>WMO (Světová meteorologická organizace) — standardy měření větru, publikace No. 8 (Guide to Meteorological Instruments and Methods of Observation)</li>
+    <li>Beaufortova stupnice — mezinárodně uznaná škála pro popis síly větru odpovídající rozsahům v m/s a uzlech</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě — povinnosti velitele plavidla sledovat meteorologické podmínky</li>
+  </ol>
+</article>

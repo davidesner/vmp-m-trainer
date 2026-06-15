@@ -1,0 +1,11 @@
+{
+  "qid": 100,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Bowditch — American Practical Navigator",
+    "IHO — Regulations of the IHO for International (INT) Charts",
+    "ČSN ISO 19128 — geoinformatika"
+  ],
+  "model": "claude-opus-4-7"
+}

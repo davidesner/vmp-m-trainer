@@ -1,0 +1,93 @@
+<article class="vmp-explanation">
+  <h2>Protijedoucí lodě se strojním pohonem — povinnost uhýbat vpravo</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že každá z lodí musí <strong>změnit svůj směr plavby vpravo tak, aby míjela druhou loď po levé straně</strong>. Jde o základní pravidlo pro situaci přímého protijedoucího kurzu (tzv. <em>head-on situation</em>): obě lodě jsou si rovnocenné, obě musí odbočit vpravo, a tím se vzájemně vyhnou levoboku (tj. každá projede napravo od druhé).
+  </p>
+  <p>
+    Odpověď „provést včasnou a rozhodnou akci" platí jako obecná zásada pro manévr vyhýbání, ale nepopisuje konkrétní směr pohybu předepsaný pravidlem — v situaci head-on COLREG explicitně nařizuje manévr vpravo.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Situaci protijedoucích lodí se strojním pohonem řeší <strong>COLREG 1972, Pravidlo 14 (Protijedoucí situace)</strong>:
+  </p>
+  <ul>
+    <li>Pravidlo 14 odst. (a): Jestliže se dvě plavidla s mechanickým pohonem přibližují přímo nebo přibližně přímo čelně tak, že vzniká nebezpečí srážky, každé z nich změní svůj kurz doprava tak, aby se minulo po levoboku druhého.</li>
+    <li>Pravidlo 14 odst. (b): Tato situace nastane, vidí-li jedna loď druhou přímo nebo přibližně přímo před přídí. V noci to poznáme tak, že jsou viditelná obě postranní světla (červené vlevo i zelené vpravo) nebo světlo příďové.</li>
+    <li>Pravidlo 14 odst. (c): V pochybnostech, zda jde o head-on situaci, se předpokládá, že ano, a loď jedná dle pravidla (změna kurzu vpravo).</li>
+  </ul>
+  <p>
+    Obecná povinnost provést <em>včasnou a rozhodnou akci</em> vyplývá z <strong>Pravidla 8 (Akce k zabránění srážce)</strong>, ale to nedefinuje konkrétní stranu uhýbání — to je úloha Pravidla 14.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram protijedoucích lodí — obě odbočují vpravo">
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#e53935"/>
+      </marker>
+      <marker id="arr-g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#43a047"/>
+      </marker>
+      <marker id="arr-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#888"/>
+      </marker>
+    </defs>
+
+    <!-- středová osa (přerušovaná) -->
+    <line x1="60" y1="130" x2="460" y2="130" stroke="#bbb" stroke-width="1.5" stroke-dasharray="8,6"/>
+
+    <!-- Loď A vlevo, jedoucí doprava -->
+    <!-- trup -->
+    <ellipse cx="100" cy="130" rx="40" ry="14" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
+    <polygon points="140,130 160,120 160,140" fill="#1565c0"/>
+    <text x="100" y="134" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">A</text>
+
+    <!-- Loď B vpravo, jedoucí doleva -->
+    <ellipse cx="420" cy="130" rx="40" ry="14" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
+    <polygon points="380,130 360,120 360,140" fill="#2e7d32"/>
+    <text x="420" y="134" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">B</text>
+
+    <!-- původní kurzy (přerušované šipky) -->
+    <line x1="155" y1="130" x2="355" y2="130" stroke="#888" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arr-gray)"/>
+
+    <!-- Loď A odbočuje vpravo (dolů na diagramu) -->
+    <line x1="150" y1="135" x2="230" y2="195" stroke="#e53935" stroke-width="2.5" marker-end="url(#arr)"/>
+    <!-- Loď B odbočuje vpravo (dolů na diagramu ze svého pohledu = nahoru na diagramu) -->
+    <line x1="365" y1="135" x2="290" y2="195" stroke="#43a047" stroke-width="2.5" marker-end="url(#arr-g)"/>
+
+    <!-- popisky -->
+    <text x="100" y="160" text-anchor="middle" font-size="11" fill="#1565c0">odbočí vpravo ↘</text>
+    <text x="420" y="160" text-anchor="middle" font-size="11" fill="#2e7d32">odbočí vpravo ↙</text>
+    <text x="260" y="122" text-anchor="middle" font-size="11" fill="#555">původní kurzy</text>
+    <text x="260" y="210" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">míjení levoboken ✓</text>
+
+    <!-- popis pravidla -->
+    <text x="260" y="245" text-anchor="middle" font-size="11" fill="#444">COLREG 1972 — Pravidlo 14: head-on situation</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V reálu kapitán rozpozná head-on situaci podle toho, že z druhé lodě vidí zároveň červené světlo (levý bok) i zelené světlo (pravý bok), případně bílé příďové světlo přímo před přídí. To znamená: obě lodě jedou přímo na sebe.
+  </p>
+  <p>
+    Správný postup:
+  </p>
+  <ol>
+    <li>Potvrdit situaci včas (radarové sledování, vizuální pozorování).</li>
+    <li>Provést <strong>razantní změnu kurzu vpravo</strong> — o dostatečný úhel, aby bylo druhé plavidlo jasně vidět po levém boku.</li>
+    <li>Případně dát zvukový signál (jedno krátké pípnutí = odbočuji vpravo, dle Pravidla 34).</li>
+    <li>Snížit rychlost nebo zastavit je krajní možnost, ale primárním manévrem zůstává odbočení vpravo.</li>
+  </ol>
+  <p>
+    Toto pravidlo je analogické silničnímu provozu: každý jede vpravo a protijedoucí se vyhnou.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> (Úmluva o mezinárodních pravidlech pro zabránění srážkám na moři) — Pravidlo 14 (Head-on situation), Pravidlo 8 (Action to avoid collision), Pravidlo 34 (Manoeuvring and warning signals)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong>, o námořní plavbě — § 17 (povinnost dodržovat mezinárodní předpisy)</li>
+  </ol>
+</article>

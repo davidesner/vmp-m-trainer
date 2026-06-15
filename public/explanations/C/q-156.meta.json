@@ -1,0 +1,12 @@
+{
+  "qid": 156,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO Publication No. 8 — CIMO Guide (Beaufortova stupnice)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "IMO SOLAS Regulation V/33 — meteorologické služby",
+    "Bowditch — American Practical Navigator, kapitola Meteorologie"
+  ],
+  "model": "claude-opus-4-7"
+}

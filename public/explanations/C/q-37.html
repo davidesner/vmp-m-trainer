@@ -1,0 +1,81 @@
+<article class="vmp-explanation">
+  <h2>Plavba v podmínkách snížené viditelnosti</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď popisuje situaci, kdy lodě <strong>nejsou ve vzájemném dohledu při plavbě v podmínkách snížené viditelnosti</strong>. Jde tedy o stav, kdy si posádky navzájem nevidí — nikoliv o vzájemný vizuální kontakt, ani o pouhé použití radaru. Klíčové je, že snížená viditelnost (mlha, husté srážky, sněžení, písečná bouře apod.) fyzicky znemožňuje optický dohled.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) rozlišuje dvě základní situační kategorie:
+  </p>
+  <ul>
+    <li><strong>Lodě ve vzájemném dohledu</strong> — obě posádky se navzájem vidí pouhým okem (Pravidlo 11–18, část B).</li>
+    <li><strong>Lodě v podmínkách snížené viditelnosti</strong> — lodě, které <em>nejsou</em> ve vzájemném vizuálním kontaktu, protože jim v tom brání mlha, hustý déšť, sněžení, písečná bouře nebo jiné podobné podmínky (Pravidlo 19, část C).</li>
+  </ul>
+  <p>
+    Pravidlo 19 COLREG (Chování lodí v podmínkách snížené viditelnosti) se vztahuje právě na tuto situaci a stanoví povinnosti — zejména bezpečnou rychlost, použití radaru a zastavení strojů při slyšení mlhového signálu před přídí. Použití radaru samo o sobě není definičním kritériem — loď může radar používat i za dobré viditelnosti.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200" role="img" aria-label="Diagram dvou lodí v mlze — žádný vzájemný vizuální kontakt">
+    <!-- Mlhové pozadí -->
+    <rect x="0" y="0" width="480" height="200" fill="#e8eef5"/>
+    <!-- Mlhové oblaky -->
+    <ellipse cx="240" cy="100" rx="90" ry="60" fill="#c9d8e8" opacity="0.7"/>
+    <ellipse cx="200" cy="90" rx="70" ry="45" fill="#b8cfe0" opacity="0.6"/>
+    <ellipse cx="280" cy="110" rx="75" ry="50" fill="#b8cfe0" opacity="0.6"/>
+    <!-- Text mlha -->
+    <text x="240" y="105" text-anchor="middle" font-size="14" fill="#6a7f94" font-family="sans-serif" font-weight="bold">MLHA</text>
+
+    <!-- Loď A vlevo -->
+    <g transform="translate(60,100)">
+      <polygon points="0,-15 40,-15 50,0 40,15 0,15" fill="#2c6fad" stroke="#1a4a7a" stroke-width="1.5"/>
+      <polygon points="10,-15 10,-30 25,-30 25,-15" fill="#2c6fad" stroke="#1a4a7a" stroke-width="1"/>
+      <text x="20" y="35" text-anchor="middle" font-size="12" fill="#1a4a7a" font-family="sans-serif" font-weight="bold">Loď A</text>
+      <!-- Oko s přeškrtnutím — nevidí -->
+      <circle cx="20" cy="-45" r="10" fill="white" stroke="#c0392b" stroke-width="2"/>
+      <line x1="13" y1="-52" x2="27" y2="-38" stroke="#c0392b" stroke-width="2"/>
+      <text x="20" y="-58" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif">nevidí</text>
+    </g>
+
+    <!-- Loď B vpravo -->
+    <g transform="translate(370,100) scale(-1,1)">
+      <polygon points="0,-15 40,-15 50,0 40,15 0,15" fill="#27ae60" stroke="#1a6e3a" stroke-width="1.5"/>
+      <polygon points="10,-15 10,-30 25,-30 25,-15" fill="#27ae60" stroke="#1a6e3a" stroke-width="1"/>
+    </g>
+    <text x="395" y="150" text-anchor="middle" font-size="12" fill="#1a6e3a" font-family="sans-serif" font-weight="bold">Loď B</text>
+    <circle cx="395" cy="55" r="10" fill="white" stroke="#c0392b" stroke-width="2"/>
+    <line x1="388" y1="48" x2="402" y2="62" stroke="#c0392b" stroke-width="2"/>
+    <text x="395" y="42" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif">nevidí</text>
+
+    <!-- Přerušovaná čára (přerušený vizuální kontakt) -->
+    <line x1="115" y1="100" x2="370" y2="100" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="8,6"/>
+
+    <!-- Radar vlny z lodi A -->
+    <path d="M 112 90 Q 140 80 140 100 Q 140 120 112 110" fill="none" stroke="#f39c12" stroke-width="1.2" stroke-dasharray="3,3"/>
+    <path d="M 112 85 Q 155 72 155 100 Q 155 128 112 115" fill="none" stroke="#f39c12" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+  </svg>
+  <p><em>Obě lodě jsou fyzicky přítomny, ale mlha znemožňuje vzájemný vizuální kontakt. Radar (oranžové vlny) může být přítomen, ale není definičním znakem situace.</em></p>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Jakmile nastane snížená viditelnost, kapitán musí:
+  </p>
+  <ol>
+    <li>Přejít na bezpečnou rychlost (Pravidlo 6 COLREG) — loď musí být schopna zastavit v bezpečné vzdálenosti.</li>
+    <li>Zapnout radar a sledovat stopy (Pravidlo 19b).</li>
+    <li>Vydávat mlhové zvukové signály (Pravidlo 35) — motorem poháněná loď jeden dlouhý tón každé 2 minuty.</li>
+    <li>Při slyšení mlhového signálu před přídí snížit na nejmenší bezpečnou rychlost nebo zastavit (Pravidlo 19d).</li>
+  </ol>
+  <p>
+    Tato pravidla platí bez ohledu na to, zda loď radar skutečně používá — povinnosti vznikají ze <em>stavu viditelnosti</em>, nikoli z technického vybavení.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, Pravidlo 3(l) (definice snížené viditelnosti), Pravidlo 19 (chování v podmínkách snížené viditelnosti), Pravidlo 35 (zvukové signály v podmínkách snížené viditelnosti)</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě — §&nbsp;19 (bezpečnost plavby, odkaz na COLREG)</li>
+  </ol>
+</article>

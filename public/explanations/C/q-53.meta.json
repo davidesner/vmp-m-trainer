@@ -1,0 +1,11 @@
+{
+  "qid": 53,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Pravidlo 12 (Plachetnice)",
+    "COLREG 1972 — Pravidlo 17 (Jednání přednostního plavidla)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-sonnet-4-6"
+}

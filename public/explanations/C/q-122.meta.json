@@ -1,0 +1,11 @@
+{
+  "qid": 122,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IHO Publication S-4",
+    "Bowditch — American Practical Navigator (NIMA Pub. No. 9)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

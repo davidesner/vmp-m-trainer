@@ -1,0 +1,75 @@
+<article class="vmp-explanation">
+  <h2>Atmosférický tlak a hodnota 990 hPa</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Při hodnotě aneroidu 990 hPa je tlak vzduchu <strong>nízký</strong>. Standardní atmosférický tlak na hladině moře je 1013,25 hPa. Hodnota 990 hPa je tedy přibližně o 23 hPa pod normálem, což jednoznačně odpovídá nízkému tlaku (tlakové níži).
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Atmosférický tlak se měří barometrem — v námořní praxi nejčastěji <strong>aneroidem</strong> (bezkapalinový barometr s kovovou krabičkou, jejíž deformace indikuje tlak). Referenční hodnoty:
+  </p>
+  <ul>
+    <li><strong>Normální tlak:</strong> 1013,25 hPa (= 760 mmHg = 1 atm)</li>
+    <li><strong>Nízký tlak (tlaková níže):</strong> zpravidla pod ~1000 hPa — v centru výrazné níže může klesnout až pod 960 hPa</li>
+    <li><strong>Vysoký tlak (tlaková výše):</strong> zpravidla nad ~1020 hPa</li>
+  </ul>
+  <p>
+    Hodnota 990 hPa se pohybuje v oblasti tlakové níže. S nízkou tlakovou soustavou se pojí horší počasí — oblačnost, srážky, silnější vítr a rozbouřené moře, což je pro námořní plavbu zásadní meteorologická informace.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" role="img" aria-label="Stupnice atmosférického tlaku" style="max-width:500px;width:100%;display:block;margin:1rem auto;">
+    <!-- Barevná stupnice -->
+    <defs>
+      <linearGradient id="pressGrad" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1"/>
+        <stop offset="45%" style="stop-color:#22c55e;stop-opacity:1"/>
+        <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1"/>
+      </linearGradient>
+    </defs>
+    <rect x="40" y="50" width="420" height="30" rx="6" fill="url(#pressGrad)"/>
+
+    <!-- Popisky hodnot -->
+    <text x="40" y="45" text-anchor="middle" font-size="12" fill="#3b82f6">960</text>
+    <text x="145" y="45" text-anchor="middle" font-size="12" fill="#555">990</text>
+    <text x="250" y="45" text-anchor="middle" font-size="12" fill="#555">1013</text>
+    <text x="355" y="45" text-anchor="middle" font-size="12" fill="#555">1030</text>
+    <text x="460" y="45" text-anchor="middle" font-size="12" fill="#ef4444">1060</text>
+    <text x="40" y="43" text-anchor="middle" font-size="9" fill="#aaa">hPa</text>
+
+    <!-- Svislé oddělovací čáry -->
+    <line x1="250" y1="48" x2="250" y2="82" stroke="#fff" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+    <!-- Šipka na 990 hPa -->
+    <line x1="145" y1="52" x2="145" y2="90" stroke="#1e3a5f" stroke-width="2"/>
+    <polygon points="140,90 150,90 145,100" fill="#1e3a5f"/>
+    <text x="145" y="115" text-anchor="middle" font-size="13" fill="#1e3a5f" font-weight="bold">990 hPa</text>
+    <text x="145" y="130" text-anchor="middle" font-size="11" fill="#1e3a5f">NÍZKÝ TLAK</text>
+
+    <!-- Popis zón -->
+    <text x="100" y="145" text-anchor="middle" font-size="10" fill="#3b82f6">tlaková níže</text>
+    <text x="250" y="145" text-anchor="middle" font-size="10" fill="#22c55e">normál (1013 hPa)</text>
+    <text x="400" y="145" text-anchor="middle" font-size="10" fill="#ef4444">tlaková výše</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Námořník sleduje barometrický tlak průběžně — důležitý je nejen aktuální stav, ale i <strong>trend</strong> (rychlost poklesu nebo růstu):
+  </p>
+  <ul>
+    <li>Rychlý pokles tlaku (více než 3–5 hPa/hodinu) signalizuje příchod bouřky nebo prudkého zhoršení počasí.</li>
+    <li>Hodnota 990 hPa samotná indikuje, že plavidlo je v oblasti nízkého tlaku — velitel by měl zkontrolovat předpověď, upevnit volné předměty na palubě a zvážit bezpečné útočiště.</li>
+    <li>Při plavbě na moři je pravidelné odečítání aneroidu (každou hodinu nebo při každé strážní hodině) součástí standardní palubní praxe.</li>
+    <li>Mezinárodní klasifikace větru (Beaufortova stupnice) a Saffir-Simpsonova stupnice pro hurikány jsou přímo svázány s hodnotami tlaku v centru bouřkového systému.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>ICAO Standard Atmosphere (ISO 2533:1975) — referenční hodnota 1013,25 hPa jako standardní atmosférický tlak</li>
+    <li>WMO (Světová meteorologická organizace) — definice tlakových soustav (níže, výše, fronty)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — povinnost vedení lodního deníku včetně meteorologických záznamů (§ 32)</li>
+    <li>Bowditch — American Practical Navigator, kapitola Meteorology (atmosférický tlak a jeho měření)</li>
+  </ol>
+</article>

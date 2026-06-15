@@ -1,0 +1,72 @@
+<article class="vmp-explanation">
+  <h2>Směr větru — odkud fouká, ne kam</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Severozápadní vítr vane <strong>ze severozápadu na jihovýchod</strong>. Název větru vždy udává stranu světa, <em>odkud</em> přichází, nikoli kam směřuje. Severozápadní vítr tedy fouká z kvadrantu severozápad a pohybuje se směrem k jihovýchodu.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Tato konvence je mezinárodně závazná a vychází z meteorologické praxe kodifikované Světovou meteorologickou organizací (WMO). V námořní meteorologii ji závazně užívají rovněž mezinárodní dokumenty SOLAS (Příloha — meteorologická varování) a Mezinárodní meteorologické kódy. Analogicky fungují i česká pravidla námořní plavby: vítr je popisován svým <em>zdrojovým směrem</em>.
+  </p>
+  <p>
+    Zdrojový směr větru se měří v azimutu od severu po směru hodinových ručiček (0 °–360 °). Severozápad odpovídá azimutu <strong>315 °</strong>.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260" aria-label="Diagram směru severozápadního větru">
+    <!-- compass rose background -->
+    <circle cx="130" cy="130" r="110" fill="#eef4fb" stroke="#aac4e0" stroke-width="1.5"/>
+    <!-- cardinal labels -->
+    <text x="130" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">S</text>
+    <text x="238" y="134" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">V</text>
+    <text x="130" y="248" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">J</text>
+    <text x="22" y="134" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Z</text>
+    <!-- intercardinal labels -->
+    <text x="196" y="62" text-anchor="middle" font-size="12" fill="#666">SV</text>
+    <text x="196" y="208" text-anchor="middle" font-size="12" fill="#666">JV</text>
+    <text x="64" y="208" text-anchor="middle" font-size="12" fill="#666">JZ</text>
+    <text x="64" y="62" text-anchor="middle" font-size="12" fill="#b02020" font-weight="bold">SZ</text>
+    <!-- thin cross lines -->
+    <line x1="130" y1="30" x2="130" y2="230" stroke="#aac4e0" stroke-width="1"/>
+    <line x1="30" y1="130" x2="230" y2="130" stroke="#aac4e0" stroke-width="1"/>
+    <!-- diagonal lines -->
+    <line x1="52" y1="52" x2="208" y2="208" stroke="#aac4e0" stroke-width="1"/>
+    <line x1="208" y1="52" x2="52" y2="208" stroke="#aac4e0" stroke-width="1"/>
+    <!-- wind arrow: FROM NW (top-left) TO SE (bottom-right) -->
+    <!-- shaft from NW toward center-SE -->
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#b02020"/>
+      </marker>
+    </defs>
+    <line x1="68" y1="68" x2="192" y2="192"
+          stroke="#b02020" stroke-width="3"
+          marker-end="url(#arrowhead)"/>
+    <!-- label: FROM -->
+    <text x="52" y="48" text-anchor="middle" font-size="11" fill="#b02020">odkud</text>
+    <!-- label: TO -->
+    <text x="208" y="215" text-anchor="middle" font-size="11" fill="#b02020">kam</text>
+    <!-- center dot -->
+    <circle cx="130" cy="130" r="4" fill="#333"/>
+    <!-- legend text -->
+    <text x="130" y="255" text-anchor="middle" font-size="10" fill="#555">Severozápadní vítr — azimut 315 °</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Na moři i na větších jezerech určuje zdrojový směr větru, odkud přicházejí vlny, jakým směrem plout pro příznivý nebo nepříznivý vítr a jak správně číst meteorologické zprávy (NAVTEX, Météo France Bulletins, česká námořní hlášení). Při manévrování plachetnice nebo motorového plavidla je zásadní vždy vědět, <em>odkud</em> vítr přichází — to ovlivňuje kurs, plachtový výběr i volbu kotviště.
+  </p>
+  <p>
+    Záměna „odkud" a „kam" je nejčastější chybou začínajících námořníků a může vést k chybné interpretaci předpovědi počasí i navigačním omylům.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>WMO (Světová meteorologická organizace) — Technické předpisy WMO-No. 49, Svazek II (Meteorologická služba pro námořní plavbu), definice směru větru</li>
+    <li>SOLAS 1974, ve znění pozdějších protokolů — Hlava V, pravidlo 5 (meteorologické služby a varování)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — § 1 a násl. (obecné povinnosti velitele lodi, orientace v počasí)</li>
+    <li>Bowditch — American Practical Navigator, kapitola 31 (Marine Weather Services), definice wind direction</li>
+  </ol>
+</article>

@@ -1,0 +1,123 @@
+<article class="vmp-explanation">
+  <h2>Kardinální bóje – systém IALA</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že splavná voda se nachází <strong>jižně od bóje</strong>.
+    Bóje s horní žlutou a dolní černou částí je <em>jižní kardinální bóje</em>.
+    Kardinální systém říká: plav na tu stranu světa, od které bóje nese název –
+    tedy vody jižně od bóje jsou splavné.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Kardinální bóje patří do systému IALA (International Association of Lighthouse
+    Authorities) – region A (Evropa, Afrika, Asie, Austrálie). Označují nebezpečí
+    (mělčina, vraky, útesy) a říkají plavidlu, na které světové straně od bóje
+    je bezpečná voda.
+  </p>
+  <p>
+    <strong>Barvy kardinálních bójí</strong> se odvíjejí od polohy na pomyslném
+    kompasovém kruhu; pro zapamatování se používá mnemotika „černá&nbsp;→&nbsp;sever,
+    žlutá&nbsp;→&nbsp;jih, s tím, že každá bóje nese dvě barvy seřazené tak, aby
+    černý pruh ukazoval ke svému konci kompasu":
+  </p>
+  <ul>
+    <li><strong>Severní</strong> – nahoře černá, dole žlutá; vrchol: dvě kužele špičkou nahoru.</li>
+    <li><strong>Jižní</strong> – nahoře žlutá, dole černá; vrchol: dvě kužele špičkou dolů.</li>
+    <li><strong>Východní</strong> – nahoře černá, uprostřed žlutý pruh, dole černá; vrchol: dvě kužele základnami k sobě.</li>
+    <li><strong>Západní</strong> – nahoře žlutá, uprostřed černý pruh, dole žlutá; vrchol: dvě kužele špičkami k sobě.</li>
+  </ul>
+  <p>
+    V zadání bóje <em>ztratila vrcholový znak</em> (kužele), takže zbývá
+    jediný vodítko: barevné schéma <strong>žlutá nahoře – černá dole = jižní bóje</strong>.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;width:100%;display:block;margin:1em auto;">
+    <!-- Legenda - čtyři kardinální bóje vedle sebe -->
+    <!-- Severní -->
+    <g transform="translate(30,20)">
+      <rect x="15" y="60" width="40" height="30" fill="#FFD700"/>
+      <rect x="15" y="30" width="40" height="30" fill="#222"/>
+      <!-- vrcholový znak: dvě kužele špičkou nahoru -->
+      <polygon points="35,0 25,28 45,28" fill="#222"/>
+      <polygon points="35,14 25,28 45,28" fill="#222"/>
+      <rect x="20" y="90" width="30" height="60" rx="4" fill="#888"/>
+      <text x="35" y="170" text-anchor="middle" font-size="12" fill="#333">S</text>
+      <text x="35" y="185" text-anchor="middle" font-size="10" fill="#555">Severní</text>
+      <text x="35" y="200" text-anchor="middle" font-size="9" fill="#555">plav severně</text>
+    </g>
+    <!-- Jižní - zvýrazněná -->
+    <g transform="translate(120,20)">
+      <rect x="15" y="30" width="40" height="30" fill="#FFD700"/>
+      <rect x="15" y="60" width="40" height="30" fill="#222"/>
+      <!-- vrcholový znak: dvě kužele špičkou dolů -->
+      <polygon points="35,30 25,2 45,2" fill="#222"/>
+      <polygon points="35,16 25,2 45,2" fill="#222"/>
+      <rect x="20" y="90" width="30" height="60" rx="4" fill="#888"/>
+      <!-- zvýraznění -->
+      <rect x="5" y="0" width="60" height="210" rx="6" fill="none" stroke="#e63946" stroke-width="2.5"/>
+      <text x="35" y="170" text-anchor="middle" font-size="12" fill="#e63946" font-weight="bold">J</text>
+      <text x="35" y="185" text-anchor="middle" font-size="10" fill="#e63946" font-weight="bold">Jižní ✓</text>
+      <text x="35" y="200" text-anchor="middle" font-size="9" fill="#e63946">plav jižně</text>
+    </g>
+    <!-- Východní -->
+    <g transform="translate(215,20)">
+      <rect x="15" y="30" width="40" height="14" fill="#222"/>
+      <rect x="15" y="44" width="40" height="32" fill="#FFD700"/>
+      <rect x="15" y="76" width="40" height="14" fill="#222"/>
+      <!-- vrcholový znak: kužele základnami k sobě -->
+      <polygon points="35,0 25,14 45,14" fill="#222"/>
+      <polygon points="35,28 25,14 45,14" fill="#222"/>
+      <rect x="20" y="90" width="30" height="60" rx="4" fill="#888"/>
+      <text x="35" y="170" text-anchor="middle" font-size="12" fill="#333">V</text>
+      <text x="35" y="185" text-anchor="middle" font-size="10" fill="#555">Východní</text>
+      <text x="35" y="200" text-anchor="middle" font-size="9" fill="#555">plav východně</text>
+    </g>
+    <!-- Západní -->
+    <g transform="translate(310,20)">
+      <rect x="15" y="30" width="40" height="14" fill="#FFD700"/>
+      <rect x="15" y="44" width="40" height="32" fill="#222"/>
+      <rect x="15" y="76" width="40" height="14" fill="#FFD700"/>
+      <!-- vrcholový znak: kužele špičkami k sobě -->
+      <polygon points="35,14 25,0 45,0" fill="#222"/>
+      <polygon points="35,14 25,28 45,28" fill="#222"/>
+      <rect x="20" y="90" width="30" height="60" rx="4" fill="#888"/>
+      <text x="35" y="170" text-anchor="middle" font-size="12" fill="#333">Z</text>
+      <text x="35" y="185" text-anchor="middle" font-size="10" fill="#555">Západní</text>
+      <text x="35" y="200" text-anchor="middle" font-size="9" fill="#555">plav západně</text>
+    </g>
+    <!-- Kompas šipka -->
+    <text x="210" y="250" text-anchor="middle" font-size="11" fill="#555">Barvy: žlutá = jih (spodní), černá = sever (spodní) – umístění černého pruhu určuje název.</text>
+  </svg>
+
+  <p>
+    Bóje v otázce (žlutá nahoře, černá dole) odpovídá sloupci <strong>Jižní</strong>
+    zvýrazněnému červeně. Bez vrcholového kužele je barevné schéma jediným spolehlivým
+    vodítkem.
+  </p>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plavbě v pobřežních vodách nebo při vstupu do přístavu se kardinální bóje
+    vyskytují u mělčin, vraků a skalních útesů. Pokud vidíte poškozené nebo
+    neúplné bóje (chybí reflexní pásky, světlo, vrcholový znak), stále dokážete
+    určit typ podle zbarvení – za předpokladu, že barva není vybledlá. V noci
+    kardinální bóje svítí bílým zábleskem: sever = nepřetržité záblesky, jih =
+    skupinový záblesk (6+1), východ = trojitý záblesk, západ = devítinásobný záblesk.
+    Přes den nebo u poškozené bóje spoléháte výhradně na barvu.
+  </p>
+  <p>
+    Praktické pravidlo pro jižní bóji: „<em>žlutá nahoře jako slunce na jihu</em>" –
+    žlutá je nahoře stejně jako slunce na jihu oblohy v severní polokouli.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>IALA Maritime Buoyage System – Region A (Evropa, Afrika, Asie, Austrálie): definice kardinálních bójí, barevné schéma a vrcholové znaky.</li>
+    <li>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) – Pravidlo 15 a příloha IV: plavební značky a světelné signály v pobřežních vodách.</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě – § 27: povinnost respektovat plavební značení.</li>
+    <li>Vyhláška č. 315/2000 Sb. o lodních listinách – příloha: uznání IALA systému v české námořní legislativě.</li>
+  </ol>
+</article>

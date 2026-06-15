@@ -1,0 +1,102 @@
+<article class="vmp-explanation">
+  <h2>Loď provádějící rybolov v úzkém průplavu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Loď provádějící lov ryb nesmí ztěžovat průjezd <strong>jakéhokoli plavidla plujícího v hranicích úzkého průplavu</strong>.
+    Správná odpověď nerozlišuje ani podle délky plavidla, ani podle způsobu pohonu — povinnost platí plošně vůči všem
+    lodím bez výjimky. Loď provádějící rybolov má sice zvláštní postavení v pravidlech o přednosti, avšak toto
+    zvláštní postavení ji neopravňuje blokovat nebo omezovat průjezd v omezených vodách.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Pravidlo vychází z <strong>COLREG 1972, Pravidlo 9 – Úzké průplavy</strong>. Odstavec <em>(b)</em> říká, že
+    plavidlo kratší než 20 metrů nebo plachetnice nesmí ztěžovat průjezd plavidlům, která mohou bezpečně plout
+    pouze v plavební dráze průplavu. Odstavec <em>(c)</em> pak specificky doplňuje, že loď provádějící rybolov
+    nesmí ztěžovat průjezd <em>žádnému</em> plavidlu plujícímu v průplavu — rozsah povinnosti je tedy nejširší
+    ze všech skupin.
+  </p>
+  <p>
+    Logika pravidla je taková: úzký průplav je prostorově omezená zóna, kde velká plavidla nemají manévrovací
+    prostor. Rybářské lodě bývají záměrně pomalé a pohybují se nepravidelně (sledují ryby, spouštějí sítě),
+    čímž by mohly vážně ohrozit bezpečnost plavby, pokud by neměly výslovnou povinnost dát průchod.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" width="520" height="240" aria-label="Schéma úzkého průplavu — rybářská loď musí dát průchod všem plavidlům">
+    <!-- pozadí moře -->
+    <rect x="0" y="0" width="520" height="240" fill="#ddeeff"/>
+
+    <!-- břehy průplavu -->
+    <rect x="0" y="0" width="520" height="55" fill="#c8a96e"/>
+    <rect x="0" y="185" width="520" height="55" fill="#c8a96e"/>
+
+    <!-- plavební dráha -->
+    <rect x="0" y="55" width="520" height="130" fill="#b3d4f0"/>
+
+    <!-- středová čárkovaná čára -->
+    <line x1="0" y1="120" x2="520" y2="120" stroke="#888" stroke-width="1.5" stroke-dasharray="12,8"/>
+
+    <!-- břeh popis -->
+    <text x="10" y="35" font-family="sans-serif" font-size="13" fill="#5a3e10">Břeh</text>
+    <text x="10" y="210" font-family="sans-serif" font-size="13" fill="#5a3e10">Břeh</text>
+    <text x="10" y="115" font-family="sans-serif" font-size="11" fill="#336699">Plavební dráha průplavu</text>
+
+    <!-- velká loď (obchodní) jedoucí zprava doleva -->
+    <g transform="translate(300,100)">
+      <!-- trup -->
+      <polygon points="0,0 -110,0 -120,12 -110,24 0,24" fill="#3355aa" stroke="#222" stroke-width="1.5"/>
+      <!-- nástavba -->
+      <rect x="-90" y="-14" width="30" height="14" fill="#4477cc" stroke="#222" stroke-width="1"/>
+      <!-- stožár -->
+      <line x1="-75" y1="-14" x2="-75" y2="-30" stroke="#222" stroke-width="2"/>
+    </g>
+    <text x="280" y="95" font-family="sans-serif" font-size="11" fill="#fff" font-weight="bold">Obchodní loď</text>
+    <!-- šipka pohybu -->
+    <polygon points="155,112 175,107 175,117" fill="#3355aa"/>
+    <line x1="175" y1="112" x2="300" y2="112" stroke="#3355aa" stroke-width="2"/>
+
+    <!-- rybářská loď (menší, stojí nebo se pohybuje pomalu) -->
+    <g transform="translate(90,140)">
+      <!-- trup -->
+      <polygon points="0,0 -55,0 -62,10 -55,20 0,20" fill="#cc5500" stroke="#222" stroke-width="1.5"/>
+      <!-- nástavba -->
+      <rect x="-45" y="-10" width="20" height="10" fill="#ee7722" stroke="#222" stroke-width="1"/>
+      <!-- síť naznačena -->
+      <line x1="-55" y1="20" x2="-70" y2="40" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <line x1="-40" y1="20" x2="-55" y2="40" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <line x1="-70" y1="40" x2="-55" y2="40" stroke="#888" stroke-width="1.5"/>
+    </g>
+    <text x="40" y="137" font-family="sans-serif" font-size="11" fill="#cc5500" font-weight="bold">Rybářská loď</text>
+    <text x="32" y="150" font-family="sans-serif" font-size="10" fill="#cc5500">(nesmí ztěžovat průjezd)</text>
+
+    <!-- zákaz šipka / symbol -->
+    <circle cx="195" cy="155" r="18" fill="none" stroke="#cc0000" stroke-width="3"/>
+    <line x1="182" y1="142" x2="208" y2="168" stroke="#cc0000" stroke-width="3"/>
+    <text x="218" y="152" font-family="sans-serif" font-size="10" fill="#cc0000">Zakázáno</text>
+    <text x="218" y="164" font-family="sans-serif" font-size="10" fill="#cc0000">ztěžovat průjezd</text>
+    <text x="218" y="176" font-family="sans-serif" font-size="10" fill="#cc0000">jakémukoli plavidlu</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li>Rybářská loď operující v úzkém průplavu (např. v Bosporu, Øresundu nebo v kanálech anglického pobřeží)
+        musí sledovat pohyb všech plavidel a aktivně se jim vyhýbat — nejen tankerům a kontejnerovým lodím,
+        ale i malým plachetnicím nebo motorovým rekreačním lodím.</li>
+    <li>Spouštění sítí nebo vlečných zařízení v plavební dráze průplavu je prakticky vyloučeno, pokud by
+        omezovalo průjezdnost.</li>
+    <li>Posádka rybářského plavidla musí mít nepřetržitou hlídku a být připravena ustoupit nebo zastavit rybolov,
+        jakmile se blíží jakékoli plavidlo v průplavu.</li>
+    <li>Porušení pravidla může vést k odpovědnosti za srážku nebo blokování — bez ohledu na to, zda druhé
+        plavidlo bylo větší či menší.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 9 písm. (c):
+        loď provádějící rybolov nesmí ztěžovat průjezd jakémukoli plavidlu plujícímu v úzkém průplavu nebo plavební dráze.</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — implementace COLREG do českého právního řádu.</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o lodních listinách a bezpečnosti provozu — doplňující technické předpisy k provozu lodí v omezených vodách.</li>
+  </ol>
+</article>

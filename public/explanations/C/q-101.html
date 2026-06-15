@@ -1,0 +1,80 @@
+<article class="vmp-explanation">
+  <h2>Měřítko mapy 1 : 100 000</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Měřítko 1 : 100 000 říká, že každá jednotka délky na mapě odpovídá 100 000 stejným jednotkám ve skutečnosti.
+    Tedy 1 cm na mapě = 100 000 cm ve skutečnosti = 1 km. Správná odpověď je proto <strong>„1 km ve skutečnosti"</strong>.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní mapy (mořské navigační mapy) jsou vydávány v různých měřítkách podle účelu použití:
+  </p>
+  <ul>
+    <li><strong>Přehledné mapy</strong> – velký rozsah, malé měřítko (např. 1 : 1 000 000) pro plánování oceánských plaveb.</li>
+    <li><strong>Pobřežní mapy</strong> – střední měřítko (např. 1 : 100 000) pro plavbu v blízkosti pobřeží.</li>
+    <li><strong>Přístavní mapy a plány</strong> – velké měřítko (např. 1 : 10 000 a více) pro vstup do přístavu.</li>
+  </ul>
+  <p>
+    Převod je přímočarý: čitatel zlomku (1) je vzdálenost na mapě, jmenovatel (100 000) je vzdálenost ve skutečnosti
+    ve stejných jednotkách. Protože 100 000 cm = 1 000 m = 1 km, vychází 1 cm → 1 km.
+  </p>
+  <p>
+    Mapa 1 : 100 000 spadá do skupiny pobřežních map, které jsou standardně používány při příbřežní plavbě
+    (coastal navigation). Jejich vydávání a obsah upravuje Mezinárodní hydrografická organizace (IHO)
+    prostřednictvím standardu S-4 (Regulations of the IHO for International (INT) Charts).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" style="max-width:480px;width:100%;display:block;margin:1em auto;">
+    <!-- Mapa (levý blok) -->
+    <rect x="20" y="30" width="180" height="120" rx="6" fill="#d4e8f0" stroke="#2a6490" stroke-width="2"/>
+    <text x="110" y="22" text-anchor="middle" font-size="13" fill="#2a6490" font-family="sans-serif" font-weight="bold">MAPA</text>
+    <!-- Úsečka na mapě -->
+    <line x1="50" y1="90" x2="150" y2="90" stroke="#c0392b" stroke-width="3"/>
+    <line x1="50" y1="80" x2="50" y2="100" stroke="#c0392b" stroke-width="2"/>
+    <line x1="150" y1="80" x2="150" y2="100" stroke="#c0392b" stroke-width="2"/>
+    <text x="100" y="110" text-anchor="middle" font-size="13" fill="#c0392b" font-family="sans-serif" font-weight="bold">1 cm</text>
+
+    <!-- Šipka doprava -->
+    <line x1="215" y1="90" x2="265" y2="90" stroke="#555" stroke-width="2"/>
+    <polygon points="265,85 275,90 265,95" fill="#555"/>
+    <text x="245" y="80" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">× 100 000</text>
+
+    <!-- Skutečnost (pravý blok) -->
+    <rect x="280" y="30" width="180" height="120" rx="6" fill="#d5f0d4" stroke="#27ae60" stroke-width="2"/>
+    <text x="370" y="22" text-anchor="middle" font-size="13" fill="#27ae60" font-family="sans-serif" font-weight="bold">SKUTEČNOST</text>
+    <!-- Úsečka ve skutečnosti -->
+    <line x1="300" y1="90" x2="440" y2="90" stroke="#c0392b" stroke-width="3"/>
+    <line x1="300" y1="80" x2="300" y2="100" stroke="#c0392b" stroke-width="2"/>
+    <line x1="440" y1="80" x2="440" y2="100" stroke="#c0392b" stroke-width="2"/>
+    <text x="370" y="110" text-anchor="middle" font-size="13" fill="#c0392b" font-family="sans-serif" font-weight="bold">1 km</text>
+    <text x="370" y="130" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">(= 100 000 cm)</text>
+
+    <!-- Vzorec dole -->
+    <text x="240" y="165" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1 : 100 000  →  1 cm = 1 km</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při práci s mapou 1 : 100 000 navigator rychle odhadne vzdálenost tím, že změří úsek na mapě pravítkem
+    a vynásobí počet centimetrů jedním kilometrem. Například 3,5 cm na mapě = 3,5 km ve skutečnosti.
+  </p>
+  <p>
+    Na námořní mapě se vzdálenosti nejčastěji měří pomocí kružítka a stupnicového měřítka zeměpisné šířky
+    na okraji mapy (1 námořní míle = 1 úhlová minuta šířky). Znalost číselného měřítka je ale nezbytná
+    pro práci s topografickými mapami nebo při plánování plavby z turistických map.
+  </p>
+  <p>
+    Chyba záměny měřítka (např. použití 1 : 100 000 místo 1 : 10 000) vede k desetinásobnému podhodnocení
+    vzdáleností a může mít vážné navigační důsledky.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO S-4</strong> – Regulations of the IHO for International (INT) Charts and Chart Specifications (definice měřítek námořních map).</li>
+    <li><strong>Bowditch – American Practical Navigator</strong>, kap. 2 (Charts, Measurements, and Scale).</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> – obecný rámec pro používání námořních map v české legislativě.</li>
+  </ol>
+</article>

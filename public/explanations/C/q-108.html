@@ -1,0 +1,86 @@
+<article class="vmp-explanation">
+  <h2>Námořní mapa: symbol kotvy</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Znak kotvy (stylizovaná kotva v půdorysu) vyznačený na námořní mapě označuje <strong>kotviště</strong> — místo vhodné nebo vyhrazené pro kotvení lodí.
+    Toto místo má zpravidla vhodné podmínky dna, hloubku a ochranu před vlnobitím. Správná odpověď je tedy „kotviště".
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Symboly používané na námořních mapách jsou mezinárodně standardizovány publikací <strong>INT 1 (IHO Chart Specifications)</strong>, konkrétně sekce <em>N — Přístavy a přístavní zařízení</em>.
+    Symbol kotvy (♜ ve schematické podobě) se v tomto standardu jednoznačně vztahuje ke kotvišti (anglicky <em>anchorage</em>).
+  </p>
+  <p>
+    Odlišit je třeba dva blízké symboly:
+  </p>
+  <ul>
+    <li><strong>Kotviště</strong> — samotný symbol kotvy, případně doplněný o číslo nebo ohraničující kruh/oblast.</li>
+    <li><strong>Kotvení zakázáno</strong> — symbol kotvy přeškrtnutý červenou diagonální čarou (nebo zkratkou „No anchoring" / „⚓" s křížem).</li>
+    <li><strong>Stanoviště lodivoda</strong> — označuje se odlišným symbolem (typicky vlajka nebo zkratka „Pilot").</li>
+  </ul>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center; margin: 1em 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="420" height="180" role="img" aria-label="Porovnání námořních symbolů: kotviště, kotvení zakázáno, stanoviště lodivoda">
+
+      <!-- Kotviště -->
+      <g transform="translate(60,20)">
+        <!-- Kotva -->
+        <line x1="30" y1="15" x2="30" y2="85" stroke="#222" stroke-width="4"/>
+        <line x1="10" y1="30" x2="50" y2="30" stroke="#222" stroke-width="4"/>
+        <circle cx="30" cy="12" r="6" fill="none" stroke="#222" stroke-width="3"/>
+        <path d="M10,85 Q30,100 50,85" fill="none" stroke="#222" stroke-width="4"/>
+        <circle cx="10" cy="85" r="4" fill="#222"/>
+        <circle cx="50" cy="85" r="4" fill="#222"/>
+        <text x="30" y="120" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif">Kotviště</text>
+        <text x="30" y="135" text-anchor="middle" font-size="11" fill="#666" font-family="sans-serif">(symbol kotvy)</text>
+      </g>
+
+      <!-- Kotvení zakázáno -->
+      <g transform="translate(180,20)">
+        <!-- Kotva -->
+        <line x1="30" y1="15" x2="30" y2="85" stroke="#555" stroke-width="4"/>
+        <line x1="10" y1="30" x2="50" y2="30" stroke="#555" stroke-width="4"/>
+        <circle cx="30" cy="12" r="6" fill="none" stroke="#555" stroke-width="3"/>
+        <path d="M10,85 Q30,100 50,85" fill="none" stroke="#555" stroke-width="4"/>
+        <circle cx="10" cy="85" r="4" fill="#555"/>
+        <circle cx="50" cy="85" r="4" fill="#555"/>
+        <!-- Přeškrtnutí -->
+        <line x1="5" y1="5" x2="55" y2="105" stroke="#d00" stroke-width="5"/>
+        <text x="30" y="120" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif">Kotvení zakázáno</text>
+        <text x="30" y="135" text-anchor="middle" font-size="11" fill="#666" font-family="sans-serif">(kotva + červený kříž)</text>
+      </g>
+
+      <!-- Stanoviště lodivoda -->
+      <g transform="translate(315,20)">
+        <!-- Vlajka / Pilot symbol -->
+        <line x1="30" y1="15" x2="30" y2="90" stroke="#222" stroke-width="4"/>
+        <polygon points="30,15 70,30 30,45" fill="#1a4fa0"/>
+        <text x="30" y="110" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif">Stanoviště</text>
+        <text x="30" y="125" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif">lodivoda</text>
+        <text x="30" y="141" text-anchor="middle" font-size="11" fill="#666" font-family="sans-serif">(vlajka / Pilot)</text>
+      </g>
+
+      <!-- Popisky nahoře -->
+      <text x="90" y="14" text-anchor="middle" font-size="12" fill="#1a4fa0" font-weight="bold" font-family="sans-serif">✓ Správný symbol</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování plavby nebo vstupu do přístavu námořník vyhledá na mapě symbol kotvy, aby identifikoval vhodné místo pro kotvení.
+    Kotviště může být volné (pro každého) nebo vyhrazené (s číslem odkazujícím na přístavní řád). Je zásadní neplaměst symbol kotviště se zákazem kotvení — porušení zákazu kotvení může vést k poškození podmořských kabelů, potrubí nebo ekologicky chráněného dna.
+  </p>
+  <p>
+    V praxi platí: pokud mapa zobrazuje přeškrtnutou kotvu nebo text „No anchoring", je kotvení v dané oblasti <em>zakázáno</em>. Samotná (nepřeškrtnutá) kotva vždy znamená povolené kotviště.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO INT 1</strong> — Mezinárodní standard námořních mapových symbolů a zkratek, sekce N (Přístavy), symbol N10–N12 (Anchorage / No anchoring).</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — obecná úprava povinností při plavbě v námořních vodách.</li>
+    <li><strong>COLREG 1972</strong> — Mezinárodní pravidla pro zabránění srážkám na moři (doplňkový kontext bezpečnosti kotvení).</li>
+  </ol>
+</article>

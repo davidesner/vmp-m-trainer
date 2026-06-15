@@ -1,0 +1,73 @@
+<article class="vmp-explanation">
+  <h2>Znak potrubí pod vodou na námořní mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>„potrubí pod vodou"</strong>. Zobrazený znak — přerušovaná čára s šipkami směřujícími podél trasy — je standardním symbolem používaným na námořních mapách pro vyznačení podvodního potrubí (ropovody, plynovody, vodovodní přivaděče apod.). Popis v otázce odpovídá konvenci INT 1 (mezinárodní kartografické značky), kde jsou potrubí vedená pod mořským dnem označena právě touto přerušovanou šipkovou linií, přičemž zkratky „Oil" a „Gas" upřesňují obsah potrubí.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní mapy se řídí mezinárodně standardizovaným systémem značek definovaným v publikaci <strong>INT 1 – Symbols, Abbreviations and Terms used on Charts</strong> (vydávaná IHO – International Hydrographic Organization). Podvodní kabely a potrubí jsou v INT 1 zařazeny do sekce <em>L – Offshore Installations</em>.
+  </p>
+  <ul>
+    <li><strong>Podvodní potrubí (Submarine pipeline)</strong> — znázorňuje se přerušovanou čárou se šipkami (→→→) podél trasy. Může být doplněno popiskem „Oil", „Gas", „Water" apod.</li>
+    <li><strong>Podvodní kabel (Submarine cable)</strong> — znázorňuje se odlišnou přerušovanou čárou bez šipek, obvykle s popiskem „Cable".</li>
+    <li>Tyto prvky jsou pro plavidla důležité zejména z hlediska zákazu kotvení a vlečení sítí v jejich blízkosti.</li>
+  </ul>
+  <p>
+    Čerpací stanice pohonných hmot se na mapě vyznačuje jiným symbolem (obvykle kotva s pumpou nebo text „Fuel"), a hranice zákazu plavby se zobrazuje obvykle tečkovanou nebo čerchovanou čárou s textem nebo piktogramem zákazu.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Porovnání nejčastěji zaměňovaných mapových značek:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" style="max-width:480px;width:100%;font-family:sans-serif;font-size:13px;">
+    <!-- Potrubí pod vodou -->
+    <text x="10" y="30" font-weight="bold" fill="#1a1a1a">Potrubí pod vodou (správná odpověď)</text>
+    <!-- Linka s šipkami - Oil -->
+    <text x="10" y="55" fill="#555">Oil</text>
+    <line x1="50" y1="50" x2="400" y2="50" stroke="#333" stroke-width="1.5" stroke-dasharray="8,4"/>
+    <polygon points="110,45 125,50 110,55" fill="#333"/>
+    <polygon points="190,45 205,50 190,55" fill="#333"/>
+    <polygon points="270,45 285,50 270,55" fill="#333"/>
+    <polygon points="350,45 365,50 350,55" fill="#333"/>
+    <!-- Linka s šipkami - Gas -->
+    <text x="10" y="85" fill="#555">Gas</text>
+    <line x1="50" y1="80" x2="400" y2="80" stroke="#333" stroke-width="1.5" stroke-dasharray="8,4"/>
+    <polygon points="110,75 125,80 110,85" fill="#333"/>
+    <polygon points="190,75 205,80 190,85" fill="#333"/>
+    <polygon points="270,75 285,80 270,85" fill="#333"/>
+    <polygon points="350,75 365,80 350,85" fill="#333"/>
+
+    <line x1="10" y1="105" x2="470" y2="105" stroke="#ccc" stroke-width="1"/>
+
+    <!-- Podvodní kabel (pro srovnání) -->
+    <text x="10" y="130" font-weight="bold" fill="#1a1a1a">Podvodní kabel (pro srovnání)</text>
+    <line x1="50" y1="155" x2="400" y2="155" stroke="#555" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <text x="410" y="159" fill="#555">Cable</text>
+
+    <line x1="10" y1="175" x2="470" y2="175" stroke="#ccc" stroke-width="1"/>
+
+    <!-- Hranice zakazu plavby (pro srovnání) -->
+    <text x="10" y="195" font-weight="bold" fill="#1a1a1a">Hranice zákazu plavby (pro srovnání)</text>
+    <line x1="50" y1="210" x2="400" y2="210" stroke="#c00" stroke-width="2" stroke-dasharray="12,5"/>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování plavby a zejména při <strong>kotvení</strong> nebo <strong>vlečení sítí</strong> je nutné věnovat pozornost výskytu podvodních potrubí na mapě. Kotvení nad plynovodem nebo ropovou linkou může způsobit vážné poškození infrastruktury i bezpečnostní incident (únik ropy/plynu). V praxi platí:
+  </p>
+  <ul>
+    <li>Podél tras podvodních potrubí bývají vyhlášena ochranná pásma (typicky 500 m na každou stranu), kde je kotvení zakázáno.</li>
+    <li>Informace o potrubích a kabelech jsou rovněž publikovány v <em>Admiralty Sailing Directions</em> (Námořní pilotní knihy) a v <em>Notices to Mariners</em>.</li>
+    <li>Symboly se liší podle obsahu potrubí — zkratky Oil/Gas/Water jsou klíčové pro správné posouzení rizika.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO INT 1</strong> – Symbols, Abbreviations and Terms used on Charts, sekce L (Offshore Installations), položky L40–L44 (Submarine pipelines)</li>
+    <li><strong>IHO S-57</strong> – Transfer Standard for Digital Hydrographic Data (objektový katalog SBDARES)</li>
+    <li><strong>SOLAS 1974</strong>, kap. V (Safety of Navigation) – povinnost mít na palubě aktuální navigační mapy</li>
+    <li><strong>Admiralty Chart 5011</strong> – Symbols and Abbreviations used on Admiralty Charts</li>
+  </ol>
+</article>

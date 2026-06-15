@@ -1,0 +1,12 @@
+{
+  "qid": 210,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "SOLAS kapitola III pravidlo 37",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb.",
+    "COLREG 1972 pravidlo 37"
+  ],
+  "model": "claude-opus-4-7"
+}

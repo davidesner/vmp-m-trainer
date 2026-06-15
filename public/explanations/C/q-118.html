@@ -1,0 +1,102 @@
+<article class="vmp-explanation">
+  <h2>Odměřování námořních mil na mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Námořní míle se odměřují výhradně <strong>na svislém (zeměpisném) rámečku mapy</strong>, tj. na stupnicích zeměpisné šířky umístěných po levé a pravé straně mapy. Důvodem je, že 1 námořní míle odpovídá přesně 1 obloukové minutě zeměpisné šířky, a tato délka je po celé délce svislého rámečku konstantní.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní mapy jsou vytvářeny v <strong>Merkatorově projekci</strong>, v níž jsou poledníky rovnoběžné svislé čáry a rovnoběžky vodorovné čáry. V důsledku matematické vlastnosti této projekce se vzdálenosti na mapě <em>nevykreslují rovnoměrně</em>:
+  </p>
+  <ul>
+    <li><strong>Svislý rámeček</strong> (stupnice zeměpisné šířky) — měřítko odpovídá místní zeměpisné šířce; 1 minuta = 1 námořní míle, ale délka minuty v pixelech/mm roste směrem k pólům.</li>
+    <li><strong>Vodorovný rámeček</strong> (stupnice zeměpisné délky) — délka 1 minuty zeměpisné délky se zmenšuje s rostoucí šířkou (cos φ krát délka minuty šířky); na vodorovném rámečku tedy NELZE odečítat vzdálenosti v námořních mílích.</li>
+  </ul>
+  <p>
+    Proto se vzdálenost na mapě vždy odměřuje kružítkem a porovnává se se <strong>svislým rámečkem ve stejné zeměpisné šířce</strong>, jako je měřený úsek.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;width:100%;display:block;margin:1em auto;">
+    <!-- Mapa rámeček -->
+    <rect x="60" y="40" width="300" height="240" fill="#d6eaf8" stroke="#2874a6" stroke-width="2"/>
+    <!-- Svislé rámečky -->
+    <rect x="30" y="40" width="30" height="240" fill="#a9cce3" stroke="#2874a6" stroke-width="1"/>
+    <rect x="360" y="40" width="30" height="240" fill="#a9cce3" stroke="#2874a6" stroke-width="1"/>
+    <!-- Vodorovné rámečky -->
+    <rect x="60" y="10" width="300" height="30" fill="#d5f5e3" stroke="#1e8449" stroke-width="1"/>
+    <rect x="60" y="280" width="300" height="30" fill="#d5f5e3" stroke="#1e8449" stroke-width="1"/>
+
+    <!-- Stupnice na svislém rámečku vlevo (minuty zeměpisné šířky) -->
+    <line x1="42" y1="80" x2="58" y2="80" stroke="#2874a6" stroke-width="1.5"/>
+    <line x1="42" y1="120" x2="58" y2="120" stroke="#2874a6" stroke-width="1.5"/>
+    <line x1="42" y1="160" x2="58" y2="160" stroke="#2874a6" stroke-width="1.5"/>
+    <line x1="42" y1="200" x2="58" y2="200" stroke="#2874a6" stroke-width="1.5"/>
+    <line x1="42" y1="240" x2="58" y2="240" stroke="#2874a6" stroke-width="1.5"/>
+    <text x="44" y="78" font-size="9" fill="#1a5276">φ+3'</text>
+    <text x="44" y="118" font-size="9" fill="#1a5276">φ+2'</text>
+    <text x="44" y="158" font-size="9" fill="#1a5276">φ+1'</text>
+    <text x="44" y="198" font-size="9" fill="#1a5276">φ</text>
+
+    <!-- Šipka a popisek: správně -->
+    <line x1="45" y1="160" x2="45" y2="200" stroke="#e74c3c" stroke-width="2.5" marker-end="url(#arr)"/>
+    <line x1="45" y1="200" x2="45" y2="160" stroke="#e74c3c" stroke-width="2.5"/>
+    <text x="2" y="183" font-size="9" fill="#c0392b" font-weight="bold">1 NM</text>
+
+    <!-- Kružítko na mapě -->
+    <circle cx="160" cy="190" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <circle cx="200" cy="150" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <line x1="160" y1="190" x2="200" y2="150" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="170" y="185" font-size="9" fill="#e74c3c">měřená vzdálenost</text>
+
+    <!-- Šipka přenesení na svislý rámeček -->
+    <line x1="160" y1="190" x2="55" y2="190" stroke="#8e44ad" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="200" y1="150" x2="55" y2="150" stroke="#8e44ad" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="63" y="173" font-size="9" fill="#8e44ad">→ přenést kružítkem</text>
+
+    <!-- Stupnice na vodorovném rámečku (šrafování = nelze použít) -->
+    <line x1="120" y1="10" x2="120" y2="40" stroke="#1e8449" stroke-width="1"/>
+    <line x1="180" y1="10" x2="180" y2="40" stroke="#1e8449" stroke-width="1"/>
+    <line x1="240" y1="10" x2="240" y2="40" stroke="#1e8449" stroke-width="1"/>
+    <line x1="300" y1="10" x2="300" y2="40" stroke="#1e8449" stroke-width="1"/>
+    <text x="90" y="28" font-size="9" fill="#1e8449">λ</text>
+    <text x="150" y="28" font-size="9" fill="#1e8449">λ+1'</text>
+    <text x="210" y="28" font-size="9" fill="#1e8449">λ+2'</text>
+    <line x1="100" y1="20" x2="355" y2="20" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <text x="115" y="36" font-size="8" fill="#c0392b">✗ nepoužívat pro míle</text>
+
+    <!-- Legenda -->
+    <rect x="62" y="44" width="140" height="38" fill="white" fill-opacity="0.85" rx="3"/>
+    <text x="67" y="56" font-size="8" fill="#2874a6" font-weight="bold">Svislý rámeček (lat.):</text>
+    <text x="67" y="67" font-size="8" fill="#2874a6">1' zeměpisné šířky = 1 NM</text>
+    <text x="67" y="78" font-size="8" fill="#c0392b">Vodorovný rámeček: NELZE</text>
+
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#e74c3c"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při práci s námořní mapou navigátor postupuje takto:
+  </p>
+  <ol>
+    <li>Kružítkem zachytí délku měřeného úseku (kurz nebo vzdálenost dvou bodů) na mapě.</li>
+    <li>Přenese kružítko na <strong>svislý rámeček</strong> (lat. stupnici) a to do oblasti <strong>stejné zeměpisné šířky</strong>, jako je měřený úsek — nikoli ke středu ani k okraji mapy.</li>
+    <li>Odečte počet obloukových minut — každá minuta = 1 námořní míle.</li>
+  </ol>
+  <p>
+    Při měření ve vyšších zeměpisných šířkách je obzvláště důležité přikládat kružítko ke <em>správné části</em> svislého rámečku, protože v Merkatorově projekci se minuty šířky (a tedy i fyzická délka NM v pixelech) s rostoucí šířkou zvětšují.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>Bowditch — American Practical Navigator</strong>, kap. 2 (Charts and Projections): odměřování vzdáleností na Merkatorových mapách.</li>
+    <li><strong>Admiralty Manual of Navigation</strong>, sv. I, kap. 3: používání námořních map, stupnice zeměpisné šířky pro odměřování NM.</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o námořní plavbě: obecné požadavky na navigační přípravu na moři.</li>
+  </ol>
+</article>

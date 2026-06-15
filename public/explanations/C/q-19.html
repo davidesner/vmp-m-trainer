@@ -1,0 +1,93 @@
+<article class="vmp-explanation">
+  <h2>Povinnosti malých lodí a plachetnic v úzkém průplavu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že loď kratší 20 m nebo plachetnice
+    <strong>nesmí ztěžovat průjezd lodi, která může bezpečně plout pouze v hranicích úzkého průplavu nebo plavební dráhy.</strong>
+    Toto pravidlo chrání větší plavidla, která jsou z důvodu svého ponoru či rozměrů odkázána výhradně na plavební dráhu —
+    malá loď se jim musí vyhnout, nikoliv naopak.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Pravidlo pochází z <strong>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři), Pravidlo 9 — Úzké průplavy</strong>.
+    Odstavec <em>9(b)</em> stanoví: plavidlo kratší 20 m a plachetnice nesmí ztěžovat průjezd plavidla, které může bezpečně plout pouze v hranicích úzkého průplavu nebo plavební dráhy.
+  </p>
+  <p>
+    Klíčové pojmy:
+  </p>
+  <ul>
+    <li><strong>Úzký průplav / plavební dráha</strong> — vymezená část vodní plochy, kde mají velká plavidla omezenou manévrovací schopnost.</li>
+    <li><strong>„Může bezpečně plout pouze v hranicích"</strong> — tzn. plavidlo je kvůli ponoru, délce nebo šířce fyzicky nuceno držet plavební dráhu. Typicky jde o kontejnerové lodě, tankery nebo hluboko ponořené nákladní lodě.</li>
+    <li><strong>Malá loď / plachetnice</strong> — ty mají dostatek prostoru a manévrovatelnosti, aby se velké lodi vyhnuly mimo plavební dráhu.</li>
+  </ul>
+  <p>
+    Druhá možnost (zvukový signál „jakýkoli dostatečně účinný") je nesprávná — COLREG Pravidlo 9(f) hovoří o specifickém signálu, ale ten vydává plavidlo <em>větší než 20 m</em> při obavě o bezpečný průjezd, nikoli malá loď obecně.
+    Třetí možnost (jeden prodloužený tón + dva krátké) je signál rybářského plavidla v úzkém průplavu dle Pravidla 9(c), nikoliv povinnost malé lodi nebo plachetnice.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" aria-label="Schéma úzkého průplavu — malá loď se vyhýbá velké lodi">
+    <!-- Plavební dráha (modré pruhy) -->
+    <rect x="0" y="70" width="480" height="60" fill="#cce5ff" rx="0"/>
+    <line x1="0" y1="70" x2="480" y2="70" stroke="#2980b9" stroke-width="2" stroke-dasharray="10,5"/>
+    <line x1="0" y1="130" x2="480" y2="130" stroke="#2980b9" stroke-width="2" stroke-dasharray="10,5"/>
+    <text x="10" y="65" font-size="11" fill="#2980b9" font-family="sans-serif">hranice plavební dráhy</text>
+    <text x="10" y="145" font-size="11" fill="#2980b9" font-family="sans-serif">hranice plavební dráhy</text>
+
+    <!-- Velká loď (jedoucí doprava) -->
+    <g transform="translate(60,82)">
+      <rect x="0" y="0" width="120" height="36" fill="#e67e22" rx="4"/>
+      <polygon points="120,0 140,18 120,36" fill="#d35400"/>
+      <text x="10" y="22" font-size="11" fill="white" font-family="sans-serif" font-weight="bold">Velká loď</text>
+      <text x="10" y="34" font-size="9" fill="white" font-family="sans-serif">(omezena dráhou)</text>
+    </g>
+    <!-- Šipka velké lodi -->
+    <line x1="205" y1="100" x2="230" y2="100" stroke="#d35400" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- Malá loď (vyhýbá se nad dráhou) -->
+    <g transform="translate(310,30)">
+      <polygon points="0,20 60,0 60,30 0,40" fill="#27ae60" rx="3"/>
+      <text x="5" y="18" font-size="10" fill="white" font-family="sans-serif">Malá loď</text>
+      <text x="5" y="30" font-size="9" fill="white" font-family="sans-serif">(&lt; 20 m)</text>
+    </g>
+    <!-- Šipka malé lodi — vyhýbá se ven z dráhy -->
+    <line x1="350" y1="55" x2="370" y2="40" stroke="#27ae60" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr2)"/>
+
+    <!-- Legenda -->
+    <text x="290" y="165" font-size="11" fill="#c0392b" font-family="sans-serif" font-weight="bold">Malá loď musí uvolnit cestu!</text>
+
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#d35400"/>
+      </marker>
+      <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Jachta nebo motorový člun kratší 20 m, který se pohybuje poblíž úzkého průplavu (např. přístavní vjezd, řeka, průlivová plavební dráha),
+    musí sledovat dopravní situaci a aktivně manévrovat tak, aby nepřekážel velké lodi jedoucí v dráze.
+    V praxi to znamená:
+  </p>
+  <ul>
+    <li>Sledovat provoz na VHF a AIS.</li>
+    <li>Přejíždět průplav co nejrychleji a v pravém úhlu (COLREG 9(d)).</li>
+    <li>Nevstupovat do plavební dráhy, pokud to není nutné.</li>
+    <li>V případě potřeby zastavit, zpomalit nebo odklonit se zcela z dráhy.</li>
+  </ul>
+  <p>
+    Toto pravidlo se uplatňuje například ve Finském zálivu, Lamanšském průlivu, v blízkosti přístavů Rotterdam, Hamburg nebo při průjezdu Suezským či Panamským průplavem.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Pravidlo 9 (Úzké průplavy), odst. (b): povinnost malých plavidel a plachetnic neztěžovat průjezd.</li>
+    <li>COLREG 1972 — Pravidlo 9 (Úzké průplavy), odst. (c): zvukový signál rybářského plavidla (pro kontext nesprávných možností).</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — § 28 (povinnosti velitele a pravidla plavby).</li>
+  </ol>
+</article>

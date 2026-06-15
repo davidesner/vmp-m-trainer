@@ -1,0 +1,88 @@
+<article class="vmp-explanation">
+  <h2>Plavba v podmínkách snížené viditelnosti</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že každé plavidlo musí <strong>pečlivě dbát na převažující podmínky a okolnosti snížené viditelnosti</strong>. Jde o obecnou povinnost přizpůsobit chování lodě aktuální situaci — rychlost, záchytnost, hlídku i zvukovou signalizaci — bez automatického zastavování motorů či absolutního zákazu noční plavby.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Pravidlo 19 COLREG 1972 (<em>Mezinárodní pravidla pro zabránění srážkám na moři</em>) se celé věnuje plavbě za snížené viditelnosti. Stanoví, že plavidlo musí:
+  </p>
+  <ul>
+    <li>plavit se bezpečnou rychlostí přizpůsobenou podmínkám (pravidlo 6 COLREG),</li>
+    <li>být připraveno kdykoli zastavit na vzdálenosti odpovídající aktuální dohlednosti,</li>
+    <li>dávat předepsané zvukové signály (pravidlo 35 COLREG) — mlhový signál každé 2 minuty pro plavidlo s pohonem v pohybu,</li>
+    <li>držet náležitou hlídku (pravidlo 5 COLREG).</li>
+  </ul>
+  <p>
+    Pravidlo 19 výslovně <strong>nezakazuje</strong> plavbu a nezavádí povinnost vypínat motory — naopak plavidlo musí být schopno manévrovat. Odpověď o vypnutí motorů je proto nesprávná. Rovněž neexistuje žádný zákaz plavby mezi západem a východem slunce — noční plavba je zcela přípustná.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" width="480" height="220" aria-label="Diagram povinností při snížené viditelnosti">
+    <!-- Pozadí -->
+    <rect width="480" height="220" fill="#f0f4f8" rx="10"/>
+    <!-- Mlhový efekt -->
+    <rect x="0" y="0" width="480" height="220" fill="url(#fog)" rx="10" opacity="0.3"/>
+    <defs>
+      <linearGradient id="fog" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#cdd8e3;stop-opacity:1"/>
+        <stop offset="50%" style="stop-color:#e8eef4;stop-opacity:1"/>
+        <stop offset="100%" style="stop-color:#cdd8e3;stop-opacity:1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Loď (zjednodušený tvar) -->
+    <polygon points="80,140 60,160 180,160 170,140" fill="#3a5f8a" rx="4"/>
+    <rect x="100" y="120" width="50" height="22" fill="#2d4d73"/>
+    <!-- Stěžeň -->
+    <line x1="125" y1="80" x2="125" y2="120" stroke="#2d4d73" stroke-width="2"/>
+    <!-- Mlhový signál vlnky -->
+    <text x="150" y="98" font-size="11" fill="#555">))) mlhový</text>
+    <text x="150" y="112" font-size="11" fill="#555">    signál</text>
+
+    <!-- Šipka dopředu -->
+    <line x1="180" y1="150" x2="240" y2="150" stroke="#2d7a2d" stroke-width="2" stroke-dasharray="5,4"/>
+    <polygon points="240,145 252,150 240,155" fill="#2d7a2d"/>
+    <text x="188" y="144" font-size="10" fill="#2d7a2d">bezpečná</text>
+    <text x="190" y="156" font-size="10" fill="#2d7a2d">rychlost</text>
+
+    <!-- Dohlednost: šrafovaná oblast -->
+    <rect x="260" y="130" width="90" height="40" fill="#e0e0e0" rx="6" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="275" y="148" font-size="10" fill="#666">omezená</text>
+    <text x="272" y="162" font-size="10" fill="#666">dohlednost</text>
+
+    <!-- Tři klíčové povinnosti jako boxy -->
+    <rect x="10" y="10" width="140" height="30" fill="#2d7a2d" rx="5"/>
+    <text x="80" y="30" font-size="11" fill="white" text-anchor="middle">Dbát na podmínky ✓</text>
+
+    <rect x="170" y="10" width="130" height="30" fill="#b22222" rx="5"/>
+    <text x="235" y="30" font-size="11" fill="white" text-anchor="middle">Vypnout motory ✗</text>
+
+    <rect x="320" y="10" width="148" height="30" fill="#b22222" rx="5"/>
+    <text x="394" y="30" font-size="11" fill="white" text-anchor="middle">Zákaz noční plavby ✗</text>
+
+    <!-- Popis -->
+    <text x="240" y="200" font-size="10" fill="#444" text-anchor="middle">COLREG 1972, pravidla 5, 6, 19, 35</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi to znamená, že velitel plavidla musí při mlze, hustém dešti nebo špatné viditelnosti:
+  </p>
+  <ol>
+    <li><strong>Snížit rychlost</strong> tak, aby byl schopen zastavit na polovině aktuální dohlednosti.</li>
+    <li><strong>Zapnout navigační světla</strong> (pravidlo 20 COLREG) — ta musí svítit od západu do východu slunce a za snížené viditelnosti kdykoli.</li>
+    <li><strong>Vysílat mlhové signály</strong> každé 2 minuty (jeden dlouhý tón pro plavidlo s vlastním pohonem v pohybu).</li>
+    <li><strong>Posílit hlídku</strong> — vizuální i zvukovou, případně zapnout radar a sledovat AIS.</li>
+    <li>Motory ponechat v chodu — plavidlo musí být schopno manévrovat a v případě nebezpečí urychleně zastavit nebo změnit kurz.</li>
+  </ol>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, pravidlo 5 (hlídka), pravidlo 6 (bezpečná rychlost), pravidlo 19 (plavba za snížené viditelnosti), pravidlo 20 (navigační světla), pravidlo 35 (zvukové signály za snížené viditelnosti)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 30 (povinnosti velitele lodi)</li>
+  </ol>
+</article>

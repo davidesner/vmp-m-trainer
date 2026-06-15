@@ -1,0 +1,72 @@
+<article class="vmp-explanation">
+  <h2>Jak se vyvarovat srážky na moři — manévrovací zásady</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že je třeba se vyvarovat <strong>„řady postupných změn kursu a nebo rychlosti o malé hodnotě."</strong>
+    Malé, postupné změny jsou pro jiná plavidla obtížně pozorovatelné radarem ani opticky a nevyjadřují jednoznačný záměr.
+    Naopak, opatření musí být <em>včasná, výrazná a jednoznačná</em>, aby protistrana mohla reagovat.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Pravidlo 8 COLREG 1972 (Opatření k zabránění srážce) výslovně stanoví:
+  </p>
+  <blockquote>
+    <p>
+      <em>Pravidlo 8(b):</em> Každá změna kursu nebo rychlosti, nebo obou veličin, k zabránění srážce musí být, pokud okolnosti dovolují, dostatečně velká, aby ji druhé plavidlo mohlo snadno postřehnout; je třeba vyvarovat se řady malých změn kursu nebo rychlosti.
+    </p>
+  </blockquote>
+  <p>
+    Pravidlo 8(a) dále požaduje, aby opatření byla přijata <em>včas</em> v souladu s námořnickou praxí.
+    Pravidlo 8(c) upřesňuje, že pokud je dostatek prostoru, může být samotná výrazná změna kursu nejúčinnějším opatřením.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;background:#f0f7ff;border-radius:8px;padding:8px;">
+    <!-- Špatně: malé postupné změny -->
+    <text x="20" y="22" style="font-size:13px;font-weight:bold;fill:#c0392b;">Nevhodné — malé postupné změny</text>
+    <!-- Původní kurs -->
+    <line x1="30" y1="60" x2="240" y2="60" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Plavidlo postupně kličkuje -->
+    <polyline points="30,60 80,58 120,54 160,50 200,47 240,45"
+      stroke="#c0392b" stroke-width="2.5" fill="none"/>
+    <!-- Šipka na konci -->
+    <polygon points="240,45 232,41 232,49" fill="#c0392b"/>
+    <!-- Druhé plavidlo přijíždí zepředu -->
+    <line x1="270" y1="45" x2="250" y2="60" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="42" y="90" style="font-size:11px;fill:#c0392b;">Malé změny — ostatní nepostřehnou záměr!</text>
+
+    <!-- Správně: výrazná jednoznačná změna -->
+    <text x="20" y="135" style="font-size:13px;font-weight:bold;fill:#27ae60;">Vhodné — výrazná a jednoznačná změna</text>
+    <!-- Původní kurs -->
+    <line x1="30" y1="175" x2="240" y2="175" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Plavidlo výrazně odvrací -->
+    <polyline points="30,175 100,175 140,215 200,220 240,218"
+      stroke="#27ae60" stroke-width="2.5" fill="none"/>
+    <polygon points="240,218 232,213 232,221" fill="#27ae60"/>
+    <!-- Druhé plavidlo -->
+    <line x1="265" y1="170" x2="245" y2="178" stroke="#555" stroke-width="2"/>
+    <text x="42" y="235" style="font-size:11px;fill:#27ae60;">Výrazná změna — záměr je jasně patrný!</text>
+
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li>Při vyhýbání se jinému plavidlu změňte kurs o nejméně 30–40° najednou — taková změna je zřetelně vidět na radarovém displeji protéká i opticky.</li>
+    <li>Pokud snižujete rychlost, snižte ji <em>výrazně</em> (nebo úplně zastavte), nikoliv po malých přírůstcích.</li>
+    <li>Na přeplněných vodách nebo za snížené viditelnosti je jednoznačná akce obzvláště důležitá — ostatní musí mít dostatek času na reakci.</li>
+    <li>Kombinace malých změn kursu a rychlosti může navíc vyvolat zdání, že se plavidlo pohybuje nepravidelně, a zvýšit riziko srážky.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Mezinárodní pravidla pro zabránění srážkám na moři, Pravidlo 8 (Opatření k zabránění srážce), zejména odst. (b).</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě, § 9 (povinnost dodržovat COLREG).</li>
+  </ol>
+</article>

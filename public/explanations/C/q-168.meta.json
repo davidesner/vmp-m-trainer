@@ -1,0 +1,7 @@
+{
+  "qid": 168,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["WMO — International Cloud Atlas, WMO-No. 407", "Zákon č. 61/2000 Sb., o námořní plavbě", "SOLAS, kapitola V, pravidlo 5", "Bowditch — American Practical Navigator"],
+  "model": "claude-opus-4-7"
+}
