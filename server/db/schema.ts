@@ -28,6 +28,7 @@ export const attempts = sqliteTable(
     userId: text('user_id')
       .notNull()
       .references(() => users.id, { onDelete: 'cascade' }),
+    testId: text('test_id').notNull().default('M'),  // 'M' | 'C' | ...
     questionId: integer('question_id').notNull(),
     correct: integer('correct', { mode: 'boolean' }).notNull(),
     mode: text('mode', { enum: ['test', 'practice'] }).notNull(),
@@ -35,6 +36,7 @@ export const attempts = sqliteTable(
   },
   t => ({
     userIdIdx: index('attempts_user_id_idx').on(t.userId),
+    userTestIdx: index('attempts_user_test_idx').on(t.userId, t.testId),
   }),
 )
 
@@ -45,6 +47,7 @@ export const testHistory = sqliteTable(
     userId: text('user_id')
       .notNull()
       .references(() => users.id, { onDelete: 'cascade' }),
+    testId: text('test_id').notNull().default('M'),  // 'M' | 'C' | ...
     at: text('at').notNull(),
     score: integer('score').notNull(),
     total: integer('total').notNull(),
@@ -54,5 +57,6 @@ export const testHistory = sqliteTable(
   },
   t => ({
     userIdAtIdx: index('test_history_user_id_at_idx').on(t.userId, t.at),
+    userTestIdx: index('test_history_user_test_idx').on(t.userId, t.testId),
   }),
 )

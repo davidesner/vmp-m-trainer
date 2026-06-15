@@ -44,7 +44,7 @@ describe('POST /api/feedback', () => {
     const res = await app.request('/api/feedback', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ qid: 1, message: 'wrong' }),
+      body: JSON.stringify({ testId: 'M', qid: 1, message: 'wrong' }),
     })
     expect(res.status).toBe(401)
   })
@@ -55,7 +55,7 @@ describe('POST /api/feedback', () => {
     const res = await app.request('/api/feedback', {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie: ctx.cookie },
-      body: JSON.stringify({ qid: 'nope', message: 'wrong' }),
+      body: JSON.stringify({ testId: 'M', qid: 'nope', message: 'wrong' }),
     })
     expect(res.status).toBe(400)
   })
@@ -66,7 +66,7 @@ describe('POST /api/feedback', () => {
     const res = await app.request('/api/feedback', {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie: ctx.cookie },
-      body: JSON.stringify({ qid: 1, message: '   ' }),
+      body: JSON.stringify({ testId: 'M', qid: 1, message: '   ' }),
     })
     expect(res.status).toBe(400)
   })
@@ -81,7 +81,7 @@ describe('POST /api/feedback', () => {
     const res = await app.request('/api/feedback', {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie: ctx.cookie },
-      body: JSON.stringify({ qid: 42, message: 'tohle je špatně' }),
+      body: JSON.stringify({ testId: 'M', qid: 42, message: 'tohle je špatně' }),
     })
     expect(res.status).toBe(201)
     expect(await res.json()).toEqual({ url: 'https://github.com/x/y/issues/1' })
@@ -99,7 +99,7 @@ describe('POST /api/feedback', () => {
     const res = await app.request('/api/feedback', {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie: ctx.cookie },
-      body: JSON.stringify({ qid: 1, message: 'wrong' }),
+      body: JSON.stringify({ testId: 'M', qid: 1, message: 'wrong' }),
     })
     expect(res.status).toBe(502)
   })
@@ -111,14 +111,14 @@ describe('POST /api/feedback', () => {
       const res = await app.request('/api/feedback', {
         method: 'POST',
         headers: { 'content-type': 'application/json', cookie: ctx.cookie },
-        body: JSON.stringify({ qid: 1, message: 'wrong' }),
+        body: JSON.stringify({ testId: 'M', qid: 1, message: 'wrong' }),
       })
       expect(res.status).toBe(201)
     }
     const res = await app.request('/api/feedback', {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie: ctx.cookie },
-      body: JSON.stringify({ qid: 1, message: 'wrong' }),
+      body: JSON.stringify({ testId: 'M', qid: 1, message: 'wrong' }),
     })
     expect(res.status).toBe(429)
   })

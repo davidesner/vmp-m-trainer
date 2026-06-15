@@ -22,8 +22,12 @@ export function feedbackRoutes(deps: FeedbackDeps = {}) {
       return c.json({ error: 'too many feedback submissions' }, 429, { 'retry-after': String(rl.retryAfterSec) })
     }
 
-    const body = await c.req.json().catch(() => null) as { qid?: unknown; message?: unknown } | null
+    const body = await c.req.json().catch(() => null) as { testId?: unknown; qid?: unknown; message?: unknown } | null
     if (!body) return c.json({ error: 'bad request' }, 400)
+    const TEST_IDS = ['M', 'C'] as const
+    if (typeof body.testId !== 'string' || !TEST_IDS.includes(body.testId as typeof TEST_IDS[number])) {
+      return c.json({ error: 'bad testId' }, 400)
+    }
     if (typeof body.qid !== 'number' || !Number.isFinite(body.qid) || body.qid <= 0) {
       return c.json({ error: 'bad qid' }, 400)
     }
@@ -40,8 +44,9 @@ export function feedbackRoutes(deps: FeedbackDeps = {}) {
       return c.json({ error: 'feedback not configured on server' }, 503)
     }
 
-    const title = `Vysvětlení k otázce #${body.qid}: zpětná vazba`
+    const title = `[${body.testId}] Vysvětlení k otázce #${body.qid}: zpětná vazba`
     const issueBody = [
+      `**Kategorie:** ${body.testId}`,
       `**Otázka:** #${body.qid}`,
       '',
       '**Zpětná vazba:**',
@@ -49,7 +54,7 @@ export function feedbackRoutes(deps: FeedbackDeps = {}) {
       message,
       '',
       '---',
-      '_Reported via VMP M Trenažér._',
+      '_Reported via VMP Trenažér._',
     ].join('\n')
 
     const result = await caller({ title, body: issueBody })

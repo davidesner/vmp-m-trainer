@@ -1,0 +1,4805 @@
+{
+  "testId": "C",
+  "version": "C-2015",
+  "name": "Příbřežní plavba na moři",
+  "scrapedAt": "2026-06-15T18:45:50.178Z",
+  "groups": [
+    {
+      "id": "mezinarodni-pravo",
+      "name": "Mezinárodní právo a předpisy",
+      "zkratky": [
+        "MP1",
+        "MP2",
+        "MP3",
+        "MP4"
+      ]
+    },
+    {
+      "id": "navigace",
+      "name": "Navigace a značení mořských vodních cest",
+      "zkratky": [
+        "N1",
+        "N2",
+        "N3",
+        "N4"
+      ]
+    },
+    {
+      "id": "meteorologie",
+      "name": "Meteorologie",
+      "zkratky": [
+        "M1"
+      ]
+    },
+    {
+      "id": "bezpecnost",
+      "name": "Bezpečnost a záchrana na moři",
+      "zkratky": [
+        "Z1"
+      ]
+    }
+  ],
+  "testStructure": [
+    {
+      "groups": [
+        "mezinarodni-pravo"
+      ],
+      "count": 11
+    },
+    {
+      "groups": [
+        "navigace"
+      ],
+      "count": 7
+    },
+    {
+      "groups": [
+        "meteorologie"
+      ],
+      "count": 7
+    },
+    {
+      "groups": [
+        "bezpecnost"
+      ],
+      "count": 3
+    }
+  ],
+  "passing": {
+    "score": 24,
+    "total": 28,
+    "durationMin": 25
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Mezinárodní pravidla pro zabránění srážkám na moři se vztahují:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "na všechna plavidla."
+        },
+        {
+          "key": "b",
+          "text": "jen na plavidla s pohonem."
+        },
+        {
+          "key": "c",
+          "text": "jen na plavidla za plavby."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 2,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Mezinárodní pravidla pro zabránění srážkám na moři platí:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "na volných mořích a na všech vodách s nimi spojených."
+        },
+        {
+          "key": "b",
+          "text": "na mořích, kde se projevuje příliv nad 0,3 m."
+        },
+        {
+          "key": "c",
+          "text": "na mořích mimo teritoriální vody."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 3,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Odpovědnost za následky vzniklé neplněním mezinárodních pravidel pro zabránění srážkám na moři nese:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "majitel, velitel nebo posádka lodě."
+        },
+        {
+          "key": "b",
+          "text": "stát, pod jehož vlajkou je loď provozována."
+        },
+        {
+          "key": "c",
+          "text": "pojišťovna, u níž uzavřel majitel smlouvu o pojištění odpovědnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 4,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Loď provádějící bagrovací, hydrografické a podmořské práce je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlo s omezenou manévrovací schopností."
+        },
+        {
+          "key": "b",
+          "text": "neovladatelné plavidlo."
+        },
+        {
+          "key": "c",
+          "text": "plavidlo omezené svým ponorem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 5,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Výraz za plavby znamená:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "loď není zakotvena, vyvázána ani nesedí na dně."
+        },
+        {
+          "key": "b",
+          "text": "loď je vyvázána."
+        },
+        {
+          "key": "c",
+          "text": "loď je zakotvena."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 6,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Při mlze, mlhovém oparu, padajícím sněhu, silném dešti, písečné bouři se označuje tento stav jako:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "snížená viditelnost."
+        },
+        {
+          "key": "b",
+          "text": "podmínky pro plavbu s omezenou manévrovací schopností."
+        },
+        {
+          "key": "c",
+          "text": "snížená manévrovací schopnost plavidla."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 7,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Každá loď musí vést nepřetržité a zodpovědné vizuální a sluchové pozorování, aby:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "bylo možno plně zhodnotit situaci a nebezpečí srážky."
+        },
+        {
+          "key": "b",
+          "text": "neminula přístav."
+        },
+        {
+          "key": "c",
+          "text": "neztratila za snížené viditelnosti z dohledu pobřeží."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 8,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Nepřetržité zodpovědné, vizuální a sluchové pozorování musí vést:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "každá loď podle převládajících okolností a podmínek."
+        },
+        {
+          "key": "b",
+          "text": "každá loď, ale pouze v noci a za snížené viditelnosti."
+        },
+        {
+          "key": "c",
+          "text": "pouze malá plavidla, zvláště pak v noci a za snížené viditelnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 9,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Pro stanovení bezpečné rychlosti je nutno brát v úvahu u všech plavidel:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "stav viditelnosti, hustotu provozu včetně soustředění rybářských či jiných lodí a manévrovací schopnost plavidla s ohledem na vzdálenost potřebnou k úplnému zastavení plavidla."
+        },
+        {
+          "key": "b",
+          "text": "hodnotu plavidla a počet osob na plavidle."
+        },
+        {
+          "key": "c",
+          "text": "hodnotu nákladu a vzdálenost od místa bezpečného přistání."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 10,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Všech dostupných prostředků k určení existence nebezpečí srážky musí použít:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "každá loď, podle převládajících okolností a podmínek."
+        },
+        {
+          "key": "b",
+          "text": "každá loď, ale jen v noci a za snížené viditelnosti."
+        },
+        {
+          "key": "c",
+          "text": "pouze loď se strojním pohonem podle převládajících okolností a podmínek."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 11,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Jsou-li pochybnosti o existenci nebezpečí srážky, je třeba počítat s tím, že toto nebezpečí:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "existuje."
+        },
+        {
+          "key": "b",
+          "text": "neexistuje."
+        },
+        {
+          "key": "c",
+          "text": "existuje pouze v noci a za snížené viditelnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 12,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Nebezpečí srážky musí být pokládáno za jisté:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "nemění-li se výrazně náměr na přibližující se plavidlo."
+        },
+        {
+          "key": "b",
+          "text": "mění-li se výrazně náměr na jakékoli plavidlo před traversem."
+        },
+        {
+          "key": "c",
+          "text": "mění-li se výrazně náměr na přibližující se plavidlo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 13,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Při sblížení se s velmi velkou lodí nebo vlekem nebo při sblížení se s lodí na malou vzdálenost nebezpečí srážky může někdy existovat i při:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "výrazně se měnícím náměru."
+        },
+        {
+          "key": "b",
+          "text": "výrazně rostoucí vzdálenosti."
+        },
+        {
+          "key": "c",
+          "text": "výrazně se měnící viditelnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 14,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Pro zabránění srážce je třeba se vyvarovat:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "řady postupných změn kursu a nebo rychlosti o malé hodnotě."
+        },
+        {
+          "key": "b",
+          "text": "včasných a pozitivních opatření, zabraňujících srážce."
+        },
+        {
+          "key": "c",
+          "text": "výrazné změny kursu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 15,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Je-li dostatečně velká volná vodní plocha, je nejúčinnější opatření k zabránění srážce:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "dostatečně velká, včas provedená změna kursu, která nevyvolá přílišné přiblížení k jiným plavidlům."
+        },
+        {
+          "key": "b",
+          "text": "řada malých postupných změn kursu."
+        },
+        {
+          "key": "c",
+          "text": "okamžité přerušení plavby zastavením strojů nebo použitím zpětného chodu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 16,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Činnost podniknutá pro zabránění srážce s jiným plavidlem musí být taková, aby se plavidla minula:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "v bezpečné vzdálenosti."
+        },
+        {
+          "key": "b",
+          "text": "svými pravoboky."
+        },
+        {
+          "key": "c",
+          "text": "levými levoboky."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 17,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Je-li nutno zabránit srážce nebo získat více času k vyhodnocení situace, musí plavidlo:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zmenšit rychlost nebo přerušit plavbu zastavením hlavních strojů nebo použitím zpětného chodu hlavních strojů."
+        },
+        {
+          "key": "b",
+          "text": "okamžitě oznámit svoje pochybnosti nejméně pěti rychle za sebou jdoucími krátkými tóny houkačkou."
+        },
+        {
+          "key": "c",
+          "text": "zvětšit rychlost plavby, zvláště nemění-li se výrazně náměr na přibližující se plavidlo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 18,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Loď plující úzkým průplavem se musí držet:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "strany dráhy, která leží na straně jejího pravoboku."
+        },
+        {
+          "key": "b",
+          "text": "strany dráhy, která leží na straně jejího levoboku."
+        },
+        {
+          "key": "c",
+          "text": "mimo plavební dráhu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 19,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Loď kratší 20 m nebo plachetnice:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "nesmí ztěžovat průjezd lodi, která může bezpečně plout pouze v hranicích úzkého průplavu nebo plavební dráhy."
+        },
+        {
+          "key": "b",
+          "text": "musí v hranicích úzkého průplavu nebo plavební dráhy podávat jakýkoli dostatečně účinný zvukový signál."
+        },
+        {
+          "key": "c",
+          "text": "musí v hranicích úzkého průplavu podávat jeden prodloužený tón, po kterém následují dva krátké tóny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 20,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Loď provádějící lov ryb nesmí v hranicích úzkého průplavu nebo plavební dráhy ztěžovat průjezd:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "jakéhokoli plavidla plujícího v hranicích úzkého průplavu."
+        },
+        {
+          "key": "b",
+          "text": "lodi kratší 20 m plující v hranicích úzkého průplavu."
+        },
+        {
+          "key": "c",
+          "text": "plachetnici plující v hranicích úzkého průplavu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 21,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Přibližují-li se k sobě dvě plachetnice tak, že vzniká nebezpečí srážky, musí jedna z nich uvolnit cestu takto:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "má-li každá z nich vítr z jiné strany, pak loď mající vítr z levé strany musí uvolnit cestu druhé."
+        },
+        {
+          "key": "b",
+          "text": "mají-li obě vítr ze stejné strany, pak loď, která je na závětrné straně, musí uvolnit cestu lodi na návětrné straně."
+        },
+        {
+          "key": "c",
+          "text": "obě plachetnice změnit svůj směr plavby vlevo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 22,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Přibližují-li se k sobě dvě plachetnice tak, že vzniká nebezpečí srážky, musí jedna z nich uvolnit cestu takto:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "mají-li obě vítr ze stejné strany, pak loď, která je na návětrné straně, musí uvolnit cestu lodi na závětrné straně."
+        },
+        {
+          "key": "b",
+          "text": "má-li každá z nich vítr z jiné strany, pak loď mající vítr z pravé strany musí uvolnit cestu druhé."
+        },
+        {
+          "key": "c",
+          "text": "musí změnit svůj směr plavby tak, aby se vyvarovala křížení kursu před zádí plachetnice."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 23,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Jestliže plachetnice, mající vítr z levé strany, vidí druhou plachetnici z návětrné strany a nemůže přesně určit, z které strany má tato plachetnice vítr, musí:",
+      "image": "/data/images/C/q-23.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "jí uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "změnit směr plavby vpravo."
+        },
+        {
+          "key": "c",
+          "text": "změnit směr plavby vlevo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 24,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Jestliže plachetnice předjíždí loď se strojním pohonem, musí se:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice držet mimo dráhu lodi se strojním pohonem."
+        },
+        {
+          "key": "b",
+          "text": "loď se strojním pohonem držet mimo dráhu."
+        },
+        {
+          "key": "c",
+          "text": "plachetnice zastavit na vzdálenost odpovídající převládajícím okolnostem a podmínkám."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 25,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Každá loď předjíždějící jinou musí:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "se držet mimo dráhu lodi předjížděné."
+        },
+        {
+          "key": "b",
+          "text": "změnit svůj směr plavby vlevo tak, aby míjela druhou loď po pravé straně."
+        },
+        {
+          "key": "c",
+          "text": "změnit svůj směr plavby vpravo tak, aby míjela druhou loď po levé straně."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 26,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Loď bude považována za předjíždějící, přibližuje-li se k druhé lodi:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ze směru, který je víc, než 22,5 stupně za traversem."
+        },
+        {
+          "key": "b",
+          "text": "z traversu pravého nebo levého boku."
+        },
+        {
+          "key": "c",
+          "text": "ze směru, který je víc, než 22,5 stupně před traversem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 27,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Jsou-li pochybnosti o tom, zda se má loď považovat za předjíždějící:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "musí se tato za ni považovat a jednat podle toho."
+        },
+        {
+          "key": "b",
+          "text": "nesmí se tato za ni považovat."
+        },
+        {
+          "key": "c",
+          "text": "musí se tato za ni považovat, ale nemusí jednat podle toho."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 28,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Přibližují-li se k sobě dvě lodi se strojním pohonem v přímém nebo přibližně přímém směru tak, že vzniká nebezpečí srážky, musí každá z nich:",
+      "image": "/data/images/C/q-28.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "změnit svůj směr plavby vpravo tak, aby míjela druhou loď po levé straně."
+        },
+        {
+          "key": "b",
+          "text": "provést včasnou a rozhodnou akci k bezpečnému minutí lodi."
+        },
+        {
+          "key": "c",
+          "text": "změnit svůj směr plavby vlevo tak, aby míjela druhou loď po pravé straně."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 29,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Jestliže se křižují kursy dvou lodí se strojním pohonem tak, že vzniká nebezpečí srážky, musí:",
+      "image": "/data/images/C/q-29.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "loď mající druhou loď po své pravé straně, uvolnit cestu této lodi."
+        },
+        {
+          "key": "b",
+          "text": "každá z nich změnit svůj směr plavby tak, aby míjela druhou loď po pravé straně."
+        },
+        {
+          "key": "c",
+          "text": "loď, mající druhou loď po své levé straně, uvolnit cestu této lodi."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 30,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Loď, mající druhou loď po své pravé straně, musí uvolnit cestu této lodi, jestliže se křižují kursy:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "dvou lodí se strojním pohonem."
+        },
+        {
+          "key": "b",
+          "text": "jakýchkoli dvou lodí."
+        },
+        {
+          "key": "c",
+          "text": "plachetnice a lodě se strojním pohonem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 31,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Každá loď, která je podle mezinárodních pravidel pro zabránění srážkám na moři povinna uvolnit cestu druhé lodi, musí, pokud je to možné:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "provést včasnou a rozhodnou akci k bezpečnému minutí lodi."
+        },
+        {
+          "key": "b",
+          "text": "změnit směr plavby vpravo tak, aby míjela druhou loď po levé straně."
+        },
+        {
+          "key": "c",
+          "text": "včas oznámit svůj manévr zvukovým signálem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 32,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Tam, kde podle jakéhokoli pravidla pro zabránění srážkám na moři musí jedna z lodí uvolnit cestu, musí druhá loď:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "udržovat svůj směr a rychlost."
+        },
+        {
+          "key": "b",
+          "text": "vyvarovat se změny kursu vpravo."
+        },
+        {
+          "key": "c",
+          "text": "vyvarovat se změny kursu vlevo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 33,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Zjistí-li druhá loď, že loď, která je povinna uvolnit cestu, nejedná podle pravidel pro zabránění srážkám, může:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "sama přijmout opatření pro zabránění srážky vlastním vhodným manévrem."
+        },
+        {
+          "key": "b",
+          "text": "okamžitě změnit směr plavby vpravo."
+        },
+        {
+          "key": "c",
+          "text": "okamžitě změnit směr plavby vlevo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 34,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Jestliže se křižují kursy plachetnice a lodi se strojním pohonem tak, že vzniká nebezpečí srážky, musí:",
+      "image": "/data/images/C/q-34.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "loď se strojním pohonem uvolnit cestu plachetnici."
+        },
+        {
+          "key": "b",
+          "text": "plachetnice uvolnit cestu lodi se strojním pohonem."
+        },
+        {
+          "key": "c",
+          "text": "loď, mající druhou loď po své pravé straně, uvolnit cestu této lodi."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 35,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Jestliže se křižují kursy plachetnice a plavidla provádějícího lov ryb tak, že vzniká nebezpečí srážky, musí:",
+      "image": "/data/images/C/q-35.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice uvolnit cestu plavidlu provádějícímu lov ryb."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo provádějící lov ryb uvolnit cestu plachetnici."
+        },
+        {
+          "key": "c",
+          "text": "loď, mající druhou loď po své pravé straně, uvolnit cestu této lodi."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 36,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Plavidlo provádějící lov ryb za plavby musí, nakolik je to prakticky možné, uvolnit cestu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlu s omezenou manévrovací schopností."
+        },
+        {
+          "key": "b",
+          "text": "plachetnici za plavby."
+        },
+        {
+          "key": "c",
+          "text": "lodi se strojním pohonem za plavby."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 37,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Plavba lodí v podmínkách snížené viditelnost znamená:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plavba lodí, které nejsou ve vzájemném dohledu při plavbě v podmínkách snížené viditelnosti."
+        },
+        {
+          "key": "b",
+          "text": "plavba lodí, které jsou ve vzájemném dohledu."
+        },
+        {
+          "key": "c",
+          "text": "plavba lodí, které používají radar."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 38,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "V podmínkách snížené viditelnosti musí každé plavidlo:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plout bezpečnou rychlostí stanovenou přiměřeně k převažujícím podmínkám a okolnostem snížené viditelnosti."
+        },
+        {
+          "key": "b",
+          "text": "přerušit plavbu zastavením hlavních strojů nebo použitím zpětného chodu hlavních strojů."
+        },
+        {
+          "key": "c",
+          "text": "vyvarovat se změny kursu vlevo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 39,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Při plavbě lodí v podmínkách snížené viditelnosti musí:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "každé plavidlo pečlivě dbát na převažující podmínky a okolnosti snížené viditelnosti."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo bezpodmínečně vypnout chod motorů."
+        },
+        {
+          "key": "c",
+          "text": "tyto lodě dodržovat podmínky pro zákaz plavby v době mezi západem a východem slunce."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 40,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Pravidla týkající se světel musí být dodržena od:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "západu do východu slunce a po celou dobu plavby v podmínkách snížené viditelnosti."
+        },
+        {
+          "key": "b",
+          "text": "18.00 hod do 6.00 hod."
+        },
+        {
+          "key": "c",
+          "text": "podle plavební situace."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 41,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "V oblasti snížené viditelnosti nebo v její blízkosti, ve dne či v noci, musí být zvukové signály na plavidle podávány:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zvonem, houkačkou, nebo gongem."
+        },
+        {
+          "key": "b",
+          "text": "trubkou nebo trojtónem."
+        },
+        {
+          "key": "c",
+          "text": "píšťalkou nebo sirénou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 42,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Loď se strojním pohonem oznamuje plavidlu v dohledu manévr změny kursu vpravo:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "jedním krátkým tónem."
+        },
+        {
+          "key": "b",
+          "text": "jedním prodlouženým tónem."
+        },
+        {
+          "key": "c",
+          "text": "dvěma prodlouženými tóny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 43,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Při snížené viditelnosti musí dávat zvukový signál \"jeden prodloužený tón\" v intervalech kratších než dvě minuty:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "loď se strojním pohonem pohybující se vzhledem k vodě."
+        },
+        {
+          "key": "b",
+          "text": "loď se strojním pohonem nepohybující se vzhledem k vodě."
+        },
+        {
+          "key": "c",
+          "text": "plavidlo omezované svým ponorem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 44,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Nouzové signály slouží:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "k upozornění na nouzi a potřebu pomoci."
+        },
+        {
+          "key": "b",
+          "text": "k nácviku poplachu na plavidle."
+        },
+        {
+          "key": "c",
+          "text": "k identifikaci plavidla v nouzi."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 45,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Rakety nebo granáty, vypouštějící červené hvězdy, vypalované jednotlivě v krátkých intervalech znamenají:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "signál nouze a potřebu pomoci."
+        },
+        {
+          "key": "b",
+          "text": "oznámení o přeplutí rovníku."
+        },
+        {
+          "key": "c",
+          "text": "signál lodi zajišťující start nebo přistávání letadla, aby plula poloviční silou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 46,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Signál podávaný radiotelegraficky nebo jiným signalizačním způsobem, skládající se ze skupiny . . . _ _ _ . . . (SOS) v Morseově abecedě znamená:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "signál nouze a potřebu pomoci."
+        },
+        {
+          "key": "b",
+          "text": "žádost o povolení vjezdu do přístavu."
+        },
+        {
+          "key": "c",
+          "text": "žádost o sdělení polohy lodi."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 47,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Padáková raketa nebo ruční pochodeň dávající červené světlo znamená:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "signál nouze a potřebu pomoci."
+        },
+        {
+          "key": "b",
+          "text": "osvětlení prostoru při plavbě za snížené viditelnosti."
+        },
+        {
+          "key": "c",
+          "text": "optický signál pro plavidlo v dohledu, aby druhé plavidlo minulo na straně jeho pravoboku ."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 48,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Padáková raketa nebo ruční pochodeň, upozorňující na nouzi a potřebu pomoci, dává:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "červené světlo."
+        },
+        {
+          "key": "b",
+          "text": "bílé světlo."
+        },
+        {
+          "key": "c",
+          "text": "zelené světlo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 49,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Dýmový signál vydávající oranžově zbarvený dým znamená:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "signál nouze a potřebu pomoci."
+        },
+        {
+          "key": "b",
+          "text": "dodatečný signál pro lodě provádějící lov ryb těsně vedle sebe."
+        },
+        {
+          "key": "c",
+          "text": "navigační pomůcka při plavbě za snížené viditelnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 50,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Dýmový signál, upozorňující na nouzi a potřebu pomoci, vydává:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "oranžově zbarvený dým."
+        },
+        {
+          "key": "b",
+          "text": "žlutě zbarvený dým."
+        },
+        {
+          "key": "c",
+          "text": "červeně zbarvený dým."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 51,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Přibližujete se k plavidlu, na jehož palubě stojí osoba, která pomalu a opakovaně vzpažuje a připažuje. Toto znamená:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "upozornění na nouzi a potřebu pomoci."
+        },
+        {
+          "key": "b",
+          "text": "požadavek na snížení rychlosti plavby."
+        },
+        {
+          "key": "c",
+          "text": "mám potápěče pod vodou, nepřibližujte se."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 52,
+      "zkratka": "MP1",
+      "group": "mezinarodni-pravo",
+      "text": "Používání nebo vystavování nouzových signálů pro jiné účely, než upozornění na nouzi a potřebu pomoci, je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zakázáno."
+        },
+        {
+          "key": "b",
+          "text": "dovoleno, ale jen ve dne."
+        },
+        {
+          "key": "c",
+          "text": "dovoleno, ale jen v noci."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 53,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Přibližují-li se k sobě dvě plachetnice tak, že vzniká nebezpečí srážky, musí:",
+      "image": "/data/images/C/q-53.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice y uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plachetnice x uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě musí změnit svůj směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 54,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Přibližují-li se k sobě dvě plachetnice tak, že vzniká nebezpečí srážky, musí:",
+      "image": "/data/images/C/q-54.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice x uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plachetnice y uvolnit cestu"
+        },
+        {
+          "key": "c",
+          "text": "obě musí změnit svůj směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 55,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Přibližují-li se k sobě dvě plachetnice tak, že vzniká nebezpečí srážky, musí:",
+      "image": "/data/images/C/q-55.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice y uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plachetnice x uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě musí změnit svůj směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 56,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Přibližují-li se k sobě dvě lodi se strojním pohonem v přímém směru tak, že vzniká nebezpečí srážky, musí:",
+      "image": "/data/images/C/q-56.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "obě změnit svůj směr plavby vpravo."
+        },
+        {
+          "key": "b",
+          "text": "směr plavby změnit pouze plavidlo x."
+        },
+        {
+          "key": "c",
+          "text": "směr plavby změnit pouze plavidlo y."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 57,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Jestliže se křižují kurzy dvou lodí se strojním pohonem tak, že vzniká nebezpečí srážky, musí:",
+      "image": "/data/images/C/q-57.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "loď x uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "loď y uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě musí změnit směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 58,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Pro zabránění srážce na zobrazené situaci musí:",
+      "image": "/data/images/C/q-58.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlo x uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo y uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě plavidla změnit směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 59,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Pro zabránění srážce na zobrazené situaci musí:",
+      "image": "/data/images/C/q-59.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlo x uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo y uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě plavidla změnit směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 60,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Pro zabránění srážce na zobrazené situaci musí:",
+      "image": "/data/images/C/q-60.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlo y uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo x uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě plavidla změnit směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 61,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Pro zabránění srážce na zobrazené situaci musí:",
+      "image": "/data/images/C/q-61.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlo x uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo y uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě plavidla změnit směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 62,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Pro zabránění srážce na zobrazené situaci musí:",
+      "image": "/data/images/C/q-62.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlo x uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo y uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě plavidla změnit směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 63,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Pro zabránění srážce na zobrazené situaci musí:",
+      "image": "/data/images/C/q-63.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlo x uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo y uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "obě plavidla změnit směr plavby vpravo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 64,
+      "zkratka": "MP2",
+      "group": "mezinarodni-pravo",
+      "text": "Pro zabránění srážce na zobrazené situaci musí:",
+      "image": "/data/images/C/q-64.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "plavidlo y uvolnit cestu."
+        },
+        {
+          "key": "b",
+          "text": "plavidlo x uvolnit cestu."
+        },
+        {
+          "key": "c",
+          "text": "plavidlo y zastavit."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 65,
+      "zkratka": "MP3",
+      "group": "mezinarodni-pravo",
+      "text": "Plachetnice, která vystavuje vpředu kuželový znak vrcholem dolů:",
+      "image": "/data/images/C/q-65.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "pluje pod plachtami a současně používá strojní pohon."
+        },
+        {
+          "key": "b",
+          "text": "pluje pod plachtami a má omezenou možnost manévrovat."
+        },
+        {
+          "key": "c",
+          "text": "pluje pod plachtami a má poruchu motoru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 66,
+      "zkratka": "MP3",
+      "group": "mezinarodni-pravo",
+      "text": "Takto označené plavidlo je:",
+      "image": "/data/images/C/q-66.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "loď provádějící lov ryb."
+        },
+        {
+          "key": "b",
+          "text": "loď omezená svým ponorem."
+        },
+        {
+          "key": "c",
+          "text": "neovladatelné."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 67,
+      "zkratka": "MP3",
+      "group": "mezinarodni-pravo",
+      "text": "Takto označené plavidlo je:",
+      "image": "/data/images/C/q-67.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "neovladatelné."
+        },
+        {
+          "key": "b",
+          "text": "omezené svým ponorem."
+        },
+        {
+          "key": "c",
+          "text": "zakotvené."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 68,
+      "zkratka": "MP3",
+      "group": "mezinarodni-pravo",
+      "text": "Takto označené plavidlo je:",
+      "image": "/data/images/C/q-68.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "loď s omezenou manévrovací schopností."
+        },
+        {
+          "key": "b",
+          "text": "rybářská loď."
+        },
+        {
+          "key": "c",
+          "text": "nasedlé na dno."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 69,
+      "zkratka": "MP3",
+      "group": "mezinarodni-pravo",
+      "text": "Připlouváme zprava k takto označenému plovoucímu stroji. Pro bezpečnou plavbu je nutné:",
+      "image": "/data/images/C/q-69.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "nechat jej po svém pravoboku."
+        },
+        {
+          "key": "b",
+          "text": "nechat jej po svém levoboku."
+        },
+        {
+          "key": "c",
+          "text": "zastavit."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 70,
+      "zkratka": "MP3",
+      "group": "mezinarodni-pravo",
+      "text": "Takto označené plavidlo je:",
+      "image": "/data/images/C/q-70.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "omezeno svým ponorem."
+        },
+        {
+          "key": "b",
+          "text": "zakotveno."
+        },
+        {
+          "key": "c",
+          "text": "neovladatelné."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 71,
+      "zkratka": "MP3",
+      "group": "mezinarodni-pravo",
+      "text": "Takto označené plavidlo je:",
+      "image": "/data/images/C/q-71.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "nasedlé na dno."
+        },
+        {
+          "key": "b",
+          "text": "lodivod."
+        },
+        {
+          "key": "c",
+          "text": "rybářská loď."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 72,
+      "zkratka": "MP3",
+      "group": "mezinarodni-pravo",
+      "text": "Takto označené plavidlo je:",
+      "image": "/data/images/C/q-72.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "zakotvené."
+        },
+        {
+          "key": "b",
+          "text": "nasedlé na dno."
+        },
+        {
+          "key": "c",
+          "text": "rybářská loď."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 73,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Mořské vnitřní vody jsou:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "oblasti mezi pevninou a základní linií teritoriálního moře."
+        },
+        {
+          "key": "b",
+          "text": "oblasti mezi teritoriálním a volným mořem."
+        },
+        {
+          "key": "c",
+          "text": "oblasti mezi přílivem a odlivem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 74,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Teritoriální moře je definováno jako:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pásmo vod zahrnuté do teritoria pobřežního státu."
+        },
+        {
+          "key": "b",
+          "text": "oblast bezpečného průjezdu."
+        },
+        {
+          "key": "c",
+          "text": "oblast zakázaného pronásledování."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 75,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Volné moře:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "leží vně hranice moře teritoriálního."
+        },
+        {
+          "key": "b",
+          "text": "je chráněné území sousedního státu."
+        },
+        {
+          "key": "c",
+          "text": "je oblast národního zájmu příslušného státu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 76,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Námořní protest podává velitel lodě:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "došlo-li nebo mohlo-li v souvislosti s provozem lodě dojít k poškození lodě, nákladu nebo zdraví osob na lodi."
+        },
+        {
+          "key": "b",
+          "text": "nejsou-li zabezpečeny na lodi podmínky péče o posádku."
+        },
+        {
+          "key": "c",
+          "text": "je-li přesvědčen, že osoba pověřená vykonáváním státního dozoru na plavidle zjistila nedostatky, které neodpovídají skutečnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 77,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Námořní protest podává velitel lodě:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "v nejbližším přístavu, do kterého připluje, zastupitelskému úřadu ČR nebo notářství nebo námořnímu úřadu nebo soudu státu, do jehož přístavu loď připlula."
+        },
+        {
+          "key": "b",
+          "text": "v nejbližším přístavu, do kterého připluje, provozovateli plavidla."
+        },
+        {
+          "key": "c",
+          "text": "v místě sídla zastupitelského úřadu ČR vlastníkovi plavidla."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 78,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Srážka námořního plavidla s jiným námořním plavidlem nebo jiným pevným předmětem se v námořním zákoně nazývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "námořní nehodou."
+        },
+        {
+          "key": "b",
+          "text": "námořním protestem."
+        },
+        {
+          "key": "c",
+          "text": "společnou kolizí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 79,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Znečištění mořského prostředí se v námořním zákoně nazývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "námořní nehodou."
+        },
+        {
+          "key": "b",
+          "text": "námořním protestem."
+        },
+        {
+          "key": "c",
+          "text": "společnou kolizí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 80,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Škody, které vzniknou úmyslným a účelným způsobením škody pro záchranu majetkových hodnot ze společného námořního nebezpečí, se v námořním zákoně nazývají:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "společnou havárií."
+        },
+        {
+          "key": "b",
+          "text": "námořním protestem."
+        },
+        {
+          "key": "c",
+          "text": "námořní kolizí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 81,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Za provedenou záchranu lodě a dalších hodnot na lodi:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "se poskytuje zachránci odměna přiměřená stupni ohrožení, úsilí zachránce a úspěšnosti záchrany."
+        },
+        {
+          "key": "b",
+          "text": "se poskytuje zachránci odměna, pokud byla předem podepsána smlouva o poskytnutí pomoci."
+        },
+        {
+          "key": "c",
+          "text": "se odměna neposkytuje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 82,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Pokud byla plavidlu poskytnuta pomoc, o kterou v nouzi požádalo:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "může kapitán plavidla, které pomoc poskytlo, požádat o finanční odměnu za poskytnutí pomoci."
+        },
+        {
+          "key": "b",
+          "text": "nemůže kapitán plavidla, které pomoc poskytlo, požádat o finanční odměnu za poskytnutí pomoci."
+        },
+        {
+          "key": "c",
+          "text": "rozhoduje o nároku na odměnu za poskytnutí pomoci zásadně námořní soud."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 83,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Za poskytnutí pomoci k záchraně na moři:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "má zachránce zákonné námořní zástavní právo k zachráněnému majetku."
+        },
+        {
+          "key": "b",
+          "text": "nemá zachránce zákonné námořní zástavní právo k zachráněnému majetku."
+        },
+        {
+          "key": "c",
+          "text": "má zachránce zákonné námořní zástavní právo k zachráněnému majetku, pokud byla předem podepsána smlouva o poskytnutí pomoci."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 84,
+      "zkratka": "MP4",
+      "group": "mezinarodni-pravo",
+      "text": "Pokud je kolem plující plavidlo požádáno o odtažení lodě do nejbližšího přístavu a zachránce po odtažení žádá o finanční odměnu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "může použít zachránce zástavního práva k zachráněné lodi, pokud není schopen žadatel o pomoc finanční odměnu poskytnout."
+        },
+        {
+          "key": "b",
+          "text": "nemá zachránce na finanční odměnu nárok."
+        },
+        {
+          "key": "c",
+          "text": "může použít zachránce zástavního práva k zachráněné lodi, pokud není schopen žadatel o pomoc finanční odměnu poskytnout, byla-li předem podepsána smlouva o poskytnutí pomoci."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 85,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Magnetický a ruční zaměřovací kompas slouží obecně pro měření:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "směru."
+        },
+        {
+          "key": "b",
+          "text": "hloubky."
+        },
+        {
+          "key": "c",
+          "text": "rychlosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 86,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Střelka magnetického kompasu směřuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "k severnímu pólu a je ovlivněna deklinaci a deviací."
+        },
+        {
+          "key": "b",
+          "text": "k severnímu pólu a není ničím ovlivněna."
+        },
+        {
+          "key": "c",
+          "text": "vždy rovnoběžně s osou plavidla a je ovlivněna polohou plavidla vůči severu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 87,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Úhel mezi zeměpisným a magnetickým pólem se nazývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "deklinace."
+        },
+        {
+          "key": "b",
+          "text": "deviace."
+        },
+        {
+          "key": "c",
+          "text": "devalvace."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 88,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Odchylka kompasu způsobená různými magnetickými poli se nazývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "deviace."
+        },
+        {
+          "key": "b",
+          "text": "dekontaminace"
+        },
+        {
+          "key": "c",
+          "text": "deklinace."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 89,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Plujete rychlostí 5 uzlů. Tato rychlost odpovídá přibližně rychlosti:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "2,5 m/s."
+        },
+        {
+          "key": "b",
+          "text": "5 m/s."
+        },
+        {
+          "key": "c",
+          "text": "10 m/s."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 90,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Plujete rychlostí 4 uzle. Tato rychlost odpovídá přibližně rychlosti:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "2 m/s."
+        },
+        {
+          "key": "b",
+          "text": "4 m/s."
+        },
+        {
+          "key": "c",
+          "text": "8 m/s."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 91,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Plujete rychlostí 6 uzlů. Tato rychlost odpovídá přibližně rychlosti:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "3 m/s."
+        },
+        {
+          "key": "b",
+          "text": "6 m/s."
+        },
+        {
+          "key": "c",
+          "text": "12 m/s."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 92,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Plujete rychlostí 2 m/s. Tato rychlost odpovídá přibližně rychlosti:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "4 uzle."
+        },
+        {
+          "key": "b",
+          "text": "2 uzle."
+        },
+        {
+          "key": "c",
+          "text": "1 uzel."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 93,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Plujete rychlostí 1 m/s. Tato rychlost odpovídá přibližně rychlosti:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "2 uzle."
+        },
+        {
+          "key": "b",
+          "text": "1 uzel."
+        },
+        {
+          "key": "c",
+          "text": "0,5 uzle."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 94,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Plujete rychlostí 3 m/s. Tato rychlost odpovídá přibližně:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "6 uzlů."
+        },
+        {
+          "key": "b",
+          "text": "3 uzle."
+        },
+        {
+          "key": "c",
+          "text": "1,5 uzle."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 95,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Na plavidle měříte rychlost metodou tzv. \"bočního logu\". Délka plavidla je 6 metrů. Naměřený čas jsou 3 sekundy. Rychlost plavidla je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "4 uzle."
+        },
+        {
+          "key": "b",
+          "text": "2 uzle."
+        },
+        {
+          "key": "c",
+          "text": "6 uzlů."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 96,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Na plavidle měříte rychlost metodou tzv. \"bočního logu\". Délka plavidla je 8 metrů. Naměřený čas jsou 4 sekundy. Rychlost plavidla je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "4 uzle."
+        },
+        {
+          "key": "b",
+          "text": "2 uzle."
+        },
+        {
+          "key": "c",
+          "text": "8 uzlů."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 97,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Na plavidle měříte rychlost metodou tzv. \"bočního logu\". Délka plavidla je 10 metrů. Naměřený čas je 5 sekund. Rychlost plavidla je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "4 uzle."
+        },
+        {
+          "key": "b",
+          "text": "2 uzle."
+        },
+        {
+          "key": "c",
+          "text": "10 uzlů."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 98,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Rychlost vašeho plavidla je 3 uzle. Vzdálenost 1 ,5 námořní míle uplujete za:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "0,5 hodiny."
+        },
+        {
+          "key": "b",
+          "text": "1 hodinu."
+        },
+        {
+          "key": "c",
+          "text": "2 hodiny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 99,
+      "zkratka": "N1",
+      "group": "navigace",
+      "text": "Rychlost vašeho plavidla je, 4 uzle. Vzdálenost 2 námořní míle uplujete za:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "0,5 hodiny."
+        },
+        {
+          "key": "b",
+          "text": "1 hodinu."
+        },
+        {
+          "key": "c",
+          "text": "2 hodiny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 100,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Měřítko mapy 1 : 10 000 znamená, že 1 cm na mapě odpovídá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "100 m ve skutečnosti."
+        },
+        {
+          "key": "b",
+          "text": "100 cm ve skutečnosti."
+        },
+        {
+          "key": "c",
+          "text": "1 km ve skutečnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 101,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Měřítko mapy 1 : 100 000 znamená, že 1 cm na mapě odpovídá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "1 km ve skutečnosti."
+        },
+        {
+          "key": "b",
+          "text": "100 m ve skutečnosti."
+        },
+        {
+          "key": "c",
+          "text": "10 km ve skutečnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 102,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě se linie, která spojuje místa stejných hloubek nazývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "izobata."
+        },
+        {
+          "key": "b",
+          "text": "izobara."
+        },
+        {
+          "key": "c",
+          "text": "izohypsa."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 103,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na metrické mapě znamená uvedená číslice hloubku:",
+      "image": "/data/images/C/q-103.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "3,5 metru."
+        },
+        {
+          "key": "b",
+          "text": "3 metry 5 centimetrů."
+        },
+        {
+          "key": "c",
+          "text": "35 metrů."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 104,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na metrické mapě znamená uvedená číslice hloubku:",
+      "image": "/data/images/C/q-104.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "6 metrů 3 decimetry."
+        },
+        {
+          "key": "b",
+          "text": "63 metrů."
+        },
+        {
+          "key": "c",
+          "text": "6 metrů 3 centimetry."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 105,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-105.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "ponořená skála, nebezpečná pro plavbu, s uvedenou hloubkou nad ní."
+        },
+        {
+          "key": "b",
+          "text": "ponořený kámen, plavba nad ním je bezpečná."
+        },
+        {
+          "key": "c",
+          "text": "překážka s uvedenou výškou nad hladinou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 106,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-106.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "přístavní úřad."
+        },
+        {
+          "key": "b",
+          "text": "významná kóta nad hladinou."
+        },
+        {
+          "key": "c",
+          "text": "celnice."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 107,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-107.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "celnice"
+        },
+        {
+          "key": "b",
+          "text": "komín."
+        },
+        {
+          "key": "c",
+          "text": "kostel."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 108,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-108.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "kotviště."
+        },
+        {
+          "key": "b",
+          "text": "stanoviště lodivoda."
+        },
+        {
+          "key": "c",
+          "text": "kotvení zakázáno."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 109,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-109.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "kotvení zakázáno."
+        },
+        {
+          "key": "b",
+          "text": "kotviště."
+        },
+        {
+          "key": "c",
+          "text": "nebezpečný vrak pod hladinou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 110,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-110.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "skály ve výši hladiny"
+        },
+        {
+          "key": "b",
+          "text": "navigační světlo."
+        },
+        {
+          "key": "c",
+          "text": "vysílač."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 111,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak v barvě fialové:",
+      "image": "/data/images/C/q-111.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "kabel pod vodou."
+        },
+        {
+          "key": "b",
+          "text": "izobaty."
+        },
+        {
+          "key": "c",
+          "text": "nebezpečná mělčina."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 112,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-112.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "potrubí pod vodou."
+        },
+        {
+          "key": "b",
+          "text": "čerpací stanice pohonných hmot."
+        },
+        {
+          "key": "c",
+          "text": "hranice zákazu plavby."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 113,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-113.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "potopený vrak, nebezpečný pro lodní dopravu."
+        },
+        {
+          "key": "b",
+          "text": "vrak vyčnívající nad hladinu."
+        },
+        {
+          "key": "c",
+          "text": "vrak, který není nebezpečný pro lodní dopravu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 114,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-114.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "vrak, který není nebezpečný pro lodní dopravu."
+        },
+        {
+          "key": "b",
+          "text": "vrak vyčnívající nad hladinu."
+        },
+        {
+          "key": "c",
+          "text": "vrak nebezpečný pro lodní dopravu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 115,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě znamená znak:",
+      "image": "/data/images/C/q-115.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "nebezpečné skalní útesy pod vodou."
+        },
+        {
+          "key": "b",
+          "text": "bóje pravé strany plavební dráhy."
+        },
+        {
+          "key": "c",
+          "text": "radarový odražeč."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 116,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Tento údaj na displeji přístroje GPS znamená, že bod se nachází na pozici:",
+      "image": "/data/images/C/q-116.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "43 stupňů, 20 minut severní šířky a 15 stupňů 40 minut východní délky."
+        },
+        {
+          "key": "b",
+          "text": "43 stupňů 20 minut severní délky a 15 stupňů 40 minut východní šířky."
+        },
+        {
+          "key": "c",
+          "text": "43 stupňů 20 minut severní šířky a 15 stupňů 40 minut východní šířky."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 117,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Námořní míle měří:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "1852 m."
+        },
+        {
+          "key": "b",
+          "text": "1609 m."
+        },
+        {
+          "key": "c",
+          "text": "1500 m, ale jen v naší zeměpisné šířce."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 118,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Námořní míle se na mapě odměřují:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "na svislém rámečku mapy."
+        },
+        {
+          "key": "b",
+          "text": "na vodorovném rámečku mapy."
+        },
+        {
+          "key": "c",
+          "text": "na vodorovném nebo svislém rámečku mapy."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 119,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě spojuje poledník body se stejnou:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zeměpisnou délkou."
+        },
+        {
+          "key": "b",
+          "text": "zeměpisnou šířkou."
+        },
+        {
+          "key": "c",
+          "text": "hloubkou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 120,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Na námořní mapě spojuje rovnoběžka body se stejnou:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zeměpisnou šířkou."
+        },
+        {
+          "key": "b",
+          "text": "zeměpisnou délkou."
+        },
+        {
+          "key": "c",
+          "text": "hloubkou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 121,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Zeměpisnou šířku odečítáme na námořní mapě:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "podél pravého a levého svislého rámečku mapy."
+        },
+        {
+          "key": "b",
+          "text": "podél horního a spodního vodorovného rámečku mapy."
+        },
+        {
+          "key": "c",
+          "text": "v libovolné části rámečku mapy."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 122,
+      "zkratka": "N2",
+      "group": "navigace",
+      "text": "Zeměpisnou délku odečítáme na námořní mapě:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "podél horního a spodního vodorovného rámečku mapy."
+        },
+        {
+          "key": "b",
+          "text": "podél pravého a levého svislého rámečku mapy."
+        },
+        {
+          "key": "c",
+          "text": "v libovolné části rámečku mapy."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 123,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete z moře do přístavu. Před sebou vidíte červenou válcovou bóji. Jestliže chcete plout v plavební dráze:",
+      "image": "/data/images/C/q-123.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "musíte minout bóji na levoboku."
+        },
+        {
+          "key": "b",
+          "text": "musíte minout boji na pravoboku."
+        },
+        {
+          "key": "c",
+          "text": "můžete bóji míjet po obou stranách."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 124,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete z moře do přístavu. Před sebou vidíte zelenou kuželovitou bóji. Jestliže chcete plout v plavební dráze:",
+      "image": "/data/images/C/q-124.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "musíte minout bóji na pravoboku."
+        },
+        {
+          "key": "b",
+          "text": "musíte minout bóji na levoboku."
+        },
+        {
+          "key": "c",
+          "text": "můžete bóji míjet po obou stranách."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 125,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete z přístavu na moře. Před sebou vidíte červenou tyčovou bóji, která má červený válec jako vrcholový znak. Jestliže chcete plout v plavební dráze, musíte:",
+      "image": "/data/images/C/q-125.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "minout bóji na pravoboku."
+        },
+        {
+          "key": "b",
+          "text": "minout boji na levoboku."
+        },
+        {
+          "key": "c",
+          "text": "bóji lze míjet po obou stranách."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 126,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete z přístavu na moře. Před sebou vidíte zelenou tyčovou bóji, která má zelený kužel vrcholem vzhůru jako vrcholový znak. Jestliže chcete plout v plavební dráze, musíte:",
+      "image": "/data/images/C/q-126.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "minout bóji na levoboku."
+        },
+        {
+          "key": "b",
+          "text": "minout bóji na pravoboku."
+        },
+        {
+          "key": "c",
+          "text": "bóji lze míjet po obou stranách."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 127,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Červené válcové bóje mohou mít jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "červený válec."
+        },
+        {
+          "key": "b",
+          "text": "červenou kouli."
+        },
+        {
+          "key": "c",
+          "text": "červený kužel."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 128,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Zelené kuželové bóje mohou mít jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zelený kužel vrcholem vzhůru."
+        },
+        {
+          "key": "b",
+          "text": "zelený válec."
+        },
+        {
+          "key": "c",
+          "text": "zelenou kouli."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 129,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete z moře do přístavu. Před sebou vidíte bóji, která značí, že hlavní plavební dráha je vpravo. Tato bóje bude:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "červená válcová s jedním širokým vodorovným zeleným pásem."
+        },
+        {
+          "key": "b",
+          "text": "zelená kuželová s jedním širokým vodorovným červeným pásem."
+        },
+        {
+          "key": "c",
+          "text": "červená kuželová s jedním širokým vodorovným zeleným pásem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 130,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete z moře do přístavu. Před sebou vidíte bóji, která značí, že hlavní plavební dráha je vlevo. Tato bóje bude:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zelená kuželová s jedním širokým vodorovným červeným pásem."
+        },
+        {
+          "key": "b",
+          "text": "červená válcová s jedním širokým vodorovným zeleným pásem."
+        },
+        {
+          "key": "c",
+          "text": "zelená válcová s jedním širokým vodorovným červeným pásem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 131,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete v hlavní plavební dráze z přístavu na moře. Bóje, které míjíte na levoboku, budou mít jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zelený kužel vrcholem vzhůru."
+        },
+        {
+          "key": "b",
+          "text": "červený válec."
+        },
+        {
+          "key": "c",
+          "text": "červenou kouli."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 132,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete v hlavní plavební dráze z přístavu na moře. Bóje, které míjíte na pravoboku budou mít jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "červený válec."
+        },
+        {
+          "key": "b",
+          "text": "zelený kužel vrcholem vzhůru."
+        },
+        {
+          "key": "c",
+          "text": "červenou kouli."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 133,
+      "zkratka": "N3",
+      "group": "navigace",
+      "text": "Plujete z přístavu na moře. Před sebou vidíte kulovou bóji, která má červené a bílé svislé pruhy. Tato bóje znamená, že:",
+      "image": "/data/images/C/q-133.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "kolem ní je splavná voda."
+        },
+        {
+          "key": "b",
+          "text": "se pod ní nachází izolované nebezpečí."
+        },
+        {
+          "key": "c",
+          "text": "se blížíme k pásmu vojenských cvičení."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 134,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Kardinální značení v systému IALA ukazuje bezpečnou stranu při míjení nebezpečí na východní straně. Bóje má jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": ""
+        },
+        {
+          "key": "b",
+          "text": ""
+        },
+        {
+          "key": "c",
+          "text": ""
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 135,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Kardinální značení v systému IALA ukazuje bezpečnou stranu při míjení nebezpečí na západní straně. Bóje má jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": ""
+        },
+        {
+          "key": "b",
+          "text": ""
+        },
+        {
+          "key": "c",
+          "text": ""
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 136,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Kardinální značení v systému IALA ukazuje bezpečnou stranu při míjení nebezpečí na jižní straně. Bóje má jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": ""
+        },
+        {
+          "key": "b",
+          "text": ""
+        },
+        {
+          "key": "c",
+          "text": ""
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 137,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Kardinální značení v systému IALA ukazuje bezpečnou stranu při míjení nebezpečí na severní straně. Bóje má jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": ""
+        },
+        {
+          "key": "b",
+          "text": ""
+        },
+        {
+          "key": "c",
+          "text": ""
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 138,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Při plavbě v pobřežních vodách se blížíte k bóji, která má jako vrcholový znak uvedené vyobrazení. Splavná voda se nachází:",
+      "image": "/data/images/C/q-138.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "východně od bóje."
+        },
+        {
+          "key": "b",
+          "text": "jižně od bóje."
+        },
+        {
+          "key": "c",
+          "text": "západně od bóje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 139,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Při plavbě v pobřežních vodách se blížíte k bóji, která má jako vrcholový znak uvedené vyobrazení. Splavná voda se nachází:",
+      "image": "/data/images/C/q-139.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "západně od bóje."
+        },
+        {
+          "key": "b",
+          "text": "jižně od bóje."
+        },
+        {
+          "key": "c",
+          "text": "východně od bóje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 140,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Při plavbě v pobřežních vodách se blížíte k bóji, která má jako vrcholový znak uvedené vyobrazení. Splavná voda se nachází:",
+      "image": "/data/images/C/q-140.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "severně od bóje."
+        },
+        {
+          "key": "b",
+          "text": "jižně od bóje."
+        },
+        {
+          "key": "c",
+          "text": "západně od bóje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 141,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Při plavbě v pobřežních vodách se blížíte k bóji, která má jako vrcholový znak znak uvedené vyobrazení.Splavná voda se nachází:",
+      "image": "/data/images/C/q-141.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "jižně od bóje."
+        },
+        {
+          "key": "b",
+          "text": "severně od bóje."
+        },
+        {
+          "key": "c",
+          "text": "východně od bóje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 142,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Při plavbě v pobřežních vodách se blížíte k bóji, která z nějakého důvodu ztratila vrcholový znak. Bóje má následující zbarvení: nahoře žlutá, dole černá. Tato bóje udává, že splavná voda se nachází:",
+      "image": "/data/images/C/q-142.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "jižně od bóje."
+        },
+        {
+          "key": "b",
+          "text": "severně od bóje."
+        },
+        {
+          "key": "c",
+          "text": "východně od bóje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 143,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Při plavbě v pobřežních vodách se blížíte k bóji, která z nějakého důvodu ztratila vrcholový znak. Bóje má následující zbarvení: nahoře černá, dole žlutá. Tato bóje udává, že splavná voda se nachází:",
+      "image": "/data/images/C/q-143.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "severně od bóje."
+        },
+        {
+          "key": "b",
+          "text": "západně od bóje."
+        },
+        {
+          "key": "c",
+          "text": "jižně od bóje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 144,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Při plavbě v pobřežních vodách se blížíte k bóji, která z nějakého důvodu ztratila vrcholový znak. Bóje má následující zbarvení: černá s jedním žlutým širokým vodorovným pruhem. Tato bóje udává, že splavná voda se nachází:",
+      "image": "/data/images/C/q-144.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "východně od bóje."
+        },
+        {
+          "key": "b",
+          "text": "severně od bóje."
+        },
+        {
+          "key": "c",
+          "text": "západně od bóje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 145,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Při plavbě v pobřežních vodách se blížíte k bóji, která z nějakého důvodu ztratila vrcholový znak. Bóje má následující zbarvení: žlutá s jedním černým širokým vodorovným pruhem. Tato bóje udává, že splavná voda se nachází:",
+      "image": "/data/images/C/q-145.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "západně od bóje."
+        },
+        {
+          "key": "b",
+          "text": "jižně od bóje."
+        },
+        {
+          "key": "c",
+          "text": "východně od bóje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 146,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "V systému IALA se nad izolovaným nebezpečím upevňuje bóje, která má jako vrcholový znak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": ""
+        },
+        {
+          "key": "b",
+          "text": ""
+        },
+        {
+          "key": "c",
+          "text": ""
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 147,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Bóje, která v systému IALA informuje například o pásmu vojenských cvičení, o rekreačním pásmu, o uložení kabelů nebo potrubí a podobně má barvu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "žlutou."
+        },
+        {
+          "key": "b",
+          "text": "červené a bílé svislé pruhy."
+        },
+        {
+          "key": "c",
+          "text": "černou s jedním červeným širokým vodorovným pruhem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 148,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Bóje, která v systému IALA značí izolované nebezpečí má barvu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "černou s jedním nebo více širokými vodorovnými červenými pruhy."
+        },
+        {
+          "key": "b",
+          "text": "žlutou."
+        },
+        {
+          "key": "c",
+          "text": "červené a bílé svislé pruhy."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 149,
+      "zkratka": "N4",
+      "group": "navigace",
+      "text": "Bóje, která v systému IALA značí bezpečnou vodu, má barvu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "červené a bílé svislé pruhy."
+        },
+        {
+          "key": "b",
+          "text": "černou s jedním nebo více širokými vodorovnými červenými pruhy."
+        },
+        {
+          "key": "c",
+          "text": "žlutou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 150,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Obecně platí, že s přibývající nadmořskou výškou tlak vzduchu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "klesá."
+        },
+        {
+          "key": "b",
+          "text": "stoupá."
+        },
+        {
+          "key": "c",
+          "text": "zůstává stejný."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 151,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Normální atmosférický tlak přepočtený na hladinu moře je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "1013 hPa."
+        },
+        {
+          "key": "b",
+          "text": "993 hPa."
+        },
+        {
+          "key": "c",
+          "text": "1023 hPa."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 152,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Při stavu aneroidu 990 hPa je tlak vzduchu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "nízký."
+        },
+        {
+          "key": "b",
+          "text": "vysoký."
+        },
+        {
+          "key": "c",
+          "text": "normální."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 153,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Čára spojující místa se stejnou hodnotou tlaku vzduchu přepočítaného na hladinu moře se nazývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "izobara."
+        },
+        {
+          "key": "b",
+          "text": "izobata."
+        },
+        {
+          "key": "c",
+          "text": "izohypsa."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 154,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Na synoptické mapě je rozložení tlaku vzduchu znázorněno pomocí:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "izobar."
+        },
+        {
+          "key": "b",
+          "text": "izobat."
+        },
+        {
+          "key": "c",
+          "text": "izohyps."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 155,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "K měření tlaku vzduchu se na malých plavidlech nejčastěji používá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "aneroid."
+        },
+        {
+          "key": "b",
+          "text": "rtuťový tlakoměr."
+        },
+        {
+          "key": "c",
+          "text": "anemometr."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 156,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Beaufortova stupnice se využívá pro odhad:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "síly větru."
+        },
+        {
+          "key": "b",
+          "text": "oblačnosti."
+        },
+        {
+          "key": "c",
+          "text": "směru větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 157,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Vítr je jihovýchodní. Znamená to, že vane:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "z jihovýchodu na severozápad."
+        },
+        {
+          "key": "b",
+          "text": "ze severozápadu na jihovýchod."
+        },
+        {
+          "key": "c",
+          "text": "z jihu na východ."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 158,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Vítr je severozápadní. Znamená to, že vane:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ze severozápadu na jihovýchod."
+        },
+        {
+          "key": "b",
+          "text": "z jihovýchodu na severozápad."
+        },
+        {
+          "key": "c",
+          "text": "ze severu na západ."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 159,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Rychlost větru 4° Bft je asi:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "12 uzlů (6 m/s)."
+        },
+        {
+          "key": "b",
+          "text": "6 uzlů (3 m/s)."
+        },
+        {
+          "key": "c",
+          "text": "20 uzlů (10 m/s)."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 160,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Rychlost větru 6°Bft je asi:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "24 uzle (12 m/s)."
+        },
+        {
+          "key": "b",
+          "text": "18 uzlů (9 m/s)."
+        },
+        {
+          "key": "c",
+          "text": "30 uzlů (15 m/s)."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 161,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Oblaky vznikají:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ochlazováním stoupající masy vzduchu."
+        },
+        {
+          "key": "b",
+          "text": "oteplováním klesající masy vzduchu."
+        },
+        {
+          "key": "c",
+          "text": "oteplováním stoupající masy vzduchu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 162,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Vysokými oblaky jsou:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "cirrus, cirrocumulus, cirrostratus."
+        },
+        {
+          "key": "b",
+          "text": "altocumulus, altostratus, nimbostratus."
+        },
+        {
+          "key": "c",
+          "text": "stratus, stratocumulus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 163,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Do středního patra oblaků patří:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "altocumulus, altostratus."
+        },
+        {
+          "key": "b",
+          "text": "stratocumulus."
+        },
+        {
+          "key": "c",
+          "text": "stratus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 164,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Mezi nízké oblaky patří:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "stratocumulus, stratus."
+        },
+        {
+          "key": "b",
+          "text": "altocumulus, altostratus."
+        },
+        {
+          "key": "c",
+          "text": "cirrus, cirrostratus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 165,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Cumulonimbus:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zasahuje výškově do všech pater."
+        },
+        {
+          "key": "b",
+          "text": "patří mezi střední oblaky."
+        },
+        {
+          "key": "c",
+          "text": "patří mezi nízké oblaky."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 166,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Cirrocumulus patří mezi:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vysoké oblaky."
+        },
+        {
+          "key": "b",
+          "text": "střední oblaky."
+        },
+        {
+          "key": "c",
+          "text": "nízké oblaky."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 167,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Všeobecný název pro jednotlivé vzájemně oddělené bílé obláčky vláknité struktury, často hedvábného lesku, bez vlastního stínu, které mají tvar vláken nebo jejich svazků, které nezeslabují světlo a jsou složeny z krystalků ledu je:",
+      "image": "/data/images/C/q-167.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "cirrus."
+        },
+        {
+          "key": "b",
+          "text": "stratus."
+        },
+        {
+          "key": "c",
+          "text": "cumulus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 168,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Všeobecný název pro jednotlivé, obvykle zářivě bílé a husté mraky s ostře ohraničenými obrysy, které jsou buď ploché, nebo se vyvíjejí do výšky ve tvaru kup nebo věží, které mají téměř vodorovnou základnu poměrně tmavou a které jsou tvořeny z kapiček vody",
+      "image": "/data/images/C/q-168.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "cumulus."
+        },
+        {
+          "key": "b",
+          "text": "stratus."
+        },
+        {
+          "key": "c",
+          "text": "nimbostratus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 169,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Všeobecný název pro souvislou jednotvárně šedou oblačnou vrstvu bez určitých obrysů, ze které může někdy mrholit, je:",
+      "image": "/data/images/C/q-169.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "stratus."
+        },
+        {
+          "key": "b",
+          "text": "altocumulus."
+        },
+        {
+          "key": "c",
+          "text": "cirrostratus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 170,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Všeobecný název pro mohutný a hustý oblak nápadně vyvinutý do výšky, jehož horní část je zploštělá a rozšiřuje se do podoby vějíře nebo kovadliny, který přináší nárazovitý silný vítr a lijáky, je:",
+      "image": "/data/images/C/q-170.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "cumulonimbus."
+        },
+        {
+          "key": "b",
+          "text": "nimbostratus."
+        },
+        {
+          "key": "c",
+          "text": "cumulus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 171,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "V teplé vzduchové hmotě se vyskytují převážně oblaky typu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "stratus, stratocumulus."
+        },
+        {
+          "key": "b",
+          "text": "cumulus, cumulonimbus."
+        },
+        {
+          "key": "c",
+          "text": "cirrostratus, altostratus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 172,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Ve studené vzduchové hmotě se vyskytují převážně oblaky typu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "cumulus, cumulonimbus."
+        },
+        {
+          "key": "b",
+          "text": "stratus, stratocumulus."
+        },
+        {
+          "key": "c",
+          "text": "cirrostratus, altostratus."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 173,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Jestliže vzduchová hmota proudí nad chladnější povrch, než byla oblast jejího vzniku, je tato vzduchová hmota:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "teplá."
+        },
+        {
+          "key": "b",
+          "text": "studená."
+        },
+        {
+          "key": "c",
+          "text": "místní."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 174,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Jestliže vzduchová hmota proudí nad teplejší povrch, než byla oblast jejího vzniku, je tato vzduchová hmota:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "studená."
+        },
+        {
+          "key": "b",
+          "text": "teplá."
+        },
+        {
+          "key": "c",
+          "text": "místní."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 175,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Útvar znázorněný na synoptické mapě zobrazuje:",
+      "image": "/data/images/C/q-175.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "tlakovou níži."
+        },
+        {
+          "key": "b",
+          "text": "tlakovou výši."
+        },
+        {
+          "key": "c",
+          "text": "hřeben vysokého tlaku."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 176,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Útvar znázorněný na synoptické mapě znázorňuje:",
+      "image": "/data/images/C/q-176.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "tlakovou výši."
+        },
+        {
+          "key": "b",
+          "text": "tlakovou níž."
+        },
+        {
+          "key": "c",
+          "text": "brázdu nízkého tlaku."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 177,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Synoptická mapa slouží:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pro vyhodnocení povětrnostní situace."
+        },
+        {
+          "key": "b",
+          "text": "k lepší navigační orientaci v dané oblasti."
+        },
+        {
+          "key": "c",
+          "text": "k zápisu trasových bodů uskutečněné plavby."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 178,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Výška vlny se měří:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "mezi prohlubní a hřbetem."
+        },
+        {
+          "key": "b",
+          "text": "mezi dnem a maximálním vzdutím."
+        },
+        {
+          "key": "c",
+          "text": "mezi pobřežní linií a hřbetem vlny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 179,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Tlak vzduchu zpravidla měříme aneroidem v:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "hektopascalech (hPa)."
+        },
+        {
+          "key": "b",
+          "text": "metrech za sekundu (m/s)."
+        },
+        {
+          "key": "c",
+          "text": "procentech (%)."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 180,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Silný studený vítr ze severu nebo severozápadu se ve Středomoří označuje jako:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "Mistral."
+        },
+        {
+          "key": "b",
+          "text": "Föhn."
+        },
+        {
+          "key": "c",
+          "text": "Scirocco."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 181,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Na synoptické mapě je takto znázorněna:",
+      "image": "/data/images/C/q-181.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "teplá fronta."
+        },
+        {
+          "key": "b",
+          "text": "studená fronta."
+        },
+        {
+          "key": "c",
+          "text": "okluzní fronta."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 182,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Na synoptické mapě je takto znázorněna:",
+      "image": "/data/images/C/q-182.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "studená fronta."
+        },
+        {
+          "key": "b",
+          "text": "teplá fronta."
+        },
+        {
+          "key": "c",
+          "text": "okluzní fronta."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 183,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Na synoptické mapě je okluzní fronta označena:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": ""
+        },
+        {
+          "key": "b",
+          "text": ""
+        },
+        {
+          "key": "c",
+          "text": ""
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 184,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Rychlost větru měříme anemometrem v:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "metrech za sekundu (m/s)."
+        },
+        {
+          "key": "b",
+          "text": "procentech (%)."
+        },
+        {
+          "key": "c",
+          "text": "hektopascalech (hPa)."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 185,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Na synoptické mapě je mrholení zobrazeno symbolem:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": ""
+        },
+        {
+          "key": "b",
+          "text": ""
+        },
+        {
+          "key": "c",
+          "text": ""
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 186,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Uvedený symbol na synoptické mapě znamená:",
+      "image": "/data/images/C/q-186.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "sněžení."
+        },
+        {
+          "key": "b",
+          "text": "mrznoucí déšť."
+        },
+        {
+          "key": "c",
+          "text": "jinovatka."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 187,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Uvedený symbol na synoptické mapě znamená:",
+      "image": "/data/images/C/q-187.jpg",
+      "options": [
+        {
+          "key": "a",
+          "text": "déšť."
+        },
+        {
+          "key": "b",
+          "text": "mrholení."
+        },
+        {
+          "key": "c",
+          "text": "kroupy."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 188,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "V průběhu působení pevninské brízy vane vítr:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "večer a v noci z pevniny na moře."
+        },
+        {
+          "key": "b",
+          "text": "ráno a dopoledne z moře na pevninu."
+        },
+        {
+          "key": "c",
+          "text": "v noci a dopoledne z moře na pevninu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 189,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Studený a nárazovitý vítr přicházející od severovýchodu dosahující někdy až síly vichřice se na Jadranu nazývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "bóra."
+        },
+        {
+          "key": "b",
+          "text": "fén."
+        },
+        {
+          "key": "c",
+          "text": "gregale."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 190,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Synoptická mapa znázorňuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "rozložení barických útvarů."
+        },
+        {
+          "key": "b",
+          "text": "doporučené plavební trasy."
+        },
+        {
+          "key": "c",
+          "text": "směry mořských proudů a větrů v jednotlivých ročních obdobích."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 191,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Jestliže jsou na synoptické mapě izobary těsně vedle sebe, lze očekávat:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "silný vítr."
+        },
+        {
+          "key": "b",
+          "text": "slabý vítr."
+        },
+        {
+          "key": "c",
+          "text": "bezvětří."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 192,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Jestliže jsou na synoptické mapě izobary od sebe značně vzdáleny, lze očekávat:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "slabý vítr."
+        },
+        {
+          "key": "b",
+          "text": "silnou vichřici."
+        },
+        {
+          "key": "c",
+          "text": "silný vítr."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 193,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Jestliže se na horizontu objeví oblak cumulonimbus s vrcholkem připomínajícím kovadlinu, lze očekávat:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "bouřku, silný nárazový vítr."
+        },
+        {
+          "key": "b",
+          "text": "převážně pěkné počasí."
+        },
+        {
+          "key": "c",
+          "text": "dosavadní ráz počasí se nezmění."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 194,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Červená obloha při východu slunce naznačuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pravděpodobnost špatného počasí."
+        },
+        {
+          "key": "b",
+          "text": "převážně pěkné počasí."
+        },
+        {
+          "key": "c",
+          "text": "nemá žádný význam."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 195,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Slunce zapadá za husté tmavé oblaky na horizontu. Oblaky mají červeně zbarvené okraje. Lze očekávat:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pravděpodobnost, že se zhorší počasí."
+        },
+        {
+          "key": "b",
+          "text": "převážně pěkné počasí."
+        },
+        {
+          "key": "c",
+          "text": "nemá žádný význam na vývoj počasí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 196,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Část zemské atmosféry, ve které se odehrávají veškeré atmosférické děje se nazývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "troposféra."
+        },
+        {
+          "key": "b",
+          "text": "ionosféra."
+        },
+        {
+          "key": "c",
+          "text": "stratosféra."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 197,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Na moři se tvoří hustší bílé čepice z přepadajících hřebenů. Podle Beaufortovy stupnice stavu moře se jedná o stupeň vlnění:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "4."
+        },
+        {
+          "key": "b",
+          "text": "3."
+        },
+        {
+          "key": "c",
+          "text": "2."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 198,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Hraniční linie, tak zvaná fronta, se vytváří:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "při styku studené a teplé vzduchové masy."
+        },
+        {
+          "key": "b",
+          "text": "při putování různými oklikami ze západu na východ."
+        },
+        {
+          "key": "c",
+          "text": "při úplném vytlačení studeného vzduchu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 199,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Nejnižší tlak se nalézá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ve středu cyklóny."
+        },
+        {
+          "key": "b",
+          "text": "na okraji rotující cyklóny."
+        },
+        {
+          "key": "c",
+          "text": "v horní části stacionární barické fronty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 200,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Jak se nazývá proces uzavírání teplého sektoru tlakové níže:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "okluze."
+        },
+        {
+          "key": "b",
+          "text": "sekundární cyklóna."
+        },
+        {
+          "key": "c",
+          "text": "anticyklóna."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 201,
+      "zkratka": "M1",
+      "group": "meteorologie",
+      "text": "Ve středu anticyklóny je tlak:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "maximální."
+        },
+        {
+          "key": "b",
+          "text": "minimální."
+        },
+        {
+          "key": "c",
+          "text": "bez tlaku."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 202,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Záchranné vybavení lodi při plavbě do 1 námořní míle od břehu tvoří nejméně:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "Záchranné kruhy (podkovy) a záchranné vesty."
+        },
+        {
+          "key": "b",
+          "text": "záchranný vor dimenzovaný na počet osob podle obsaditelnosti jachty."
+        },
+        {
+          "key": "c",
+          "text": "člun se vztlakovými komorami a bezpečnostní pás."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 203,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Předepsaný počet záchranných kruhů (podkov) na lodi při plavbě do 1 námořní míle od břehu je nejméně:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "dva kusy."
+        },
+        {
+          "key": "b",
+          "text": "jeden kus."
+        },
+        {
+          "key": "c",
+          "text": "tři kusy."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 204,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Záchranné kruhy (podkovy) musí být pro plavbu vybaveny:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "jeden kus záchranným lankem délky 20 m, druhý kus samozažíhacím světlem nebo světelně dýmovou bójí."
+        },
+        {
+          "key": "b",
+          "text": "jeden kus plovoucí kotvou, druhý kus signalizační píšťalkou."
+        },
+        {
+          "key": "c",
+          "text": "signalizační píšťalkou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 205,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Záchranný kruh (podkova) má zpravidla barvu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "oranžovou."
+        },
+        {
+          "key": "b",
+          "text": "bílou."
+        },
+        {
+          "key": "c",
+          "text": "zelenou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 206,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Počet záchranných vest na lodi při plavbě na moři musí být nejméně:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "roven počtu osob na palubě."
+        },
+        {
+          "key": "b",
+          "text": "o jednu vyšší než je počet osob na palubě."
+        },
+        {
+          "key": "c",
+          "text": "roven polovině osob na palubě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 207,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Je-li záchranná vesta vybavena příslušenstvím, pak to zpravidla bývá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "samozažíhací světlo, píšťalka, sáček s fluorescenčním barvivem."
+        },
+        {
+          "key": "b",
+          "text": "sadou světlic v barvě bílé, modré a zelené."
+        },
+        {
+          "key": "c",
+          "text": "signalizačním zrcátkem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 208,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Bezpečnostní pásy na lodi při plavbě do 1 námořní míle od břehu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "nejsou vyžadovány."
+        },
+        {
+          "key": "b",
+          "text": "se vyžadují v počtu jeden kus na plavidle."
+        },
+        {
+          "key": "c",
+          "text": "se vyžadují v počtu odpovídajícím polovině osob na plavidle."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 209,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Záchranný ostrůvek na lodi při plavbě do 1 námořní míle od břehu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "není podle vyhlášky povinnou výbavou."
+        },
+        {
+          "key": "b",
+          "text": "se vyžaduje. Je možno jej nahradit člunem se vztlakovými komorami."
+        },
+        {
+          "key": "c",
+          "text": "je povinnou výbavou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 210,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Havarijní situace, které mohou na lodi při plavbě na moři vzniknout, jsou:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "muž přes palubu, poplach požární, vodní, lodní (opuštění lodi), nasednutí na mělčinu."
+        },
+        {
+          "key": "b",
+          "text": "poškození motoru či takeláže plachetnice."
+        },
+        {
+          "key": "c",
+          "text": "zranění či vážná nemoc člena posádky."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 211,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Manévr \"muž přes palubu\"je povinen kapitán:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "s posádkou nacvičit co nejdříve po vyplutí a provést o tom zápis do lodního deníku."
+        },
+        {
+          "key": "b",
+          "text": "s posádkou nacvičit v případě hrozícího zhoršení počasí a provést o tom zápis do lodního deníku."
+        },
+        {
+          "key": "c",
+          "text": "nacvičit s nezkušenou posádkou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 212,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "K hašení požáru na lodi nelze v žádném případě použít hasicí přístroj:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "tetrachlorový."
+        },
+        {
+          "key": "b",
+          "text": "práškový."
+        },
+        {
+          "key": "c",
+          "text": "vodní či pěnový."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 213,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "Mezi prostředky, nezbytné na lodi v případě vodního poplachu (pronikání vody do poškozené lodi), patří:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vodní pumpy, lekážní prostředky (nepromokavá plachta, tabule plechu - plastu - gumy, matrace, lana vzpěry)."
+        },
+        {
+          "key": "b",
+          "text": "cement tuhnoucí pod vodou."
+        },
+        {
+          "key": "c",
+          "text": "požární vědro, epoxidové rychleschnoucí tmely a polypropylenová lana."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 214,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "V případě lodního poplachu (opuštění vážně poškozené lodě) kapitán:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "opouští loď jako poslední."
+        },
+        {
+          "key": "b",
+          "text": "nastupuje do záchranného člunu jako první."
+        },
+        {
+          "key": "c",
+          "text": "musí zůstat na poškozené lodi, dokud se nedostaví pomoc."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 215,
+      "zkratka": "Z1",
+      "group": "bezpecnost",
+      "text": "V případě nasednutí lodi na dno závisí stupeň ohrožení a další postup na:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "rozsahu poškození lodě, jejím využitelném vybavení pro daný účel, druhu dna, poloze mělčiny vůči větru a na stavu moře."
+        },
+        {
+          "key": "b",
+          "text": "typu a váze kotvy a délce řetězu či lana."
+        },
+        {
+          "key": "c",
+          "text": "druhu vrtule a výkonu motoru."
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

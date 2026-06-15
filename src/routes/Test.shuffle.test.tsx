@@ -3,6 +3,7 @@ import { render, waitFor, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import Test from './Test'
 import type { QuestionsBundle, Question, GroupId } from '../types'
+import { ActiveTestProvider } from '../hooks/useActiveTest'
 
 // Build a bundle where every question has a deterministic "marker" text
 // in option (a). If shuffle works, "marker for q1" should appear in
@@ -43,7 +44,10 @@ function makeBundle(): QuestionsBundle {
     }
   }
   return {
-    version: 'M-2015', scrapedAt: '2026-05-04',
+    testId: 'M',
+    version: 'M-2015',
+    name: 'Vůdce malého plavidla',
+    scrapedAt: '2026-05-04',
     groups: groups as any,
     testStructure: [
       { groups: ['plavebni-provoz'], count: 16 },
@@ -52,6 +56,7 @@ function makeBundle(): QuestionsBundle {
       { groups: ['zaklady-konstrukce-plavidel'], count: 3 },
       { groups: ['zaklady-prvni-pomoci'], count: 4 },
     ],
+    passing: { score: 30, total: 35, durationMin: 30 },
     questions,
   }
 }
@@ -61,8 +66,11 @@ describe('Test runner — shuffle integration', () => {
     localStorage.clear()
     const bundle = makeBundle()
     vi.stubGlobal('fetch', vi.fn(async (url: string) => {
-      if (url.includes('questions.json')) {
+      if (url.includes('questions-M.json') || url.includes('questions.json')) {
         return new Response(JSON.stringify(bundle), { status: 200 })
+      }
+      if (url.includes('/api/progress')) {
+        return new Response(JSON.stringify({ attempts: [], testHistory: [] }), { status: 200 })
       }
       return new Response('', { status: 404 })
     }))
@@ -77,9 +85,11 @@ describe('Test runner — shuffle integration', () => {
 
     for (let i = 0; i < TRIES; i++) {
       const { unmount } = render(
+        <ActiveTestProvider>
         <MemoryRouter initialEntries={['/test']}>
           <Test />
         </MemoryRouter>
+        </ActiveTestProvider>
       )
       // Wait for question to render
       await waitFor(() => {

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useActiveTest } from '../hooks/useActiveTest'
 
 interface Props {
   qid: number
@@ -7,6 +8,7 @@ interface Props {
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 
 export default function FeedbackForm({ qid }: Props) {
+  const { activeTest } = useActiveTest()
   const [open, setOpen] = useState(false)
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState<Status>('idle')
@@ -21,7 +23,7 @@ export default function FeedbackForm({ qid }: Props) {
       const res = await fetch('/api/feedback', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ qid, message: trimmed }),
+        body: JSON.stringify({ testId: activeTest, qid, message: trimmed }),
       })
       if (!res.ok) {
         const data = await res.json().catch(() => null) as { error?: string } | null

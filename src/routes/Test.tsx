@@ -1,36 +1,61 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
+import { useActiveTest } from '../hooks/useActiveTest'
 import { sampleTestQuestions } from '../lib/testStructure'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
+import { setTestInProgress, clearTestInProgress } from '../lib/testInProgress'
 import QuestionCard from '../components/QuestionCard'
 import Timer from '../components/Timer'
 import TestResults from '../components/TestResults'
 import type { Question, GroupId } from '../types'
 
-const TIMER_SEC = 30 * 60
-
 export default function Test() {
   const { data, error, loading } = useQuestions()
   const { recordAttempt, recordTestHistory } = useProgress()
+  const { activeTest } = useActiveTest()
   const navigate = useNavigate()
 
+  // Re-sample when active category changes (different bundle/structure).
   const sampled = useMemo<Question[]>(() => {
     if (!data) return []
     return sampleTestQuestions(data.questions, data.testStructure).map(q => shuffleQuestionOptions(q))
-  }, [data])
+  }, [data, activeTest])
 
   const [answers, setAnswers] = useState<Record<number, 'a'|'b'|'c'>>({})
   const [idx, setIdx] = useState(0)
   const [submitted, setSubmitted] = useState(false)
-  const [startedAt] = useState(() => Date.now())
+  const [startedAt, setStartedAt] = useState(() => Date.now())
+
+  // Reset on category switch (modal guard ensures user already confirmed).
+  useEffect(() => {
+    setAnswers({})
+    setIdx(0)
+    setSubmitted(false)
+    setStartedAt(Date.now())
+  }, [activeTest])
+
+  const timerSec = (data?.passing.durationMin ?? 30) * 60
+  const remainingSec = Math.max(0, timerSec - Math.round((Date.now() - startedAt) / 1000))
+
+  // Maintain global "test in progress" flag (used by CategoryDropdown to confirm switch).
+  useEffect(() => {
+    if (!data || submitted) { clearTestInProgress(); return }
+    setTestInProgress({
+      inProgress: true,
+      answered: Object.keys(answers).length,
+      total: sampled.length,
+      remainingSec,
+    })
+    return () => clearTestInProgress()
+  }, [data, submitted, answers, sampled.length, remainingSec])
 
   const submit = useCallback(() => {
     setSubmitted(true)
     const at = new Date().toISOString()
     let score = 0
-    const perGroup: Record<GroupId, { correct: number; total: number }> = {} as any
+    const perGroup: Record<GroupId, { correct: number; total: number }> = {} as Record<GroupId, { correct: number; total: number }>
     for (const sq of sampled) {
       const ans = answers[sq.id]
       const correct = ans === sq.correct
@@ -64,7 +89,7 @@ export default function Test() {
     <div className="max-w-3xl mx-auto p-4 md:p-8">
       <div className="flex justify-between items-center mb-2 text-sm gap-2">
         <span className="text-neutral-500 truncate">Otázka <strong className="text-neutral-900">{idx + 1} / {sampled.length}</strong> · {q.group}</span>
-        <Timer remainingSec={TIMER_SEC - Math.round((Date.now() - startedAt) / 1000)} ticking onExpire={submit} />
+        <Timer remainingSec={remainingSec} ticking onExpire={submit} />
       </div>
       <div className="h-1 bg-neutral-200 rounded mb-6">
         <div className="h-1 bg-primary rounded" style={{ width: `${((idx+1)/sampled.length)*100}%` }}/>

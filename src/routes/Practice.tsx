@@ -54,7 +54,7 @@ export default function Practice() {
         <button onClick={() => setSubMode('structure')}
           className={`text-left rounded-lg p-4 border-2 ${subMode === 'structure' ? 'border-primary bg-primary-light' : 'border-neutral-200'}`}>
           <div className={`text-sm font-semibold ${subMode === 'structure' ? 'text-primary-dark' : ''}`}>● Struktura ostrého testu</div>
-          <div className="text-xs text-neutral-600 mt-1">35 otázek dle reálné struktury (16/7/5/3/4). Bez timeru.</div>
+          <div className="text-xs text-neutral-600 mt-1">{data.passing.total} otázek dle reálné struktury ({data.testStructure.map(s => s.count).join('/')}). Bez timeru.</div>
         </button>
         <button onClick={() => setSubMode('groups')}
           className={`text-left rounded-lg p-4 border-2 ${subMode === 'groups' ? 'border-primary bg-primary-light' : 'border-neutral-200'}`}>

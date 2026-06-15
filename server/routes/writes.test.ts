@@ -3,8 +3,10 @@ import { createDb, type Db } from '../db/client.js'
 import { users, attempts, testHistory } from '../db/schema.js'
 import { hashPassword } from '../auth/password.js'
 import { buildApp } from '../index.js'
+import { _resetRateLimit } from '../auth/rateLimit.js'
 
 async function setup() {
+  _resetRateLimit()
   const db = createDb(':memory:')
   await db.applyMigrations()
   await db.db.insert(users).values({
@@ -39,11 +41,12 @@ describe('POST /api/attempts', () => {
     const res = await ctx.app.request('/api/attempts', {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie: ctx.cookie },
-      body: JSON.stringify({ questionId: 7, correct: false, mode: 'practice' }),
+      body: JSON.stringify({ testId: 'M', questionId: 7, correct: false, mode: 'practice' }),
     })
     expect(res.status).toBe(201)
     const rows = await ctx.db.db.select().from(attempts)
     expect(rows).toHaveLength(1)
+    expect(rows[0].testId).toBe('M')
     expect(rows[0].questionId).toBe(7)
     expect(rows[0].correct).toBe(false)
     expect(rows[0].mode).toBe('practice')
@@ -54,9 +57,29 @@ describe('POST /api/attempts', () => {
     const res = await ctx.app.request('/api/attempts', {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie: ctx.cookie },
-      body: JSON.stringify({ questionId: 7, correct: false, mode: 'bogus' }),
+      body: JSON.stringify({ testId: 'M', questionId: 7, correct: false, mode: 'bogus' }),
     })
     expect(res.status).toBe(400)
+  })
+
+  it('400 on bad testId', async () => {
+    const res = await ctx.app.request('/api/attempts', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', cookie: ctx.cookie },
+      body: JSON.stringify({ testId: 'X', questionId: 7, correct: true, mode: 'test' }),
+    })
+    expect(res.status).toBe(400)
+  })
+
+  it('inserts a C attempt', async () => {
+    const res = await ctx.app.request('/api/attempts', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', cookie: ctx.cookie },
+      body: JSON.stringify({ testId: 'C', questionId: 1, correct: true, mode: 'test' }),
+    })
+    expect(res.status).toBe(201)
+    const rows = await ctx.db.db.select().from(attempts)
+    expect(rows[0].testId).toBe('C')
   })
 })
 
@@ -67,6 +90,7 @@ describe('POST /api/test-history', () => {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie: ctx.cookie },
       body: JSON.stringify({
+        testId: 'M',
         score: 30, total: 35, durationSec: 1500,
         perGroup: { 'plavebni-provoz': { correct: 14, total: 16 } },
         questionIds: [1, 2, 3],
@@ -75,6 +99,7 @@ describe('POST /api/test-history', () => {
     expect(res.status).toBe(201)
     const rows = await ctx.db.db.select().from(testHistory)
     expect(rows).toHaveLength(1)
+    expect(rows[0].testId).toBe('M')
     expect(rows[0].score).toBe(30)
     expect(JSON.parse(rows[0].questionIds)).toEqual([1, 2, 3])
   })

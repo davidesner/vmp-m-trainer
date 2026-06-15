@@ -1,0 +1,12 @@
+{
+  "qid": 1,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:14:56Z",
+  "sources": [
+    "COLREG 1972, Rule 1 (Application), písm. a)",
+    "COLREG 1972, Rule 3 (General Definitions), písm. a)",
+    "COLREG 1972, Rule 30 (Anchored Vessels and Vessels Aground)",
+    "Zákon č. 61/2000 Sb., o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

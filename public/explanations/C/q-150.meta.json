@@ -1,0 +1,12 @@
+{
+  "qid": 150,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:16:18Z",
+  "sources": [
+    "https://www.chmi.cz/",
+    "ICAO Doc 7488 — Manual of the ICAO Standard Atmosphere",
+    "Bowditch, N.: The American Practical Navigator (NGA)",
+    "Karnis, P.: Námořní jachting — kapitola Meteorologie"
+  ],
+  "model": "claude-opus-4-7"
+}

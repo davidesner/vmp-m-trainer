@@ -1,60 +1,55 @@
 {
+  "testId": "M",
   "version": "M-2015",
-  "scrapedAt": "2026-05-04T13:53:40.175Z",
+  "name": "Vůdce malého plavidla",
+  "scrapedAt": "2026-06-15T18:45:36.616Z",
   "groups": [
     {
       "id": "plavebni-provoz",
       "name": "Plavební provoz",
       "zkratky": [
         "PP1"
-      ],
-      "testCount": 16
+      ]
     },
     {
       "id": "nocni-denni-signalizace",
       "name": "Noční a denní signalizace",
       "zkratky": [
         "PP2"
-      ],
-      "testCount": 7
+      ]
     },
     {
       "id": "signalizace-rizeni-plavby",
       "name": "Signalizace pro řízení plavby na vodní cestě",
       "zkratky": [
         "PP3"
-      ],
-      "testCount": 0
+      ]
     },
     {
       "id": "zvukove-signaly",
       "name": "Zvukové signály a signální znaky",
       "zkratky": [
         "PP4"
-      ],
-      "testCount": 0
+      ]
     },
     {
       "id": "vytyceni-vodnich-cest",
       "name": "Vytyčení vodních cest",
-      "zkratky": [],
-      "testCount": 0
+      "zkratky": []
     },
     {
       "id": "zaklady-konstrukce-plavidel",
       "name": "Základy konstrukce plavidel",
       "zkratky": [
         "TZ"
-      ],
-      "testCount": 3
+      ]
     },
     {
       "id": "zaklady-prvni-pomoci",
       "name": "Základy první pomoci",
       "zkratky": [
         "ZP"
-      ],
-      "testCount": 4
+      ]
     }
   ],
   "testStructure": [
@@ -91,6 +86,11 @@
       "count": 4
     }
   ],
+  "passing": {
+    "score": 30,
+    "total": 35,
+    "durationMin": 30
+  },
   "questions": [
     {
       "id": 1,
@@ -3749,7 +3749,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-167.jpg",
+      "image": "/data/images/M/q-167.jpg",
       "options": [
         {
           "key": "a",
@@ -3771,7 +3771,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-168.jpg",
+      "image": "/data/images/M/q-168.jpg",
       "options": [
         {
           "key": "a",
@@ -3793,7 +3793,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento válec nese:",
-      "image": "/data/images/q-169.jpg",
+      "image": "/data/images/M/q-169.jpg",
       "options": [
         {
           "key": "a",
@@ -3815,7 +3815,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-170.jpg",
+      "image": "/data/images/M/q-170.jpg",
       "options": [
         {
           "key": "a",
@@ -3837,7 +3837,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Toto signalizační světlo nese:",
-      "image": "/data/images/q-171.jpg",
+      "image": "/data/images/M/q-171.jpg",
       "options": [
         {
           "key": "a",
@@ -3859,7 +3859,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento balón nese:",
-      "image": "/data/images/q-172.jpg",
+      "image": "/data/images/M/q-172.jpg",
       "options": [
         {
           "key": "a",
@@ -3881,7 +3881,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-173.jpg",
+      "image": "/data/images/M/q-173.jpg",
       "options": [
         {
           "key": "a",
@@ -3903,7 +3903,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-174.jpg",
+      "image": "/data/images/M/q-174.jpg",
       "options": [
         {
           "key": "a",
@@ -3925,7 +3925,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla může nést:",
-      "image": "/data/images/q-175.jpg",
+      "image": "/data/images/M/q-175.jpg",
       "options": [
         {
           "key": "a",
@@ -3947,7 +3947,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-176.jpg",
+      "image": "/data/images/M/q-176.jpg",
       "options": [
         {
           "key": "a",
@@ -3969,7 +3969,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-177.jpg",
+      "image": "/data/images/M/q-177.jpg",
       "options": [
         {
           "key": "a",
@@ -3991,7 +3991,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Toto signalizační světlo nese:",
-      "image": "/data/images/q-178.jpg",
+      "image": "/data/images/M/q-178.jpg",
       "options": [
         {
           "key": "a",
@@ -4013,7 +4013,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Toto signalizační světlo nese:",
-      "image": "/data/images/q-179.jpg",
+      "image": "/data/images/M/q-179.jpg",
       "options": [
         {
           "key": "a",
@@ -4035,7 +4035,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-180.jpg",
+      "image": "/data/images/M/q-180.jpg",
       "options": [
         {
           "key": "a",
@@ -4057,7 +4057,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-181.jpg",
+      "image": "/data/images/M/q-181.jpg",
       "options": [
         {
           "key": "a",
@@ -4079,7 +4079,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-182.jpg",
+      "image": "/data/images/M/q-182.jpg",
       "options": [
         {
           "key": "a",
@@ -4101,7 +4101,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Toto signalizační světlo nese:",
-      "image": "/data/images/q-183.jpg",
+      "image": "/data/images/M/q-183.jpg",
       "options": [
         {
           "key": "a",
@@ -4123,7 +4123,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-184.jpg",
+      "image": "/data/images/M/q-184.jpg",
       "options": [
         {
           "key": "a",
@@ -4145,7 +4145,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento kužel nese:",
-      "image": "/data/images/q-185.jpg",
+      "image": "/data/images/M/q-185.jpg",
       "options": [
         {
           "key": "a",
@@ -4167,7 +4167,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento dvojitý kužel nese:",
-      "image": "/data/images/q-186.jpg",
+      "image": "/data/images/M/q-186.jpg",
       "options": [
         {
           "key": "a",
@@ -4189,7 +4189,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Toto signalizační světlo nese:",
-      "image": "/data/images/q-187.jpg",
+      "image": "/data/images/M/q-187.jpg",
       "options": [
         {
           "key": "a",
@@ -4211,7 +4211,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento kužel nese:",
-      "image": "/data/images/q-188.jpg",
+      "image": "/data/images/M/q-188.jpg",
       "options": [
         {
           "key": "a",
@@ -4233,7 +4233,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-189.jpg",
+      "image": "/data/images/M/q-189.jpg",
       "options": [
         {
           "key": "a",
@@ -4255,7 +4255,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento balón nese:",
-      "image": "/data/images/q-190.jpg",
+      "image": "/data/images/M/q-190.jpg",
       "options": [
         {
           "key": "a",
@@ -4277,7 +4277,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Toto signalizační světlo nese:",
-      "image": "/data/images/q-191.jpg",
+      "image": "/data/images/M/q-191.jpg",
       "options": [
         {
           "key": "a",
@@ -4299,7 +4299,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-192.jpg",
+      "image": "/data/images/M/q-192.jpg",
       "options": [
         {
           "key": "a",
@@ -4321,7 +4321,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento balón nese:",
-      "image": "/data/images/q-193.jpg",
+      "image": "/data/images/M/q-193.jpg",
       "options": [
         {
           "key": "a",
@@ -4343,7 +4343,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Kývání červeným světlem v půlkruhu (na malém plavidle lze bílým světlem), znamená:",
-      "image": "/data/images/q-194.jpg",
+      "image": "/data/images/M/q-194.jpg",
       "options": [
         {
           "key": "a",
@@ -4365,7 +4365,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Kývání červenou vlajkou v půlkruhu znamená:",
-      "image": "/data/images/q-195.jpg",
+      "image": "/data/images/M/q-195.jpg",
       "options": [
         {
           "key": "a",
@@ -4387,7 +4387,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-196.jpg",
+      "image": "/data/images/M/q-196.jpg",
       "options": [
         {
           "key": "a",
@@ -4409,7 +4409,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tyto balóny nese:",
-      "image": "/data/images/q-197.jpg",
+      "image": "/data/images/M/q-197.jpg",
       "options": [
         {
           "key": "a",
@@ -4431,7 +4431,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento plamenec nese:",
-      "image": "/data/images/q-198.jpg",
+      "image": "/data/images/M/q-198.jpg",
       "options": [
         {
           "key": "a",
@@ -4453,7 +4453,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento balón nese:",
-      "image": "/data/images/q-199.jpg",
+      "image": "/data/images/M/q-199.jpg",
       "options": [
         {
           "key": "a",
@@ -4475,7 +4475,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-200.jpg",
+      "image": "/data/images/M/q-200.jpg",
       "options": [
         {
           "key": "a",
@@ -4497,7 +4497,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tuto denní signalizaci nese:",
-      "image": "/data/images/q-201.jpg",
+      "image": "/data/images/M/q-201.jpg",
       "options": [
         {
           "key": "a",
@@ -4519,7 +4519,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-202.jpg",
+      "image": "/data/images/M/q-202.jpg",
       "options": [
         {
           "key": "a",
@@ -4541,7 +4541,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tyto denní signalizační znaky nese:",
-      "image": "/data/images/q-203.jpg",
+      "image": "/data/images/M/q-203.jpg",
       "options": [
         {
           "key": "a",
@@ -4563,7 +4563,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tyto denní signalizační znaky nese:",
-      "image": "/data/images/q-204.jpg",
+      "image": "/data/images/M/q-204.jpg",
       "options": [
         {
           "key": "a",
@@ -4585,7 +4585,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tyto vlajky nebo tabule nese:",
-      "image": "/data/images/q-205.jpg",
+      "image": "/data/images/M/q-205.jpg",
       "options": [
         {
           "key": "a",
@@ -4607,7 +4607,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tyto vlajky nebo tabule nese:",
-      "image": "/data/images/q-206.jpg",
+      "image": "/data/images/M/q-206.jpg",
       "options": [
         {
           "key": "a",
@@ -4629,7 +4629,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-207.jpg",
+      "image": "/data/images/M/q-207.jpg",
       "options": [
         {
           "key": "a",
@@ -4651,7 +4651,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento žlutý plovák nebo bóji s radarovým odražečem nesou:",
-      "image": "/data/images/q-208.jpg",
+      "image": "/data/images/M/q-208.jpg",
       "options": [
         {
           "key": "a",
@@ -4673,7 +4673,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Toto signalizační světlo nese:",
-      "image": "/data/images/q-209.jpg",
+      "image": "/data/images/M/q-209.jpg",
       "options": [
         {
           "key": "a",
@@ -4695,7 +4695,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tento signalizační znak umístěný na plavidle znamená:",
-      "image": "/data/images/q-210.jpg",
+      "image": "/data/images/M/q-210.jpg",
       "options": [
         {
           "key": "a",
@@ -4717,7 +4717,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-211.jpg",
+      "image": "/data/images/M/q-211.jpg",
       "options": [
         {
           "key": "a",
@@ -4739,7 +4739,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tuto tabuli může použít:",
-      "image": "/data/images/q-212.jpg",
+      "image": "/data/images/M/q-212.jpg",
       "options": [
         {
           "key": "a",
@@ -4761,7 +4761,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Toto signalizační světlo nese:",
-      "image": "/data/images/q-213.jpg",
+      "image": "/data/images/M/q-213.jpg",
       "options": [
         {
           "key": "a",
@@ -4783,7 +4783,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-214.jpg",
+      "image": "/data/images/M/q-214.jpg",
       "options": [
         {
           "key": "a",
@@ -4805,7 +4805,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tuto denní signalizaci nese:",
-      "image": "/data/images/q-215.jpg",
+      "image": "/data/images/M/q-215.jpg",
       "options": [
         {
           "key": "a",
@@ -4827,7 +4827,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-216.jpg",
+      "image": "/data/images/M/q-216.jpg",
       "options": [
         {
           "key": "a",
@@ -4849,7 +4849,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tyto kužele nese:",
-      "image": "/data/images/q-217.jpg",
+      "image": "/data/images/M/q-217.jpg",
       "options": [
         {
           "key": "a",
@@ -4871,7 +4871,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-218.jpg",
+      "image": "/data/images/M/q-218.jpg",
       "options": [
         {
           "key": "a",
@@ -4893,7 +4893,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tyto kužele nese:",
-      "image": "/data/images/q-219.jpg",
+      "image": "/data/images/M/q-219.jpg",
       "options": [
         {
           "key": "a",
@@ -4915,7 +4915,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tuto vlajku nese:",
-      "image": "/data/images/q-220.jpg",
+      "image": "/data/images/M/q-220.jpg",
       "options": [
         {
           "key": "a",
@@ -4937,7 +4937,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tuto vlajku nese:",
-      "image": "/data/images/q-221.jpg",
+      "image": "/data/images/M/q-221.jpg",
       "options": [
         {
           "key": "a",
@@ -4959,7 +4959,7 @@
       "zkratka": "PP3",
       "group": "signalizace-rizeni-plavby",
       "text": "Tato signalizační světla nese:",
-      "image": "/data/images/q-222.jpg",
+      "image": "/data/images/M/q-222.jpg",
       "options": [
         {
           "key": "a",
@@ -5399,7 +5399,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-242.jpg",
+      "image": "/data/images/M/q-242.jpg",
       "options": [
         {
           "key": "a",
@@ -5421,7 +5421,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (světlo) znamená:",
-      "image": "/data/images/q-243.jpg",
+      "image": "/data/images/M/q-243.jpg",
       "options": [
         {
           "key": "a",
@@ -5443,7 +5443,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (vlajka) znamená:",
-      "image": "/data/images/q-244.jpg",
+      "image": "/data/images/M/q-244.jpg",
       "options": [
         {
           "key": "a",
@@ -5465,7 +5465,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (dvě tabule nad sebou) znamená:",
-      "image": "/data/images/q-245.jpg",
+      "image": "/data/images/M/q-245.jpg",
       "options": [
         {
           "key": "a",
@@ -5487,7 +5487,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (dvě světla nad sebou) znamená:",
-      "image": "/data/images/q-246.jpg",
+      "image": "/data/images/M/q-246.jpg",
       "options": [
         {
           "key": "a",
@@ -5509,7 +5509,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (dvě vlajky nad sebou) znamená:",
-      "image": "/data/images/q-247.jpg",
+      "image": "/data/images/M/q-247.jpg",
       "options": [
         {
           "key": "a",
@@ -5531,7 +5531,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-248.jpg",
+      "image": "/data/images/M/q-248.jpg",
       "options": [
         {
           "key": "a",
@@ -5553,7 +5553,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (žlutá bóje, která nese vrcholový znak) znamená:",
-      "image": "/data/images/q-249.jpg",
+      "image": "/data/images/M/q-249.jpg",
       "options": [
         {
           "key": "a",
@@ -5575,7 +5575,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-250.jpg",
+      "image": "/data/images/M/q-250.jpg",
       "options": [
         {
           "key": "a",
@@ -5597,7 +5597,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-251.jpg",
+      "image": "/data/images/M/q-251.jpg",
       "options": [
         {
           "key": "a",
@@ -5619,7 +5619,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-252.jpg",
+      "image": "/data/images/M/q-252.jpg",
       "options": [
         {
           "key": "a",
@@ -5641,7 +5641,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-253.jpg",
+      "image": "/data/images/M/q-253.jpg",
       "options": [
         {
           "key": "a",
@@ -5663,7 +5663,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-254.jpg",
+      "image": "/data/images/M/q-254.jpg",
       "options": [
         {
           "key": "a",
@@ -5685,7 +5685,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-255.jpg",
+      "image": "/data/images/M/q-255.jpg",
       "options": [
         {
           "key": "a",
@@ -5707,7 +5707,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-256.jpg",
+      "image": "/data/images/M/q-256.jpg",
       "options": [
         {
           "key": "a",
@@ -5729,7 +5729,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-257.jpg",
+      "image": "/data/images/M/q-257.jpg",
       "options": [
         {
           "key": "a",
@@ -5751,7 +5751,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-258.jpg",
+      "image": "/data/images/M/q-258.jpg",
       "options": [
         {
           "key": "a",
@@ -5773,7 +5773,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (světla) znamená:",
-      "image": "/data/images/q-259.jpg",
+      "image": "/data/images/M/q-259.jpg",
       "options": [
         {
           "key": "a",
@@ -5795,7 +5795,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-260.jpg",
+      "image": "/data/images/M/q-260.jpg",
       "options": [
         {
           "key": "a",
@@ -5817,7 +5817,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (dvojice světel) znamená:",
-      "image": "/data/images/q-261.jpg",
+      "image": "/data/images/M/q-261.jpg",
       "options": [
         {
           "key": "a",
@@ -5839,7 +5839,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-262.jpg",
+      "image": "/data/images/M/q-262.jpg",
       "options": [
         {
           "key": "a",
@@ -5861,7 +5861,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-263.jpg",
+      "image": "/data/images/M/q-263.jpg",
       "options": [
         {
           "key": "a",
@@ -5883,7 +5883,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-264.jpg",
+      "image": "/data/images/M/q-264.jpg",
       "options": [
         {
           "key": "a",
@@ -5905,7 +5905,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-265.jpg",
+      "image": "/data/images/M/q-265.jpg",
       "options": [
         {
           "key": "a",
@@ -5927,7 +5927,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-266.jpg",
+      "image": "/data/images/M/q-266.jpg",
       "options": [
         {
           "key": "a",
@@ -5949,7 +5949,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-267.jpg",
+      "image": "/data/images/M/q-267.jpg",
       "options": [
         {
           "key": "a",
@@ -5971,7 +5971,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-268.jpg",
+      "image": "/data/images/M/q-268.jpg",
       "options": [
         {
           "key": "a",
@@ -5993,7 +5993,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-269.jpg",
+      "image": "/data/images/M/q-269.jpg",
       "options": [
         {
           "key": "a",
@@ -6015,7 +6015,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-270.jpg",
+      "image": "/data/images/M/q-270.jpg",
       "options": [
         {
           "key": "a",
@@ -6037,7 +6037,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-271.jpg",
+      "image": "/data/images/M/q-271.jpg",
       "options": [
         {
           "key": "a",
@@ -6059,7 +6059,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-272.jpg",
+      "image": "/data/images/M/q-272.jpg",
       "options": [
         {
           "key": "a",
@@ -6081,7 +6081,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-273.jpg",
+      "image": "/data/images/M/q-273.jpg",
       "options": [
         {
           "key": "a",
@@ -6103,7 +6103,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-274.jpg",
+      "image": "/data/images/M/q-274.jpg",
       "options": [
         {
           "key": "a",
@@ -6125,7 +6125,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-275.jpg",
+      "image": "/data/images/M/q-275.jpg",
       "options": [
         {
           "key": "a",
@@ -6147,7 +6147,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-276.jpg",
+      "image": "/data/images/M/q-276.jpg",
       "options": [
         {
           "key": "a",
@@ -6169,7 +6169,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-277.jpg",
+      "image": "/data/images/M/q-277.jpg",
       "options": [
         {
           "key": "a",
@@ -6191,7 +6191,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-278.jpg",
+      "image": "/data/images/M/q-278.jpg",
       "options": [
         {
           "key": "a",
@@ -6213,7 +6213,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-279.jpg",
+      "image": "/data/images/M/q-279.jpg",
       "options": [
         {
           "key": "a",
@@ -6235,7 +6235,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-280.jpg",
+      "image": "/data/images/M/q-280.jpg",
       "options": [
         {
           "key": "a",
@@ -6257,7 +6257,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-281.jpg",
+      "image": "/data/images/M/q-281.jpg",
       "options": [
         {
           "key": "a",
@@ -6279,7 +6279,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-282.jpg",
+      "image": "/data/images/M/q-282.jpg",
       "options": [
         {
           "key": "a",
@@ -6301,7 +6301,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-283.jpg",
+      "image": "/data/images/M/q-283.jpg",
       "options": [
         {
           "key": "a",
@@ -6323,7 +6323,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (světla) znamená:",
-      "image": "/data/images/q-284.jpg",
+      "image": "/data/images/M/q-284.jpg",
       "options": [
         {
           "key": "a",
@@ -6345,7 +6345,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-285.jpg",
+      "image": "/data/images/M/q-285.jpg",
       "options": [
         {
           "key": "a",
@@ -6367,7 +6367,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-286.jpg",
+      "image": "/data/images/M/q-286.jpg",
       "options": [
         {
           "key": "a",
@@ -6389,7 +6389,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-287.jpg",
+      "image": "/data/images/M/q-287.jpg",
       "options": [
         {
           "key": "a",
@@ -6411,7 +6411,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-288.jpg",
+      "image": "/data/images/M/q-288.jpg",
       "options": [
         {
           "key": "a",
@@ -6433,7 +6433,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-289.jpg",
+      "image": "/data/images/M/q-289.jpg",
       "options": [
         {
           "key": "a",
@@ -6455,7 +6455,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-290.jpg",
+      "image": "/data/images/M/q-290.jpg",
       "options": [
         {
           "key": "a",
@@ -6477,7 +6477,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-291.jpg",
+      "image": "/data/images/M/q-291.jpg",
       "options": [
         {
           "key": "a",
@@ -6499,7 +6499,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak světlo znamená:",
-      "image": "/data/images/q-292.jpg",
+      "image": "/data/images/M/q-292.jpg",
       "options": [
         {
           "key": "a",
@@ -6521,7 +6521,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tyto signální znaky tabule znamenají:",
-      "image": "/data/images/q-293.jpg",
+      "image": "/data/images/M/q-293.jpg",
       "options": [
         {
           "key": "a",
@@ -6543,7 +6543,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tyto signální znaky tabule znamenají:",
-      "image": "/data/images/q-294.jpg",
+      "image": "/data/images/M/q-294.jpg",
       "options": [
         {
           "key": "a",
@@ -6565,7 +6565,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (světla) znamená:",
-      "image": "/data/images/q-295.jpg",
+      "image": "/data/images/M/q-295.jpg",
       "options": [
         {
           "key": "a",
@@ -6587,7 +6587,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-296.jpg",
+      "image": "/data/images/M/q-296.jpg",
       "options": [
         {
           "key": "a",
@@ -6609,7 +6609,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-297.jpg",
+      "image": "/data/images/M/q-297.jpg",
       "options": [
         {
           "key": "a",
@@ -6631,7 +6631,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-298.jpg",
+      "image": "/data/images/M/q-298.jpg",
       "options": [
         {
           "key": "a",
@@ -6653,7 +6653,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-299.jpg",
+      "image": "/data/images/M/q-299.jpg",
       "options": [
         {
           "key": "a",
@@ -6675,7 +6675,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-300.jpg",
+      "image": "/data/images/M/q-300.jpg",
       "options": [
         {
           "key": "a",
@@ -6697,7 +6697,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-301.jpg",
+      "image": "/data/images/M/q-301.jpg",
       "options": [
         {
           "key": "a",
@@ -6719,7 +6719,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-302.jpg",
+      "image": "/data/images/M/q-302.jpg",
       "options": [
         {
           "key": "a",
@@ -6741,7 +6741,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-303.jpg",
+      "image": "/data/images/M/q-303.jpg",
       "options": [
         {
           "key": "a",
@@ -6763,7 +6763,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-304.jpg",
+      "image": "/data/images/M/q-304.jpg",
       "options": [
         {
           "key": "a",
@@ -6785,7 +6785,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-305.jpg",
+      "image": "/data/images/M/q-305.jpg",
       "options": [
         {
           "key": "a",
@@ -6807,7 +6807,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-306.jpg",
+      "image": "/data/images/M/q-306.jpg",
       "options": [
         {
           "key": "a",
@@ -6829,7 +6829,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-307.jpg",
+      "image": "/data/images/M/q-307.jpg",
       "options": [
         {
           "key": "a",
@@ -6851,7 +6851,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-308.jpg",
+      "image": "/data/images/M/q-308.jpg",
       "options": [
         {
           "key": "a",
@@ -6873,7 +6873,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-309.jpg",
+      "image": "/data/images/M/q-309.jpg",
       "options": [
         {
           "key": "a",
@@ -6895,7 +6895,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-310.jpg",
+      "image": "/data/images/M/q-310.jpg",
       "options": [
         {
           "key": "a",
@@ -6917,7 +6917,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-311.jpg",
+      "image": "/data/images/M/q-311.jpg",
       "options": [
         {
           "key": "a",
@@ -6939,7 +6939,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-312.jpg",
+      "image": "/data/images/M/q-312.jpg",
       "options": [
         {
           "key": "a",
@@ -6961,7 +6961,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-313.jpg",
+      "image": "/data/images/M/q-313.jpg",
       "options": [
         {
           "key": "a",
@@ -6983,7 +6983,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-314.jpg",
+      "image": "/data/images/M/q-314.jpg",
       "options": [
         {
           "key": "a",
@@ -7005,7 +7005,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-315.jpg",
+      "image": "/data/images/M/q-315.jpg",
       "options": [
         {
           "key": "a",
@@ -7027,7 +7027,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-316.jpg",
+      "image": "/data/images/M/q-316.jpg",
       "options": [
         {
           "key": "a",
@@ -7049,7 +7049,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-317.jpg",
+      "image": "/data/images/M/q-317.jpg",
       "options": [
         {
           "key": "a",
@@ -7071,7 +7071,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-318.jpg",
+      "image": "/data/images/M/q-318.jpg",
       "options": [
         {
           "key": "a",
@@ -7093,7 +7093,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-319.jpg",
+      "image": "/data/images/M/q-319.jpg",
       "options": [
         {
           "key": "a",
@@ -7115,7 +7115,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Výstražní znaky, kdy jedno nebo dvě bílá světla vedle sebe svítí nepřerušovaně, mají tento význam:",
-      "image": "/data/images/q-320.jpg",
+      "image": "/data/images/M/q-320.jpg",
       "options": [
         {
           "key": "a",
@@ -7137,7 +7137,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Výstražní znaky, kdy jedno nebo dvě světla vedle sebe blikají, mají tento význam:",
-      "image": "/data/images/q-321.jpg",
+      "image": "/data/images/M/q-321.jpg",
       "options": [
         {
           "key": "a",
@@ -7159,7 +7159,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-322.jpg",
+      "image": "/data/images/M/q-322.jpg",
       "options": [
         {
           "key": "a",
@@ -7181,7 +7181,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-323.jpg",
+      "image": "/data/images/M/q-323.jpg",
       "options": [
         {
           "key": "a",
@@ -7203,7 +7203,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-324.jpg",
+      "image": "/data/images/M/q-324.jpg",
       "options": [
         {
           "key": "a",
@@ -7225,7 +7225,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-325.jpg",
+      "image": "/data/images/M/q-325.jpg",
       "options": [
         {
           "key": "a",
@@ -7247,7 +7247,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-326.jpg",
+      "image": "/data/images/M/q-326.jpg",
       "options": [
         {
           "key": "a",
@@ -7269,7 +7269,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-327.jpg",
+      "image": "/data/images/M/q-327.jpg",
       "options": [
         {
           "key": "a",
@@ -7291,7 +7291,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-328.jpg",
+      "image": "/data/images/M/q-328.jpg",
       "options": [
         {
           "key": "a",
@@ -7313,7 +7313,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-329.jpg",
+      "image": "/data/images/M/q-329.jpg",
       "options": [
         {
           "key": "a",
@@ -7335,7 +7335,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-330.jpg",
+      "image": "/data/images/M/q-330.jpg",
       "options": [
         {
           "key": "a",
@@ -7357,7 +7357,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-331.jpg",
+      "image": "/data/images/M/q-331.jpg",
       "options": [
         {
           "key": "a",
@@ -7379,7 +7379,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-332.jpg",
+      "image": "/data/images/M/q-332.jpg",
       "options": [
         {
           "key": "a",
@@ -7401,7 +7401,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-333.jpg",
+      "image": "/data/images/M/q-333.jpg",
       "options": [
         {
           "key": "a",
@@ -7423,7 +7423,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento plovoucí signální znak (bóje) znamená:",
-      "image": "/data/images/q-334.jpg",
+      "image": "/data/images/M/q-334.jpg",
       "options": [
         {
           "key": "a",
@@ -7445,7 +7445,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento plovoucí signální znak (bóje) znamená:",
-      "image": "/data/images/q-335.jpg",
+      "image": "/data/images/M/q-335.jpg",
       "options": [
         {
           "key": "a",
@@ -7467,7 +7467,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento plovoucí signální znak (bóje) znamená:",
-      "image": "/data/images/q-336.jpg",
+      "image": "/data/images/M/q-336.jpg",
       "options": [
         {
           "key": "a",
@@ -7489,7 +7489,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Bílé písmeno \"P\" na bóji pro označení strany plavební dráhy znamená:",
-      "image": "/data/images/q-337.jpg",
+      "image": "/data/images/M/q-337.jpg",
       "options": [
         {
           "key": "a",
@@ -7511,7 +7511,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-338.jpg",
+      "image": "/data/images/M/q-338.jpg",
       "options": [
         {
           "key": "a",
@@ -7533,7 +7533,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-339.jpg",
+      "image": "/data/images/M/q-339.jpg",
       "options": [
         {
           "key": "a",
@@ -7555,7 +7555,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-340.jpg",
+      "image": "/data/images/M/q-340.jpg",
       "options": [
         {
           "key": "a",
@@ -7577,7 +7577,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tabule) znamená:",
-      "image": "/data/images/q-341.jpg",
+      "image": "/data/images/M/q-341.jpg",
       "options": [
         {
           "key": "a",
@@ -7599,7 +7599,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (kužel) znamená:",
-      "image": "/data/images/q-342.jpg",
+      "image": "/data/images/M/q-342.jpg",
       "options": [
         {
           "key": "a",
@@ -7621,7 +7621,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (kužel) znamená:",
-      "image": "/data/images/q-343.jpg",
+      "image": "/data/images/M/q-343.jpg",
       "options": [
         {
           "key": "a",
@@ -7643,7 +7643,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (plovatka) znamená:",
-      "image": "/data/images/q-344.jpg",
+      "image": "/data/images/M/q-344.jpg",
       "options": [
         {
           "key": "a",
@@ -7665,7 +7665,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tyč na bóji) znamená:",
-      "image": "/data/images/q-345.jpg",
+      "image": "/data/images/M/q-345.jpg",
       "options": [
         {
           "key": "a",
@@ -7687,7 +7687,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tyč na plováku) znamená:",
-      "image": "/data/images/q-346.jpg",
+      "image": "/data/images/M/q-346.jpg",
       "options": [
         {
           "key": "a",
@@ -7709,7 +7709,7 @@
       "zkratka": "PP4",
       "group": "zvukove-signaly",
       "text": "Tento signální znak (tyč na plováku) znamená:",
-      "image": "/data/images/q-347.jpg",
+      "image": "/data/images/M/q-347.jpg",
       "options": [
         {
           "key": "a",
