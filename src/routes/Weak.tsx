@@ -5,6 +5,7 @@ import { useProgress } from '../hooks/useProgress'
 import { sampleByMix } from '../lib/sampleQuestions'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 import PracticeRunner from '../components/PracticeRunner'
+import CategorySubtitle from '../components/CategorySubtitle'
 import type { Question } from '../types'
 
 export default function Weak() {
@@ -22,7 +23,8 @@ export default function Weak() {
   if (loading || !run) return <div className="p-4 md:p-8">Načítám…</div>
   if (run.length === 0) return (
     <div className="p-4 md:p-8">
-      <h2 className="text-xl font-semibold">Žádné slabiny zatím nemáme.</h2>
+      <h2 className="text-xl font-semibold mb-1">Žádné slabiny zatím nemáme.</h2>
+      <CategorySubtitle className="mb-3" />
       <p className="text-neutral-600 mt-2">Udělej pár testů a vrať se sem.</p>
       <button onClick={() => navigate('/')} className="mt-4 px-4 py-2 bg-primary text-white rounded">Domů</button>
     </div>

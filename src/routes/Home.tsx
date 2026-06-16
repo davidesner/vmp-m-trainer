@@ -3,6 +3,7 @@ import { useMemo } from 'react'
 import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
 import { estimatePass, coverage } from '../lib/passProbability'
+import CategorySubtitle from '../components/CategorySubtitle'
 
 export default function Home() {
   const { data, loading } = useQuestions()
@@ -28,7 +29,8 @@ export default function Home() {
 
   return (
     <div className="p-4 md:p-8 max-w-5xl">
-      <h2 className="text-2xl font-bold mb-6">Přehled</h2>
+      <h2 className="text-2xl font-bold mb-1">Přehled</h2>
+      <CategorySubtitle withParams className="mb-6" />
 
       {/* Hero: pass probability + expected score + CTA */}
       <div className="bg-white border border-neutral-200 rounded-lg overflow-hidden mb-6">
