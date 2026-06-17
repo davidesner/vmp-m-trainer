@@ -1,0 +1,12 @@
+{
+  "qid": 190,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO – Manual on the Global Data-processing and Forecasting System (WMO-No. 485)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Bowditch – American Practical Navigator",
+    "ČMeS – Meteorologický slovník výkladový a terminologický"
+  ],
+  "model": "claude-opus-4-7"
+}

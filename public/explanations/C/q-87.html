@@ -1,0 +1,87 @@
+<article class="vmp-explanation">
+  <h2>Úhel mezi zeměpisným a magnetickým pólem</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>deklinace</strong>. Deklinace (magnetická deklinace) je úhel svírající
+    zeměpisný (pravý) sever a magnetický sever v daném místě na Zemi. Tento úhel je způsoben tím,
+    že magnetický pól se nenachází na stejném místě jako zeměpisný pól.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Kompas ukazuje na magnetický severní pól, nikoliv na zeměpisný (pravý) severní pól. Rozdíl
+    mezi těmito dvěma směry se nazývá <strong>magnetická deklinace</strong> (nebo také magnetická
+    variace). Vyjadřuje se ve stupních a označuje se jako <em>východní</em> (E) nebo
+    <em>západní</em> (W) — podle toho, na kterou stranu od pravého severu se magnetický sever
+    odchyluje.
+  </p>
+  <p>
+    <strong>Deviace</strong> je odlišný pojem — označuje odchylku kompasu způsobenou kovem nebo
+    elektrickými poli na palubě samotného plavidla. Deviace se tedy liší od plavidla k plavidlu.
+  </p>
+  <p>
+    <strong>Devalvace</strong> je ekonomický termín (znehodnocení měny) a v námořní navigaci se
+    vůbec nepoužívá.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;display:block;margin:1em auto;">
+    <defs>
+      <marker id="arrow-geo" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#1a6aba;" />
+      </marker>
+      <marker id="arrow-mag" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#c0392b;" />
+      </marker>
+    </defs>
+
+    <!-- Středový bod (pozice plavidla) -->
+    <circle cx="160" cy="210" r="6" style="fill:#333;" />
+    <text x="168" y="226" style="font-size:12px;fill:#333;">plavidlo</text>
+
+    <!-- Šipka — zeměpisný sever (pravý) -->
+    <line x1="160" y1="210" x2="160" y2="40"
+          style="stroke:#1a6aba;stroke-width:2.5;"
+          marker-end="url(#arrow-geo)" />
+    <text x="125" y="35" style="font-size:13px;fill:#1a6aba;font-weight:bold;">Zeměpisný</text>
+    <text x="130" y="50" style="font-size:13px;fill:#1a6aba;font-weight:bold;">sever (Pz)</text>
+
+    <!-- Šipka — magnetický sever -->
+    <line x1="160" y1="210" x2="210" y2="42"
+          style="stroke:#c0392b;stroke-width:2.5;"
+          marker-end="url(#arrow-mag)" />
+    <text x="214" y="55" style="font-size:13px;fill:#c0392b;font-weight:bold;">Magnetický</text>
+    <text x="218" y="70" style="font-size:13px;fill:#c0392b;font-weight:bold;">sever (Pm)</text>
+
+    <!-- Oblouk znázorňující deklinaci -->
+    <path d="M 160 130 A 80 80 0 0 1 197 100"
+          style="fill:none;stroke:#e67e22;stroke-width:2;stroke-dasharray:5,3;" />
+
+    <!-- Popis deklinace -->
+    <text x="185" y="125" style="font-size:13px;fill:#e67e22;font-weight:bold;">δ</text>
+    <text x="198" y="145" style="font-size:12px;fill:#e67e22;">deklinace</text>
+    <text x="196" y="160" style="font-size:11px;fill:#e67e22;">(magnetická</text>
+    <text x="200" y="174" style="font-size:11px;fill:#e67e22;">variace)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při navigaci na moři je nutné znát deklinaci pro danou oblast — hodnota je zanesena na
+    námořních mapách a uvádí se s rokem měření a roční změnou (deklinace se pomalu mění v čase).
+    Navigátor musí kurz odečtený z kompasu korigovat o hodnotu deklinace, aby získal pravý
+    (zeměpisný) kurz. Celková korekce kurzu pak zahrnuje jak deklinaci (vliv zeměského magnetismu),
+    tak deviaci (vliv lodního kovového trupu a elektroinstalace).
+  </p>
+  <p>
+    Příklad: magnetická deklinace v oblasti Baltského moře je přibližně 4–7° E. Pokud kompas ukazuje
+    kurz 090°, pravý kurz je přibližně 094–097° (závisí na přesné poloze a roku měření).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Bowditch — American Practical Navigator (Pub. No. 9), kapitola o magnetickém kompasu a korekcích kurzu</li>
+    <li>Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972) — obecný kontext navigačních pojmů</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — základní navigační požadavky na plavidla plující pod českou vlajkou</li>
+  </ol>
+</article>

@@ -1,0 +1,13 @@
+{
+  "qid": 137,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IALA Maritime Buoyage System (O-101)",
+    "COLREG 1972",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb.",
+    "Bowditch — American Practical Navigator"
+  ],
+  "model": "claude-opus-4-7"
+}

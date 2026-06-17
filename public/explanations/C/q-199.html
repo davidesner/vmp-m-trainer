@@ -1,0 +1,72 @@
+<article class="vmp-explanation">
+  <h2>Nejnižší tlak se nalézá ve středu cyklóny</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že nejnižší tlak se nalézá <strong>ve středu cyklóny</strong>.
+    Cyklóna je oblast nízkého tlaku vzduchu, kde vzduch proudí spirálovitě dovnitř a stoupá vzhůru.
+    Střed (oko) cyklóny je místem nejnižšího atmosferického tlaku — práve tento tlakový gradient pohání cirkulaci větru kolem středu.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Cyklóna (tlaková níže) je meteorologický útvar charakterizovaný uzavřenými izobarami s klesající hodnotou tlaku směrem ke středu.
+    Vzduch proudí (na severní polokouli) proti směru hodinových ručiček do středu, kde stoupá a kondenzuje — proto cyklóny přinášejí oblačnost, srážky a zhoršené počasí.
+  </p>
+  <p>
+    Naopak anticyklóna (tlaková výše) má nejvyšší tlak ve středu a vzduch v ní sestupuje, což přináší jasné počasí.
+    Barická fronta (studená nebo teplá) je přechodová zóna mezi vzduchyovými hmotami různých vlastností — tlak se na frontě mění, ale nejnižší hodnota se zde nevyskytuje.
+  </p>
+  <p>
+    Na okraji rotující cyklóny je tlak vyšší než ve středu — tlakový gradient (rozdíl tlaku mezi okrajem a středem) je právě tím, co způsobuje vítr: vzduch proudí z místa vyššího tlaku (okraj) do místa nižšího tlaku (střed).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" style="max-width:320px;display:block;margin:1em auto;">
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#1a6fc4;" />
+      </marker>
+    </defs>
+    <!-- isobary -->
+    <circle cx="160" cy="160" r="120" style="fill:none;stroke:#aac8f0;stroke-width:1.5;stroke-dasharray:6,4;" />
+    <circle cx="160" cy="160" r="90" style="fill:none;stroke:#6aaae0;stroke-width:1.5;stroke-dasharray:6,4;" />
+    <circle cx="160" cy="160" r="60" style="fill:none;stroke:#2d80d0;stroke-width:1.5;stroke-dasharray:6,4;" />
+    <circle cx="160" cy="160" r="30" style="fill:none;stroke:#1050a0;stroke-width:1.5;stroke-dasharray:6,4;" />
+    <!-- střed - nejnižší tlak -->
+    <circle cx="160" cy="160" r="12" style="fill:#d32f2f;" />
+    <text x="160" y="155" text-anchor="middle" style="font-size:10px;fill:#fff;font-weight:bold;">L</text>
+    <text x="160" y="187" text-anchor="middle" style="font-size:9px;fill:#d32f2f;font-weight:bold;">nejnižší tlak</text>
+    <!-- šipky větru (proti směru hod. ručiček) -->
+    <line x1="160" y1="70" x2="185" y2="75" style="stroke:#1a6fc4;stroke-width:2;" marker-end="url(#arrow)" />
+    <line x1="250" y1="160" x2="245" y2="135" style="stroke:#1a6fc4;stroke-width:2;" marker-end="url(#arrow)" />
+    <line x1="160" y1="250" x2="135" y2="245" style="stroke:#1a6fc4;stroke-width:2;" marker-end="url(#arrow)" />
+    <line x1="70" y1="160" x2="75" y2="185" style="stroke:#1a6fc4;stroke-width:2;" marker-end="url(#arrow)" />
+    <!-- popis izobar -->
+    <text x="282" y="162" style="font-size:9px;fill:#555;">1000 hPa</text>
+    <text x="252" y="162" style="font-size:9px;fill:#555;">996</text>
+    <text x="222" y="162" style="font-size:9px;fill:#555;">992</text>
+    <text x="192" y="162" style="font-size:9px;fill:#555;">988</text>
+    <text x="160" y="30" text-anchor="middle" style="font-size:12px;fill:#333;font-weight:bold;">Cyklóna (tlaková níže)</text>
+    <text x="160" y="300" text-anchor="middle" style="font-size:10px;fill:#1a6fc4;">Vzduch proudí dovnitř (sev. polokoule: proti hod. ruč.)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Pro mořeplavce je rozpoznání blížící se cyklóny klíčové. Klesající barometrický tlak signalizuje přiblížení tlakové níže — čím rychlejší pokles, tím intenzivnější bude počasí.
+    Střed cyklóny doprovázejí nejsilnější větry a vlny v okolí oka; samotné oko tropických cyklón může být dočasně klidné, ale obklíčeno extrémně silnými větry.
+    Navigátor sleduje trend tlaku (lodní barograf/barometr): pokles o více než 3 hPa/hod. je varováním před bouří.
+  </p>
+  <p>
+    Při aproximaci cyklóny se plavidla snaží vyhýbat nebezpečným kvadrantům — v severní polokouli pravý přední kvadrant, kde se kombinují rychlost cyklóny a rychlost větru.
+    Znalost místa nejnižšího tlaku (střed) pomáhá odhadnout polohu a pohyb systému.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>Mezinárodní meteorologická terminologie (WMO)</strong> — definice cyklóny, anticyklóny a tlakové fronty.</li>
+    <li><strong>Bowditch — American Practical Navigator</strong>, kapitola Meteorologie: tlakové systémy, isobary, větrné cirkulace.</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o námořní plavbě — požadavky na meteorologické vybavení námořní lodi (barometr, barograf).</li>
+    <li><strong>SOLAS, kapitola V, pravidlo 5</strong> — meteorologické služby a varování pro námořní plavbu.</li>
+  </ol>
+</article>

@@ -1,0 +1,7 @@
+{
+  "qid": 183,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["WMO Manual on the Global Observing System (WMO-No. 544)", "WMO International Cloud Atlas (WMO-No. 407)", "ČHMÚ Meteorologický slovník výkladový terminologický", "Bowditch — American Practical Navigator (Pub. No. 9)"],
+  "model": "claude-opus-4-7"
+}

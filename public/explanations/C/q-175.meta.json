@@ -1,0 +1,12 @@
+{
+  "qid": 175,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO-No. 8 Průvodce meteorologickými nástroji a metodami pozorování",
+    "Bowditch — American Practical Navigator, kap. 31 a 37",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "SOLAS kap. V, pravidlo 5"
+  ],
+  "model": "claude-opus-4-7"
+}

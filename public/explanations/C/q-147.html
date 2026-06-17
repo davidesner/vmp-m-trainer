@@ -1,0 +1,120 @@
+<article class="vmp-explanation">
+  <h2>Bóje pro speciální účely v systému IALA</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>žlutá barva</strong>. V systému IALA (oblast A, platný v Evropě a okolí)
+    jsou bóje pro speciální účely (<em>Special Mark</em>) označeny výhradně žlutou barvou.
+    Tyto bóje informují plavce o oblastech vojenských cvičení, rekreačních pásmech, uložení
+    kabelů nebo potrubí, vědeckých zařízeních a dalších zvláštních situacích, kde je třeba
+    upozornit na existenci specifického pásma nebo objektu.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Systém IALA (International Association of Marine Aids to Navigation and Lighthouse Authorities)
+    definuje pět základních kategorií námořních bójí:
+  </p>
+  <ul>
+    <li><strong>Laterální bóje</strong> — označují strany plavební dráhy (červená = levá strana, zelená = pravá strana v systému IALA-A)</li>
+    <li><strong>Kardinální bóje</strong> — označují bezpečný průchod ve směru světových stran (černá a žlutá kombinace)</li>
+    <li><strong>Bóje izolovaného nebezpečí</strong> — černá s červeným pruhem, označuje osamělé nebezpečí</li>
+    <li><strong>Bóje bezpečných vod</strong> — červené a bílé svislé pruhy, označuje volnou vodu kolem</li>
+    <li><strong>Bóje pro speciální účely</strong> — <strong>žlutá</strong>, informuje o zvláštních pásmech nebo objektech</li>
+  </ul>
+  <p>
+    Bóje s červenými a bílými svislými pruhy označuje bezpečné vody (např. střed plavební dráhy),
+    nikoli speciální pásma. Bóje černá s červeným pruhem označuje izolované nebezpečí.
+    Žlutá barva je tedy rezervována výhradně pro speciální účely.
+  </p>
+  <p>
+    Pravidlo vychází z <em>IALA Maritime Buoyage System — Region A</em>, které je implementováno
+    v České republice zákonem č. 61/2000 Sb. o námořní plavbě a prováděcí vyhláškou č. 315/2000 Sb.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;height:auto;display:block;margin:1em auto;">
+    <!-- Boje pro specialni ucely - zluta -->
+    <g transform="translate(80,20)">
+      <!-- telo boje -->
+      <ellipse cx="40" cy="100" rx="28" ry="40" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+      <!-- vrchol boje -->
+      <rect x="36" y="60" width="8" height="40" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+      <!-- znak X na vrchu (Special Mark topmark) -->
+      <line x1="28" y1="52" x2="52" y2="68" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+      <line x1="52" y1="52" x2="28" y2="68" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+      <!-- kotevni lano -->
+      <line x1="40" y1="140" x2="40" y2="170" stroke="#888" stroke-width="2" stroke-dasharray="4,2"/>
+      <!-- popisek -->
+      <text x="40" y="190" text-anchor="middle" font-size="11" fill="#333" font-family="sans-serif">Speciální</text>
+      <text x="40" y="202" text-anchor="middle" font-size="9" fill="#666" font-family="sans-serif">(Special Mark)</text>
+    </g>
+
+    <!-- Boje bezpecnych vod - cervene a bile svisle pruhy -->
+    <g transform="translate(200,20)">
+      <ellipse cx="40" cy="100" rx="28" ry="40" fill="white" stroke="#ccc" stroke-width="2"/>
+      <!-- svisle pruhy -->
+      <rect x="12" y="60" width="10" height="80" fill="#CC0000" rx="2"/>
+      <rect x="32" y="60" width="10" height="80" fill="#CC0000" rx="2"/>
+      <rect x="52" y="60" width="8" height="80" fill="#CC0000" rx="2"/>
+      <!-- orez pres elipsu -->
+      <ellipse cx="40" cy="100" rx="28" ry="40" fill="none" stroke="#ccc" stroke-width="2"/>
+      <!-- topmark kulicka -->
+      <rect x="38" y="20" width="4" height="40" fill="#CC0000" stroke="#AA0000" stroke-width="1"/>
+      <circle cx="40" cy="18" r="8" fill="#CC0000" stroke="#AA0000" stroke-width="1"/>
+      <!-- kotevni lano -->
+      <line x1="40" y1="140" x2="40" y2="170" stroke="#888" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="40" y="190" text-anchor="middle" font-size="11" fill="#333" font-family="sans-serif">Bezpečné vody</text>
+      <text x="40" y="202" text-anchor="middle" font-size="9" fill="#666" font-family="sans-serif">(Safe Water Mark)</text>
+    </g>
+
+    <!-- Boje izol. nebezpeci - cerna s cervenym pruhem -->
+    <g transform="translate(320,20)">
+      <ellipse cx="40" cy="100" rx="28" ry="40" fill="#111" stroke="#333" stroke-width="2"/>
+      <!-- cerveny pruh -->
+      <rect x="12" y="85" width="56" height="20" fill="#CC0000"/>
+      <ellipse cx="40" cy="100" rx="28" ry="40" fill="none" stroke="#333" stroke-width="2"/>
+      <!-- topmark - dve kulicky -->
+      <rect x="38" y="20" width="4" height="40" fill="#111" stroke="#333" stroke-width="1"/>
+      <circle cx="40" cy="14" r="7" fill="#111" stroke="#333" stroke-width="1"/>
+      <circle cx="40" cy="30" r="7" fill="#111" stroke="#333" stroke-width="1"/>
+      <!-- kotevni lano -->
+      <line x1="40" y1="140" x2="40" y2="170" stroke="#888" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="40" y="190" text-anchor="middle" font-size="11" fill="#333" font-family="sans-serif">Iz. nebezpečí</text>
+      <text x="40" y="202" text-anchor="middle" font-size="9" fill="#666" font-family="sans-serif">(Isolated Danger)</text>
+    </g>
+
+    <!-- Legenda -->
+    <rect x="10" y="160" width="16" height="16" fill="#FFD700" stroke="#B8860B" stroke-width="1" rx="2"/>
+    <text x="30" y="172" font-size="10" fill="#333" font-family="sans-serif">= Speciální (správná odpověď)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plavbě na moři se žlutá bóje IALA v praxi vyskytuje jako:
+  </p>
+  <ul>
+    <li>Ohraničení vojensého cvičného prostoru (střelnice, miny)</li>
+    <li>Označení rekreačního pásma (plovárna, windsurfingová oblast)</li>
+    <li>Upozornění na podmořský kabel nebo plynovod</li>
+    <li>Označení vědeckého zařízení (hydrologická stanice, měřicí bóje)</li>
+    <li>Vymezení rybolovného pásma nebo chráněné mořské oblasti</li>
+  </ul>
+  <p>
+    Námořník musí žlutou bóji rozpoznat a zachovat bezpečnou vzdálenost od označeného pásma
+    nebo objektu. Žluté bóje <strong>neurčují plavební dráhu</strong> — pouze informují
+    o existenci zvláštní oblasti.
+  </p>
+  <p>
+    Za snížené viditelnosti pomáhá identifikovat speciální bóji žluté světlo (typicky Fl.Y
+    nebo Fl(4)Y) a tvar topmarku ve tvaru X (kříže).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IALA Maritime Buoyage System — Region A</strong> (2016), sekce „Special Marks" — definice žluté barvy pro speciální bóje</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě, § 26 — označování nebezpečí a speciálních zón</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> — provádění zákona o námořní plavbě, příloha k plavebním znakům</li>
+    <li><strong>COLREG 1972</strong> (Pravidlo 1 a příloha IV) — světelné a zvukové signály; bóje systému IALA doplňují tato pravidla</li>
+  </ol>
+</article>

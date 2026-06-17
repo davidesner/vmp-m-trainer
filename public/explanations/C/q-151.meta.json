@@ -1,0 +1,11 @@
+{
+  "qid": 151,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "ICAO Standard Atmosphere (ICAO Doc 7488)",
+    "WMO Guide to Meteorological Instruments and Methods of Observation (WMO-No. 8)",
+    "Bowditch — American Practical Navigator (Pub. 9)"
+  ],
+  "model": "claude-opus-4-7"
+}

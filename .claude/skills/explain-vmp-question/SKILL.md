@@ -1,15 +1,25 @@
 ---
 name: explain-vmp-question
-description: Vysvětli otázku z VMP M testu uživateli konverzačně, s vizualizacemi tam, kde pomohou. Aktivuj když uživatel požádá o vysvětlení otázky #ID nebo zmíní VMP test. Cílem je porozumění, ne článek — HTML pro uložení nabídni teprve potom.
+description: Vysvětli otázku z VMP testu (kategorie M nebo C) uživateli konverzačně, s vizualizacemi tam, kde pomohou. Aktivuj když uživatel požádá o vysvětlení otázky #ID nebo zmíní VMP test. Cílem je porozumění, ne článek — HTML pro uložení nabídni teprve potom.
 ---
 
-# Skill: Explain VMP M test question
+# Skill: Explain VMP test question
 
 **Hlavní cíl:** pomoct uživateli pochopit, **proč** je správná odpověď správná. Konverzuj. Nepiš HTML hned. Až po vysvětlení nabídni uložení.
 
+## Kategorie testu (testId)
+
+Appka má dvě kategorie zkoušky — **M** (Vůdce malého plavidla, vnitrozemí) a **C** (Příbřežní plavba na moři). Otázky a vysvětlení žijí per kategorie:
+
+- `public/data/questions-M.json` × `public/data/questions-C.json`
+- `public/explanations/M/q-{qid}.html` × `public/explanations/C/q-{qid}.html`
+- `public/data/images/M/` × `public/data/images/C/`
+
+**Identifikuj testId z promptu.** Když uživatel řekne "vysvětli otázku #5", **zeptej se z které kategorie** pokud to není v kontextu jasné. Default je M (větší + starší).
+
 ## Hard rule: nikdy neukládej bez výslovného souhlasu
 
-Soubory `public/explanations/q-{qid}.html` a `public/explanations/q-{qid}.meta.json` **nikdy nezapisuj ani nepřepisuj** bez toho, aby uživatel řekl "ano, ulož to" (nebo ekvivalent — "jo", "save it", "ulož", atp.). To platí **vždy** — pro nové vysvětlení i pro úpravu existujícího.
+Soubory `public/explanations/{testId}/q-{qid}.html` a `public/explanations/{testId}/q-{qid}.meta.json` **nikdy nezapisuj ani nepřepisuj** bez toho, aby uživatel řekl "ano, ulož to" (nebo ekvivalent — "jo", "save it", "ulož", atp.). To platí **vždy** — pro nové vysvětlení i pro úpravu existujícího.
 
 Pokud sis právě uvědomil, že chceš ukládat, nedělej to. **Zeptej se nejdřív.**
 
@@ -29,7 +39,10 @@ Tohle pravidlo platí pro chat **i** uložené HTML — uložené HTML se oteví
 
 ## Web research jen v nutném případě
 
-**Nehledej online preventivně.** Většinu otázek umíš vysvětlit z vlastní znalosti — vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, zákon č. 114/1995 Sb. o vnitrozemské plavbě, základy první pomoci a konstrukce plavidel jsou standardní rozsah.
+**Nehledej online preventivně.** Většinu otázek umíš vysvětlit z vlastní znalosti:
+
+- **Test M:** vyhláška č. 67/2015 Sb. o pravidlech plavebního provozu, zákon č. 114/1995 Sb. o vnitrozemské plavbě, základy první pomoci, základy konstrukce plavidel
+- **Test C:** Úmluva COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři), zákon č. 61/2000 Sb. o námořní plavbě, systém IALA (značení mořských vodních cest), základy meteorologie a bezpečnosti na moři
 
 **WebSearch / WebFetch použij pouze pokud:**
 
@@ -48,18 +61,19 @@ Cíl: rychlé, věcně správné vysvětlení. Web research zdvojnásobí čas r
 
 ## Krok 1 — Najdi otázku
 
-1. Identifikuj `qid` z promptu (např. "otázka #12"). Pokud nejednoznačné, zeptej se.
-2. **Spusť helper skript** — jediným voláním vytáhne text, options, správnou odpověď, image path (i s informací jestli existuje) a stav existujícího vysvětlení v `public/explanations/`:
+1. Identifikuj `qid` **a `testId`** z promptu (např. "otázka #12 z C"). Pokud nejednoznačné, zeptej se.
+2. **Spusť helper skript** — jediným voláním vytáhne text, options, správnou odpověď, image path (i s informací jestli existuje) a stav existujícího vysvětlení v `public/explanations/{testId}/`:
 
    ```bash
-   python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid>
+   python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid> --test M     # default
+   python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid> --test C
    # nebo --json pro strojové zpracování:
-   python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid> --json
+   python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid> --test C --json
    ```
 
-   Skript hledá repo root automaticky (najde `public/data/questions.json` u sebe nebo u některého předka), takže ho můžeš volat odkudkoliv. **Nepokoušej se parsovat `questions.json` ručně** — má top-level objekt s polem `questions[]`, ne pole na top-levelu, a tohle si chytá skript za tebe.
+   Skript hledá repo root automaticky (najde `public/data/questions-{testId}.json` u sebe nebo u některého předka). **Nepokoušej se parsovat questions JSON ručně** — má top-level objekt s polem `questions[]`, ne pole na top-levelu, a tohle si chytá skript za tebe.
 3. **Pokud helper hlásí, že obrázek existuje** (typicky `/data/images/q-{qid}.jpg` → soubor v `public/data/images/q-{qid}.jpg`), **přečti ho hned tooly Read** — neignoruj. Obrázek je často podstatnou částí zadání (schéma plavidla, plavební značka, světelný znak, situace na vodě, šipky popisující manévr) a bez něj odpověď často nepostavíš správně.
-4. Pokud helper hlásí, že existuje `public/explanations/q-{qid}.html`, přečti ho — viz sekci „Když HTML už existuje" níž.
+4. Pokud helper hlásí, že existuje `public/explanations/{testId}/q-{qid}.html`, přečti ho — viz sekci „Když HTML už existuje" níž.
 
 ### Jak číst test images — konvence VMP
 
@@ -105,11 +119,11 @@ Vizualizace má **přidat hodnotu**. Pro otázky o definicích nebo prostých č
 
 **Až po vysvětlení** (a případných follow-up otázkách) **se zeptej**:
 
-> *"Chceš tohle uložit jako HTML do `public/explanations/q-{qid}.html`? Při dalším otevření v appce se zobrazí přímo v modalu."*
+> *"Chceš tohle uložit jako HTML do `public/explanations/{testId}/q-{qid}.html`? Při dalším otevření v appce se zobrazí přímo v modalu."*
 
 Pokud má soubor už existovat a ty ho přepisuješ, formulace musí být jednoznačná, např.:
 
-> *"Tohle nahradí současný `public/explanations/q-{qid}.html`. Uložit?"*
+> *"Tohle nahradí současný `public/explanations/{testId}/q-{qid}.html`. Uložit?"*
 
 **Počkej na výslovné potvrzení.** Mlčení nebo follow-up otázka **nikdy** neznamená souhlas.
 
@@ -127,8 +141,8 @@ Strukturu odvoď z toho, co dávalo smysl v chatu (kostra v `template.html` jen 
 
 **Soubory k uložení:**
 
-1. `public/explanations/q-{qid}.html` — sanitizovaný HTML obsah
-2. `public/explanations/q-{qid}.meta.json` — metadata:
+1. `public/explanations/{testId}/q-{qid}.html` — sanitizovaný HTML obsah
+2. `public/explanations/{testId}/q-{qid}.meta.json` — metadata:
 
    ```json
    {
@@ -149,7 +163,7 @@ Potvrď jednou větou: *"Uloženo: public/explanations/q-{qid}.html"*
 
 ## Když HTML už existuje
 
-1. Přečti existující `public/explanations/q-{qid}.html` a použij jeho obsah jako základ konverzace
+1. Přečti existující `public/explanations/{testId}/q-{qid}.html` a použij jeho obsah jako základ konverzace
 2. Zeptej se uživatele, co potřebuje: *"Vysvětlení už existuje. Chceš ho rozšířit / upravit, nebo se chceš zeptat na něco konkrétního?"*
 3. Konverzuj normálně podle Kroku 2
 4. **Nikdy nepřepisuj soubor automaticky.** I když uživatel řekne "regeneruj" nebo "udělej nové", nejdřív vyrob navrhovanou verzi v chatu, pak se zeptej *"Tohle nahradí současný public/explanations/q-{qid}.html. Uložit?"* a počkej na potvrzení.

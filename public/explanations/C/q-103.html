@@ -1,0 +1,75 @@
+<article class="vmp-explanation">
+  <h2>Hloubka na metrické námořní mapě: čtení číslice se subscriptem</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>3,5 metru</strong>. Na metrické námořní mapě se hloubky uvádějí v metrech a decimetrech.
+    Velká číslice označuje celé metry, malá číslice v dolním indexu (subscript) označuje decimetry — tedy desetiny metru.
+    Zobrazená číslice <strong>3<sub>5</sub></strong> proto znamená 3 metry a 5 decimetrů, což je <strong>3,5 m</strong>.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní mapy vydávané podle standardů IHO (Mezinárodní hydrografická organizace) používají jednotný způsob zápisu hloubek.
+    Na <em>metrických mapách</em> platí konvence:
+  </p>
+  <ul>
+    <li>Hlavní (větší) číslice = celé metry.</li>
+    <li>Subscript (malá číslice vpravo dole) = decimetry (1 decimetr = 0,1 m).</li>
+    <li>Hloubky se vztahují k <em>smluvní hladině nejnižší vody</em> (Chart Datum), obvykle nejnižší astronomické přílivy (LAT).</li>
+  </ul>
+  <p>
+    Zápis <strong>3<sub>5</sub></strong> tedy <em>neznamená</em> „3 metry 5 centimetrů" (to by byl 3,05 m) ani „35 metrů" — subscript neslouží ke spojení desítek.
+    Centimetry se na námořních mapách standardně neuvádějí, protože přesnost měření a variabilita hladiny je větší než 1 cm.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Jak vypadá typický zápis hloubek na mapě:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="420" height="160" aria-label="Ukázka zápisu hloubek na námořní mapě">
+    <!-- pozadí -->
+    <rect width="420" height="160" rx="8" fill="#e8f4f8" stroke="#4a90a4" stroke-width="1.5"/>
+    <!-- nadpis -->
+    <text x="210" y="22" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333" font-weight="bold">Ukázka zápisu hloubek (metrická mapa)</text>
+
+    <!-- příklad 1: 3_5 -->
+    <text x="75" y="80" text-anchor="middle" font-family="serif" font-size="36" fill="#1a1a1a" font-weight="bold">3</text>
+    <text x="92" y="90" text-anchor="start" font-family="serif" font-size="22" fill="#1a1a1a" font-weight="bold">5</text>
+    <text x="75" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2c6e8a">= 3,5 m</text>
+    <text x="75" y="130" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">(3 m + 5 dm)</text>
+
+    <!-- oddělovač -->
+    <line x1="155" y1="40" x2="155" y2="145" stroke="#4a90a4" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- příklad 2: 12_3 -->
+    <text x="240" y="80" text-anchor="middle" font-family="serif" font-size="36" fill="#1a1a1a" font-weight="bold">12</text>
+    <text x="266" y="90" text-anchor="start" font-family="serif" font-size="22" fill="#1a1a1a" font-weight="bold">3</text>
+    <text x="245" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2c6e8a">= 12,3 m</text>
+    <text x="245" y="130" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">(12 m + 3 dm)</text>
+
+    <!-- oddělovač -->
+    <line x1="310" y1="40" x2="310" y2="145" stroke="#4a90a4" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- příklad 3: celé číslo -->
+    <text x="365" y="80" text-anchor="middle" font-family="serif" font-size="36" fill="#1a1a1a" font-weight="bold">7</text>
+    <text x="365" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2c6e8a">= 7,0 m</text>
+    <text x="365" y="130" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">(bez dm)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Správné čtení hloubek je zásadní pro bezpečnou navigaci. Záměna „3,5 m" za „3,05 m" nebo „35 m" může vést
+    k podcenění nebo přecenění průjezdné hloubky. Typická situace:
+  </p>
+  <ul>
+    <li><strong>Mělké oblasti:</strong> plavidlo s ponorem 3,2 m se na hloubce 3<sub>5</sub> (= 3,5 m) vejde s rezervou 0,3 m — za příznivého stavu vody. Chybné přečtení jako 35 m by vyvolalo falešný pocit bezpečí v jiné lokalitě.</li>
+    <li><strong>Příliv a odliv:</strong> hloubky na mapě jsou vztaženy k Chart Datum; skutečná hloubka se mění o výšku přílivu — navigátor musí přičíst aktuální výšku hladiny.</li>
+    <li><strong>Plavba v přístavech a průlivech:</strong> subscriptové hloubky v řádu 1–5 m jsou kritické pro jachtaře a lodě s větším ponorem.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO Publication S-4</strong> — Regulations of the IHO for International (INT) Charts: pravidla pro zápis hloubek a symboly na metrických námořních mapách.</li>
+    <li><strong>Bowditch — American Practical Navigator</strong>, kap. Charts — vysvětlení konvence zápisů hloubek (celé metry + subscript decimetry).</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — obecný rámec pro používání námořních map v České republice.</li>
+  </ol>
+</article>

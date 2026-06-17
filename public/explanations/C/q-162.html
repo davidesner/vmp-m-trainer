@@ -1,0 +1,93 @@
+<article class="vmp-explanation">
+  <h2>Vysoké oblaky: cirrus, cirrocumulus, cirrostratus</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>cirrus, cirrocumulus a cirrostratus</strong> — tato trojice tvoří skupinu vysokých oblaků (High Clouds), které se vyskytují ve výškách přibližně 6 000–12 000 m nad mořem ve středních zeměpisných šířkách. Jsou složeny převážně z ledových krystalků, protože v těchto výškách je teplota vždy pod bodem mrazu.
+  </p>
+  <p>
+    Altocumulus, altostratus a nimbostratus patří do skupiny <em>středních oblaků</em> (Middle Clouds, 2 000–6 000 m). Stratus a stratocumulus jsou <em>nízké oblaky</em> (Low Clouds, do přibližně 2 000 m).
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní meteorologická klasifikace oblaků (WMO — World Meteorological Organization, <em>International Cloud Atlas</em>) rozděluje oblaky do tří výškových pater a zvláštní skupiny oblaků s vertikálním vývojem:
+  </p>
+  <ul>
+    <li><strong>Vysoké oblaky (Étage supérieur)</strong> — cirrus (Ci), cirrocumulus (Cc), cirrostratus (Cs): výška základny 6 000–12 000 m (v tropech až 18 000 m).</li>
+    <li><strong>Střední oblaky (Étage moyen)</strong> — altocumulus (Ac), altostratus (As), nimbostratus (Ns): výška základny 2 000–6 000 m.</li>
+    <li><strong>Nízké oblaky (Étage inférieur)</strong> — stratus (St), stratocumulus (Sc), cumulus (Cu): výška základny do 2 000 m.</li>
+    <li><strong>Oblaky s vertikálním vývojem</strong> — cumulonimbus (Cb): sahají od nízké základny až do stratosféry.</li>
+  </ul>
+  <p>
+    Předpona <em>cirro-</em> (lat. <em>cirrus</em> = chomáč, kadeř) označuje vždy vysoké oblaky. Předpona <em>alto-</em> označuje střední patro. Chybí-li tato předpona u stratu nebo stratocumulu, jde o nízké oblaky.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:1em auto;">
+    <!-- Pozadí oblohy -->
+    <rect x="0" y="0" width="560" height="280" fill="#e8f4fc"/>
+
+    <!-- Výškové osy -->
+    <!-- Hladina moře -->
+    <rect x="0" y="260" width="560" height="20" fill="#4a90d9" opacity="0.4"/>
+    <text x="10" y="275" font-size="11" fill="#1a5276">Hladina moře (0 m)</text>
+
+    <!-- Nízké oblaky: 0–2000 m -->
+    <rect x="0" y="200" width="560" height="60" fill="#d6eaf8" opacity="0.5"/>
+    <text x="10" y="215" font-size="11" fill="#1a5276">~2 000 m</text>
+    <!-- St, Sc -->
+    <ellipse cx="200" cy="235" rx="60" ry="15" fill="#b3cde0" opacity="0.85"/>
+    <ellipse cx="320" cy="240" rx="50" ry="12" fill="#b3cde0" opacity="0.85"/>
+    <text x="185" y="258" font-size="11" fill="#1a3a5c">St / Sc (nízké)</text>
+
+    <!-- Střední oblaky: 2000–6000 m -->
+    <rect x="0" y="120" width="560" height="80" fill="#eaf4fb" opacity="0.4"/>
+    <text x="10" y="135" font-size="11" fill="#1a5276">~6 000 m</text>
+    <text x="10" y="200" font-size="11" fill="#1a5276">~2 000 m</text>
+    <!-- Ac, As, Ns -->
+    <ellipse cx="200" cy="160" rx="70" ry="16" fill="#85c1e9" opacity="0.75"/>
+    <ellipse cx="360" cy="155" rx="55" ry="13" fill="#85c1e9" opacity="0.75"/>
+    <text x="175" y="182" font-size="11" fill="#1a3a5c">Ac / As / Ns (střední)</text>
+
+    <!-- Vysoké oblaky: 6000–12000 m -->
+    <rect x="0" y="20" width="560" height="100" fill="#f0f8ff" opacity="0.3"/>
+    <text x="10" y="35" font-size="11" fill="#1a5276">~12 000 m</text>
+    <text x="10" y="120" font-size="11" fill="#1a5276">~6 000 m</text>
+    <!-- Cirrus — jemné vlákna -->
+    <polyline points="100,60 160,50 240,65 300,48 380,62 450,45" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <polyline points="130,75 200,68 270,80 350,70 420,78" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <!-- Cirrocumulus — malé chomáčky -->
+    <ellipse cx="90" cy="90" rx="18" ry="7" fill="#ffffff" opacity="0.8"/>
+    <ellipse cx="130" cy="88" rx="16" ry="7" fill="#ffffff" opacity="0.8"/>
+    <ellipse cx="170" cy="92" rx="18" ry="7" fill="#ffffff" opacity="0.8"/>
+    <ellipse cx="380" cy="88" rx="16" ry="7" fill="#ffffff" opacity="0.8"/>
+    <ellipse cx="420" cy="91" rx="18" ry="7" fill="#ffffff" opacity="0.8"/>
+    <text x="80" y="115" font-size="12" fill="#1a3a5c" font-weight="bold">Ci / Cc / Cs (vysoké — ledové krystaly)</text>
+
+    <!-- Legenda -->
+    <rect x="400" y="180" width="150" height="70" rx="6" fill="#ffffff" opacity="0.85" stroke="#85c1e9"/>
+    <text x="412" y="198" font-size="11" fill="#1a3a5c" font-weight="bold">Legenda</text>
+    <rect x="412" y="205" width="14" height="8" fill="#ffffff" stroke="#aaa"/>
+    <text x="430" y="214" font-size="10" fill="#333">Vysoké (Ci, Cc, Cs)</text>
+    <rect x="412" y="220" width="14" height="8" fill="#85c1e9" opacity="0.8"/>
+    <text x="430" y="229" font-size="10" fill="#333">Střední (Ac, As, Ns)</text>
+    <rect x="412" y="235" width="14" height="8" fill="#b3cde0" opacity="0.8"/>
+    <text x="430" y="244" font-size="10" fill="#333">Nízké (St, Sc)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Námořník nebo lodní kapitán sleduje oblačnost pro předpověď počasí. Cirrus přicházející z jihozápadu může signalizovat blížící se teplou frontu (a s ní zhoršení počasí do 24–48 hodin). Cirrostratus způsobuje charakteristické optické jevy — <em>halo</em> kolem Slunce či Měsíce — což je praktická meteorologická pomůcka bez přístrojů.
+  </p>
+  <p>
+    Znalost výškových pater oblaků je součástí základní meteorologické gramotnosti vyžadované při přibřežní a oceánské plavbě pro správné čtení synoptické situace a rozhodování o kurzu.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>WMO — International Cloud Atlas</strong> (World Meteorological Organization, publikace č. 407), klasifikace oblaků do výškových pater.</li>
+    <li><strong>Bowditch — American Practical Navigator</strong>, kapitola o meteorologii (Clouds and Fog), výškové vymezení oblaků.</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — rámcový požadavek na meteorologické znalosti v námořní odborné způsobilosti.</li>
+  </ol>
+</article>

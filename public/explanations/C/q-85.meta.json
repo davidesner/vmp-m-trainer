@@ -1,0 +1,12 @@
+{
+  "qid": 85,
+  "test_id": "C",
+  "generated_at": "2026-06-15T00:00:00Z",
+  "sources": [
+    "Zákon č. 61/2000 Sb., o námořní plavbě",
+    "SOLAS, kapitola V, pravidlo 19 — Safety of Navigation",
+    "IMO Resolution A.382(X) — Magnetic Compasses Carriage and Performance Standards",
+    "Bowditch, N.: The American Practical Navigator (NGA Pub. 9)"
+  ],
+  "model": "claude-opus-4-7"
+}

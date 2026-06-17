@@ -1,0 +1,12 @@
+{
+  "qid": 152,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "ICAO Standard Atmosphere (ISO 2533:1975)",
+    "WMO — definice tlakových soustav",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Bowditch — American Practical Navigator"
+  ],
+  "model": "claude-opus-4-7"
+}

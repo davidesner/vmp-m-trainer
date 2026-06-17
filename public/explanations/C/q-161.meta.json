@@ -1,0 +1,12 @@
+{
+  "qid": 161,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — Mezinárodní atlas oblaků (International Cloud Atlas, 2017)",
+    "Bowditch — American Practical Navigator (NIMA Pub. No. 9)",
+    "ICAO Standard Atmosphere (Doc 7488)",
+    "Vyhláška č. 315/2000 Sb."
+  ],
+  "model": "claude-sonnet-4-6"
+}

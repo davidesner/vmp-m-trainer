@@ -1,0 +1,12 @@
+{
+  "qid": 144,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IALA Maritime Buoyage System (IALA-A)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "COLREG 1972 – Mezinárodní pravidla pro zabránění srážkám na moři",
+    "Bowditch – American Practical Navigator"
+  ],
+  "model": "claude-opus-4-7"
+}

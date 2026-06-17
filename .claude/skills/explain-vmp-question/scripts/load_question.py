@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Načte otázku z public/data/questions.json podle qid a vypíše vše, co skill
-potřebuje v Kroku 1 — text, možnosti, správnou odpověď, image path (pokud je),
-a stav existujícího vysvětlení v public/explanations/.
+Načte otázku z public/data/questions-{testId}.json podle qid + testId
+a vypíše vše, co skill potřebuje v Kroku 1.
 
-Použití (z kořene VMP_TEST repa nebo odkudkoliv):
-    python3 .claude/skills/explain-vmp-question/scripts/load_question.py 26
-    python3 .claude/skills/explain-vmp-question/scripts/load_question.py 26 --json
+Použití:
+    python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid>            # default test M
+    python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid> --test C   # test C
+    python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid> --json
 
 Bez --json vypisuje human-readable formát. S --json čistý JSON pro další parsing.
 """
@@ -15,10 +15,10 @@ import sys
 from pathlib import Path
 
 
-def find_repo_root(start: Path) -> Path:
+def find_repo_root(start: Path, test_id: str) -> Path:
     cur = start.resolve()
     for _ in range(10):
-        if (cur / "public" / "data" / "questions.json").exists():
+        if (cur / "public" / "data" / f"questions-{test_id}.json").exists():
             return cur
         if cur.parent == cur:
             break
@@ -26,35 +26,57 @@ def find_repo_root(start: Path) -> Path:
     return Path.cwd()
 
 
-def load_question(qid: int, repo_root: Path) -> dict:
-    qpath = repo_root / "public" / "data" / "questions.json"
+def load_question(qid: int, repo_root: Path, test_id: str) -> dict:
+    qpath = repo_root / "public" / "data" / f"questions-{test_id}.json"
     if not qpath.exists():
-        raise SystemExit(f"questions.json nenalezen: {qpath}")
+        raise SystemExit(f"questions-{test_id}.json nenalezen: {qpath}")
     with qpath.open(encoding="utf-8") as f:
         data = json.load(f)
     questions = data.get("questions", []) if isinstance(data, dict) else data
     for q in questions:
         if q.get("id") == qid:
             return q
-    raise SystemExit(f"Otázka qid={qid} nenalezena (celkem {len(questions)} otázek)")
+    raise SystemExit(f"Otázka qid={qid} nenalezena v testu {test_id} (celkem {len(questions)} otázek)")
 
 
 def main() -> None:
     args = sys.argv[1:]
     as_json = "--json" in args
-    args = [a for a in args if not a.startswith("--")]
-    if not args:
-        print("usage: load_question.py <qid> [--json]", file=sys.stderr)
+    test_id = "M"
+    i = 0
+    pos = []
+    while i < len(args):
+        a = args[i]
+        if a == "--test" and i + 1 < len(args):
+            test_id = args[i + 1].upper()
+            i += 2
+            continue
+        if a.startswith("--test="):
+            test_id = a.split("=", 1)[1].upper()
+            i += 1
+            continue
+        if a.startswith("--"):
+            i += 1
+            continue
+        pos.append(a)
+        i += 1
+
+    if not pos:
+        print("usage: load_question.py <qid> [--test M|C] [--json]", file=sys.stderr)
         sys.exit(2)
     try:
-        qid = int(args[0])
+        qid = int(pos[0])
     except ValueError:
-        print(f"qid musí být číslo, dostal: {args[0]}", file=sys.stderr)
+        print(f"qid musí být číslo, dostal: {pos[0]}", file=sys.stderr)
+        sys.exit(2)
+
+    if test_id not in ("M", "C"):
+        print(f"--test musí být M nebo C, dostal: {test_id}", file=sys.stderr)
         sys.exit(2)
 
     script_dir = Path(__file__).resolve().parent
-    repo_root = find_repo_root(script_dir)
-    q = load_question(qid, repo_root)
+    repo_root = find_repo_root(script_dir, test_id)
+    q = load_question(qid, repo_root, test_id)
 
     image_field = q.get("image")
     image_resolved = None
@@ -66,17 +88,19 @@ def main() -> None:
         image_exists = candidate.exists()
     else:
         for ext in ("jpg", "png", "jpeg", "svg"):
-            candidate = repo_root / "public" / "data" / "images" / f"q-{qid}.{ext}"
+            candidate = repo_root / "public" / "data" / "images" / test_id / f"q-{qid}.{ext}"
             if candidate.exists():
                 image_resolved = str(candidate)
                 image_exists = True
                 break
 
-    expl_html = repo_root / "public" / "explanations" / f"q-{qid}.html"
-    expl_meta = repo_root / "public" / "explanations" / f"q-{qid}.meta.json"
+    expl_dir = repo_root / "public" / "explanations" / test_id
+    expl_html = expl_dir / f"q-{qid}.html"
+    expl_meta = expl_dir / f"q-{qid}.meta.json"
 
     payload = {
         "qid": qid,
+        "test_id": test_id,
         "repo_root": str(repo_root),
         "question": {
             "id": q.get("id"),
@@ -104,7 +128,7 @@ def main() -> None:
         return
 
     qd = payload["question"]
-    print(f"Otázka #{qd['id']} ({qd['zkratka']}, skupina: {qd['group']})")
+    print(f"Otázka #{qd['id']} [Test {test_id}] ({qd['zkratka']}, skupina: {qd['group']})")
     print()
     print(qd["text"])
     print()
@@ -122,7 +146,7 @@ def main() -> None:
     if ex["html_exists"]:
         print(f"Existující vysvětlení: {ex['html_path']}  ← přečíst před začátkem konverzace")
     else:
-        print("Existující vysvětlení: žádné (čistá deska)")
+        print(f"Existující vysvětlení: žádné (uloží se do {ex['html_path']})")
 
 
 if __name__ == "__main__":

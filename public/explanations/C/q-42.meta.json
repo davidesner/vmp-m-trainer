@@ -1,0 +1,12 @@
+{
+  "qid": 42,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Pravidlo 34 odst. a",
+    "COLREG 1972 — Pravidlo 32",
+    "COLREG 1972 — Pravidlo 35",
+    "Zákon č. 61/2000 Sb. o námořní plavbě — § 26"
+  ],
+  "model": "claude-opus-4-7"
+}

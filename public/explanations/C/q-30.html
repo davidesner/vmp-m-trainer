@@ -1,0 +1,105 @@
+<article class="vmp-explanation">
+  <h2>Pravidlo pravé strany při křižování kursů</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Povinnost uvolnit cestu lodi přicházející zprava platí <strong>pouze při křižování kursů dvou lodí se strojním pohonem</strong>.
+    Pravidlo vychází z COLREG 1972, Pravidlo 15, které výslovně upravuje situaci, kdy se kursy dvou plavidel <em>se strojním pohonem</em> kříží.
+    Pravidlo tedy <strong>nelze aplikovat obecně na „jakékoli dvě lodě"</strong> ani automaticky na kombinaci plachetnice a motorového plavidla — ty se řídí jinými pravidly přednosti.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972) rozlišují několik typů situací setkání:
+  </p>
+  <ul>
+    <li><strong>Pravidlo 12</strong> — setkání dvou plachetnic (přednost má loď s větrem z leva, nebo loď na levém příkurzu).</li>
+    <li><strong>Pravidlo 13</strong> — dohánění: dohánějící loď se vyhýbá vždy, bez ohledu na pohon.</li>
+    <li><strong>Pravidlo 14</strong> — protijedoucí lodě se strojním pohonem: každá uhne vpravo.</li>
+    <li><strong>Pravidlo 15</strong> — křižování kursů dvou <em>plavidel se strojním pohonem</em>: loď, která má druhou <strong>po své pravé straně</strong>, musí uvolnit cestu a nesmí přejíždět před příď druhého plavidla.</li>
+    <li><strong>Pravidlo 18</strong> — hierarchie přednosti různých kategorií (plachetnice má přednost před motorovým plavidlem, rybářská loď při lovu před plachetnicí apod.).</li>
+  </ul>
+  <p>
+    Klíčové je, že Pravidlo 15 se vztahuje <strong>výhradně na motorová plavidla</strong>. Pokud se kříží kursy plachetnice a motorového plavidla, použije se Pravidlo 18 (plachetnice má obecnou přednost před motorovým plavidlem za standardních podmínek), nikoli Pravidlo 15.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Dvě motorová plavidla se křižujícími kursy — loď A má loď B po své pravé straně a musí uvolnit cestu:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" width="420" height="320" aria-label="Diagram křižování kursů dvou motorových lodí">
+    <defs>
+      <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#1a6fa8;" />
+      </marker>
+      <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#c0392b;" />
+      </marker>
+      <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#27ae60;" />
+      </marker>
+    </defs>
+
+    <!-- Background -->
+    <rect x="0" y="0" width="420" height="320" style="fill:#e8f4fc;" />
+    <text x="210" y="18" text-anchor="middle" style="font-size:13px;font-weight:bold;fill:#1a3a5c;">Křižování kursů — Pravidlo 15 COLREG</text>
+
+    <!-- Loď A (jede doprava/nahoru) -->
+    <!-- Trup A -->
+    <polygon points="60,230 85,215 110,230 105,250 65,250" style="fill:#1a6fa8;stroke:#0d4a78;stroke-width:1.5;" />
+    <text x="85" y="244" text-anchor="middle" style="font-size:11px;fill:white;font-weight:bold;">A</text>
+    <!-- Kurs A (nahoru doprava) -->
+    <line x1="85" y1="215" x2="240" y2="100" style="stroke:#1a6fa8;stroke-width:2;stroke-dasharray:6,3;" marker-end="url(#arr-blue)" />
+    <text x="155" y="145" style="font-size:11px;fill:#1a6fa8;font-weight:bold;">kurs A</text>
+
+    <!-- Loď B (jede dolů doleva) -->
+    <!-- Trup B -->
+    <polygon points="290,70 310,55 330,70 325,90 295,90" style="fill:#c0392b;stroke:#922b21;stroke-width:1.5;" />
+    <text x="310" y="82" text-anchor="middle" style="font-size:11px;fill:white;font-weight:bold;">B</text>
+    <!-- Kurs B (dolů doleva — ke křižišti) -->
+    <line x1="310" y1="90" x2="175" y2="200" style="stroke:#c0392b;stroke-width:2;stroke-dasharray:6,3;" marker-end="url(#arr-red)" />
+    <text x="265" y="155" style="font-size:11px;fill:#c0392b;font-weight:bold;">kurs B</text>
+
+    <!-- Křižiště -->
+    <circle cx="200" cy="185" r="7" style="fill:#f39c12;stroke:#e67e22;stroke-width:1.5;" />
+    <text x="215" y="182" style="font-size:10px;fill:#7d6608;">křižiště</text>
+
+    <!-- Šipka ukazující "B je vpravo od A" -->
+    <line x1="100" y1="230" x2="285" y2="75" style="stroke:#27ae60;stroke-width:1.5;stroke-dasharray:3,4;" marker-end="url(#arr-green)" />
+    <text x="185" y="165" style="font-size:9px;fill:#27ae60;font-style:italic;">B je vpravo od A</text>
+
+    <!-- Vyhnutí A -->
+    <path d="M85,215 Q40,250 50,280" style="fill:none;stroke:#1a6fa8;stroke-width:2.5;stroke-dasharray:4,3;" marker-end="url(#arr-blue)" />
+    <text x="30" y="295" style="font-size:10px;fill:#1a6fa8;font-weight:bold;">A uhne!</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="10" width="195" height="72" rx="5" style="fill:white;stroke:#aac;stroke-width:1;opacity:0.85;" />
+    <rect x="18" y="22" width="12" height="8" style="fill:#1a6fa8;" />
+    <text x="35" y="30" style="font-size:11px;fill:#1a3a5c;">Loď A — musí uvolnit cestu</text>
+    <rect x="18" y="38" width="12" height="8" style="fill:#c0392b;" />
+    <text x="35" y="46" style="font-size:11px;fill:#1a3a5c;">Loď B — má přednost (zprava)</text>
+    <circle cx="24" cy="58" r="5" style="fill:#f39c12;" />
+    <text x="35" y="62" style="font-size:11px;fill:#1a3a5c;">Bod křížení kursů</text>
+    <text x="18" y="78" style="font-size:10px;fill:#555;">Obě lodě: strojní pohon</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Na moři i na vnitrozemských vodách platí: pokud vidíte motorové plavidlo přicházet zprava a vaše kursy se kříží, jste <strong>lodí povinnou uvolnit cestu</strong> (tzv. „give-way vessel"). Máte povinnost:
+  </p>
+  <ol>
+    <li>Nepřejíždět před příď druhé lodi.</li>
+    <li>Zpomalit, zastavit nebo odbočit doprava (tj. přejít za záď druhé lodi).</li>
+    <li>Provést manévr včas a dostatečně výrazně, aby byl zřejmý druhé lodi.</li>
+  </ol>
+  <p>
+    Naopak, pokud přichází <strong>plachetnice zprava</strong>, použije se Pravidlo 18 — plachetnice má obecnou přednost před motorovým plavidlem, takže pravidlo „pravé strany" (Pravidlo 15) se neuplatní a vy jako motorová loď musíte uvolnit cestu plachetnici bez ohledu na to, z které strany přichází.
+  </p>
+  <p>
+    Pravidlo 15 také <strong>neplatí</strong> v situaci dohánění (Pravidlo 13) — pokud dohánějící loď přichází z pravé zadní čtvrtiny, stále se jedná o situaci dohánění a dohánějící se musí vyhnout.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 15 (Křižující se kursy), Pravidlo 12 (Plachetnice), Pravidlo 13 (Dohánění), Pravidlo 18 (Povinnosti lodí vzhledem k sobě navzájem)</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě — § 26 (aplikace COLREG v české námořní legislativě)</li>
+  </ol>
+</article>

@@ -1,0 +1,100 @@
+<article class="vmp-explanation">
+  <h2>Bóje označující odbočení od hlavní plavební dráhy (IALA-A)</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je bóje popsaná jako <strong>červená válcová s jedním širokým vodorovným zeleným pásem</strong>.
+    Jedná se o bóji <em>preferovaného kanálu vpravo</em> (preferred channel to starboard) v systému IALA-A,
+    který platí v evropských vodách včetně moří přilehlých k ČR. Tato bóje signalizuje, že hlavní (preferovaná)
+    plavební dráha je napravo od bóje, avšak podřadný kanál je vlevo — plavidlo tedy musí projít vpravo od bóje.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Systém bójkování IALA (International Association of Marine Aids to Navigation and Lighthouse Authorities)
+    rozděluje svět na dvě oblasti: <strong>oblast A</strong> (Evropa, Afrika, Asie, Austrálie — červená na pravém boku
+    při plutí z moře) a oblast B (Amerika, Japonsko, Filipíny, Korea — opačně).
+  </p>
+  <p>
+    Bóje označující odbočení (Junction / Preferred Channel) se řídí pravidlem: <strong>základní barva odpovídá
+    preferovanému kanálu</strong>. Pokud je preferovaný kanál vpravo (tj. hlavní dráha je po pravé straně bóje
+    při plutí z moře do přístavu — směrem do přístavu), bóje je <em>červená válcová</em> s jedním širokým zeleným pásem.
+    Tvar „válec" (can/pillar) v oblasti A odpovídá levostranné (červené) přístavní bóji, a proto i bóje preferovaného
+    kanálu vpravo má červený základ a válcový tvar.
+  </p>
+  <p>
+    Naopak zelená kuželová bóje s červeným pásem by označovala preferovaný kanál vlevo (hlavní dráha po levé straně bóje).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260" aria-label="Diagram bóje preferovaného kanálu vpravo (IALA-A)">
+    <!-- Hladina moře -->
+    <line x1="0" y1="200" x2="420" y2="200" stroke="#5b9bd5" stroke-width="2" stroke-dasharray="8,4"/>
+
+    <!-- Bóje - válcový tvar (obdélníkový profil) -->
+    <!-- Červené tělo bóje -->
+    <rect x="175" y="130" width="70" height="50" rx="8" fill="#cc2222"/>
+    <!-- Zelený pás (jeden, uprostřed) -->
+    <rect x="175" y="148" width="70" height="14" fill="#228b22"/>
+    <!-- Stožár -->
+    <rect x="207" y="105" width="6" height="28" fill="#888"/>
+    <!-- Vrcholový znak: červený válec -->
+    <rect x="200" y="92" width="20" height="14" rx="3" fill="#cc2222"/>
+
+    <!-- Kotevní lano -->
+    <line x1="210" y1="180" x2="210" y2="200" stroke="#888" stroke-width="2"/>
+    <!-- Kotva -->
+    <circle cx="210" cy="204" r="4" fill="#555"/>
+
+    <!-- Šipka hlavního kanálu - vpravo od bóje -->
+    <defs>
+      <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#1a6622"/>
+      </marker>
+      <marker id="arrowL" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#aaa"/>
+      </marker>
+    </defs>
+    <!-- Hlavní kanál (vpravo) -->
+    <line x1="260" y1="220" x2="370" y2="220" stroke="#1a6622" stroke-width="3" marker-end="url(#arrowR)"/>
+    <text x="290" y="245" font-size="12" fill="#1a6622" font-family="sans-serif" font-weight="bold">Hlavní kanál</text>
+    <!-- Podřadný kanál (vlevo) -->
+    <line x1="160" y1="220" x2="50" y2="220" stroke="#aaa" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowL)"/>
+    <text x="52" y="245" font-size="11" fill="#777" font-family="sans-serif">Vedlejší kanál</text>
+
+    <!-- Popis bóje -->
+    <text x="210" y="75" font-size="12" fill="#cc2222" font-family="sans-serif" text-anchor="middle" font-weight="bold">Červená válcová</text>
+    <text x="210" y="90" font-size="11" fill="#228b22" font-family="sans-serif" text-anchor="middle">+ zelený pás</text>
+
+    <!-- Směr plavby (do přístavu = nahoru) -->
+    <text x="20" y="120" font-size="11" fill="#333" font-family="sans-serif">← z moře</text>
+    <text x="340" y="120" font-size="11" fill="#333" font-family="sans-serif">přístav →</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="10" width="180" height="50" rx="5" fill="#f5f5f5" stroke="#ccc"/>
+    <text x="20" y="28" font-size="11" fill="#333" font-family="sans-serif" font-weight="bold">IALA-A — Preferovaný kanál vpravo</text>
+    <circle cx="20" cy="44" r="5" fill="#cc2222"/>
+    <text x="32" y="48" font-size="10" fill="#333" font-family="sans-serif">červená válcová + zelený pás</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plutí z moře do přístavu (směr „do přístavu") platí v systému IALA-A pravidlo <em>červená po levici</em>
+    (red to port — levostranné bóje jsou červené). Bóje preferovaného kanálu vpravo je proto červená
+    a plavidlo ji míjí po její levé straně, přičemž pluje hlavní — bezpečnější — plavební drahou.
+    Jestliže plavidlo z jakéhokoliv důvodu zvolí vedlejší kanál, míjí bóji po pravé straně.
+  </p>
+  <p>
+    V praxi se s těmito bójemi setkáte například u ústí řek do moře, v děltech nebo na místech, kde se
+    dvě plavební dráhy rozdělují. Kapitán nebo navigátor musí správně identifikovat tvar, barvu a pás bóje,
+    aby zvolil správný kanál bez rizika vstupu do mělčiny nebo jiného nebezpečí.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IALA Maritime Buoyage System — Region A</strong>, sekce 3 (Preferred Channel Marks / Junction Marks)</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong>, § 22 (povinnosti velitele plavidla, dodržování plavebních pravidel)</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> (bezpečnost plavby, plavební značky)</li>
+    <li><strong>Bowditch — American Practical Navigator</strong>, kapitola o plavebních značkách a bójkování</li>
+  </ol>
+</article>

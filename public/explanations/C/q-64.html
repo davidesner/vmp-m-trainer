@@ -1,0 +1,123 @@
+<article class="vmp-explanation">
+  <h2>Přednost na moři: plavidlo Y uvolňuje cestu plavidlu X</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Na zobrazené situaci se plavidlo Y (malé rekreační plavidlo) přibližuje k plavidlu X (velká nákladní nebo pracovní loď)
+      zprava a zepředu — přičemž X zobrazuje charakteristická světla nebo znaky omezené manévrovatelnosti (diamond tvaru).
+      Plavidlo X je <strong>plavidlo s omezenou manévrovatelností</strong>, které má přednost před všemi ostatními plavidly
+      schopnými manévrovat. Plavidlo Y musí proto uvolnit cestu — odklonit se nebo zastavit tak, aby kolizi předešlo.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      COLREG 1972 (Mezinárodní předpisy pro zamezení srážkám na moři) rozlišují různé kategorie plavidel a stanovují
+      hierarchii přednosti:
+    </p>
+    <ol>
+      <li>Plavidlo bez vlastního pohonu (např. kotvící)</li>
+      <li>Plavidlo na kotevním kamenu nebo přizemělé</li>
+      <li><strong>Plavidlo s omezenou manévrovatelností</strong> (Rule 18 + Rule 3g) — musí mu ustoupit téměř všichni ostatní</li>
+      <li>Plavidlo omezené svým ponorem</li>
+      <li>Plavidlo plující pod plachetní plachtou</li>
+      <li>Plavidlo plující vlastním strojem (motorové) — ustupuje výše uvedeným</li>
+    </ol>
+    <p>
+      Plavidlo X nese znaky omezené manévrovatelnosti (na obrázku je patrný jeřáb či pracovní zařízení a charakteristický
+      signální tvar — tři svislá tělesa: koule–kosočtverec–koule). Plavidlo Y je běžné motorové plavidlo, které musí
+      podle <strong>Rule 18 COLREG</strong> uvolnit cestu plavidlu s omezenou manévrovatelností.
+    </p>
+    <p>
+      <strong>Rule 8 COLREG</strong> doplňuje, že jakékoli opatření k zabránění srážce musí být provedeno včas,
+      výrazně a tak, aby druhé plavidlo mohlo změnu kurzu nebo rychlosti jasně zaznamenat.
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+    <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;background:#e8f4f8;border-radius:8px;">
+      <!-- Sea background -->
+      <rect x="0" y="0" width="420" height="220" fill="#cce7f5" />
+
+      <!-- Ship X (large, limited maneuverability) -->
+      <g transform="translate(80,80)">
+        <rect x="-45" y="-18" width="90" height="36" rx="6" fill="#888" stroke="#444" stroke-width="2"/>
+        <polygon points="45,-18 65,0 45,18" fill="#888" stroke="#444" stroke-width="2"/>
+        <!-- Crane / working equipment symbol -->
+        <rect x="-10" y="-40" width="6" height="30" fill="#555"/>
+        <line x1="-7" y1="-40" x2="15" y2="-25" stroke="#555" stroke-width="2"/>
+        <!-- Signal shapes: ball - diamond - ball (limited maneuverability) -->
+        <circle cx="-20" cy="-55" r="5" fill="#000"/>
+        <polygon points="-20,-70 -13,-62 -20,-54 -27,-62" fill="#000"/>
+        <circle cx="-20" cy="-75" r="5" fill="#000"/>
+        <text x="-30" y="30" font-size="14" font-weight="bold" fill="#222">X</text>
+        <text x="-52" y="48" font-size="10" fill="#333">omezená maneuvrov.</text>
+      </g>
+
+      <!-- Arrow showing Y's approach direction -->
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#c0392b"/>
+        </marker>
+      </defs>
+      <line x1="310" y1="140" x2="165" y2="100" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrowhead)"/>
+
+      <!-- Ship Y (small motorboat) -->
+      <g transform="translate(330,148)">
+        <ellipse cx="0" cy="0" rx="30" ry="14" fill="#e8a030" stroke="#a06010" stroke-width="2"/>
+        <polygon points="30,-14 50,0 30,14" fill="#e8a030" stroke="#a06010" stroke-width="2"/>
+        <text x="-8" y="5" font-size="13" font-weight="bold" fill="#222">Y</text>
+        <text x="-28" y="28" font-size="10" fill="#333">motorové plavidlo</text>
+      </g>
+
+      <!-- Legend -->
+      <rect x="10" y="170" width="200" height="44" rx="4" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="24" cy="183" r="5" fill="#000"/>
+      <polygon points="24,193 31,201 24,209 17,201" fill="#000"/>
+      <circle cx="24" cy="211" r="5" fill="#000"/>
+      <text x="36" y="188" font-size="10" fill="#333">= omezená manévrovatelnost</text>
+      <line x1="14" y1="201" x2="34" y2="201" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,3"/>
+      <text x="36" y="205" font-size="10" fill="#c0392b">= kurz plavidla Y (musí ustoupit)</text>
+
+      <!-- COLREG Rule label -->
+      <text x="210" y="30" font-size="11" fill="#1a5276" font-weight="bold">COLREG Rule 18 + Rule 3(g)</text>
+    </svg>
+    <p><em>Plavidlo Y (motorové) přijíždí k plavidlu X, které nese znaky omezené manévrovatelnosti (koule–kosočtverec–koule).
+    Plavidlo Y musí uvolnit cestu.</em></p>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <p>
+      V praxi může být plavidlo s omezenou manévrovatelností například:
+    </p>
+    <ul>
+      <li>Loď provádějící pokládku kabelu nebo potrubí (kabelová loď)</li>
+      <li>Plovoucí jeřáb nebo bagrující plavidlo</li>
+      <li>Výzkumná loď táhnoucí hydrografické vybavení</li>
+      <li>Plavidlo provádějící doplňování paliva na moři (RAS)</li>
+    </ul>
+    <p>
+      Taková plavidla nemůžou rychle změnit kurz ani zastavit. Proto jim všechna ostatní plavidla
+      (s výjimkou plavidel bez pohonu a přizemělých plavidel) <strong>musí ustoupit</strong>.
+      Jako skipper motorového plavidla (jako Y) máte povinnost sledovat signální tělesa a světla ostatních plavidel
+      a včas změnit kurz nebo rychlost — nejlépe výraznou změnou kurzu doprava, dobře viditelnou pro plavidlo X.
+    </p>
+    <p>
+      Signální tvar tří svislých těles (koule–kosočtverec–koule) je viditelný za dne; v noci jsou tato plavidla
+      označena třemi svislými světly v ose (červené–bílé–červené).
+    </p>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li><strong>COLREG 1972</strong> — Rule 3(g): definice plavidla s omezenou manévrovatelností; Rule 18: povinnosti plavidel navzájem; Rule 8: opatření k zabránění srážce</li>
+      <li><strong>COLREG 1972</strong> — Rule 27: světla a tvary pro plavidla s omezenou manévrovatelností (tři svislá tělesa: koule–kosočtverec–koule)</li>
+      <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — zapracovává COLREG do českého právního řádu</li>
+    </ol>
+  </section>
+</article>

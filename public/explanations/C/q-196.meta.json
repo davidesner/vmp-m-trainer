@@ -1,0 +1,7 @@
+{
+  "qid": 196,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["ICAO Standard Atmosphere (Doc 7488)", "WMO — terminologie vrstev atmosféry", "Bowditch — American Practical Navigator"],
+  "model": "claude-opus-4-7"
+}

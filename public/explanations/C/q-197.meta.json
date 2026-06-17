@@ -1,0 +1,7 @@
+{
+  "qid": 197,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["Beaufortova stupnice stavu moře (WMO Sea State Code)", "WMO Publication No. 306", "Bowditch – American Practical Navigator", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-sonnet-4-6"
+}

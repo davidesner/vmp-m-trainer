@@ -1,0 +1,7 @@
+{
+  "qid": 12,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["COLREG 1972, Pravidlo 7 — Riziko srážky", "COLREG 1972, Pravidlo 5 — Pozorování", "Bowditch — The American Practical Navigator"],
+  "model": "claude-opus-4-7"
+}

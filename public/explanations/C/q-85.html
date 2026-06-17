@@ -1,0 +1,134 @@
+<article class="vmp-explanation">
+  <section>
+    <h2>Krátké vysvětlení</h2>
+    <p>Magnetický kompas a ruční zaměřovací kompas (peilkompas) jsou navigační přístroje, které slouží k měření <strong>směru</strong>. Magnetický kompas ukazuje směr plavby plavidla (kurz), ruční zaměřovací kompas pak směr (azimut) k vybranému orientačnímu bodu — obojí vůči magnetickému poli Země.</p>
+    <p>Hloubku měří sonar nebo olovnice, rychlost log (vrtulkový, indukční nebo GPS) — pro tyto veličiny kompas určen není.</p>
+  </section>
+
+  <section>
+    <h2>Pozadí</h2>
+    <h3>Magnetický kompas (lodní)</h3>
+    <p>Magnetizovaná střelka (resp. růžice) se ustaví do směru magnetických siločar Země a svým severem ukáže k <em>magnetickému severu</em>. Na lodi je kompas pevně namontovaný v ose plavidla; odečet probíhá proti tzv. <em>kursové rysce</em> (lubber line), která je rovnoběžná s podélnou osou lodi. Hodnota pod ryskou = <strong>kurz lodi</strong> (course) v rozsahu 0°–360°.</p>
+
+    <h3>Ruční zaměřovací kompas (peilkompas / hand bearing compass)</h3>
+    <p>Přenosný přístroj se záměrnou pomůckou (prizma, hledí, mířidlo). Navigátor jím <em>zamíří</em> na orientační bod (maják, bóji, mys, kostelní věž) a odečte <strong>azimut</strong> — úhel mezi severem a směrem k cíli, měřený po směru hodinových ručiček. Z více současně naměřených azimutů na známé objekty se grafickým průsečíkem na mapě určí pozice plavidla (<em>cross-bearing fix</em>).</p>
+
+    <h3>Klíčové pojmy</h3>
+    <ul>
+      <li><strong>Kurz (heading/course)</strong> — směr, kterým míří příď plavidla.</li>
+      <li><strong>Azimut (bearing)</strong> — směr od pozorovatele k cíli, 0°–360° od severu.</li>
+      <li><strong>Deklinace (variace)</strong> — úhel mezi zeměpisným a magnetickým severem, mění se s místem a časem; uvedena v rohu mapy.</li>
+      <li><strong>Deviace</strong> — odchylka kompasu způsobená magnetickými poli lodi (motor, kovové trupy, reproduktory). Pro každý kurz jiná, zapisuje se do deviační tabulky.</li>
+    </ul>
+
+    <h3>Vztah: skutečný — magnetický — kompasový směr</h3>
+    <p>Pro převod mezi údaji platí pořadí <em>True → Magnetic → Compass</em> (a zpět):</p>
+    <ul>
+      <li><code>Mag = True − Variace</code> (variace E záporná, W kladná — pamatuj na pravidlo „západ je horší, přidávej")</li>
+      <li><code>Compass = Mag − Deviace</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Vizualizace — princip měření azimutu</h2>
+    <p>Vlevo magnetický kompas v lodi ukazující kurz pod kursovou ryskou. Vpravo ruční zaměřovací kompas mířený na maják — odečtený úhel je azimut k orientačnímu bodu.</p>
+    <svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma magnetického a ručního zaměřovacího kompasu">
+      <!-- Pozadí -->
+      <rect x="0" y="0" width="640" height="320" fill="#f7f9fb"/>
+
+      <!-- LEVÁ ČÁST: Magnetický kompas v lodi -->
+      <text x="160" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Magnetický kompas (kurz lodi)</text>
+
+      <!-- Obrys lodi (pohled shora) -->
+      <path d="M 110 60 L 210 60 L 230 110 L 210 220 L 110 220 L 90 110 Z" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+      <text x="160" y="245" text-anchor="middle" font-size="11" fill="#6b7280">podélná osa plavidla</text>
+      <line x1="160" y1="60" x2="160" y2="220" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 3"/>
+
+      <!-- Kompasová růžice -->
+      <circle cx="160" cy="140" r="55" fill="#ffffff" stroke="#374151" stroke-width="2"/>
+      <!-- Hlavní směry růžice -->
+      <text x="160" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">N</text>
+      <text x="210" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">E</text>
+      <text x="160" y="195" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">S</text>
+      <text x="110" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">W</text>
+      <!-- Stupnice (krátké rysky každých 30°) -->
+      <g stroke="#9ca3af" stroke-width="1">
+        <line x1="160" y1="85" x2="160" y2="90"/>
+        <line x1="187.5" y1="92.4" x2="184.9" y2="96.9"/>
+        <line x1="207.6" y1="112.5" x2="203.1" y2="115.1"/>
+        <line x1="215" y1="140" x2="210" y2="140"/>
+        <line x1="207.6" y1="167.5" x2="203.1" y2="164.9"/>
+        <line x1="187.5" y1="187.6" x2="184.9" y2="183.1"/>
+        <line x1="160" y1="195" x2="160" y2="190"/>
+        <line x1="132.5" y1="187.6" x2="135.1" y2="183.1"/>
+        <line x1="112.4" y1="167.5" x2="116.9" y2="164.9"/>
+        <line x1="105" y1="140" x2="110" y2="140"/>
+        <line x1="112.4" y1="112.5" x2="116.9" y2="115.1"/>
+        <line x1="132.5" y1="92.4" x2="135.1" y2="96.9"/>
+      </g>
+      <!-- Magnetická střelka (severní polovina červená) -->
+      <polygon points="160,100 154,140 166,140" fill="#dc2626" stroke="#7f1d1d" stroke-width="1"/>
+      <polygon points="160,180 154,140 166,140" fill="#374151" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="160" cy="140" r="3" fill="#1f2937"/>
+
+      <!-- Kursová ryska (na přídi) -->
+      <line x1="160" y1="60" x2="160" y2="75" stroke="#2563eb" stroke-width="3"/>
+      <text x="200" y="68" font-size="10" fill="#2563eb">kursová ryska</text>
+
+      <!-- Šipka přídě -->
+      <text x="160" y="50" text-anchor="middle" font-size="11" fill="#374151">příď ▲</text>
+
+      <!-- Oddělovač -->
+      <line x1="320" y1="40" x2="320" y2="290" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 4"/>
+
+      <!-- PRAVÁ ČÁST: Ruční zaměřovací kompas -->
+      <text x="480" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Ruční zaměřovací kompas (azimut)</text>
+
+      <!-- Pozorovatel (loď) -->
+      <circle cx="400" cy="220" r="10" fill="#374151"/>
+      <text x="400" y="245" text-anchor="middle" font-size="11" fill="#374151">pozorovatel</text>
+
+      <!-- Sever (referenční směr) -->
+      <line x1="400" y1="220" x2="400" y2="80" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 3"/>
+      <polygon points="400,75 395,85 405,85" fill="#dc2626"/>
+      <text x="408" y="85" font-size="11" font-weight="bold" fill="#dc2626">N (sever)</text>
+
+      <!-- Záměrná linie k majáku -->
+      <line x1="400" y1="220" x2="555" y2="105" stroke="#2563eb" stroke-width="2"/>
+      <polygon points="555,105 545,108 552,116" fill="#2563eb"/>
+
+      <!-- Maják (orientační bod) -->
+      <rect x="552" y="95" width="14" height="40" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+      <polygon points="552,95 566,95 559,82" fill="#92400e"/>
+      <circle cx="559" cy="100" r="3" fill="#fef3c7" stroke="#92400e"/>
+      <text x="559" y="148" text-anchor="middle" font-size="10" fill="#92400e">maják</text>
+
+      <!-- Oblouk azimutu -->
+      <path d="M 400 160 A 60 60 0 0 1 452 188" fill="none" stroke="#16a34a" stroke-width="2"/>
+      <text x="440" y="155" font-size="12" font-weight="bold" fill="#16a34a">α = azimut</text>
+      <text x="445" y="172" font-size="10" fill="#16a34a">(např. 053°)</text>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Praktická aplikace</h2>
+    <ul>
+      <li><strong>Držení kurzu</strong> — kormidelník udržuje příď tak, aby pod kursovou ryskou magnetického kompasu byl požadovaný kurz (např. 270°).</li>
+      <li><strong>Určení polohy zaměřením</strong> — z plavidla zaměříš ručním kompasem 2–3 dobře identifikovatelné objekty (maják, mys, věž). Na mapě nakreslíš opačné azimuty od těchto objektů; jejich průsečík je tvá poloha.</li>
+      <li><strong>Kontrola minutí překážky</strong> — opakovaným zaměřením stejného cíle zjistíš, zda se azimut mění (= míjíš ho) nebo zůstává konstantní (= jste na kolizním kurzu, viz COLREG pravidlo 7).</li>
+      <li><strong>Záloha při výpadku elektroniky</strong> — magnetický kompas je nezávislý na elektřině, GPS i radaru. Proto je na palubě vždy povinná „papírová" navigační záloha (mapa, kompas, pravítko, kružítko).</li>
+      <li><strong>Umístění na palubě</strong> — magnetický kompas se montuje daleko od železných hmot a elektronických zařízení (reproduktory, motor), jinak roste deviace.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Zdroje</h2>
+    <ol>
+      <li>Zákon č. 61/2000 Sb., o námořní plavbě — vybavení a navigační povinnosti námořního plavidla.</li>
+      <li>SOLAS, kapitola V (Safety of Navigation), pravidlo 19 — povinné navigační vybavení včetně magnetického kompasu.</li>
+      <li>IMO Resolution A.382(X) — Magnetic Compasses Carriage and Performance Standards.</li>
+      <li>Bowditch, N.: The American Practical Navigator (NGA Pub. 9) — kapitoly o magnetickém kompasu, deviaci a zaměřování.</li>
+      <li>Standardní česká učebnice VMP / Jachetní škola: navigace, kategorie C (příbřežní plavba).</li>
+    </ol>
+  </section>
+</article>

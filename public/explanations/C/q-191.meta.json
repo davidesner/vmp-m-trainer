@@ -1,0 +1,12 @@
+{
+  "qid": 191,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO-No. 306 — Manual on Codes",
+    "Bowditch — American Practical Navigator (NIMA Pub. 9)",
+    "Učebnice meteorologie pro námořníky",
+    "SOLAS 1974, kapitola V"
+  ],
+  "model": "claude-opus-4-7"
+}

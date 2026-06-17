@@ -1,0 +1,12 @@
+{
+  "qid": 38,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Pravidlo 6 (Bezpečná rychlost)",
+    "COLREG 1972 — Pravidlo 19 (Chování plavidel při snížené viditelnosti)",
+    "COLREG 1972 — Pravidlo 35 (Zvukové signály při snížené viditelnosti)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

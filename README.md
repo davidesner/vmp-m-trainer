@@ -80,22 +80,35 @@ Volume `/data` drží SQLite soubor — přežije restart.
 | `pnpm dev:api` | jen API |
 | `pnpm build` | produkční build do `dist/` |
 | `pnpm test` | spustí vitest |
-| `pnpm scrape` | scraper otázek |
+| `pnpm scrape` | scraper otázek (obě kategorie M + C) |
+| `pnpm scrape:M` / `pnpm scrape:C` | scraper jen pro vybranou kategorii |
 | `pnpm db:generate` | generuje migrace z drizzle schema |
 | `pnpm db:migrate` | aplikuje migrace |
 | `pnpm user:add <email>` | založí uživatele z CLI (interaktivně se zeptá na heslo); alternativa k registraci kódem |
 | `pnpm package-skill` | zazipuje skill `explain-vmp-question` (pro batch generování vysvětlení) |
-| `pnpm batch-explanations` | batch generuje chybějící vysvětlení do `public/explanations/` |
+
+## Kategorie zkoušky (M, C)
+
+Appka podporuje dvě kategorie zkoušky:
+
+- **M** — Vůdce malého plavidla (vnitrozemí), 407 otázek, ostrý test 35/30 min, ≥ 30 / 35
+- **C** — Příbřežní plavba na moři, 215 otázek, ostrý test 28/25 min, ≥ 24 / 28
+
+Mezi kategoriemi se přepíná dropdownem v sidebaru (desktop) nebo dropdown badge v topbaru (mobil). Aktivní kategorie persistuje v `localStorage`.
 
 ## Skill (jen pro generování vysvětlení)
 
-Skill `explain-vmp-question` (v `.claude/skills/`) používá pouze offline batch skript pro generování statických vysvětlení do `public/explanations/`. V samotné appce se nepoužívá — appka jen servíruje statické HTML soubory a tlačítko "💬 Zeptat se Claude" otevírá Claude Desktop deeplink pro doplňující dotazy.
+`explain-vmp-question` (v `.claude/skills/`) — interaktivní vysvětlení jedné otázky v Claude Code. Akceptuje `--test M|C` v helper skriptu.
+
+`batch-explain-vmp-questions` (v `.claude/skills/`) — orchestrace hromadného generování přes Workflow fan-out (jeden subagent na otázku). Aktivuj v Claude Code přirozeným jazykem ("vygeneruj chybějící explanations pro C").
+
+V samotné appce se skilly nepoužívají — appka jen servíruje statické HTML soubory.
 
 ## Módy
 
-- **Ostrý test** — 35 otázek, 30 minut, struktura 16/7/5/3/4
+- **Ostrý test** — počty otázek a timer podle aktivní kategorie (M: 35 / 30 min, C: 28 / 25 min)
 - **Procvičování** — buď struktura ostrého testu (bez timeru), nebo vlastní výběr oblastí
-- **Slabiny** — automaticky vybere 20 otázek které pleteš
-- **Statistiky** — úspěšnost po skupinách + historie testů
+- **Slabiny** — automaticky vybere otázky které pleteš v aktivní kategorii
+- **Statistiky** — záložky [M] [C] [Všechny]
 
 Progress je v DB (libSQL), per-uživatel. Vysvětlení jsou statické HTML soubory committnuté v `public/explanations/`.

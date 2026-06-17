@@ -1,0 +1,89 @@
+<article class="vmp-explanation">
+  <h2>Převod uzlů na metry za sekundu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Rychlost 6 uzlů odpovídá přibližně <strong>3 m/s</strong>. Jeden uzel je definován jako 1 námořní míle za hodinu
+    (1 852 m/hod), což se rovná přibližně 0,5144 m/s. Šest uzlů tedy představuje 6 × 0,5144 ≈ 3,09 m/s,
+    tedy přibližně 3 m/s.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní míle (international nautical mile) je mezinárodně standardizovaná délková jednotka odpovídající
+    přesně 1 852 metrům — odvozená od délky jedné úhlové minuty zeměpisné šířky na zemském povrchu.
+    Uzel (knot, zkratka kn nebo kt) je rychlostní jednotka výhradně používaná v námořní a letecké navigaci.
+  </p>
+  <p>
+    Přepočtový vztah:
+  </p>
+  <ul>
+    <li>1 uzel = 1 852 m / 3 600 s ≈ <strong>0,5144 m/s</strong></li>
+    <li>1 uzel ≈ 1,852 km/h</li>
+    <li>6 uzlů = 6 × 0,5144 ≈ <strong>3,09 m/s ≈ 3 m/s</strong></li>
+    <li>6 uzlů = 6 × 1,852 ≈ 11,1 km/h</li>
+  </ul>
+  <p>
+    Jednoduchá mnemotická pomůcka: <em>počet uzlů vydělte dvěma</em> a dostanete přibližnou rychlost v m/s
+    (přesněji: každý uzel ≈ 0,5 m/s). Pro 6 uzlů: 6 ÷ 2 = 3 m/s.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;width:100%;background:#f0f4f8;border-radius:8px;padding:8px;">
+    <!-- Title -->
+    <text x="250" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a365d">Přepočet rychlostí</text>
+
+    <!-- Column headers -->
+    <rect x="30" y="40" width="130" height="30" rx="4" fill="#2b6cb0"/>
+    <text x="95" y="60" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Uzly (kn)</text>
+
+    <rect x="185" y="40" width="130" height="30" rx="4" fill="#2b6cb0"/>
+    <text x="250" y="60" text-anchor="middle" font-size="12" fill="white" font-weight="bold">m/s</text>
+
+    <rect x="340" y="40" width="130" height="30" rx="4" fill="#2b6cb0"/>
+    <text x="405" y="60" text-anchor="middle" font-size="12" fill="white" font-weight="bold">km/h</text>
+
+    <!-- Row 1 -->
+    <rect x="30" y="78" width="130" height="28" rx="2" fill="#ebf4ff"/>
+    <text x="95" y="97" text-anchor="middle" font-size="12" fill="#2d3748">1 uzel</text>
+    <rect x="185" y="78" width="130" height="28" rx="2" fill="#ebf4ff"/>
+    <text x="250" y="97" text-anchor="middle" font-size="12" fill="#2d3748">≈ 0,51 m/s</text>
+    <rect x="340" y="78" width="130" height="28" rx="2" fill="#ebf4ff"/>
+    <text x="405" y="97" text-anchor="middle" font-size="12" fill="#2d3748">≈ 1,85 km/h</text>
+
+    <!-- Row 2 (highlighted) -->
+    <rect x="30" y="112" width="130" height="28" rx="2" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="95" y="131" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">6 uzlů ✓</text>
+    <rect x="185" y="112" width="130" height="28" rx="2" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="250" y="131" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">≈ 3,09 m/s</text>
+    <rect x="340" y="112" width="130" height="28" rx="2" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="405" y="131" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">≈ 11,1 km/h</text>
+
+    <!-- Row 3 -->
+    <rect x="30" y="146" width="130" height="28" rx="2" fill="#ebf4ff"/>
+    <text x="95" y="165" text-anchor="middle" font-size="12" fill="#2d3748">10 uzlů</text>
+    <rect x="185" y="146" width="130" height="28" rx="2" fill="#ebf4ff"/>
+    <text x="250" y="165" text-anchor="middle" font-size="12" fill="#2d3748">≈ 5,14 m/s</text>
+    <rect x="340" y="146" width="130" height="28" rx="2" fill="#ebf4ff"/>
+    <text x="405" y="165" text-anchor="middle" font-size="12" fill="#2d3748">≈ 18,5 km/h</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Znalost tohoto přepočtu je důležitá v několika situacích:
+  </p>
+  <ul>
+    <li><strong>Bezpečná rychlost (COLREG pravidlo 6):</strong> Kapitán musí zvážit bezpečnou rychlost s ohledem na viditelnost, hustotu provozu, manévrovací schopnost plavidla a další faktory. Rychlost 6 uzlů (≈ 3 m/s) je typická provozní rychlost menšího rekreačního plavidla nebo motorového člunu při opatrné plavbě.</li>
+    <li><strong>Výpočet brzdné dráhy:</strong> Při rychlosti 3 m/s a reakční době 5 sekund je nutno počítat s minimálně 15 metrů ujetými před zahájením nouzového manévru.</li>
+    <li><strong>Komunikace s jinými složkami:</strong> Záchranáři, přístavní kontrola nebo meteorologické služby mohou pracovat v km/h nebo m/s — schopnost rychlého přepočtu je prakticky cenná.</li>
+    <li><strong>Rychlá orientace:</strong> Pro přibližný přepočet uzlů na m/s stačí dělit dvěma. Pro přepočet na km/h množte počet uzlů hodnotou 1,85 (nebo přibližně ×2 a mírně snižte).</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, Pravidlo 6 (Bezpečná rychlost)</li>
+    <li>Bowditch — American Practical Navigator, kap. 2 (Námořní jednotky a výpočty)</li>
+    <li>ISO 31-1 / SI jednotky — definice metrické soustavy a odvozených jednotek rychlosti</li>
+    <li>zákon č. 61/2000 Sb., o námořní plavbě — terminologie a provoz plavidel pod českou vlajkou</li>
+  </ol>
+</article>

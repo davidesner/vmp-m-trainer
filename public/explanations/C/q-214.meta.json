@@ -1,0 +1,7 @@
+{
+  "qid": 214,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["SOLAS (Mezinárodní úmluva o bezpečnosti lidského života na moři, 1974)", "Zákon č. 61/2000 Sb. o námořní plavbě", "ISM kód (Mezinárodní předpis pro řízení bezpečnosti)"],
+  "model": "claude-opus-4-7"
+}

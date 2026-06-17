@@ -1,13 +1,8 @@
-export type ZkratkaId = 'PP1' | 'PP2' | 'PP3' | 'PP4' | 'TZ' | 'ZP'
+import type { TestId } from './lib/tests'
 
-export type GroupId =
-  | 'plavebni-provoz'
-  | 'nocni-denni-signalizace'
-  | 'signalizace-rizeni-plavby'
-  | 'zvukove-signaly'
-  | 'vytyceni-vodnich-cest'
-  | 'zaklady-konstrukce-plavidel'
-  | 'zaklady-prvni-pomoci'
+export type ZkratkaId = string  // per-test: PP1/PP2/.../TZ/ZP (M) nebo MP1.../N1.../M1/Z1 (C)
+
+export type GroupId = string    // per-test: 'plavebni-provoz' (M) nebo 'mezinarodni-pravo' (C) atd.
 
 export interface Group {
   id: GroupId
@@ -30,11 +25,20 @@ export interface Question {
   correct: 'a' | 'b' | 'c'
 }
 
+export interface PassingThreshold {
+  score: number
+  total: number
+  durationMin: number
+}
+
 export interface QuestionsBundle {
+  testId: TestId
   version: string
+  name: string
   scrapedAt: string
   groups: Group[]
   testStructure: TestSegment[]
+  passing: PassingThreshold
   questions: Question[]
 }
 

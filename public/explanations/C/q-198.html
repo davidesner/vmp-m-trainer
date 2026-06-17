@@ -1,0 +1,94 @@
+<article class="vmp-explanation">
+  <h2>Atmosférická fronta — vznik hraniční linie mezi vzduchovými masami</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Fronta vzniká <strong>při styku studené a teplé vzduchové masy</strong>. Tyto dvě masy mají rozdílnou teplotu, hustotu a vlhkost, takže se vzájemně nepromíchávají — místo toho se na jejich hranici vytváří ostrá přechodová vrstva nazývaná fronta. Ostatní možnosti jsou chybné: „putování oklikami ze západu na východ" popisuje pohyb tlakových útvarů, nikoliv vznik fronty, a „úplné vytlačení studeného vzduchu" naopak označuje zánik (okluzi) fronty.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Vzduchové masy jsou rozsáhlé objemy vzduchu s přibližně homogenními vlastnostmi (teplotou, vlhkostí), které vznikají nad zdrojovými oblastmi (arktická tundra, tropy, oceán). Jakmile se dvě masy různého původu dostanou do kontaktu, hustší (studenější) vzduch se klíní pod teplejší. Tento kontakt definuje frontu:
+    </p>
+    <ul>
+      <li><strong>Studená fronta</strong> — studená masa aktivně vytlačuje teplý vzduch vzhůru; typicky prudké přeháňky, bouřky, rychlý přechod.</li>
+      <li><strong>Teplá fronta</strong> — teplá masa postupuje nad ustupující studenou; oblačnost narůstá postupně, dešťové pruhy sahají stovky km před frontou.</li>
+      <li><strong>Okludovaná fronta</strong> — studená fronta dohání teplou, teplý vzduch je „vytlačen" do výšky. V tomto stádiu fronta zaniká (nikoliv vzniká).</li>
+    </ul>
+    <p>
+      Fronty jsou klíčovým pojmem synoptické meteorologie; jejich analýza je základem námořní meteorologické předpovědi (GRIB, Synoptická mapa — izobary, fronty).
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" role="img" aria-label="Schéma studené a teplé fronty">
+      <!-- Studená vzduchová masa (modrá, vlevo) -->
+      <rect x="10" y="80" width="200" height="160" rx="8" style="fill:#cce5ff;stroke:#4a90d9;stroke-width:2"/>
+      <text x="110" y="155" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#1a4a80">STUDENÁ</text>
+      <text x="110" y="173" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#1a4a80">VZDUCHOVÁ</text>
+      <text x="110" y="191" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#1a4a80">MASA</text>
+      <text x="110" y="215" text-anchor="middle" style="font-size:12px;fill:#1a4a80">hustší, těžší</text>
+
+      <!-- Teplá vzduchová masa (červená, vpravo) -->
+      <rect x="310" y="80" width="200" height="160" rx="8" style="fill:#ffe0cc;stroke:#d94a4a;stroke-width:2"/>
+      <text x="410" y="155" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#801a1a">TEPLÁ</text>
+      <text x="410" y="173" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#801a1a">VZDUCHOVÁ</text>
+      <text x="410" y="191" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#801a1a">MASA</text>
+      <text x="410" y="215" text-anchor="middle" style="font-size:12px;fill:#801a1a">lehčí, stoupá</text>
+
+      <!-- Frontální linie (střed) -->
+      <line x1="260" y1="60" x2="260" y2="250" style="stroke:#555;stroke-width:3;stroke-dasharray:8,4"/>
+
+      <!-- Šipky pohybu -->
+      <defs>
+        <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" style="fill:#4a90d9"/>
+        </marker>
+        <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M8,0 L0,4 L8,8 Z" style="fill:#d94a4a"/>
+        </marker>
+      </defs>
+      <line x1="195" y1="160" x2="250" y2="160" style="stroke:#4a90d9;stroke-width:2" marker-end="url(#arrowBlue)"/>
+      <line x1="325" y1="160" x2="270" y2="160" style="stroke:#d94a4a;stroke-width:2" marker-end="url(#arrowRed)"/>
+
+      <!-- Popisek fronty -->
+      <text x="260" y="50" text-anchor="middle" style="font-size:13px;font-weight:bold;fill:#333">FRONTA</text>
+      <text x="260" y="36" text-anchor="middle" style="font-size:11px;fill:#555">(hraniční linie)</text>
+
+      <!-- Oblačnost nad frontou (stylizovaná) -->
+      <ellipse cx="230" cy="85" rx="25" ry="12" style="fill:#b0c8e8;opacity:0.7"/>
+      <ellipse cx="255" cy="78" rx="18" ry="10" style="fill:#b0c8e8;opacity:0.8"/>
+      <ellipse cx="280" cy="85" rx="22" ry="11" style="fill:#b0c8e8;opacity:0.7"/>
+      <text x="260" y="108" text-anchor="middle" style="font-size:10px;fill:#444">oblačnost a srážky</text>
+    </svg>
+    <p><em>Studená a teplá masa se v kontaktní zóně nepromíchávají — na jejich rozhraní vzniká frontální plocha viditelná na synoptické mapě jako frontální linie.</em></p>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <p>
+      Námořník pracující se synoptickými mapami (GFS, ECMWF, Wetterzentrale) musí umět rozpoznat typy front a odhadnout počasí při jejich přechodu:
+    </p>
+    <ul>
+      <li><strong>Před teplou frontou:</strong> cirrus → altostratus → nimbostratus, trvalý déšť, dohlednost klesá. Počítat s hodinami plahočení v špatném počasí.</li>
+      <li><strong>Při přechodu studené fronty:</strong> náhlá změna větru (veer), krátká bouřka, za frontou čisté nebe, viditelnost výborná. Nutné být připraven na gust při přechodu.</li>
+      <li><strong>Okludovaná fronta:</strong> kombinuje vlastnosti obou — bývá rozsáhlá, oblačná, méně dramatická než studená fronta.</li>
+    </ul>
+    <p>
+      Identifikace fronty na mapě (symboly — trojúhelníčky pro studenou, půlkruhy pro teplou frontu) a sledování její polohy a pohybu je základní dovedností při plánování přeplavby.
+    </p>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li>WMO — <em>International Meteorological Vocabulary</em> (WMO-No. 182), definice fronty a vzduchových mas.</li>
+      <li>Bowditch — <em>American Practical Navigator</em>, kap. 31 „Weather Observations" a kap. 37 „Tropical and Polar Weather".</li>
+      <li>Zákon č. 61/2000 Sb. o námořní plavbě — obecné požadavky na způsobilost velitele k vedení plavidla v mezinárodních vodách (včetně znalosti meteorologie).</li>
+    </ol>
+  </section>
+</article>

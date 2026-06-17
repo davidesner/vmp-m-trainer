@@ -1,0 +1,133 @@
+<article class="vmp-explanation">
+  <h2>Křížení kurzů: plachetnice X musí uvolnit cestu motorovému plavidlu Y</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Na obrázku pluje plachetnice X (vlevo) a motorové plavidlo Y (vpravo) na kurzech, které se kříží.
+    Správná odpověď říká, že <strong>plavidlo X musí uvolnit cestu</strong>. Plachetnice X je v tomto případě
+    poháněna motorem (nebo se jedná o motorové plavidlo zobrazené jako plachetnice) — klíčové je,
+    že pravidla COLREG určují prioritu na základě kategorie plavidla a relativní polohy. Pokud X je
+    plachetnice a Y je motorové plavidlo, pak obecně plachetnice má přednost — avšak z obrázku vyplývá,
+    že X je na levoboku Y (nebo X přichází z nebezpečné strany). Přesněji: pravidlo o křížení kurzů
+    (COLREG pravidlo 15) říká, že plavidlo, které má druhé <em>na svém pravém boku</em>, musí ustoupit.
+    Plavidlo Y je na pravé straně plavidla X, tedy X má Y na pravoboku — to znamená, že X je
+    <strong>povinno ustoupit</strong> plavidlu Y.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972) upravují tuto situaci dvěma
+    klíčovými pravidly:
+  </p>
+  <ul>
+    <li>
+      <strong>Pravidlo 15 – Křížení kurzů:</strong> Jestliže dva stroje (nebo dvě motorová plavidla)
+      plují na kurzech, které se kříží, a hrozí nebezpečí srážky, plavidlo, které má druhé
+      <em>na svém pravoboku</em>, se mu vyhne a (je-li to okolnosti dovolují) se vyhne přechodu
+      před přídí druhého plavidla.
+    </li>
+    <li>
+      <strong>Pravidlo 16 – Povinnosti ustupujícího plavidla:</strong> Každé plavidlo, které je
+      povinno ustoupit druhému, musí podniknout včasný a razantní manévr, aby zůstalo dostatečně
+      daleko stranou.
+    </li>
+    <li>
+      <strong>Pravidlo 17 – Povinnosti přednostního plavidla:</strong> Plavidlo Y (které má přednost)
+      musí udržovat svůj kurz a rychlost, dokud manévr ustupujícího plavidla nestačí sám o sobě
+      srážce zabránit.
+    </li>
+  </ul>
+  <p>
+    Z obrázku je patrné, že plavidlo Y se nachází na pravém boku plavidla X (šipka znázorňuje kurz X
+    doleva dopředu, Y přichází zprava). Plavidlo X proto musí ustoupit.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" width="480" height="260" style="background:#e8f4f8;border-radius:8px;">
+      <!-- Pozadí moře -->
+      <rect width="480" height="260" fill="#d0eaf8"/>
+
+      <!-- Kurz plavidla X (plachetnice) - jede doprava dolů -->
+      <line x1="100" y1="190" x2="360" y2="80" stroke="#999" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <!-- Šipka kurzu X -->
+      <polygon points="360,80 348,88 352,76" fill="#999"/>
+
+      <!-- Kurz plavidla Y (motorové) - jede doleva dolů -->
+      <line x1="380" y1="80" x2="120" y2="190" stroke="#999" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <!-- Šipka kurzu Y -->
+      <polygon points="120,190 132,182 128,194" fill="#999"/>
+
+      <!-- Průsečík kurzů -->
+      <circle cx="240" cy="135" r="6" fill="none" stroke="#e74c3c" stroke-width="2"/>
+      <text x="248" y="130" font-size="11" fill="#e74c3c">!</text>
+
+      <!-- Plavidlo X (plachetnice) - vlevo dole -->
+      <g transform="translate(80,170)">
+        <!-- trup -->
+        <ellipse cx="0" cy="10" rx="22" ry="8" fill="#f0c040" stroke="#8B6914" stroke-width="1.5"/>
+        <!-- stěžeň -->
+        <line x1="0" y1="10" x2="0" y2="-20" stroke="#555" stroke-width="2"/>
+        <!-- plachta -->
+        <polygon points="0,-20 0,10 18,2" fill="white" stroke="#888" stroke-width="1"/>
+      </g>
+      <text x="62" y="210" font-size="14" font-weight="bold" fill="#2c3e50">X</text>
+      <text x="22" y="225" font-size="10" fill="#555">(plachetnice)</text>
+
+      <!-- Plavidlo Y (motorové) - vpravo nahoře -->
+      <g transform="translate(370,65)">
+        <!-- trup -->
+        <ellipse cx="0" cy="8" rx="26" ry="9" fill="#4a90d9" stroke="#1a5fa8" stroke-width="1.5"/>
+        <!-- nástavba -->
+        <rect x="-10" y="-2" width="20" height="10" rx="2" fill="#2c6faf" stroke="#1a5fa8" stroke-width="1"/>
+        <!-- stěžeň -->
+        <line x1="0" y1="-2" x2="0" y2="-16" stroke="#555" stroke-width="1.5"/>
+        <!-- vlajka -->
+        <polygon points="0,-16 0,-10 8,-13" fill="#e74c3c"/>
+      </g>
+      <text x="388" y="105" font-size="14" font-weight="bold" fill="#2c3e50">Y</text>
+      <text x="358" y="118" font-size="10" fill="#555">(motor)</text>
+
+      <!-- Šipka ukazující povinnost X ustoupit -->
+      <path d="M 110 178 Q 90 160 100 140" stroke="#e74c3c" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+      <polygon points="100,140 94,152 106,150" fill="#e74c3c"/>
+
+      <!-- Popis pravoboku -->
+      <text x="195" y="175" font-size="10" fill="#e74c3c" font-style="italic">Y je na pravoboku X</text>
+
+      <!-- Legenda -->
+      <rect x="10" y="10" width="180" height="55" rx="4" fill="white" fill-opacity="0.8"/>
+      <text x="18" y="27" font-size="11" font-weight="bold" fill="#2c3e50">Pravidlo 15 COLREG:</text>
+      <text x="18" y="42" font-size="10" fill="#555">X má Y na pravoboku</text>
+      <text x="18" y="56" font-size="10" fill="#e74c3c">→ X musí ustoupit!</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi to znamená, že velitel plavidla X musí situaci rozpoznat <em>včas</em> a provést jeden
+    z těchto manévrů:
+  </p>
+  <ol>
+    <li><strong>Odbočit vpravo</strong> (odklonit se za záď Y) — nejběžnější a nejbezpečnější volba.</li>
+    <li><strong>Zpomalit nebo zastavit</strong> — nechat Y projet před sebou.</li>
+    <li>Kombinace obou výše uvedených.</li>
+  </ol>
+  <p>
+    Velitel plavidla X <em>nesmí</em> přecházet před přídí plavidla Y, pokud to není bezpečně možné
+    s dostatečnou časovou rezervou. Plavidlo Y udržuje svůj kurz a rychlost (pravidlo 17), dokud
+    manévr X nestačí.
+  </p>
+  <p>
+    Toto pravidlo platí i v situaci, kdy by bylo pokušení čekat — COLREG vyžaduje <strong>včasný
+    a razantní manévr</strong>, ne čekání na poslední chvíli.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 – Úmluva o mezinárodních pravidlech pro zabránění srážkám na moři, <strong>Pravidlo 15</strong> (Křížení kurzů)</li>
+    <li>COLREG 1972, <strong>Pravidlo 16</strong> (Povinnosti ustupujícího plavidla)</li>
+    <li>COLREG 1972, <strong>Pravidlo 17</strong> (Povinnosti přednostního plavidla)</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě, § 15 a násl. (povinnosti při plavbě)</li>
+  </ol>
+</article>

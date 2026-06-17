@@ -1,0 +1,70 @@
+<article class="vmp-explanation">
+  <h2>Symbol pro déšť na synoptické mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Zobrazený symbol — plný černý kruh (•) — označuje na synoptické mapě <strong>déšť</strong>.
+    Jde o standardní meteorologický symbol používaný v synoptické kartografii pro vyjádření srážek ve formě deště, tedy kapalných srážek o průměru kapek větším než 0,5 mm.
+    Mrholení má jiný symbol (čárka nebo virgule) a kroupy se značí trojúhelníkem nebo symbolem „Δ".
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Synoptické mapy využívají mezinárodně standardizované symboly definované Světovou meteorologickou organizací (WMO) v publikaci <em>Manual on Codes (WMO-No. 306)</em> a <em>Manual on the Global Observing System (WMO-No. 544)</em>.
+    Symboly počasí (tzv. present weather symboly, kód ww) jsou součástí staničního modelu SYNOP.
+  </p>
+  <ul>
+    <li><strong>Déšť (•)</strong> — plný kruh; kapalné srážky, kapky ≥ 0,5 mm.</li>
+    <li><strong>Mrholení ( , )</strong> — čárka nebo virgule; kapalné srážky, kapky &lt; 0,5 mm.</li>
+    <li><strong>Kroupy (▲ nebo Δ)</strong> — trojúhelník; pevné ledové srážky.</li>
+    <li><strong>Sníh (∗)</strong> — hvězdička; pevné vločkové srážky.</li>
+  </ul>
+  <p>
+    Pro mořskou navigaci jsou synoptické mapy klíčovým nástrojem: meteorologické výstrahy, předpovědi stavu moře a výběr trasy závisejí na správném čtení těchto symbolů.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="420" height="180" role="img" aria-label="Porovnání meteorologických symbolů srážek">
+    <!-- Pozadí -->
+    <rect width="420" height="180" fill="#f8f9fa" rx="8"/>
+    <!-- Záhlaví -->
+    <text x="210" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333">Symboly srážek na synoptické mapě</text>
+
+    <!-- Déšť -->
+    <rect x="20" y="35" width="115" height="125" fill="#e3f2fd" rx="6" stroke="#1565c0" stroke-width="1.5"/>
+    <circle cx="77" cy="90" r="18" fill="#1a237e"/>
+    <text x="77" y="140" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1a237e">DÉŠŤ</text>
+    <text x="77" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">plný kruh •</text>
+
+    <!-- Mrholení -->
+    <rect x="152" y="35" width="115" height="125" fill="#f3e5f5" rx="6" stroke="#6a1b9a" stroke-width="1.5"/>
+    <text x="209" y="103" text-anchor="middle" font-family="sans-serif" font-size="52" fill="#6a1b9a" dominant-baseline="middle">,</text>
+    <text x="209" y="140" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">MRHOLENÍ</text>
+    <text x="209" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">čárka / virgule</text>
+
+    <!-- Kroupy -->
+    <rect x="284" y="35" width="115" height="125" fill="#fff8e1" rx="6" stroke="#e65100" stroke-width="1.5"/>
+    <polygon points="341,62 368,110 314,110" fill="#e65100"/>
+    <text x="341" y="140" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100">KROUPY</text>
+    <text x="341" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">trojúhelník ▲</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Navigátor příbřežní nebo oceánické plavby čte synoptické mapy pro plánování trasy a bezpečnosti. Rozpoznání správného symbolu srážek umožňuje:
+  </p>
+  <ul>
+    <li>Odhadnout viditelnost — déšť snižuje dohlednost, mrholení může vytvářet husté záclonové srážky.</li>
+    <li>Odhadnout riziko pro navigaci — kroupy signalizují bouřkovou aktivitu (cumulonimbus), tedy silné turbulence a blesky.</li>
+    <li>Naplánovat manévry v souladu s COLREG 1972, pravidlo 19 — snížená viditelnost vyžaduje bezpečnou rychlost.</li>
+    <li>Komunikovat správně s pobřežní stráží nebo jinými plavidly o aktuálním počasí.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>WMO Manual on Codes, WMO-No. 306 — symboly stavu počasí (kódy ww, tabulka 4677).</li>
+    <li>WMO Manual on the Global Observing System, WMO-No. 544 — staničný model SYNOP.</li>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, pravidlo 19 (plavba při omezené viditelnosti).</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — povinnosti velitele při nepříznivém počasí.</li>
+  </ol>
+</article>

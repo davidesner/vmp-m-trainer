@@ -1,0 +1,90 @@
+<article class="vmp-explanation">
+  <h2>Znak vraku na námořní mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Znak tvořený třemi křížky (+++), zobrazený na námořní mapě, označuje <strong>vrak, který není nebezpečný pro lodní dopravu</strong>. Tento vrak leží dostatečně hluboko pod hladinou, takže nepředstavuje riziko pro plavidla s běžným ponorem.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní mapy používají standardizované kartografické znaky vydávané <strong>Mezinárodní hydrografickou organizací (IHO)</strong> v publikaci <em>INT 1 – Symbols, Abbreviations and Terms used on Charts</em>. Vraky jsou v těchto mapách rozlišovány do několika kategorií podle míry nebezpečnosti:
+  </p>
+  <ul>
+    <li><strong>Tři křížky (+++)</strong> – vrak neobezřejmý, bezpečný pro plavbu (hloubka nad vrakem je dostatečná).</li>
+    <li><strong>Dva křížky (++) s vlnovkou nebo označením hloubky</strong> – vrak nebezpečný, s malou hloubkou nad vrakem.</li>
+    <li><strong>Vrak vyčnívající nad hladinu</strong> – zobrazuje se jako pevná překážka s jiným symbolem (obvykle s vlajkou nebo silhouetou).</li>
+  </ul>
+  <p>
+    Klíčovým rozlišovacím znakem je počet křížků a přítomnost dalších doplňkových symbolů. Samotné tři křížky bez dalších označení signalizují vrak ověřený jako bezpečný (swept depth potvrzena sondováním).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center; margin: 1em 0;">
+    <svg width="480" height="220" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" aria-label="Srovnání kartografických znaků vraků">
+      <!-- Background -->
+      <rect width="480" height="220" fill="#f0f4f8" rx="8"/>
+
+      <!-- Water surface line -->
+      <line x1="20" y1="70" x2="460" y2="70" stroke="#5b9bd5" stroke-width="2" stroke-dasharray="8,4"/>
+      <text x="25" y="65" font-size="11" fill="#5b9bd5" font-family="sans-serif">hladina moře</text>
+
+      <!-- Column 1: Bezpečný vrak (tři křížky) -->
+      <text x="90" y="30" font-size="13" font-weight="bold" fill="#2d6a2d" text-anchor="middle" font-family="sans-serif">Bezpečný vrak</text>
+      <!-- Ship silhouette on bottom -->
+      <ellipse cx="90" cy="155" rx="40" ry="14" fill="#8b7355" opacity="0.7"/>
+      <rect x="60" y="141" width="60" height="14" rx="4" fill="#8b7355" opacity="0.7"/>
+      <!-- Deep water indicator -->
+      <text x="90" y="115" font-size="10" fill="#555" text-anchor="middle" font-family="sans-serif">hloubka &gt; min. ponor</text>
+      <!-- Three crosses symbol -->
+      <text x="90" y="50" font-size="22" fill="#2d6a2d" text-anchor="middle" font-family="monospace" font-weight="bold">+++</text>
+      <!-- Depth arrow -->
+      <line x1="90" y1="72" x2="90" y2="138" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <polygon points="90,140 86,132 94,132" fill="#aaa"/>
+      <text x="96" y="108" font-size="10" fill="#2d6a2d" font-family="sans-serif">bezpečná</text>
+      <text x="96" y="120" font-size="10" fill="#2d6a2d" font-family="sans-serif">hloubka</text>
+
+      <!-- Divider -->
+      <line x1="210" y1="15" x2="210" y2="205" stroke="#ccc" stroke-width="1.5"/>
+
+      <!-- Column 2: Nebezpečný vrak -->
+      <text x="330" y="30" font-size="13" font-weight="bold" fill="#c0392b" text-anchor="middle" font-family="sans-serif">Nebezpečný vrak</text>
+      <!-- Ship silhouette near surface -->
+      <ellipse cx="330" cy="100" rx="40" ry="14" fill="#8b7355" opacity="0.7"/>
+      <rect x="300" y="86" width="60" height="14" rx="4" fill="#8b7355" opacity="0.7"/>
+      <!-- Two crosses + danger symbol -->
+      <text x="330" y="50" font-size="22" fill="#c0392b" text-anchor="middle" font-family="monospace" font-weight="bold">++</text>
+      <!-- Depth arrow short -->
+      <line x1="330" y1="72" x2="330" y2="83" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <polygon points="330,85 326,78 334,78" fill="#c0392b"/>
+      <text x="340" y="79" font-size="10" fill="#c0392b" font-family="sans-serif">malá hloubka!</text>
+
+      <!-- Column 3: Nad hladinou -->
+      <!-- Divider -->
+      <!-- Labels at bottom -->
+      <text x="90" y="200" font-size="11" fill="#2d6a2d" text-anchor="middle" font-family="sans-serif">→ plavba bezpečná</text>
+      <text x="330" y="190" font-size="11" fill="#c0392b" text-anchor="middle" font-family="sans-serif">→ nebezpečí pro plavidla</text>
+      <text x="330" y="204" font-size="11" fill="#c0392b" text-anchor="middle" font-family="sans-serif">s větším ponorem</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Navigátor při plánování trasy kontroluje námořní mapy a identifikuje vraky v oblasti plavby. Pokud mapa zobrazuje znak <strong>+++</strong> bez čísla hloubky nebo výstražné barvy, může plavidlem bez obav projet — hloubka nad vrakem byla ověřena hydrografickým průzkumem. Pokud by však existovala pochybnost nebo by ponor lodi byl neobvykle velký, je nutné ověřit aktuální hloubku v příslušných nautických publikacích (Notices to Mariners, pilot charts) nebo se vraku obloukem vyhnout.
+  </p>
+  <p>
+    Praktické rozlišení:
+  </p>
+  <ul>
+    <li><strong>Tři křížky (+++)</strong>: vrak ověřen jako bezpečný — proplujte.</li>
+    <li><strong>Dva křížky s malou hloubkou</strong>: vrak nebezpečný — vyvarujte se oblasti.</li>
+    <li><strong>Symbol nad hladinou</strong>: vrak vyčnívá — absolutní překážka.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO INT 1</strong> – Symbols, Abbreviations and Terms used on Charts (Mezinárodní hydrografická organizace), sekce K (Rocks, Wrecks, Obstructions) — znaky K20–K29 pro vraky.</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě, § 2 a § 47 (povinnosti velitele ke znalosti map a nautických publikací).</li>
+    <li><strong>COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři) – Pravidlo 8 (vyhnutí se srážce) a Pravidlo 16 (povinný manévr).</li>
+  </ol>
+</article>

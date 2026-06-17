@@ -1,0 +1,12 @@
+{
+  "qid": 192,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Námořní meteorologie — základní principy synoptické analýzy",
+    "WMO Guide to Marine Meteorological Services",
+    "Bowditch — American Practical Navigator",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-sonnet-4-6"
+}

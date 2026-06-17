@@ -1,0 +1,12 @@
+{
+  "qid": 142,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IALA Maritime Buoyage System – Region A",
+    "COLREG 1972 – Pravidlo 15 a příloha IV",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb. o lodních listinách"
+  ],
+  "model": "claude-sonnet-4-6"
+}

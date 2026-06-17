@@ -1,0 +1,12 @@
+{
+  "qid": 176,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — standardy synoptické meteorologie (FM-12 SYNOP)",
+    "Bowditch — American Practical Navigator, kap. 31, 35",
+    "ČMeS / ČHMÚ — výklad pojmů synoptické meteorologie",
+    "Vyhláška č. 315/2000 Sb."
+  ],
+  "model": "claude-sonnet-4-6"
+}

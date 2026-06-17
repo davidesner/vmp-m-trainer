@@ -1,0 +1,12 @@
+{
+  "qid": 205,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "SOLAS kapitola III — záchranné prostředky",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb.",
+    "IMO Resolution MSC.81(70)"
+  ],
+  "model": "claude-opus-4-7"
+}

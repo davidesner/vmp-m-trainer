@@ -1,0 +1,112 @@
+<article class="vmp-explanation">
+  <h2>Zelená tyčová bóje s kuželovým vrcholovým znakem</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Zelená tyčová bóje s <strong>zeleným kuželem vrcholem vzhůru</strong> je <strong>bóje pravého (starbordového) boku</strong> systému IALA-A (používaného v Evropě). Označuje pravý okraj plavební dráhy při směru plavby <em>do přístavu</em> (konvenční směr). Pokud plujete <em>z přístavu na moře</em>, pohybujete se v opačném směru — bóje se ocitá na vašem <strong>levém boku</strong>, a musíte ji tedy minout na levoboku.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Systém IALA-A (International Association of Marine Aids to Navigation and Lighthouse Authorities, region A — Evropa, Afrika, Indie, Austrálie) rozlišuje dvě základní skupiny bočních bójí:
+    </p>
+    <ul>
+      <li><strong>Bóje pravého boku</strong> (starbord lateral mark) — zelená barva, tvar kužel nebo tyč s kuželovým vrcholovým znakem (vrcholem vzhůru), světlo zelené; označují pravý okraj kanálu při plavbě v konvenčním směru (= do přístavu, po proudu, nebo obecně ve směru definovaném pro daný úsek).</li>
+      <li><strong>Bóje levého boku</strong> (port lateral mark) — červená barva, tvar válec (puk) nebo tyč s válcovým vrcholovým znakem, světlo červené; označují levý okraj kanálu.</li>
+    </ul>
+    <p>
+      Konvenční směr plavby v systému IALA-A je definován jako <strong>plavba do přístavu</strong>. Plujete-li z přístavu (opačný směr), celé přiřazení stran se obrátí: co bylo pravobočná bóje při vstupu, leží nyní na levé straně vašeho kurzu.
+    </p>
+    <p>
+      Pravidlo si lze zapamatovat mnemonikou <em>"červená vlevo — při vstupu do přístavu"</em> (v systému IALA-A). Z přístavu je to opačně.
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="500" height="320" aria-label="Diagram IALA-A bóje při plavbě z přístavu">
+
+      <!-- Voda -->
+      <rect x="0" y="0" width="500" height="320" fill="#d0eaf8"/>
+
+      <!-- Plavební dráha (šedý pruh) -->
+      <rect x="100" y="0" width="300" height="320" fill="#b8d8f0" opacity="0.5"/>
+
+      <!-- Okraje dráhy -->
+      <line x1="100" y1="0" x2="100" y2="320" stroke="#888" stroke-width="1" stroke-dasharray="8,4"/>
+      <line x1="400" y1="0" x2="400" y2="320" stroke="#888" stroke-width="1" stroke-dasharray="8,4"/>
+
+      <!-- Popisek: PŘÍSTAV (dole) -->
+      <rect x="170" y="270" width="160" height="34" rx="6" fill="#fff" fill-opacity="0.8"/>
+      <text x="250" y="291" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif" font-weight="bold">PŘÍSTAV</text>
+
+      <!-- Šipka lodě — pluje NAHORU (z přístavu na moře) -->
+      <line x1="250" y1="240" x2="250" y2="80" stroke="#1a4a8a" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+      <!-- Loď (zjednodušená) -->
+      <polygon points="250,190 235,230 265,230" fill="#1a4a8a"/>
+      <text x="270" y="215" font-size="11" fill="#1a4a8a" font-family="sans-serif">vaše loď</text>
+      <text x="270" y="228" font-size="10" fill="#1a4a8a" font-family="sans-serif">(pluje na moře)</text>
+
+      <!-- Zelená bóje — vpravo od lodi = VPRAVO od kanálu při vstupu, ale VLEVO od lodi při výjezdu -->
+      <!-- Umístěna na levé straně pohledu lodi jedoucí nahoru = vlevo = x=120 -->
+      <!-- Tyč -->
+      <line x1="130" y1="130" x2="130" y2="90" stroke="#1a7a1a" stroke-width="4"/>
+      <!-- Kužel vrcholem vzhůru -->
+      <polygon points="130,65 118,90 142,90" fill="#1a7a1a"/>
+      <!-- Plovák -->
+      <ellipse cx="130" cy="135" rx="14" ry="8" fill="#1a7a1a"/>
+
+      <!-- Popisek bóje -->
+      <rect x="10" y="55" width="105" height="48" rx="5" fill="#fff" fill-opacity="0.85"/>
+      <text x="62" y="72" text-anchor="middle" font-size="11" fill="#1a7a1a" font-family="sans-serif" font-weight="bold">Zelená bóje</text>
+      <text x="62" y="87" text-anchor="middle" font-size="10" fill="#555" font-family="sans-serif">pravý bok kanálu</text>
+      <text x="62" y="100" text-anchor="middle" font-size="10" fill="#555" font-family="sans-serif">(při vstupu)</text>
+
+      <!-- Šipka ukazující: minout VLEVO -->
+      <line x1="175" y1="120" x2="145" y2="120" stroke="#d44" stroke-width="2" marker-end="url(#arrowRed)"/>
+      <rect x="148" y="107" width="90" height="18" rx="4" fill="#fff" fill-opacity="0.85"/>
+      <text x="193" y="120" text-anchor="middle" font-size="11" fill="#d44" font-family="sans-serif" font-weight="bold">míjíte vlevo!</text>
+
+      <!-- Nápis: MO&#344;E (nahoře) -->
+      <rect x="175" y="12" width="150" height="30" rx="6" fill="#fff" fill-opacity="0.8"/>
+      <text x="250" y="32" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif" font-weight="bold">MOŘE</text>
+
+      <!-- Definice šipky modré -->
+      <defs>
+        <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#1a4a8a"/>
+        </marker>
+        <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#d44"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <p style="font-size:0.92em; color:#555;">
+      <em>Diagram: Zelená bóje (kužel vrcholem vzhůru) je pravobočná bóje kanálu při vstupu do přístavu. Při plavbě z přístavu na moře leží na vašem levém boku — je nutné ji minout na levoboku (tj. bóje zůstane vlevo od lodi).</em>
+    </p>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <p>
+      V praxi si námořník před každým manévrem uvědomí <strong>konvenční směr</strong> dané oblasti (zpravidla "do přístavu" nebo ve směru toku řeky). Zelená bóje s kuželovým znakem vždy označuje <em>pravý okraj dráhy v konvenčním směru</em>. Pokud plujete konvenčním směrem, necháte ji po pravoboku; pokud jedete opačně (jako v této otázce — z přístavu na moře), je na vašem levoboku a míjíte ji vlevo.
+    </p>
+    <p>
+      Při skutečné plavbě v kanálu nebo přístupovém fairway je kritické toto pravidlo dodržet, aby loď zůstala v bezpečné části plavební dráhy a vyhla se mělčinám a překážkám označeným bójemi.
+    </p>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li><strong>IALA Maritime Buoyage System — Region A</strong> (Systém plavebních značek IALA, region A): pravidla pro boční bóje, barvy, tvary a vrcholové znaky.</li>
+      <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong>, ve znění pozdějších předpisů — obecný rámec bezpečnosti plavby a povinností velitele.</li>
+      <li><strong>Vyhláška č. 315/2000 Sb.</strong> o technickém provozu námořních plavidel — odkazuje na mezinárodní standardy, včetně systému IALA.</li>
+    </ol>
+  </section>
+</article>

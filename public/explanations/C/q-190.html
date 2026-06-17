@@ -1,0 +1,86 @@
+<article class="vmp-explanation">
+  <h2>Synoptická mapa – zobrazení barických útvarů</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Synoptická mapa znázorňuje <strong>rozložení barických útvarů</strong> – tedy oblastí vysokého tlaku (anticyklóny) a nízkého tlaku (cyklóny, tlakové níže), izobary a frontální systémy v daném okamžiku (synoptickém čase). Slouží k zobrazení aktuálního stavu počasí nad rozsáhlou oblastí, nikoli k zobrazení navigačních tras ani klimatologických průměrů větrů a proudů.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Slovo <em>synoptický</em> pochází z řeckého „synopsis" (celkový přehled). Synoptická meteorologie se zabývá rozborem počasí v měřítku stovek až tisíců kilometrů. Synoptické mapy (přízemní a výškové) vydávají národní meteorologické služby a Světová meteorologická organizace (WMO) zpravidla každých 6 hodin.
+  </p>
+  <p>
+    Na synoptické mapě se zobrazují:
+  </p>
+  <ul>
+    <li><strong>Izobary</strong> – čáry spojující místa se stejným atmosferickým tlakem (hPa)</li>
+    <li><strong>Anticyklóny (V)</strong> – oblasti vysokého tlaku, typicky přinášejí stabilní počasí</li>
+    <li><strong>Cyklóny / tlakové níže (N)</strong> – oblasti nízkého tlaku, spojeny s nepříznivým počasím</li>
+    <li><strong>Frontální systémy</strong> – teplé, studené a okluzní fronty</li>
+    <li><strong>Stanice</strong> – záznamy z meteorologických stanic (vítr, teplota, tlak, oblačnost)</li>
+  </ul>
+  <p>
+    Synoptická mapa <strong>nezachycuje</strong> doporučené plavební trasy (ty jsou uvedeny v pilotních publikacích a routovacích atlasech) ani klimatologické průměrné směry větrů a proudů (ty zobrazují tzv. klimatologické nebo pilotní mapy, např. Pilot Charts).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" width="520" height="320" role="img" aria-label="Schematická synoptická mapa">
+    <!-- pozadí -->
+    <rect width="520" height="320" fill="#e8f4f8" rx="8"/>
+    <!-- izobary - anticyklóna vpravo nahoře -->
+    <ellipse cx="370" cy="100" rx="110" ry="80" fill="none" stroke="#b06000" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <ellipse cx="370" cy="100" rx="75" ry="52" fill="none" stroke="#b06000" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <ellipse cx="370" cy="100" rx="40" ry="28" fill="none" stroke="#b06000" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="370" y="105" text-anchor="middle" font-size="22" font-weight="bold" fill="#b06000">V</text>
+    <text x="370" y="125" text-anchor="middle" font-size="11" fill="#b06000">1020 hPa</text>
+    <!-- izobary - cyklóna vlevo dole -->
+    <ellipse cx="145" cy="220" rx="110" ry="75" fill="none" stroke="#2255aa" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <ellipse cx="145" cy="220" rx="72" ry="48" fill="none" stroke="#2255aa" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <ellipse cx="145" cy="220" rx="38" ry="25" fill="none" stroke="#2255aa" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="145" y="225" text-anchor="middle" font-size="22" font-weight="bold" fill="#2255aa">N</text>
+    <text x="145" y="245" text-anchor="middle" font-size="11" fill="#2255aa">990 hPa</text>
+    <!-- teplá fronta -->
+    <polyline points="240,230 270,200 300,175 330,155" fill="none" stroke="#cc0000" stroke-width="2.5"/>
+    <circle cx="252" cy="217" r="6" fill="#cc0000"/>
+    <circle cx="278" cy="192" r="6" fill="#cc0000"/>
+    <circle cx="308" cy="168" r="6" fill="#cc0000"/>
+    <text x="320" y="145" font-size="11" fill="#cc0000">Teplá fronta</text>
+    <!-- studená fronta -->
+    <polyline points="195,245 215,260 240,275 265,285" fill="none" stroke="#0000cc" stroke-width="2.5"/>
+    <polygon points="204,251 195,245 205,241" fill="#0000cc"/>
+    <polygon points="226,265 215,260 222,253" fill="#0000cc"/>
+    <polygon points="250,279 240,275 246,268" fill="#0000cc"/>
+    <text x="270" y="300" font-size="11" fill="#0000cc">Studená fronta</text>
+    <!-- legenda -->
+    <rect x="10" y="10" width="200" height="70" fill="white" fill-opacity="0.8" rx="4" stroke="#aaa" stroke-width="1"/>
+    <text x="18" y="28" font-size="12" font-weight="bold" fill="#333">Legenda:</text>
+    <line x1="18" y1="40" x2="50" y2="40" stroke="#b06000" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="56" y="44" font-size="11" fill="#333">Izobary</text>
+    <text x="18" y="58" font-size="13" font-weight="bold" fill="#b06000">V</text>
+    <text x="30" y="58" font-size="11" fill="#333">= Vysoký tlak (anticyklóna)</text>
+    <text x="18" y="74" font-size="13" font-weight="bold" fill="#2255aa">N</text>
+    <text x="30" y="74" font-size="11" fill="#333">= Nízký tlak (cyklóna)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Námořník před výjezdem do moře si prohlíží synoptickou mapu, aby:
+  </p>
+  <ul>
+    <li>Zjistil polohu tlakových níží a anticyklón a odhadl, jaké větry lze čekat na trati.</li>
+    <li>Identifikoval přibližující se fronty, které přinášejí náhlé změny počasí, viditelnosti a síly větru.</li>
+    <li>Naplánoval odjezd nebo trasu tak, aby se vyhnul oblasti nízkého tlaku (silné vlny, bouře).</li>
+  </ul>
+  <p>
+    Synoptické mapy jsou dostupné z národních hydrometeorologických ústavů, Eumetcastu, NAVTEX zpráv a lodních meteorologických portálů. Jsou základním nástrojem <em>routovací meteorologie</em> (weather routing) pro bezpečnou námořní plavbu.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>WMO – Manual on the Global Data-processing and Forecasting System (WMO-No. 485), kap. 2 (Synoptická meteorologie)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě – § 22 (povinnosti velitele k zajištění bezpečnosti plavby, včetně sledování meteorologických informací)</li>
+    <li>Bowditch – American Practical Navigator, kap. 31 (Weather Routing) a kap. 36 (Weather Maps)</li>
+    <li>ČMeS – Meteorologický slovník výkladový a terminologický, heslo „Synoptická meteorologie"</li>
+  </ol>
+</article>

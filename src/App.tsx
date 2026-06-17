@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './hooks/useAuth'
+import { ActiveTestProvider } from './hooks/useActiveTest'
 import RequireAuth from './components/RequireAuth'
 import Sidebar from './components/Sidebar'
 import Home from './routes/Home'
@@ -23,6 +24,7 @@ function Shell({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <AuthProvider>
+      <ActiveTestProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -35,6 +37,7 @@ export default function App() {
           <Route path="/settings" element={<RequireAuth><Shell><Settings /></Shell></RequireAuth>} />
         </Routes>
       </BrowserRouter>
+      </ActiveTestProvider>
     </AuthProvider>
   )
 }

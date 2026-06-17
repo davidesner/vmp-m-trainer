@@ -1,47 +1,25 @@
 #!/usr/bin/env node
-// One-off scraper for spspraha.cz VMP M 2015 questions.
-// Reads the single index page, extracts all questions, downloads images,
-// and writes public/data/questions.json.
+// Scraper for spspraha.cz question banks.
+// Per-category config in test-configs.mjs.
+//
+// Usage:
+//   pnpm scrape            # all categories
+//   pnpm scrape M          # just M
+//   pnpm scrape C          # just C
 
-import { writeFileSync, mkdirSync, existsSync, createWriteStream } from 'node:fs'
+import { writeFileSync, mkdirSync, createWriteStream } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { pipeline } from 'node:stream/promises'
 import fetch from 'node-fetch'
 import * as cheerio from 'cheerio'
+import { CATEGORIES } from './test-configs.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
-const SOURCE_URL = 'http://www.spspraha.cz/zkousky/otazky.asp?zp=M+2015'
-const OUT_JSON = join(ROOT, 'public/data/questions.json')
-const OUT_IMG_DIR = join(ROOT, 'public/data/images')
 
-const ZKRATKA_TO_GROUP = {
-  PP1: 'plavebni-provoz',
-  PP2: 'nocni-denni-signalizace',
-  PP3: 'signalizace-rizeni-plavby',
-  PP4: 'zvukove-signaly',
-  TZ:  'zaklady-konstrukce-plavidel',
-  ZP:  'zaklady-prvni-pomoci',
-}
-
-const GROUPS = [
-  { id: 'plavebni-provoz',             name: 'Plavební provoz',                              zkratky: ['PP1'] },
-  { id: 'nocni-denni-signalizace',     name: 'Noční a denní signalizace',                    zkratky: ['PP2'] },
-  { id: 'signalizace-rizeni-plavby',   name: 'Signalizace pro řízení plavby na vodní cestě', zkratky: ['PP3'] },
-  { id: 'zvukove-signaly',             name: 'Zvukové signály',                              zkratky: ['PP4'] },
-  { id: 'vytyceni-vodnich-cest',       name: 'Vytyčení vodních cest',                        zkratky: []      },
-  { id: 'zaklady-konstrukce-plavidel', name: 'Základy konstrukce plavidel',                  zkratky: ['TZ']  },
-  { id: 'zaklady-prvni-pomoci',        name: 'Základy první pomoci',                         zkratky: ['ZP']  },
-]
-
-const TEST_STRUCTURE = [
-  { groups: ['plavebni-provoz'],                                                                    count: 16 },
-  { groups: ['nocni-denni-signalizace'],                                                            count: 7 },
-  { groups: ['signalizace-rizeni-plavby', 'zvukove-signaly', 'vytyceni-vodnich-cest'],              count: 5 },
-  { groups: ['zaklady-konstrukce-plavidel'],                                                        count: 3 },
-  { groups: ['zaklady-prvni-pomoci'],                                                               count: 4 },
-]
+function outJsonPath(catId) { return join(ROOT, `public/data/questions-${catId}.json`) }
+function outImgDir (catId) { return join(ROOT, `public/data/images/${catId}`) }
 
 async function downloadImage(url, dest) {
   const res = await fetch(url)
@@ -53,18 +31,16 @@ function normalizeWs(s) {
   return s.replace(/ /g, ' ').replace(/\s+/g, ' ').trim()
 }
 
-async function main() {
-  console.log(`Fetching ${SOURCE_URL} ...`)
-  const res = await fetch(SOURCE_URL)
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
-  const html = await res.text()
-  const $ = cheerio.load(html)
-
-  mkdirSync(OUT_IMG_DIR, { recursive: true })
+// ---------------------------------------------------------------------------
+// Parser pro kategorii M (2015)
+// HTML structure: each question = bg row (s číslem a zkratkou)
+// + rows pro Otázka, Odpověď a)/b)/c) jako samostatné <th>.
+// "Správná odpověď a)" / "Odpověď b)" jsou v <th> jednoho řádku.
+// ---------------------------------------------------------------------------
+function parseM($, config) {
+  const zkratkaPattern = new RegExp(`(${Object.keys(config.zkratkaToGroup).join('|')})\\s*2015`)
 
   const questions = []
-  let currentZkratka = null
-  let currentNum = null
   let currentBuf = null
 
   $('tr').each((_, tr) => {
@@ -77,12 +53,10 @@ async function main() {
       const tds = $tr.find('td')
       const cislo = parseInt(($(tds[0]).text().match(/\d+/) || ['0'])[0], 10)
       const zkrText = $(tds[1]).text()
-      const zkrMatch = zkrText.match(/(PP1|PP2|PP3|PP4|TZ|ZP)\s*2015/)
-      currentZkratka = zkrMatch ? zkrMatch[1] : null
-      currentNum = cislo
+      const zkrMatch = zkrText.match(zkratkaPattern)
       currentBuf = {
-        zkratka: currentZkratka,
-        num: currentNum,
+        zkratka: zkrMatch ? zkrMatch[1] : null,
+        num: cislo,
         text: '',
         image: null,
         options: [],
@@ -100,9 +74,7 @@ async function main() {
       const $tds = $tr.find('td')
       currentBuf.text = normalizeWs($tds.first().text())
       const $img = $tr.find('img').first()
-      if ($img.length) {
-        currentBuf.image = $img.attr('src') || null
-      }
+      if ($img.length) currentBuf.image = $img.attr('src') || null
       return
     }
 
@@ -124,26 +96,122 @@ async function main() {
   if (currentBuf && currentBuf.text && currentBuf.options.length === 3 && currentBuf.correct) {
     questions.push(currentBuf)
   }
+  return questions
+}
 
-  for (const q of questions) {
+// ---------------------------------------------------------------------------
+// Parser pro kategorii C
+// HTML structure: bg row obsahuje "Zkratka souboru otázek:</i></span> XXX"
+// (bez "2015"). Otázka/Odpověď v dalších <tr>, ale `Správná odpověď a)` je
+// inline header u jedné z možností (ne separate row).
+// ---------------------------------------------------------------------------
+function parseC($, config) {
+  const allowed = new Set(Object.keys(config.zkratkaToGroup))
+
+  const questions = []
+  let currentBuf = null
+
+  $('tr').each((_, tr) => {
+    const $tr = $(tr)
+
+    if ($tr.hasClass('bg')) {
+      if (currentBuf && currentBuf.text && currentBuf.options.length === 3 && currentBuf.correct) {
+        questions.push(currentBuf)
+      }
+      const rowText = normalizeWs($tr.text())
+      // "č. 1 Zkratka souboru otázek: MP1"
+      const numMatch = rowText.match(/č\.\s*(\d+)/)
+      const zkrMatch = rowText.match(/Zkratka souboru otázek:\s*([A-Z0-9]+)/)
+      const zkratka = zkrMatch && allowed.has(zkrMatch[1]) ? zkrMatch[1] : null
+      currentBuf = {
+        zkratka,
+        num: numMatch ? parseInt(numMatch[1], 10) : 0,
+        text: '',
+        image: null,
+        options: [],
+        correct: null,
+      }
+      return
+    }
+
+    if (!currentBuf) return
+
+    const $th = $tr.find('th').first()
+    const headerText = normalizeWs($th.text())
+
+    if (headerText.startsWith('Otázka')) {
+      const $tds = $tr.find('td')
+      currentBuf.text = normalizeWs($tds.first().text())
+      const $img = $tr.find('img').first()
+      if ($img.length) currentBuf.image = $img.attr('src') || null
+      return
+    }
+
+    const correctMatch = headerText.match(/Správná\s+odpověď\s*([abc])\)/)
+    const optMatch = headerText.match(/^Odpověď\s*([abc])\)/)
+    if (correctMatch) {
+      const key = correctMatch[1]
+      currentBuf.options.push({ key, text: normalizeWs($tr.find('td').first().text()) })
+      currentBuf.correct = key
+      return
+    }
+    if (optMatch) {
+      const key = optMatch[1]
+      currentBuf.options.push({ key, text: normalizeWs($tr.find('td').first().text()) })
+      return
+    }
+  })
+
+  if (currentBuf && currentBuf.text && currentBuf.options.length === 3 && currentBuf.correct) {
+    questions.push(currentBuf)
+  }
+  return questions
+}
+
+const PARSERS = { parseM, parseC }
+
+// ---------------------------------------------------------------------------
+
+async function scrapeCategory(catId) {
+  const config = CATEGORIES[catId]
+  if (!config) throw new Error(`Unknown category: ${catId}`)
+
+  console.log(`\n=== Scraping ${catId} (${config.name}) ===`)
+  console.log(`URL: ${config.url}`)
+
+  const res = await fetch(config.url)
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${config.url}`)
+  const html = await res.text()
+  const $ = cheerio.load(html)
+
+  const parser = PARSERS[config.parser]
+  if (!parser) throw new Error(`Unknown parser: ${config.parser}`)
+  const rawQuestions = parser($, config)
+  console.log(`Parsed: ${rawQuestions.length} raw questions`)
+
+  // sort options by key (a/b/c)
+  for (const q of rawQuestions) {
     q.options.sort((a, b) => a.key.localeCompare(b.key))
   }
 
+  const imgDir = outImgDir(catId)
+  mkdirSync(imgDir, { recursive: true })
+
   const final = []
   let id = 1
-  for (const q of questions) {
-    if (!q.zkratka || !ZKRATKA_TO_GROUP[q.zkratka]) {
-      console.warn(`Skipping question without zkratka: ${q.text.slice(0, 60)}`)
+  for (const q of rawQuestions) {
+    if (!q.zkratka || !config.zkratkaToGroup[q.zkratka]) {
+      console.warn(`Skipping question (no zkratka): ${q.text.slice(0, 60)}`)
       continue
     }
     let imageRel = null
     if (q.image) {
       const ext = q.image.split('.').pop().split('?')[0]
       const filename = `q-${id}.${ext}`
-      const dest = join(OUT_IMG_DIR, filename)
+      const dest = join(imgDir, filename)
       try {
         await downloadImage(q.image, dest)
-        imageRel = `/data/images/${filename}`
+        imageRel = `/data/images/${catId}/${filename}`
       } catch (e) {
         console.warn(`Image fail for #${id}: ${e.message}`)
       }
@@ -151,7 +219,7 @@ async function main() {
     final.push({
       id,
       zkratka: q.zkratka,
-      group: ZKRATKA_TO_GROUP[q.zkratka],
+      group: config.zkratkaToGroup[q.zkratka],
       text: q.text,
       image: imageRel,
       options: q.options,
@@ -161,16 +229,44 @@ async function main() {
   }
 
   const bundle = {
-    version: 'M-2015',
+    testId: catId,
+    version: config.version,
+    name: config.name,
     scrapedAt: new Date().toISOString(),
-    groups: GROUPS,
-    testStructure: TEST_STRUCTURE,
+    groups: config.groups,
+    testStructure: config.testStructure,
+    passing: config.passing,
     questions: final,
   }
 
-  mkdirSync(dirname(OUT_JSON), { recursive: true })
-  writeFileSync(OUT_JSON, JSON.stringify(bundle, null, 2), 'utf8')
-  console.log(`Wrote ${final.length} questions to ${OUT_JSON}`)
+  const outPath = outJsonPath(catId)
+  mkdirSync(dirname(outPath), { recursive: true })
+  writeFileSync(outPath, JSON.stringify(bundle, null, 2), 'utf8')
+  console.log(`✓ Wrote ${final.length} questions to ${outPath}`)
+
+  // group breakdown
+  const perGroup = {}
+  for (const q of final) perGroup[q.group] = (perGroup[q.group] || 0) + 1
+  console.log('  Per group:')
+  for (const g of config.groups) {
+    console.log(`    ${g.id}: ${perGroup[g.id] || 0}`)
+  }
+}
+
+async function main() {
+  const args = process.argv.slice(2).map(a => a.toUpperCase())
+  const targets = args.length ? args : Object.keys(CATEGORIES)
+
+  for (const catId of targets) {
+    if (!CATEGORIES[catId]) {
+      console.error(`Unknown category: ${catId}. Known: ${Object.keys(CATEGORIES).join(', ')}`)
+      process.exit(2)
+    }
+  }
+
+  for (const catId of targets) {
+    await scrapeCategory(catId)
+  }
 }
 
 main().catch(err => { console.error(err); process.exit(1) })

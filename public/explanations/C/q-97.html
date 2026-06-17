@@ -1,0 +1,111 @@
+<article class="vmp-explanation">
+  <h2>Měření rychlosti metodou bočního logu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>4 uzle</strong>. Při délce plavidla 10 metrů a naměřeném čase 5 sekund
+    vychází rychlost přibližně 2 m/s, což po přepočtu odpovídá zhruba 3,9 uzlu — prakticky 4 uzly.
+  </p>
+
+  <h3>Pozadí — jak boční log funguje</h3>
+  <p>
+    Metoda <em>bočního logu</em> (angl. <em>Dutchman's log</em> nebo <em>chip log</em>) je nejjednodušší
+    způsob měření rychlosti plavidla bez přístrojů. Postup:
+  </p>
+  <ol>
+    <li>Na přídi (nebo zádi) hodíme plovoucí předmět do vody.</li>
+    <li>Stopkami měříme dobu, za kterou předmět uplyne podél celé délky trupu (od přídi k zádi nebo obráceně).</li>
+    <li>Rychlost vypočítáme ze vzorce.</li>
+  </ol>
+
+  <h3>Vizualizace — výpočet</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" style="max-width:520px;width:100%;font-family:sans-serif;">
+    <!-- plavidlo -->
+    <rect x="30" y="90" width="280" height="40" rx="6" ry="6" style="fill:#b0c4de;stroke:#2c4a6e;stroke-width:2;"/>
+    <!-- příď (trojúhelník) -->
+    <polygon points="310,90 310,130 360,110" style="fill:#b0c4de;stroke:#2c4a6e;stroke-width:2;"/>
+    <!-- záď -->
+    <rect x="10" y="95" width="20" height="30" rx="3" ry="3" style="fill:#8fa8c0;stroke:#2c4a6e;stroke-width:1.5;"/>
+
+    <!-- šipka délky -->
+    <line x1="30" y1="75" x2="310" y2="75" style="stroke:#2c4a6e;stroke-width:1.5;marker-end:url(#arr);marker-start:url(#arr2);"/>
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L0,8 L8,4 Z" style="fill:#2c4a6e;"/>
+      </marker>
+      <marker id="arr2" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto-start-reverse">
+        <path d="M0,0 L0,8 L8,4 Z" style="fill:#2c4a6e;"/>
+      </marker>
+    </defs>
+    <text x="170" y="68" text-anchor="middle" style="font-size:13px;fill:#1a1a2e;">délka = 10 m</text>
+
+    <!-- plovoucí předmět -->
+    <circle cx="170" cy="155" r="8" style="fill:#e74c3c;stroke:#922b21;stroke-width:1.5;"/>
+    <text x="185" y="159" style="font-size:11px;fill:#922b21;">plovoucí předmět</text>
+
+    <!-- čas -->
+    <text x="170" y="185" text-anchor="middle" style="font-size:13px;fill:#1a1a2e;">čas = 5 s</text>
+
+    <!-- výpočet -->
+    <rect x="400" y="50" width="110" height="120" rx="8" ry="8" style="fill:#eaf4fb;stroke:#2980b9;stroke-width:1.5;"/>
+    <text x="455" y="75" text-anchor="middle" style="font-size:12px;font-weight:bold;fill:#2980b9;">Výpočet</text>
+    <text x="455" y="95" text-anchor="middle" style="font-size:11px;fill:#1a1a2e;">10 m ÷ 5 s</text>
+    <text x="455" y="113" text-anchor="middle" style="font-size:11px;fill:#1a1a2e;">= 2 m/s</text>
+    <line x1="415" y1="120" x2="495" y2="120" style="stroke:#2980b9;stroke-width:1;"/>
+    <text x="455" y="137" text-anchor="middle" style="font-size:11px;fill:#1a1a2e;">÷ 0,5144</text>
+    <text x="455" y="155" text-anchor="middle" style="font-size:12px;font-weight:bold;fill:#27ae60;">≈ 4 uzly</text>
+  </svg>
+
+  <h3>Vzorec podrobně</h3>
+  <p>
+    Rychlost v metrech za sekundu:
+  </p>
+  <blockquote>
+    v = délka [m] ÷ čas [s] = 10 ÷ 5 = <strong>2 m/s</strong>
+  </blockquote>
+  <p>
+    Přepočet na uzly (1 uzel = 0,5144 m/s):
+  </p>
+  <blockquote>
+    v [kn] = 2 ÷ 0,5144 ≈ <strong>3,89 kn ≈ 4 uzly</strong>
+  </blockquote>
+  <p>
+    Existuje i zkrácený vzorec přímo v uzlech:
+  </p>
+  <blockquote>
+    v [kn] = (délka [m] × 1,944) ÷ čas [s] = (10 × 1,944) ÷ 5 ≈ <strong>3,89 kn</strong>
+  </blockquote>
+
+  <h3>Proč ostatní odpovědi nejsou správné</h3>
+  <ul>
+    <li>
+      <strong>„2 uzle"</strong> — odpovídalo by rychlosti 1 m/s, čehož by bylo dosaženo, kdyby plavidlo
+      bylo 10 m dlouhé a čas byl přibližně 10 sekund, nebo kdyby délka byla 5 m při 5 sekundách.
+    </li>
+    <li>
+      <strong>„10 uzlů"</strong> — číslo vznikne, pokud se délka plavidla (10 m) vydělí časem (5 s)
+      a výsledek se nesprávně vezme přímo jako uzly bez přepočtu, nebo pokud se délka v metrech
+      vydělí časem v sekundách a přenásobí větším koeficientem. Jde o typickou chybu z přehlédnutí
+      konverzního faktoru.
+    </li>
+  </ul>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Metoda bočního logu se používá jako záložní postup při poruše log-přístroje nebo GPS.
+    Na malých rekreačních plavidlech (10–15 m) ji lze provést se stopkami a dvěma osobami:
+    jedna stojí na přídi, druhá na zádi. Přesnost závisí na přesnosti odměřené délky plavidla
+    a reakční době obsluhy stopek (chyba typicky ±0,5 kn).
+  </p>
+  <p>
+    V námořní praxi (COLREG, čl. 6) je lodní velitel povinen stanovit bezpečnou rychlost;
+    znalost aktuální rychlosti je proto základní navigační povinností.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Pravidlo 6 (Bezpečná rychlost)</li>
+    <li>Bowditch — <em>American Practical Navigator</em>, kap. 18 (Speed measurement, Dutchman's log)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 32 (povinnosti velitele plavidla)</li>
+  </ol>
+</article>

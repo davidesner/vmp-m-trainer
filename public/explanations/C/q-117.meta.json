@@ -1,0 +1,11 @@
+{
+  "qid": 117,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Mezinárodní hydrografická organizace (IHO) — publikace S-65, definice námořní míle",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Bowditch — American Practical Navigator (NIMA Pub. No. 9)"
+  ],
+  "model": "claude-sonnet-4-6"
+}

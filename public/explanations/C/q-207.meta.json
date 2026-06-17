@@ -1,0 +1,7 @@
+{
+  "qid": 207,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["SOLAS 1974 kapitola III pravidlo 32", "LSA Code IMO Resolution MSC.48(66) kapitola 2.2", "Zákon č. 61/2000 Sb. o námořní plavbě § 24", "Vyhláška č. 315/2000 Sb."],
+  "model": "claude-opus-4-7"
+}

@@ -1,0 +1,89 @@
+<article class="vmp-explanation">
+  <h2>Plavba při snížené viditelnosti — povinnost bezpečné rychlosti</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Správná odpověď zní, že plavidlo musí <strong>plout bezpečnou rychlostí stanovenou přiměřeně k převažujícím podmínkám a okolnostem snížené viditelnosti</strong>. Při mlze, silném dešti, sněžení nebo jiném omezení výhledu musí každé plavidlo přizpůsobit rychlost tak, aby bylo schopno včas zastavit nebo se vyhnout srážce. Pouhé zastavení strojů ani zákaz obratu vlevo nejsou obecnými povinnostmi v podmínkách snížené viditelnosti.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Tuto povinnost stanoví <strong>Pravidlo 6 COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři – Bezpečná rychlost). Plavidlo musí vždy plout takovou rychlostí, která mu umožní podniknout přiměřené a účinné opatření k vyloučení srážky a zastavit v prostoru přiměřeném okolnostem a podmínkám.
+    </p>
+    <p>
+      <strong>Pravidlo 19 COLREG 1972</strong> (Chování plavidel při snížené viditelnosti) pak konkretizuje, že každé plavidlo plující v podmínkách nebo v blízkosti podmínek snížené viditelnosti musí postupovat bezpečnou rychlostí přizpůsobenou převažujícím podmínkám. Pokud plavidlo zaslechne mlžný signál zdánlivě z přídě nebo zjistí hrozící nebezpečí srážky s druhým plavidlem, musí snížit rychlost na minimum nutné k udržení kursu; v případě potřeby zastaví a pohybuje se velmi opatrně, dokud nebezpečí srážky nepomine.
+    </p>
+    <p>
+      Zastavení strojů nebo zpětný chod není tedy automatickou povinností — jde o krajní opatření, k němuž se přistupuje pouze tehdy, vyžaduje-li to konkrétní situace (přiblížení se nebezpečného objektu zdánlivě zpředu). Zákaz obratu vlevo (Pravidlo 8 a 19) platí jen pro specifické situace vyhýbání, nikoli jako obecná povinnost.
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram bezpečné rychlosti při snížené viditelnosti">
+      <!-- Mlžné pozadí -->
+      <rect x="0" y="0" width="500" height="220" fill="#e8eef5"/>
+      <!-- Mlha -->
+      <ellipse cx="100" cy="80" rx="90" ry="35" fill="#c8d8e8" opacity="0.6"/>
+      <ellipse cx="250" cy="60" rx="120" ry="30" fill="#c8d8e8" opacity="0.5"/>
+      <ellipse cx="400" cy="75" rx="90" ry="35" fill="#c8d8e8" opacity="0.6"/>
+      <ellipse cx="60" cy="110" rx="70" ry="25" fill="#b8ccd8" opacity="0.5"/>
+      <ellipse cx="350" cy="105" rx="100" ry="28" fill="#b8ccd8" opacity="0.4"/>
+
+      <!-- Plavidlo -->
+      <g transform="translate(200, 140)">
+        <!-- Trup -->
+        <polygon points="-50,15 50,15 40,-5 -40,-5" fill="#2c5282" stroke="#1a365d" stroke-width="1.5"/>
+        <!-- Přídě -->
+        <polygon points="40,-5 60,5 50,15" fill="#2c5282" stroke="#1a365d" stroke-width="1.5"/>
+        <!-- Nástavba -->
+        <rect x="-20" y="-20" width="40" height="15" fill="#3182ce" stroke="#1a365d" stroke-width="1"/>
+        <!-- Stěžeň -->
+        <line x1="0" y1="-20" x2="0" y2="-40" stroke="#1a365d" stroke-width="2"/>
+      </g>
+
+      <!-- Šipka rychlosti (snížená) -->
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#276749"/>
+        </marker>
+      </defs>
+      <line x1="275" y1="148" x2="330" y2="148" stroke="#276749" stroke-width="3" marker-end="url(#arrow)"/>
+      <text x="275" y="170" font-size="11" fill="#276749" font-family="sans-serif">bezpečná rychlost</text>
+
+      <!-- Dosah viditelnosti -->
+      <line x1="260" y1="140" x2="360" y2="140" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="362" y="144" font-size="10" fill="#e53e3e" font-family="sans-serif">hranice viditelnosti</text>
+
+      <!-- Překážka za mlhou -->
+      <ellipse cx="420" cy="148" rx="18" ry="10" fill="#a0aec0" stroke="#718096" stroke-width="1.5"/>
+      <text x="405" y="170" font-size="10" fill="#718096" font-family="sans-serif">neznámá překážka</text>
+
+      <!-- Popis -->
+      <text x="20" y="205" font-size="12" fill="#2d3748" font-family="sans-serif" font-weight="bold">COLREG Pravidlo 6 + Pravidlo 19 — rychlost musí umožnit zastavení v bezpečné vzdálenosti</text>
+    </svg>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <ul>
+      <li>Vstoupí-li plavidlo do mlžné oblasti, velitel okamžitě snižuje rychlost a zapíná mlžné signály (Pravidlo 35 COLREG).</li>
+      <li>Posádka přechází do pohotovosti: zvýšená hlídka na přídi, radar v provozu, sledování AIS.</li>
+      <li>„Bezpečná rychlost" není pevné číslo — závisí na stavu radaru, hustotě provozu, manévrovacích vlastnostech plavidla, hloubce vody a dalších faktorech uvedených v Pravidle 6.</li>
+      <li>Pokud radar zachytí cíl zdánlivě před přídí nebo radarové ozvěny nelze vyhodnotit, velitel přikáže snížit na minimální říditelnou rychlost nebo zastaví — ale pouze tehdy, kdy to situace skutečně vyžaduje, nikoli automaticky.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, Pravidlo 6 (Bezpečná rychlost)</li>
+      <li>COLREG 1972, Pravidlo 19 (Chování plavidel při snížené viditelnosti)</li>
+      <li>COLREG 1972, Pravidlo 35 (Zvukové signály při snížené viditelnosti)</li>
+      <li>Zákon č. 61/2000 Sb., o námořní plavbě, § 9 (povinnosti velitele při plavbě)</li>
+    </ol>
+  </section>
+</article>

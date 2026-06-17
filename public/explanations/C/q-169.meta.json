@@ -1,0 +1,12 @@
+{
+  "qid": 169,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — International Cloud Atlas (2017)",
+    "ICAO Annex 3 — Meteorological Service for International Air Navigation",
+    "Bowditch — American Practical Navigator (Pub. No. 9)",
+    "COLREG 1972 — Pravidlo 19"
+  ],
+  "model": "claude-opus-4-7"
+}

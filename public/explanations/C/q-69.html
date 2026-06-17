@@ -1,0 +1,98 @@
+<article class="vmp-explanation">
+  <h2>Plovoucí stroj s označením — průjezd zprava</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Plovoucí stroj zobrazený na obrázku je označen tak, že na jeho <strong>pravé straně</strong> (z pohledu stroje) jsou vystaveny <strong>dvě černé koule svisle</strong> a na <strong>levé straně dva kosočtverce (diamanty) svisle</strong>. Koule označují stranu, kde je <strong>nebezpečí</strong> (podmořský kabel, kotvy, výložníky), zatímco diamanty označují stranu <strong>volného průjezdu</strong>. Správná odpověď je <strong>„nechat jej po svém pravoboku"</strong> — tedy projet po straně s diamanty (levá strana stroje = váš pravý bok), kde je průjezd bezpečný.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Označení plovoucích pracovních strojů (bagrů, jeřábů, pontónů) při práci na moři vychází z <strong>COLREG 1972, Pravidlo 27 písm. b)</strong> a přílohy IV. Plovoucí stroj omezený ve své schopnosti manévrovat (RAM — Restricted in Ability to Manoeuvre) vystavuje za dne:
+  </p>
+  <ul>
+    <li>Tři tvary svisle: kouli — kosočtverec — kouli (pro samotné označení stavu RAM).</li>
+    <li>Dvě <strong>černé koule svisle</strong> na té straně, kde plavba <strong>není bezpečná</strong>.</li>
+    <li>Dvě <strong>černé kosočtverce (diamanty) svisle</strong> na té straně, kde plavba <strong>je bezpečná</strong>.</li>
+  </ul>
+  <p>
+    Na obrázku připlýváme <em>zprava</em> ke stroji. Koule jsou na levém boku stroje (nebezpečná strana), diamanty jsou na pravém boku stroje. Při příjezdu zprava se pravý bok stroje nachází na <strong>naší pravé straně</strong> — tedy projíždíme tak, aby stroj zůstal po našem <strong>pravoboku</strong>.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="overflow-x:auto;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="520" height="260" aria-label="Diagram průjezdu kolem plovoucího stroje">
+      <!-- Legenda - popis stran -->
+      <text x="10" y="20" font-size="12" fill="#555">Pohled shora (ptačí perspektiva)</text>
+
+      <!-- Plovoucí stroj (obdélník uprostřed) -->
+      <rect x="190" y="90" width="140" height="80" rx="6" fill="#d0d0d0" stroke="#555" stroke-width="2"/>
+      <text x="260" y="135" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">STROJ</text>
+      <text x="260" y="152" font-size="10" fill="#333" text-anchor="middle">(plovoucí)</text>
+
+      <!-- Označení levé strany stroje - KOULE (nebezpečí) -->
+      <text x="100" y="85" font-size="11" fill="#cc0000" text-anchor="middle" font-weight="bold">Levá strana stroje</text>
+      <text x="100" y="100" font-size="10" fill="#cc0000" text-anchor="middle">NEBEZPEČÍ</text>
+      <!-- koule 1 -->
+      <circle cx="100" cy="115" r="10" fill="#222"/>
+      <!-- koule 2 -->
+      <circle cx="100" cy="140" r="10" fill="#222"/>
+      <text x="100" y="165" font-size="10" fill="#555" text-anchor="middle">● ●</text>
+      <text x="100" y="178" font-size="9" fill="#555" text-anchor="middle">(dvě černé koule)</text>
+
+      <!-- Označení pravé strany stroje - DIAMANTY (volný průjezd) -->
+      <text x="420" y="85" font-size="11" fill="#007700" text-anchor="middle" font-weight="bold">Pravá strana stroje</text>
+      <text x="420" y="100" font-size="10" fill="#007700" text-anchor="middle">VOLNÝ PRŮJEZD</text>
+      <!-- diamant 1 -->
+      <polygon points="420,110 430,122 420,134 410,122" fill="#222"/>
+      <!-- diamant 2 -->
+      <polygon points="420,138 430,150 420,162 410,150" fill="#222"/>
+      <text x="420" y="178" font-size="9" fill="#555" text-anchor="middle">(dva černé diamanty)</text>
+
+      <!-- Naše loď přijíždí zprava (ze strany diamantů) -->
+      <!-- šipka směru jízdy naší lodě - přijíždíme zprava dolů, tedy z pravé strany stroje -->
+      <polygon points="470,200 450,185 450,215" fill="#0055aa"/>
+      <line x1="450" y1="200" x2="350" y2="200" stroke="#0055aa" stroke-width="2" stroke-dasharray="6,3"/>
+      <text x="470" y="230" font-size="11" fill="#0055aa" text-anchor="middle">Naše</text>
+      <text x="470" y="244" font-size="11" fill="#0055aa" text-anchor="middle">loď</text>
+      <text x="380" y="220" font-size="10" fill="#0055aa" text-anchor="middle">přijíždíme zprava →</text>
+
+      <!-- Průjezdová trasa (po pravoboku = pravá strana stroje = diamanty) -->
+      <line x1="350" y1="200" x1="330" y1="200" stroke="#007700" stroke-width="2" stroke-dasharray="4,2"/>
+      <!-- Šipka pokračující za stroj vlevo -->
+      <line x1="330" y1="200" x2="190" y2="200" stroke="#007700" stroke-width="2" stroke-dasharray="4,2"/>
+      <polygon points="185,200 200,193 200,207" fill="#007700"/>
+      <text x="130" y="220" font-size="10" fill="#007700" text-anchor="middle">Bezpečná</text>
+      <text x="130" y="233" font-size="10" fill="#007700" text-anchor="middle">trasa →</text>
+
+      <!-- Červená zakázaná strana -->
+      <line x1="190" y1="60" x2="330" y2="60" stroke="#cc0000" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="260" y="52" font-size="10" fill="#cc0000" text-anchor="middle">Nebezpečná strana — NEPROJÍŽDĚT</text>
+      <text x="260" y="73" font-size="9" fill="#cc0000" text-anchor="middle">⚠</text>
+
+      <!-- Označení stran lodě -->
+      <text x="260" y="250" font-size="10" fill="#0055aa" text-anchor="middle">Stroj zůstane po PRAVOBOKU naší lodi</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při každém setkání s plovoucím pracovním strojem (bager, pontón, jeřáb) za plavby je třeba:
+  </p>
+  <ol>
+    <li>Identifikovat tvary vystavené na bocích stroje — <strong>koule = nebezpečí, diamanty = volno</strong>.</li>
+    <li>Určit, ze které strany se přibližujeme, a zvolit průjezd tak, aby strana s diamanty zůstala po <em>pravoboku nebo levoboku</em> naší lodi odpovídající bezpečné straně stroje.</li>
+    <li>V tomto případě přicházíme <em>zprava</em>, diamanty jsou na <em>pravé straně stroje</em>, proto projíždíme s diamanty po svém <strong>pravoboku</strong>.</li>
+    <li>Zachovat zvýšenou opatrnost a snížit rychlost — plovoucí stroje mají omezené manévrové schopnosti a mohou mít výložníky, kotvy nebo kabely zasahující pod vodu.</li>
+  </ol>
+  <p>
+    V noci jsou tyto stroje označeny odpovídajícími světly: červená–bílá–červená na nebezpečné straně, zelená–bílá–zelená na bezpečné straně.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Úmluva o mezinárodních pravidlech pro zabránění srážkám na moři, Pravidlo 27 písm. b) (plavidla omezená ve své schopnosti manévrovat), Pravidlo 27 odst. (d) (označení plovoucích strojů).</li>
+    <li><strong>COLREG 1972, Příloha IV</strong> — Nouzové signály a doplňková vizuální označení.</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě, § 26 (povinnosti velitele při míjení plovoucích objektů).</li>
+  </ol>
+</article>

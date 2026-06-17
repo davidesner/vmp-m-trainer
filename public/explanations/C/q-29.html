@@ -1,0 +1,112 @@
+<article class="vmp-explanation">
+  <h2>Křižující se kursy lodí se strojním pohonem</h2>
+
+  <section class="core">
+    <h3>Jádro</h3>
+    <p>
+      Správná odpověď říká, že <strong>loď mající druhou loď po své pravé straně musí uvolnit cestu</strong>.
+      Toto je základní pravidlo křižujících se kursů: plavidlo, které vidí druhé na svém pravém boku (v pravém sektoru),
+      je v nevýhodném postavení a musí se vyhnout. Druhá loď (privilegovaná) je povinna zachovat svůj kurs a rychlost.
+    </p>
+  </section>
+
+  <section class="background">
+    <h3>Pozadí — COLREG 1972, Pravidlo 15</h3>
+    <p>
+      Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972), Pravidlo 15 – <em>Křižující se kursy</em>:
+    </p>
+    <blockquote>
+      „Jestliže se kursy dvou plavidel s mechanickým pohonem kříží tak, že vzniká nebezpečí srážky,
+      musí plavidlo, které má druhé plavidlo po své pravé straně, uvolnit cestu a,
+      je-li to okolnosti možné, vyhnout se průjezdu před přídí druhého plavidla."
+    </blockquote>
+    <p>
+      Pravidlo 16 pak ukládá plavidlu povinném uvolnit cestu provést včasný a výrazný manévr.
+      Pravidlo 17 ukládá privilegovanému plavidlu zachovat kurs a rychlost, dokud je úhyb druhé lodi jistý.
+    </p>
+  </section>
+
+  <section class="visualization">
+    <h3>Vizualizace — křižující se kursy</h3>
+    <svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram křižujících se kursů dvou lodí">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 Z" style="fill:#333;" />
+        </marker>
+        <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 Z" style="fill:#c0392b;" />
+        </marker>
+        <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 Z" style="fill:#27ae60;" />
+        </marker>
+      </defs>
+
+      <!-- Loď A — přijíždí zleva, druhá loď (B) je po její PRAVÉ straně → musí uhýbat -->
+      <!-- Loď A symbol (levý dolní roh) -->
+      <g transform="translate(60,220)">
+        <polygon points="0,0 40,0 50,12 40,24 0,24" style="fill:#d6eaf8;stroke:#2980b9;stroke-width:2;" />
+        <text x="20" y="14" text-anchor="middle" style="font-size:11px;font-weight:bold;fill:#1a5276;">A</text>
+      </g>
+      <!-- Kurs lodi A (směr vpravo-nahoru) -->
+      <line x1="110" y1="232" x2="250" y2="155" style="stroke:#2980b9;stroke-width:2;stroke-dasharray:6,4;" marker-end="url(#arrow-red)" />
+
+      <!-- Loď B — přijíždí zprava, druhá loď (A) je po její LEVÉ straně → privilegovaná -->
+      <g transform="translate(400,220)">
+        <polygon points="50,0 10,0 0,12 10,24 50,24" style="fill:#d5f5e3;stroke:#1e8449;stroke-width:2;" />
+        <text x="30" y="14" text-anchor="middle" style="font-size:11px;font-weight:bold;fill:#145a32;">B</text>
+      </g>
+      <!-- Kurs lodi B (směr vlevo-nahoru) -->
+      <line x1="400" y1="232" x2="265" y2="155" style="stroke:#27ae60;stroke-width:2;stroke-dasharray:6,4;" marker-end="url(#arrow-green)" />
+
+      <!-- Bod střetu / křížení -->
+      <circle cx="257" cy="150" r="6" style="fill:#e74c3c;stroke:#922b21;stroke-width:2;" />
+      <text x="270" y="145" style="font-size:10px;fill:#922b21;font-weight:bold;">nebezpečí srážky</text>
+
+      <!-- Pravý sektor lodi A (270° – 360° / 0° – 90° → pravoboku) -->
+      <!-- Šipka "pravá strana A" ukazující na loď B -->
+      <line x1="135" y1="220" x2="390" y2="230" style="stroke:#e67e22;stroke-width:1.5;stroke-dasharray:4,3;" marker-end="url(#arrow)" />
+      <text x="240" y="250" text-anchor="middle" style="font-size:10px;fill:#a04000;">B je po pravé straně A</text>
+
+      <!-- Popisky -->
+      <text x="60" y="280" style="font-size:12px;fill:#1a5276;font-weight:bold;">Loď A (musí uhýbat)</text>
+      <text x="355" y="280" style="font-size:12px;fill:#145a32;font-weight:bold;">Loď B (privilegovaná)</text>
+
+      <!-- Legenda -->
+      <rect x="15" y="10" width="490" height="40" rx="6" style="fill:#fdfefe;stroke:#aab7b8;stroke-width:1;" />
+      <text x="260" y="26" text-anchor="middle" style="font-size:11px;fill:#555;">Loď A vidí loď B po své</text>
+      <text x="260" y="42" text-anchor="middle" style="font-size:11px;fill:#c0392b;font-weight:bold;">PRAVÉ straně → Loď A musí uvolnit cestu</text>
+    </svg>
+  </section>
+
+  <section class="practical">
+    <h3>Praktická aplikace</h3>
+    <ul>
+      <li>
+        <strong>Jak poznat, kdo má přednost?</strong> Stojíte na velitelském můstku a sledujete přicházející loď.
+        Je-li na vaší <em>pravoboku</em> (pravé straně), vy jste povinni uhnout — zpomalte, zastavte motory,
+        nebo se stočte na záď a proplujte za zádí druhé lodi.
+      </li>
+      <li>
+        <strong>Zakázaný manévr:</strong> COLREG pravidlo 15 výslovně zakazuje průjezd <em>před přídí</em> privilegované lodi,
+        pokud to okolnosti nedovolují. Vždy je bezpečnější projet za zádí (pod krmí) druhého plavidla.
+      </li>
+      <li>
+        <strong>Privilegovaná loď</strong> (B na diagramu) musí zachovat kurs a rychlost (Pravidlo 17a),
+        ale pokud je srážka nevyhnutelná, může sama zahájit manévr (Pravidlo 17b).
+      </li>
+      <li>
+        <strong>Navigační světla jako pomůcka:</strong> Červené (levobokové) světlo druhé lodi vidíte na svém pravoboku →
+        jste povinná loď. Zelené světlo → jste privilegovaná.
+      </li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h3>Zdroje</h3>
+    <ol>
+      <li>COLREG 1972 — Mezinárodní předpisy pro zabránění srážkám na moři, Pravidlo 15 (Křižující se kursy), Pravidlo 16 (Povinnosti lodi povinné uvolnit cestu), Pravidlo 17 (Povinnosti privilegované lodi)</li>
+      <li>Zákon č. 61/2000 Sb. o námořní plavbě — § 6 (aplikace COLREG v české nautické praxi)</li>
+      <li>Bowditch — American Practical Navigator, kapitola o Rules of the Road</li>
+    </ol>
+  </section>
+</article>

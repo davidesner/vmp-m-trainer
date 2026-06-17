@@ -1,0 +1,75 @@
+<article class="vmp-explanation">
+  <h2>Měřítko mapy 1 : 10 000</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že 1 cm na mapě odpovídá <strong>100 m ve skutečnosti</strong>.
+    Měřítko 1 : 10 000 znamená, že každá délka na mapě je 10 000krát menší než skutečná vzdálenost.
+    Tedy 1 cm = 10 000 cm = 100 m.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Měřítko mapy (angl. <em>scale</em>) je poměr délky úseku na mapě k odpovídající délce ve skutečnosti.
+    Zapisuje se jako zlomek nebo poměr <code>1 : N</code>, kde <em>N</em> je stupeň zmenšení.
+  </p>
+  <ul>
+    <li><strong>1 : 10 000</strong> — podrobná námořní plánka přístavu nebo zálivu; 1 cm = 100 m</li>
+    <li><strong>1 : 50 000</strong> — pobřežní mapa; 1 cm = 500 m</li>
+    <li><strong>1 : 100 000</strong> — přehledová mapa; 1 cm = 1 km</li>
+  </ul>
+  <p>
+    Čím <em>menší</em> číslo N, tím <em>větší</em> měřítko — mapa zobrazuje menší území s větším detailem
+    (proto se říká „velké měřítko = malé území").
+  </p>
+  <p>
+    Výpočet: skutečná vzdálenost = naměřená vzdálenost na mapě × N.
+    <br>
+    Příklad: 1 cm × 10 000 = 10 000 cm = 100 m.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" style="max-width:500px;width:100%;display:block;margin:1em auto;font-family:sans-serif;">
+    <!-- Map segment -->
+    <rect x="20" y="30" width="460" height="80" rx="6" style="fill:#e8f4f8;stroke:#4a90d9;stroke-width:1.5"/>
+    <text x="250" y="20" text-anchor="middle" style="font-size:13px;fill:#4a90d9;font-weight:bold;">MAPA (měřítko 1 : 10 000)</text>
+
+    <!-- 1 cm bar on map -->
+    <line x1="100" y1="70" x2="160" y2="70" style="stroke:#d9534f;stroke-width:3"/>
+    <line x1="100" y1="60" x2="100" y2="80" style="stroke:#d9534f;stroke-width:2"/>
+    <line x1="160" y1="60" x2="160" y2="80" style="stroke:#d9534f;stroke-width:2"/>
+    <text x="130" y="58" text-anchor="middle" style="font-size:12px;fill:#d9534f;font-weight:bold;">1 cm</text>
+
+    <!-- Arrow down -->
+    <line x1="250" y1="120" x2="250" y2="155" style="stroke:#666;stroke-width:1.5;stroke-dasharray:4,3"/>
+    <polygon points="244,152 256,152 250,163" style="fill:#666"/>
+    <text x="265" y="143" style="font-size:11px;fill:#666;">× 10 000</text>
+
+    <!-- Reality bar -->
+    <rect x="20" y="165" width="460" height="40" rx="6" style="fill:#e8f8e8;stroke:#5aab5a;stroke-width:1.5"/>
+    <text x="250" y="160" text-anchor="middle" style="font-size:13px;fill:#5aab5a;font-weight:bold;">SKUTEČNOST</text>
+    <line x1="30" y1="185" x2="470" y2="185" style="stroke:#d9534f;stroke-width:3"/>
+    <line x1="30" y1="175" x2="30" y2="195" style="stroke:#d9534f;stroke-width:2"/>
+    <line x1="470" y1="175" x2="470" y2="195" style="stroke:#d9534f;stroke-width:2"/>
+    <text x="250" y="210" text-anchor="middle" style="font-size:13px;fill:#d9534f;font-weight:bold;">100 m (= 10 000 cm)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování plavby do přístavu nebo podél pobřeží lodivod odměří vzdálenost na mapě pravítkem
+    a vynásobí ji hodnotou <em>N</em> (zde 10 000), aby získal skutečnou vzdálenost.
+    U map měřítka 1 : 10 000 je snadné pamatovat si, že <strong>1 cm = 100 m</strong>,
+    což odpovídá přibližně 0,054 námořní míle.
+  </p>
+  <p>
+    Odpověď „100 cm ve skutečnosti" je zjevně chybná — to by znamenalo žádné zmenšení (1 cm = 1 cm).
+    Odpověď „1 km ve skutečnosti" odpovídá měřítku 1 : 100 000, tedy desetinásobně méně podrobné mapě.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Bowditch — <em>American Practical Navigator</em>, kap. 3 (Charts and Chart Reading): definice měřítka mapy</li>
+    <li>IHO — <em>Regulations of the IHO for International (INT) Charts</em>: standardní měřítka námořních map</li>
+    <li>ČSN ISO 19128 / geoinformatika: definice mapového měřítka</li>
+  </ol>
+</article>

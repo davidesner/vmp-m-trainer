@@ -1,0 +1,12 @@
+{
+  "qid": 133,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IALA Maritime Buoyage System — Region A",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb.",
+    "COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři)"
+  ],
+  "model": "claude-opus-4-7"
+}

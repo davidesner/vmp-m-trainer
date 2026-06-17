@@ -1,0 +1,101 @@
+<article class="vmp-explanation">
+  <h2>Povinnosti lodě, která musí uvolnit cestu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď zní: loď musí <strong>provést včasnou a rozhodnou akci k bezpečnému minutí lodi</strong>.
+    COLREG 1972, Pravidlo 16 výslovně ukládá lodi, která je povinna ustoupit, aby provedla <em>včasnou a rozhodnou akci</em>
+    a zachovala dostatečnou vzdálenost pro bezpečné minutí. Klíčové jsou obě podmínky — akce musí být <em>včasná</em> (ne na poslední chvíli)
+    a <em>rozhodná</em> (dostatečně velká, aby byla zřetelně rozeznatelná druhou lodí).
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní předpisy pro zabránění srážkám na moři (COLREG 1972) rozdělují lodě v situaci střetu do dvou rolí:
+  </p>
+  <ul>
+    <li><strong>Give-way vessel</strong> (loď povinna ustoupit) — musí se vyhnout.</li>
+    <li><strong>Stand-on vessel</strong> (loď s předností) — zachovává kurs a rychlost (Pravidlo 17).</li>
+  </ul>
+  <p>
+    <strong>Pravidlo 16 COLREG</strong> stanoví: <em>"Každá loď, která je povinna se vyhnout jiné lodi, musí, pokud je to možné, provést včasnou a rozhodnou akci k bezpečnému minutí."</em>
+  </p>
+  <p>
+    Pravidlo <strong>neukládá</strong> konkrétní stranu otáčení (vpravo ani vlevo) — ta závisí na situaci a je řešena jinými pravidly (např. Pravidlo 14 pro lodě jedoucí protijedoucím kursem). Pravidlo rovněž <strong>nevyžaduje povinné zvukové oznámení manévru</strong> jako podmínku samotné povinnosti ustoupit — zvukové signály jsou samostatně upraveny v Pravidle 34.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;width:100%;background:#e8f4f8;border-radius:8px;">
+    <!-- Stand-on vessel (loď s předností) -->
+    <g transform="translate(300,110)">
+      <polygon points="0,-18 12,10 -12,10" style="fill:#2c7bb6;stroke:#1a4f7a;stroke-width:1.5;" transform="rotate(0)"/>
+      <text x="0" y="35" text-anchor="middle" style="font-size:11px;fill:#1a4f7a;font-weight:bold;">Stand-on</text>
+      <text x="0" y="48" text-anchor="middle" style="font-size:10px;fill:#1a4f7a;">(loď s předností)</text>
+      <!-- šipka pohybu -->
+      <line x1="0" y1="-18" x2="0" y2="-50" style="stroke:#2c7bb6;stroke-width:2;stroke-dasharray:4,3;"/>
+      <polygon points="0,-58 4,-46 -4,-46" style="fill:#2c7bb6;"/>
+    </g>
+
+    <!-- Give-way vessel (loď povinna ustoupit) - původní kurs -->
+    <g transform="translate(120,110)">
+      <polygon points="0,-18 12,10 -12,10" style="fill:#d73027;stroke:#a50026;stroke-width:1.5;" transform="rotate(90)"/>
+      <text x="0" y="35" text-anchor="middle" style="font-size:11px;fill:#a50026;font-weight:bold;">Give-way</text>
+      <text x="0" y="48" text-anchor="middle" style="font-size:10px;fill:#a50026;">(musí ustoupit)</text>
+      <!-- původní kurs - přímá šipka -->
+      <line x1="18" y1="0" x2="60" y2="0" style="stroke:#d73027;stroke-width:2;stroke-dasharray:4,3;"/>
+      <polygon points="68,0 56,-4 56,4" style="fill:#d73027;"/>
+    </g>
+
+    <!-- Zakřivená šipka manévru vyhnutí -->
+    <path d="M 138,110 Q 200,50 260,90" style="fill:none;stroke:#f46d43;stroke-width:2.5;"/>
+    <polygon points="260,90 248,80 255,95" style="fill:#f46d43;"/>
+
+    <!-- Popis manévru -->
+    <text x="185" y="68" text-anchor="middle" style="font-size:10px;fill:#e65c00;font-weight:bold;">včasná a rozhodná akce</text>
+    <text x="185" y="82" text-anchor="middle" style="font-size:10px;fill:#e65c00;">= bezpečné minutí</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="10" width="130" height="55" style="fill:white;opacity:0.8;stroke:#ccc;stroke-width:1;rx:4;"/>
+    <text x="18" y="28" style="font-size:10px;fill:#333;font-weight:bold;">Pravidlo 16 COLREG</text>
+    <line x1="18" y1="38" x2="38" y2="38" style="stroke:#f46d43;stroke-width:2.5;"/>
+    <text x="42" y="42" style="font-size:10px;fill:#555;">manévr vyhnutí</text>
+    <line x1="18" y1="55" x2="38" y2="55" style="stroke:#2c7bb6;stroke-width:2;stroke-dasharray:4,3;"/>
+    <text x="42" y="59" style="font-size:10px;fill:#555;">kurs stand-on</text>
+  </svg>
+
+  <h3>Proč ostatní možnosti nestačí</h3>
+  <ul>
+    <li>
+      <strong>„Změnit směr vpravo tak, aby míjela druhou loď po levé straně"</strong> — COLREG neukládá paušálně otáčet vpravo.
+      V situacích předjíždění, křížení nebo protijedoucích kursů se aplikují různá specifická pravidla (Pravidla 13, 14, 15).
+      Mechanické otočení vpravo může být v konkrétní situaci dokonce nebezpečné.
+    </li>
+    <li>
+      <strong>„Včas oznámit svůj manévr zvukovým signálem"</strong> — zvukové signály o manévru (Pravidlo 34) jsou doplňkovým prvkem komunikace,
+      nikoli primární povinností ustupující lodi. Hlavní povinností zůstává samotné provedení bezpečného manévru.
+    </li>
+  </ul>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plavbě na moři musí velitel lodi v roli give-way vessel:
+  </p>
+  <ol>
+    <li>Včas rozpoznat situaci — nejlépe ve fázi, kdy je srážce možné předejít bez drastických manévrů.</li>
+    <li>Provést <em>rozhodný</em> manévr — změna kursu o 5° nestačí; změna musí být natolik velká, aby ji stand-on loď na radaru nebo zrakem jednoznačně zaznamenala.</li>
+    <li>Udržovat zvýšenou hlídkovou pohotovost až do úplného minutí.</li>
+    <li>V případě pochybností snížit rychlost nebo zastavit (Pravidlo 8e).</li>
+  </ol>
+  <p>
+    Porušení Pravidla 16 je nejčastěji citovanou příčinou v námořních vyšetřováních srážek — ustupující loď manévrovala příliš pozdě nebo příliš málo.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, <strong>Pravidlo 16</strong> (Povinnosti lodě, která musí uvolnit cestu)</li>
+    <li>COLREG 1972, <strong>Pravidlo 8</strong> (Činnost k vyvarování se srážky)</li>
+    <li>COLREG 1972, <strong>Pravidlo 17</strong> (Povinnosti lodě s předností plavby)</li>
+    <li>COLREG 1972, <strong>Pravidlo 34</strong> (Manévrové a výstražné zvukové signály)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 22 (bezpečnost plavby)</li>
+  </ol>
+</article>

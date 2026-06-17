@@ -1,0 +1,11 @@
+{
+  "qid": 177,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO No. 485 – Manual on the Global Data-processing and Forecasting System",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Bowditch — American Practical Navigator"
+  ],
+  "model": "claude-sonnet-4-6"
+}

@@ -1,0 +1,112 @@
+<article class="vmp-explanation">
+  <h2>Vrcholový znak: dva černé trojúhelníky hroty dolů</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Dva černé trojúhelníky s hroty směřujícími dolů jsou vrcholovým znakem <strong>jižní kardinální bóje</strong> (South cardinal mark) podle systému IALA. Jižní kardinální bóje signalizuje, že splavná (bezpečná) voda leží <strong>jižně od bóje</strong> — plavidlo tedy musí bóji obeplout ze strany jihu.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Kardinální systém bójkování dělí nebezpečí na čtyři světové strany. Každá kardinální bóje označuje, na které straně od ní leží bezpečná voda:
+  </p>
+  <ul>
+    <li><strong>Severní</strong> — bezpečná voda je <em>severně</em>, vrcholový znak: dva trojúhelníky hroty <em>nahoru</em>.</li>
+    <li><strong>Jižní</strong> — bezpečná voda je <em>jižně</em>, vrcholový znak: dva trojúhelníky hroty <em>dolů</em>.</li>
+    <li><strong>Východní</strong> — bezpečná voda je <em>východně</em>, vrcholový znak: trojúhelníky základnami k sobě (♦).</li>
+    <li><strong>Západní</strong> — bezpečná voda je <em>západně</em>, vrcholový znak: trojúhelníky hroty k sobě (přesýpací tvar).</li>
+  </ul>
+  <p>
+    Kardinální bóje jsou žluto-černé (pruhy). Jižní bóje má barvu: nahoře žlutá, dole černá. Noční světlo: bílé, skupinové záblesky (6 záblesk + 1 dlouhý záblesk, cyklus 15 s).
+  </p>
+  <p>
+    <strong>Právní základ:</strong> IALA Maritime Buoyage System Region A (používaný v evropských vodách) — Standard A, sekce 3: Cardinal Marks. V české legislativě zapracováno vyhláškou č. 315/2000 Sb. o plavebních znacích (pro vnitrozemské vody), na moři pak dle Úmluvy COLREG 1972 a národních předpisů státu vlajky / pobřežního státu.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Přehled kardinálních bójí a poloha bezpečné vody:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="340" height="340" aria-label="Kardinální systém bójí">
+    <!-- Kompasová růžice pozadí -->
+    <circle cx="170" cy="170" r="120" style="fill:#e8f4fc;stroke:#aaa;stroke-width:1"/>
+    <!-- Osy -->
+    <line x1="170" y1="50" x2="170" y2="290" style="stroke:#bbb;stroke-width:1;stroke-dasharray:4,4"/>
+    <line x1="50" y1="170" x2="290" y2="170" style="stroke:#bbb;stroke-width:1;stroke-dasharray:4,4"/>
+    <!-- Světové strany -->
+    <text x="170" y="38" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#333">S (N)</text>
+    <text x="170" y="308" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#333">J (S)</text>
+    <text x="18" y="175" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#333">Z (W)</text>
+    <text x="322" y="175" text-anchor="middle" style="font-size:14px;font-weight:bold;fill:#333">V (E)</text>
+
+    <!-- Nebezpečí uprostřed -->
+    <rect x="150" y="150" width="40" height="40" rx="4" style="fill:#f4a460;stroke:#8b4513;stroke-width:2"/>
+    <text x="170" y="165" text-anchor="middle" style="font-size:9px;fill:#5a2d00;font-weight:bold">NEBEZ-</text>
+    <text x="170" y="178" text-anchor="middle" style="font-size:9px;fill:#5a2d00;font-weight:bold">PEČÍ</text>
+
+    <!-- SEVERNÍ bóje (nahoře) - hroty nahoru -->
+    <g transform="translate(170,80)">
+      <!-- Černý pruh dole, žlutý nahoře (severní: nahoře černá, dole žlutá) -->
+      <rect x="-10" y="-22" width="20" height="11" style="fill:#000"/>
+      <rect x="-10" y="-11" width="20" height="11" style="fill:#FFD700"/>
+      <!-- Dva trojúhelníky hroty nahoru -->
+      <polygon points="0,-38 -8,-26 8,-26" style="fill:#000"/>
+      <polygon points="0,-28 -8,-16 8,-16" style="fill:#000"/>
+      <text x="0" y="18" text-anchor="middle" style="font-size:9px;fill:#006600;font-weight:bold">Sev. bóje</text>
+      <text x="0" y="28" text-anchor="middle" style="font-size:8px;fill:#006600">bezp. voda ↑S</text>
+    </g>
+
+    <!-- JIŽNÍ bóje (dole) - hroty dolů — ZVÝRAZNĚNO -->
+    <g transform="translate(170,260)">
+      <!-- Žlutý pruh nahoře, černý dole -->
+      <rect x="-10" y="-22" width="20" height="11" style="fill:#FFD700"/>
+      <rect x="-10" y="-11" width="20" height="11" style="fill:#000"/>
+      <!-- Dva trojúhelníky hroty dolů -->
+      <polygon points="0,-37 -8,-26 8,-26" style="fill:#000;transform:scaleY(-1) translateY(-63px)"/>
+      <!-- Překresleno ručně -->
+      <polygon points="-8,-38 8,-38 0,-27" style="fill:#000"/>
+      <polygon points="-8,-28 8,-28 0,-17" style="fill:#000"/>
+      <!-- Zvýraznění -->
+      <circle cx="0" cy="-16" r="22" style="fill:none;stroke:#e00;stroke-width:2.5;stroke-dasharray:none"/>
+      <text x="0" y="8" text-anchor="middle" style="font-size:9px;fill:#cc0000;font-weight:bold">Jižní bóje ✓</text>
+      <text x="0" y="19" text-anchor="middle" style="font-size:8px;fill:#cc0000">bezp. voda ↓J</text>
+    </g>
+
+    <!-- VÝCHODNÍ bóje (vpravo) - základnami k sobě -->
+    <g transform="translate(260,170)">
+      <rect x="-10" y="-11" width="20" height="11" style="fill:#000"/>
+      <rect x="-10" y="0" width="20" height="11" style="fill:#FFD700"/>
+      <rect x="-10" y="-22" width="20" height="11" style="fill:#FFD700"/>
+      <polygon points="0,-38 -8,-27 8,-27" style="fill:#000"/>
+      <polygon points="0,-7 -8,-18 8,-18" style="fill:#000"/>
+      <text x="0" y="26" text-anchor="middle" style="font-size:9px;fill:#006600;font-weight:bold">Vých. bóje</text>
+      <text x="0" y="36" text-anchor="middle" style="font-size:8px;fill:#006600">bezp. voda →V</text>
+    </g>
+
+    <!-- ZÁPADNÍ bóje (vlevo) - hroty k sobě -->
+    <g transform="translate(80,170)">
+      <rect x="-10" y="-11" width="20" height="11" style="fill:#FFD700"/>
+      <rect x="-10" y="-22" width="20" height="11" style="fill:#000"/>
+      <rect x="-10" y="0" width="20" height="11" style="fill:#000"/>
+      <polygon points="0,-28 -8,-39 8,-39" style="fill:#000"/>
+      <polygon points="0,-17 -8,-6 8,-6" style="fill:#000"/>
+      <text x="0" y="26" text-anchor="middle" style="font-size:9px;fill:#006600;font-weight:bold">Záp. bóje</text>
+      <text x="0" y="36" text-anchor="middle" style="font-size:8px;fill:#006600">bezp. voda ←Z</text>
+    </g>
+  </svg>
+  <p><em>Červeným kroužkem je označena jižní kardinální bóje — správná odpověď v této otázce.</em></p>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Když kormidelník v pobřežních vodách uvidí bóji s dvěma černými trojúhelníky hroty dolů, musí okamžitě vědět: <strong>jet jižně od bóje</strong>, protože nebezpečí (mělčina, skály, vrak) leží severně od ní. Pravidlo si lze zapamatovat vizuálně — hroty míří dolů jako šipky ukazující k bezpečné vodě na jihu.
+  </p>
+  <p>
+    Kardinální systém se používá zejména tam, kde je přesná poloha nebezpečí nepravidelná a laterální systém (červená/zelená) není dostatečně jednoznačný. V praxi se s kardinálními bójemi setkáte u výběžků mysu, okolo vraků nebo osamělých skalisek.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IALA Maritime Buoyage System Region A</strong> — Cardinal Marks, Section 3 (Standard A vydaný Mezinárodní asociací majáků a navigačních pomůcek)</li>
+    <li><strong>COLREG 1972</strong> (Úmluva o mezinárodních pravidlech pro zabránění srážkám na moři) — Pravidlo 1 a Annexy; kontext navigačních označení</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — § 26 (povinnosti velitele lodi při plavbě v pobřežních vodách)</li>
+    <li><strong>Bowditch — American Practical Navigator</strong>, Pub. No. 9, kapitola o plavebních značkách (Cardinal system)</li>
+  </ol>
+</article>

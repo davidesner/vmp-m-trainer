@@ -5,6 +5,7 @@ import { attempts } from '../db/schema.js'
 import { requireAuth } from '../auth/middleware.js'
 
 const MODES = ['test', 'practice'] as const
+const TEST_IDS = ['M', 'C'] as const
 
 export function attemptsRoutes(opts: { db: Db }) {
   const r = new Hono<AppEnv>()
@@ -12,9 +13,12 @@ export function attemptsRoutes(opts: { db: Db }) {
 
   r.post('/', async c => {
     const body = await c.req.json().catch(() => null) as {
-      questionId?: unknown; correct?: unknown; mode?: unknown
+      testId?: unknown; questionId?: unknown; correct?: unknown; mode?: unknown
     } | null
     if (!body) return c.json({ error: 'bad request' }, 400)
+    if (typeof body.testId !== 'string' || !TEST_IDS.includes(body.testId as typeof TEST_IDS[number])) {
+      return c.json({ error: 'bad testId' }, 400)
+    }
     if (typeof body.questionId !== 'number' || !Number.isFinite(body.questionId)) {
       return c.json({ error: 'bad questionId' }, 400)
     }
@@ -26,6 +30,7 @@ export function attemptsRoutes(opts: { db: Db }) {
     const user = c.get('user')!
     await opts.db.db.insert(attempts).values({
       userId: user.id,
+      testId: body.testId as typeof TEST_IDS[number],
       questionId: body.questionId,
       correct: body.correct,
       mode: body.mode as typeof MODES[number],

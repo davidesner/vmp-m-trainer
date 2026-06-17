@@ -1,0 +1,60 @@
+<article class="vmp-explanation">
+  <h2>Námořní mapa: symbol zákazu kotvení</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Zobrazený znak — kotva s křížem (přeškrtnutím) — znamená na námořní mapě <strong>kotvení zakázáno</strong>.
+    Jde o standardizovaný kartografický symbol, který varuje plavce, že v daném místě není dovoleno zakotvit,
+    ať už z důvodu ochrany podvodního kabelu, potrubí, chráněného mořského dna, nebo z bezpečnostních důvodů.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Znak, jak se skutečně vyskytuje na námořní mapě:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" aria-label="Symbol zákazu kotvení na námořní mapě">
+    <!-- Kotva -->
+    <line x1="80" y1="30" x2="80" y2="120" stroke="#222" stroke-width="4"/>
+    <!-- Příčná tyč -->
+    <line x1="55" y1="45" x2="105" y2="45" stroke="#222" stroke-width="4"/>
+    <!-- Prsten nahoře -->
+    <circle cx="80" cy="30" r="7" stroke="#222" stroke-width="3" fill="none"/>
+    <!-- Oblouk kotvy vlevo -->
+    <path d="M55,45 Q40,90 65,115" stroke="#222" stroke-width="4" fill="none"/>
+    <!-- Oblouk kotvy vpravo -->
+    <path d="M105,45 Q120,90 95,115" stroke="#222" stroke-width="4" fill="none"/>
+    <!-- Vodorovná lišta dole -->
+    <line x1="65" y1="115" x2="95" y2="115" stroke="#222" stroke-width="4"/>
+    <!-- Kříž (přeškrtnutí) — červeně -->
+    <line x1="55" y1="55" x2="105" y2="105" stroke="#cc0000" stroke-width="4"/>
+    <line x1="105" y1="55" x2="55" y2="105" stroke="#cc0000" stroke-width="4"/>
+  </svg>
+  <p>Červený kříž přes kotvu jednoznačně signalizuje zákaz — analogicky jako dopravní značka „zákaz vjezdu".</p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Kartografické symboly používané na námořních mapách jsou celosvětově standardizovány publikací
+    <strong>INT 1 (Symbols, Abbreviations and Terms used on Charts)</strong>, vydanou Mezinárodní hydrografickou organizací (IHO).
+    Symbol „kotva přeškrtnutá křížem" je v INT 1 zařazen do sekce <em>N — Hloubky a povaha dna / Kotvení</em>,
+    konkrétně jako <strong>N 21</strong> (záchranná oblast / zákaz kotvení). Totéž platí pro národní námořní mapy,
+    které Česká republika přejímá v rámci závazků SOLAS (kapitola V — Bezpečnost plavby).
+  </p>
+  <p>
+    Naopak <em>kotviště</em> (místo vhodné k zakotvení) se zobrazuje symbolem samotné kotvy BEZ přeškrtnutí,
+    případně doplněné zkratkou „Anch" nebo ohraničením oblasti. Symbol <em>nebezpečného vraku pod hladinou</em>
+    má zcela odlišný tvar — zpravidla ikona lodního trupu s tečkovanou konturou a hloubkovým údajem.
+  </p>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li>Před každým kotvením zkontrolujte námořní mapu v plánované oblasti — přítomnost symbolu zákazu kotvení znamená právní i bezpečnostní riziko.</li>
+    <li>Nejčastější důvody zákazu: podvodní kabely (elektrické, telekomunikační), potrubí (ropovody, plynovody), chráněné mořské ekosystémy, vojenské zóny nebo přístaviště trajektů.</li>
+    <li>Kotvení v zakázaném místě může vést k poškození infrastruktury, pokutě nebo odepření pojistného plnění.</li>
+    <li>Na elektronických námořních mapách (ECDIS) se stejný symbol zobrazuje s klikatelnou informační kartou, kde je uveden konkrétní důvod zákazu.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>IHO INT 1 — Symbols, Abbreviations and Terms used on Charts, sekce N (Kotviště a kotvení), symbol N 21</li>
+    <li>SOLAS 1974 (konsolidované znění), kapitola V, pravidlo 27 — Námořní mapy a námořní publikace</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 26 — Bezpečnost plavby a navigace</li>
+  </ol>
+</article>

@@ -1,0 +1,104 @@
+<article class="vmp-explanation">
+  <h2>Zabránění srážce — požadavek na míjení v bezpečné vzdálenosti</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď říká, že plavidla se musí minout <strong>v bezpečné vzdálenosti</strong>.
+    COLREG 1972 nestanoví pevnou hodnotu bezpečné vzdálenosti ani nepředpisuje, zda se plavidla minou
+    pravoboky nebo levoboky — rozhodující je, aby byl výsledný odstup dostatečný s ohledem na
+    konkrétní podmínky (viditelnost, rychlost, manévrovatelnost, hustotu provozu).
+    Odpovědi specifikující „pravobokové" nebo „levobokové" míjení popisují pouze jeden z možných
+    způsobů vyhnutí se, nikoliv obecně závazný požadavek.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Povinnost podniknout včasnou a účinnou akci k vyhnutí se a zajistit dostatečný odstup
+    při míjení vyplývá z <strong>Pravidla 16 COLREG 1972</strong> (Akce ustupujícího plavidla)
+    ve spojení s <strong>Pravidlem 8 COLREG 1972</strong> (Akce k vyhnutí se srážce):
+  </p>
+  <ul>
+    <li>
+      <strong>Pravidlo 8(d)</strong> výslovně uvádí, že akce provedená za účelem vyhnutí se srážce
+      musí být taková, aby plavidla minula <em>v bezpečné vzdálenosti</em>.
+    </li>
+    <li>
+      <strong>Pravidlo 8(a)–(c)</strong> dále vyžaduje, aby manévr byl dostatečně velký, provedený
+      včas a snadno rozeznatelný (změna kurzu nebo rychlosti musí být zřetelná).
+    </li>
+    <li>
+      Pravidla 13–18 COLREG pak upřesňují, které plavidlo má ustoupit (dávat cestu) a které má
+      udržovat kurz — avšak i ustupující plavidlo musí dosáhnout bezpečného odstupu,
+      nikoli pouze libovolného míjení.
+    </li>
+  </ul>
+  <p>
+    Pravidla nestanoví, která strana je „správná" pro míjení v absolutním slova smyslu —
+    to závisí na situaci (protijedoucí plavidla, předjíždění, křížící se kurzy) a každý případ
+    řeší konkrétní pravidlo (Pravidlo 13, 14, 15 COLREG).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;background:#e8f4f8;border-radius:8px;padding:8px;">
+    <defs>
+      <marker id="arrow-a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 Z" style="fill:#1a6fa8;"/>
+      </marker>
+      <marker id="arrow-b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 Z" style="fill:#c0392b;"/>
+      </marker>
+    </defs>
+
+    <!-- Plavidlo A (modré, pohybuje se doprava a doleva manévrem) -->
+    <!-- Původní kurz plavidla A -->
+    <line x1="30" y1="80" x2="490" y2="80" stroke="#1a6fa8" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <!-- Plavidlo A - tvar lodě -->
+    <polygon points="60,70 100,80 60,90" style="fill:#1a6fa8;"/>
+    <line x1="100" y1="80" x2="240" y2="80" stroke="#1a6fa8" stroke-width="2.5" marker-end="url(#arrow-a)"/>
+
+    <!-- Manévr plavidla A dolů -->
+    <line x1="240" y1="80" x2="310" y2="140" stroke="#1a6fa8" stroke-width="2.5" marker-end="url(#arrow-a)"/>
+    <line x1="310" y1="140" x2="460" y2="140" stroke="#1a6fa8" stroke-width="2.5" marker-end="url(#arrow-a)"/>
+
+    <!-- Plavidlo B (červené, pohybuje se zleva doprava) -->
+    <line x1="30" y1="110" x2="490" y2="110" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <polygon points="460,100 420,110 460,120" style="fill:#c0392b;"/>
+    <line x1="420" y1="110" x2="280" y2="110" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrow-b)"/>
+
+    <!-- Bezpečná vzdálenost šipka -->
+    <line x1="310" y1="108" x2="310" y2="142" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="315" y="128" style="font-size:11px;fill:#27ae60;">bezpečná vzdálenost</text>
+
+    <!-- Legenda -->
+    <rect x="20" y="175" width="14" height="5" style="fill:#1a6fa8;"/>
+    <text x="38" y="183" style="font-size:11px;fill:#333;">Plavidlo A (ustupující)</text>
+    <rect x="230" y="175" width="14" height="5" style="fill:#c0392b;"/>
+    <text x="248" y="183" style="font-size:11px;fill:#333;">Plavidlo B (udržující kurz)</text>
+
+    <text x="20" y="210" style="font-size:10px;fill:#555;">Manévr je dostatečný — výsledkem je míjení v bezpečné vzdálenosti (Pravidlo 8d COLREG).</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V praxi kapitán nebo navigátor posuzuje bezpečnou vzdálenost individuálně podle:
+  </p>
+  <ul>
+    <li><strong>Rychlosti a brzdné dráhy</strong> obou plavidel — velká nákladní loď potřebuje větší odstup.</li>
+    <li><strong>Viditelnosti</strong> — v mlze nebo za špatného počasí je nutný větší bezpečnostní rezerv.</li>
+    <li><strong>Hustoty provozu</strong> — v úzkých průjezdech nebo přístavních přístupech může být prostor omezený.</li>
+    <li><strong>Manévrovatelnosti</strong> — lodě s omezenou manévrovací schopností (tankery, vlečné soupravy) vyžadují více prostoru.</li>
+  </ul>
+  <p>
+    Manévr musí být proveden <em>včas</em> (Pravidlo 8a) a musí být <em>zřetelný</em> (Pravidlo 8b) —
+    malé postupné korekce kurzu nejsou dostatečné. Při pochybnostech o záměrech druhého plavidla
+    se podává zvukový signál (Pravidlo 34d: pět krátkých zvukových signálů).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, Pravidlo 8 (Akce k vyhnutí se srážce), zejm. odst. (d)</li>
+    <li>COLREG 1972 — Pravidlo 16 (Akce ustupujícího plavidla)</li>
+    <li>COLREG 1972 — Pravidla 13–15 (Předjíždění, Protijedoucí plavidla, Křížící se kurzy)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 8 (povinnosti velitele plavidla)</li>
+  </ol>
+</article>

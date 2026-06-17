@@ -1,0 +1,125 @@
+<article class="vmp-explanation">
+  <h2>Pro zabránění srážce musí plavidlo X uvolnit cestu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Na obrázku se setkává plachetnice (plavidlo X) s motorovým plavidlem (plavidlo Y). Podle mezinárodních pravidel musí
+    plavidlo pohybující se pouze pod plachtami ustoupit motorovému plavidle jen výjimečně — obecně platí opak.
+    Avšak situace na obrázku ukazuje, že plavidlo X (plachetnice) se přibližuje k plavidlu Y
+    zprava přes jeho pravobortní sektor a jejich kurzy se kříží.
+    V situaci křížících se kurzů musí plavidlo, které má druhé po pravém boku (<em>dávající cestu</em>), uvolnit cestu —
+    a tím je zde plavidlo X, neboť plavidlo Y je na jeho pravoboku.
+    Proto <strong>plavidlo X musí uvolnit cestu plavidlu Y</strong>.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Příslušná pravidla jsou obsažena v <strong>COLREG 1972</strong> (Mezinárodní předpisy pro zabránění srážkám na moři,
+    Convention on the International Regulations for Preventing Collisions at Sea):
+  </p>
+  <ul>
+    <li>
+      <strong>Pravidlo 15 — Křížící se kurzy:</strong> Nacházejí-li se dvě motorová plavidla v situaci křížících se
+      kurzů tak, že hrozí nebezpečí srážky, musí plavidlo, které má druhé po pravém boku, uvolnit cestu
+      a v možné míře se vyhnout přejezdu před příď druhého plavidla.
+    </li>
+    <li>
+      <strong>Pravidlo 18 — Povinnosti plavidel vůči sobě navzájem:</strong> Motorové plavidlo plující po volné vodě
+      musí ustoupit plachetnici. Pokud však plachetnice pluje pod motorem (nebo kombinovaně), klasifikuje se jako
+      motorové plavidlo a vztahuje se na ni Pravidlo 15.
+    </li>
+    <li>
+      <strong>Pravidlo 16 — Jednání plavidla povinného uvolnit cestu:</strong> Každé plavidlo povinné uvolnit cestu
+      musí provést včas a rozhodný manévr, aby udrželo bezpečnou vzdálenost.
+    </li>
+    <li>
+      <strong>Pravidlo 17 — Jednání privilegovaného plavidla:</strong> Plavidlo, které má právo pokračovat v plavbě
+      (zde Y), musí zachovat kurz a rychlost, dokud se situace nevyžaduje jinak.
+    </li>
+  </ul>
+  <p>
+    Na obrázku je plavidlo X po levém boku plavidla Y (plavidlo Y je na pravém boku plavidla X),
+    takže právě plavidlo X je „dávajícím cestu" (give-way vessel) a musí manévrovat.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Diagram znázorňuje situaci křížících se kurzů — plavidlo Y je na pravém boku plavidla X:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260" aria-label="Diagram křížících se kurzů">
+    <defs>
+      <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#888;" />
+      </marker>
+      <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#c0392b;" />
+      </marker>
+      <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" style="fill:#2980b9;" />
+      </marker>
+    </defs>
+
+    <!-- Plavidlo X (plachetnice) vlevo dole -->
+    <polygon points="80,185 65,210 95,210" style="fill:#2980b9;stroke:#1a5276;stroke-width:1.5;" />
+    <line x1="80" y1="185" x2="80" y2="165" style="stroke:#1a5276;stroke-width:1.5;" />
+    <line x1="80" y1="170" x2="95" y2="183" style="stroke:#1a5276;stroke-width:1;" />
+    <text x="68" y="225" style="font-size:14px;font-weight:bold;fill:#2980b9;">X</text>
+    <text x="30" y="205" style="font-size:11px;fill:#2980b9;">(plachetnice)</text>
+
+    <!-- Plavidlo Y (motorové) vpravo nahoře -->
+    <rect x="295" y="58" width="55" height="28" rx="5" style="fill:#c0392b;stroke:#922b21;stroke-width:1.5;" />
+    <rect x="310" y="44" width="22" height="16" rx="3" style="fill:#e74c3c;stroke:#922b21;stroke-width:1;" />
+    <!-- světla na stožáru Y -->
+    <circle cx="321" cy="43" r="3" style="fill:#f1c40f;" />
+    <text x="340" y="85" style="font-size:14px;font-weight:bold;fill:#c0392b;">Y</text>
+    <text x="310" y="100" style="font-size:11px;fill:#c0392b;">(motorové)</text>
+
+    <!-- Kurz plavidla X — šipka k průsečíku -->
+    <line x1="80" y1="195" x2="295" y2="70" stroke="#2980b9" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-blue)" />
+
+    <!-- Kurz plavidla Y — šipka doleva (smer plavby Y) -->
+    <line x1="310" y1="72" x2="120" y2="72" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow-red)" />
+
+    <!-- Průsečík kurzů -->
+    <circle cx="280" cy="78" r="5" style="fill:#e67e22;stroke:#d35400;stroke-width:1.5;" />
+    <text x="285" y="68" style="font-size:10px;fill:#e67e22;font-weight:bold;">nebezpečí srážky</text>
+
+    <!-- Označení pravoboku Y -->
+    <line x1="322" y1="86" x2="322" y2="135" stroke="#888" stroke-width="1" stroke-dasharray="4,3" />
+    <text x="290" y="148" style="font-size:10px;fill:#555;">pravý bok Y</text>
+
+    <!-- Šipka manévru X (vyhnutí se doprava) -->
+    <path d="M 80,195 Q 60,230 40,240" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrow-gray)" />
+    <text x="10" y="255" style="font-size:10px;fill:#27ae60;">X uhýbá</text>
+
+    <!-- Legenda -->
+    <rect x="5" y="5" width="195" height="50" rx="4" style="fill:#f8f9fa;stroke:#ddd;stroke-width:1;" />
+    <line x1="15" y1="18" x2="45" y2="18" stroke="#2980b9" stroke-width="2" stroke-dasharray="5,3" />
+    <text x="50" y="22" style="font-size:11px;fill:#333;">kurz plavidla X (dává cestu)</text>
+    <line x1="15" y1="38" x2="45" y2="38" stroke="#c0392b" stroke-width="2" />
+    <text x="50" y="42" style="font-size:11px;fill:#333;">kurz plavidla Y (drží kurz)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při námořní plavbě musí velitel plavidla X (dávající cestu) jednat <strong>včas a rozhodně</strong>:
+  </p>
+  <ul>
+    <li>Odbočit výrazně vpravo (přejde za záď plavidla Y) nebo výrazně zpomalit/zastavit.</li>
+    <li>Manévr provést dostatečně brzy — ne až v poslední chvíli, kdy by musel jednat i velitel plavidla Y.</li>
+    <li>Velitel plavidla Y (privilegované plavidlo) zachovává kurz a rychlost, dokud nehrozí bezprostřední nebezpečí.</li>
+    <li>Pokud se plavidlo X nechová správně, smí i Y manévrovat, aby se vyhnulo srážce (Pravidlo 17b).</li>
+  </ul>
+  <p>
+    Tato situace je typická v námořním provozu u příbřežní plavby — velitel musí umět rychle rozpoznat,
+    zda je jeho plavidlo v roli „dávající cestu" (give-way) nebo „privilegované" (stand-on).
+    Klíčovým pravidlem je: <em>kdo má druhé plavidlo po pravém boku, ten dává cestu</em>.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972, Pravidlo 15 — Křížící se kurzy</li>
+    <li>COLREG 1972, Pravidlo 16 — Jednání plavidla povinného uvolnit cestu</li>
+    <li>COLREG 1972, Pravidlo 17 — Jednání privilegovaného plavidla</li>
+    <li>COLREG 1972, Pravidlo 18 — Povinnosti plavidel vůči sobě navzájem</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě, § 26 (bezpečnost plavby)</li>
+  </ol>
+</article>

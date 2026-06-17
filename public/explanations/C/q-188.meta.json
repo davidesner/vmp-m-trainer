@@ -1,0 +1,11 @@
+{
+  "qid": 188,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IMO model course 7.03 — Námořní meteorologie (lokální větry)",
+    "Bowditch — American Practical Navigator, kap. 31",
+    "WMO — Guide to Meteorological Instruments and Methods of Observation"
+  ],
+  "model": "claude-sonnet-4-6"
+}

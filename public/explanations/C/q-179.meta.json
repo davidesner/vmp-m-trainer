@@ -1,0 +1,7 @@
+{
+  "qid": 179,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["ICAO Standard Atmosphere (Doc 7488)", "WMO Guide to Meteorological Instruments and Methods of Observation (WMO-No. 8)", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-sonnet-4-6"
+}

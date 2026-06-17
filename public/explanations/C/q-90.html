@@ -1,0 +1,69 @@
+<article class="vmp-explanation">
+  <h2>Převod uzlů na metry za sekundu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Rychlost 4 uzle odpovídá přibližně <strong>2 m/s</strong>. Jeden uzel je definován jako jedna námořní míle za hodinu, přičemž 1 námořní míle = 1 852 m. Přepočet: 4 uzle × 1 852 m ÷ 3 600 s ≈ <strong>2,06 m/s</strong>, tedy přibližně 2 m/s. Odpovědi „4 m/s" ani „8 m/s" by odpovídaly zhruba 8, resp. 16 uzlům.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    <strong>Uzel (kn)</strong> je námořní jednotka rychlosti. Vychází z délky námořní míle, která je definována jako 1/60 stupně zeměpisné šířky na povrchu Země a je stanovena mezinárodně na <strong>1 852 metrů</strong> (rezoluce Mezinárodní hydrografické organizace).
+  </p>
+  <p>Přesný přepočet:</p>
+  <ul>
+    <li>1 uzel = 1 852 m/h = 1 852 ÷ 3 600 m/s ≈ <strong>0,5144 m/s</strong></li>
+    <li>4 uzle = 4 × 0,5144 m/s ≈ <strong>2,06 m/s</strong></li>
+  </ul>
+  <p>
+    Pravidla pro zabránění srážkám na moři (COLREG 1972) hovoří o „bezpečné rychlosti" (pravidlo 6), ale konkrétní přepočtové vzorce nejsou předmětem COLREG — jsou součástí nautické navigace a základní námořní matematiky, které musí každý lodivod ovládat.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" style="max-width:100%;background:#f0f7ff;border-radius:8px;">
+    <!-- Title -->
+    <text x="250" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a3a5c">Přepočet: uzle → m/s</text>
+
+    <!-- Formula box -->
+    <rect x="40" y="45" width="420" height="50" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="250" y="66" text-anchor="middle" font-size="13" fill="#1e40af">1 uzel = 1 852 m ÷ 3 600 s ≈ 0,514 m/s</text>
+    <text x="250" y="86" text-anchor="middle" font-size="13" fill="#1e40af">4 uzle = 4 × 0,514 m/s ≈ <tspan font-weight="bold">2,06 m/s ≈ 2 m/s</tspan></text>
+
+    <!-- Comparison bars -->
+    <text x="40" y="120" font-size="12" fill="#374151">Porovnání rychlostí:</text>
+
+    <!-- 2 m/s bar (correct) -->
+    <rect x="40" y="128" width="100" height="22" rx="4" fill="#22c55e"/>
+    <text x="145" y="143" font-size="12" fill="#166534" font-weight="bold">2 m/s ≈ 4 uzle ✓</text>
+
+    <!-- 4 m/s bar -->
+    <rect x="40" y="158" width="200" height="22" rx="4" fill="#f87171"/>
+    <text x="245" y="173" font-size="12" fill="#991b1b">4 m/s ≈ 8 uzlů ✗</text>
+
+    <!-- 8 m/s bar -->
+    <rect x="40" y="188" width="400" height="22" rx="4" fill="#fca5a5"/>
+    <text x="445" y="203" font-size="12" fill="#991b1b">8 m/s ≈ 16 uzlů ✗</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Přepočet uzlů na m/s (a zpět) se v praxi používá při:
+  </p>
+  <ul>
+    <li><strong>Posuzování bezpečné rychlosti</strong> dle COLREG pravidla 6 — lodivod musí být schopen odhadnout rychlost v různých jednotkách.</li>
+    <li><strong>Výpočtu driftu a proudu</strong> — proudy jsou často uváděny v uzlech, větné rychlosti v m/s nebo km/h.</li>
+    <li><strong>Komunikaci se záchranáři</strong> — letecké složky záchranné služby pracují s m/s nebo km/h, námořníci s uzly.</li>
+    <li><strong>Navigačních výpočtech</strong> — vzdálenost = rychlost × čas; záměna jednotek může vést k vážným navigačním chybám.</li>
+  </ul>
+  <p>
+    Praktická pomůcka: <em>rychlost v m/s ≈ rychlost v uzlech ÷ 2</em> (přesněji děleno 1,944, ale pro hrubý odhad stačí polovina).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972) — pravidlo 6 (bezpečná rychlost)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — § 2 (základní pojmy a definice)</li>
+    <li>Bowditch — American Practical Navigator, kapitola o jednotkách a přepočtech námořní navigace</li>
+    <li>Mezinárodní hydrografická organizace (IHO) — definice námořní míle (1 852 m)</li>
+  </ol>
+</article>

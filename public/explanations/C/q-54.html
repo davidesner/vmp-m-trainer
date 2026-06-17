@@ -1,0 +1,99 @@
+<article class="vmp-explanation">
+  <h2>Dvě plachetnice na kolizním kurzu — kdo uvolní cestu?</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že <strong>plachetnice X musí uvolnit cestu</strong>. Z obrázku je patrné, že plachetnice X má vítr zepředu (šipka znázorňuje směr větru zprava před příď), zatímco plachetnice Y je na jiném boku. Podle COLREG 1972, Pravidlo 12, musí uvolnit cestu ta plachetnice, která má vítr po levém boku (<em>levobočka</em>), jestliže obě plavidla mají vítr na různých bocích. Plavidlo X má vítr na levém boku — je tedy <em>levobočkou</em> a je povinno uvolnit cestu pravobočce (plavidlu Y).
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    COLREG 1972, <strong>Pravidlo 12 — Plachetnice</strong>, stanoví tato pravidla pro setkání dvou plachetnic:
+  </p>
+  <ol>
+    <li>
+      Mají-li obě plachetnice vítr na <strong>různých bocích</strong>, musí uvolnit cestu ta, která má vítr po <strong>levém boku</strong> (levobočka). Plachetnice s větrem po pravém boku (pravobočka) si drží kurz.
+    </li>
+    <li>
+      Mají-li obě plachetnice vítr na <strong>stejném boku</strong>, musí uvolnit cestu ta, která je <strong>více k návětrné straně</strong> (windward vessel).
+    </li>
+    <li>
+      Pokud plachetnice s větrem po levém boku nevidí zřetelně, na kterém boku má vítr druhé plavidlo, musí se sama zachovat jako povinné plavidlo a uvolnit cestu.
+    </li>
+  </ol>
+  <p>
+    Možnost „obě musí změnit svůj směr vpravo" je nesprávná — COLREG přiděluje právo přednosti jednomu konkrétnímu plavidlu, nikoliv ukládá oboustrannou manévrovací povinnost (ta platí jinak u motorových plavidel při vzájemném kurzu, Pravidlo 14).
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Schéma setkání z obrazového zadání — šipka zobrazuje směr větru:</p>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" width="480" height="220" aria-label="Schéma dvou plachetnic na kolizním kurzu">
+    <!-- Wind arrow (from right, hitting X from left bow) -->
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#1a73e8" />
+      </marker>
+      <marker id="arrowhead-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#d32f2f" />
+      </marker>
+      <marker id="arrowhead-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#2e7d32" />
+      </marker>
+    </defs>
+
+    <!-- Wind direction label -->
+    <text x="10" y="30" font-size="13" fill="#1a73e8" font-family="sans-serif">VÍTR</text>
+    <line x1="10" y1="40" x2="80" y2="40" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrowhead)" />
+
+    <!-- Boat X (left) — levobočka, must give way -->
+    <!-- Hull -->
+    <polygon points="100,140 130,170 160,140" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" />
+    <!-- Mast -->
+    <line x1="130" y1="95" x2="130" y2="168" stroke="#1565c0" stroke-width="2" />
+    <!-- Sail -->
+    <polygon points="130,98 130,160 108,145" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5" />
+    <text x="122" y="185" font-size="14" font-weight="bold" fill="#1565c0" font-family="sans-serif">X</text>
+    <!-- Wind on LEFT side label -->
+    <text x="60" y="120" font-size="11" fill="#d32f2f" font-family="sans-serif">vítr na</text>
+    <text x="55" y="133" font-size="11" fill="#d32f2f" font-family="sans-serif">LEVÉM boku</text>
+    <!-- Arrow showing wind hitting X from left -->
+    <line x1="55" y1="145" x2="100" y2="145" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowhead-red)" />
+
+    <!-- Boat Y (right) — pravobočka, privileged -->
+    <polygon points="320,140 350,170 380,140" fill="#e8f5e9" stroke="#1b5e20" stroke-width="2" />
+    <line x1="350" y1="95" x2="350" y2="168" stroke="#1b5e20" stroke-width="2" />
+    <!-- Sail on right side — wind from right -->
+    <polygon points="350,98 350,160 372,145" fill="#c8e6c9" stroke="#1b5e20" stroke-width="1.5" />
+    <text x="342" y="185" font-size="14" font-weight="bold" fill="#1b5e20" font-family="sans-serif">Y</text>
+    <!-- Wind on RIGHT side label -->
+    <text x="385" y="120" font-size="11" fill="#2e7d32" font-family="sans-serif">vítr na</text>
+    <text x="380" y="133" font-size="11" fill="#2e7d32" font-family="sans-serif">PRAVÉM boku</text>
+    <line x1="425" y1="145" x2="385" y2="145" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowhead-green)" />
+
+    <!-- Collision course arrows (dashed) -->
+    <line x1="155" y1="135" x2="320" y2="100" stroke="#555" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowhead)" />
+    <line x1="320" y1="135" x2="155" y2="100" stroke="#555" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowhead)" />
+
+    <!-- Labels -->
+    <rect x="160" y="50" width="160" height="28" rx="5" fill="#fff3e0" stroke="#f57c00" stroke-width="1" />
+    <text x="240" y="69" font-size="12" text-anchor="middle" fill="#e65100" font-family="sans-serif">kolizní kurzy</text>
+
+    <!-- Rule note -->
+    <text x="240" y="205" font-size="12" text-anchor="middle" fill="#555" font-family="sans-serif">X (levobočka) = POVINNÉ plavidlo → uvolní cestu Y</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při výhledu z paluby posuzujete, z které strany přichází vítr. Pokud vítr přichází z levého boku vaší plachetnice a vidíte druhou plachetnici na pravoboku s větrem z pravé strany, jste <em>povinni</em> provést manévr: odpadnout (stočit pod vítr) nebo jít na opačný vítr tak, abyste se vyhnuli. Privilegované plavidlo (Y, pravobočka) si může svůj kurz držet, ale musí být připraveno zasáhnout, pokud povinné plavidlo nezareaguje včas (COLREG Pravidlo 17).
+  </p>
+  <p>
+    Pravidlo platí i v případě, kdy si nejste jisti, na jakém boku má vítr druhé plavidlo — v pochybnostech se chováte jako povinné plavidlo a uvolníte cestu.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Pravidlo 12 (Plachetnice), Pravidlo 17 (Jednání privilegovaného plavidla)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 26 (zapracování COLREG do českého práva)</li>
+  </ol>
+</article>

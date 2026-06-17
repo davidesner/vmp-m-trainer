@@ -1,0 +1,93 @@
+<article class="vmp-explanation">
+  <h2>Směr větru — co znamená „jihovýchodní vítr"?</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Jihovýchodní vítr vane <strong>z jihovýchodu na severozápad</strong>. Název větru vždy udává stranu světa,
+      <em>odkud</em> vítr přichází — nikoli kam směřuje. Jihovýchodní vítr tedy přichází z jihovýchodu
+      a unáší vzduch směrem k severozápadu.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Tato konvence je mezinárodně ustálená v meteorologii a námořní navigaci: <strong>směr větru = odkud vane</strong>.
+      Analogicky se udává i kurz lodě nebo letadla. Vítr se měří a hlásí jako azimut, ze kterého přichází —
+      například jihovýchodní vítr odpovídá zhruba 135° (azimut zdroje větru).
+    </p>
+    <p>
+      Na moři je tato konvence zakotvena v meteorologické praxi WMO (Světové meteorologické organizace)
+      a využívána ve všech námořních předpovědích a hlášeních METEO (NAVTEX, Bulletins).
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" aria-label="Diagram směru větru — jihovýchodní vítr">
+      <!-- Kompasová růžice - pozadí -->
+      <circle cx="160" cy="160" r="130" fill="#e8f4f8" stroke="#b0c4d8" stroke-width="2"/>
+      <circle cx="160" cy="160" r="90" fill="none" stroke="#b0c4d8" stroke-width="1" stroke-dasharray="4,4"/>
+
+      <!-- Světové strany -->
+      <text x="160" y="22" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">S (N)</text>
+      <text x="160" y="308" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">J (S)</text>
+      <text x="10" y="165" text-anchor="start" font-size="16" font-weight="bold" fill="#333">Z (W)</text>
+      <text x="298" y="165" text-anchor="end" font-size="16" font-weight="bold" fill="#333">V (E)</text>
+
+      <!-- Mezisvětové strany -->
+      <text x="262" y="58" text-anchor="middle" font-size="13" fill="#555">SV</text>
+      <text x="58" y="58" text-anchor="middle" font-size="13" fill="#555">SZ</text>
+      <text x="262" y="270" text-anchor="middle" font-size="13" fill="#555">JV</text>
+      <text x="58" y="270" text-anchor="middle" font-size="13" fill="#555">JZ</text>
+
+      <!-- Osy -->
+      <line x1="160" y1="30" x2="160" y2="290" stroke="#ccc" stroke-width="1"/>
+      <line x1="30" y1="160" x2="290" y2="160" stroke="#ccc" stroke-width="1"/>
+      <line x1="68" y1="68" x2="252" y2="252" stroke="#ccc" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="252" y1="68" x2="68" y2="252" stroke="#ccc" stroke-width="1" stroke-dasharray="3,3"/>
+
+      <!-- Šipka větru: z JV (vpravo dole) do SZ (vlevo nahoře) -->
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
+        </marker>
+      </defs>
+      <line x1="240" y1="240" x2="88" y2="88"
+            stroke="#d32f2f" stroke-width="3"
+            marker-end="url(#arrowhead)"/>
+
+      <!-- Popisky šipky -->
+      <text x="248" y="258" text-anchor="middle" font-size="12" fill="#d32f2f" font-weight="bold">ZDROJ VĚTRU</text>
+      <text x="248" y="272" text-anchor="middle" font-size="12" fill="#d32f2f">(JV)</text>
+      <text x="72" y="75" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">SMĚR</text>
+      <text x="72" y="89" text-anchor="middle" font-size="12" fill="#1565c0">vanění (SZ)</text>
+
+      <!-- Střed -->
+      <circle cx="160" cy="160" r="5" fill="#555"/>
+    </svg>
+    <p style="">
+      Šipka ukazuje pohyb vzduchu — vítr přichází z jihovýchodu (JV) a vane směrem na severozápad (SZ).
+    </p>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <ul>
+      <li>Při plachtění: jihovýchodní vítr (od JV) umožňuje plavbu na severozápad před větrem, nebo na jihovýchod v nádech.</li>
+      <li>Při kotvení: zakotvíte na severozápadní straně přístavu, aby vás jihovýchodní vítr tlačil od pobřeží (nebo naopak vybíráte přístav chráněný od jihovýchodu).</li>
+      <li>V meteorologických hlášeních NAVTEX je směr větru vždy uváděn jako azimut zdroje — „SE wind 15 kn" = vítr vane z JV rychlostí 15 uzlů.</li>
+      <li>Zkušený námořník ihned ví, z které strany čekat vlnění a kam se orientovat pro úkryt.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li>WMO — Světová meteorologická organizace, Technické předpisy WMO-No. 49, konvence pro měření a hlášení směru větru</li>
+      <li>Bowditch — American Practical Navigator (Pub. No. 9), kapitola Meteorologie a námořní předpovědi</li>
+      <li>Zákon č. 61/2000 Sb. o námořní plavbě — obecné pojmy a definice námořní meteorologie</li>
+    </ol>
+  </section>
+</article>

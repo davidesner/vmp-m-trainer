@@ -1,0 +1,12 @@
+{
+  "qid": 43,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Pravidlo 35 (Zvukové signály při snížené viditelnosti)",
+    "COLREG 1972 — Pravidlo 32 (Definice tónů)",
+    "COLREG 1972 — Pravidlo 19 (Jednání za snížené viditelnosti)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

@@ -1,0 +1,103 @@
+<article class="vmp-explanation">
+  <h2>Oblak cumulonimbus s vrcholkem ve tvaru kovadliny</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Cumulonimbus s vrcholkem ve tvaru kovadliny (<em>incus</em>) je klasickým příznakem vysoce vyvinuté bouřkové buňky.
+    Kovadlinovitý tvar vzniká, když stoupající vzduch dosáhne tropopauzy a rozšíří se do stran — jde o vizuální důkaz
+    mohutných vertikálních proudů. Lze proto oprávněně očekávat <strong>bouřku a silný nárazový vítr</strong>,
+    nikoli pěkné počasí ani beze změny.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Cumulonimbus (Cb) je jednodruhová oblačnost produkující nejnebezpečnější meteorologické jevy na moři:
+  </p>
+  <ul>
+    <li><strong>Kovadlina (incus)</strong> — horní část oblaku se roztéká podél tropopauzy do vrstevnatého tvaru; dosahuje výšek 10–15 km.</li>
+    <li><strong>Squall (náraz)</strong> — před čelem bouřky přichází studený sestupný proud, který vytváří náhlé a silné nárazy větru (squall line).</li>
+    <li><strong>Elektrická aktivita</strong> — mohutné proudění separuje náboje a vyvolává blesky.</li>
+    <li><strong>Srážky</strong> — silné přeháňky, kroupy nebo přívalový déšť.</li>
+  </ul>
+  <p>
+    Námořníci jsou povinni sledovat vizuální příznaky počasí a při zjištění Cb s kovadlinou přijmout okamžitá bezpečnostní opatření
+    (snížení plachtoplochy, zabezpečení paluby, příprava posádky). Tato povinnost vyplývá ze zásad bezpečné plavby
+    zakotvených v SOLAS, Kap. V (Bezpečnost plavby) a z obecné povinnosti velitele.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" style="width:100%;max-width:520px;display:block;margin:1rem auto;" aria-label="Cumulonimbus s kovadlinou">
+    <!-- Obloha -->
+    <rect x="0" y="0" width="520" height="300" fill="#d0e8f8"/>
+    <!-- Moře -->
+    <rect x="0" y="240" width="520" height="60" fill="#1a6ea8"/>
+    <!-- Vlny -->
+    <polyline points="0,245 30,238 60,245 90,238 120,245 150,238 180,245 210,238 240,245 270,238 300,245 330,238 360,245 390,238 420,245 450,238 480,245 510,238 520,245" stroke="#0e4d7a" stroke-width="2" fill="none"/>
+    <!-- Tropopauza čára -->
+    <line x1="0" y1="50" x2="520" y2="50" stroke="#888" stroke-width="1" stroke-dasharray="8,5"/>
+    <text x="5" y="46" font-size="11" fill="#555">Tropopauza (~12 km)</text>
+    <!-- Kovadlina (incus) — horní rozšíření -->
+    <ellipse cx="260" cy="55" rx="130" ry="18" fill="#c8c8d8" stroke="#9999bb" stroke-width="1"/>
+    <!-- Tělo oblaku Cb -->
+    <ellipse cx="200" cy="95" rx="55" ry="50" fill="#b0b0c8" stroke="#8888aa" stroke-width="1"/>
+    <ellipse cx="250" cy="80" rx="60" ry="55" fill="#b8b8d0" stroke="#9999bb" stroke-width="1"/>
+    <ellipse cx="300" cy="100" rx="50" ry="45" fill="#acacc4" stroke="#9090b0" stroke-width="1"/>
+    <!-- Spodní základna -->
+    <ellipse cx="250" cy="160" rx="80" ry="22" fill="#888898" stroke="#666688" stroke-width="1"/>
+    <!-- Blesk -->
+    <polyline points="265,155 255,185 270,185 248,220" stroke="#f0e020" stroke-width="3" fill="none"/>
+    <!-- Déšť čáry -->
+    <line x1="200" y1="175" x2="195" y2="200" stroke="#4488cc" stroke-width="1.5"/>
+    <line x1="215" y1="178" x2="210" y2="205" stroke="#4488cc" stroke-width="1.5"/>
+    <line x1="230" y1="178" x2="225" y2="205" stroke="#4488cc" stroke-width="1.5"/>
+    <line x1="285" y1="178" x2="280" y2="205" stroke="#4488cc" stroke-width="1.5"/>
+    <line x1="300" y1="175" x2="295" y2="202" stroke="#4488cc" stroke-width="1.5"/>
+    <!-- Šipka kovadliny doprava -->
+    <line x1="310" y1="55" x2="380" y2="55" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+      </marker>
+    </defs>
+    <!-- Popisky -->
+    <text x="330" y="44" font-size="11" fill="#333">Kovadlina (incus)</text>
+    <text x="315" y="130" font-size="11" fill="#333">Cumulonimbus</text>
+    <text x="255" y="232" font-size="12" fill="#ff3300" font-weight="bold">⚡ Bouřka + squall</text>
+    <!-- Loď na moři -->
+    <rect x="60" y="232" width="50" height="10" rx="3" fill="#e8d080" stroke="#a08020" stroke-width="1"/>
+    <rect x="75" y="222" width="6" height="12" fill="#c0a030"/>
+    <!-- Nárazový vítr šipky -->
+    <line x1="160" y1="200" x2="115" y2="225" stroke="#cc3300" stroke-width="2" marker-end="url(#warr)"/>
+    <line x1="150" y1="215" x2="105" y2="230" stroke="#cc3300" stroke-width="2"/>
+    <defs>
+      <marker id="warr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#cc3300"/>
+      </marker>
+    </defs>
+    <text x="130" y="210" font-size="10" fill="#cc3300">squall</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při hlídce nebo plavbě je třeba neustále sledovat obzor. Jakmile se na horizontu objeví Cb s kovadlinou:
+  </p>
+  <ol>
+    <li><strong>Okamžitě informuj velitele</strong> a posádku.</li>
+    <li><strong>Sniž plachtění</strong> — reefuj nebo stáhni plachty ještě před příchodem squallové linie.</li>
+    <li><strong>Zabezpeč palubu</strong> — přichyť volné předměty, zavři průlezy.</li>
+    <li><strong>Zkontroluj polohu</strong> — bouřka může přinést nulovou viditelnost, je třeba znát záchytné body.</li>
+    <li><strong>Sleduj VHF (kanál 16)</strong> pro námořní meteorologická varování.</li>
+    <li><strong>Vyhni se blesku</strong> — oddálit se od výškových stožárů nebo použít blesk-ochranu.</li>
+  </ol>
+  <p>
+    Bouřka s kovadlinovou Cb může přijít rychle (desítky minut), proto je včasné rozpoznání klíčové.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>SOLAS (Mezinárodní úmluva o bezpečnosti lidského života na moři), kap. V — Bezpečnost plavby, pravidlo 34 (bezpečné vedení plavby)</li>
+    <li>WMO — Mezinárodní atlas oblaků (International Cloud Atlas), kód oblaku Cb calvus / capillatus (incus)</li>
+    <li>Bowditch — American Practical Navigator, kap. 37 (Weather Observations)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 5 (povinnosti velitele lodě)</li>
+  </ol>
+</article>

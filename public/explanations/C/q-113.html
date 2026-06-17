@@ -1,0 +1,107 @@
+<article class="vmp-explanation">
+  <h2>Znak vraku nebezpečného pro lodní dopravu</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Zobrazený znak na námořní mapě označuje <strong>potopený vrak, který je nebezpečný pro lodní dopravu</strong>.
+    Jde o charakteristické zobrazení s křížovým symbolem obklopeným tečkovanou elipsou — kombinace naznačuje,
+    že se pod hladinou nachází překážka, jejíž hloubka je dostatečně malá, aby představovala riziko kolize
+    s kýlem plavidla. Plavidla se musí tomuto místu vyhnout nebo přes něj plout pouze po ověření bezpečné
+    hloubky ponoru.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Námořní mapy jsou vydávány a standardizovány podle pravidel <strong>IHO (Mezinárodní hydrografická organizace)</strong>,
+    zejména publikace <em>INT 1 — Symbols, Abbreviations and Terms used on Charts</em> (česky dostupná jako
+    <em>Znaky a zkratky námořních map</em>). Tato publikace rozděluje vraky do několika kategorií podle jejich
+    nebezpečnosti a polohy vůči hladině:
+  </p>
+  <ul>
+    <li><strong>Nebezpečný potopený vrak</strong> — vrak leží pod hladinou, ale s tak malou nadložní vrstvou vody,
+        že je nebezpečný pro lodní provoz; zobrazuje se křížovým znakem s tečkovanou elipsou (přesně tento znak).</li>
+    <li><strong>Vrak vyčnívající nad hladinu</strong> — viditelná část vraku; označuje se jiným symbolem (plný siluetový tvar).</li>
+    <li><strong>Bezpečný (hluboko potopený) vrak</strong> — vrak zcela pod hladinou s dostatečnou hloubkou vody;
+        zobrazuje se tečkovaným obrysem bez kříže, nebo prostým textem „Wk".</li>
+  </ul>
+  <p>
+    Přítomnost <strong>kříže</strong> v symbolu je klíčový rozlišovací prvek — signalizuje aktivní nebezpečí.
+    Tečkovaná elipsa pak vymezuje přibližnou plochu nebezpečí kolem vraku.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Srovnání tří základních symbolů vraků na námořní mapě:</p>
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" width="520" height="200" role="img" aria-label="Porovnání symbolů vraků na námořní mapě">
+      <!-- Background -->
+      <rect width="520" height="200" fill="#f0f8ff" rx="8"/>
+
+      <!-- Column 1: Dangerous wreck (the sign in question) -->
+      <text x="86" y="22" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">Nebezpečný vrak</text>
+      <text x="86" y="36" text-anchor="middle" font-size="10" fill="#555">(potopený, malá hloubka)</text>
+      <!-- dotted ellipse -->
+      <ellipse cx="86" cy="100" rx="50" ry="28" fill="none" stroke="#333" stroke-width="1.5"
+               stroke-dasharray="4,3"/>
+      <!-- cross -->
+      <line x1="86" y1="82" x2="86" y2="118" stroke="#333" stroke-width="2.5"/>
+      <line x1="68" y1="100" x2="104" y2="100" stroke="#333" stroke-width="2.5"/>
+      <!-- dots around ellipse - simulated by small rects -->
+      <text x="86" y="160" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">← TENTO ZNAK</text>
+      <text x="86" y="173" text-anchor="middle" font-size="10" fill="#c0392b">Nebezpečný!</text>
+
+      <!-- Divider -->
+      <line x1="175" y1="10" x2="175" y2="190" stroke="#ccc" stroke-width="1"/>
+
+      <!-- Column 2: Wreck above surface -->
+      <text x="262" y="22" text-anchor="middle" font-size="11" font-weight="bold" fill="#27ae60">Vrak nad hladinou</text>
+      <text x="262" y="36" text-anchor="middle" font-size="10" fill="#555">(viditelný, vyčnívá)</text>
+      <!-- Simple wreck silhouette above waterline -->
+      <line x1="212" y1="115" x2="312" y2="115" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="6,3"/>
+      <text x="225" y="112" font-size="9" fill="#2980b9">— — hladina — —</text>
+      <!-- hull shape -->
+      <polygon points="232,115 242,90 282,90 292,115" fill="none" stroke="#333" stroke-width="2"/>
+      <!-- mast -->
+      <line x1="262" y1="90" x2="262" y2="68" stroke="#333" stroke-width="1.5"/>
+      <line x1="248" y1="76" x2="276" y2="76" stroke="#333" stroke-width="1.5"/>
+      <text x="262" y="160" text-anchor="middle" font-size="10" fill="#555">Jiný symbol</text>
+      <text x="262" y="173" text-anchor="middle" font-size="10" fill="#27ae60">Viditelný</text>
+
+      <!-- Divider -->
+      <line x1="350" y1="10" x2="350" y2="190" stroke="#ccc" stroke-width="1"/>
+
+      <!-- Column 3: Safe wreck -->
+      <text x="435" y="22" text-anchor="middle" font-size="11" font-weight="bold" fill="#7f8c8d">Bezpečný vrak</text>
+      <text x="435" y="36" text-anchor="middle" font-size="10" fill="#555">(dostatečná hloubka)</text>
+      <!-- dotted ellipse only, no cross -->
+      <ellipse cx="435" cy="100" rx="50" ry="28" fill="none" stroke="#888" stroke-width="1.5"
+               stroke-dasharray="4,3"/>
+      <text x="435" y="105" text-anchor="middle" font-size="12" fill="#888">Wk</text>
+      <text x="435" y="160" text-anchor="middle" font-size="10" fill="#555">Bez kříže</text>
+      <text x="435" y="173" text-anchor="middle" font-size="10" fill="#27ae60">Bezpečný</text>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování trasy na námořní mapě musí navigátor věnovat zvláštní pozornost všem místům označeným
+    tímto znakem. V praxi to znamená:
+  </p>
+  <ul>
+    <li><strong>Vyhnutí se vraku s dostatečným odstupem</strong> — alespoň podle nejmenší udávané bezpečné vzdálenosti
+        nebo lokálních předpisů.</li>
+    <li><strong>Ověření v Notices to Mariners (NtM)</strong> — vraky mohou být poloha měnit v důsledku mořských proudů,
+        nebo mohou být teprve nedávno zaměřeny; nejnovější informace jsou v pravidelných NtM vydávaných hydrografickými
+        úřady.</li>
+    <li><strong>Pozornost v přílivu a odlivu</strong> — v oblastech s výrazným přílivem může být vrak přístupný
+        jen při určité výšce hladiny; symbol samotný nezobrazuje přesnou hloubku, ta je uvedena číslem v mapě.</li>
+    <li><strong>Radarová navigace v noci nebo za špatné viditelnosti</strong> — vrak nemusí být označen bójí,
+        spoléhat se lze pouze na mapu a radar.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO INT 1</strong> — Symbols, Abbreviations and Terms used on Charts (Mezinárodní standardy hydrografické organizace pro mapové znaky), sekce K (Rocks, Wrecks, Obstructions), symbol K 27–K 31</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — §&nbsp;22 (povinnosti velitele plavidla ohledně bezpečné navigace)</li>
+    <li><strong>COLREG 1972</strong> (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 8 (Manévr k zabránění srážce) a Pravidlo 16 (Povinnosti plavidla, které musí uhnout)</li>
+  </ol>
+</article>

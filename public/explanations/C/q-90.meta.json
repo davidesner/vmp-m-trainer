@@ -1,0 +1,12 @@
+{
+  "qid": 90,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — pravidlo 6",
+    "Zákon č. 61/2000 Sb. o námořní plavbě — § 2",
+    "Bowditch — American Practical Navigator",
+    "Mezinárodní hydrografická organizace (IHO) — definice námořní míle"
+  ],
+  "model": "claude-opus-4-7"
+}

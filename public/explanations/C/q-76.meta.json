@@ -1,0 +1,7 @@
+{
+  "qid": 76,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["Zákon č. 61/2000 Sb., o námořní plavbě", "Vyhláška č. 315/2000 Sb.", "Úmluva MLC 2006 (Maritime Labour Convention)"],
+  "model": "claude-sonnet-4-6"
+}

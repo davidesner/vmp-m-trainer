@@ -1,0 +1,13 @@
+{
+  "qid": 202,
+  "test_id": "C",
+  "generated_at": "2026-06-15T00:00:00Z",
+  "sources": [
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb. o technické způsobilosti a vybavení námořních plavidel",
+    "SOLAS (Safety of Life at Sea), kapitola III — záchranné prostředky",
+    "ISO 12217 — Stabilita a vztlak malých plavidel; kategorizace oblastí plavby",
+    "Učební texty VMP — mořská kvalifikace, bezpečnost a záchranné prostředky"
+  ],
+  "model": "claude-opus-4-7"
+}

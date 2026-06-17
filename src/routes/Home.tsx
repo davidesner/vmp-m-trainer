@@ -3,18 +3,21 @@ import { useMemo } from 'react'
 import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
 import { estimatePass, coverage } from '../lib/passProbability'
+import CategorySubtitle from '../components/CategorySubtitle'
 
 export default function Home() {
   const { data, loading } = useQuestions()
   const { store } = useProgress()
 
-  const pass = useMemo(() => data ? estimatePass(data, store.questions) : null, [data, store.questions])
+  const pass = useMemo(() => data ? estimatePass(data, store.questions, data.passing.score) : null, [data, store.questions])
   const cov  = useMemo(() => data ? coverage(data, store.questions)    : null, [data, store.questions])
 
   const recent = store.testHistory.slice(0, 5)
 
   if (loading || !data || !pass || !cov) return <div className="p-4 md:p-8">Načítám…</div>
 
+  const passingScore = data.passing.score
+  const passingTotal = data.passing.total
   const passPct = Math.round(pass.passProbability * 100)
   const expScore = Math.round(pass.expectedScore * 10) / 10  // 1 decimal
   const covOverallPct = Math.round((cov.overall.seen / cov.overall.total) * 100)
@@ -26,7 +29,8 @@ export default function Home() {
 
   return (
     <div className="p-4 md:p-8 max-w-5xl">
-      <h2 className="text-2xl font-bold mb-6">Přehled</h2>
+      <h2 className="text-2xl font-bold mb-1">Přehled</h2>
+      <CategorySubtitle withParams className="mb-6" />
 
       {/* Hero: pass probability + expected score + CTA */}
       <div className="bg-white border border-neutral-200 rounded-lg overflow-hidden mb-6">
@@ -35,10 +39,10 @@ export default function Home() {
             <div className="text-xs uppercase tracking-wide text-neutral-500 mb-1">Odhad úspěchu u zkoušky</div>
             <div className={`text-4xl md:text-5xl font-bold ${passColor}`}>{passPct}%</div>
             <div className="text-sm text-neutral-600 mt-1">
-              pravděpodobnost dosáhnout ≥ 30 / 35
+              pravděpodobnost dosáhnout ≥ {passingScore} / {passingTotal}
             </div>
             <div className="mt-3 text-sm">
-              Očekávaný výsledek: <strong>{expScore} / 35</strong>
+              Očekávaný výsledek: <strong>{expScore} / {passingTotal}</strong>
               {accOverallPct !== null && <> · průměrná úspěšnost: <strong>{accOverallPct}%</strong></>}
             </div>
             <div className="mt-1 text-sm text-neutral-600">
@@ -139,7 +143,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             {recent.map((t, i) => {
               const pct = (t.score / t.total) * 100
-              const passed = t.score >= 30
+              const passed = t.score >= passingScore
               return (
                 <div key={i} className="flex items-center gap-2 sm:gap-3 text-sm">
                   <span className="text-neutral-500 tabular-nums shrink-0 w-20 sm:w-32 text-xs sm:text-sm">

@@ -1,0 +1,7 @@
+{
+  "qid": 160,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["Beaufortova stupnice (WMO standardizace 1970)", "WMO Maritime Meteorological Services", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-opus-4-7"
+}

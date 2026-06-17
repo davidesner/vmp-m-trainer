@@ -1,0 +1,13 @@
+{
+  "qid": 62,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972, Pravidlo 15 — Křížící se kurzy",
+    "COLREG 1972, Pravidlo 16 — Jednání plavidla povinného uvolnit cestu",
+    "COLREG 1972, Pravidlo 17 — Jednání privilegovaného plavidla",
+    "COLREG 1972, Pravidlo 18 — Povinnosti plavidel vůči sobě navzájem",
+    "Zákon č. 61/2000 Sb., o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

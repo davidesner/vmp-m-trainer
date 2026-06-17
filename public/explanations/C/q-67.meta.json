@@ -1,0 +1,14 @@
+{
+  "qid": 67,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 — Pravidlo 27(a): Neovladatelná plavidla — denní tvarová tělesa",
+    "COLREG 1972 — Pravidlo 27(b): Omezená manévrovatelnost — tvarová tělesa",
+    "COLREG 1972 — Pravidlo 28: Plavidlo omezené svým ponorem",
+    "COLREG 1972 — Pravidlo 30: Zakotvená plavidla",
+    "COLREG 1972 — Pravidlo 18: Povinnosti plavidel vůči sobě navzájem",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-sonnet-4-6"
+}

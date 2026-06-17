@@ -1,0 +1,82 @@
+<article class="vmp-explanation">
+  <h2>Znak ponořené skály na námořní mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Znak <strong>+(1<sub>5</sub>)</strong> na námořní mapě označuje <strong>ponořenou skálu nebezpečnou pro plavbu</strong>,
+    přičemž číslo v závorce udává hloubku vody nad ní (v tomto případě 1,5 metru).
+    Kříž „+" signalizuje, že se jedná o podvodní nebezpečí, a číslo v závorce říká, jak mělko nad touto překážkou voda sahá —
+    to je klíčové pro posouzení, zda může plavidlo bezpečně projet.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní kartografická notace pro námořní mapy je standardizována organizací
+    <strong>IHO (International Hydrographic Organization)</strong> v publikaci
+    <em>INT 1 — Symbols, Abbreviations and Terms used on Charts</em>.
+    Podvodní skály a překážky jsou kategorizovány takto:
+  </p>
+  <ul>
+    <li><strong>+(číslo)</strong> — ponořená skála s uvedenou hloubkou nad ní; hloubka je v metrech a desetinách metrů; překážka je nebezpečná, protože hloubka může být menší než ponor plavidla.</li>
+    <li>Asterisk <strong>*</strong> nebo podobné symboly — jiné druhy nebezpečí.</li>
+    <li>Číslice bez závorky — obecná hloubka na daném místě (sondáž), nikoliv specifická překážka.</li>
+  </ul>
+  <p>
+    Závorka kolem čísla je důležitá: říká, že tato hodnota se nevztahuje k volné hladině, ale ke konkrétnímu bodu (vrcholu skály),
+    a že přesnost měření může být nižší. Plavidla s ponorem blízkým nebo větším než uvedená hodnota nesmí nad takovým místem projet.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Jak se znak <strong>+(1<sub>5</sub>)</strong> interpretuje v profilu:</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" width="420" height="200" aria-label="Profil ponořené skály na námořní mapě">
+    <!-- Hladina moře -->
+    <line x1="20" y1="60" x2="400" y2="60" style="stroke:#1a6fa8;stroke-width:2;stroke-dasharray:6,3;" />
+    <text x="22" y="52" style="font-size:12px;fill:#1a6fa8;font-family:sans-serif;">Hladina moře</text>
+
+    <!-- Voda (modrý obdélník) -->
+    <rect x="20" y="60" width="380" height="100" style="fill:#cce5f6;opacity:0.5;" />
+
+    <!-- Dno -->
+    <rect x="20" y="160" width="380" height="30" style="fill:#b5966a;" />
+    <text x="22" y="195" style="font-size:11px;fill:#5a3d1a;font-family:sans-serif;">Dno</text>
+
+    <!-- Skála -->
+    <polygon points="180,160 220,160 215,100 185,100" style="fill:#7a6a50;stroke:#4a3a20;stroke-width:1.5;" />
+    <!-- Vrchol skály -->
+    <polygon points="185,100 215,100 210,78 190,78" style="fill:#9a8a6a;stroke:#4a3a20;stroke-width:1.5;" />
+
+    <!-- Šipka hloubky nad skálou -->
+    <line x1="250" y1="60" x2="250" y2="78" style="stroke:#c0392b;stroke-width:1.5;" />
+    <line x1="245" y1="65" x2="250" y2="60" style="stroke:#c0392b;stroke-width:1.5;" />
+    <line x1="255" y1="65" x2="250" y2="60" style="stroke:#c0392b;stroke-width:1.5;" />
+    <line x1="245" y1="73" x2="250" y2="78" style="stroke:#c0392b;stroke-width:1.5;" />
+    <line x1="255" y1="73" x2="250" y2="78" style="stroke:#c0392b;stroke-width:1.5;" />
+    <text x="256" y="73" style="font-size:12px;fill:#c0392b;font-family:sans-serif;font-weight:bold;">1,5 m</text>
+
+    <!-- Popis skály -->
+    <text x="145" y="130" style="font-size:12px;fill:#2c2c2c;font-family:sans-serif;">Ponořená</text>
+    <text x="148" y="145" style="font-size:12px;fill:#2c2c2c;font-family:sans-serif;">skála</text>
+
+    <!-- Znak na mapě -->
+    <text x="190" y="40" style="font-size:15px;fill:#1a1a1a;font-family:monospace;font-weight:bold;">+(1₅)</text>
+    <text x="155" y="25" style="font-size:11px;fill:#555;font-family:sans-serif;">Znak na mapě:</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování plavby musíte porovnat <strong>ponor svého plavidla</strong> s hloubkou uvedenou v závorce u znaku „+".
+    Například plavidlo s ponorem 1,2 m může nad skálou s hloubkou 1,5 m projet — ale pouze za klidného počasí a při přesné navigaci.
+    Při vlnění nebo odlivu (slapy) se efektivní hloubka snižuje, proto je nutné počítat s bezpečnostní rezervou.
+  </p>
+  <p>
+    V praxi platí: <em>vždy plánujte trasu tak, abyste se znakům „+" vyhnuli obloukem</em>, nebo si ověřte aktuální hloubku
+    s dostatečnou rezervou (obvykle alespoň 0,5–1 m pod kilem plavidla).
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO INT 1</strong> — Symbols, Abbreviations and Terms used on Charts (mezinárodní standard kartografických znaků pro námořní mapy), sekce K (hloubky a nebezpečí).</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě — povinnost navigátora znát a respektovat kartografické značení a nebezpečí vyznačená na mapách.</li>
+    <li><strong>Admiralty Chart NP5011</strong> (Symboly a zkratky na mapách Admirality) — shodná notace s INT 1.</li>
+  </ol>
+</article>

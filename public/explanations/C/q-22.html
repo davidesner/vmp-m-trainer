@@ -1,0 +1,100 @@
+<article class="vmp-explanation">
+  <h2>Vyhýbání plachetnic — která loď uvolní cestu?</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná je odpověď popisující situaci, kdy <strong>obě plachetnice mají vítr ze stejné strany</strong>:
+    v takovém případě musí cestu uvolnit <strong>loď na návětrné straně</strong> lodi na závětrné straně.
+    Návětrná loď stíní závětrné lodi vítr, má proto lepší možnost odpadnout a uhnout,
+    a zároveň je závětrná loď v nevýhodné pozici manévrovat.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Pravidla pro vyhýbání plachetnic jsou obsažena v <strong>COLREG 1972, Pravidlo 12
+    (Sailing vessels)</strong>. Pravidlo rozlišuje dvě základní situace:
+  </p>
+  <ol>
+    <li>
+      <strong>Každá loď má vítr z jiné strany:</strong> loď s větrem z <em>levé</em> strany
+      (závětrná, přívrativá) uvolní cestu lodi s větrem z <em>pravé</em> strany (pravobočná loď
+      je privilegovaná).
+    </li>
+    <li>
+      <strong>Obě lodi mají vítr ze stejné strany:</strong> loď <em>návětrná</em> (windward vessel)
+      uvolní cestu lodi <em>závětrné</em> (leeward vessel).
+    </li>
+  </ol>
+  <p>
+    Otázka se ptá pouze na případ, kdy obě lodi mají vítr ze <em>stejné</em> strany — to odpovídá
+    druhému bodu (Pravidlo 12 b). Odpověď popisující situaci s větrem z různých stran
+    (vítr z pravé strany dává přednost) sice popisuje Pravidlo 12 a, ale není odpovědí na
+    otázané schéma. Odpověď o vyhýbání za záď plachetnice není přímou citací COLREG.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <p>Obě plachetnice plují s větrem ze stejné strany (zleva). Návětrná loď (N) musí uvolnit cestu závětrné lodi (Z).</p>
+
+  <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;width:100%;display:block;margin:1em auto;">
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#1565c0;" />
+      </marker>
+      <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#c62828;" />
+      </marker>
+    </defs>
+
+    <!-- Směr větru -->
+    <text x="10" y="30" style="font-size:13px;fill:#555;">Vítr</text>
+    <line x1="10" y1="45" x2="80" y2="45" style="stroke:#1565c0;stroke-width:2;" marker-end="url(#arrow)" />
+    <line x1="10" y1="60" x2="80" y2="60" style="stroke:#1565c0;stroke-width:2;" marker-end="url(#arrow)" />
+    <line x1="10" y1="75" x2="80" y2="75" style="stroke:#1565c0;stroke-width:2;" marker-end="url(#arrow)" />
+
+    <!-- Závětrná loď (Z) — spodní, privilegovaná -->
+    <polygon points="200,170 215,130 230,170" style="fill:#2e7d32;stroke:#1b5e20;stroke-width:2;" />
+    <text x="185" y="190" style="font-size:13px;fill:#2e7d32;font-weight:bold;">Z (závětrná)</text>
+    <text x="185" y="204" style="font-size:11px;fill:#2e7d32;">— privilegovaná</text>
+    <!-- plachta Z -->
+    <line x1="215" y1="130" x2="215" y2="105" style="stroke:#1b5e20;stroke-width:2;" />
+    <polygon points="215,108 215,128 232,118" style="fill:#a5d6a7;stroke:#1b5e20;stroke-width:1;" />
+
+    <!-- Návětrná loď (N) — horní, musí uvolnit -->
+    <polygon points="200,80 215,40 230,80" style="fill:#c62828;stroke:#b71c1c;stroke-width:2;" />
+    <text x="238" y="60" style="font-size:13px;fill:#c62828;font-weight:bold;">N (návětrná)</text>
+    <text x="238" y="74" style="font-size:11px;fill:#c62828;">— uvolní cestu</text>
+    <!-- plachta N -->
+    <line x1="215" y1="40" x2="215" y2="15" style="stroke:#b71c1c;stroke-width:2;" />
+    <polygon points="215,18 215,38 232,28" style="fill:#ef9a9a;stroke:#b71c1c;stroke-width:1;" />
+
+    <!-- Šipka: N se vyhne -->
+    <line x1="215" y1="75" x2="270" y2="110" style="stroke:#c62828;stroke-width:2;stroke-dasharray:5,4;" marker-end="url(#arrowRed)" />
+    <text x="272" y="108" style="font-size:11px;fill:#c62828;">uvolní</text>
+
+    <!-- Svislá osa vítr/závětr -->
+    <line x1="180" y1="10" x2="180" y2="210" style="stroke:#aaa;stroke-width:1;stroke-dasharray:4,3;" />
+    <text x="100" y="18" style="font-size:11px;fill:#888;">← návětr</text>
+    <text x="270" y="18" style="font-size:11px;fill:#888;">závětr →</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Jako skipper musíte okamžitě vyhodnotit, kde je vítr u vás i u protijedoucí lodi.
+    Pokud obě lodě jdou na stejném halzu (stejná strana návětrná), jste-li vy na návětrné
+    straně, <strong>jste povinni uhnout</strong> — typicky odpadnout (bear away) za záď
+    závětrné lodi nebo zastavit. Závětrná loď by měla udržovat kurs a rychlost, abyste
+    mohli bezpečně manévrovat.
+  </p>
+  <p>
+    Pokud si nejste jisti, ze které strany má protijedoucí loď vítr, a nelze to poznat
+    ze sklonu stěžně či polohy plachet, platí bezpečnostní pravidlo COLREG Pravidlo 12 c:
+    loď, která <em>neví</em>, musí uvolnit cestu.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>COLREG 1972</strong> — Pravidlo 12: Plachetnice (Sailing vessels)</li>
+    <li><strong>Zákon č. 61/2000 Sb.</strong> o námořní plavbě, § 8 (povinnosti velitele plavidla)</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> o technické způsobilosti plavidel</li>
+  </ol>
+</article>

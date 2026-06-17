@@ -1,0 +1,97 @@
+<article class="vmp-explanation">
+  <h2>Rovnoběžky na námořní mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Rovnoběžka (paralela) spojuje na námořní mapě všechna místa se stejnou <strong>zeměpisnou šířkou</strong>.
+    Zeměpisná šířka udává, jak daleko je dané místo od rovníku na sever nebo jih, a všechna místa ležící na téže rovnoběžce
+    jsou od rovníku vzdálena o stejný počet stupňů — proto je tato odpověď správná.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Zemský povrch popisujeme pomocí geografické souřadnicové sítě složené ze dvou typů kružnic:
+  </p>
+  <ul>
+    <li>
+      <strong>Rovnoběžky (paralely)</strong> — kružnice rovnoběžné s rovníkem. Rovník sám je největší rovnoběžka (0°),
+      od níž se šířka měří na sever (0° až 90° N) a na jih (0° až 90° S). Každá rovnoběžka má konstantní zeměpisnou šířku.
+    </li>
+    <li>
+      <strong>Poledníky (meridiány)</strong> — polokružnice procházející oběma geografickými póly. Spojují místa se stejnou
+      <strong>zeměpisnou délkou</strong> (0° až 180° E / W od nultého poledníku v Greenwich).
+    </li>
+    <li>
+      <strong>Vrstevnice / izobaty</strong> — čáry spojující místa se stejnou <strong>hloubkou</strong> moře
+      (nebo stejnou nadmořskou výškou na souši). Jde o zcela odlišný typ izolinie, nikoli rovnoběžku.
+    </li>
+  </ul>
+  <p>
+    Na Merkatorově projekci, nejběžnější pro námořní navigaci, jsou rovnoběžky vodorovné přímky a poledníky
+    svislé přímky, což usnadňuje odečítání souřadnic pravítkem nebo kružítkem.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260" aria-label="Schéma zeměpisné sítě">
+    <!-- Pozadí -->
+    <rect x="0" y="0" width="400" height="260" fill="#e8f4f8" rx="8"/>
+
+    <!-- Rovnoběžky (vodorovné čáry) -->
+    <line x1="30" y1="50" x2="370" y2="50" stroke="#e07b00" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <line x1="30" y1="90" x2="370" y2="90" stroke="#e07b00" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <!-- Rovník – zvýrazněný -->
+    <line x1="30" y1="130" x2="370" y2="130" stroke="#e07b00" stroke-width="3"/>
+    <line x1="30" y1="170" x2="370" y2="170" stroke="#e07b00" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <line x1="30" y1="210" x2="370" y2="210" stroke="#e07b00" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+    <!-- Poledníky (svislé čáry) -->
+    <line x1="80"  y1="20" x2="80"  y2="240" stroke="#2255aa" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <line x1="150" y1="20" x2="150" y2="240" stroke="#2255aa" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <line x1="220" y1="20" x2="220" y2="240" stroke="#2255aa" stroke-width="3"/>
+    <line x1="290" y1="20" x2="290" y2="240" stroke="#2255aa" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <line x1="360" y1="20" x2="360" y2="240" stroke="#2255aa" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+    <!-- Popisky rovnoběžek -->
+    <text x="5" y="53"  font-size="11" fill="#e07b00" font-family="sans-serif">60°N</text>
+    <text x="5" y="93"  font-size="11" fill="#e07b00" font-family="sans-serif">30°N</text>
+    <text x="5" y="134" font-size="12" fill="#e07b00" font-family="sans-serif" font-weight="bold">0°</text>
+    <text x="5" y="173" font-size="11" fill="#e07b00" font-family="sans-serif">30°S</text>
+    <text x="5" y="213" font-size="11" fill="#e07b00" font-family="sans-serif">60°S</text>
+
+    <!-- Popisky poledníků -->
+    <text x="62"  y="15" font-size="10" fill="#2255aa" font-family="sans-serif">60°W</text>
+    <text x="132" y="15" font-size="10" fill="#2255aa" font-family="sans-serif">30°W</text>
+    <text x="210" y="15" font-size="11" fill="#2255aa" font-family="sans-serif" font-weight="bold">0°</text>
+    <text x="272" y="15" font-size="10" fill="#2255aa" font-family="sans-serif">30°E</text>
+    <text x="342" y="15" font-size="10" fill="#2255aa" font-family="sans-serif">60°E</text>
+
+    <!-- Legenda -->
+    <rect x="30" y="225" width="16" height="3" fill="#e07b00" rx="1"/>
+    <text x="50" y="234" font-size="11" fill="#333" font-family="sans-serif">rovnoběžka = stejná zeměpisná šířka</text>
+    <line x1="240" y1="222" x2="256" y2="222" stroke="#2255aa" stroke-width="2" stroke-dasharray="4,2"/>
+    <line x1="248" y1="218" x2="248" y2="228" stroke="#2255aa" stroke-width="2"/>
+    <text x="260" y="226" font-size="11" fill="#333" font-family="sans-serif">poledník = délka</text>
+
+    <!-- Tučný nápis Rovník -->
+    <text x="225" y="126" font-size="11" fill="#e07b00" font-family="sans-serif" font-weight="bold">Rovník</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při navigaci na námořní mapě navigator odečítá zeměpisnou šířku na svislé ose mapy (podél poledníku)
+    a zeměpisnou délku na vodorovné ose (podél rovnoběžky). Vzdálenost jedné námořní míle (1 NM = 1 852 m)
+    odpovídá přesně jedné úhlové minutě zeměpisné šířky — proto se vzdálenosti měří vždy na stupnicích
+    na levém nebo pravém okraji mapy (podél poledníků), nikoli na horním/dolním okraji.
+  </p>
+  <p>
+    Záměna pojmů „šířka" a „délka" patří k nejčastějším navigačním chybám začátečníků. Snadno si ji lze
+    zapamatovat: <em>rovnoběžka — šíří se horizontálně kolem zeměkoule</em>.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>Bowditch — American Practical Navigator (Pub. 9), kap. 1 (Základy navigace, geografické souřadnice)</li>
+    <li>ČSN 01 3411 — Námořní mapy a navigační názvosloví (definice zeměpisné sítě)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 1 odst. 2 (základní navigační pojmy)</li>
+  </ol>
+</article>

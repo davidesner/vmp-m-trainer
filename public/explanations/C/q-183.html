@@ -1,0 +1,131 @@
+<article class="vmp-explanation">
+<h2>Okluzní fronta na synoptické mapě</h2>
+
+<p><strong>Správná odpověď</strong> zobrazuje symbol <strong>fialové (purpurové) linie se střídajícími se trojúhelníky a půlkruhy</strong> na téže straně — to je mezinárodně platný symbol okluzní fronty podle konvence WMO.</p>
+
+<h3>Jádro</h3>
+<p>Okluzní fronta vzniká, když rychlejší studená fronta dožene pomalejší teplou frontu a zdvihne teplý vzduch od zemského povrchu. Na synoptické mapě se tato fronta zakresluje <strong>fialovou barvou</strong> s kombinací symbolů obou front: trojúhelníky (studená fronta) a půlkruhy (teplá fronta) jsou umístěny <strong>na stejné straně linie</strong> a ukazují směr postupu fronty. Tato kombinace a fialová barva jsou jedinečné — žádná jiná fronta tento symbol nemá.</p>
+
+<h3>Pozadí</h3>
+<p>Synoptické mapy používají standardizované symboly podle WMO (Světová meteorologická organizace). Systém přiřazuje frontám barvy i geometrické symboly:</p>
+<ul>
+  <li><strong>Teplá fronta</strong> — červená linie, půlkruhy ukazují směr postupu</li>
+  <li><strong>Studená fronta</strong> — modrá linie, trojúhelníky ukazují směr postupu</li>
+  <li><strong>Okluzní fronta</strong> — fialová (purpurová) linie, trojúhelníky <em>a</em> půlkruhy na stejné straně</li>
+  <li><strong>Stacionární fronta</strong> — střídavě červená a modrá, symboly na opačných stranách linie</li>
+</ul>
+<p>Tento systém je zakotven v technických dokumentech WMO (Manual on the Global Observing System, WMO-No. 544) a používá jej každá národní meteorologická služba včetně ČHMÚ.</p>
+
+<h3>Vizualizace — symboly atmosferických front</h3>
+<p>Porovnání čtyř typů frontálních symbolů, jak se zobrazují na synoptické mapě. Přední postup fronty je vždy doleva.</p>
+
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#f0f4f8;border:1px solid #b0c4d8;border-radius:8px">
+
+  <!-- === OKLUZNÍ FRONTA (správná odpověď) === -->
+  <rect x="10" y="10" width="360" height="185" rx="6" fill="#f8f0ff" stroke="#7a40a0" stroke-width="2"/>
+  <text x="190" y="32" text-anchor="middle" font-size="13" font-weight="700" fill="#7a40a0">OKLUZNÍ FRONTA</text>
+  <text x="190" y="50" text-anchor="middle" font-size="11" fill="#5a3080" font-style="italic">← správná odpověď</text>
+
+  <!-- Linie okluzní fronty -->
+  <line x1="30" y1="120" x2="340" y2="120" stroke="#8b00c8" stroke-width="3"/>
+
+  <!-- Trojúhelníky a půlkruhy střídavě na téže straně (nahoře = směr postupu) -->
+  <!-- trojúhelník 1 -->
+  <polygon points="65,120 75,95 85,120" fill="#8b00c8"/>
+  <!-- půlkruh 1 -->
+  <path d="M 105 120 A 15 15 0 0 1 135 120" fill="#8b00c8"/>
+  <!-- trojúhelník 2 -->
+  <polygon points="155,120 165,95 175,120" fill="#8b00c8"/>
+  <!-- půlkruh 2 -->
+  <path d="M 195 120 A 15 15 0 0 1 225 120" fill="#8b00c8"/>
+  <!-- trojúhelník 3 -->
+  <polygon points="245,120 255,95 265,120" fill="#8b00c8"/>
+  <!-- půlkruh 3 -->
+  <path d="M 285 120 A 15 15 0 0 1 315 120" fill="#8b00c8"/>
+
+  <text x="190" y="155" text-anchor="middle" font-size="11" fill="#5a3080">Barva: <tspan font-weight="700">fialová / purpurová</tspan></text>
+  <text x="190" y="173" text-anchor="middle" font-size="11" fill="#5a3080">Symbol: trojúhelníky + půlkruhy <tspan font-weight="700">na stejné straně</tspan></text>
+
+  <!-- === TEPLÁ FRONTA === -->
+  <rect x="390" y="10" width="360" height="185" rx="6" fill="#fff0f0" stroke="#c04040" stroke-width="1.5"/>
+  <text x="570" y="32" text-anchor="middle" font-size="13" font-weight="700" fill="#c04040">TEPLÁ FRONTA</text>
+
+  <line x1="410" y1="120" x2="730" y2="120" stroke="#e04040" stroke-width="3"/>
+
+  <!-- půlkruhy nahoře -->
+  <path d="M 430 120 A 18 18 0 0 1 466 120" fill="#e04040"/>
+  <path d="M 490 120 A 18 18 0 0 1 526 120" fill="#e04040"/>
+  <path d="M 550 120 A 18 18 0 0 1 586 120" fill="#e04040"/>
+  <path d="M 610 120 A 18 18 0 0 1 646 120" fill="#e04040"/>
+  <path d="M 670 120 A 18 18 0 0 1 706 120" fill="#e04040"/>
+
+  <text x="570" y="155" text-anchor="middle" font-size="11" fill="#a03030">Barva: <tspan font-weight="700">červená</tspan></text>
+  <text x="570" y="173" text-anchor="middle" font-size="11" fill="#a03030">Symbol: pouze <tspan font-weight="700">půlkruhy</tspan></text>
+
+  <!-- === STUDENÁ FRONTA === -->
+  <rect x="10" y="215" width="360" height="185" rx="6" fill="#f0f0ff" stroke="#4040c0" stroke-width="1.5"/>
+  <text x="190" y="237" text-anchor="middle" font-size="13" font-weight="700" fill="#4040c0">STUDENÁ FRONTA</text>
+
+  <line x1="30" y1="325" x2="340" y2="325" stroke="#4040e0" stroke-width="3"/>
+
+  <!-- trojúhelníky nahoře -->
+  <polygon points="55,325 67,298 79,325" fill="#4040e0"/>
+  <polygon points="105,325 117,298 129,325" fill="#4040e0"/>
+  <polygon points="155,325 167,298 179,325" fill="#4040e0"/>
+  <polygon points="205,325 217,298 229,325" fill="#4040e0"/>
+  <polygon points="255,325 267,298 279,325" fill="#4040e0"/>
+  <polygon points="305,325 317,298 329,325" fill="#4040e0"/>
+
+  <text x="190" y="362" text-anchor="middle" font-size="11" fill="#3030a0">Barva: <tspan font-weight="700">modrá</tspan></text>
+  <text x="190" y="380" text-anchor="middle" font-size="11" fill="#3030a0">Symbol: pouze <tspan font-weight="700">trojúhelníky</tspan></text>
+
+  <!-- === STACIONÁRNÍ FRONTA === -->
+  <rect x="390" y="215" width="360" height="185" rx="6" fill="#f0fff0" stroke="#808080" stroke-width="1.5"/>
+  <text x="570" y="237" text-anchor="middle" font-size="13" font-weight="700" fill="#505050">STACIONÁRNÍ FRONTA</text>
+
+  <line x1="410" y1="325" x2="730" y2="325" stroke="#808080" stroke-width="2"/>
+
+  <!-- půlkruhy dole (červené) -->
+  <path d="M 430 325 A 16 16 0 0 0 462 325" fill="#e04040"/>
+  <path d="M 490 325 A 16 16 0 0 0 522 325" fill="#e04040"/>
+  <path d="M 550 325 A 16 16 0 0 0 582 325" fill="#e04040"/>
+  <path d="M 610 325 A 16 16 0 0 0 642 325" fill="#e04040"/>
+  <path d="M 670 325 A 16 16 0 0 0 702 325" fill="#e04040"/>
+
+  <!-- trojúhelníky nahoře (modré) -->
+  <polygon points="448,325 460,302 472,325" fill="#4040e0"/>
+  <polygon points="508,325 520,302 532,325" fill="#4040e0"/>
+  <polygon points="568,325 580,302 592,325" fill="#4040e0"/>
+  <polygon points="628,325 640,302 652,325" fill="#4040e0"/>
+  <polygon points="688,325 700,302 712,325" fill="#4040e0"/>
+
+  <text x="570" y="362" text-anchor="middle" font-size="11" fill="#404040">Barva: <tspan font-weight="700">střídavě červená a modrá</tspan></text>
+  <text x="570" y="380" text-anchor="middle" font-size="11" fill="#404040">Symbol: symboly na <tspan font-weight="700">opačných stranách</tspan></text>
+
+</svg>
+
+<h3>Jak okluzní fronta vzniká</h3>
+<p>V mimotropickém cyklónu se studená fronta pohybuje rychleji než teplá. Studená fronta nakonec teplou dožene a teplý vzduch (tzv. teplý sektor) je vyzdvižen od zemského povrchu do výšky — vzniká <strong>oklúze</strong>. Nad zemí pak studený vzduch naráží na chladný vzduch před původní teplou frontou. Podle toho, který vzduch je chladnější, rozlišujeme:</p>
+<ul>
+  <li><strong>Studená oklúze</strong> — vzduch za studenou frontou je chladnější než vzduch před teplou frontou; studené rysy (trojúhelníky) jsou dominantnější</li>
+  <li><strong>Teplá oklúze</strong> — vzduch před teplou frontou je chladnější; teplé rysy (půlkruhy) jsou dominantnější</li>
+</ul>
+<p>Na mapě však obě varianty oklúze vypadají stejně — fialová linie se střídajícími se symboly.</p>
+
+<h3>Praktická aplikace</h3>
+<p>Při plánování mořské plavby je rozpoznání okluzní fronty na synoptické mapě důležité z těchto důvodů:</p>
+<ul>
+  <li>Okluzní fronta bývá spojena s <strong>protáhlou oblastí špatného počasí</strong> — srážky, snížená viditelnost, vítr</li>
+  <li>Na rozdíl od aktivní studené nebo teplé fronty (kde je přechod počasí relativně rychlý) může okluzní fronta přinést <strong>trvalé deštivé počasí</strong> trvající hodiny až desítky hodin</li>
+  <li>Fialová barva na mapě ihned signalizuje „pozor — smíšené frontální podmínky", i bez znalosti konkrétního meteorologického výkladu</li>
+  <li>Jako velitel plavidla sledujte polohu okluzní fronty na prognostických mapách a porovnávejte ji s aktuálními synoptickými mapami — oklúze se typicky pohybuje pomaleji než původní fronty a může „zůstat stát" nad danou oblastí</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ol>
+  <li>WMO — Manual on the Global Observing System (WMO-No. 544), Annex V: symboly frontálních systémů</li>
+  <li>WMO — International Cloud Atlas (WMO-No. 407), kapitola o synoptické meteorologii</li>
+  <li>ČHMÚ — Meteorologický slovník výkladový terminologický (heslo: okluzní fronta, oklúze)</li>
+  <li>Bowditch — American Practical Navigator (Pub. No. 9), kap. 34: Weather Elements, synoptic charts</li>
+</ol>
+</article>

@@ -1,0 +1,101 @@
+<article class="vmp-explanation">
+  <h2>Odchylka kompasu způsobená různými magnetickými poli</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>„deviace"</strong>. Deviace je odchylka kompasové střelky způsobená magnetickými poli pocházejícími z materiálů a vybavení samotné lodi (ocelové trupy, elektrické přístroje, motory). Liší se od jiných odchylek tím, že závisí na kurzu plavidla a je specifická pro každé plavidlo.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    V navigaci rozlišujeme tři hlavní pojmy popisující rozdíl mezi kompasovým severem a skutečným (geografickým) severem:
+  </p>
+  <ul>
+    <li>
+      <strong>Deviace (δ)</strong> — odchylka způsobená magnetickými poli <em>na palubě lodi</em> (železné části trupu, elektrické zařízení, náklad). Deviace se mění s kursem lodi a je zaznamenána v deviační tabulce (deviační kartě). Kompenzuje se pomocí speciálních magnetů (kompenzace kompasu).
+    </li>
+    <li>
+      <strong>Deklinace (variace, d nebo V)</strong> — odchylka způsobená tím, že magnetický severní pól Země se neshoduje s geografickým severním pólem. Je vyznačena na námořních kartách a mění se pomalu v čase.
+    </li>
+    <li>
+      <strong>Dekontaminace</strong> — námořní pojem tento termín nezná; jde o proces odstraňování nebezpečných chemických nebo radiologických látek.
+    </li>
+  </ul>
+  <p>
+    Celková kompasová chyba = deklinace + deviace. Navigátor musí obě hodnoty znát, aby přepočítal kompasový kurs na skutečný kurs.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260" aria-label="Schéma deviace a deklinace kompasu">
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#333;" />
+      </marker>
+      <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#c0392b;" />
+      </marker>
+      <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#2980b9;" />
+      </marker>
+      <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" style="fill:#27ae60;" />
+      </marker>
+    </defs>
+
+    <!-- Střed kompasu -->
+    <circle cx="200" cy="140" r="70" style="fill:#f9f9f9;stroke:#aaa;stroke-width:1.5;" />
+    <circle cx="200" cy="140" r="4" style="fill:#555;" />
+
+    <!-- Geografický sever (černá) -->
+    <line x1="200" y1="140" x2="200" y2="55" style="stroke:#333;stroke-width:2;" marker-end="url(#arrow)" />
+    <text x="203" y="50" style="font-size:12px;fill:#333;font-family:sans-serif;">Geo. sever</text>
+
+    <!-- Magnetický sever Země / deklinace (modrá) -->
+    <line x1="200" y1="140" x2="220" y2="57" style="stroke:#2980b9;stroke-width:2;stroke-dasharray:5,3;" marker-end="url(#arrow-blue)" />
+    <text x="224" y="55" style="font-size:11px;fill:#2980b9;font-family:sans-serif;">Mag. sever Země</text>
+    <text x="224" y="67" style="font-size:10px;fill:#2980b9;font-family:sans-serif;">(deklinace d)</text>
+
+    <!-- Kompasový sever / deviace (červená) -->
+    <line x1="200" y1="140" x2="244" y2="72" style="stroke:#c0392b;stroke-width:2;" marker-end="url(#arrow-red)" />
+    <text x="248" y="73" style="font-size:11px;fill:#c0392b;font-family:sans-serif;">Kompas. sever</text>
+    <text x="248" y="85" style="font-size:10px;fill:#c0392b;font-family:sans-serif;">(deviace δ)</text>
+
+    <!-- Oblouk deklinace -->
+    <path d="M 200 70 A 70 70 0 0 1 219 62" style="fill:none;stroke:#2980b9;stroke-width:1.5;" />
+    <text x="195" y="78" style="font-size:10px;fill:#2980b9;font-family:sans-serif;">d</text>
+
+    <!-- Oblouk deviace -->
+    <path d="M 219 62 A 70 70 0 0 1 239 75" style="fill:none;stroke:#c0392b;stroke-width:1.5;" />
+    <text x="225" y="65" style="font-size:10px;fill:#c0392b;font-family:sans-serif;">δ</text>
+
+    <!-- Legenda -->
+    <rect x="10" y="200" width="400" height="50" rx="4" style="fill:#f0f4f8;stroke:#ccc;stroke-width:1;" />
+    <line x1="20" y1="215" x2="50" y2="215" style="stroke:#333;stroke-width:2;" marker-end="url(#arrow)" />
+    <text x="55" y="219" style="font-size:11px;fill:#333;font-family:sans-serif;">Geografický sever</text>
+    <line x1="150" y1="215" x2="180" y2="215" style="stroke:#2980b9;stroke-width:2;stroke-dasharray:4,2;" marker-end="url(#arrow-blue)" />
+    <text x="185" y="219" style="font-size:11px;fill:#2980b9;font-family:sans-serif;">Deklinace (Země)</text>
+    <line x1="290" y1="215" x2="320" y2="215" style="stroke:#c0392b;stroke-width:2;" marker-end="url(#arrow-red)" />
+    <text x="325" y="219" style="font-size:11px;fill:#c0392b;font-family:sans-serif;">Deviace (loď)</text>
+    <text x="20" y="240" style="font-size:10px;fill:#555;font-family:sans-serif;">Celková kompasová chyba = deklinace (d) + deviace (δ)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Každý námořník musí před plavbou zjistit deviaci pro svou loď a daný kurs. Na lodích bývá k dispozici <strong>deviační tabulka</strong> (deviační karta), která uvádí hodnotu deviace pro různé kompasové kursy (po 15° nebo 30°). Při plánování kursu navigátor:
+  </p>
+  <ol>
+    <li>Odečte z námořní mapy aktuální deklinaci pro danou oblast (a rok plavby).</li>
+    <li>Z deviační tabulky odečte deviaci pro plánovaný kurs.</li>
+    <li>Přepočítá kompasový kurs na skutečný kurs: <code>Skutečný kurs = Kompasový kurs + deklinace + deviace</code> (se znaménkem — W je záporná, E kladná).</li>
+  </ol>
+  <p>
+    Zanedbání deviace může vést k významné navigační chybě, zejména na delších trasách nebo v blízkosti pobřeží.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>Bowditch — American Practical Navigator</strong> (NIMA Pub. No. 9), kapitola o kompasových chybách (Compass Error, Deviation, Variation).</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — obecné požadavky na navigační vybavení a způsobilost lodi.</li>
+    <li><strong>SOLAS (Úmluva o bezpečnosti lidského života na moři)</strong>, Kapitola V — Bezpečnost plavby, pravidla pro navigační přístroje a kompasy.</li>
+  </ol>
+</article>

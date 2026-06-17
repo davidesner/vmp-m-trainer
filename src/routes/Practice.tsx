@@ -5,6 +5,7 @@ import { sampleTestQuestions } from '../lib/testStructure'
 import { sampleByMix } from '../lib/sampleQuestions'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 import PracticeRunner from '../components/PracticeRunner'
+import CategorySubtitle from '../components/CategorySubtitle'
 import type { Question, MixMode, GroupId } from '../types'
 
 type SubMode = 'structure' | 'groups'
@@ -48,13 +49,14 @@ export default function Practice() {
 
   return (
     <div className="max-w-3xl mx-auto p-4 md:p-8">
-      <h2 className="text-2xl font-bold mb-6">Procvičování</h2>
+      <h2 className="text-2xl font-bold mb-1">Procvičování</h2>
+      <CategorySubtitle className="mb-6" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
         <button onClick={() => setSubMode('structure')}
           className={`text-left rounded-lg p-4 border-2 ${subMode === 'structure' ? 'border-primary bg-primary-light' : 'border-neutral-200'}`}>
           <div className={`text-sm font-semibold ${subMode === 'structure' ? 'text-primary-dark' : ''}`}>● Struktura ostrého testu</div>
-          <div className="text-xs text-neutral-600 mt-1">35 otázek dle reálné struktury (16/7/5/3/4). Bez timeru.</div>
+          <div className="text-xs text-neutral-600 mt-1">{data.passing.total} otázek dle reálné struktury ({data.testStructure.map(s => s.count).join('/')}). Bez timeru.</div>
         </button>
         <button onClick={() => setSubMode('groups')}
           className={`text-left rounded-lg p-4 border-2 ${subMode === 'groups' ? 'border-primary bg-primary-light' : 'border-neutral-200'}`}>

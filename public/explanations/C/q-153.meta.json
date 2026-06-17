@@ -1,0 +1,12 @@
+{
+  "qid": 153,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "ICAO Standard Atmosphere (Doc 7488)",
+    "WMO publikace č. 306 (FM-12 SYNOP)",
+    "Bowditch – American Practical Navigator, kap. 37",
+    "Zákon č. 61/2000 Sb. o námořní plavbě, § 47"
+  ],
+  "model": "claude-opus-4-7"
+}

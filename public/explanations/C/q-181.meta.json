@@ -1,0 +1,12 @@
+{
+  "qid": 181,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO No. 485 — Manual on the Global Observing System",
+    "WMO No. 306 — Manual on Codes",
+    "Bowditch — American Practical Navigator",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

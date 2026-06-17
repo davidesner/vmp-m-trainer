@@ -1,0 +1,129 @@
+<article class="vmp-explanation">
+  <h2>Bóje na levoboku při plavbě z přístavu na moře — vrcholový znak</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>„zelený kužel vrcholem vzhůru"</strong>. Při plavbě
+    z přístavu na moře se nacházíte v konvenčním směru příbřežní plavby, který
+    v systému IALA-A odpovídá směru „od moře k přístavu" (konvenční směr je
+    definován jako plavba ve směru přístavu). Levý bok plavidla tedy míjí bóje
+    pravostranného (tribordového) kanálového označení — ty jsou zelené, s vrcholovým
+    znakem <em>zelený kužel vrcholem vzhůru</em>.
+  </p>
+  <p>
+    Červené bóje (válec nebo koule) by byly na pravoboku při výjezdu — to jsou
+    bóje levostranného (babordového) označení. Protože míjíte bóje na <em>levoboku</em>
+    při výjezdu, jde o tribordové bóje → zelený kužel.
+  </p>
+
+  <h3>Pozadí — systém IALA-A</h3>
+  <p>
+    Evropa (včetně ČR pro námořní plavbu) používá systém IALA kategorie A:
+  </p>
+  <ul>
+    <li>
+      <strong>Konvenční směr</strong> — definován jako směr, ve kterém plavidla
+      připlývají k přístavu (tj. „od moře"). Výjezd z přístavu je tedy ve směru
+      <em>proti</em> konvenčnímu směru.
+    </li>
+    <li>
+      <strong>Levostranné (babordové) bóje</strong> — označují levý okraj
+      bezpečné plavební dráhy při plavbě v konvenčním směru (tj. <em>do přístavu</em>);
+      barva červená, tvar válce, světlo červené přerušované, vrcholový znak
+      červený válec (nebo žádný).
+    </li>
+    <li>
+      <strong>Pravostranné (tribordové) bóje</strong> — označují pravý okraj
+      plavební dráhy při plavbě v konvenčním směru; barva zelená, tvar kužele,
+      světlo zelené, vrcholový znak <em>zelený kužel vrcholem vzhůru</em>.
+    </li>
+  </ul>
+  <p>
+    Jedete-li z přístavu na moře, jdete <em>proti</em> konvenčnímu směru. Tím
+    se levý a pravý okraj kanálu vizuálně vymění: bóje, které byly pravostranné
+    (zeleně) při vjezdu, jsou nyní na vašem <strong>levoboku</strong> při výjezdu.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" role="img" aria-label="Schéma kanálu: zelené bóje vlevo, červené vpravo při plavbě z přístavu na moře">
+    <!-- Pozadí — moře -->
+    <rect width="480" height="260" fill="#cce8f4"/>
+
+    <!-- Plavební dráha (světlá) -->
+    <rect x="120" y="20" width="240" height="220" fill="#e8f4fb" rx="4"/>
+
+    <!-- Šipka směru plavby (z přístavu ven) -->
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+      </marker>
+    </defs>
+    <line x1="240" y1="220" x2="240" y2="50" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="8,4"/>
+    <text x="248" y="150" fill="#444" font-size="12" font-family="sans-serif">Směr plavby</text>
+    <text x="248" y="164" fill="#444" font-size="12" font-family="sans-serif">(z přístavu)</text>
+
+    <!-- Přístav dole -->
+    <rect x="160" y="228" width="160" height="24" fill="#b0bec5" rx="3"/>
+    <text x="240" y="244" text-anchor="middle" fill="#333" font-size="13" font-family="sans-serif" font-weight="bold">PŘÍSTAV</text>
+
+    <!-- MOŘE nahoře -->
+    <text x="240" y="18" text-anchor="middle" fill="#0066aa" font-size="13" font-family="sans-serif" font-weight="bold">MOŘE</text>
+
+    <!-- === Zelené bóje — levý bok při výjezdu === -->
+    <!-- Bóje 1 -->
+    <circle cx="130" cy="180" r="14" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+    <!-- kužel -->
+    <polygon points="130,158 122,176 138,176" fill="#1b5e20"/>
+    <line x1="130" y1="180" x2="130" y2="200" stroke="#555" stroke-width="2"/>
+    <!-- Bóje 2 -->
+    <circle cx="130" cy="100" r="14" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+    <polygon points="130,78 122,96 138,96" fill="#1b5e20"/>
+    <line x1="130" y1="100" x2="130" y2="120" stroke="#555" stroke-width="2"/>
+
+    <!-- Popis levá strana -->
+    <text x="30" y="135" text-anchor="middle" fill="#2e7d32" font-size="12" font-family="sans-serif" font-weight="bold">LEVOBORK</text>
+    <text x="30" y="150" text-anchor="middle" fill="#2e7d32" font-size="11" font-family="sans-serif">(zelené bóje)</text>
+    <text x="30" y="163" text-anchor="middle" fill="#2e7d32" font-size="10" font-family="sans-serif">kužel ▲</text>
+
+    <!-- === Červené bóje — pravý bok při výjezdu === -->
+    <!-- Bóje 1 -->
+    <circle cx="350" cy="180" r="14" fill="#c62828" stroke="#7f0000" stroke-width="2"/>
+    <!-- válec (rectangle jako vrcholový znak) -->
+    <rect x="344" y="158" width="12" height="18" fill="#7f0000" rx="2"/>
+    <line x1="350" y1="180" x2="350" y2="200" stroke="#555" stroke-width="2"/>
+    <!-- Bóje 2 -->
+    <circle cx="350" cy="100" r="14" fill="#c62828" stroke="#7f0000" stroke-width="2"/>
+    <rect x="344" y="78" width="12" height="18" fill="#7f0000" rx="2"/>
+    <line x1="350" y1="100" x2="350" y2="120" stroke="#555" stroke-width="2"/>
+
+    <!-- Popis pravá strana -->
+    <text x="435" y="135" text-anchor="middle" fill="#c62828" font-size="12" font-family="sans-serif" font-weight="bold">PRAVOBORK</text>
+    <text x="435" y="150" text-anchor="middle" fill="#c62828" font-size="11" font-family="sans-serif">(červené bóje)</text>
+    <text x="435" y="163" text-anchor="middle" fill="#c62828" font-size="10" font-family="sans-serif">válec ▬</text>
+
+    <!-- Legenda -->
+    <text x="240" y="256" text-anchor="middle" fill="#555" font-size="10" font-family="sans-serif">Systém IALA-A | výjezd z přístavu → zelené bóje na levoboku</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při výjezdu z přístavu na moře platí jednoduché pravidlo:
+    <strong>zelená vlevo, červená vpravo</strong> (opak vjezdu, kde platí
+    „červená vlevo"). Pokud tedy na levoboku vidíte zelenou kónickou bóji
+    s kuželem vrcholem vzhůru, jste ve správné části plavební dráhy — plavíte se
+    v bezpečném kanálu blízko jeho pravého okraje (v konvenčním smyslu), resp.
+    levého okraje při výjezdu.
+  </p>
+  <p>
+    V praxi si námořníci pomáhají mnemonikou: <em>„Red Right Returning"</em>
+    (červená vpravo při návratu/vjezdu) — z toho plyne, že při výjezdu je
+    červená vlevo a zelená vpravo <em>na vašem levoboku</em>.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>IALA Maritime Buoyage System — Region A, definice laterálního označení kanálů (vydání 2016)</li>
+    <li>Zákon č. 61/2000 Sb., o námořní plavbě — § 26 (plavební značky a jejich závaznost)</li>
+    <li>Vyhláška č. 315/2000 Sb. — příloha o plavebním značení v souladu s IALA-A</li>
+  </ol>
+</article>

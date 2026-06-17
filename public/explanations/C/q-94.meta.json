@@ -1,0 +1,11 @@
+{
+  "qid": 94,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Mezinárodní hydrografická organizace (IHO) – Publication S-32 Hydrographic Dictionary",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Bowditch – American Practical Navigator"
+  ],
+  "model": "claude-opus-4-7"
+}

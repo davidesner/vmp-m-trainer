@@ -1,0 +1,92 @@
+<article class="vmp-explanation">
+  <h2>Těsně stlačené izobary → silný vítr</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>„silný vítr"</strong>. Čím těsněji jsou izobary na synoptické mapě u sebe, tím strmější je tlakový gradient — tedy tím větší je rozdíl tlaku vzduchu na krátkou vzdálenost. Vítr vzniká právě jako důsledek tohoto tlakového spádu: vzduch proudí od vyššího tlaku k nižšímu, a čím strmější spád, tím rychleji proudí a tím silnější vítr vzniká.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Izobary jsou čáry spojující místa se stejným atmosférickým tlakem (obvykle každých 4 hPa nebo 5 hPa na synoptických mapách). Hustota izobar přímo vyjadřuje <em>tlakový gradient</em> (baric gradient):
+  </p>
+  <ul>
+    <li><strong>Husté izobary</strong> = strmý tlakový spád = velká rychlost větru</li>
+    <li><strong>Řídké izobary</strong> = mírný tlakový spád = slabý vítr</li>
+    <li><strong>Žádné izobary / izobarické plochy rovnoběžné</strong> = bezvětří nebo beztlakový systém</li>
+  </ul>
+  <p>
+    Vítr vanutí je dáno Buyss-Ballotovým zákonem a geostrofickým větrem: v severní polokouli fouká vítr tak, aby měl nízký tlak po levé ruce. Rychlost geostrofického větru je přímo úměrná hustotě izobar.
+  </p>
+  <p>
+    V námořní meteorologii platí obecné pravidlo: tlakový gradient větší než přibližně 1 hPa/60 km (v mírných zeměpisných šířkách) indikuje bouřlivý vítr. Bouřkové oblasti tlakové níže mívají izobary vzdálené jen desítky kilometrů od sebe.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;display:block;margin:1em auto;" aria-label="Srovnání hustých a řídkých izobar">
+    <!-- Left panel: dense isobars = strong wind -->
+    <rect x="5" y="5" width="185" height="210" rx="8" fill="#e8f4fd" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="97" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a5276">Husté izobary</text>
+    <text x="97" y="36" text-anchor="middle" font-size="10" fill="#555">(silný vítr)</text>
+    <!-- Dense isobars lines -->
+    <line x1="20" y1="55" x2="175" y2="55" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="178" y="59" font-size="9" fill="#2980b9">1000</text>
+    <line x1="20" y1="75" x2="175" y2="75" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="178" y="79" font-size="9" fill="#2980b9">1004</text>
+    <line x1="20" y1="95" x2="175" y2="95" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="178" y="99" font-size="9" fill="#2980b9">1008</text>
+    <line x1="20" y1="115" x2="175" y2="115" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="178" y="119" font-size="9" fill="#2980b9">1012</text>
+    <line x1="20" y1="135" x2="175" y2="135" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="178" y="139" font-size="9" fill="#2980b9">1016</text>
+    <!-- Wind arrows (strong) -->
+    <line x1="40" y1="165" x2="155" y2="165" stroke="#e74c3c" stroke-width="3" marker-end="url(#arr)"/>
+    <line x1="40" y1="185" x2="155" y2="185" stroke="#e74c3c" stroke-width="3" marker-end="url(#arr)"/>
+    <text x="97" y="210" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">Silný vítr</text>
+
+    <!-- Right panel: sparse isobars = weak wind -->
+    <rect x="210" y="5" width="185" height="210" rx="8" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+    <text x="302" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#7d6608">Řídké izobary</text>
+    <text x="302" y="36" text-anchor="middle" font-size="10" fill="#555">(slabý vítr)</text>
+    <!-- Sparse isobars lines -->
+    <line x1="215" y1="60" x2="385" y2="60" stroke="#f39c12" stroke-width="1.5"/>
+    <text x="388" y="64" font-size="9" fill="#f39c12">1000</text>
+    <line x1="215" y1="100" x2="385" y2="100" stroke="#f39c12" stroke-width="1.5"/>
+    <text x="388" y="104" font-size="9" fill="#f39c12">1004</text>
+    <line x1="215" y1="140" x2="385" y2="140" stroke="#f39c12" stroke-width="1.5"/>
+    <text x="388" y="144" font-size="9" fill="#f39c12">1008</text>
+    <!-- Weak wind arrows -->
+    <line x1="235" y1="168" x2="285" y2="168" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <line x1="235" y1="185" x2="285" y2="185" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <text x="302" y="210" text-anchor="middle" font-size="10" fill="#e67e22" font-weight="bold">Slabý vítr</text>
+
+    <!-- Arrow markers -->
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+      </marker>
+      <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#e67e22"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při čtení synoptické mapy před plavbou věnujte pozornost hustotě izobar v plánované oblasti:
+  </p>
+  <ul>
+    <li>Velmi husté izobary okolo tlakové níže (hluboká deprese) varují před větry síly 7–12 Bf (Beaufortovy stupně).</li>
+    <li>Oblast s hustými izobarami podél fronty (okluzní, teplá nebo studená) signalizuje ostré frontální vítrné podmínky.</li>
+    <li>Prognóza tlakového gradientu je klíčovým vstupem do výpočtu předpokládané výšky vln pomocí vztahu Hs ≈ f(U, fetch, duration).</li>
+    <li>Před odplutím vždy porovnejte izobary předpovědi (T+24 h, T+48 h) — pokud se izobary zhušťují, povětrnostní situace se bude zhoršovat.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>WMO-No. 306 — Manual on Codes</strong>: definice synoptické mapy a izobar, kódování tlaku v SYNOP.</li>
+    <li><strong>Bowditch — American Practical Navigator (NIMA Pub. 9)</strong>, kap. „Weather" a „Winds": vztah tlakového gradientu a rychlosti větru.</li>
+    <li><strong>Učebnice meteorologie pro námořníky (ČR)</strong>: interpretace synoptických map, hustota izobar a síla větru (Beaufortova stupnice).</li>
+    <li><strong>SOLAS 1974, kapitola V, pravidlo 31–32</strong>: povinnost velitele shromažďovat a předávat meteorologická data.</li>
+  </ol>
+</article>

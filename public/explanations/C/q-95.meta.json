@@ -1,0 +1,12 @@
+{
+  "qid": 95,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Bowditch — American Practical Navigator (kap. 18, Speed Measurement)",
+    "COLREG 1972 — pravidlo 6 (bezpečná rychlost)",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb."
+  ],
+  "model": "claude-opus-4-7"
+}

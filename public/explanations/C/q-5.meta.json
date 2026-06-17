@@ -1,0 +1,7 @@
+{
+  "qid": 5,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["COLREG 1972, Pravidlo 3(i) - General Definitions", "COLREG 1972, Pravidla 23 a 30 - světla a znaky", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-opus-4-7"
+}

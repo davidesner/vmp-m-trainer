@@ -1,0 +1,141 @@
+<h2>Tlak vzduchu s rostoucí nadmořskou výškou</h2>
+
+<h3>Krátká odpověď</h3>
+<p>Správná je možnost <strong>„klesá"</strong>. S přibývající nadmořskou výškou tlak vzduchu <strong>klesá</strong> — v nízkých výškách přibližně o <strong>1 hPa na každých ~8 metrů</strong> výškového rozdílu.</p>
+
+<h3>Fyzikální pozadí</h3>
+<p>Atmosférický tlak v daném bodě je dán <em>tíhou sloupce vzduchu</em>, který je nad pozorovatelem. Vzduch má hmotnost (1 m³ vzduchu při hladině moře váží přibližně 1,225 kg) a Země ho gravitací drží u povrchu. Čím výše se nacházíme:</p>
+<ul>
+  <li>tím <strong>kratší sloupec vzduchu</strong> nad námi zbývá,</li>
+  <li>tím <strong>méně molekul vzduchu</strong> nás tlačí shora,</li>
+  <li>a navíc je vzduch ve vyšších vrstvách <strong>řidší</strong> (každá další vrstva přidává méně tlaku než vrstvy nižší).</li>
+</ul>
+
+<p>Pokles tlaku s výškou tedy <strong>není lineární</strong>, ale exponenciální. Pro orientaci námořníka v nízkých hladinách (do několika set metrů) však platí jednoduché pravidlo:</p>
+<blockquote><strong>~1 hPa ≈ 8 m</strong> (v okolí hladiny moře).</blockquote>
+
+<h4>Vizualizace: sloupec vzduchu nad pozorovatelem</h4>
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;display:block;margin:1em auto;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
+  <defs>
+    <linearGradient id="airGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sloupec vzduchu nad nízkou hladinou (vysoký) -->
+  <rect x="80" y="40" width="80" height="220" fill="url(#airGrad)" stroke="#0369a1" stroke-width="1"/>
+  <text x="120" y="30" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#0c4a6e">vysoký sloupec</text>
+  <text x="120" y="280" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#0c4a6e">hladina moře</text>
+  <text x="120" y="296" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#b91c1c" font-weight="bold">~1013 hPa</text>
+
+  <!-- Pozorovatel dole -->
+  <circle cx="120" cy="260" r="6" fill="#dc2626"/>
+
+  <!-- Sloupec vzduchu nad horou (kratší) -->
+  <rect x="300" y="140" width="80" height="120" fill="url(#airGrad)" stroke="#0369a1" stroke-width="1"/>
+  <text x="340" y="130" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#0c4a6e">kratší sloupec</text>
+  <text x="340" y="280" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#0c4a6e">např. 1000 m n.m.</text>
+  <text x="340" y="296" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#b91c1c" font-weight="bold">~899 hPa</text>
+
+  <!-- Pozorovatel nahoře -->
+  <circle cx="340" cy="260" r="6" fill="#dc2626"/>
+
+  <!-- Šipky tlaku -->
+  <g stroke="#1e293b" stroke-width="1.5" fill="#1e293b">
+    <line x1="120" y1="50" x2="120" y2="250" stroke-dasharray="3,3"/>
+    <polygon points="116,246 124,246 120,254"/>
+    <line x1="340" y1="150" x2="340" y2="250" stroke-dasharray="3,3"/>
+    <polygon points="336,246 344,246 340,254"/>
+  </g>
+
+  <!-- Vysvětlující šipka -->
+  <text x="460" y="100" font-size="14" font-family="sans-serif" fill="#0f172a" font-weight="bold">Větší výška</text>
+  <text x="460" y="120" font-size="14" font-family="sans-serif" fill="#0f172a" font-weight="bold">= kratší sloupec</text>
+  <text x="460" y="140" font-size="14" font-family="sans-serif" fill="#0f172a" font-weight="bold">= nižší tlak</text>
+
+  <line x1="200" y1="200" x2="280" y2="200" stroke="#334155" stroke-width="2"/>
+  <polygon points="280,200 270,195 270,205" fill="#334155"/>
+
+  <!-- Zem -->
+  <rect x="60" y="260" width="120" height="20" fill="#a3a3a3"/>
+  <polygon points="280,260 400,260 400,180 360,180 340,165 320,180 280,180" fill="#94a3b8"/>
+</svg>
+
+<h4>Graf: tlak vs. výška (do 3000 m)</h4>
+<svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;height:auto;display:block;margin:1em auto;background:#fff;border:1px solid #e2e8f0;border-radius:8px">
+  <!-- Osy -->
+  <line x1="60" y1="30" x2="60" y2="230" stroke="#0f172a" stroke-width="1.5"/>
+  <line x1="60" y1="230" x2="470" y2="230" stroke="#0f172a" stroke-width="1.5"/>
+
+  <!-- Popisky os -->
+  <text x="30" y="30" font-size="11" font-family="sans-serif" fill="#0f172a">1013</text>
+  <text x="30" y="80" font-size="11" font-family="sans-serif" fill="#0f172a">950</text>
+  <text x="30" y="130" font-size="11" font-family="sans-serif" fill="#0f172a">900</text>
+  <text x="30" y="180" font-size="11" font-family="sans-serif" fill="#0f172a">850</text>
+  <text x="30" y="230" font-size="11" font-family="sans-serif" fill="#0f172a">800</text>
+  <text x="15" y="130" font-size="12" font-family="sans-serif" fill="#0f172a" transform="rotate(-90 15 130)">tlak (hPa)</text>
+
+  <text x="60" y="250" font-size="11" font-family="sans-serif" fill="#0f172a" text-anchor="middle">0</text>
+  <text x="142" y="250" font-size="11" font-family="sans-serif" fill="#0f172a" text-anchor="middle">500</text>
+  <text x="224" y="250" font-size="11" font-family="sans-serif" fill="#0f172a" text-anchor="middle">1000</text>
+  <text x="306" y="250" font-size="11" font-family="sans-serif" fill="#0f172a" text-anchor="middle">1500</text>
+  <text x="388" y="250" font-size="11" font-family="sans-serif" fill="#0f172a" text-anchor="middle">2000</text>
+  <text x="470" y="250" font-size="11" font-family="sans-serif" fill="#0f172a" text-anchor="middle">2500</text>
+  <text x="265" y="272" font-size="12" font-family="sans-serif" fill="#0f172a" text-anchor="middle">nadmořská výška (m)</text>
+
+  <!-- Pomocná mřížka -->
+  <line x1="60" y1="80" x2="470" y2="80" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="60" y1="130" x2="470" y2="130" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="60" y1="180" x2="470" y2="180" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Křivka exp. poklesu tlaku (přibližná barometrická formule) -->
+  <path d="M 60 30 Q 180 65, 265 110 T 470 200" stroke="#0284c7" stroke-width="2.5" fill="none"/>
+
+  <!-- Body s popisky -->
+  <circle cx="60" cy="30" r="4" fill="#dc2626"/>
+  <text x="68" y="25" font-size="11" font-family="sans-serif" fill="#0f172a">0 m → 1013 hPa</text>
+
+  <circle cx="224" cy="113" r="4" fill="#dc2626"/>
+  <text x="232" y="108" font-size="11" font-family="sans-serif" fill="#0f172a">1000 m → ~899 hPa</text>
+
+  <circle cx="388" cy="178" r="4" fill="#dc2626"/>
+  <text x="320" y="195" font-size="11" font-family="sans-serif" fill="#0f172a">2000 m → ~795 hPa</text>
+</svg>
+
+<h3>Praktická aplikace pro námořníka</h3>
+<ul>
+  <li><strong>Tlakoměr (barometr) jako prognostický nástroj:</strong> Pokles tlaku na lodi obvykle signalizuje příchod fronty nebo zhoršení počasí; vzestup tlaku naopak stabilizaci. Rychlý pokles (více než 3–5 hPa za 3 hodiny) je varovný signál.</li>
+  <li><strong>Korekce na hladinu moře (QNH):</strong> Naměřený tlak na palubě se obvykle udává redukovaný na hladinu moře, aby byl porovnatelný s tlaky z meteorologických map a sousedních stanic. Bez této korekce by se každý měřící bod v jiné výšce nedal použít.</li>
+  <li><strong>Výškoměr na bázi barometru:</strong> Jachtařské multifunkční hodinky a některé palubní přístroje obsahují aroidní výškoměr — měří absolutní tlak a převádějí ho na výšku právě podle pravidla ~8 m/1 hPa. To je užitečné při pohybu v přístavech, kanálech a říčních deltách s proměnlivými hladinami.</li>
+  <li><strong>Tlakové úrovně na mapách:</strong> Synoptické mapy ukazují izobary v hPa redukované na hladinu moře. Námořník interpretuje gradient — hustší izobary znamenají silnější vítr.</li>
+</ul>
+
+<h3>Standardní atmosféra (referenční hodnoty)</h3>
+<table>
+  <thead>
+    <tr><th>Nadmořská výška</th><th>Tlak vzduchu</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>0 m (hladina moře)</td><td>1013,25 hPa</td></tr>
+    <tr><td>100 m</td><td>~1001 hPa</td></tr>
+    <tr><td>500 m</td><td>~955 hPa</td></tr>
+    <tr><td>1000 m</td><td>~899 hPa</td></tr>
+    <tr><td>2000 m</td><td>~795 hPa</td></tr>
+    <tr><td>5500 m</td><td>~500 hPa (poloviční tlak)</td></tr>
+  </tbody>
+</table>
+
+<h3>Proč ne ostatní možnosti?</h3>
+<ul>
+  <li><em>Tlak stoupá s výškou</em> — fyzikálně nemožné. Šlo by to pouze tehdy, kdyby vzduch neměl hmotnost nebo gravitace působila opačně.</li>
+  <li><em>Tlak zůstává stejný</em> — také ne. I malé výškové rozdíly (desítky metrů) jsou měřitelné citlivým barometrem; jinak by nefungovaly barometrické výškoměry.</li>
+</ul>
+
+<h3>Zdroje</h3>
+<ul>
+  <li>Český hydrometeorologický ústav (ČHMÚ) — Atmosférický tlak a jeho měření: <a href="https://www.chmi.cz/">www.chmi.cz</a></li>
+  <li>Mezinárodní standardní atmosféra (ISA) — ICAO Doc 7488</li>
+  <li>Bowditch, N.: <em>The American Practical Navigator</em>, kapitola Meteorology (NGA, dostupné online)</li>
+  <li>Karnis, P.: <em>Námořní jachting</em> — kapitola Meteorologie pro jachtaře</li>
+</ul>

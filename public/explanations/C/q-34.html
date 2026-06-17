@@ -1,0 +1,106 @@
+<article class="vmp-explanation">
+
+  <h2>Křížení kursů plachetnice a motorové lodi</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je, že <strong>loď se strojním pohonem musí uvolnit cestu plachetnici</strong>.
+    Plachetnice je privilegovaná loď — motorem poháněná plavidla jsou obecně nižší ve skupině přednosti
+    oproti plachetnicím plujícím pod plachtami. Motorová loď proto musí manévrovat tak, aby srážce zabránila.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972), Pravidlo 18 (<em>Povinnosti lodí vůči sobě</em>),
+    stanoví hierarchii přednosti mezi různými kategoriemi plavidel. Loď se strojním pohonem, která je schopna manévrovat,
+    musí dát přednost plachetnici. Plachetnice se zde považuje za plavidlo s omezenou schopností manévrovat,
+    protože závisí na větru.
+  </p>
+  <p>
+    Pravidlo 12 COLREG se týká situace dvou plachetnic; Pravidlo 18 pak hierarchicky definuje, která kategorie lodí
+    musí ustoupit které. Pravidlo 16 přikazuje <em>ustupující</em> lodi provést včasný a výrazný manévr;
+    Pravidlo 17 definuje práva a povinnosti <em>privilegované</em> lodě.
+  </p>
+  <p>
+    Možnost, že by rozhodovala poloha druhé lodi po pravé straně (tzv. pravidlo pravé ruky z Pravidla 15),
+    platí jen mezi dvěma loděmi <strong>stejné kategorie</strong> (typicky dvě motorové lodě). Zde jsou kategorie různé,
+    proto se použije nadřazené Pravidlo 18, nikoli Pravidlo 15.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;display:block;margin:1em auto;">
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 Z" style="fill:#2563eb;" />
+      </marker>
+      <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 Z" style="fill:#dc2626;" />
+      </marker>
+    </defs>
+
+    <!-- Plachetnice vlevo -->
+    <g transform="translate(60,100)">
+      <!-- trup -->
+      <ellipse cx="0" cy="20" rx="32" ry="10" style="fill:#c8d9f0;stroke:#1e3a5f;stroke-width:1.5;" />
+      <!-- stěžeň -->
+      <line x1="0" y1="20" x2="0" y2="-50" style="stroke:#1e3a5f;stroke-width:2;" />
+      <!-- plachta -->
+      <polygon points="0,-50 -24,10 0,10" style="fill:#f0f4ff;stroke:#1e3a5f;stroke-width:1.5;" />
+      <polygon points="0,-50 24,5 0,5" style="fill:#f0f4ff;stroke:#1e3a5f;stroke-width:1.5;" />
+      <text x="-10" y="42" style="font-size:12px;fill:#1e3a5f;font-weight:bold;">Plachetnice</text>
+      <text x="-14" y="55" style="font-size:10px;fill:#15803d;">(privilegovaná)</text>
+    </g>
+
+    <!-- Motorová loď vpravo -->
+    <g transform="translate(420,100)">
+      <!-- trup -->
+      <rect x="-40" y="10" width="80" height="20" rx="6" style="fill:#fde8c8;stroke:#92400e;stroke-width:1.5;" />
+      <!-- nástavba -->
+      <rect x="-18" y="-5" width="36" height="16" rx="3" style="fill:#fbbf24;stroke:#92400e;stroke-width:1;" />
+      <!-- komín -->
+      <rect x="-4" y="-18" width="8" height="14" rx="2" style="fill:#92400e;" />
+      <text x="-38" y="46" style="font-size:12px;fill:#92400e;font-weight:bold;">Motorová loď</text>
+      <text x="-26" y="59" style="font-size:10px;fill:#dc2626;">(musí ustoupit)</text>
+    </g>
+
+    <!-- Kursy — čárkovaně -->
+    <line x1="92" y1="120" x2="240" y2="110" style="stroke:#2563eb;stroke-width:1.5;stroke-dasharray:6,4;" />
+    <line x1="388" y1="120" x2="240" y2="110" style="stroke:#dc2626;stroke-width:1.5;stroke-dasharray:6,4;" />
+
+    <!-- Bod křížení -->
+    <circle cx="240" cy="110" r="8" style="fill:#fef08a;stroke:#ca8a04;stroke-width:2;" />
+    <text x="248" y="106" style="font-size:11px;fill:#ca8a04;font-weight:bold;">nebezpečí srážky</text>
+
+    <!-- Šipky kursů -->
+    <line x1="92" y1="120" x2="190" y2="113" style="stroke:#2563eb;stroke-width:2;" marker-end="url(#arrow)" />
+    <line x1="388" y1="120" x2="290" y2="113" style="stroke:#dc2626;stroke-width:2;" marker-end="url(#arrow-red)" />
+
+    <!-- Odbočení motorové lodi -->
+    <path d="M388,120 Q420,170 440,175" style="fill:none;stroke:#dc2626;stroke-width:2;stroke-dasharray:4,3;" marker-end="url(#arrow-red)" />
+    <text x="430" y="185" style="font-size:10px;fill:#dc2626;">manévr — uvolnit cestu</text>
+
+    <!-- Legenda COLREG -->
+    <rect x="10" y="5" width="220" height="28" rx="4" style="fill:#f0fdf4;stroke:#16a34a;stroke-width:1;" />
+    <text x="18" y="23" style="font-size:11px;fill:#15803d;font-weight:bold;">COLREG 1972, Pravidlo 18 — hierarchie přednosti</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Na moři i v pobřežních vodách platí, že pokud motorová loď vidí plachetnici jedoucí pod plachtami
+    a jejich kursy se kříží tak, že hrozí srážka, musí kapitán motorové lodi zahájit včasný a výrazný
+    úhybný manévr — typicky odklonit se na pravý bok (obejít zezadu za plachetnicí) nebo zpomalit.
+    Plachetnice sice musí zůstat ve svém kursu a rychlosti (jako privilegovaná loď), ale může provést
+    úhybný manévr jako krajní opatření, pokud motorová loď nereaguje.
+  </p>
+  <p>
+    Pozor: Pokud plachetnice pluje <strong>zároveň pod motorem</strong> (byť s vytaženými plachtami),
+    chová se jako motorová loď (COLREG, Pravidlo 25e) a hierarchie přednosti se mění.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 18 (Povinnosti lodí vůči sobě), Pravidlo 15 (Křížení kursů), Pravidlo 16 (Povinnost ustupující lodi), Pravidlo 17 (Povinnost privilegované lodi), Pravidlo 25 (Plachetnice v plavbě)</li>
+    <li>Zákon č. 61/2000 Sb. o námořní plavbě — § 8 (bezpečnost plavby, odkaz na mezinárodní pravidla)</li>
+  </ol>
+
+</article>

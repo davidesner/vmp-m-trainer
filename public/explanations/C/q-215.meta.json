@@ -1,0 +1,12 @@
+{
+  "qid": 215,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "SOLAS — Kapitola V, Pravidla 33–34",
+    "Zákon č. 61/2000 Sb. o námořní plavbě — § 25",
+    "COLREG 1972",
+    "Bowditch — American Practical Navigator"
+  ],
+  "model": "claude-opus-4-7"
+}

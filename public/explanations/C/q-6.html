@@ -1,0 +1,118 @@
+<article class="vmp-explanation">
+  <h2>Mlha, sníh, déšť, písečná bouře — jak se tento stav nazývá?</h2>
+
+  <h3>Jádro</h3>
+  <p>Správná odpověď je <strong>„snížená viditelnost“</strong>. Mezinárodní pravidla pro zabránění srážkám na moři (COLREG 1972) přesně definují, že jakékoli povětrnostní podmínky omezující dohlednost — mlha, mlhový opar, padající sníh, silný déšť, písečné bouře a obdobné jevy — spadají pod jediný technický pojem <em>restricted visibility</em>, tj. snížená viditelnost. Není to tedy „omezená manévrovací schopnost“ (to je jiná, technicky daná kategorie plavidla podle povahy jeho práce) ani „snížená manévrovací schopnost plavidla“ (ta vzniká z technického stavu lodi, nikoli z počasí).</p>
+
+  <h3>Pozadí</h3>
+  <p>Pojem definuje <strong>COLREG 1972, Pravidlo 3 písm. l)</strong>:</p>
+  <blockquote>„Pojem <em>snížená viditelnost</em> znamená jakékoli podmínky, při nichž je viditelnost omezena mlhou, mlhovým oparem, padajícím sněhem, silným deštěm, písečnou bouří nebo z jiných podobných příčin.“</blockquote>
+  <p>Na tuto definici pak navazuje celý <strong>Oddíl III COLREG (Pravidla 19 a 35)</strong>:</p>
+  <ul>
+    <li><strong>Pravidlo 19</strong> — chování plavidel při plavbě ve snížené viditelnosti (bezpečná rychlost, používání radaru, povinnost zastavit při zaslechnutí mlhového signálu před traverzem atd.).</li>
+    <li><strong>Pravidlo 35</strong> — zvukové signály ve snížené viditelnosti (např. plavidlo s vlastním pohonem v pohybu: jeden dlouhý zvuk každé nejvýše 2 minuty; v klidu: dva dlouhé zvuky; vlečné, nemanévrující, omezené ponorem apod. mají signál „dlouhý – krátký – krátký“).</li>
+  </ul>
+  <p>Důležitý rozdíl od ostatních možností:</p>
+  <ul>
+    <li><em>„Plavidlo s omezenou manévrovací schopností“</em> (Pravidlo 3 písm. g) — plavidlo, které z povahy své práce nemůže manévrovat tak, jak by COLREG normálně vyžadoval (např. kladení kabelu, dragování min, doplňování paliva na moři).</li>
+    <li><em>„Plavidlo neschopné manévru“</em> (Pravidlo 3 písm. f) — plavidlo, které z výjimečné okolnosti (porucha) nemůže manévrovat. To je věc <strong>stavu lodi</strong>, nikoli počasí.</li>
+  </ul>
+
+  <h3>Vizualizace</h3>
+  <p>Schéma rozlišuje tři kategorie, které se v testu často zaměňují — počasí (snížená viditelnost) vs. dva typy stavu plavidla:</p>
+  <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Snížená viditelnost vs. omezená manévrovací schopnost vs. plavidlo neschopné manévru">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" style="fill:#334155"/>
+      </marker>
+    </defs>
+
+    <rect x="0" y="0" width="640" height="280" style="fill:#f8fafc"/>
+
+    <!-- Sloupec 1: Snížená viditelnost -->
+    <rect x="20" y="20" width="190" height="240" rx="10" style="fill:#e0f2fe;stroke:#0284c7;stroke-width:2"/>
+    <text x="115" y="46" text-anchor="middle" style="font:bold 14px sans-serif;fill:#0c4a6e">Snížená viditelnost</text>
+    <text x="115" y="64" text-anchor="middle" style="font:11px sans-serif;fill:#0c4a6e">(COLREG 3 písm. l)</text>
+
+    <!-- mlha + déšť ikona -->
+    <g transform="translate(40,80)">
+      <!-- mraky -->
+      <ellipse cx="50" cy="20" rx="40" ry="14" style="fill:#94a3b8"/>
+      <ellipse cx="75" cy="14" rx="28" ry="12" style="fill:#cbd5e1"/>
+      <!-- déšť -->
+      <line x1="30" y1="38" x2="26" y2="56" style="stroke:#0369a1;stroke-width:2"/>
+      <line x1="50" y1="38" x2="46" y2="56" style="stroke:#0369a1;stroke-width:2"/>
+      <line x1="70" y1="38" x2="66" y2="56" style="stroke:#0369a1;stroke-width:2"/>
+      <line x1="90" y1="38" x2="86" y2="56" style="stroke:#0369a1;stroke-width:2"/>
+      <!-- sníh -->
+      <text x="40" y="80" style="font:14px sans-serif;fill:#0c4a6e">* * *</text>
+      <!-- moře -->
+      <path d="M0,95 Q25,88 50,95 T100,95 T150,95" style="fill:none;stroke:#0284c7;stroke-width:2"/>
+    </g>
+
+    <text x="115" y="210" text-anchor="middle" style="font:11px sans-serif;fill:#0c4a6e">mlha, opar, sníh,</text>
+    <text x="115" y="224" text-anchor="middle" style="font:11px sans-serif;fill:#0c4a6e">silný déšť, písečná bouře</text>
+    <text x="115" y="248" text-anchor="middle" style="font:italic 11px sans-serif;fill:#0c4a6e">príčina: POČASÍ</text>
+
+    <!-- Sloupec 2: Omezená manévr. schopnost -->
+    <rect x="225" y="20" width="190" height="240" rx="10" style="fill:#fef3c7;stroke:#d97706;stroke-width:2"/>
+    <text x="320" y="46" text-anchor="middle" style="font:bold 14px sans-serif;fill:#78350f">Omezená manévrovací</text>
+    <text x="320" y="62" text-anchor="middle" style="font:bold 14px sans-serif;fill:#78350f">schopnost</text>
+    <text x="320" y="78" text-anchor="middle" style="font:11px sans-serif;fill:#78350f">(COLREG 3 písm. g)</text>
+
+    <!-- loď s jeřábem -->
+    <g transform="translate(245,100)">
+      <path d="M5,55 L145,55 L135,75 L15,75 Z" style="fill:#0f172a"/>
+      <rect x="40" y="30" width="50" height="25" style="fill:#475569"/>
+      <line x1="65" y1="30" x2="65" y2="0" style="stroke:#1e293b;stroke-width:3"/>
+      <line x1="65" y1="5" x2="110" y2="20" style="stroke:#1e293b;stroke-width:3"/>
+      <line x1="105" y1="20" x2="105" y2="50" style="stroke:#1e293b;stroke-width:2;stroke-dasharray:3,2"/>
+      <rect x="98" y="48" width="14" height="8" style="fill:#92400e"/>
+      <!-- signální koule-romb-koule -->
+      <circle cx="30" cy="15" r="4" style="fill:#0f172a"/>
+      <rect x="26" y="22" width="8" height="8" transform="rotate(45,30,26)" style="fill:#0f172a"/>
+      <circle cx="30" cy="33" r="4" style="fill:#0f172a"/>
+    </g>
+    <text x="320" y="220" text-anchor="middle" style="font:11px sans-serif;fill:#78350f">kladení kabelu, dragování,</text>
+    <text x="320" y="234" text-anchor="middle" style="font:11px sans-serif;fill:#78350f">doplňování paliva atd.</text>
+    <text x="320" y="252" text-anchor="middle" style="font:italic 11px sans-serif;fill:#78350f">príčina: POVAHA PRÁCE</text>
+
+    <!-- Sloupec 3: Neschopné manévru -->
+    <rect x="430" y="20" width="190" height="240" rx="10" style="fill:#fee2e2;stroke:#b91c1c;stroke-width:2"/>
+    <text x="525" y="46" text-anchor="middle" style="font:bold 14px sans-serif;fill:#7f1d1d">Plavidlo neschopné</text>
+    <text x="525" y="62" text-anchor="middle" style="font:bold 14px sans-serif;fill:#7f1d1d">manévru</text>
+    <text x="525" y="78" text-anchor="middle" style="font:11px sans-serif;fill:#7f1d1d">(COLREG 3 písm. f)</text>
+
+    <!-- pokažená loď -->
+    <g transform="translate(450,110)">
+      <path d="M5,55 L145,55 L135,75 L15,75 Z" style="fill:#0f172a"/>
+      <rect x="50" y="20" width="40" height="35" style="fill:#475569"/>
+      <line x1="70" y1="20" x2="70" y2="-5" style="stroke:#1e293b;stroke-width:3"/>
+      <!-- dvě černé koule nad sebou -->
+      <circle cx="70" cy="2" r="5" style="fill:#0f172a"/>
+      <circle cx="70" cy="16" r="5" style="fill:#0f172a"/>
+      <!-- znak poruchy -->
+      <text x="100" y="40" style="font:bold 18px sans-serif;fill:#dc2626">!</text>
+    </g>
+    <text x="525" y="220" text-anchor="middle" style="font:11px sans-serif;fill:#7f1d1d">porucha pohonu, kormidla,</text>
+    <text x="525" y="234" text-anchor="middle" style="font:11px sans-serif;fill:#7f1d1d">výjimečná okolnost</text>
+    <text x="525" y="252" text-anchor="middle" style="font:italic 11px sans-serif;fill:#7f1d1d">príčina: STAV LODI</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <ul>
+    <li><strong>Bezpečná rychlost:</strong> v podmínkách snížené viditelnosti je strojní plavidlo povinno mít stroje připravené k okamžitému manévru a plout bezpečnou rychlostí přizpůsobenou existující dohlednosti (Pravidlo 19 písm. b).</li>
+    <li><strong>Mlhové (zvukové) signály:</strong> jakmile vplujete do oblasti se sníženou viditelností, začnete vydávat mlhové signály podle Pravidla 35 — typicky jeden dlouhý zvuk každé 2 minuty u plavidla s vlastním pohonem v pohybu.</li>
+    <li><strong>Radar a poslech:</strong> v mlze sledujte radar/AIS a pozorně poslouchejte mlhové signály jiných plavidel; pokud zaslechnete signál zdánlivě před traverzem a nelze vyloučit riziko srážky, zastavte plavidlo (Pravidlo 19 písm. e).</li>
+    <li><strong>Pozor na záměnu pojmů na zkoušce:</strong> „omezená manévrovací schopnost“ se přiznává plavidlu podle <em>povahy práce</em> (a nese specifická denní znamení i světla — červené/bílé/červené); naopak „snížená viditelnost“ je <em>stav prostředí</em>, nikoli plavidla.</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li>COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři, <strong>Pravidlo 3 písm. l)</strong> (definice snížené viditelnosti).</li>
+    <li>COLREG 1972, <strong>Pravidlo 19</strong> — chování plavidel při plavbě ve snížené viditelnosti.</li>
+    <li>COLREG 1972, <strong>Pravidlo 35</strong> — zvukové signály ve snížené viditelnosti.</li>
+    <li>COLREG 1972, <strong>Pravidlo 3 písm. f) a g)</strong> — definice plavidla neschopného manévru a plavidla s omezenou manévrovací schopností.</li>
+    <li>Zákon č. <strong>61/2000 Sb.</strong>, o námořní plavbě — povinnost dodržovat mezinárodní pravidla bezpečné plavby.</li>
+  </ol>
+</article>

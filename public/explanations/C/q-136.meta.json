@@ -1,0 +1,13 @@
+{
+  "qid": 136,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IALA Maritime Buoyage System — Cardinal Marks, Section 3",
+    "Admiralty Chart 5011 — Symbols and Abbreviations",
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb. o námořní plavbě",
+    "COLREG 1972"
+  ],
+  "model": "claude-opus-4-7"
+}

@@ -1,0 +1,7 @@
+{
+  "qid": 107,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["IHO INT 1 — Symbols, Abbreviations and Terms Used on Charts", "Zákon č. 61/2000 Sb. o námořní plavbě", "Bowditch — American Practical Navigator"],
+  "model": "claude-sonnet-4-6"
+}

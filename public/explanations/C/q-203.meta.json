@@ -1,0 +1,11 @@
+{
+  "qid": 203,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "Zákon č. 61/2000 Sb. o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb. o technické způsobilosti a vybavení námořních rekreačních plavidel",
+    "ISO 12402-9 / EN 14144"
+  ],
+  "model": "claude-opus-4-7"
+}

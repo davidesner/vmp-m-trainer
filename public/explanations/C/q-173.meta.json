@@ -1,0 +1,12 @@
+{
+  "qid": 173,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — Guide to Meteorological Instruments and Methods of Observation (WMO-No. 8)",
+    "Bowditch — American Practical Navigator, NIMA Pub. No. 9",
+    "COLREG 1972 — Mezinárodní pravidla pro zabránění srážkám na moři",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-sonnet-4-6"
+}

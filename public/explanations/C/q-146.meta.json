@@ -1,0 +1,12 @@
+{
+  "qid": 146,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IALA Maritime Buoyage System Region A — Isolated Danger Marks",
+    "Zákon č. 61/2000 Sb., o námořní plavbě",
+    "Vyhláška č. 315/2000 Sb., o plavebních znacích",
+    "Admiralty Chart 5011 NP5011"
+  ],
+  "model": "claude-sonnet-4-6"
+}

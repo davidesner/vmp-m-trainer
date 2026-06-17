@@ -1,0 +1,11 @@
+{
+  "qid": 101,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "IHO S-4 – Regulations of the IHO for International (INT) Charts",
+    "Bowditch – American Practical Navigator",
+    "Zákon č. 61/2000 Sb. o námořní plavbě"
+  ],
+  "model": "claude-opus-4-7"
+}

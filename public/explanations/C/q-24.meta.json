@@ -1,0 +1,7 @@
+{
+  "qid": 24,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": ["COLREG 1972 – Pravidlo 13 (Předjíždění)", "COLREG 1972 – Pravidlo 18 (Povinnosti mezi různými třídami plavidel)", "Zákon č. 61/2000 Sb. o námořní plavbě"],
+  "model": "claude-opus-4-7"
+}

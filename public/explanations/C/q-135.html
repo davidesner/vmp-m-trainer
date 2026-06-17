@@ -1,0 +1,205 @@
+<article class="vmp-explanation">
+
+  <h2>Kardinální značení IALA — Západ: vrcholový znak dva kužele hroty k sobě</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Správná odpověď: vrcholový znak <strong>západní kardinální bóje</strong> v systému IALA tvoří
+      <strong>dva černé kužele hroty k sobě</strong> (jeden obrácen hrotem dolů, druhý hrotem nahoru,
+      setkávají se uprostřed — tvar přesýpacích hodin ⧖). Bezpečná, splavná voda leží
+      <strong>na západ od bóje</strong>, nebezpečí (mělčina, skála, vrak) je na východní straně od ní.
+      Plavidlo musí minout bóji tak, aby bóje zůstala na jeho <em>pravoboku</em> při kurzu na západ.
+    </p>
+    <p>
+      Tvar „přesýpacích hodin" (hroty k sobě) je mnemonická pomůcka pro <strong>západ (West = W)</strong>:
+      písmeno W připomíná tvar se středem stlačeným k sobě.
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Systém IALA (International Association of Marine Aids to Navigation and Lighthouse Authorities)
+      definuje <strong>kardinální značení</strong> jako skupinu čtyř bójí umístěných ve světových stranách
+      od nebezpečí. Každá z nich říká, na které straně od bóje je splavná voda.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Kardinální bóje</th>
+          <th>Vrcholový znak</th>
+          <th>Barva (shora)</th>
+          <th>Světlo</th>
+          <th>Splavná voda</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sever (N)</strong></td>
+          <td>Dva kužele hroty nahoru ▲▲</td>
+          <td>Černá / Žlutá</td>
+          <td>Nepřetržité záblesky Q nebo VQ</td>
+          <td>Severně od bóje</td>
+        </tr>
+        <tr>
+          <td><strong>Východ (E)</strong></td>
+          <td>Dva kužele základnami k sobě ◇</td>
+          <td>Černá / Žlutá / Černá</td>
+          <td>Q(3) nebo VQ(3) — skupiny po 3</td>
+          <td>Východně od bóje</td>
+        </tr>
+        <tr style="background:#fffbe6;">
+          <td><strong>Západ (W)</strong></td>
+          <td><strong>Dva kužele hroty k sobě ⧖</strong></td>
+          <td><strong>Žlutá / Černá / Žlutá</strong></td>
+          <td>Q(9) nebo VQ(9) — skupiny po 9</td>
+          <td><strong>Západně od bóje</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Jih (S)</strong></td>
+          <td>Dva kužele hroty dolů ▽▽</td>
+          <td>Žlutá / Černá</td>
+          <td>Q(6)+LFl nebo VQ(6)+LFl</td>
+          <td>Jižně od bóje</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Barva západní kardinální bóje je <strong>žlutá — černá — žlutá</strong> (nahoře žlutá, uprostřed
+      černý pruh, dole žlutá). Osvětlení: <strong>9 rychlých záblesky</strong> (Q(9) 15s nebo VQ(9) 10s)
+      — devítka připomíná polohu 9 hodin na hodinovém ciferníku, tj. západ.
+    </p>
+    <p>
+      Právní základ: IALA Maritime Buoyage System, Region A (Evropa, Afrika, Asie, Austrálie),
+      sekce 3.3 — Cardinal Marks. V ČR je systém IALA-A implementován vyhláškou
+      Ministerstva dopravy pro příbřežní plavbu v rámci zákona č. 61/2000 Sb. o námořní plavbě.
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" height="300"
+         aria-label="Kardinální bóje IALA — přehled všech čtyř světových stran s vrcholovými znaky">
+
+      <!-- Pozadí — voda -->
+      <rect x="0" y="0" width="420" height="300" fill="#cce8f5" rx="8"/>
+
+      <!-- Střed — nebezpečí -->
+      <ellipse cx="210" cy="150" rx="30" ry="18" fill="#c0a020" opacity="0.85"/>
+      <text x="210" y="154" font-size="10" fill="#5a3e00" font-family="sans-serif"
+            text-anchor="middle" font-weight="bold">NEBEZPEČÍ</text>
+
+      <!-- === SEVERNÍ BÓJE (nahoře) === -->
+      <!-- Stožár -->
+      <line x1="210" y1="48" x2="210" y2="88" stroke="#333" stroke-width="2.5"/>
+      <!-- Trup: černá nahoře, žlutá dole -->
+      <rect x="198" y="80" width="24" height="14" rx="3" fill="#111"/>
+      <rect x="198" y="87" width="24" height="7" rx="2" fill="#f5c800"/>
+      <!-- Vrcholový znak: ▲▲ (oba hroty nahoru) -->
+      <polygon points="210,30 201,48 219,48" fill="#111"/>
+      <polygon points="210,40 201,58 219,58" fill="#111"/>
+      <!-- Popisek -->
+      <text x="210" y="22" font-size="11" fill="#1a4a1a" font-family="sans-serif"
+            text-anchor="middle" font-weight="bold">SEVER ▲▲</text>
+      <text x="210" y="110" font-size="9" fill="#555" font-family="sans-serif"
+            text-anchor="middle">hroty nahoru</text>
+
+      <!-- === JIŽNÍ BÓJE (dole) === -->
+      <!-- Stožár -->
+      <line x1="210" y1="212" x2="210" y2="252" stroke="#333" stroke-width="2.5"/>
+      <!-- Trup: žlutá nahoře, černá dole -->
+      <rect x="198" y="206" width="24" height="14" rx="3" fill="#f5c800"/>
+      <rect x="198" y="213" width="24" height="7" rx="2" fill="#111"/>
+      <!-- Vrcholový znak: ▽▽ (oba hroty dolů) -->
+      <polygon points="210,270 201,252 219,252" fill="#111"/>
+      <polygon points="210,260 201,242 219,242" fill="#111"/>
+      <!-- Popisek -->
+      <text x="210" y="288" font-size="11" fill="#1a4a1a" font-family="sans-serif"
+            text-anchor="middle" font-weight="bold">JIH ▽▽</text>
+      <text x="210" y="298" font-size="9" fill="#555" font-family="sans-serif"
+            text-anchor="middle">hroty dolů</text>
+
+      <!-- === VÝCHODNÍ BÓJE (vpravo) === -->
+      <!-- Stožár -->
+      <line x1="340" y1="130" x2="340" y2="170" stroke="#333" stroke-width="2.5"/>
+      <!-- Trup: černá/žlutá/černá -->
+      <rect x="328" y="158" width="24" height="16" rx="3" fill="#111"/>
+      <rect x="328" y="163" width="24" height="6" fill="#f5c800"/>
+      <!-- Vrcholový znak: ◇ (základnami k sobě) -->
+      <polygon points="340,112 329,128 351,128" fill="#111"/>
+      <polygon points="340,148 329,132 351,132" fill="#111"/>
+      <!-- Popisek -->
+      <text x="360" y="144" font-size="11" fill="#1a4a1a" font-family="sans-serif"
+            font-weight="bold">VÝCHOD ◇</text>
+      <text x="360" y="157" font-size="9" fill="#555" font-family="sans-serif">základnami k sobě</text>
+
+      <!-- === ZÁPADNÍ BÓJE (vlevo) — SPRÁVNÁ === -->
+      <!-- Zvýraznění -->
+      <rect x="42" y="108" width="100" height="90" rx="8" fill="#fff9cc" stroke="#e0a000"
+            stroke-width="2" opacity="0.9"/>
+      <!-- Stožár -->
+      <line x1="80" y1="128" x2="80" y2="168" stroke="#333" stroke-width="2.5"/>
+      <!-- Trup: žlutá/černá/žlutá -->
+      <rect x="68" y="157" width="24" height="16" rx="3" fill="#f5c800"/>
+      <rect x="68" y="162" width="24" height="6" fill="#111"/>
+      <rect x="68" y="168" width="24" height="6" fill="#f5c800"/>
+      <!-- Vrcholový znak: ⧖ (hroty k sobě) -->
+      <polygon points="80,110 69,128 91,128" fill="#111"/>
+      <polygon points="80,148 69,130 91,130" fill="#111"/>
+      <!-- Popisek -->
+      <text x="80" y="103" font-size="11" fill="#8b4500" font-family="sans-serif"
+            text-anchor="middle" font-weight="bold">ZÁPAD ⧖</text>
+      <text x="80" y="188" font-size="10" fill="#8b4500" font-family="sans-serif"
+            text-anchor="middle" font-weight="bold">hroty k sobě ✓</text>
+      <text x="80" y="200" font-size="9" fill="#555" font-family="sans-serif"
+            text-anchor="middle">Ž / Č / Ž</text>
+
+      <!-- Šipka: bezpečná voda na západ -->
+      <line x1="42" y1="150" x2="12" y2="150" stroke="#1a7a1a" stroke-width="2" stroke-dasharray="4,3"/>
+      <polygon points="6,150 16,144 16,156" fill="#1a7a1a"/>
+      <text x="8" y="165" font-size="9" fill="#1a7a1a" font-family="sans-serif">bezp.</text>
+      <text x="8" y="175" font-size="9" fill="#1a7a1a" font-family="sans-serif">voda</text>
+
+    </svg>
+    <p><em>Zvýrazněná západní bóje (vlevo) — vrcholový znak: dva kužele hroty k sobě (⧖), barvy Žlutá/Černá/Žlutá.</em></p>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <p>
+      Při plavbě v pobřežních vodách v rámci systému IALA-A postupujte takto:
+    </p>
+    <ol>
+      <li>
+        <strong>Spatříte bóji se dvěma kužely hroty k sobě (⧖):</strong> jedná se o kardinální
+        západ — bezpečná voda je na západ od ní. Plavidlo musí bóji minout tak, aby
+        <em>zůstala na jeho pravoboku</em> (tj. jedete na západ od nebezpečí).
+      </li>
+      <li>
+        <strong>Noční navigace:</strong> hledejte světlo s <strong>9 záblesky ve skupině</strong>
+        (Q(9) nebo VQ(9)) — devítka odpovídá 9 hodinám na hodinovém ciferníku = západ.
+      </li>
+      <li>
+        <strong>Pozor na záměnu s izolovaným nebezpečím:</strong> i bóje izolovaného nebezpečí
+        má dva kužele hroty k sobě, ale má černočervené zbarvení a záblesky ve skupinách po dvou (Fl(2)).
+        Západ má žluto-černo-žluté zbarvení.
+      </li>
+      <li>
+        <strong>Mnemonická pomůcka:</strong> písmeno <em>W</em> (West) má tvar se středem
+        stlačeným dolů — jako hroty kužele setkávající se uprostřed.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li>IALA Maritime Buoyage System — Region A, sekce 3.3 „Cardinal Marks" (West Cardinal Mark)</li>
+      <li>Zákon č. 61/2000 Sb. o námořní plavbě, § 26 (plavební značení)</li>
+      <li>Vyhláška č. 315/2000 Sb. o technickém provozu lodí (příloha o plavebním značení)</li>
+      <li>Bowditch — American Practical Navigator, kapitola „Aids to Navigation", sekce IALA Buoyage</li>
+    </ol>
+  </section>
+
+</article>

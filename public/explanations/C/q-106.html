@@ -1,0 +1,77 @@
+<article class="vmp-explanation">
+  <h2>Znak přístavního úřadu na námořní mapě</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Zobrazený znak — kotva v osmihranném rámečku — označuje na námořní mapě <strong>přístavní úřad</strong>
+    (anglicky <em>Harbour Master's Office</em>). Jde o standardizovaný kartografický symbol, který
+    navigátorům ukazuje, kde sídlí místní námořní správa zodpovědná za provoz přístavu.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Symboly na námořních mapách jsou celosvětově sjednoceny prostřednictvím publikace
+    <strong>INT 1 (Symbols, Abbreviations and Terms used on Charts)</strong>, vydávané Mezinárodní
+    hydrografickou organizací (IHO). Česká republika jako signatář IHO tuto normu přebírá.
+    Přístavní úřad (<em>Harbour Master</em>) je v INT 1 zařazen do sekce <strong>F — Services</strong>
+    a jeho symbolem je právě kotva v uzavřeném osmihranném (nebo oválném) rámečku.
+  </p>
+  <p>
+    V českém právním řádu je přístavní úřad upraven <strong>zákonem č. 61/2000 Sb. o námořní
+    plavbě</strong>. Přístavní úřad vydává povolení k vstupu a odplutí, kontroluje dodržování
+    bezpečnostních předpisů a vede evidenci plavidel v přístavu.
+  </p>
+
+  <h3>Vizualizace</h3>
+  <div style="text-align:center; margin: 1em 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="260" height="120" viewBox="0 0 260 120">
+      <!-- Legenda: tři kandidáti se zvýrazněním správného -->
+      <!-- Přístavní úřad -->
+      <g transform="translate(10,10)">
+        <rect x="0" y="0" width="70" height="70" rx="12" ry="12" fill="#e8f4e8" stroke="#2a7a2a" stroke-width="2"/>
+        <!-- kotva zjednodušená -->
+        <line x1="35" y1="12" x2="35" y2="58" stroke="#2a7a2a" stroke-width="3"/>
+        <line x1="20" y1="20" x2="50" y2="20" stroke="#2a7a2a" stroke-width="3"/>
+        <path d="M20,58 Q35,68 50,58" fill="none" stroke="#2a7a2a" stroke-width="3"/>
+        <circle cx="35" cy="12" r="4" fill="#2a7a2a"/>
+        <circle cx="20" cy="58" r="4" fill="#2a7a2a"/>
+        <circle cx="50" cy="58" r="4" fill="#2a7a2a"/>
+        <text x="35" y="85" text-anchor="middle" font-size="11" fill="#2a7a2a" font-weight="bold">Přístavní úřad</text>
+        <text x="35" y="100" text-anchor="middle" font-size="10" fill="#2a7a2a">✓ správně</text>
+      </g>
+      <!-- Kóta -->
+      <g transform="translate(95,10)">
+        <rect x="0" y="0" width="70" height="70" rx="4" ry="4" fill="#f5f5f5" stroke="#999" stroke-width="1.5"/>
+        <!-- trojúhelník = kóta / výšková značka -->
+        <polygon points="35,15 10,55 60,55" fill="none" stroke="#888" stroke-width="2"/>
+        <circle cx="35" cy="15" r="3" fill="#888"/>
+        <text x="35" y="85" text-anchor="middle" font-size="11" fill="#888">Kóta / výšina</text>
+        <text x="35" y="100" text-anchor="middle" font-size="10" fill="#bbb">✗</text>
+      </g>
+      <!-- Celnice -->
+      <g transform="translate(180,10)">
+        <rect x="0" y="0" width="70" height="70" rx="4" ry="4" fill="#f5f5f5" stroke="#999" stroke-width="1.5"/>
+        <!-- H / Cust symbol -->
+        <text x="35" y="44" text-anchor="middle" font-size="28" fill="#aaa" font-family="serif">H</text>
+        <text x="35" y="85" text-anchor="middle" font-size="11" fill="#888">Celnice</text>
+        <text x="35" y="100" text-anchor="middle" font-size="10" fill="#bbb">✗</text>
+      </g>
+    </svg>
+  </div>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    Při plánování vstupu do cizího přístavu navigátor na mapě vyhledá symbol přístavního úřadu,
+    aby zjistil, kam se ohlásit a kde vyřídit formalitiy (clearance). Přístavní úřad je první
+    kontaktní místo zejména při příjezdu z jiné země — zajišťuje součinnost s celnicí a pohraniční
+    kontrolou, ale sám celnici nepředstavuje. Zaměňování tohoto symbolu s kótou nebo celnicí
+    by mohlo vést k nesprávné navigaci v přístavu.
+  </p>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>IHO INT 1</strong> — Symbols, Abbreviations and Terms used on Charts, sekce F (Services), symbol F.60</li>
+    <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — ustanovení o přístavním úřadu a jeho působnosti</li>
+    <li><strong>Vyhláška č. 315/2000 Sb.</strong> — prováděcí předpisy k námořní plavbě</li>
+  </ol>
+</article>

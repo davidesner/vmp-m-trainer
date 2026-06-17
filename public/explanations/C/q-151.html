@@ -1,0 +1,77 @@
+<article class="vmp-explanation">
+  <h2>Normální atmosférický tlak přepočtený na hladinu moře</h2>
+
+  <h3>Jádro</h3>
+  <p>
+    Správná odpověď je <strong>1013 hPa</strong>. Tato hodnota představuje mezinárodně přijatý standard normálního (středního) atmosférického tlaku přepočteného na hladinu moře (MSL — Mean Sea Level). Slouží jako referenční bod pro meteorologii, letectví i námořní navigaci.
+  </p>
+
+  <h3>Pozadí</h3>
+  <p>
+    Hodnota 1013,25 hPa (zaokrouhleně 1013 hPa) je definována <strong>Mezinárodní standardní atmosférou (ISA — International Standard Atmosphere)</strong>, standardizovanou organizací ICAO (International Civil Aviation Organization) a WMO (World Meteorological Organization). Odpovídá sloupci rtuti o výšce 760 mm (29,92 palce) při teplotě 15 °C na hladině moře.
+  </p>
+  <ul>
+    <li><strong>1 atm = 1013,25 hPa = 101 325 Pa</strong> — základní fyzikální konstanta.</li>
+    <li>Hodnota 993 hPa by odpovídala oblasti s výrazně sníženým tlakem (typicky hluboká cyklona nebo oblast tropického cyklonu).</li>
+    <li>Hodnota 1023 hPa je sice v rámci normálního rozsahu (anticyklona), ale není standardní referenční hodnotou.</li>
+  </ul>
+
+  <h3>Vizualizace</h3>
+  <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;width:100%;display:block;margin:1em auto;">
+    <!-- Background -->
+    <rect width="420" height="200" fill="#f0f4f8" rx="8"/>
+
+    <!-- Scale bar background -->
+    <rect x="30" y="80" width="360" height="40" fill="#dce8f5" rx="4"/>
+
+    <!-- Low pressure zone (cyklona) -->
+    <rect x="30" y="80" width="90" height="40" fill="#f5a623" rx="4"/>
+    <text x="75" y="75" text-anchor="middle" font-size="11" fill="#b35c00">Cyklona</text>
+    <text x="75" y="105" text-anchor="middle" font-size="12" fill="#7a3b00" style="font-weight:bold;">≈ 993 hPa</text>
+
+    <!-- Normal pressure marker -->
+    <rect x="155" y="78" width="4" height="44" fill="#1a7f4b"/>
+    <text x="157" y="72" text-anchor="middle" font-size="11" fill="#1a7f4b" style="font-weight:bold;">Normál</text>
+    <text x="157" y="136" text-anchor="middle" font-size="13" fill="#1a7f4b" style="font-weight:bold;">1013 hPa</text>
+    <!-- Arrow pointing to marker -->
+    <line x1="157" y1="143" x2="157" y2="123" stroke="#1a7f4b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- High pressure zone (anticyklona) -->
+    <rect x="310" y="80" width="80" height="40" fill="#6baed6" rx="4"/>
+    <text x="350" y="75" text-anchor="middle" font-size="11" fill="#08519c">Anticyklona</text>
+    <text x="350" y="105" text-anchor="middle" font-size="12" fill="#08519c" style="font-weight:bold;">≈ 1023 hPa</text>
+
+    <!-- Scale labels -->
+    <text x="30" y="170" font-size="10" fill="#555">980</text>
+    <text x="390" y="170" text-anchor="end" font-size="10" fill="#555">1040 hPa</text>
+    <line x1="30" y1="162" x2="390" y2="162" stroke="#aaa" stroke-width="1"/>
+    <!-- Tick marks -->
+    <line x1="157" y1="158" x2="157" y2="166" stroke="#1a7f4b" stroke-width="2"/>
+
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="#1a7f4b"/>
+      </marker>
+    </defs>
+
+    <text x="210" y="22" text-anchor="middle" font-size="14" fill="#222" style="font-weight:bold;">Stupnice atmosférického tlaku (hPa)</text>
+  </svg>
+
+  <h3>Praktická aplikace</h3>
+  <p>
+    V námořní praxi slouží hodnota 1013 hPa jako referenční bod při čtení barometru a předpovědi počasí:
+  </p>
+  <ul>
+    <li>Tlak <strong>výrazně pod 1013 hPa</strong> (pod 1000 hPa) signalizuje blížící se cyklonu, silný vítr a nepříznivé počasí — navigator zpozorní a sleduje trend (rychlost poklesu tlaku).</li>
+    <li>Tlak <strong>nad 1013 hPa</strong> (anticyklona, 1020–1030 hPa) obvykle znamená stabilní, klidné počasí.</li>
+    <li>Barometr na lodi je nastaven na MSL — to umožňuje přímé srovnání s meteorologickými zprávami a synoptickými mapami vydávanými pobřežními stanicemi a NAVTEX.</li>
+    <li>Při nastavování výškoměru v letectví i při výpočtu výšky antény / vztlaku vzduchu v námořní meteorologii je ISA 1013,25 hPa výchozím bodem (QNH, QFE nastavení).</li>
+  </ul>
+
+  <h3>Zdroje</h3>
+  <ol>
+    <li><strong>ICAO Standard Atmosphere (ICAO Doc 7488)</strong> — definice ISA: tlak 1013,25 hPa, teplota 15 °C na MSL.</li>
+    <li><strong>WMO — World Meteorological Organization, Guide to Meteorological Instruments and Methods of Observation (WMO-No. 8)</strong> — standardní referenční podmínky pro přepočet tlaku na hladinu moře.</li>
+    <li><strong>Bowditch — American Practical Navigator (Pub. 9), kap. Meteorology</strong> — použití barometru a MSL tlaku v námořní praxi.</li>
+  </ol>
+</article>

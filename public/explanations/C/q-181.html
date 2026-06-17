@@ -1,0 +1,104 @@
+<article class="vmp-explanation">
+  <h2>Synoptická mapa — teplá fronta</h2>
+
+  <section>
+    <h3>Jádro</h3>
+    <p>
+      Symbol zobrazený na obrázku — plná čára s polokruhovými výstupky (buňkami) na jedné straně — je mezinárodně standardizované značení <strong>teplé fronty</strong>. Polokruhy vždy míří ve směru pohybu fronty a označují, že teplý vzduch postupuje a vytlačuje chladnější vzdušnou hmotu. Správná odpověď je tedy „teplá fronta".
+    </p>
+  </section>
+
+  <section>
+    <h3>Pozadí</h3>
+    <p>
+      Meteorologické fronty jsou hranice mezi vzdušnými hmotami s různou teplotou a vlhkostí. Na synoptických (povětrnostních) mapách se používají tato standardní označení:
+    </p>
+    <ul>
+      <li><strong>Teplá fronta</strong> — plná čára s polokruhovými výstupky (směřují ve směru pohybu fronty).</li>
+      <li><strong>Studená fronta</strong> — plná čára s trojúhelníkovými výstupky (hroty směřují ve směru pohybu fronty).</li>
+      <li><strong>Okluzní fronta</strong> — střídající se polokruhy a trojúhelníky na jedné straně (kombinace teplé a studené fronty).</li>
+    </ul>
+    <p>
+      Symbol na obrázku nese pouze polokruhy bez trojúhelníků, což jednoznačně odpovídá teplé frontě. Tento způsob zobrazení je stanoven Světovou meteorologickou organizací (WMO) a je závazný pro všechny synoptické mapy vydávané meteorologickými službami.
+    </p>
+    <p>
+      Teplá fronta vzniká, když teplá vzdušná hmota postupuje a podklouzává pod chladnější vzduch. Postup je pozvolný (sklon fronty cca 1:150 až 1:300), takže předchozí oblačnost a srážky zasahují daleko před samotnou frontou. Typická posloupnost oblaků: cirrus → cirrostratus → altostratus → nimbostratus.
+    </p>
+  </section>
+
+  <section>
+    <h3>Vizualizace — srovnání frontálních symbolů</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 210" width="520" height="210" aria-label="Srovnání symbolů meteorologických front">
+      <!-- Teplá fronta -->
+      <text x="10" y="28" font-size="13" font-weight="bold" fill="#c0392b">Teplá fronta</text>
+      <line x1="10" y1="60" x2="340" y2="60" stroke="#c0392b" stroke-width="3"/>
+      <!-- polokruhy nad čárou -->
+      <circle cx="50"  cy="60" r="13" fill="#c0392b" stroke="#c0392b"/>
+      <circle cx="100" cy="60" r="13" fill="#c0392b" stroke="#c0392b"/>
+      <circle cx="150" cy="60" r="13" fill="#c0392b" stroke="#c0392b"/>
+      <circle cx="200" cy="60" r="13" fill="#c0392b" stroke="#c0392b"/>
+      <circle cx="250" cy="60" r="13" fill="#c0392b" stroke="#c0392b"/>
+      <circle cx="300" cy="60" r="13" fill="#c0392b" stroke="#c0392b"/>
+      <!-- mask so only upper half shows -->
+      <rect x="10" y="60" width="340" height="18" fill="white"/>
+      <text x="360" y="65" font-size="11" fill="#c0392b">← směr pohybu</text>
+
+      <!-- Studená fronta -->
+      <text x="10" y="110" font-size="13" font-weight="bold" fill="#2980b9">Studená fronta</text>
+      <line x1="10" y1="145" x2="340" y2="145" stroke="#2980b9" stroke-width="3"/>
+      <!-- trojúhelníky pod čárou -->
+      <polygon points="50,145 37,165 63,165" fill="#2980b9"/>
+      <polygon points="100,145 87,165 113,165" fill="#2980b9"/>
+      <polygon points="150,145 137,165 163,165" fill="#2980b9"/>
+      <polygon points="200,145 187,165 213,165" fill="#2980b9"/>
+      <polygon points="250,145 237,165 263,165" fill="#2980b9"/>
+      <polygon points="300,145 287,165 313,165" fill="#2980b9"/>
+      <text x="360" y="150" font-size="11" fill="#2980b9">← směr pohybu</text>
+
+      <!-- Okluzní fronta -->
+      <text x="10" y="188" font-size="13" font-weight="bold" fill="#8e44ad">Okluzní fronta — střídání</text>
+    </svg>
+
+    <!-- Separate cleaner okluzní fronta illustration -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" width="400" height="60" aria-label="Okluzní fronta symbol">
+      <line x1="10" y1="30" x2="370" y2="30" stroke="#8e44ad" stroke-width="3"/>
+      <!-- alternating: circle, triangle, circle, triangle ... above line -->
+      <circle cx="50"  cy="30" r="11" fill="#8e44ad"/>
+      <rect x="39" y="30" width="22" height="14" fill="white"/>
+      <polygon points="110,30 97,12 123,12" fill="#8e44ad"/>
+      <circle cx="170" cy="30" r="11" fill="#8e44ad"/>
+      <rect x="159" y="30" width="22" height="14" fill="white"/>
+      <polygon points="230,30 217,12 243,12" fill="#8e44ad"/>
+      <circle cx="290" cy="30" r="11" fill="#8e44ad"/>
+      <rect x="279" y="30" width="22" height="14" fill="white"/>
+      <polygon points="350,30 337,12 363,12" fill="#8e44ad"/>
+    </svg>
+    <p style="font-size:0.9em; color:#555;">Nahoře: červená = teplá fronta (polokruhy), modrá = studená fronta (trojúhelníky), fialová = okluzní fronta (kombinace). Obrázek v otázce odpovídá červenému vzoru.</p>
+  </section>
+
+  <section>
+    <h3>Praktická aplikace</h3>
+    <p>
+      Námořník při plánování plavby nebo hlídky sleduje synoptické mapy, aby odhadl přicházející počasí. Přítomnost teplé fronty na mapě naznačuje:
+    </p>
+    <ul>
+      <li>Pozvolné zhoršování viditelnosti — nejprve vysoké tenké oblaky, poté hustší oblačnost a mlha.</li>
+      <li>Trvalé, někdy vytrvalé srážky při přechodu fronty.</li>
+      <li>Po přechodu fronty oteplení a zlepšení počasí, ale možná snížená viditelnost (teplý vzduch nad studeným mořem může tvořit mlhu).</li>
+      <li>Vítr se zpravidla stáčí ve směru hodinových ručiček (na severní polokouli) — z jihovýchodu na jihozápad a západ.</li>
+    </ul>
+    <p>
+      Správné rozpoznání frontálního symbolu je základní dovednost při čtení MAFOR (maritimní předpovědi) a NAVTEX zpráv, které námořníci přijímají na palubě.
+    </p>
+  </section>
+
+  <section>
+    <h3>Zdroje</h3>
+    <ol>
+      <li><strong>WMO No. 485 — Manual on the Global Observing System</strong> — standardy pro zobrazování meteorologických front na synoptických mapách.</li>
+      <li><strong>WMO No. 306 — Manual on Codes</strong> — kódování a symboly synoptických map (FM 20 SYNOP, FM 45 PILOT).</li>
+      <li><strong>Bowditch — American Practical Navigator</strong>, kapitola Meteorologie — frontální systémy a jejich rozpoznávání.</li>
+      <li><strong>Zákon č. 61/2000 Sb. o námořní plavbě</strong> — obecný rámec povinností námořníka při sledování meteorologických podmínek.</li>
+    </ol>
+  </section>
+</article>

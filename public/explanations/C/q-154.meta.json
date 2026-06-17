@@ -1,0 +1,11 @@
+{
+  "qid": 154,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "WMO — Příručka synoptické meteorologie",
+    "Bowditch — American Practical Navigator",
+    "Vyhláška č. 315/2000 Sb. o navigaci a bezpečnosti plavby"
+  ],
+  "model": "claude-opus-4-7"
+}

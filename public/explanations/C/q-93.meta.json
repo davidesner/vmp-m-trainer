@@ -1,0 +1,11 @@
+{
+  "qid": 93,
+  "test_id": "C",
+  "generated_at": "2026-06-15T19:50:00Z",
+  "sources": [
+    "COLREG 1972 (Mezinárodní pravidla pro zabránění srážkám na moři) — Pravidlo 6",
+    "Bowditch — American Practical Navigator",
+    "SI Brochure (BIPM) — definice jednotek rychlosti"
+  ],
+  "model": "claude-sonnet-4-6"
+}
