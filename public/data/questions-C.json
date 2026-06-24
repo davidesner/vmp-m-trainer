@@ -3006,15 +3006,18 @@
       "options": [
         {
           "key": "a",
-          "text": "dva kužele základnami k sobě (tvar přesýpacích hodin)"
+          "text": "",
+          "image": "/data/images/C/N16.jpg"
         },
         {
           "key": "b",
-          "text": "dva kužele hroty k sobě"
+          "text": "",
+          "image": "/data/images/C/N17.jpg"
         },
         {
           "key": "c",
-          "text": "dva kužele hroty nahoru"
+          "text": "",
+          "image": "/data/images/C/N18.jpg"
         }
       ],
       "correct": "a"
@@ -3028,15 +3031,18 @@
       "options": [
         {
           "key": "a",
-          "text": "dva kužele hroty k sobě"
+          "text": "",
+          "image": "/data/images/C/N18.jpg"
         },
         {
           "key": "b",
-          "text": "dva kužele základnami k sobě"
+          "text": "",
+          "image": "/data/images/C/N16.jpg"
         },
         {
           "key": "c",
-          "text": "dva kužele hroty dolů"
+          "text": "",
+          "image": "/data/images/C/N17.jpg"
         }
       ],
       "correct": "a"
@@ -3050,15 +3056,18 @@
       "options": [
         {
           "key": "a",
-          "text": "dva kužele hroty dolů"
+          "text": "",
+          "image": "/data/images/C/N19.jpg"
         },
         {
           "key": "b",
-          "text": "dva kužele hroty nahoru"
+          "text": "",
+          "image": "/data/images/C/N18.jpg"
         },
         {
           "key": "c",
-          "text": "dva kužele hroty k sobě"
+          "text": "",
+          "image": "/data/images/C/N16.jpg"
         }
       ],
       "correct": "a"
@@ -3072,15 +3081,18 @@
       "options": [
         {
           "key": "a",
-          "text": "dva kužele hroty nahoru"
+          "text": "",
+          "image": "/data/images/C/N17.jpg"
         },
         {
           "key": "b",
-          "text": "dva kužele hroty dolů"
+          "text": "",
+          "image": "/data/images/C/N16.jpg"
         },
         {
           "key": "c",
-          "text": "dva kužele základnami k sobě"
+          "text": "",
+          "image": "/data/images/C/N19.jpg"
         }
       ],
       "correct": "a"
@@ -3270,15 +3282,18 @@
       "options": [
         {
           "key": "a",
-          "text": "dva černé koule nad sebou"
+          "text": "",
+          "image": "/data/images/C/N24.jpg"
         },
         {
           "key": "b",
-          "text": "jedna červená koule"
+          "text": "",
+          "image": "/data/images/C/N25.jpg"
         },
         {
           "key": "c",
-          "text": "kříž (X)"
+          "text": "",
+          "image": "/data/images/C/N26.jpg"
         }
       ],
       "correct": "a"
@@ -4084,15 +4099,18 @@
       "options": [
         {
           "key": "a",
-          "text": "fialová linie se střídajícími trojúhelníky a půlkruhy na téže straně"
+          "text": "",
+          "image": "/data/images/C/M09.jpg"
         },
         {
           "key": "b",
-          "text": "červená linie s půlkruhy"
+          "text": "",
+          "image": "/data/images/C/M07.jpg"
         },
         {
           "key": "c",
-          "text": "modrá linie s trojúhelníky"
+          "text": "",
+          "image": "/data/images/C/M08.jpg"
         }
       ],
       "correct": "a"
@@ -4128,15 +4146,18 @@
       "options": [
         {
           "key": "a",
-          "text": "čárka ( , )"
+          "text": "",
+          "image": "/data/images/C/M13.jpg"
         },
         {
           "key": "b",
-          "text": "tečka ( • )"
+          "text": "",
+          "image": "/data/images/C/M11.jpg"
         },
         {
           "key": "c",
-          "text": "hvězdice ( * )"
+          "text": "",
+          "image": "/data/images/C/M12.jpg"
         }
       ],
       "correct": "a"
