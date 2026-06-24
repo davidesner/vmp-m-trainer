@@ -3006,15 +3006,15 @@
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "dva kužele základnami k sobě (tvar přesýpacích hodin)"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "dva kužele hroty k sobě"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "dva kužele hroty nahoru"
         }
       ],
       "correct": "a"
@@ -3028,15 +3028,15 @@
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "dva kužele hroty k sobě"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "dva kužele základnami k sobě"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "dva kužele hroty dolů"
         }
       ],
       "correct": "a"
@@ -3050,15 +3050,15 @@
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "dva kužele hroty dolů"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "dva kužele hroty nahoru"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "dva kužele hroty k sobě"
         }
       ],
       "correct": "a"
@@ -3072,15 +3072,15 @@
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "dva kužele hroty nahoru"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "dva kužele hroty dolů"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "dva kužele základnami k sobě"
         }
       ],
       "correct": "a"
@@ -3270,15 +3270,15 @@
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "dva černé koule nad sebou"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "jedna červená koule"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "kříž (X)"
         }
       ],
       "correct": "a"
@@ -4084,15 +4084,15 @@
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "fialová linie se střídajícími trojúhelníky a půlkruhy na téže straně"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "červená linie s půlkruhy"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "modrá linie s trojúhelníky"
         }
       ],
       "correct": "a"
@@ -4128,15 +4128,15 @@
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "čárka ( , )"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "tečka ( • )"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "hvězdice ( * )"
         }
       ],
       "correct": "a"
