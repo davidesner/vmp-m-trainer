@@ -38,7 +38,9 @@ export default function QuestionCard({ question, selectedKey, revealedCorrect, o
               disabled={revealedCorrect !== null}
             >
               <span className="text-neutral-500 font-semibold mr-2">{opt.key})</span>
-              {opt.text}
+              {opt.image
+                ? <img src={opt.image} alt={opt.text || opt.key} className="inline-block max-h-20 align-middle" />
+                : opt.text}
               {revealedCorrect === opt.key && <span className="ml-2 text-primary-dark text-xs font-medium">✓ správně</span>}
               {isWrongChosen && <span className="ml-2 text-danger text-xs font-medium">✗ tvoje odpověď</span>}
             </button>
