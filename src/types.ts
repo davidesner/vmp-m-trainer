@@ -13,6 +13,7 @@ export interface Group {
 export interface QuestionOption {
   key: 'a' | 'b' | 'c'
   text: string
+  image?: string | null
 }
 
 export interface Question {
