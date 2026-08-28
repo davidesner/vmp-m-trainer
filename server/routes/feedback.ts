@@ -24,7 +24,7 @@ export function feedbackRoutes(deps: FeedbackDeps = {}) {
 
     const body = await c.req.json().catch(() => null) as { testId?: unknown; qid?: unknown; message?: unknown } | null
     if (!body) return c.json({ error: 'bad request' }, 400)
-    const TEST_IDS = ['M', 'C'] as const
+    const TEST_IDS = ['M', 'C', 'S'] as const
     if (typeof body.testId !== 'string' || !TEST_IDS.includes(body.testId as typeof TEST_IDS[number])) {
       return c.json({ error: 'bad testId' }, 400)
     }

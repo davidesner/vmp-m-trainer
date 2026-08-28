@@ -1,6 +1,6 @@
 // Registry kategorií zkoušky. Přidej sem novou položku, až přibude S.
 
-export type TestId = 'M' | 'C'
+export type TestId = 'M' | 'C' | 'S'
 
 export interface TestMeta {
   id: TestId
@@ -28,10 +28,18 @@ export const TESTS: Record<TestId, TestMeta> = {
     dataUrl: '/data/questions-C.json',
     explanationsBase: '/explanations/C',
   },
+  S: {
+    id: 'S',
+    label: 'S',
+    name: 'Plachetnice',
+    shortDesc: 'Plachetnice',
+    dataUrl: '/data/questions-S.json',
+    explanationsBase: '/explanations/S',
+  },
 }
 
-export const TEST_IDS: TestId[] = ['M', 'C']
+export const TEST_IDS: TestId[] = ['M', 'C', 'S']
 
 export function isTestId(v: unknown): v is TestId {
-  return typeof v === 'string' && (v === 'M' || v === 'C')
+  return typeof v === 'string' && (v === 'M' || v === 'C' || v === 'S')
 }

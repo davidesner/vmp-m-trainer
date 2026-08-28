@@ -68,4 +68,29 @@ export const CATEGORIES = {
     ],
     passing: { score: 24, total: 28, durationMin: 25 },
   },
+
+  S: {
+    label: 'S',
+    name: 'Plachetnice',
+    version: 'S-2015',
+    url: 'http://www.spspraha.cz/zkousky/otazky.asp?zp=S+2015',
+    parser: 'parseC',
+    zkratkaToGroup: {
+      P1: 'nazvoslovi-druhy-plachetnic',
+      P2: 'konstrukce-plachetnic',
+      P3: 'teorie-plachteni',
+      P4: 'plavba-pod-plachtami',
+    },
+    groups: [
+      { id: 'nazvoslovi-druhy-plachetnic', name: 'Názvosloví a druhy plachetnic',      zkratky: ['P1'] },
+      { id: 'konstrukce-plachetnic',       name: 'Konstrukce a vlastnosti plachetnic', zkratky: ['P2'] },
+      { id: 'teorie-plachteni',            name: 'Teorie plavby a stabilita',          zkratky: ['P3'] },
+      { id: 'plavba-pod-plachtami',        name: 'Plavba pod plachtami a manévry',     zkratky: ['P4'] },
+    ],
+    // Zkouška S: 14 otázek náhodně z celé databáze (P1–P4), bez per-skupinové kvóty.
+    testStructure: [
+      { groups: ['nazvoslovi-druhy-plachetnic', 'konstrukce-plachetnic', 'teorie-plachteni', 'plavba-pod-plachtami'], count: 14 },
+    ],
+    passing: { score: 11, total: 14, durationMin: 10 },
+  },
 }

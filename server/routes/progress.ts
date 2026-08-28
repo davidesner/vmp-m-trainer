@@ -5,7 +5,7 @@ import type { Db } from '../db/client.js'
 import { attempts, testHistory } from '../db/schema.js'
 import { requireAuth } from '../auth/middleware.js'
 
-const TEST_IDS = ['M', 'C'] as const
+const TEST_IDS = ['M', 'C', 'S'] as const
 type TestId = typeof TEST_IDS[number]
 
 function parseTestId(v: string | undefined): TestId | null {
