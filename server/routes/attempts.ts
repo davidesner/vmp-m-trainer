@@ -5,7 +5,7 @@ import { attempts } from '../db/schema.js'
 import { requireAuth } from '../auth/middleware.js'
 
 const MODES = ['test', 'practice'] as const
-const TEST_IDS = ['M', 'C'] as const
+const TEST_IDS = ['M', 'C', 'S'] as const
 
 export function attemptsRoutes(opts: { db: Db }) {
   const r = new Hono<AppEnv>()

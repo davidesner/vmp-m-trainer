@@ -14,6 +14,7 @@
     "scrape": "node scripts/scrape.mjs",
     "scrape:M": "node scripts/scrape.mjs M",
     "scrape:C": "node scripts/scrape.mjs C",
+    "scrape:S": "node scripts/scrape.mjs S",
     "package-skill": "bash scripts/package-skill.sh",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx server/db/migrate.ts",

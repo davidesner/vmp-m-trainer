@@ -1,0 +1,3794 @@
+{
+  "testId": "S",
+  "version": "S-2015",
+  "name": "Plachetnice",
+  "scrapedAt": "2026-08-28T09:03:03.236Z",
+  "groups": [
+    {
+      "id": "nazvoslovi-druhy-plachetnic",
+      "name": "Názvosloví a druhy plachetnic",
+      "zkratky": [
+        "P1"
+      ]
+    },
+    {
+      "id": "konstrukce-plachetnic",
+      "name": "Konstrukce a vlastnosti plachetnic",
+      "zkratky": [
+        "P2"
+      ]
+    },
+    {
+      "id": "teorie-plachteni",
+      "name": "Teorie plavby a stabilita",
+      "zkratky": [
+        "P3"
+      ]
+    },
+    {
+      "id": "plavba-pod-plachtami",
+      "name": "Plavba pod plachtami a manévry",
+      "zkratky": [
+        "P4"
+      ]
+    }
+  ],
+  "testStructure": [
+    {
+      "groups": [
+        "nazvoslovi-druhy-plachetnic",
+        "konstrukce-plachetnic",
+        "teorie-plachteni",
+        "plavba-pod-plachtami"
+      ],
+      "count": 14
+    }
+  ],
+  "passing": {
+    "score": 11,
+    "total": 14,
+    "durationMin": 10
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výraz plachetnice označuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "loď speciálně konstruovanou pro plavbu pomocí plachet."
+        },
+        {
+          "key": "b",
+          "text": "jakékoli plavidlo hnané větrem."
+        },
+        {
+          "key": "c",
+          "text": "plavidlo, využívající plochy lodního tělesa ke zvýšení rychlosti plavby nebo k nouzovému pohonu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 2,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Kýlová plachetnice (jachta) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice opatřená kýlem se zátěží."
+        },
+        {
+          "key": "b",
+          "text": "plachetnice s výměrou plachet nad 30 m2 a samovylévacím kokpitem."
+        },
+        {
+          "key": "c",
+          "text": "plachetnice nejméně s dvoustěžňovou takeláží a výtlakem minimálně 5 tun."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 3,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Ploutvokýlová plachetnice (jachta) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice, jejíž trup je protažen do nízkého středního kýlu opatřeného zátěží, kterým prochází spouštěcí ploutev."
+        },
+        {
+          "key": "b",
+          "text": "plachetnice s pevnou kýlovou ploutví se zátěží (tzv. flundrou) a se samovylévacím kokpitem."
+        },
+        {
+          "key": "c",
+          "text": "plachetnice opatřenou bočními kýly se zátěží s výměrou plachet do 30 m2."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 4,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Ploutvová plachetnice je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice (převážně menších rozměrů), jejíž trup je opatřen spouštěcí ploutví nebo dvěma bočními otočnými ploutvemi bez zátěže."
+        },
+        {
+          "key": "b",
+          "text": "malá sportovní plachetnice s výměrou plachet do 15 m2 a pevně přišroubovanou dřevěnou ploutví bez zátěže."
+        },
+        {
+          "key": "c",
+          "text": "závodní třídová plachetnici do maximální hmotnosti 500 g s ponorným kormidlem a pevnou ploutví."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 5,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Jola je člun:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "s oblými žebry, oblým outorem a zrcadlem."
+        },
+        {
+          "key": "b",
+          "text": "s lomenými žebry a ostrým outorem."
+        },
+        {
+          "key": "c",
+          "text": "s rovnými žebry a plochým dnem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 6,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Šarpie je člun:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "s lomenými žebry, ostrým outorem, úkosovým dnem a zrcadlem."
+        },
+        {
+          "key": "b",
+          "text": "se širokými boky a plochým dnem."
+        },
+        {
+          "key": "c",
+          "text": "s oblými žebry protaženými do kýlů, oblým outorem a bez zrcadla."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 7,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Vyvážené kormidlo je kormidlo:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "kde část plochy ploutve leží před osou otáčení, takže je ulehčeno ovládání kormidla vyvážením momentů hydrodynamických sil."
+        },
+        {
+          "key": "b",
+          "text": "s nástavcem, označované také jako kormidlo dunajské nebo suezské."
+        },
+        {
+          "key": "c",
+          "text": "jehož ploutev má proudnicový tvar."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 8,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Přední vaz (klounovec) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "hlavní výztužná část přídě, tvořící pokračování kýlu vzhůru a svazující přední část kostry plavidla."
+        },
+        {
+          "key": "b",
+          "text": "přední vodotěsný kolizní prostor."
+        },
+        {
+          "key": "c",
+          "text": "přední ležatý stěžeň u starších typů plachetnic."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 9,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Ploutvová skříň je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pouzdro pevně a vodotěsně připevněné k trupu plavidla, do kterého se zatahuje ploutev."
+        },
+        {
+          "key": "b",
+          "text": "skříň na kotevní řetěz."
+        },
+        {
+          "key": "c",
+          "text": "prostor pro uložení potápěčského materiálu (ploutví, brýlí, tlakových nádob atd.)."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 10,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Rolfok:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "je součást takeláže umožňující rozvinování a refování kosatky (geny)."
+        },
+        {
+          "key": "b",
+          "text": "není součástí takeláže."
+        },
+        {
+          "key": "c",
+          "text": "je součást takeláže sloužící k refování hlavní plachty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 11,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Kokpit je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "prostor pro posádku ovládající plachetnici."
+        },
+        {
+          "key": "b",
+          "text": "odklápěcí vodotěsný kryt na přídi."
+        },
+        {
+          "key": "c",
+          "text": "kulaté vodotěsné lodní okno se šroubovým závěrem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 12,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výraz stěžeň se používá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pro označení kulatiny přibližně kolmé na lodní palubu."
+        },
+        {
+          "key": "b",
+          "text": "pro označení kování ráhna."
+        },
+        {
+          "key": "c",
+          "text": "pro označení kulatiny vystupující z přídě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 13,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výraz hydrostatický vztlak plavidla používáme pro:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "označení vertikálního hydrostatického vztlaku vody, který je přímo úměrný objemu ponořené části plavidla."
+        },
+        {
+          "key": "b",
+          "text": "označení objemu ponořené části plavidla."
+        },
+        {
+          "key": "c",
+          "text": "sumu všech vztlakových sil působících na plavidlo (závisí na tvaru a objemu lodi a na rychlosti pohybu plavidla vůči vodě)."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 14,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výraz hydrodynamický vztlak se používá pro:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "označení vztlaku vyvozeného hydrodynamickými silami, které vznikají při obtékání ponořených částí plavidla za pohybu."
+        },
+        {
+          "key": "b",
+          "text": "označení tlaku větru na návětrnou stranu plachty."
+        },
+        {
+          "key": "c",
+          "text": "hydrodynamickou sílu působící proti směru jízdy."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 15,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Laterál je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "průmět celkové boční plochy ponořené části plavidla (trupu, kýlu či ploutve, kormidla)."
+        },
+        {
+          "key": "b",
+          "text": "spouštěcí list kormidla."
+        },
+        {
+          "key": "c",
+          "text": "celková plocha plachet."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 16,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výrazem výtlak váhový se označuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "váha vody, vytlačené plavidlem."
+        },
+        {
+          "key": "b",
+          "text": "váha prázdného plavidla."
+        },
+        {
+          "key": "c",
+          "text": "maximální hodnota váhy nákladu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 17,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výrazem těžiště váhy (neboli váhové těžiště) se označuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "teoretický bod, v kterém působí celková váha plavidla směrem svisle dolů."
+        },
+        {
+          "key": "b",
+          "text": "lodní nákladový prostor."
+        },
+        {
+          "key": "c",
+          "text": "olověná zátěž na kýlu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 18,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výrazem těžiště výtlaku (neboli tvarové těžiště) se označuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "teoretický bod, ve kterém působí kolmo vzhůru vztlak (nebo v kterém je nadlehčováno plavidlo vztlakem, rovnajícím se váze vody plavidlem vytlačené)."
+        },
+        {
+          "key": "b",
+          "text": "plocha dna lodního tělesa, která je pod ponorem."
+        },
+        {
+          "key": "c",
+          "text": "nejnižší bod ponořené části plavidla."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 19,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výraz trim se používá pro označení:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "správného ustavení plachetnice."
+        },
+        {
+          "key": "b",
+          "text": "bočního splouvání plachetnice (dryft)."
+        },
+        {
+          "key": "c",
+          "text": "stáčení plachetnice proti větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 20,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výraz trimování plachet se používá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pro správné nastavení a seřízení plachet."
+        },
+        {
+          "key": "b",
+          "text": "pro zmenšování plochy plachet při silném větru."
+        },
+        {
+          "key": "c",
+          "text": "pro impregnaci plachet proti hnilobě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 21,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Závětrnost lodě je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vlastnost plachetnice stáčet se po větru."
+        },
+        {
+          "key": "b",
+          "text": "plavba plachetnice se skasanými plachtami."
+        },
+        {
+          "key": "c",
+          "text": "postavení plachetnice proti větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 22,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Takeláž je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "celá plachetní výstroj plachetnice."
+        },
+        {
+          "key": "b",
+          "text": "kýl se zátěží u kýlové plachetnice."
+        },
+        {
+          "key": "c",
+          "text": "ochranná plachta, která slouží k zakrytí lodi při kotvení."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 23,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Persenink je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ochranná plachta, chránící loď před vlivy počasí při stání."
+        },
+        {
+          "key": "b",
+          "text": "bouřková kosatka ze silné plachtoviny."
+        },
+        {
+          "key": "c",
+          "text": "pomocná plachta (tzv. lekážní), používaná k nouzovému utěsnění proraženého trupu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 24,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Lodní kulatiny jsou:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "stěžně a ráhna, které nesou soustavu plachet."
+        },
+        {
+          "key": "b",
+          "text": "lodní bidla s háčky."
+        },
+        {
+          "key": "c",
+          "text": "vyvazovací zařízení, např. pacholata, průvlaky, rohatinky."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 25,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Čelen je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "kulatina vyčnívající z přídě směrem dopředu."
+        },
+        {
+          "key": "b",
+          "text": "svinovací ráhno kosatky (tzv. rolfok)."
+        },
+        {
+          "key": "c",
+          "text": "stěžňový nástavec (čnělka)."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 26,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výrazem pevné lanoví se označují:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "veškerá lana, která slouží k vyztužení a upevnění stěžňů."
+        },
+        {
+          "key": "b",
+          "text": "kovová lana do průměru 30 mm."
+        },
+        {
+          "key": "c",
+          "text": "kovová lana o průměru nad 30 mm."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 27,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výrazem pohyblivé lanoví se označují:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "veškerá lana, která slouží k obsluze plachet (spouště, otěže)."
+        },
+        {
+          "key": "b",
+          "text": "pletená lana z konopí nebo bavlny kromě lan z umělých hmot."
+        },
+        {
+          "key": "c",
+          "text": "pružná a měkká ocelová lana do průměru 10 mm."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 28,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Saling (můstek) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "příčná, stěžeň zpevňující výztuha."
+        },
+        {
+          "key": "b",
+          "text": "stěžňová čnělka."
+        },
+        {
+          "key": "c",
+          "text": "pomocná lávka pro usnadnění vystupování na břeh."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 29,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Vysoká takeláž (vysokostěžňové oplachtění) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "druh oplachtění, kde přední stěh dosahuje vrcholu stěžně."
+        },
+        {
+          "key": "b",
+          "text": "druh oplachtění, které používá hlavní a pomocný stěžeň, tzv. jeden a půl stěžňové oplachtění."
+        },
+        {
+          "key": "c",
+          "text": "druh tzv. kutrového oplachtění, které používá vrcholovou plachtu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 30,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Stěh je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zpravidla ocelové lano, které fixuje stěžeň v podélné ose lodi (přední a zadní stěh)."
+        },
+        {
+          "key": "b",
+          "text": "zadní lem hlavní plachty."
+        },
+        {
+          "key": "c",
+          "text": "lano sloužící k zajištění polohy ráhna při spuštěné plachtě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 31,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Upínačka (úpona) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "lano převážně ocelové, které vyztužuje stěžeň z boku."
+        },
+        {
+          "key": "b",
+          "text": "kování pro uchycení sklápěcího stěžně."
+        },
+        {
+          "key": "c",
+          "text": "zařízení k bočnímu vlečení lodě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 32,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Topenanta je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "lano jako závěs ráhna, sloužící zejména k zajištění polohy ráhna při skasané hlavní plachtě."
+        },
+        {
+          "key": "b",
+          "text": "lano sloužící k refování kosatky na rolfoku."
+        },
+        {
+          "key": "c",
+          "text": "vzpěra mezi stěžněm a kýlem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 33,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Napínák je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "kovový díl s pravým a levým závitem, skládající se ze tří částí, který slouží k napínání stěhů, úpon, eventuálně jiných lan."
+        },
+        {
+          "key": "b",
+          "text": "přední stěh sloužící k zachycení kosatky."
+        },
+        {
+          "key": "c",
+          "text": "malý naviják (ráčna) s vertikální hřídelí, sloužící k dotažení otěží kosatky u větších lodí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 34,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Těžiště plachet je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "teoretický bod, v němž působí výsledná aerodynamická síla nesených plachet."
+        },
+        {
+          "key": "b",
+          "text": "místo, kde jsou ráhna připevněna ke stěžňům."
+        },
+        {
+          "key": "c",
+          "text": "místo, kde jsou na ráhně připevněny otěže plachet."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 35,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Ráhno (vratipeň) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vodorovná kulatina kloubově spojená se stěžněm sloužící k nesení plachet."
+        },
+        {
+          "key": "b",
+          "text": "zařízení k vytahování spinakru."
+        },
+        {
+          "key": "c",
+          "text": "příčná výztuha stěžně."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 36,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Refování plachty je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zmenšování plochy plachty (za silného větru)."
+        },
+        {
+          "key": "b",
+          "text": "zajíždění nových plachet."
+        },
+        {
+          "key": "c",
+          "text": "vyprání a impregnace plachet."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 37,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Refovací aparát je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zařízení sloužící ke zmenšování plachet za plavby."
+        },
+        {
+          "key": "b",
+          "text": "lanko s kladkou pro měnění délky zadního líku plachty."
+        },
+        {
+          "key": "c",
+          "text": "naviják pro kotevní lano."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 38,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výraz šekl označuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "dvoudílný prvek tvaru podkovy, užívaný k spojování lan, event. připojování řetězů, stěhů, kladek apod."
+        },
+        {
+          "key": "b",
+          "text": "dvojitá kladka."
+        },
+        {
+          "key": "c",
+          "text": "zařízení na zajištění otěží."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 39,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Výrazem otěž označujeme:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "lana sloužící k nastavení plachet."
+        },
+        {
+          "key": "b",
+          "text": "lano sloužící k vytahování plachet."
+        },
+        {
+          "key": "c",
+          "text": "napínák předního stěhu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 40,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Spoušť nebo výtah je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "lano sloužící k vytahování a spouštění plachet, popřípadě ráhen."
+        },
+        {
+          "key": "b",
+          "text": "lanko sloužící k zajištění listu kormidla."
+        },
+        {
+          "key": "c",
+          "text": "zařízení pro odpalování signálních raket."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 41,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Kiking je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zařízení (lanko s kladkami), které zamezuje zdvihání ráhna při jeho vyložení do boku."
+        },
+        {
+          "key": "b",
+          "text": "otevřený prostor pro posádku."
+        },
+        {
+          "key": "c",
+          "text": "posuvné vedení otěží v příčném směru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 42,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Blok (slang. výraz) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "dvojitá, trojitá eventuálně vícenásobná kladka (dvojblok, trojblok) sloužící ke zmenšení ovládacích sil."
+        },
+        {
+          "key": "b",
+          "text": "ploutvová skříň."
+        },
+        {
+          "key": "c",
+          "text": "kování na vrcholu stěžně."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 43,
+      "zkratka": "P1",
+      "group": "nazvoslovi-druhy-plachetnic",
+      "text": "Příďový trojúhelník je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "prostor na plachetnici, ohraničený stěžněm, palubou a předním stěhem."
+        },
+        {
+          "key": "b",
+          "text": "přední, vyztužený roh (krk) kosatky."
+        },
+        {
+          "key": "c",
+          "text": "plocha paluby před stěžněm, u vícestěžňových lodí před předním stěžněm."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 44,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Kýlovou plachetnici charakterizuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pevný kýl se zátěží, malá počáteční a velká konečná stabilita."
+        },
+        {
+          "key": "b",
+          "text": "plocha plachet nejméně 30m2."
+        },
+        {
+          "key": "c",
+          "text": "malý kokpit."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 45,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Ploutvokýlová plachetnice má vůči kýlové tyto výhody:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "možnost zmenšit ponor zatažením ploutve, umožnění změny polohy těžiště laterálu."
+        },
+        {
+          "key": "b",
+          "text": "možnost využití ploutve jako opěry pro vnitřní zařízení kajuty."
+        },
+        {
+          "key": "c",
+          "text": "snazší a levnější způsob stavby."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 46,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Typickým znakem ploutvových plachetnic je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plochý trup s malým ponorem, spouštěcí ploutev (převážně bez zátěže)."
+        },
+        {
+          "key": "b",
+          "text": "dělená, vyjímatelná olověná zátěž, uložená na kýlu."
+        },
+        {
+          "key": "c",
+          "text": "použití vysokostěžňové šalupové takeláže."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 47,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Výhodou ocelové konstrukce trupu plachetnice je především:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vysoká pevnost."
+        },
+        {
+          "key": "b",
+          "text": "nízké náklady na údržbu."
+        },
+        {
+          "key": "c",
+          "text": "vysoká rychlost plavby."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 48,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Stěžňová podpěra slouží:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "k vyztužení paluby nebo nástavby pod patou stěžně."
+        },
+        {
+          "key": "b",
+          "text": "k zajištění průhybu stěžně."
+        },
+        {
+          "key": "c",
+          "text": "k vylepšení interiéru plachetnice."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 49,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Konstrukční rychlost plachetnice je přímo úměrná",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "štíhlostnímu poměru (poměru délky a šířky trupu na vodorysce)."
+        },
+        {
+          "key": "b",
+          "text": "ploše laterálu."
+        },
+        {
+          "key": "c",
+          "text": "jejímu výtlaku."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 50,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Samovylévací kokpit mají:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plachetnice určené k plavbě na moři a většina ostatních kajutových plachetnic."
+        },
+        {
+          "key": "b",
+          "text": "pouze závodní plachetnice."
+        },
+        {
+          "key": "c",
+          "text": "jen plachetnice typu katamarán a trimarán."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 51,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Lodní těleso závodních plachetnic je konstruováno:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "především z hlediska rychlosti a pevnosti."
+        },
+        {
+          "key": "b",
+          "text": "především z hlediska pevnosti."
+        },
+        {
+          "key": "c",
+          "text": "s ohledem na dostatečné zajištění plovatelnosti."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 52,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Nevýhodou gaflového oplachtění je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "obtížná manipulace při vytahování a spouštění plachty."
+        },
+        {
+          "key": "b",
+          "text": "veliká plocha plachty."
+        },
+        {
+          "key": "c",
+          "text": "veliký výkon plachty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 53,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Výhodou celospírové plachty je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "větší plocha plachty a lepší tvar po celé délce profilu."
+        },
+        {
+          "key": "b",
+          "text": "snadné vytahování na stěžeň."
+        },
+        {
+          "key": "c",
+          "text": "snadnější obsluha."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 54,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Vlastností výtahových lan je především:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vysoká pevnost a malá průtažnost."
+        },
+        {
+          "key": "b",
+          "text": "vysoká pružnost."
+        },
+        {
+          "key": "c",
+          "text": "veliký průměr lana."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 55,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Kiking zajišťuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "možnost přitažení ráhna směrem k palubě za účelem ovlivnění zploštění plachty."
+        },
+        {
+          "key": "b",
+          "text": "polohu kosatky."
+        },
+        {
+          "key": "c",
+          "text": "zajištění polohy otěže hlavní plachty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 56,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Kontraotěž slouží k:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zajištění polohy hlavní plachty při plavbě na zadní vítr."
+        },
+        {
+          "key": "b",
+          "text": "zajištění kosatky při silném větru."
+        },
+        {
+          "key": "c",
+          "text": "zajištění skasané hlavní plachty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 57,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Automatická kosatka je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "kosatka, která při obratu sama přejde bez obsluhy z jednoho boku na druhý."
+        },
+        {
+          "key": "b",
+          "text": "plachta, která automaticky zmenšuje svoji plochu."
+        },
+        {
+          "key": "c",
+          "text": "plachta, která se sama rozvine po vytažení hlavní plachty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 58,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Hlavní požadovanou vlastností ráhna je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vysoká pevnost a malý průhyb, nízká hmotnost."
+        },
+        {
+          "key": "b",
+          "text": "vysoká pružnost."
+        },
+        {
+          "key": "c",
+          "text": "nízká cena, protože se ráhna často lámou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 59,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Požadovanou vlastností pevného lanoví je hlavně:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "malá průtažnost a vysoká pevnost."
+        },
+        {
+          "key": "b",
+          "text": "vysoká pružnost."
+        },
+        {
+          "key": "c",
+          "text": "vysoká průtažnost a vysoká pevnost."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 60,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Požadovanou vlastností materiálu na výrobu spinakru je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vysoká pevnost a nízká hmotnost."
+        },
+        {
+          "key": "b",
+          "text": "nízká hmotnost, na pevnosti nezáleží."
+        },
+        {
+          "key": "c",
+          "text": "velká pružnost."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 61,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Otěžový vozík slouží:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ke správnému nastavení úhlu tahu otěží hlavní plachty a k přesnému nastavení polohy hlavní plachty."
+        },
+        {
+          "key": "b",
+          "text": "ke snadnějšímu vytažení lodě na vlek."
+        },
+        {
+          "key": "c",
+          "text": "k pohodlnému sezení kormidelníka."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 62,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Trysail je plachta sloužící při plavbě:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "za velmi silného větru."
+        },
+        {
+          "key": "b",
+          "text": "za středního větru."
+        },
+        {
+          "key": "c",
+          "text": "ve slabém větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 63,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Bouřková kosatka se vyznačuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "malou plochou a velkou pevností."
+        },
+        {
+          "key": "b",
+          "text": "velkou plochou a velkou pevností."
+        },
+        {
+          "key": "c",
+          "text": "očnicemi obšitými kůží."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 64,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Bouřkové plachty mají zpravidla barvu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "oranžovou."
+        },
+        {
+          "key": "b",
+          "text": "černou."
+        },
+        {
+          "key": "c",
+          "text": "bílou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 65,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Kosatka (slang. fok) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "trojúhelníková plachta umístěná před stěžněm."
+        },
+        {
+          "key": "b",
+          "text": "zadní trojúhelníková plachta s vratipněm."
+        },
+        {
+          "key": "c",
+          "text": "trojúhelníková plachta vyplňující prostor mezi ráhnem a stěžněm."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 66,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Hlavní požadovanou vlastností stěžně je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vysoká pevnost a pružnost, nízká hmotnost."
+        },
+        {
+          "key": "b",
+          "text": "vysoká hmotnost."
+        },
+        {
+          "key": "c",
+          "text": "hlavně malá pružnost."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 67,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Genua je druh:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "kosatky o velké ploše, jejíž zadní lem značně přesahuje za stěžeň, slouží k plavbě za slabého a středního větru."
+        },
+        {
+          "key": "b",
+          "text": "spinakru ze zvlášť lehké plachtoviny s odlehčovacími otvory."
+        },
+        {
+          "key": "c",
+          "text": "bouřkové kosatky o malé ploše ze silné plachtoviny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 68,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Spinakr je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "druh příďové přídavné plachty, která má tvar sférické vyduté plochy."
+        },
+        {
+          "key": "b",
+          "text": "zadní trojúhelníková plachta s vratipněm, tzv. bezanová."
+        },
+        {
+          "key": "c",
+          "text": "druh nouzové trojúhelníkové plachty tzv. trysail, která je zhotovena ze silné plachtoviny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 69,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Bezanová plachta se používá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "na zadních stěžních některých vícestěžňových lodí a slouží spíše pro vyvážení soustavy plachet než jako plachta hnací."
+        },
+        {
+          "key": "b",
+          "text": "k zakrytí lodě při kotvení na ochranu před povětrnostními vlivy."
+        },
+        {
+          "key": "c",
+          "text": "k vyplnění prostoru mezi stěžněm a vratiráhnem u ráhnové takeláže."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 70,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Plachty řídíme lany, která nazýváme:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "otěžemi."
+        },
+        {
+          "key": "b",
+          "text": "upínačkami."
+        },
+        {
+          "key": "c",
+          "text": "stěhy."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 71,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Plachty vytahujeme a spouštíme:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "spouštěmi."
+        },
+        {
+          "key": "b",
+          "text": "otěžemi."
+        },
+        {
+          "key": "c",
+          "text": "úponami."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 72,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Kladky používané ve výstroji plachetnic mají mít:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vysokou pevnost a malé tření."
+        },
+        {
+          "key": "b",
+          "text": "velké tření."
+        },
+        {
+          "key": "c",
+          "text": "vysokou pevnost a velké tření."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 73,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Kasání neboli refování plachet se provádí pomocí:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "refovacího zařízení."
+        },
+        {
+          "key": "b",
+          "text": "kikingu."
+        },
+        {
+          "key": "c",
+          "text": "kokpitu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 74,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Vějička někdy také korouhvička (slang. frklík) je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ukazatel směru větru na vrcholu stěžně."
+        },
+        {
+          "key": "b",
+          "text": "přístroj k zjišťování rychlosti větru."
+        },
+        {
+          "key": "c",
+          "text": "přístroj k zjišťování bočního skluzu neboli dryftu lodě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 75,
+      "zkratka": "P2",
+      "group": "konstrukce-plachetnic",
+      "text": "Výhodou plachtoviny z umělých vláken je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "odolnost proti vodě, vlhkosti a vlivům povětrnosti, nesaje vodu, téměř se nevytahuje."
+        },
+        {
+          "key": "b",
+          "text": "vysoká pružnost a ohebnost."
+        },
+        {
+          "key": "c",
+          "text": "daleko menší cena a snadnější zpracování než u bavlněné plachtoviny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 76,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Na povrchu kapaliny může plavat těleso:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "jehož hmotnost je menší než vztlak, který odpovídá hmotnosti kapaliny tělesem vytlačené."
+        },
+        {
+          "key": "b",
+          "text": "jehož hmotnost se rovná vztlaku, který odpovídá hmotnosti kapaliny tělesem vytlačené."
+        },
+        {
+          "key": "c",
+          "text": "jehož hmotnost je větší než vztlak, který odpovídá hmotnosti kapaliny tělesem vytlačené."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 77,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plocha laterálu je ovlivňována:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "náklonem plavidla."
+        },
+        {
+          "key": "b",
+          "text": "druhem povrchové úpravy ponořené části plavidla."
+        },
+        {
+          "key": "c",
+          "text": "změnou polohy otočného kormidla."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 78,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Váhové těžiště lodi se jejím náklonem:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "nemění."
+        },
+        {
+          "key": "b",
+          "text": "mění."
+        },
+        {
+          "key": "c",
+          "text": "mění jen částečně."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 79,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Rovnovážná poloha lodi je dána:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "skutečností, že těžiště váhy a výtlaku leží na společné svislé ose, v rovině symetrie lodi."
+        },
+        {
+          "key": "b",
+          "text": "umístěním stěžně do středu podélné osy lodě."
+        },
+        {
+          "key": "c",
+          "text": "plochou plachet, která musí úměrně odpovídat ploše laterálu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 80,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Ponořená část kormidelního listu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ovlivňuje velikost plochy laterálu."
+        },
+        {
+          "key": "b",
+          "text": "nemá vliv na plochu laterálu."
+        },
+        {
+          "key": "c",
+          "text": "ovlivňuje velikost plochy laterálu jen v tom případě, je-li kormidlo umístěno pod lodním trupem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 81,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Síla větru na plachty působí vůči lodnímu tělesu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "ve společném těžišti všech plachet."
+        },
+        {
+          "key": "b",
+          "text": "v těžišti hlavní plachty, a to i u víceplachtových lodí."
+        },
+        {
+          "key": "c",
+          "text": "ve dvou těžištích, a to ve společném těžišti plachet umístěných před stěžněm a ve společném těžišti plachet umístěným za stěžněm."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 82,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Loď s větším výtlakem (hmotností) má setrvačnost:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "větší než loď s malým výtlakem."
+        },
+        {
+          "key": "b",
+          "text": "menší než loď s malým výtlakem."
+        },
+        {
+          "key": "c",
+          "text": "stejnou jako loď s malým výtlakem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 83,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Stabilita pohybující se plachetnice je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "větší než stabilita plachetnice, která stojí."
+        },
+        {
+          "key": "b",
+          "text": "stejná jako stabilita plachetnice, která stojí."
+        },
+        {
+          "key": "c",
+          "text": "menší než stabilita plachetnice, která stojí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 84,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Stabilita plachetnice je závislá na:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "tvaru a velikosti lodního trupu, rozložení váhy trupu a takeláže a na velikosti a umístění zátěže."
+        },
+        {
+          "key": "b",
+          "text": "poměru plochy plachet v ose laterálu."
+        },
+        {
+          "key": "c",
+          "text": "velikosti a tvaru palubních nástaveb."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 85,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plachetnice s jolovým tvarem trupu a pevným kýlem:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "má počáteční stabilitu malou."
+        },
+        {
+          "key": "b",
+          "text": "má počáteční stabilitu velkou."
+        },
+        {
+          "key": "c",
+          "text": "nemá počáteční stabilitu žádnou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 86,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plachetnice se šarpiovým tvarem trupu a s lehkou ploutví:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "má počáteční stabilitu velkou."
+        },
+        {
+          "key": "b",
+          "text": "nemá počáteční stabilitu žádnou."
+        },
+        {
+          "key": "c",
+          "text": "má počáteční stabilitu malou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 87,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Výhodou plachetnice s jolovým tvarem trupu oproti plachetnici se šarpiovým tvarem trupu je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "snazší a plynulejší plavba ve vlnách."
+        },
+        {
+          "key": "b",
+          "text": "menší náklady na údržbu."
+        },
+        {
+          "key": "c",
+          "text": "vždy menší ponor jolové plachetnice."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 88,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plachetnice se šarpiovým tvarem trupu oproti plachetnici s jolovým tvarem trupu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "má výhodu ve větší počáteční stabilitě, možnosti použití ploutve místo pevného kýlu a tím snazšímu přistávání na písečné pláži při klidné vodní hladině."
+        },
+        {
+          "key": "b",
+          "text": "nemá žádné plavebně provozní výhody."
+        },
+        {
+          "key": "c",
+          "text": "umožňuje lepší a plynulejší plavbu ve vlnách."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 89,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Vlastnost lodi snažit se plout ve vzpřímené poloze při malých úhlech náklonu nazýváme:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "stabilitou počáteční."
+        },
+        {
+          "key": "b",
+          "text": "stabilitou dynamickou."
+        },
+        {
+          "key": "c",
+          "text": "stabilitou statickou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 90,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Schopnost vzpřímit se z maximálního náklonu nazýváme:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "stabilitou konečnou, čili stabilitou při velkých úhlech náklonu."
+        },
+        {
+          "key": "b",
+          "text": "stabilitou počáteční."
+        },
+        {
+          "key": "c",
+          "text": "stabilitou metacentrickou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 91,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Závětrnost plachetnice způsobuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "poloha těžiště plachet před těžištěm laterálu."
+        },
+        {
+          "key": "b",
+          "text": "poloha těžiště laterálu před těžištěm plachet."
+        },
+        {
+          "key": "c",
+          "text": "poloha těžiště výtlaku mimo osu symetrie plavidla."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 92,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Návětrnost plachetnice je dána:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "polohou těžiště plachet za těžištěm laterálu."
+        },
+        {
+          "key": "b",
+          "text": "polohou těžiště plachet před těžištěm laterálu."
+        },
+        {
+          "key": "c",
+          "text": "vzájemným plošným poměrem plachet a laterálu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 93,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Větší vadou plachetnice je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "závětrnost, protože může způsobit převržení lodě, závětrná loď má snahu stáčet se sama stále více po větru (odpadat)."
+        },
+        {
+          "key": "b",
+          "text": "návětrnost, protože silně namáhá upevnění stěžně."
+        },
+        {
+          "key": "c",
+          "text": "podvětrnost, protože ohrožuje plachty a vzniká možnost jejich poškození."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 94,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Závětrnost i návětrnost plachetnice lze kromě jiného ovlivnit:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "změnou velikosti a tvaru plachet, změnou polohy a sklonu stěžně, změnou plochy laterálu nebo polohy jeho těžiště i náklonem lodi."
+        },
+        {
+          "key": "b",
+          "text": "velikostí úhlu, pod kterým vítr působí na plachty."
+        },
+        {
+          "key": "c",
+          "text": "zvětšením zátěže."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 95,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Boční plocha laterálu má přímý vliv na:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "stranový posuv (snos, dryf) plachetnice a na schopnost plachetnice stoupat proti větru."
+        },
+        {
+          "key": "b",
+          "text": "na druh plachet, které může plachetnice nést."
+        },
+        {
+          "key": "c",
+          "text": "rychlost plachetnice."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 96,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plout na bočním a předním větru umožňuje plachetnici:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plocha laterálu."
+        },
+        {
+          "key": "b",
+          "text": "váha zátěže."
+        },
+        {
+          "key": "c",
+          "text": "vhodný materiál a tvar plachty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 97,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Jízdu plachetnice ovlivňují tyto hlavní síly:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "aerodynamické a hydrodynamické."
+        },
+        {
+          "key": "b",
+          "text": "goniometrické."
+        },
+        {
+          "key": "c",
+          "text": "logaritmické."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 98,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Vítr - pohonná síla plachetnice vzniká:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "prouděním vzduchu mezi místy s rozdílnými atmosférickými tlaky a rozdílnými teplotami, čím větší jsou rozdíly, tím silnější vítr vzniká."
+        },
+        {
+          "key": "b",
+          "text": "působením polární záře na atmosférické vrstvy."
+        },
+        {
+          "key": "c",
+          "text": "jako druhotný následek otáčení zeměkoule."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 99,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Pro nastavení plachet je rozhodující vítr:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zdánlivý."
+        },
+        {
+          "key": "b",
+          "text": "pulzující."
+        },
+        {
+          "key": "c",
+          "text": "skutečný."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 100,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Zdánlivý vítr je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "výsledný vítr, složený ze skutečného větru a vlastního větru (jako důsledku pohybu plachetnice vpřed)."
+        },
+        {
+          "key": "b",
+          "text": "protivítr, vznikající v přestávkách silných větrných poryvů."
+        },
+        {
+          "key": "c",
+          "text": "vítr, jehož skutečný směr je vychýlen nakloněným lodním trupem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 101,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Vějička (korouhvička, frklík) na vrcholu stěžně ukazuje za plavby směr:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zdánlivého větru."
+        },
+        {
+          "key": "b",
+          "text": "skutečného větru."
+        },
+        {
+          "key": "c",
+          "text": "větru, vznikajícího pohybem plachetnice dopředu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 102,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Zdánlivý vítr přichází do plachet více zepředu při:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "větší rychlosti plachetnice."
+        },
+        {
+          "key": "b",
+          "text": "menší rychlosti plachetnice."
+        },
+        {
+          "key": "c",
+          "text": "větším náklonu plachetnice."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 103,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Výsledná síla na plachtě vzniká:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "rozdílem rychlosti vzduchového proudění na vnější a vnitřní straně plachty."
+        },
+        {
+          "key": "b",
+          "text": "náklonem plachetnice."
+        },
+        {
+          "key": "c",
+          "text": "vlivem rychlosti lodě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 104,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Při plavbě ostře proti větru a na bočních větrech způsobuje výslednice sil, vyvozených větrem:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "pohyb lodě dopředu, náklon lodě a boční snos."
+        },
+        {
+          "key": "b",
+          "text": "stlačení lodní přídě do vody."
+        },
+        {
+          "key": "c",
+          "text": "nežádoucí deformaci profilu plachty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 105,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Boční sílu na plachtě zachycuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "boční průmět laterálu, avšak skutečný směr plavby není shodný s podélnou osou plavidla, ale je odkloněn o určitý úhel do závětří."
+        },
+        {
+          "key": "b",
+          "text": "kormidlo."
+        },
+        {
+          "key": "c",
+          "text": "podpěra stěžně."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 106,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Podélná osa plachetnice svírá za plavby se zdánlivým větrem:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "menší úhel než se skutečným větrem."
+        },
+        {
+          "key": "b",
+          "text": "větší úhel než se skutečným větrem."
+        },
+        {
+          "key": "c",
+          "text": "stejný úhel jako se skutečným větrem (uvažováno na vodní ploše bez pohybu - bez proudu)."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 107,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Při správném nastavení hlavní plachty půlí vratipeň zhruba úhel, který svírá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "podélná osa plavidla a směr zdánlivého větru."
+        },
+        {
+          "key": "b",
+          "text": "podélná a příčná osa plavidla."
+        },
+        {
+          "key": "c",
+          "text": "podélná osa plavidla a směr skutečného větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 108,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Vztlak laterálu je síla:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "působící proti boční síle plachty."
+        },
+        {
+          "key": "b",
+          "text": "rovnoběžná se směrem plavby a nesnižuje vliv boční síly plachty."
+        },
+        {
+          "key": "c",
+          "text": "zvětšující náklon plachetnice."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 109,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Aktivní plocha plachty plachetnice v náklonu je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "menší než nenakloněné plachetnice."
+        },
+        {
+          "key": "b",
+          "text": "je stejná jako nenakloněné plachetnice."
+        },
+        {
+          "key": "c",
+          "text": "větší než nenakloněné plachetnice."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 110,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Stěžeň s příliš velkou hmotností má za následek:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zhoršení stability plachetnice."
+        },
+        {
+          "key": "b",
+          "text": "zlepšení stability plachetnice."
+        },
+        {
+          "key": "c",
+          "text": "zlepšení stability plachetnice pouze za silného větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 111,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Pro obtékání plachet větrem platí zákony:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "v podstatě shodné jako pro křídla letadel nebo ptáků, protože jejich tvar a profil jsou podobné."
+        },
+        {
+          "key": "b",
+          "text": "stejné jako pro obtékání rovinné desky, protože plachty jsou ploché."
+        },
+        {
+          "key": "c",
+          "text": "empirické a proto je nutné vycházet pouze ze zkušeností vzhledem k tomu, že plachty jsou velmi pružný a tvarově značně proměnlivý element."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 112,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plachta je v základě:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vydutá plocha, jejíž řezy vodorovnými rovinami jsou aerodynamické profily."
+        },
+        {
+          "key": "b",
+          "text": "kuželová plocha, jejíž svislé řezy určují její profil."
+        },
+        {
+          "key": "c",
+          "text": "část válcové plochy, jejíž profil je odvislý od poloměru šířky."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 113,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plachta, resp. její jednotlivé aerodynamické profily při plavbě proti větru a při bočních větrech:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "jsou obtékány proudem vzduchu pod různým úhlem náběhu."
+        },
+        {
+          "key": "b",
+          "text": "stáčejí proud vzduchu šikmo dolů k hladině."
+        },
+        {
+          "key": "c",
+          "text": "jsou deformovány vzduchovými víry, jejichž intenzita je závislá na síle větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 114,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Účinnost profilu plachty při plavbě proti slabému přednímu větru je maximální:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "když proudění kolem něho je plynulé a bez víření, tzv. laminární proudění."
+        },
+        {
+          "key": "b",
+          "text": "při úhlu náběhu přes 20°."
+        },
+        {
+          "key": "c",
+          "text": "využívá-li se odrazu větru od vodní hladiny."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 115,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Laminární proudění vzduchu je závislé:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "na aerodynamickém profilu plachty a tvaru zadního lemu."
+        },
+        {
+          "key": "b",
+          "text": "na sklonu švů jednotlivých dílů a pružnosti použité plachtoviny."
+        },
+        {
+          "key": "c",
+          "text": "na tvaru trupu lodě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 116,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Výhradně přetlaku na plachtách využívá plachetnice při jízdě:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "na zadním větru."
+        },
+        {
+          "key": "b",
+          "text": "ostře proti větru."
+        },
+        {
+          "key": "c",
+          "text": "při bočním větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 117,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Při plavbě ostře proti silnému větru je výhodnější plachta:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "plošší s menším vydutím."
+        },
+        {
+          "key": "b",
+          "text": "s větším vydutím."
+        },
+        {
+          "key": "c",
+          "text": "se středním vydutím."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 118,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Při jízdě na zadním větru je výhodnější plachta:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "s velkým vydutím, protože obtékání plachty je turbulentní a pohyb lodi vpřed způsobuje přetlak v plachtě a nikoliv sání."
+        },
+        {
+          "key": "b",
+          "text": "plochá, protože laminární proudění je účinnější."
+        },
+        {
+          "key": "c",
+          "text": "se středním vydutím, protože má výhodnější průběh sání."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 119,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Vliv kosatky na hlavní plachtu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "se projevuje v příznivém usměrňování vzduchového proudění kolem hlavní plachty, zejména na její závětrné straně, a tím zvyšuje její účinnost."
+        },
+        {
+          "key": "b",
+          "text": "je zanedbatelný, zvětšuje pouze celkovou plochu plachet."
+        },
+        {
+          "key": "c",
+          "text": "je zřetelný pouze při plavbě po větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 120,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Upravit přetočení plachty, eventuálně zamezit zdvihání vratipně při jízdě na zadní nebo zadoboční vítr lze:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "bočně posuvným vedením otěží nebo kikingem."
+        },
+        {
+          "key": "b",
+          "text": "refovacím aparátem, nebo-li kasounem."
+        },
+        {
+          "key": "c",
+          "text": "ráčnou na otěžovém kladkostroji."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 121,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Náklon lodi a vliv lodního tělesa na vzduchové proudění:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "působí nepříznivě na účinnost plachet."
+        },
+        {
+          "key": "b",
+          "text": "neovlivňuje účinnost plachet."
+        },
+        {
+          "key": "c",
+          "text": "působí příznivě při jízdě na boční vítr, neboť se využívá odrazu větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 122,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Spinaker se používá:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "hlavně při jízdě po větru nebo na zadobočním větru, méně na boční vítr."
+        },
+        {
+          "key": "b",
+          "text": "při kasání plachet."
+        },
+        {
+          "key": "c",
+          "text": "jako samočinná klema pro fixování otěží v požadované poloze."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 123,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Při plavbě na zadní vítr je nejvíce zatěžována:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "příď lodě."
+        },
+        {
+          "key": "b",
+          "text": "záď lodě."
+        },
+        {
+          "key": "c",
+          "text": "kýlová ploutev."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 124,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Na ponořenou část lodního trupu působí síly:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "hydrostatické a hydrodynamické."
+        },
+        {
+          "key": "b",
+          "text": "aerodynamické."
+        },
+        {
+          "key": "c",
+          "text": "balistické."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 125,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Hydrodynamické síly vznikají:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "při proudění vody kolem tělesa a jsou podobné proudění vzduchu; vzniká proudění laminární nebo turbulentní a platí obdobné zákony o proudnicích, vztlaku a odporu jako u aerodynamických sil."
+        },
+        {
+          "key": "b",
+          "text": "při stání tělesa na hladině a jde o síly, které způsobí, že těleso plave."
+        },
+        {
+          "key": "c",
+          "text": "působením vlivu přitažlivosti měsíce a slunce např. příliv a odliv."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 126,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plavbu plachetnice proti větru nebo na bočním větru umožňuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "odpor (vztlak) ploutve nebo kýlu, bez nějž by mohla plout plachetnice jen po větru."
+        },
+        {
+          "key": "b",
+          "text": "správně zvolené plachtoví."
+        },
+        {
+          "key": "c",
+          "text": "dostatečná plocha a správný tvar listu kormidla."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 127,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Malá hmotnost kýlu plachetnice má za následek:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "veliký náklon plachetnice za silného větru."
+        },
+        {
+          "key": "b",
+          "text": "malý náklon plachetnice za silného větru."
+        },
+        {
+          "key": "c",
+          "text": "vytvoření velkého vlnového odporu trupu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 128,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Správně nastavená plachta při plavbě na boční vítr má:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "menší stranovou a větší dopřednou sílu než plachta při plavbě ostře proti větru."
+        },
+        {
+          "key": "b",
+          "text": "stejnou stranovou sílu než plachta při plavbě ostře proti větru."
+        },
+        {
+          "key": "c",
+          "text": "menší stranovou a menší dopřednou sílu než plachta při plavbě ostře proti větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 129,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Skluz lodě je umožněn:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "tvarem trupu."
+        },
+        {
+          "key": "b",
+          "text": "pouze profilem stěžně."
+        },
+        {
+          "key": "c",
+          "text": "vhodným materiálem na otěže plachet."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 130,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Při malé ploše laterálu plachetnice:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "špatně stoupá proti větru a má velký snos."
+        },
+        {
+          "key": "b",
+          "text": "dobře stoupá proti větru, ale pluje ve značném náklonu."
+        },
+        {
+          "key": "c",
+          "text": "dobře stoupá proti větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 131,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Hydrodynamický odpor trupu je závislý hlavně:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "na jeho tvaru, jakosti povrchu trupu a velikosti laterálu."
+        },
+        {
+          "key": "b",
+          "text": "na ploše plachet."
+        },
+        {
+          "key": "c",
+          "text": "na teplotě vody."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 132,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Plachetnice ve velkém náklonu:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "špatně stoupá proti větru a pluje pomaleji než plachetnice v malém náklonu."
+        },
+        {
+          "key": "b",
+          "text": "pluje rychleji než plachetnice v malém náklonu."
+        },
+        {
+          "key": "c",
+          "text": "pluje ostřeji proti větru než plachetnice v malém náklonu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 133,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Rychlost plachetnice nejvíce ovlivňuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "správné nastavení plachet."
+        },
+        {
+          "key": "b",
+          "text": "stáří plachet."
+        },
+        {
+          "key": "c",
+          "text": "barevné provedení plachet."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 134,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Návětrnost plachetnice je ovlivněna:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "náklonem plachetnice a tvarem trupu."
+        },
+        {
+          "key": "b",
+          "text": "velikostí lodního šroubu."
+        },
+        {
+          "key": "c",
+          "text": "vhodným podponorovým nátěrem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 135,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Kormidlo je část lodi, která:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "umožňuje řídit směr plavby."
+        },
+        {
+          "key": "b",
+          "text": "prodlužuje kýl lodi."
+        },
+        {
+          "key": "c",
+          "text": "má tvořit nejvíce ponořenou část lodi a proto musí mít dostatečnou axiální vůli."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 136,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Síla na kormidelní páce má být za plavby:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "co nejmenší."
+        },
+        {
+          "key": "b",
+          "text": "co největší."
+        },
+        {
+          "key": "c",
+          "text": "asi 30 N."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 137,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Nejmenší čelní odpor má kormidlo:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "s tenkým symetrickým profilem(tzv. NASA)."
+        },
+        {
+          "key": "b",
+          "text": "provedené jako rovná deska (tzv. list)."
+        },
+        {
+          "key": "c",
+          "text": "s hrubým povrchem."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 138,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Sílu potřebnou k ovládání kormidelní páky snížíme zejména:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "správným nastavením plachet."
+        },
+        {
+          "key": "b",
+          "text": "novým podponorovým nátěrem."
+        },
+        {
+          "key": "c",
+          "text": "prodloužením stěžně."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 139,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Kormidlo ztrácí účinnost:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "při náhlém velkém vychýlení, protože vznikají víry a odpor, které snižují i rychlost lodě."
+        },
+        {
+          "key": "b",
+          "text": "je-li úplně vytažena ploutev."
+        },
+        {
+          "key": "c",
+          "text": "pluje-li se pouze s kosatkou."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 140,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Jízdu plachetnice ve skluzu podmiňuje:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vhodný tvar trupu a dostatečná rychlost."
+        },
+        {
+          "key": "b",
+          "text": "především značně zvětšená plocha plachet, tvar lodního tělesa není rozhodující."
+        },
+        {
+          "key": "c",
+          "text": "příďotížnost a závětrnost lodě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 141,
+      "zkratka": "P3",
+      "group": "teorie-plachteni",
+      "text": "Vírový odpor trupu za zádí plavidla:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zpomaluje plavbu."
+        },
+        {
+          "key": "b",
+          "text": "neovlivňuje rychlost plavby."
+        },
+        {
+          "key": "c",
+          "text": "zrychluje plavbu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 142,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Návětrná strana lodi je",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "strana, která je vystavena větru, čili z které vítr na loď přichází."
+        },
+        {
+          "key": "b",
+          "text": "strana, která není vystavena větru, čili z které vítr z lodi odchází."
+        },
+        {
+          "key": "c",
+          "text": "pravá strana lodi."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 143,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Závětrná strana lodi je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "strana, z které vítr z lodi odchází, tzv. která je za větrem."
+        },
+        {
+          "key": "b",
+          "text": "strana, z které vítr na loď přichází, tzv. která je na větru."
+        },
+        {
+          "key": "c",
+          "text": "levá strana lodi."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 144,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Plavba ostře proti větru je plavba:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "při které loď pluje v úhlu co nejmenším ke směru větru (cca až 40°) a využívá největší možné stoupavosti proti větru."
+        },
+        {
+          "key": "b",
+          "text": "proti větru, který přichází v podélné ose lodě."
+        },
+        {
+          "key": "c",
+          "text": "kdy vítr přichází v úhlu do 10° od příčné osy lodi na obě strany."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 145,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Plavba na předoboční vítr je plavba, při které:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "loď pluje proti směru větru v úhlu zřetelně menším než je pravý úhel (cca 60° - 75°) a nevyužívá maximálně svých schopností stoupání."
+        },
+        {
+          "key": "b",
+          "text": "loď pluje co možno nejvíce proti větru."
+        },
+        {
+          "key": "c",
+          "text": "loď pluje na poryvový vítr, který přichází střídavě z předu a z boku."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 146,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při silném poryvu větru se zabrání velkému náklonu plachetnice:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vyostřením, případně povolením otěže hlavní plachty."
+        },
+        {
+          "key": "b",
+          "text": "odpadnutím po větru."
+        },
+        {
+          "key": "c",
+          "text": "přitažením otěže hlavní plachty."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 147,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Schopnost křižovat co nejostřeji proti větru je podmíněna:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "tvarem lodního trupu, plochou laterálu a takeláží."
+        },
+        {
+          "key": "b",
+          "text": "použitím spinakru."
+        },
+        {
+          "key": "c",
+          "text": "použitím kvalitních otěží."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 148,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při správné technice vyostřování, nemění-li se směr zdánlivého větru:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "hlavní plachta se plynule přitahuje blíž k ose lodi."
+        },
+        {
+          "key": "b",
+          "text": "změna směru se provádí nastavením ploutve."
+        },
+        {
+          "key": "c",
+          "text": "využije se náklonu lodi do návětří."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 149,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při správné technice odpadání, nemění-li se směr zdánlivého větru:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "hlavní plachta se plynule povoluje."
+        },
+        {
+          "key": "b",
+          "text": "loď se naklání do závětří při udržování dosavadního nastavení plachty."
+        },
+        {
+          "key": "c",
+          "text": "změna směru se provede povytažením ploutve."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 150,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Správné nastavení kosatky a hlavní plachty při křižování proti větru se při přeostření nad správný úhel náběhu větru projeví tak, že:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "obě plachty se začnou současně prolamovat (flatrovat) od předního lemu."
+        },
+        {
+          "key": "b",
+          "text": "kosatka se začne prolamovat dřív než hlavní plachta."
+        },
+        {
+          "key": "c",
+          "text": "hlavní plachta se začne prolamovat dřív než kosatka."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 151,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při obratu proti větru nesmíme dopustit, aby:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "se loď zastavila v pozici přímo proti větru."
+        },
+        {
+          "key": "b",
+          "text": "se spinaker zasekl pod kosatkou."
+        },
+        {
+          "key": "c",
+          "text": "loď plula příliš velkou rychlostí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 152,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při křižování za silného větru a na vlnách:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "je třeba vést loď méně ostře proti větru (s povolenější plachtou) než na hladké vodě."
+        },
+        {
+          "key": "b",
+          "text": "je nutné povytáhnout ploutev a nadzvednout list kormidla."
+        },
+        {
+          "key": "c",
+          "text": "je nutné naklánět loď do návětří."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 153,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Má-li loď při jízdě proti větru dosáhnout většího stoupání, je třeba:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "přitáhnout jezdec na otěžovém vozíku do návětří a přitáhnout kosatku."
+        },
+        {
+          "key": "b",
+          "text": "vypustit jezdec na otěžovém vozíku k boku."
+        },
+        {
+          "key": "c",
+          "text": "více vychýlit kormidlo."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 154,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při poryvech za plavby na předním nebo bočním větru je třeba:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vysednout na bok lodě a vést kormidlo i plachtu tak, abychom zabránili velkému náklonu lodě do závětří."
+        },
+        {
+          "key": "b",
+          "text": "nechat loď naklonit do návětří, a pak ji energickým zasednutím vyvážit."
+        },
+        {
+          "key": "c",
+          "text": "vytáhnout ploutev, aby se zmenšil vztlak, který na ni působí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 155,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při plavbě na bočním větru je výhodnější:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "více povolit hlavní plachtu než při plavbě proti větru, zvýší se tím dopředná síla a zmenší se náklon plachetnice."
+        },
+        {
+          "key": "b",
+          "text": "více přitáhnout hlavní plachtu vůči větru, protože se zvýší rychlost i přes větší náklon lodě."
+        },
+        {
+          "key": "c",
+          "text": "mít plachty přitažené co nejvíce i za cenu jejich skasání, protože účinek sání je tak největší."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 156,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Jestliže při křižování nebo na bočním kursu vítr zesílí a loď se stává značně návětrnou, je účelné:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "posunout ploutev více dozadu, popř. zmenšit záklon stěžně (je-li to za plavby možné)."
+        },
+        {
+          "key": "b",
+          "text": "posunout ploutev víc dopředu."
+        },
+        {
+          "key": "c",
+          "text": "sklonit stěžen více dozadu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 157,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Plavba po větru (na zadním větru) je plavba:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "když vítr vane zezadu, a to až do cca 30° na obě strany od podélné osy plachetnice."
+        },
+        {
+          "key": "b",
+          "text": "pouze když vítr vane přímo zezadu."
+        },
+        {
+          "key": "c",
+          "text": "pouze s větrem, jehož směr se uchyluje od směru plavby lodě max. 10° na obě strany."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 158,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při plavbě malé plachetnice na zadní vítr se nesmí zejména:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zatěžovat příď lodě, protože by se mohla zabořit do vody a dojít tak k převržení lodě."
+        },
+        {
+          "key": "b",
+          "text": "napnout kosatku na stěžeň."
+        },
+        {
+          "key": "c",
+          "text": "zatěžovat záď lodě."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 159,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při plavbě na silný zadní vítr je vhodné pro bezpečné vedení lodě:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "převést loď na mírně zadoboční kurz plavby."
+        },
+        {
+          "key": "b",
+          "text": "povolit maximálně hlavní plachtu."
+        },
+        {
+          "key": "c",
+          "text": "zasednout loď víc vpředu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 160,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Obrat proti větru (tzv. re) je obrat:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "při kterém loď vyostřuje tak, aby se setrvačností dostala přes postavení přímo proti větru a přešla do postavení ostře proti větru na druhém boku."
+        },
+        {
+          "key": "b",
+          "text": "při kterém se stáčí loď zádí proti větru a v okamžiku zádí přímo proti větru se rychlým přehozením spinakru docílí přetočení lodě na druhý bok."
+        },
+        {
+          "key": "c",
+          "text": "provedený energickým odpadnutím při současném spuštění kosatky a jejím opětném vytažení po dokončeném obratu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 161,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Plavba na bočním kurzu je:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "rychlejší než plavba proti větru."
+        },
+        {
+          "key": "b",
+          "text": "pomalejší než plavba proti větru."
+        },
+        {
+          "key": "c",
+          "text": "stejně rychlá jako plavba proti větru."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 162,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Za silného větru a ve vlnách se stoupavost plachetnice:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zmenšuje."
+        },
+        {
+          "key": "b",
+          "text": "nemění."
+        },
+        {
+          "key": "c",
+          "text": "zvětšuje."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 163,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Obrat po větru (tzv. halsa) je manévr:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "prováděný tak, že příď lodě se stáčí po větru a v okamžiku, kdy loď stojí zádí proti větru, se přehodí ráhno na druhý bok a obrat se dokončí."
+        },
+        {
+          "key": "b",
+          "text": "prováděný při skasané hlavní plachtě využitím kosatky k obratu."
+        },
+        {
+          "key": "c",
+          "text": "prováděný pouze pomocí hlavní plachty při spuštěné kosatce."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 164,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při plavbě na silný zadní vítr musíme zabránit:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "prudkému přehození ráhna z jednoho boku na druhý použitím kontraotěže."
+        },
+        {
+          "key": "b",
+          "text": "zvýšení rychlosti."
+        },
+        {
+          "key": "c",
+          "text": "nadměrnému tahu na otěže."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 165,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při plavbě na zadní vítr se snažíme zamezit:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "příčnému kolébání lodě."
+        },
+        {
+          "key": "b",
+          "text": "zvýšení rychlosti."
+        },
+        {
+          "key": "c",
+          "text": "skluzu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 166,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Přehození ráhna se nejlépe provádí za silného větru:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "v jízdě plnou rychlostí a s vyváženou lodí."
+        },
+        {
+          "key": "b",
+          "text": "při zpomalení plavby (např. najetím na vlnu) a náklonu do závětří."
+        },
+        {
+          "key": "c",
+          "text": "po odpadnutí a naklonění lodi do návětří."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 167,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Příčné kolébání lodi při plavbě na zadní vítr je z hlediska bezpečnosti plavby:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "nebezpečné a pro posádku nepříjemné."
+        },
+        {
+          "key": "b",
+          "text": "nežádoucí, ale není nebezpečné."
+        },
+        {
+          "key": "c",
+          "text": "žádoucí."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 168,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Kontrolu správného nastavení plachet provádíme pomocí:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "vějičky a stuh (špionků)."
+        },
+        {
+          "key": "b",
+          "text": "polohy kormidelní páky."
+        },
+        {
+          "key": "c",
+          "text": "úhloměru umístěného na lodi."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 169,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při zvrhnutí lodě má posádka:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "zůstat u lodě, aby ji mohly záchranné čluny najít."
+        },
+        {
+          "key": "b",
+          "text": "snažit se doplavat k nejbližšímu břehu, i když je dosti vzdálen."
+        },
+        {
+          "key": "c",
+          "text": "vždy plavat vstříc záchrannému člunu nebo jiné lodi v dohledu."
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 170,
+      "zkratka": "P4",
+      "group": "plavba-pod-plachtami",
+      "text": "Při vleku havarované lodi motorovým člunem je třeba:",
+      "image": null,
+      "options": [
+        {
+          "key": "a",
+          "text": "spustit plachty."
+        },
+        {
+          "key": "b",
+          "text": "vytáhnout spinaker."
+        },
+        {
+          "key": "c",
+          "text": "odpojit stěžeň od lodě."
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}
