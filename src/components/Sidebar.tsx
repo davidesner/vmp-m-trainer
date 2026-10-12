@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { useGuestStatus } from '../hooks/useAuth'
 import CategoryDropdown from './CategoryDropdown'
 import SwitchCategoryConfirmModal from './SwitchCategoryConfirmModal'
 import { subscribeTestInProgress, getTestInProgress, clearTestInProgress } from '../lib/testInProgress'
@@ -8,12 +9,13 @@ import type { TestId } from '../lib/tests'
 const items = [
   { to: '/',         label: '🏠 Přehled' },
   { to: '/practice', label: '📚 Procvičování' },
-  { to: '/weak',     label: '🎯 Slabiny' },
-  { to: '/stats',    label: '📊 Statistiky' },
+  { to: '/weak',     label: '🎯 Slabiny',    locked: true },
+  { to: '/stats',    label: '📊 Statistiky', locked: true },
   { to: '/settings', label: '⚙ Nastavení' },
 ]
 
 function NavItems({ onNavigate }: { onNavigate?: () => void }) {
+  const { isGuest } = useGuestStatus()
   return (
     <>
       {items.map(i => (
@@ -26,10 +28,21 @@ function NavItems({ onNavigate }: { onNavigate?: () => void }) {
             `px-3 py-2 rounded text-sm ${isActive ? 'bg-primary-light text-primary-dark font-medium' : 'text-neutral-700 hover:bg-neutral-100'}`
           }
         >
-          {i.label}
+          {i.label}{isGuest && i.locked ? ' 🔒' : ''}
         </NavLink>
       ))}
     </>
+  )
+}
+
+function GuestStatus({ onNavigate }: { onNavigate?: () => void }) {
+  const { isGuest } = useGuestStatus()
+  if (!isGuest) return null
+  return (
+    <div className="mt-auto pt-4 text-xs text-neutral-500">
+      Nepřihlášen ·{' '}
+      <Link to="/login" onClick={onNavigate} className="text-accent hover:underline">Přihlásit se</Link>
+    </div>
   )
 }
 
@@ -119,7 +132,8 @@ export default function Sidebar() {
           </button>
         </div>
         <NavItems onNavigate={() => setMobileOpen(false)} />
-        <div className="mt-auto text-[10px] text-neutral-400 italic pt-4">
+        <GuestStatus onNavigate={() => setMobileOpen(false)} />
+        <div className="mt-2 text-[10px] text-neutral-400 italic pt-4">
           Kategorii přepneš nahoře v aplikaci.
         </div>
       </aside>
@@ -133,6 +147,7 @@ export default function Sidebar() {
           <CategoryDropdown variant="sidebar" onBeforeSwitch={onBeforeSwitch} />
         </div>
         <NavItems />
+        <GuestStatus />
       </aside>
 
       <SwitchCategoryConfirmModal
