@@ -74,7 +74,7 @@ export function authRoutes(opts: AuthRoutesOptions) {
 
     const sid = await createSession(opts.db.db, id)
     setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
-    return c.json({ id, email }, 201)
+    return c.json({ id, email, guest: false }, 201)
   })
 
   r.post('/login', async c => {
@@ -92,14 +92,14 @@ export function authRoutes(opts: AuthRoutesOptions) {
       .where(eq(users.email, body.email.toLowerCase()))
       .limit(1)
     const user = row[0]
-    if (!user) return c.json({ error: 'invalid credentials' }, 401)
+    if (!user || user.isGuest) return c.json({ error: 'invalid credentials' }, 401)
     if (!(await verifyPassword(user.passwordHash, body.password))) {
       return c.json({ error: 'invalid credentials' }, 401)
     }
 
     const sid = await createSession(opts.db.db, user.id)
     setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
-    return c.json({ id: user.id, email: user.email })
+    return c.json({ id: user.id, email: user.email, guest: false })
   })
 
   r.post('/logout', async c => {

@@ -16,7 +16,8 @@ export function loadUser(db: Db): MiddlewareHandler<AppEnv> {
     if (sid) {
       const row = await lookupSession(db.db, sid)
       if (row) {
-        c.set('user', { id: row.user.id, email: row.user.email })
+        const guest = row.user.isGuest
+        c.set('user', { id: row.user.id, email: guest ? null : row.user.email, guest })
         c.set('sid', sid)
         await maybeExtendSession(db.db, sid, new Date(row.session.expiresAt))
       }
