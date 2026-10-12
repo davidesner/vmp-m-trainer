@@ -5,13 +5,27 @@ import { useAuth } from '../hooks/useAuth'
 interface LocationState { from?: { pathname?: string } }
 
 export default function Login() {
-  const { login, signupEnabled } = useAuth()
+  const { login, loginAsGuest, signupEnabled } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+
+  function goBack() {
+    const to = (location.state as LocationState | null)?.from?.pathname ?? '/'
+    navigate(to, { replace: true })
+  }
+
+  async function onGuest() {
+    setError(null)
+    setBusy(true)
+    const res = await loginAsGuest()
+    setBusy(false)
+    if (res.ok) goBack()
+    else setError(res.error ?? 'Chyba')
+  }
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault()
@@ -20,8 +34,7 @@ export default function Login() {
     const res = await login(email.trim().toLowerCase(), password)
     setBusy(false)
     if (res.ok) {
-      const to = (location.state as LocationState | null)?.from?.pathname ?? '/'
-      navigate(to, { replace: true })
+      goBack()
     } else {
       setError(res.error ?? 'Chyba')
     }
@@ -54,6 +67,12 @@ export default function Login() {
             <Link to="/register" className="text-primary hover:underline">Vytvořit účet</Link>
           </p>
         )}
+        <div className="mt-6 pt-4 border-t border-neutral-200">
+          <button type="button" onClick={() => void onGuest()} disabled={busy}
+            className="w-full border border-neutral-300 rounded py-2 text-sm text-neutral-700 hover:bg-neutral-50 disabled:opacity-50">
+            Pokračovat bez přihlášení
+          </button>
+        </div>
       </form>
     </div>
   )

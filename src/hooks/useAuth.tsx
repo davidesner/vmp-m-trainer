@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
 
-interface AuthUser { id: string; email: string }
+export interface AuthUser { id: string; email: string | null; guest: boolean }
 
 interface AuthResult { ok: boolean; error?: string }
 
@@ -10,6 +10,7 @@ interface AuthCtx {
   signupEnabled: boolean
   login: (email: string, password: string) => Promise<AuthResult>
   register: (email: string, password: string, code: string) => Promise<AuthResult>
+  loginAsGuest: () => Promise<AuthResult>
   logout: () => Promise<void>
   refresh: () => Promise<void>
 }
@@ -77,13 +78,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { ok: false, error: errByStatus[res.status] ?? `HTTP ${res.status}` }
   }, [])
 
+  const loginAsGuest = useCallback(async () => {
+    const res = await fetch('/api/auth/guest', { method: 'POST', credentials: 'same-origin' })
+    if (res.ok) {
+      setUser(await res.json())
+      return { ok: true }
+    }
+    return { ok: false, error: res.status === 429 ? 'Příliš mnoho pokusů, zkus to za chvíli' : `HTTP ${res.status}` }
+  }, [])
+
   const logout = useCallback(async () => {
     await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' })
     setUser(null)
   }, [])
 
   return (
-    <Ctx.Provider value={{ user, loading, signupEnabled, login, register, logout, refresh }}>
+    <Ctx.Provider value={{ user, loading, signupEnabled, login, register, loginAsGuest, logout, refresh }}>
       {children}
     </Ctx.Provider>
   )
@@ -93,4 +103,11 @@ export function useAuth(): AuthCtx {
   const v = useContext(Ctx)
   if (!v) throw new Error('useAuth must be inside <AuthProvider>')
   return v
+}
+
+/** Guest flag for hooks that may render outside <AuthProvider> (e.g. in unit tests). */
+export function useGuestStatus(): { isGuest: boolean; authLoading: boolean } {
+  const v = useContext(Ctx)
+  if (!v) return { isGuest: false, authLoading: false }
+  return { isGuest: v.user?.guest === true, authLoading: v.loading }
 }
