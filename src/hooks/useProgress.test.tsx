@@ -3,6 +3,7 @@ import { renderHook, act, waitFor } from '@testing-library/react'
 import type { ReactNode } from 'react'
 import { useProgress } from './useProgress'
 import { ActiveTestProvider } from './useActiveTest'
+import { AuthProvider } from './useAuth'
 
 interface MockState {
   attempts: { id?: number; testId?: string; questionId: number; correct: boolean; mode: 'test' | 'practice'; at: string }[]
@@ -95,5 +96,67 @@ describe('useProgress (server-backed)', () => {
     await act(async () => { await result.current.reset() })
     expect(result.current.store.questions[1]).toBeUndefined()
     expect(getState().attempts).toHaveLength(0)
+  })
+})
+
+function mockAuthServer(me: object | null, delayMeMs = 0) {
+  const calls: string[] = []
+  vi.spyOn(globalThis, 'fetch').mockImplementation(async (input, init) => {
+    const url = typeof input === 'string' ? input : (input as Request).url
+    const method = init?.method ?? 'GET'
+    calls.push(`${method} ${url}`)
+    if (url === '/api/auth/config') return new Response(JSON.stringify({ signupEnabled: false }), { status: 200 })
+    if (url === '/api/me') {
+      if (delayMeMs) await new Promise(r => setTimeout(r, delayMeMs))
+      return me ? new Response(JSON.stringify(me), { status: 200 }) : new Response('', { status: 401 })
+    }
+    if (url.startsWith('/api/progress')) return new Response(JSON.stringify({ attempts: [], testHistory: [] }), { status: 200 })
+    if (url === '/api/attempts' || url === '/api/test-history') return new Response(null, { status: 201 })
+    return new Response('not found', { status: 404 })
+  })
+  return calls
+}
+
+function authWrapper({ children }: { children: ReactNode }) {
+  return <AuthProvider><ActiveTestProvider>{children}</ActiveTestProvider></AuthProvider>
+}
+
+describe('useProgress for guests', () => {
+  afterEach(() => vi.restoreAllMocks())
+
+  it('never fetches /api/progress for a guest, even while /api/me is pending', async () => {
+    const calls = mockAuthServer({ id: 'g1', email: null, guest: true }, 30)
+    renderHook(() => useProgress(), { wrapper: authWrapper })
+    await waitFor(() => expect(calls).toContain('GET /api/me'))
+    await new Promise(r => setTimeout(r, 80))
+    expect(calls.some(c => c.includes('/api/progress'))).toBe(false)
+  })
+
+  it('records attempts and test history on the server without updating the store', async () => {
+    const calls = mockAuthServer({ id: 'g1', email: null, guest: true })
+    const { result } = renderHook(() => useProgress(), { wrapper: authWrapper })
+    await waitFor(() => expect(calls).toContain('GET /api/me'))
+    await act(async () => {
+      await result.current.recordAttempt(5, false, 'practice')
+      await result.current.recordTestHistory({ at: 'x', score: 1, total: 2, durationSec: 3, perGroup: {}, questionIds: [5] } as never)
+    })
+    expect(calls).toContain('POST /api/attempts')
+    expect(calls).toContain('POST /api/test-history')
+    expect(result.current.store).toEqual({ questions: {}, testHistory: [] })
+  })
+
+  it('reset is a no-op for a guest', async () => {
+    const calls = mockAuthServer({ id: 'g1', email: null, guest: true })
+    const { result } = renderHook(() => useProgress(), { wrapper: authWrapper })
+    await waitFor(() => expect(calls).toContain('GET /api/me'))
+    await act(async () => { await result.current.reset() })
+    expect(calls.some(c => c.startsWith('DELETE'))).toBe(false)
+  })
+
+  it('still fetches /api/progress for a registered user once auth resolves', async () => {
+    const calls = mockAuthServer({ id: 'u1', email: 'a@b.c', guest: false }, 30)
+    renderHook(() => useProgress(), { wrapper: authWrapper })
+    await waitFor(() => expect(calls.some(c => c.startsWith('GET /api/progress'))).toBe(true))
+    expect(calls.indexOf('GET /api/me')).toBeLessThan(calls.findIndex(c => c.startsWith('GET /api/progress')))
   })
 })

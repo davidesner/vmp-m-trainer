@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { ProgressStore, AnswerMode, TestHistoryEntry, QuestionProgress, AttemptRecord } from '../types'
 import { useActiveTest } from './useActiveTest'
+import { useGuestStatus } from './useAuth'
 import type { TestId } from '../lib/tests'
 
 const empty: ProgressStore = { questions: {}, testHistory: [] }
@@ -53,12 +54,15 @@ async function postWithRetry(url: string, body: unknown, attempts = 3): Promise<
 
 export function useProgress() {
   const { activeTest } = useActiveTest()
+  const { isGuest, authLoading } = useGuestStatus()
   const [store, setStore] = useState<ProgressStore>(empty)
 
   // Load on mount / when activeTest changes
   useEffect(() => {
     let cancelled = false
     setStore(empty)
+    // Guests never see stored data; wait for /api/me so we never fetch for the wrong identity.
+    if (authLoading || isGuest) return
     void (async () => {
       try {
         const res = await fetch(`/api/progress?testId=${activeTest}`, { credentials: 'same-origin' })
@@ -72,9 +76,18 @@ export function useProgress() {
       } catch { /* keep empty */ }
     })()
     return () => { cancelled = true }
-  }, [activeTest])
+  }, [activeTest, isGuest, authLoading])
 
   const recordAttempt = useCallback(async (qid: number, correct: boolean, mode: AnswerMode) => {
+    if (isGuest) {
+      // Recorded for monitoring only; never reflected back to a guest.
+      try {
+        await postWithRetry('/api/attempts', { testId: activeTest, questionId: qid, correct, mode })
+      } catch {
+        console.warn('Failed to save attempt')
+      }
+      return
+    }
     const at = new Date().toISOString()
     // optimistic update
     setStore(prev => {
@@ -102,10 +115,12 @@ export function useProgress() {
       })
       console.warn('Failed to save attempt')
     }
-  }, [activeTest])
+  }, [activeTest, isGuest])
 
   const recordTestHistory = useCallback(async (entry: TestHistoryEntry) => {
-    setStore(prev => ({ ...prev, testHistory: [entry, ...prev.testHistory].slice(0, 50) }))
+    if (!isGuest) {
+      setStore(prev => ({ ...prev, testHistory: [entry, ...prev.testHistory].slice(0, 50) }))
+    }
     try {
       await postWithRetry('/api/test-history', {
         testId: activeTest,
@@ -118,16 +133,17 @@ export function useProgress() {
     } catch {
       console.warn('Failed to save test history')
     }
-  }, [activeTest])
+  }, [activeTest, isGuest])
 
   const reset = useCallback(async () => {
+    if (isGuest) return
     setStore(empty)
     try {
       await fetch(`/api/progress?testId=${activeTest}`, { method: 'DELETE', credentials: 'same-origin' })
     } catch {
       console.warn('Failed to reset on server')
     }
-  }, [activeTest])
+  }, [activeTest, isGuest])
 
   return { store, recordAttempt, recordTestHistory, reset }
 }
