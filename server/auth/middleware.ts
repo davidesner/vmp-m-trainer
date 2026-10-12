@@ -32,3 +32,13 @@ export function requireAuth(): MiddlewareHandler<AppEnv> {
     await next()
   }
 }
+
+/** Like requireAuth, but guests are refused: stored data is only shown to account holders. */
+export function requireRegistered(): MiddlewareHandler<AppEnv> {
+  return async (c, next) => {
+    const user = c.get('user')
+    if (!user) return c.json({ error: 'unauthorized' }, 401)
+    if (user.guest) return c.json({ error: 'account required' }, 403)
+    await next()
+  }
+}
