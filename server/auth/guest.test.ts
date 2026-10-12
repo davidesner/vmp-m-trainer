@@ -62,3 +62,80 @@ describe('guest auth context', () => {
     expect(await ctx.db.db.select().from(sessions)).toHaveLength(0)
   })
 })
+function guest(app: Awaited<ReturnType<typeof setup>>['app'], opts: { cookie?: string; ip?: string } = {}) {
+  return app.request('/api/auth/guest', {
+    method: 'POST',
+    headers: {
+      'x-forwarded-for': opts.ip ?? '7.7.7.7',
+      ...(opts.cookie ? { cookie: opts.cookie } : {}),
+    },
+  })
+}
+
+describe('POST /api/auth/guest', () => {
+  let ctx: Awaited<ReturnType<typeof setup>>
+  beforeEach(async () => { ctx = await setup() })
+
+  it('creates a guest row and session cookie without a signup code', async () => {
+    const res = await guest(ctx.app)
+    expect(res.status).toBe(201)
+    const body = await res.json() as { id: string; email: null; guest: true }
+    expect(body).toEqual({ id: expect.any(String), email: null, guest: true })
+    expect(res.headers.get('set-cookie')).toMatch(/^sid=[a-f0-9]{64}/)
+    const [row] = await ctx.db.db.select().from(users).where(eq(users.id, body.id))
+    expect(row.isGuest).toBe(true)
+    expect(row.email).toBe(`guest:${body.id}`)
+    expect(row.passwordHash).toBe('')
+  })
+
+  it('returns the same guest when called again with its cookie', async () => {
+    const first = await guest(ctx.app)
+    const cookie = first.headers.get('set-cookie')!.split(';')[0]
+    const { id } = await first.json() as { id: string }
+    const second = await guest(ctx.app, { cookie })
+    expect(second.status).toBe(200)
+    expect(await second.json()).toEqual({ id, email: null, guest: true })
+    expect(await ctx.db.db.select().from(users).where(eq(users.isGuest, true))).toHaveLength(2) // g1 + this one
+  })
+
+  it('returns the registered user unchanged when a registered session exists', async () => {
+    const sid = await createSession(ctx.db.db, 'u1')
+    const res = await guest(ctx.app, { cookie: `sid=${sid}` })
+    expect(res.status).toBe(200)
+    expect(await res.json()).toEqual({ id: 'u1', email: 'a@b.c', guest: false })
+    expect(res.headers.get('set-cookie')).toBeNull()
+  })
+
+  it('allows 20 guests per IP per window, then 429', async () => {
+    for (let i = 0; i < 20; i++) {
+      expect((await guest(ctx.app, { ip: '5.5.5.5' })).status).toBe(201)
+    }
+    const res = await guest(ctx.app, { ip: '5.5.5.5' })
+    expect(res.status).toBe(429)
+    expect(res.headers.get('retry-after')).toMatch(/^\d+$/)
+    expect((await guest(ctx.app, { ip: '6.6.6.6' })).status).toBe(201)
+  })
+
+  it('login while holding a guest session deletes that session but keeps the guest row', async () => {
+    const g = await guest(ctx.app)
+    const cookie = g.headers.get('set-cookie')!.split(';')[0]
+    const { id: guestId } = await g.json() as { id: string }
+    const res = await login(ctx.app, { email: 'a@b.c', password: 'hunter2' }, cookie)
+    expect(res.status).toBe(200)
+    expect(await ctx.db.db.select().from(sessions).where(eq(sessions.userId, guestId))).toHaveLength(0)
+    expect(await ctx.db.db.select().from(users).where(eq(users.id, guestId))).toHaveLength(1)
+  })
+
+  it('register while holding a guest session deletes that session', async () => {
+    const g = await guest(ctx.app)
+    const cookie = g.headers.get('set-cookie')!.split(';')[0]
+    const { id: guestId } = await g.json() as { id: string }
+    const res = await ctx.app.request('/api/auth/register', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', cookie, 'x-forwarded-for': '8.8.8.8' },
+      body: JSON.stringify({ email: 'new@b.c', password: 'longenough', code: 'CODE' }),
+    })
+    expect(res.status).toBe(201)
+    expect(await ctx.db.db.select().from(sessions).where(eq(sessions.userId, guestId))).toHaveLength(0)
+  })
+})
