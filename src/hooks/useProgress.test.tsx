@@ -3,7 +3,7 @@ import { renderHook, act, waitFor } from '@testing-library/react'
 import type { ReactNode } from 'react'
 import { useProgress } from './useProgress'
 import { ActiveTestProvider } from './useActiveTest'
-import { AuthProvider } from './useAuth'
+import { AuthProvider, useGuestStatus } from './useAuth'
 
 interface MockState {
   attempts: { id?: number; testId?: string; questionId: number; correct: boolean; mode: 'test' | 'practice'; at: string }[]
@@ -134,8 +134,8 @@ describe('useProgress for guests', () => {
 
   it('records attempts and test history on the server without updating the store', async () => {
     const calls = mockAuthServer({ id: 'g1', email: null, guest: true })
-    const { result } = renderHook(() => useProgress(), { wrapper: authWrapper })
-    await waitFor(() => expect(calls).toContain('GET /api/me'))
+    const { result } = renderHook(() => ({ ...useProgress(), auth: useGuestStatus() }), { wrapper: authWrapper })
+    await waitFor(() => expect(result.current.auth.isGuest).toBe(true))
     await act(async () => {
       await result.current.recordAttempt(5, false, 'practice')
       await result.current.recordTestHistory({ at: 'x', score: 1, total: 2, durationSec: 3, perGroup: {}, questionIds: [5] } as never)
@@ -147,8 +147,8 @@ describe('useProgress for guests', () => {
 
   it('reset is a no-op for a guest', async () => {
     const calls = mockAuthServer({ id: 'g1', email: null, guest: true })
-    const { result } = renderHook(() => useProgress(), { wrapper: authWrapper })
-    await waitFor(() => expect(calls).toContain('GET /api/me'))
+    const { result } = renderHook(() => ({ ...useProgress(), auth: useGuestStatus() }), { wrapper: authWrapper })
+    await waitFor(() => expect(result.current.auth.isGuest).toBe(true))
     await act(async () => { await result.current.reset() })
     expect(calls.some(c => c.startsWith('DELETE'))).toBe(false)
   })
