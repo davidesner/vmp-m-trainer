@@ -35,11 +35,11 @@ function NavItems({ onNavigate }: { onNavigate?: () => void }) {
   )
 }
 
-function GuestStatus({ onNavigate }: { onNavigate?: () => void }) {
+function GuestStatus({ onNavigate, className = '' }: { onNavigate?: () => void; className?: string }) {
   const { isGuest } = useGuestStatus()
   if (!isGuest) return null
   return (
-    <div className="mt-auto pt-4 text-xs text-neutral-500">
+    <div className={`pt-4 text-xs text-neutral-500 ${className}`}>
       Nepřihlášen ·{' '}
       <Link to="/login" onClick={onNavigate} className="text-accent hover:underline">Přihlásit se</Link>
     </div>
@@ -132,9 +132,11 @@ export default function Sidebar() {
           </button>
         </div>
         <NavItems onNavigate={() => setMobileOpen(false)} />
-        <GuestStatus onNavigate={() => setMobileOpen(false)} />
-        <div className="mt-2 text-[10px] text-neutral-400 italic pt-4">
-          Kategorii přepneš nahoře v aplikaci.
+        <div className="mt-auto">
+          <GuestStatus onNavigate={() => setMobileOpen(false)} />
+          <div className="text-[10px] text-neutral-400 italic pt-4">
+            Kategorii přepneš nahoře v aplikaci.
+          </div>
         </div>
       </aside>
 
@@ -147,7 +149,7 @@ export default function Sidebar() {
           <CategoryDropdown variant="sidebar" onBeforeSwitch={onBeforeSwitch} />
         </div>
         <NavItems />
-        <GuestStatus />
+        <GuestStatus className="mt-auto" />
       </aside>
 
       <SwitchCategoryConfirmModal
