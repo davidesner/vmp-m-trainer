@@ -3,10 +3,23 @@ import type { GroupId, QuestionsBundle, ProgressStore } from '../types'
 import { useActiveTest } from '../hooks/useActiveTest'
 import { useAllProgress } from '../hooks/useAllProgress'
 import { TESTS, TEST_IDS, type TestId } from '../lib/tests'
+import { useGuestStatus } from '../hooks/useAuth'
+import LockedFeature from '../components/LockedFeature'
 
 type Tab = TestId | 'all'
 
 export default function Stats() {
+  const { isGuest } = useGuestStatus()
+  if (isGuest) return (
+    <div className="max-w-4xl mx-auto p-4 md:p-8">
+      <h2 className="text-2xl font-bold mb-4">Statistiky</h2>
+      <LockedFeature />
+    </div>
+  )
+  return <StatsContent />
+}
+
+function StatsContent() {
   const { activeTest } = useActiveTest()
   const { bundles, progressByTest, loading, error } = useAllProgress()
   const [tab, setTab] = useState<Tab>(activeTest)

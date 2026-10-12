@@ -4,17 +4,37 @@ import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
 import { estimatePass, coverage } from '../lib/passProbability'
 import CategorySubtitle from '../components/CategorySubtitle'
+import LockedFeature from '../components/LockedFeature'
+import { useGuestStatus } from '../hooks/useAuth'
 
 export default function Home() {
   const { data, loading } = useQuestions()
   const { store } = useProgress()
+  const { isGuest } = useGuestStatus()
 
   const pass = useMemo(() => data ? estimatePass(data, store.questions, data.passing.score) : null, [data, store.questions])
   const cov  = useMemo(() => data ? coverage(data, store.questions)    : null, [data, store.questions])
 
   const recent = store.testHistory.slice(0, 5)
 
-  if (loading || !data || !pass || !cov) return <div className="p-4 md:p-8">Načítám…</div>
+  if (loading || !data) return <div className="p-4 md:p-8">Načítám…</div>
+
+  if (isGuest) {
+    return (
+      <div className="p-4 md:p-8 max-w-5xl">
+        <h2 className="text-2xl font-bold mb-1">Přehled</h2>
+        <CategorySubtitle withParams className="mb-6" />
+        <div className="mb-6 sm:text-right">
+          <Link to="/test" className="inline-block w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition">
+            ▶ Spustit ostrý test
+          </Link>
+        </div>
+        <LockedFeature title="Odhad úspěchu a statistiky" />
+      </div>
+    )
+  }
+
+  if (!pass || !cov) return <div className="p-4 md:p-8">Načítám…</div>
 
   const passingScore = data.passing.score
   const passingTotal = data.passing.total
