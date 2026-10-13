@@ -180,30 +180,42 @@ const TOUCHDOWN_AT = 0.8
 const TIP_ANGLE = -28
 // Pivot for tipping: the bottom of the anchor's arc (y = 28 of the 32-unit viewBox).
 const ARC_BOTTOM = 28 / 32
-// Extra chain above the panel's top edge, so the rotated chain still runs out of the panel.
-const CHAIN_OVERHANG = 400
+// Distance between consecutive links along the chain (half the pattern pitch: front link, then side link).
+const LINK_STEP = LINK_PITCH / 2
+// Where the chain comes in, above the panel's top edge, so its end is never visible.
+const CHAIN_ENTRY = -40
+// Share of the tipped ring's sideways shift the chain keeps at the panel's top edge (0 = hangs fully plumb).
+const CHAIN_LEAN = 0.25
+// Enough links to cover the panel height plus the slack curve.
+const MAX_LINKS = 60
+
+type Point = { x: number; y: number }
+
+/** Point on a quadratic Bezier at t. */
+function bezier(a: Point, c: Point, b: Point, t: number): Point {
+  const u = 1 - t
+  return { x: u * u * a.x + 2 * u * t * c.x + t * t * b.x, y: u * u * a.y + 2 * u * t * c.y + t * t * b.y }
+}
 
 /**
  * The same anchor arriving in the closing panel: it comes down on its chain
  * from the panel's top edge as the panel scrolls into view, touches the seabed
- * and, by the time the page reaches its end, tips over onto its left fluke
- * the way a dropped anchor settles. Chain and anchor rotate together, so the
- * chain stays on the ring and leads off diagonally.
+ * and, by the time the page reaches its end, tips over onto its left fluke the
+ * way a dropped anchor settles. The chain doesn't rotate with it: it is laid
+ * out link by link along a curve that hangs nearly plumb over wherever the
+ * tipped ring ends up.
  */
 function LandingAnchor() {
   const layerRef = useRef<HTMLDivElement>(null)
-  const rigRef = useRef<HTMLDivElement>(null)
-  const chainRef = useRef<SVGSVGElement>(null)
-  const linksRef = useRef<SVGPatternElement>(null)
+  const linksRef = useRef<SVGGElement>(null)
   const anchorRef = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
     const layer = layerRef.current
-    const rig = rigRef.current
-    const chain = chainRef.current
-    const links = linksRef.current
+    const linkGroup = linksRef.current
     const anchor = anchorRef.current
-    if (!layer || !rig || !chain || !links || !anchor) return
+    if (!layer || !linkGroup || !anchor) return
+    const links = Array.from(linkGroup.children) as SVGGraphicsElement[]
     let frame = 0
 
     const update = () => {
@@ -218,20 +230,48 @@ function LandingAnchor() {
       const progress = endScroll > startScroll
         ? Math.min(1, Math.max(0, (window.scrollY - startScroll) / (endScroll - startScroll)))
         : 1
-      const above = -size
-      const landed = panel.height - SEABED_REST - size
       const descent = Math.min(1, progress / TOUCHDOWN_AT)
       const tip = Math.max(0, (progress - TOUCHDOWN_AT) / (1 - TOUCHDOWN_AT))
-      const easedTip = 1 - (1 - tip) ** 2  // eases out as it comes to rest
-      const y = above + (landed - above) * descent
-      const chainLength = Math.max(0, y + size * RING_TOP)
+      const angle = TIP_ANGLE * (1 - (1 - tip) ** 2)  // eases out as it comes to rest
 
-      chain.style.top = `${-CHAIN_OVERHANG}px`
-      chain.style.height = `${chainLength + CHAIN_OVERHANG}px`
-      links.setAttribute('y', String(chainLength % LINK_PITCH))
-      anchor.style.transform = `translateY(${y}px)`
-      rig.style.transformOrigin = `50% ${y + size * ARC_BOTTOM}px`
-      rig.style.transform = `rotate(${TIP_ANGLE * easedTip}deg)`
+      const above = -size
+      const landed = panel.height - SEABED_REST - size
+      const y = above + (landed - above) * descent
+      anchor.style.transform = `translateY(${y}px) rotate(${angle}deg)`
+
+      // Where the chain meets the ring once the anchor is rotated about the bottom of its arc.
+      const cx = layer.offsetWidth / 2
+      const reach = (ARC_BOTTOM - RING_TOP) * size
+      const rad = (angle * Math.PI) / 180
+      const ring: Point = { x: cx + reach * Math.sin(rad), y: y + ARC_BOTTOM * size - reach * Math.cos(rad) }
+      // The chain hangs plumb over the ring, with a slight lean back towards where it came down at the top.
+      // Straight while the anchor hangs.
+      const entry: Point = { x: ring.x + (cx - ring.x) * CHAIN_LEAN, y: CHAIN_ENTRY }
+      const control: Point = { x: ring.x, y: entry.y + (ring.y - entry.y) * 0.5 }
+
+      // Sample the curve from the ring upwards, then drop a link every LINK_STEP along it.
+      const samples: Point[] = []
+      for (let k = 0; k <= 48; k++) samples.push(bezier(ring, control, entry, k / 48))
+      let travelled = 0
+      let next = LINK_STEP / 2
+      let used = 0
+      for (let k = 1; k < samples.length && used < links.length; k++) {
+        const a = samples[k - 1]
+        const b = samples[k]
+        const seg = Math.hypot(b.x - a.x, b.y - a.y)
+        while (next <= travelled + seg && used < links.length) {
+          const f = (next - travelled) / seg
+          const px = a.x + (b.x - a.x) * f
+          const py = a.y + (b.y - a.y) * f
+          const deg = (Math.atan2(b.y - a.y, b.x - a.x) * 180) / Math.PI + 90
+          links[used].setAttribute('transform', `translate(${px} ${py}) rotate(${deg})`)
+          links[used].style.display = ''
+          used++
+          next += LINK_STEP
+        }
+        travelled += seg
+      }
+      for (let k = used; k < links.length; k++) links[k].style.display = 'none'
     }
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
 
@@ -249,8 +289,17 @@ function LandingAnchor() {
   return (
     <div ref={layerRef} aria-hidden="true"
       className="hidden min-[1400px]:motion-safe:block absolute inset-y-0 right-[calc((100%_-_72rem)/4_+_0.75rem_-_5rem)] w-40 pointer-events-none text-[#5f8f9c] opacity-35">
-      <div ref={rigRef} className="absolute inset-0">
-        <AnchorRig chainRef={chainRef} linksRef={linksRef} anchorRef={anchorRef} />
+      <svg className="absolute inset-0 w-full h-full overflow-visible">
+        {/* Links centred on the origin; alternate front-on rings and side-on bars, like the hero chain. */}
+        <g ref={linksRef}>
+          {Array.from({ length: MAX_LINKS }, (_, k) => k % 2 === 0
+            ? <rect key={k} x="-5" y="-6.5" width="10" height="13" rx="5" fill="none" stroke="currentColor" strokeWidth="3" />
+            : <rect key={k} x="-1.5" y="-5.5" width="3" height="11" rx="1.5" fill="currentColor" />)}
+        </g>
+      </svg>
+      <div ref={anchorRef} className="absolute top-0 left-0 w-full aspect-square will-change-transform"
+        style={{ transformOrigin: `50% ${ARC_BOTTOM * 100}%` }}>
+        <AnchorMark className="block w-full h-full" />
       </div>
     </div>
   )
