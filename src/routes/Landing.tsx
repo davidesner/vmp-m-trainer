@@ -591,7 +591,7 @@ export default function Landing() {
               Trenažér na zkoušku Vůdce Malého Plavidla (VMP)
             </h1>
             <p className="mt-6 text-lg text-river-line max-w-xl leading-relaxed">
-              Otázky podle tvých slabin, odhad připravenosti a vysvětlení ke každé otázce. Zdarma.
+              Testy VMP online a zdarma: otázky podle tvých slabin, odhad připravenosti a vysvětlení ke každé otázce.
             </p>
             <div className="mt-9">
               <HeroActions />
