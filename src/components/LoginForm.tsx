@@ -1,5 +1,4 @@
 import { useState, type FormEvent } from 'react'
-import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 
 interface Props {
@@ -12,7 +11,7 @@ interface Props {
 }
 
 export default function LoginForm({ onSuccess, tone = 'light', autoFocus = false, inline = false }: Props) {
-  const { login, signupEnabled } = useAuth()
+  const { login } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -47,19 +46,13 @@ export default function LoginForm({ onSuccess, tone = 'light', autoFocus = false
         </label>
       </div>
       {error && <div role="alert" className={`text-sm mb-3 ${dark ? 'text-red-300' : 'text-red-600'}`}>{error}</div>}
-      <div className={inline ? 'flex flex-wrap items-center gap-x-5 gap-y-3' : ''}>
+      <div>
         <button type="submit" disabled={busy}
           className={dark
             ? 'px-6 py-2.5 rounded-md border border-white/40 text-white font-medium hover:bg-white/10 disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors'
             : 'w-full bg-primary text-white rounded py-2 hover:bg-primary-dark disabled:opacity-50'}>
           {busy ? 'Přihlašuji…' : 'Přihlásit se'}
         </button>
-        {signupEnabled && (
-          <p className={`text-sm ${dark ? 'text-river-line' : 'text-neutral-600 mt-4 text-center'}`}>
-            Nemáš účet?{' '}
-            <Link to="/register" className={dark ? 'text-white underline underline-offset-2' : 'text-primary hover:underline'}>Vytvořit účet</Link>
-          </p>
-        )}
       </div>
     </form>
   )

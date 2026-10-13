@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
-import LoginForm from '../components/LoginForm'
+import AuthOptions from '../components/AuthOptions'
 
 interface LocationState { from?: { pathname?: string } }
 
@@ -30,7 +30,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-neutral-50">
       <div className="bg-white p-8 rounded-lg shadow-sm border border-neutral-200 w-full max-w-sm">
         <h1 className="text-xl font-semibold mb-6">Přihlášení</h1>
-        <LoginForm onSuccess={goBack} autoFocus />
+        <AuthOptions onSuccess={goBack} />
         <div className="mt-6 pt-4 border-t border-neutral-200">
           {error && <div className="text-sm text-red-600 mb-3">{error}</div>}
           <button type="button" onClick={() => void onGuest()} disabled={busy}

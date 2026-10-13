@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
-import LoginForm from '../components/LoginForm'
+import AuthOptions from '../components/AuthOptions'
 import { LANDING_CATEGORIES, LANDING_SAMPLES } from '../lib/landingSamples'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 import { sanitizeExplanationHtml } from '../lib/sanitize'
@@ -75,8 +75,8 @@ function HeroActions() {
         </p>
       )}
       {!signedIn && <div id={LOGIN_ID} className="mt-8 pt-6 border-t border-white/15 max-w-xl scroll-mt-8">
-        <h2 className="font-display font-bold text-lg mb-3">Máš účet? Přihlas se</h2>
-        <LoginForm tone="dark" inline onSuccess={() => navigate('/app')} />
+        <h2 className="font-display font-bold text-lg mb-3">Chceš ukládat pokrok?</h2>
+        <AuthOptions tone="dark" onSuccess={() => navigate('/app')} />
       </div>}
     </div>
   )
@@ -96,7 +96,7 @@ function BottomLoginButton() {
 function focusLogin() {
   const section = document.getElementById(LOGIN_ID)
   section?.scrollIntoView({ behavior: 'smooth' })
-  section?.querySelector<HTMLInputElement>('input[name="email"]')?.focus({ preventScroll: true })
+  section?.querySelector<HTMLElement>('button:not([disabled]), a')?.focus({ preventScroll: true })
 }
 
 function SampleQuestion() {

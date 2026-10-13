@@ -34,10 +34,19 @@ function renderLanding() {
 }
 
 describe('Landing', () => {
+  it('offers Google and Seznam (not wired yet) and a registration link', async () => {
+    mockApi(null)
+    renderLanding()
+    expect(await screen.findByRole('button', { name: /Pokračovat přes Google/ })).toBeDisabled()
+    expect(screen.getByRole('button', { name: /Pokračovat přes Seznam/ })).toBeDisabled()
+    expect(screen.getByRole('link', { name: 'Zaregistruj se emailem' })).toHaveAttribute('href', '/register')
+  })
+
   it('signs in from the embedded form and opens the app', async () => {
     const calls = mockApi(null)
     renderLanding()
-    const form = await screen.findByRole('form', { name: 'Přihlášení' })
+    fireEvent.click(await screen.findByRole('button', { name: 'Přihlásit se emailem' }))
+    const form = screen.getByRole('form', { name: 'Přihlášení' })
     fireEvent.change(form.querySelector('input[name="email"]')!, { target: { value: 'A@b.c' } })
     fireEvent.change(form.querySelector('input[name="password"]')!, { target: { value: 'hunter22' } })
     fireEvent.submit(form)
@@ -49,7 +58,7 @@ describe('Landing', () => {
     mockApi({ id: 'u1', email: 'a@b.c', guest: false })
     renderLanding()
     expect(await screen.findAllByRole('link', { name: 'Pokračovat do trenažéru' })).not.toHaveLength(0)
-    expect(screen.queryByRole('form', { name: 'Přihlášení' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Přihlásit se emailem' })).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Vyzkoušet bez přihlášení' })).not.toBeInTheDocument()
   })
 })

@@ -70,7 +70,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return { ok: true }
     }
     const errByStatus: Record<number, string> = {
-      403: 'Neplatný registrační kód',
+      403: 'Registrace teď není dostupná',
       409: 'Tento email už je registrovaný',
       400: 'Zkontroluj email a heslo (min. 8 znaků)',
       429: 'Příliš mnoho pokusů, zkus to za chvíli',
