@@ -42,4 +42,4 @@ yarn.lock
 # Vercel CLI link and pulled env files; keep the committed template.
 .vercel
 .env*
-!.env.example
+!.env*.example
