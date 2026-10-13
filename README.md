@@ -1,4 +1,4 @@
-# VMP Trenažér
+# <img src="public/favicon.svg" alt="" width="40" height="40" align="center" /> VMP Trenažér
 
 Webová appka na trénink otázek pro zkoušku vůdce malého plavidla (VMP), kategorie M, S a C.
 Běží zdarma na **[vmp-trenazer.cz](https://vmp-trenazer.cz)**.
