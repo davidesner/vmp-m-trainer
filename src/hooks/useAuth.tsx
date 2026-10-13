@@ -4,10 +4,15 @@ export interface AuthUser { id: string; email: string | null; guest: boolean }
 
 interface AuthResult { ok: boolean; error?: string }
 
+export type SsoProvider = 'google' | 'seznam'
+/** Which SSO providers the server has credentials for; null until /api/auth/config answers. */
+export type SsoAvailability = Record<SsoProvider, boolean> | null
+
 interface AuthCtx {
   user: AuthUser | null
   loading: boolean
   signupEnabled: boolean
+  sso: SsoAvailability
   login: (email: string, password: string) => Promise<AuthResult>
   register: (email: string, password: string, code: string) => Promise<AuthResult>
   loginAsGuest: () => Promise<AuthResult>
@@ -21,12 +26,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null)
   const [loading, setLoading] = useState(true)
   const [signupEnabled, setSignupEnabled] = useState(false)
+  const [sso, setSso] = useState<SsoAvailability>(null)
 
   useEffect(() => {
     void fetch('/api/auth/config', { credentials: 'same-origin' })
       .then(res => (res.ok ? res.json() : null))
-      .then(cfg => setSignupEnabled(Boolean(cfg?.signupEnabled)))
-      .catch(() => setSignupEnabled(false))
+      .then(cfg => {
+        setSignupEnabled(Boolean(cfg?.signupEnabled))
+        setSso({ google: cfg?.sso?.google === true, seznam: cfg?.sso?.seznam === true })
+      })
+      .catch(() => {
+        setSignupEnabled(false)
+        setSso({ google: false, seznam: false })
+      })
   }, [])
 
   const refresh = useCallback(async () => {
@@ -93,7 +105,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <Ctx.Provider value={{ user, loading, signupEnabled, login, register, loginAsGuest, logout, refresh }}>
+    <Ctx.Provider value={{ user, loading, signupEnabled, sso, login, register, loginAsGuest, logout, refresh }}>
       {children}
     </Ctx.Provider>
   )

@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import LoginForm from './LoginForm'
+import { useAuth, type SsoProvider } from '../hooks/useAuth'
 
 /**
  * Sign-in / sign-up entry points. Google and Seznam create the account on first
  * use, so the same buttons serve both new and returning users.
- * SSO is UI-only for now: flip `ready` and point `href` at the OAuth start
- * endpoint once the backend exists.
+ * A provider's button works only when the server has its client credentials
+ * (reported by /api/auth/config); otherwise it shows as coming soon.
  */
-const SSO_PROVIDERS: Array<{ id: 'google' | 'seznam'; label: string; href: string; ready: boolean }> = [
-  { id: 'google', label: 'Pokračovat přes Google', href: '/api/auth/oauth/google', ready: false },
-  { id: 'seznam', label: 'Pokračovat přes Seznam', href: '/api/auth/oauth/seznam', ready: false },
+const SSO_PROVIDERS: Array<{ id: SsoProvider; name: string; href: string }> = [
+  { id: 'google', name: 'Google', href: '/api/auth/oauth/google' },
+  { id: 'seznam', name: 'Seznam', href: '/api/auth/oauth/seznam' },
 ]
 
 function GoogleMark() {
@@ -40,25 +41,28 @@ interface Props {
 
 export default function AuthOptions({ onSuccess, tone = 'light' }: Props) {
   const [emailOpen, setEmailOpen] = useState(false)
+  const { sso } = useAuth()
   const dark = tone === 'dark'
-  const anyPending = SSO_PROVIDERS.some(p => !p.ready)
+  const providers = SSO_PROVIDERS.map(p => ({ ...p, ready: sso?.[p.id] === true }))
+  // Wait for the config before calling anything "coming soon", so working buttons don't flash it.
+  const pending = sso ? providers.filter(p => !p.ready).map(p => p.name) : []
   const muted = dark ? 'text-river-line' : 'text-neutral-600'
   const linkCls = dark ? 'text-white underline underline-offset-2 hover:no-underline' : 'text-accent hover:underline'
 
   return (
     <div>
       <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(14rem,1fr))]">
-        {SSO_PROVIDERS.map(p => {
+        {providers.map(p => {
           const cls = `inline-flex items-center justify-center gap-3 px-5 py-3 rounded-md bg-white text-neutral-900 font-medium border ${
             dark ? 'border-transparent' : 'border-neutral-300'} hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors`
-          const content = <>{p.id === 'google' ? <GoogleMark /> : <SeznamMark />}<span className="whitespace-nowrap">{p.label}</span></>
+          const content = <>{p.id === 'google' ? <GoogleMark /> : <SeznamMark />}<span className="whitespace-nowrap">Pokračovat přes {p.name}</span></>
           return p.ready
             ? <a key={p.id} href={p.href} className={cls}>{content}</a>
-            : <button key={p.id} type="button" disabled aria-describedby="sso-pending" className={`${cls} disabled:opacity-60 disabled:cursor-not-allowed`}>{content}</button>
+            : <button key={p.id} type="button" disabled aria-describedby={pending.length ? 'sso-pending' : undefined} className={`${cls} disabled:opacity-60 disabled:cursor-not-allowed`}>{content}</button>
         })}
       </div>
-      {anyPending && (
-        <p id="sso-pending" className={`mt-2 text-xs ${muted}`}>Přihlášení přes Google a Seznam připravujeme.</p>
+      {pending.length > 0 && (
+        <p id="sso-pending" className={`mt-2 text-xs ${muted}`}>Přihlášení přes {pending.join(' a ')} připravujeme.</p>
       )}
 
       <div className="mt-4">
