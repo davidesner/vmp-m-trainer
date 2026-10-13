@@ -25,9 +25,9 @@ const DEMO_GROUPS: Array<{ name: string; accuracy: number }> = [
   { name: 'První pomoc', accuracy: 42 },
 ]
 
-function AnchorMark() {
+function AnchorMark({ className = '' }: { className?: string }) {
   return (
-    <svg role="img" aria-label="Trenažér VMP" viewBox="0 0 32 32" className="w-9 h-9 text-primary"
+    <svg aria-hidden="true" viewBox="0 0 32 32" className={`text-primary ${className}`}
       fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="16" cy="6" r="3" />
       <path d="M16 9v19" />
@@ -275,13 +275,11 @@ export default function Landing() {
           <path d="M0 32 Q 50 12 100 32 T 200 32 T 300 32 T 400 32 T 500 32 T 600 32 T 700 32 T 800 32 T 900 32 T 1000 32 T 1100 32 T 1200 32 V64 H0 Z" fill="currentColor" />
         </svg>
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8">
-          <AnchorMark />
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-24 sm:pt-12 sm:pb-32 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-24 sm:pt-20 sm:pb-32 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
           <div className="lg:pt-6">
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.05] text-balance tracking-tight">
+            <h1 className="relative font-display font-extrabold text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.05] text-balance tracking-tight">
+              {/* Hangs in the margin left of the first line so the heading stays aligned with the text below. */}
+              <AnchorMark className="hidden xl:block absolute right-full mr-5 top-[0.15em] w-12 h-12" />
               Trenažér na zkoušku Vůdce Malého Plavidla (VMP)
             </h1>
             <p className="mt-6 text-lg text-river-line max-w-xl leading-relaxed">
