@@ -25,4 +25,12 @@ describe('Practice for guests', () => {
     expect(screen.getByRole('button', { name: 'Hlavně slabiny' })).toBeDisabled()
     expect(screen.getByRole('link', { name: 'Dostupné po přihlášení' })).toHaveAttribute('href', '/login')
   })
+
+  it('locked mix buttons are described by a tooltip', () => {
+    render(<MemoryRouter><Practice /></MemoryRouter>)
+    for (const name of ['⚖ Mix slabiny + známé', 'Hlavně slabiny']) {
+      expect(screen.getByRole('button', { name })).toHaveAccessibleDescription('Dostupné po přihlášení. Výběr podle tvých předchozích odpovědí.')
+    }
+    expect(screen.getByRole('button', { name: 'Náhodně' })).not.toHaveAttribute('aria-describedby')
+  })
 })
