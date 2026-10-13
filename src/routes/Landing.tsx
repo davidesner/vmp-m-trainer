@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import AuthOptions from '../components/AuthOptions'
@@ -27,7 +27,7 @@ const DEMO_GROUPS: Array<{ name: string; accuracy: number }> = [
 
 function AnchorMark({ className = '' }: { className?: string }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 32 32" className={`text-river-wave ${className}`}
+    <svg aria-hidden="true" viewBox="0 0 32 32" className={className}
       fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="16" cy="6" r="3" />
       <path d="M16 9v19" />
@@ -35,6 +35,78 @@ function AnchorMark({ className = '' }: { className?: string }) {
       <path d="M5 19c0 5 5 9 11 9s11-4 11-9" />
       <path d="M5 19l-2 2M5 19l2.5 1.5M27 19l2 2M27 19l-2.5 1.5" />
     </svg>
+  )
+}
+
+// The chain attaches at the top of the anchor's ring (y = 3 of the 32-unit viewBox).
+const RING_TOP = 3 / 32
+// Gap between the hanging anchor and the waterline (or the bottom of the screen) on load.
+const START_ABOVE_WATER = 48
+// The anchor is fully under the waves once the hero's bottom edge has scrolled up to this share of the screen.
+const SUBMERGED_AT = 0.35
+
+/**
+ * Anchor on a chain in the hero. It starts hanging above the waterline and,
+ * as the page scrolls, sinks under the waves and out of sight, so it never
+ * shows up over the white sections below. Wide screens without reduced
+ * motion only; elsewhere the static anchor rests in the waves.
+ */
+function SinkingAnchor() {
+  const layerRef = useRef<HTMLDivElement>(null)
+  const chainRef = useRef<SVGSVGElement>(null)
+  const anchorRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const layer = layerRef.current
+    const chain = chainRef.current
+    const anchor = anchorRef.current
+    if (!layer || !chain || !anchor) return
+    let frame = 0
+
+    const update = () => {
+      frame = 0
+      const hero = layer.getBoundingClientRect()
+      if (hero.height === 0) return  // hidden on this screen size
+      const size = anchor.offsetHeight
+      const start = Math.max(0, Math.min(hero.height, window.innerHeight) - size - START_ABOVE_WATER)
+      // Sink at a steady rate from the start position to just below the waterline.
+      const submergedY = hero.height
+      const scrollToSubmerge = Math.max(1, hero.height - window.innerHeight * SUBMERGED_AT)
+      const scrolled = Math.max(0, -hero.top)
+      const y = Math.min(submergedY, start + (submergedY - start) * (scrolled / scrollToSubmerge))
+      anchor.style.transform = `translateY(${y}px)`
+      chain.style.height = `${y + size * RING_TOP}px`
+    }
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
+
+    update()
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', schedule)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', schedule)
+    }
+  }, [])
+
+  // Opacity sits on the whole layer, not in the colour, so overlapping strokes don't stack into brighter joints.
+  return (
+    <div ref={layerRef} aria-hidden="true"
+      className="hidden lg:motion-safe:block absolute inset-y-0 right-[4%] w-48 pointer-events-none text-[#5f8f9c] opacity-35">
+      {/* Chain of alternating front-on and side-on links. */}
+      <svg ref={chainRef} className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0">
+        <defs>
+          <pattern id="anchor-chain" width="16" height="22" patternUnits="userSpaceOnUse">
+            <rect x="3" y="1" width="10" height="13" rx="5" fill="none" stroke="currentColor" strokeWidth="3" />
+            <rect x="6.5" y="12" width="3" height="11" rx="1.5" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#anchor-chain)" />
+      </svg>
+      <div ref={anchorRef} className="absolute top-0 left-0 w-full aspect-square will-change-transform">
+        <AnchorMark className="block w-full h-full" />
+      </div>
+    </div>
   )
 }
 
@@ -270,8 +342,9 @@ export default function Landing() {
   return (
     <div className="min-h-full bg-white text-neutral-900">
       <section className="bg-river-deep text-white relative overflow-hidden">
-        {/* Anchor resting on the bottom, drawn before the waves so they cover its lower part. */}
-        <AnchorMark className="absolute right-[4%] bottom-0 w-36 h-36 lg:w-48 lg:h-48" />
+        {/* Anchors are drawn before the waves so the waves cover them: a static one resting on the bottom, or one that sinks on scroll. */}
+        <AnchorMark className="lg:motion-safe:hidden absolute right-[4%] bottom-0 w-36 h-36 lg:w-48 lg:h-48 text-river-wave" />
+        <SinkingAnchor />
         {/* Waterline echoing the wave hatch in the exam's own diagrams. Opaque, so the anchor sinks under it. */}
         <svg aria-hidden="true" className="absolute bottom-0 left-0 w-full h-16 text-river-wave" viewBox="0 0 1200 64" preserveAspectRatio="none">
           <path d="M0 32 Q 50 12 100 32 T 200 32 T 300 32 T 400 32 T 500 32 T 600 32 T 700 32 T 800 32 T 900 32 T 1000 32 T 1100 32 T 1200 32 V64 H0 Z" fill="currentColor" />
