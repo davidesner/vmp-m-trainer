@@ -38,19 +38,20 @@ function AnchorMark({ className = '' }: { className?: string }) {
   )
 }
 
-// Anchor geometry in its 32-unit viewBox: the chain attaches at the top of the ring (y = 3), ring centre at y = 6.
+// Anchor geometry in its 32-unit viewBox: the chain attaches at the top of the ring (y = 3).
 const RING_TOP = 3 / 32
-const RING_CENTER = 6 / 32
 // The hawse hole the anchor pays out of, in px.
 const HAWSE_W = 72
 const HAWSE_H = 44
+// Chain showing between the hawse rim and the anchor ring before any scrolling, in px.
+const START_CHAIN = 20
 // Chain link pitch in px (height of the chain pattern tile).
 const LINK_PITCH = 22
 // The anchor is fully under the waves once the hero's bottom edge has scrolled up to this share of the screen.
 const SUBMERGED_AT = 0.35
 
 /**
- * Anchor stowed in a hawse hole level with the hero heading. As the page
+ * Anchor hanging from a hawse hole level with the hero heading. As the page
  * scrolls it pays out on its chain and sinks steadily under the waves, so it
  * never shows up over the white sections below. Only from 1400px (where the
  * margin beside the content fits the anchor) and without reduced motion;
@@ -81,8 +82,8 @@ function SinkingAnchor() {
       const title = layer.parentElement?.querySelector('h1')
       const hawseTop = title ? title.getBoundingClientRect().top - hero.top : 0
       const hawseCenter = hawseTop + HAWSE_H / 2
-      // Stowed: the ring is tucked inside the hole. Fully paid out: just below the waterline.
-      const stowed = hawseCenter - size * RING_CENTER
+      // At rest the anchor hangs just below the hole on a short length of chain. Fully paid out: under the waterline.
+      const stowed = hawseTop + HAWSE_H + START_CHAIN - size * RING_TOP
       const submerged = hero.height
       const scrollToSubmerge = Math.max(1, hero.height - window.innerHeight * SUBMERGED_AT)
       const scrolled = Math.max(0, -hero.top)
@@ -115,12 +116,20 @@ function SinkingAnchor() {
   return (
     <div ref={layerRef} aria-hidden="true"
       className="hidden min-[1400px]:motion-safe:block absolute inset-y-0 right-[calc((100%_-_72rem)/4_+_0.75rem_-_5rem)] w-40 pointer-events-none text-[#5f8f9c] opacity-35">
+      {/* Hawse hole; the chain is drawn after it so it runs out of the opening and over the lower rim. */}
+      <svg ref={hawseRef} viewBox={`0 0 ${HAWSE_W} ${HAWSE_H}`} width={HAWSE_W} height={HAWSE_H}
+        className="absolute top-0 left-1/2 -translate-x-1/2">
+        <ellipse cx={HAWSE_W / 2} cy={HAWSE_H / 2} rx={HAWSE_W / 2 - 1} ry={HAWSE_H / 2 - 1} fill="currentColor" />
+        <ellipse cx={HAWSE_W / 2} cy={HAWSE_H / 2} rx={HAWSE_W / 2 - 9} ry={HAWSE_H / 2 - 8} fill="#020f13" />
+      </svg>
       {/* Chain of alternating front-on and side-on links. */}
-      <svg ref={chainRef} className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0">
+      <svg ref={chainRef} className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0 overflow-visible">
         <defs>
+          {/* Dark outlines keep the links readable where the chain crosses the same-coloured hawse rim. */}
           <pattern ref={linksRef} id="anchor-chain" width="16" height={LINK_PITCH} patternUnits="userSpaceOnUse">
+            <rect x="3" y="1" width="10" height="13" rx="5" fill="none" stroke="#020f13" strokeWidth="5" />
             <rect x="3" y="1" width="10" height="13" rx="5" fill="none" stroke="currentColor" strokeWidth="3" />
-            <rect x="6.5" y="12" width="3" height="11" rx="1.5" fill="currentColor" />
+            <rect x="6.5" y="12" width="3" height="11" rx="1.5" fill="currentColor" stroke="#020f13" strokeWidth="1" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#anchor-chain)" />
@@ -128,12 +137,6 @@ function SinkingAnchor() {
       <div ref={anchorRef} className="absolute top-0 left-0 w-full aspect-square will-change-transform">
         <AnchorMark className="block w-full h-full" />
       </div>
-      {/* Hawse hole, drawn over the anchor so the stowed ring disappears inside it. */}
-      <svg ref={hawseRef} viewBox={`0 0 ${HAWSE_W} ${HAWSE_H}`} width={HAWSE_W} height={HAWSE_H}
-        className="absolute top-0 left-1/2 -translate-x-1/2">
-        <ellipse cx={HAWSE_W / 2} cy={HAWSE_H / 2} rx={HAWSE_W / 2 - 1} ry={HAWSE_H / 2 - 1} fill="currentColor" />
-        <ellipse cx={HAWSE_W / 2} cy={HAWSE_H / 2} rx={HAWSE_W / 2 - 9} ry={HAWSE_H / 2 - 8} fill="#020f13" />
-      </svg>
     </div>
   )
 }
