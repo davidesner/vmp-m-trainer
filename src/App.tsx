@@ -11,6 +11,8 @@ import Stats from './routes/Stats'
 import Settings from './routes/Settings'
 import Login from './routes/Login'
 import Register from './routes/Register'
+import Landing from './routes/Landing'
+import { useAuth } from './hooks/useAuth'
 
 function Shell({ children }: { children: React.ReactNode }) {
   return (
@@ -21,6 +23,14 @@ function Shell({ children }: { children: React.ReactNode }) {
   )
 }
 
+// Logged-out visitors get the public landing page at "/", everyone else (guests included) the dashboard.
+function HomeOrLanding() {
+  const { user, loading } = useAuth()
+  if (loading) return <div className="p-8 text-sm text-neutral-500">Načítám…</div>
+  if (!user) return <Landing />
+  return <Shell><Home /></Shell>
+}
+
 export default function App() {
   return (
     <AuthProvider>
@@ -29,7 +39,7 @@ export default function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<RequireAuth><Shell><Home /></Shell></RequireAuth>} />
+          <Route path="/" element={<HomeOrLanding />} />
           <Route path="/test" element={<RequireAuth><Shell><Test /></Shell></RequireAuth>} />
           <Route path="/practice" element={<RequireAuth><Shell><Practice /></Shell></RequireAuth>} />
           <Route path="/weak" element={<RequireAuth><Shell><Weak /></Shell></RequireAuth>} />
