@@ -10,4 +10,11 @@ describe('Privacy', () => {
     expect(screen.getAllByRole('link', { name: 'esnerda@gmail.com' })[0]).toHaveAttribute('href', 'mailto:esnerda@gmail.com')
     expect(screen.getByText(/Přihlášení přes Google nebo Seznam:/)).toBeInTheDocument()
   })
+
+  it('says account deletion is self-service in Settings, with email as a fallback', () => {
+    render(<MemoryRouter><Privacy /></MemoryRouter>)
+    expect(screen.getByText(/trvale smazat celý účet/)).toBeInTheDocument()
+    expect(screen.getByText(/Pokud se k účtu nedostaneš/)).toBeInTheDocument()
+    expect(screen.queryByText(/celého účtu provedeme na požádání/)).not.toBeInTheDocument()
+  })
 })
