@@ -111,9 +111,10 @@ function SinkingAnchor({ heroRef, seabedRef }: {
     }
   }, [heroRef, seabedRef])
 
+  // Opacity sits on the whole layer, not in the colour, so overlapping strokes don't stack into brighter joints.
   return (
     <div ref={layerRef} aria-hidden="true"
-      className="hidden lg:motion-safe:block absolute inset-0 z-[1] overflow-hidden pointer-events-none text-river-anchor">
+      className="hidden lg:motion-safe:block absolute inset-0 z-[1] overflow-hidden pointer-events-none text-river-anchor opacity-35">
       <div className="absolute inset-y-0 right-[4%] w-48">
         {/* Chain of alternating front-on and side-on links. */}
         <svg ref={chainRef} className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0">
