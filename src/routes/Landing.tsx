@@ -528,8 +528,8 @@ export default function Landing() {
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-neutral-500 flex flex-col sm:flex-row justify-between gap-2">
         <span>
-          Trenažér vůdce malého plavidla, open source projekt. Vytvořil{' '}
-          <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>.
+          Vytvořil{' '}
+          <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>, 2026
         </span>
         <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-800">Přispěj nebo si prohlédni kód na GitHubu</a>
       </footer>
