@@ -3,7 +3,7 @@ import { and, eq, desc } from 'drizzle-orm'
 import type { AppEnv } from '../types.js'
 import type { Db } from '../db/client.js'
 import { attempts, testHistory } from '../db/schema.js'
-import { requireAuth } from '../auth/middleware.js'
+import { requireRegistered } from '../auth/middleware.js'
 
 const TEST_IDS = ['M', 'C'] as const
 type TestId = typeof TEST_IDS[number]
@@ -17,7 +17,7 @@ export interface ProgressRoutesOptions { db: Db }
 
 export function progressRoutes(opts: ProgressRoutesOptions) {
   const r = new Hono<AppEnv>()
-  r.use('*', requireAuth())
+  r.use('*', requireRegistered())
 
   r.get('/', async c => {
     const user = c.get('user')!

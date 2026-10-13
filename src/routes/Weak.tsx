@@ -6,19 +6,30 @@ import { sampleByMix } from '../lib/sampleQuestions'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 import PracticeRunner from '../components/PracticeRunner'
 import CategorySubtitle from '../components/CategorySubtitle'
+import LockedFeature from '../components/LockedFeature'
+import { useGuestStatus } from '../hooks/useAuth'
 import type { Question } from '../types'
 
 export default function Weak() {
   const { data, loading } = useQuestions()
   const { store } = useProgress()
+  const { isGuest } = useGuestStatus()
   const [run, setRun] = useState<Question[] | null>(null)
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (!data) return
+    if (!data || isGuest) return
     const picked = sampleByMix(data.questions, store.questions, 'weak', 20, Date.now())
     setRun(picked.map(q => shuffleQuestionOptions(q)))
-  }, [data, store.questions])
+  }, [data, store.questions, isGuest])
+
+  if (isGuest) return (
+    <div className="p-4 md:p-8 max-w-3xl">
+      <h2 className="text-2xl font-bold mb-1">Slabiny</h2>
+      <CategorySubtitle className="mb-6" />
+      <LockedFeature />
+    </div>
+  )
 
   if (loading || !run) return <div className="p-4 md:p-8">Načítám…</div>
   if (run.length === 0) return (

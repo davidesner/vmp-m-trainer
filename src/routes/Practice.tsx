@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useGuestStatus } from '../hooks/useAuth'
 import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
 import { sampleTestQuestions } from '../lib/testStructure'
@@ -14,7 +16,8 @@ export default function Practice() {
   const { data, loading, error } = useQuestions()
   const { store } = useProgress()
   const [subMode, setSubMode] = useState<SubMode>('structure')
-  const [mix, setMix] = useState<MixMode>('mix')
+  const { isGuest } = useGuestStatus()
+  const [mix, setMix] = useState<MixMode>(isGuest ? 'random' : 'mix')
   const [count, setCount] = useState(25)
   const [selectedGroups, setSelectedGroups] = useState<GroupId[]>([])
   const [run, setRun] = useState<Question[] | null>(null)
@@ -92,13 +95,34 @@ export default function Practice() {
       <div className="mb-6">
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Zaměření výběru</div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-          {([['random','Náhodně'],['mix','⚖ Mix slabiny + známé'],['weak','Hlavně slabiny']] as const).map(([m, label]) => (
-            <button key={m} onClick={() => setMix(m)}
-              className={`px-3 py-3 rounded text-sm border-2 ${mix === m ? 'border-primary bg-primary-light text-primary-dark font-semibold' : 'border-neutral-200'}`}>
-              {label}
-            </button>
-          ))}
+          {([['random','Náhodně'],['mix','⚖ Mix slabiny + známé'],['weak','Hlavně slabiny']] as const).map(([m, label]) => {
+            const locked = isGuest && m !== 'random'
+            const tipId = `mix-locked-tip-${m}`
+            // Rightmost button: anchor its tooltip to the right edge so it can't overflow the page.
+            const tipPos = m === 'weak' ? 'right-0' : 'left-1/2 -translate-x-1/2'
+            // Tooltip hangs off the wrapper: disabled buttons get no hover events in every browser.
+            return (
+              <span key={m} className="relative group">
+                <button onClick={() => setMix(m)} disabled={locked}
+                  aria-describedby={locked ? tipId : undefined}
+                  className={`w-full px-3 py-3 rounded text-sm border-2 disabled:opacity-50 disabled:cursor-not-allowed ${mix === m ? 'border-primary bg-primary-light text-primary-dark font-semibold' : 'border-neutral-200'}`}>
+                  {label}
+                </button>
+                {locked && (
+                  <span id={tipId} role="tooltip"
+                    className={`pointer-events-none absolute bottom-full ${tipPos} mb-2 z-20 w-max max-w-[16rem] rounded bg-neutral-900 px-2 py-1 text-center text-xs text-white invisible opacity-0 transition group-hover:visible group-hover:opacity-100`}>
+                    Dostupné po přihlášení. Výběr podle tvých předchozích odpovědí.
+                  </span>
+                )}
+              </span>
+            )
+          })}
         </div>
+        {isGuest && (
+          <p className="text-xs text-neutral-500 mt-2">
+            🔒 Mix a slabiny: <Link to="/login" className="text-accent hover:underline">Dostupné po přihlášení</Link>
+          </p>
+        )}
         {mix === 'mix' && (
           <p className="text-xs text-neutral-500 mt-2">
             40% otázek které občas pleteš, 30% nových, 15% nedávno správně, 15% dlouho neviděných.

@@ -74,7 +74,7 @@ describe('auth routes', () => {
     const cookie = login.headers.get('set-cookie')!.split(';')[0]  // "sid=..."
     const res = await ctx.app.request('/api/me', { headers: { cookie } })
     expect(res.status).toBe(200)
-    expect(await res.json()).toEqual({ id: 'u1', email: 'a@b.c' })
+    expect(await res.json()).toEqual({ id: 'u1', email: 'a@b.c', guest: false })
   })
 
   it('POST /api/auth/logout clears cookie and invalidates session', async () => {

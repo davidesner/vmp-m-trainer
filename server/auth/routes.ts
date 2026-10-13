@@ -1,4 +1,4 @@
-import { Hono } from 'hono'
+import { Hono, type Context } from 'hono'
 import { setCookie, deleteCookie } from 'hono/cookie'
 import { eq } from 'drizzle-orm'
 import { randomUUID, timingSafeEqual } from 'node:crypto'
@@ -24,6 +24,9 @@ const SESSION_COOKIE = {
   maxAge: 30 * 86400,
 } as const
 
+// Guests are cheap to create and often share an IP (school, office NAT).
+const GUEST_RATE_MAX = 20
+
 /** Constant-time string compare that doesn't leak length via early return. */
 function codeMatches(provided: string, expected: string): boolean {
   const a = Buffer.from(provided)
@@ -35,6 +38,12 @@ function codeMatches(provided: string, expected: string): boolean {
 export function authRoutes(opts: AuthRoutesOptions) {
   const r = new Hono<AppEnv>()
   const signupEnabled = Boolean(opts.signupCode)
+
+  /** A guest signing in or registering leaves its session behind; its row stays as usage history. */
+  async function dropGuestSession(c: Context<AppEnv>) {
+    const sid = c.get('sid')
+    if (sid && c.get('user')?.guest) await deleteSession(opts.db.db, sid)
+  }
 
   // Lets the SPA decide whether to show the "create account" link.
   r.get('/config', c => c.json({ signupEnabled }))
@@ -72,9 +81,33 @@ export function authRoutes(opts: AuthRoutesOptions) {
       createdAt: new Date().toISOString(),
     })
 
+    await dropGuestSession(c)
     const sid = await createSession(opts.db.db, id)
     setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
-    return c.json({ id, email }, 201)
+    return c.json({ id, email, guest: false }, 201)
+  })
+
+  r.post('/guest', async c => {
+    const current = c.get('user')
+    if (current) return c.json(current, 200)
+
+    const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
+    const rl = checkRateLimit(`guest:${ip}`, Date.now(), GUEST_RATE_MAX)
+    if (!rl.allowed) {
+      return c.json({ error: 'too many attempts' }, 429, { 'retry-after': String(rl.retryAfterSec) })
+    }
+
+    const id = randomUUID()
+    await opts.db.db.insert(users).values({
+      id,
+      email: `guest:${id}`,
+      passwordHash: '',
+      isGuest: true,
+      createdAt: new Date().toISOString(),
+    })
+    const sid = await createSession(opts.db.db, id)
+    setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
+    return c.json({ id, email: null, guest: true }, 201)
   })
 
   r.post('/login', async c => {
@@ -92,14 +125,15 @@ export function authRoutes(opts: AuthRoutesOptions) {
       .where(eq(users.email, body.email.toLowerCase()))
       .limit(1)
     const user = row[0]
-    if (!user) return c.json({ error: 'invalid credentials' }, 401)
+    if (!user || user.isGuest) return c.json({ error: 'invalid credentials' }, 401)
     if (!(await verifyPassword(user.passwordHash, body.password))) {
       return c.json({ error: 'invalid credentials' }, 401)
     }
 
+    await dropGuestSession(c)
     const sid = await createSession(opts.db.db, user.id)
     setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
-    return c.json({ id: user.id, email: user.email })
+    return c.json({ id: user.id, email: user.email, guest: false })
   })
 
   r.post('/logout', async c => {
