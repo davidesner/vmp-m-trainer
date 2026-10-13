@@ -34,7 +34,12 @@ function loadTurnstile(): Promise<TurnstileApi> {
  * Cloudflare Turnstile widget. Reports a fresh token via `onToken`, or null once it
  * expires or fails. Tokens are single-use: remount (change `key`) to get a new one.
  */
-export default function Turnstile({ siteKey, onToken }: { siteKey: string; onToken: (token: string | null) => void }) {
+export default function Turnstile({ siteKey, onToken, appearance = 'always' }: {
+  siteKey: string
+  onToken: (token: string | null) => void
+  /** 'interaction-only' keeps the widget hidden unless Cloudflare needs the visitor to interact. */
+  appearance?: 'always' | 'interaction-only'
+}) {
   const containerRef = useRef<HTMLDivElement>(null)
   const onTokenRef = useRef(onToken)
   const [failed, setFailed] = useState(false)
@@ -50,6 +55,7 @@ export default function Turnstile({ siteKey, onToken }: { siteKey: string; onTok
         sitekey: siteKey,
         language: 'cs',
         theme: 'light',
+        appearance,
         callback: (token: string) => { setFailed(false); onTokenRef.current(token) },
         'expired-callback': () => onTokenRef.current(null),
         'error-callback': () => { setFailed(true); onTokenRef.current(null) },
@@ -59,7 +65,7 @@ export default function Turnstile({ siteKey, onToken }: { siteKey: string; onTok
       cancelled = true
       if (widgetId) window.turnstile?.remove(widgetId)
     }
-  }, [siteKey])
+  }, [siteKey, appearance])
 
   return (
     <div>

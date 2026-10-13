@@ -74,6 +74,12 @@ export default function Privacy() {
               svých podmínek, a to i v USA;
             </li>
             <li>text zpětné vazby k otázkám, který se zveřejňuje na GitHubu (GitHub Inc., USA).</li>
+            <li>
+              údaje pro ověření, že nejsi robot (např. IP adresa a technické údaje o prohlížeči), které při
+              registraci e-mailem a při spuštění trenažéru bez účtu zpracovává služba Cloudflare Turnstile
+              (Cloudflare, Inc., USA). Na registrační stránce se načítá s formulářem, u trenažéru bez účtu
+              teprve po kliknutí na tlačítko.
+            </li>
           </ul>
           <p>
             Vercel i Turso jsou americké společnosti; zpracování se řídí jejich smluvními podmínkami a

@@ -86,4 +86,39 @@ describe('Landing', () => {
     expect(screen.queryByRole('article')).not.toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Vysvětlení/ })).toBeInTheDocument()
   })
+
+  it('starts a guest session only after the captcha hands over a token', async () => {
+    const bodies: string[] = []
+    vi.spyOn(globalThis, 'fetch').mockImplementation(async (input, init) => {
+      const url = typeof input === 'string' ? input : (input as Request).url
+      const json = (body: object, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } })
+      if (url === '/api/auth/config') return json({ signupEnabled: true, captchaSiteKey: 'site-key' })
+      if (url === '/api/me') return new Response('', { status: 401 })
+      if (url === '/api/auth/guest') {
+        bodies.push(String(init?.body))
+        return json({ id: 'g1', email: null, guest: true }, 201)
+      }
+      return new Response('', { status: 404 })
+    })
+    // Stand-in for Cloudflare's script: the widget passes immediately and reports a token.
+    let issue: ((token: string) => void) | undefined
+    window.turnstile = {
+      render: (_el, opts) => { issue = opts.callback as (token: string) => void; return 'w1' },
+      remove: () => {},
+    }
+    try {
+      renderLanding()
+      await waitFor(() => expect(screen.getAllByRole('button', { name: 'Vyzkoušet bez přihlášení' })).not.toHaveLength(0))
+      // The config fetch resolves asynchronously; wait until the site key is known before clicking.
+      await new Promise(r => setTimeout(r, 0))
+      fireEvent.click(screen.getAllByRole('button', { name: 'Vyzkoušet bez přihlášení' })[0])
+      await waitFor(() => expect(issue).toBeDefined())
+      expect(bodies).toHaveLength(0)
+      issue!('tok-123')
+      await waitFor(() => expect(screen.getByText('AppHome')).toBeInTheDocument())
+      expect(JSON.parse(bodies[0])).toEqual({ captchaToken: 'tok-123' })
+    } finally {
+      delete window.turnstile
+    }
+  })
 })

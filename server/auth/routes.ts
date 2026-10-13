@@ -116,10 +116,21 @@ export function authRoutes(opts: AuthRoutesOptions) {
     const current = c.get('user')
     if (current) return c.json(current, 200)
 
-    const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
-    const rl = checkRateLimit(`guest:${ip}`, Date.now(), GUEST_RATE_MAX)
+    const forwardedIp = c.req.header('x-forwarded-for')?.split(',')[0].trim()
+    const rl = checkRateLimit(`guest:${forwardedIp ?? 'unknown'}`, Date.now(), GUEST_RATE_MAX)
     if (!rl.allowed) {
       return c.json({ error: 'too many attempts' }, 429, { 'retry-after': String(rl.retryAfterSec) })
+    }
+
+    // Each guest is a DB row and a session, so creating one takes the same captcha as registering.
+    // Without a configured captcha (local dev) guests stay open.
+    if (captcha) {
+      const body = await c.req.json().catch(() => null) as { captchaToken?: string } | null
+      const captchaToken = body?.captchaToken
+      if (typeof captchaToken !== 'string' || !captchaToken) return c.json({ error: 'bad request' }, 400)
+      const verdict = await captcha.verify(captchaToken, forwardedIp)
+      if (verdict === 'unavailable') return c.json({ error: 'captcha unavailable' }, 503)
+      if (verdict !== 'ok') return c.json({ error: 'captcha failed' }, 403)
     }
 
     const id = randomUUID()

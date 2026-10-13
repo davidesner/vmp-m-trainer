@@ -28,7 +28,8 @@ interface AuthCtx {
   captchaSiteKey: string | null | undefined
   login: (email: string, password: string) => Promise<AuthResult>
   register: (email: string, password: string, captchaToken: string) => Promise<AuthResult>
-  loginAsGuest: () => Promise<AuthResult>
+  /** `captchaToken` is required when the server has a captcha configured (see useGuestStart). */
+  loginAsGuest: (captchaToken?: string) => Promise<AuthResult>
   logout: () => Promise<void>
   /** Permanently deletes the signed-in account; on success the user is signed out. */
   deleteAccount: (confirmation: DeleteAccountConfirmation) => Promise<AuthResult>
@@ -114,13 +115,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { ok: false, error: errByStatus[res.status] ?? `HTTP ${res.status}` }
   }, [])
 
-  const loginAsGuest = useCallback(async () => {
-    const res = await fetch('/api/auth/guest', { method: 'POST', credentials: 'same-origin' })
+  const loginAsGuest = useCallback(async (captchaToken?: string) => {
+    const res = await fetch('/api/auth/guest', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify(captchaToken ? { captchaToken } : {}),
+    })
     if (res.ok) {
       setUser(await res.json())
       return { ok: true }
     }
-    return { ok: false, error: res.status === 429 ? 'Příliš mnoho pokusů, zkus to za chvíli' : `HTTP ${res.status}` }
+    const errByStatus: Record<number, string> = {
+      403: 'Ověření, že nejsi robot, se nepovedlo. Zkus to znovu.',
+      429: 'Příliš mnoho pokusů, zkus to za chvíli',
+      503: 'Ověření, že nejsi robot, teď nefunguje. Zkus to za chvíli.',
+    }
+    return { ok: false, error: errByStatus[res.status] ?? `HTTP ${res.status}` }
   }, [])
 
   const logout = useCallback(async () => {
