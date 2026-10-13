@@ -76,9 +76,11 @@ export const LANDING_SAMPLES: LandingSample[] = [
 ]
 
 /** Exam format per category, mirrored from `passing` / question counts in the data bundles. */
+// `id` is display-only text, so a category can be listed here before the app's TestId supports it.
 export const LANDING_CATEGORIES: Array<{
-  id: TestId; name: string; questions: number; testSize: number; passScore: number; minutes: number
+  id: string; name: string; questions: number; testSize: number; passScore: number; minutes: number
 }> = [
   { id: 'M', name: 'Vůdce malého plavidla', questions: 407, testSize: 35, passScore: 30, minutes: 30 },
   { id: 'C', name: 'Příbřežní plavba na moři', questions: 215, testSize: 28, passScore: 24, minutes: 25 },
+  { id: 'S', name: 'Plachetnice', questions: 170, testSize: 14, passScore: 11, minutes: 10 },
 ]
