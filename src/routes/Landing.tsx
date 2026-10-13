@@ -205,8 +205,8 @@ export default function Landing() {
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-24 sm:pt-20 sm:pb-32 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
           <div className="lg:pt-6">
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl leading-[1.05] tracking-tight">
-              Trenažér na zkoušku vůdce malého plavidla
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.05] text-balance tracking-tight">
+              Trenažér na zkoušku Vůdce Malého Plavidla (VMP)
             </h1>
             <p className="mt-6 text-lg text-river-line max-w-xl leading-relaxed">
               Otázky podle tvých slabin, odhad připravenosti a vysvětlení ke každé otázce. Zdarma.
