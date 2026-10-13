@@ -719,7 +719,7 @@ export default function Landing() {
             <CoffeeCup />
             Kup mi kafe
           </a>
-          <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-800">Zapoj se do vývoje na GitHubu</a>
+          <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-800">Kód na GitHubu</a>
         </div>
       </footer>
     </div>
