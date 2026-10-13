@@ -4,10 +4,10 @@ import { eq } from 'drizzle-orm'
 import { randomUUID } from 'node:crypto'
 import type { AppEnv } from '../types.js'
 import type { Db } from '../db/client.js'
-import { users } from '../db/schema.js'
+import { attempts, oauthIdentities, sessions, testHistory, users } from '../db/schema.js'
 import { hashPassword, verifyPassword } from './password.js'
 import { createSession, deleteSession } from './sessions.js'
-import { COOKIE_NAME } from './middleware.js'
+import { COOKIE_NAME, requireRegistered } from './middleware.js'
 import { checkRateLimit } from './rateLimit.js'
 import { OAUTH_PROVIDERS, oauthRoutes, type OAuthCredentials } from './oauth.js'
 import { findOrCreateUserForIdentity } from './identities.js'
@@ -109,7 +109,7 @@ export function authRoutes(opts: AuthRoutesOptions) {
     })
 
     await signInAs(c, id)
-    return c.json({ id, email, guest: false }, 201)
+    return c.json({ id, email, guest: false, hasPassword: true }, 201)
   })
 
   r.post('/guest', async c => {
@@ -132,7 +132,7 @@ export function authRoutes(opts: AuthRoutesOptions) {
     })
     const sid = await createSession(opts.db.db, id)
     setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
-    return c.json({ id, email: null, guest: true }, 201)
+    return c.json({ id, email: null, guest: true, hasPassword: false }, 201)
   })
 
   r.post('/login', async c => {
@@ -157,7 +157,7 @@ export function authRoutes(opts: AuthRoutesOptions) {
     }
 
     await signInAs(c, user.id)
-    return c.json({ id: user.id, email: user.email, guest: false })
+    return c.json({ id: user.id, email: user.email, guest: false, hasPassword: true })
   })
 
   r.post('/logout', async c => {
@@ -170,12 +170,52 @@ export function authRoutes(opts: AuthRoutesOptions) {
   return r
 }
 
-export function meRoute() {
+/** What an account without a password types to confirm its deletion. */
+export const DELETE_CONFIRM_WORD = 'SMAZAT'
+
+export function meRoute(opts: { db: Db }) {
   const r = new Hono<AppEnv>()
   r.get('/', c => {
     const user = c.get('user')
     if (!user) return c.json({ error: 'unauthorized' }, 401)
     return c.json(user)
+  })
+
+  // Self-service erasure. Password accounts re-enter the password, SSO-only accounts type DELETE_CONFIRM_WORD.
+  r.delete('/', requireRegistered(), async c => {
+    const user = c.get('user')!
+    const rl = checkRateLimit(`delete-account:${user.id}`)
+    if (!rl.allowed) {
+      return c.json({ error: 'too many attempts' }, 429, { 'retry-after': String(rl.retryAfterSec) })
+    }
+    const body = await c.req.json().catch(() => null) as { password?: unknown; confirm?: unknown } | null
+
+    const row = await opts.db.db
+      .select({ passwordHash: users.passwordHash })
+      .from(users)
+      .where(eq(users.id, user.id))
+      .limit(1)
+    if (!row[0]) return c.json({ error: 'unauthorized' }, 401)
+    const { passwordHash } = row[0]
+    if (passwordHash) {
+      if (typeof body?.password !== 'string' || !(await verifyPassword(passwordHash, body.password))) {
+        return c.json({ error: 'invalid password' }, 403)
+      }
+    } else if (typeof body?.confirm !== 'string' || body.confirm.trim().toUpperCase() !== DELETE_CONFIRM_WORD) {
+      return c.json({ error: 'invalid confirmation' }, 403)
+    }
+
+    // Children first and in one atomic batch, so nothing depends on SQLite enforcing ON DELETE CASCADE.
+    const { db } = opts.db
+    await db.batch([
+      db.delete(sessions).where(eq(sessions.userId, user.id)),
+      db.delete(attempts).where(eq(attempts.userId, user.id)),
+      db.delete(testHistory).where(eq(testHistory.userId, user.id)),
+      db.delete(oauthIdentities).where(eq(oauthIdentities.userId, user.id)),
+      db.delete(users).where(eq(users.id, user.id)),
+    ])
+    deleteCookie(c, COOKIE_NAME, { path: '/' })
+    return c.body(null, 204)
   })
   return r
 }

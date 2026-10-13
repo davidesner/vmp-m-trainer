@@ -30,7 +30,7 @@ export function buildApp(opts: BuildAppOptions) {
   app.get('/api/health', c => c.json({ ok: true }))
 
   app.route('/api/auth', authRoutes(opts))
-  app.route('/api/me', meRoute())
+  app.route('/api/me', meRoute(opts))
   app.route('/api/progress', progressRoutes(opts))
   app.route('/api/attempts', attemptsRoutes(opts))
   app.route('/api/test-history', testHistoryRoutes(opts))

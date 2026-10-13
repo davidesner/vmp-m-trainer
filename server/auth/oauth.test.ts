@@ -169,7 +169,7 @@ describe('OAuth callback', () => {
   it('links a verified Google email to the existing password account', async () => {
     const { app, db } = await setup({ body: { sub: 'g-222', email: 'ANNA@example.com', email_verified: true } })
     const { res } = await signInVia(app, 'google')
-    expect(await me(app, res)).toEqual({ id: 'pw-user', email: 'anna@example.com', guest: false })
+    expect(await me(app, res)).toEqual({ id: 'pw-user', email: 'anna@example.com', guest: false, hasPassword: true })
     expect(await db.db.select().from(users)).toHaveLength(1)
     expect(await db.db.select().from(oauthIdentities)).toEqual([
       expect.objectContaining({ provider: 'google', providerUserId: 'g-222', userId: 'pw-user' }),
