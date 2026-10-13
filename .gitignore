@@ -38,3 +38,8 @@ dist-ssr
 # Repo uses pnpm; ignore npm/yarn lockfiles to avoid mixed-manager drift.
 package-lock.json
 yarn.lock
+
+# Vercel CLI link and pulled env files; keep the committed template.
+.vercel
+.env*
+!.env.example
