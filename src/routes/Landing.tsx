@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import AuthOptions from '../components/AuthOptions'
@@ -122,21 +122,115 @@ function SinkingAnchor() {
         <ellipse cx={HAWSE_W / 2} cy={HAWSE_H / 2} rx={HAWSE_W / 2 - 1} ry={HAWSE_H / 2 - 1} fill="currentColor" />
         <ellipse cx={HAWSE_W / 2} cy={HAWSE_H / 2} rx={HAWSE_W / 2 - 9} ry={HAWSE_H / 2 - 8} fill="#020f13" />
       </svg>
+      <AnchorRig chainRef={chainRef} linksRef={linksRef} anchorRef={anchorRef} />
+    </div>
+  )
+}
+
+/**
+ * Chain plus anchor, positioned by the caller through the refs: the chain's
+ * `top`/`height` and the links pattern `y`, the anchor's `transform`.
+ */
+function AnchorRig({ chainRef, linksRef, anchorRef }: {
+  chainRef: React.RefObject<SVGSVGElement | null>
+  linksRef: React.RefObject<SVGPatternElement | null>
+  anchorRef: React.RefObject<HTMLDivElement | null>
+}) {
+  const patternId = useId()
+  return (
+    <>
       {/* Chain of alternating front-on and side-on links. */}
       <svg ref={chainRef} className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0 overflow-visible">
         <defs>
           {/* Dark outlines keep the links readable where the chain crosses the same-coloured hawse rim. */}
-          <pattern ref={linksRef} id="anchor-chain" width="16" height={LINK_PITCH} patternUnits="userSpaceOnUse">
+          <pattern ref={linksRef} id={patternId} width="16" height={LINK_PITCH} patternUnits="userSpaceOnUse">
             <rect x="3" y="1" width="10" height="13" rx="5" fill="none" stroke="#020f13" strokeWidth="5" />
             <rect x="3" y="1" width="10" height="13" rx="5" fill="none" stroke="currentColor" strokeWidth="3" />
             <rect x="6.5" y="12" width="3" height="11" rx="1.5" fill="currentColor" stroke="#020f13" strokeWidth="1" />
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#anchor-chain)" />
+        <rect width="100%" height="100%" fill={`url(#${patternId})`} />
       </svg>
       <div ref={anchorRef} className="absolute top-0 left-0 w-full aspect-square will-change-transform">
         <AnchorMark className="block w-full h-full" />
       </div>
+    </>
+  )
+}
+
+// How far the bottom of the landed anchor's box sits above the bottom of the closing panel. The artwork ends
+// ~18px above the box bottom, so this rests the flukes a few px into the mound below.
+const SEABED_REST = 12
+
+// Gentle seabed with a mound on the right (about where the anchor column lands) for it to rest on.
+const SEABED_PATH = 'M0 34 C 180 24 380 20 560 28 S 860 34 980 22 S 1080 8 1120 8 S 1180 14 1200 18 V48 H0 Z'
+
+/** Seabed along the bottom of the closing panel; drawn after the anchor so it covers the flukes. */
+function Seabed() {
+  return (
+    <svg aria-hidden="true" className="absolute bottom-0 left-0 w-full h-12 text-river-wave" viewBox="0 0 1200 48" preserveAspectRatio="none">
+      <path d={SEABED_PATH} fill="currentColor" />
+    </svg>
+  )
+}
+
+/**
+ * The same anchor arriving in the closing panel: it comes down on its chain
+ * from the panel's top edge as the panel scrolls into view and settles on the
+ * seabed exactly when the page reaches its end.
+ */
+function LandingAnchor() {
+  const layerRef = useRef<HTMLDivElement>(null)
+  const chainRef = useRef<SVGSVGElement>(null)
+  const linksRef = useRef<SVGPatternElement>(null)
+  const anchorRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const layer = layerRef.current
+    const chain = chainRef.current
+    const links = linksRef.current
+    const anchor = anchorRef.current
+    if (!layer || !chain || !links || !anchor) return
+    let frame = 0
+
+    const update = () => {
+      frame = 0
+      const panel = layer.getBoundingClientRect()
+      if (panel.height === 0) return  // hidden on this screen size
+      const size = anchor.offsetHeight
+      // Progress from the panel's top edge entering the screen (0) to the end of the page (1).
+      const panelTop = panel.top + window.scrollY
+      const startScroll = panelTop - window.innerHeight
+      const endScroll = document.documentElement.scrollHeight - window.innerHeight
+      const progress = endScroll > startScroll
+        ? Math.min(1, Math.max(0, (window.scrollY - startScroll) / (endScroll - startScroll)))
+        : 1
+      const above = -size
+      const landed = panel.height - SEABED_REST - size
+      const y = above + (landed - above) * progress
+      const chainLength = Math.max(0, y + size * RING_TOP)
+
+      chain.style.height = `${chainLength}px`
+      links.setAttribute('y', String(chainLength % LINK_PITCH))
+      anchor.style.transform = `translateY(${y}px)`
+    }
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
+
+    update()
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', schedule)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', schedule)
+    }
+  }, [])
+
+  // Same column, size and look as the hero's SinkingAnchor.
+  return (
+    <div ref={layerRef} aria-hidden="true"
+      className="hidden min-[1400px]:motion-safe:block absolute inset-y-0 right-[calc((100%_-_72rem)/4_+_0.75rem_-_5rem)] w-40 pointer-events-none text-[#5f8f9c] opacity-35">
+      <AnchorRig chainRef={chainRef} linksRef={linksRef} anchorRef={anchorRef} />
     </div>
   )
 }
@@ -517,8 +611,10 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="bg-river-deep text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+      <section className="relative overflow-hidden bg-river-deep text-white">
+        <LandingAnchor />
+        <Seabed />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-24 sm:pt-16 sm:pb-28 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <h2 className="font-display font-bold text-3xl sm:text-4xl max-w-md leading-tight">
             Celý trenažér je zdarma, s účtem i bez něj.
           </h2>
