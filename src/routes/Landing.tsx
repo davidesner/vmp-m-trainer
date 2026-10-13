@@ -531,7 +531,7 @@ export default function Landing() {
           Trenažér vůdce malého plavidla, open source projekt. Vytvořil{' '}
           <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>.
         </span>
-        <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-800">Zdrojový kód na GitHubu</a>
+        <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-800">Přispěj nebo si prohlédni kód na GitHubu</a>
       </footer>
     </div>
   )
