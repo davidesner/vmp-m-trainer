@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useProgress } from '../hooks/useProgress'
 import { useAuth, useGuestStatus } from '../hooks/useAuth'
 import LockedFeature from '../components/LockedFeature'
+import DeleteAccount from '../components/DeleteAccount'
 
 const LEGACY_KEY = 'vmp:progress'
 
@@ -82,6 +83,8 @@ export default function Settings() {
           </div>
         )}
       </div>
+
+      <DeleteAccount />
     </div>
   )
 }
