@@ -8,8 +8,8 @@ Webová appka na trénink otázek pro zkoušku VMP M (Vůdce malého plavidla, k
 
 - Frontend: Vite + React 19 SPA
 - API: Hono + Drizzle ORM nad libSQL (SQLite dialect)
-- Auth: session cookie + argon2; uživatelé se zakládají CLI, self-service registrací s pozvánkovým kódem
-  nebo přihlášením přes Google / Seznam (OAuth 2.0)
+- Auth: session cookie + argon2; uživatelé se registrují sami (email + heslo + captcha Cloudflare Turnstile),
+  přihlásí se přes Google / Seznam (OAuth 2.0), případně se zakládají přes CLI
 - Deploy: Vercel + Turso (free), nebo single-container Docker (SQLite v volume)
 
 ## Setup (jednorázově)
@@ -22,29 +22,32 @@ pnpm db:migrate                    # vytvoří data/app.db
 pnpm user:add <email>              # založí prvního uživatele
 ```
 
-## Další uživatelé (registrace pozvánkovým kódem)
+## Registrace (Cloudflare Turnstile)
 
-Kromě CLI (`pnpm user:add`) se uživatelé mohou zaregistrovat sami na `/register`,
-pokud je nastavený sdílený kód:
+Kdokoli si může založit účet na `/register` - stačí email, heslo (≥ 8 znaků) a
+projít captchou [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/).
+Turnstile je zdarma a nenastavuje sledovací cookies. Registrace je zapnutá jen
+když jsou nastavené oba klíče:
 
 ```bash
-SIGNUP_CODE=nejaky-tajny-kod      # v .env.local nebo env varech na Vercelu
+TURNSTILE_SITE_KEY=...      # veřejný, posílá se do prohlížeče přes /api/auth/config
+TURNSTILE_SECRET_KEY=...    # tajný, jen na serveru
 ```
 
-- Když je `SIGNUP_CODE` nastavený, na přihlašovací stránce se objeví odkaz
-  „Vytvořit účet". Kdo zná kód, založí si účet sám (email + heslo ≥ 8 znaků).
-- Když je prázdný/nenastavený, registrace je vypnutá a `/register` to oznámí —
-  uživatele pak zakládáš jen přes `pnpm user:add`.
-- Endpoint `POST /api/auth/register` je rate-limitovaný (5 pokusů / 15 min / IP)
-  a kód se porovnává v konstantním čase.
-
-Kód kdykoli změníš (nebo smažeš, čímž registraci zase vypneš) — existující účty
-to neovlivní.
+- Klíče získáš v Cloudflare dashboardu: Turnstile → Add widget, doména appky
+  (a `localhost` pro lokální vývoj), režim „Managed".
+- Pro lokální vývoj stačí testovací klíče z `.env.example`, které vždy projdou
+  (widget zobrazí upozornění, že jde o test).
+- Když některý klíč chybí, registrace je vypnutá: `/register` to oznámí a odkaz
+  „Vytvořit účet" zmizí. Uživatele pak zakládáš jen přes `pnpm user:add`.
+- Server ověří token u Cloudflare (`siteverify`) ještě před kontrolou, jestli
+  email už existuje. `POST /api/auth/register` je navíc rate-limitovaný
+  (5 pokusů / 15 min / IP).
 
 ## Přihlášení přes Google a Seznam
 
 Tlačítka „Pokračovat přes Google/Seznam" přihlásí existujícího uživatele a při prvním
-použití mu rovnou založí účet (bez hesla). Pozvánkový kód (`SIGNUP_CODE`) se tu nevyžaduje.
+použití mu rovnou založí účet (bez hesla). Captcha (Turnstile) se tu nevyžaduje.
 Poskytovatel je zapnutý, jen když má nastavené obě proměnné; jinak tlačítko zůstane
 neaktivní s textem „připravujeme".
 
@@ -98,6 +101,7 @@ http://localhost:5400 — frontend (Vite). Vite proxy posílá `/api/*` do Hono 
    - `DATABASE_URL=libsql://<db>-<org>.turso.io`
    - `DATABASE_AUTH_TOKEN=<token>`
    - `SESSION_COOKIE_SECURE=true`
+   - `TURNSTILE_SITE_KEY=<site key>`, `TURNSTILE_SECRET_KEY=<secret key>` (viz Registrace)
    - volitelně `APP_URL` a `GOOGLE_*` / `SEZNAM_*` (viz [Přihlášení přes Google a Seznam](#přihlášení-přes-google-a-seznam))
 3. `vercel deploy`. Build step (`vercel.json`) spustí `pnpm db:migrate` a pak `pnpm build`.
    API funkce běží ve Frankfurtu (`"regions": ["fra1"]` ve `vercel.json`), Turso DB je v `aws-eu-west-1`
@@ -117,7 +121,8 @@ docker exec -it <container> pnpm user:add <email>
 
 Volume `/data` drží SQLite soubor — přežije restart.
 
-Pro přihlášení přes Google/Seznam přidej do `docker run` `-e APP_URL=https://...` a `-e GOOGLE_CLIENT_ID=...`
+Pro zapnutí registrace přidej do `docker run` `-e TURNSTILE_SITE_KEY=... -e TURNSTILE_SECRET_KEY=...`.
+Pro přihlášení přes Google/Seznam přidej `-e APP_URL=https://...` a `-e GOOGLE_CLIENT_ID=...`
 atd. (viz [Přihlášení přes Google a Seznam](#přihlášení-přes-google-a-seznam)).
 
 ## Skripty
@@ -133,7 +138,7 @@ atd. (viz [Přihlášení přes Google a Seznam](#přihlášení-přes-google-a-
 | `pnpm scrape:M` / `pnpm scrape:C` | scraper jen pro vybranou kategorii |
 | `pnpm db:generate` | generuje migrace z drizzle schema |
 | `pnpm db:migrate` | aplikuje migrace |
-| `pnpm user:add <email>` | založí uživatele z CLI (interaktivně se zeptá na heslo); alternativa k registraci kódem |
+| `pnpm user:add <email>` | založí uživatele z CLI (interaktivně se zeptá na heslo); alternativa k registraci přes `/register` |
 | `pnpm package-skill` | zazipuje skill `explain-vmp-question` (pro batch generování vysvětlení) |
 
 ## Kategorie zkoušky (M, C)

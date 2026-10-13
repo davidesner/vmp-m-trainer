@@ -1,7 +1,7 @@
 import { Hono, type Context } from 'hono'
 import { setCookie, deleteCookie } from 'hono/cookie'
 import { eq } from 'drizzle-orm'
-import { randomUUID, timingSafeEqual } from 'node:crypto'
+import { randomUUID } from 'node:crypto'
 import type { AppEnv } from '../types.js'
 import type { Db } from '../db/client.js'
 import { users } from '../db/schema.js'
@@ -11,12 +11,13 @@ import { COOKIE_NAME } from './middleware.js'
 import { checkRateLimit } from './rateLimit.js'
 import { OAUTH_PROVIDERS, oauthRoutes, type OAuthCredentials } from './oauth.js'
 import { findOrCreateUserForIdentity } from './identities.js'
+import type { Captcha } from './captcha.js'
 
 export interface AuthRoutesOptions {
   db: Db
   cookieSecure: boolean
-  /** Shared invite code required to self-register. Empty/undefined disables signup. */
-  signupCode?: string
+  /** Captcha every self-registration must pass. Undefined disables signup. */
+  captcha?: Captcha
   /** Google/Seznam client credentials; providers without them stay disabled. */
   oauth?: OAuthCredentials
   /** Public origin for OAuth redirect URIs (APP_URL); defaults to the request origin. */
@@ -35,17 +36,9 @@ const SESSION_COOKIE = {
 // Guests are cheap to create and often share an IP (school, office NAT).
 const GUEST_RATE_MAX = 20
 
-/** Constant-time string compare that doesn't leak length via early return. */
-function codeMatches(provided: string, expected: string): boolean {
-  const a = Buffer.from(provided)
-  const b = Buffer.from(expected)
-  if (a.length !== b.length) return false
-  return timingSafeEqual(a, b)
-}
-
 export function authRoutes(opts: AuthRoutesOptions) {
   const r = new Hono<AppEnv>()
-  const signupEnabled = Boolean(opts.signupCode)
+  const { captcha } = opts
 
   /** A guest signing in or registering leaves its session behind; its row stays as usage history. */
   async function dropGuestSession(c: Context<AppEnv>) {
@@ -62,8 +55,11 @@ export function authRoutes(opts: AuthRoutesOptions) {
   const oauth = opts.oauth ?? {}
   const sso = Object.fromEntries(OAUTH_PROVIDERS.map(p => [p, Boolean(oauth[p])]))
 
-  // Lets the SPA decide whether to show the "create account" link and which SSO buttons work.
-  r.get('/config', c => c.json({ signupEnabled, sso }))
+  // Lets the SPA decide whether to show the "create account" link, which captcha site key to render
+  // and which SSO buttons work.
+  r.get('/config', c => c.json({
+    signupEnabled: Boolean(captcha), captchaSiteKey: captcha?.siteKey ?? null, sso,
+  }))
 
   r.route('/oauth', oauthRoutes({
     credentials: oauth,
@@ -74,22 +70,28 @@ export function authRoutes(opts: AuthRoutesOptions) {
   }))
 
   r.post('/register', async c => {
-    const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
-    const rl = checkRateLimit(`register:${ip}`)
+    const forwardedIp = c.req.header('x-forwarded-for')?.split(',')[0].trim()
+    const rl = checkRateLimit(`register:${forwardedIp ?? 'unknown'}`)
     if (!rl.allowed) {
       return c.json({ error: 'too many attempts' }, 429, { 'retry-after': String(rl.retryAfterSec) })
     }
-    if (!opts.signupCode) return c.json({ error: 'registration disabled' }, 403)
+    if (!captcha) return c.json({ error: 'registration disabled' }, 403)
 
     const body = await c.req.json().catch(() => null) as
-      { email?: string; password?: string; code?: string } | null
+      { email?: string; password?: string; captchaToken?: string } | null
     const email = body?.email?.trim().toLowerCase()
     const password = body?.password
-    const code = body?.code
-    if (!email || !password || !code) return c.json({ error: 'bad request' }, 400)
+    const captchaToken = body?.captchaToken
+    if (!email || !password || typeof captchaToken !== 'string' || !captchaToken) {
+      return c.json({ error: 'bad request' }, 400)
+    }
     if (!email.includes('@')) return c.json({ error: 'invalid email' }, 400)
     if (password.length < 8) return c.json({ error: 'password too short' }, 400)
-    if (!codeMatches(code, opts.signupCode)) return c.json({ error: 'invalid code' }, 403)
+
+    // After the cheap checks, before touching the DB, so the 409 below can't be probed without solving a captcha.
+    const verdict = await captcha.verify(captchaToken, forwardedIp)
+    if (verdict === 'unavailable') return c.json({ error: 'captcha unavailable' }, 503)
+    if (verdict !== 'ok') return c.json({ error: 'captcha failed' }, 403)
 
     const existing = await opts.db.db
       .select({ id: users.id })

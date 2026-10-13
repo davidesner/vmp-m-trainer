@@ -1,4 +1,5 @@
 import { OAUTH_PROVIDERS, type OAuthCredentials } from './auth/oauth.js'
+import { turnstile, type Captcha } from './auth/captcha.js'
 
 /**
  * Reads libSQL connection settings from env, accepting either the explicit
@@ -14,12 +15,14 @@ export function getDatabaseAuthToken(): string | undefined {
 }
 
 /**
- * Shared invite code that gates self-registration via POST /api/auth/register.
- * When unset (or empty), signup is disabled and users must be created via the
- * `pnpm user:add` CLI. Whitespace is trimmed so a stray newline can't break it.
+ * Cloudflare Turnstile keys for self-registration via POST /api/auth/register.
+ * Both must be set; otherwise signup is disabled and users must be created via
+ * the `pnpm user:add` CLI. Whitespace is trimmed so a stray newline can't break them.
  */
-export function getSignupCode(): string | undefined {
-  return process.env.SIGNUP_CODE?.trim() || undefined
+export function getCaptcha(): Captcha | undefined {
+  const siteKey = process.env.TURNSTILE_SITE_KEY?.trim()
+  const secretKey = process.env.TURNSTILE_SECRET_KEY?.trim()
+  return siteKey && secretKey ? turnstile(siteKey, secretKey) : undefined
 }
 
 /**

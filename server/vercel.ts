@@ -1,6 +1,6 @@
 import { createDb } from './db/client.js'
 import { buildApp } from './index.js'
-import { getAppUrl, getDatabaseAuthToken, getDatabaseUrl, getOAuthCredentials, getSignupCode } from './env.js'
+import { getAppUrl, getCaptcha, getDatabaseAuthToken, getDatabaseUrl, getOAuthCredentials } from './env.js'
 
 const url = getDatabaseUrl()
 if (!url) {
@@ -13,7 +13,7 @@ const db = createDb(url, getDatabaseAuthToken())
 // We do NOT run migrations per-request — that would slow cold starts.
 
 const { app } = buildApp({
-  db, cookieSecure: true, signupCode: getSignupCode(), oauth: getOAuthCredentials(), appUrl: getAppUrl(),
+  db, cookieSecure: true, captcha: getCaptcha(), oauth: getOAuthCredentials(), appUrl: getAppUrl(),
 })
 
 export default app

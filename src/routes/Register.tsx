@@ -1,26 +1,31 @@
 import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
-import CaptchaSlot from '../components/CaptchaSlot'
+import Turnstile from '../components/Turnstile'
 
 export default function Register() {
-  const { register } = useAuth()
+  const { register, captchaSiteKey } = useAuth()
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+  // Tokens are single-use, so every failed attempt remounts the widget for a fresh one.
+  const [captchaRound, setCaptchaRound] = useState(0)
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault()
     setError(null)
     if (password.length < 8) { setError('Heslo musí mít aspoň 8 znaků'); return }
+    if (!captchaToken) { setError('Počkej na ověření, že nejsi robot'); return }
     setBusy(true)
-    // Invite code is going away; the backend still expects the field until captcha replaces it.
-    const res = await register(email.trim().toLowerCase(), password, '')
+    const res = await register(email.trim().toLowerCase(), password, captchaToken)
     setBusy(false)
-    if (res.ok) navigate('/app', { replace: true })
-    else setError(res.error ?? 'Chyba')
+    if (res.ok) { navigate('/app', { replace: true }); return }
+    setError(res.error ?? 'Chyba')
+    setCaptchaToken(null)
+    setCaptchaRound(r => r + 1)
   }
 
   return (
@@ -39,11 +44,14 @@ export default function Register() {
             onChange={e => setPassword(e.target.value)}
             className="w-full border border-neutral-300 rounded px-3 py-2" />
         </label>
-        <div className="mb-4">
-          <CaptchaSlot />
+        <div className="mb-4 min-h-[65px]">
+          {captchaSiteKey && <Turnstile key={captchaRound} siteKey={captchaSiteKey} onToken={setCaptchaToken} />}
+          {captchaSiteKey === null && (
+            <p className="text-sm text-neutral-600">Registrace teď není dostupná.</p>
+          )}
         </div>
         {error && <div className="text-sm text-red-600 mb-3">{error}</div>}
-        <button type="submit" disabled={busy}
+        <button type="submit" disabled={busy || !captchaToken}
           className="w-full bg-primary text-white rounded py-2 hover:bg-primary-dark disabled:opacity-50">
           {busy ? 'Zakládám…' : 'Vytvořit účet'}
         </button>

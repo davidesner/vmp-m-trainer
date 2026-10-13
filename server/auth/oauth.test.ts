@@ -85,7 +85,7 @@ describe('OAuth start', () => {
   it('reports configured providers in /api/auth/config', async () => {
     const { app } = await setup(GOOGLE_NEW, { google: CREDS.google })
     expect(await (await app.request('/api/auth/config')).json())
-      .toEqual({ signupEnabled: false, sso: { google: true, seznam: false } })
+      .toEqual({ signupEnabled: false, captchaSiteKey: null, sso: { google: true, seznam: false } })
   })
 
   it('redirects to Google with state and an S256 PKCE challenge', async () => {
