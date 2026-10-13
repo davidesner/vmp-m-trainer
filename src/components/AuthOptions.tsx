@@ -63,17 +63,17 @@ export default function AuthOptions({ onSuccess, tone = 'light' }: Props) {
         {!emailOpen ? (
           <button type="button" onClick={() => setEmailOpen(true)} aria-expanded={false}
             className={`text-sm font-medium ${linkCls}`}>
-            Přihlásit se emailem
+            Pokračovat emailem
           </button>
         ) : (
           <div className={`pt-4 border-t ${dark ? 'border-white/15' : 'border-neutral-200'}`}>
             <LoginForm tone={tone} inline={dark} autoFocus onSuccess={onSuccess} />
+            <p className={`mt-3 text-sm ${muted}`}>
+              Nemáš účet?{' '}
+              <Link to="/register" className={linkCls}>Zaregistruj se</Link>
+            </p>
           </div>
         )}
-        <p className={`mt-3 text-sm ${muted}`}>
-          Nemáš účet?{' '}
-          <Link to="/register" className={linkCls}>Zaregistruj se emailem</Link>
-        </p>
       </div>
     </div>
   )
