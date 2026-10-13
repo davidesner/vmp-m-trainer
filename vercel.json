@@ -4,6 +4,6 @@
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/((?!api|explanations|data|assets|landing|favicon|apple-touch-icon|og-image|robots\\.txt|sitemap\\.xml).+)", "destination": "/spa.html" }
+    { "source": "/((?!api|explanations|data|assets|landing|favicon|apple-touch-icon|og-image|robots\\.txt|sitemap\\.xml|llms\\.txt).+)", "destination": "/spa.html" }
   ]
 }

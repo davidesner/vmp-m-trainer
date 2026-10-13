@@ -1,0 +1,16 @@
+# Trenažér na zkoušku vůdce malého plavidla (VMP)
+
+> Bezplatný online trenažér testových otázek ke zkoušce vůdce malého plavidla (VMP) v Česku. Obsahuje všechny otázky, které zveřejnila Státní plavební správa pro kategorie M, S a C, ostré testy nanečisto se stejným počtem otázek, časem a hranicí úspěchu jako skutečná zkouška, procvičování podle slabin, odhad připravenosti a vysvětlení ke každé otázce. Funguje bez registrace, je zdarma, bez reklam a open source.
+
+Trenažér není oficiální aplikace Státní plavební správy. Formát zkoušky: kategorie M má 35 otázek, 30 minut a k úspěchu je potřeba aspoň 30 správných odpovědí; doplňková kategorie S (plachetnice) 14 otázek, 10 minut, aspoň 11 správně; kategorie C (příbřežní plavba na moři) 28 otázek, 25 minut, aspoň 24 správně.
+
+## Trenažér
+
+- [Úvodní stránka](https://vmp-trenazer.cz/): popis funkcí, ukázková otázka s vysvětlením, kategorie a časté otázky
+- [Zdrojový kód](https://github.com/davidesner/vmp-m-trainer): open source repozitář na GitHubu
+
+## Oficiální zdroje
+
+- [Státní plavební správa: zkoušky a soubory otázek](https://sps.gov.cz/dok-os/zkousky)
+- [Elektronické podání žádosti o zkoušku](https://sps.gov.cz/dok-os/el-podani-prehled)
+- [Termíny zkoušek](https://terminy-zkousek.plavebniurad.cz/index.asp)

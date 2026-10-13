@@ -558,7 +558,7 @@ function ReadinessPreview() {
         {DEMO_GROUPS.map(g => (
           <li key={g.name} className="grid grid-cols-[1fr_auto] gap-x-3 gap-y-1 text-sm">
             <span>{g.name}</span>
-            <span className={`tabular-nums font-medium ${g.accuracy >= 80 ? 'text-primary-dark' : g.accuracy >= 50 ? 'text-amber-600' : 'text-danger'}`}>
+            <span className={`tabular-nums font-medium ${g.accuracy >= 80 ? 'text-lime-700' : g.accuracy >= 50 ? 'text-amber-700' : 'text-red-700'}`}>
               {g.accuracy} %
             </span>
             <div className="col-span-2 h-1.5 bg-neutral-100 rounded">
@@ -576,6 +576,7 @@ function ReadinessPreview() {
 export default function Landing() {
   return (
     <div className="min-h-full bg-white text-neutral-900">
+      <main>
       <section className="bg-river-deep text-white relative overflow-hidden">
         {/* Anchors are drawn before the waves so the waves cover them: a static one resting on the bottom, or one that sinks on scroll. */}
         <AnchorMark className="min-[1400px]:motion-safe:hidden absolute right-[4%] bottom-0 w-36 h-36 lg:w-48 lg:h-48 text-river-wave" />
@@ -591,7 +592,7 @@ export default function Landing() {
               Trenažér na zkoušku Vůdce Malého Plavidla (VMP)
             </h1>
             <p className="mt-6 text-lg text-river-line max-w-xl leading-relaxed">
-              Otázky podle tvých slabin, odhad připravenosti a vysvětlení ke každé otázce. Zdarma.
+              Testy VMP online a zdarma: otázky podle tvých slabin, odhad připravenosti a vysvětlení ke každé otázce.
             </p>
             <div className="mt-9">
               <HeroActions />
@@ -739,6 +740,8 @@ export default function Landing() {
           <BottomActions />
         </div>
       </section>
+
+      </main>
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-neutral-500 flex flex-col sm:flex-row justify-between gap-2">
         <span>

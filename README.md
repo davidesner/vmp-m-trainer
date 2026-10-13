@@ -1,6 +1,7 @@
-# VMP M Trenažér
+# VMP Trenažér
 
-Webová appka na trénink otázek pro zkoušku VMP M (Vůdce malého plavidla, kategorie M 2015).
+Webová appka na trénink otázek pro zkoušku vůdce malého plavidla (VMP), kategorie M, S a C.
+Běží zdarma na **[vmp-trenazer.cz](https://vmp-trenazer.cz)**.
 
 ![Přehled](docs/images/home.png)
 
