@@ -33,3 +33,46 @@ describe('Login guest entry', () => {
     expect(calls).toContain('POST /api/auth/guest')
   })
 })
+
+function renderLogin(config: object, entry = '/login') {
+  vi.spyOn(globalThis, 'fetch').mockImplementation(async input => {
+    const url = typeof input === 'string' ? input : (input as Request).url
+    if (url === '/api/auth/config') return new Response(JSON.stringify(config), { status: 200 })
+    return new Response('', { status: 401 })
+  })
+  render(
+    <AuthProvider>
+      <MemoryRouter initialEntries={[entry]}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </MemoryRouter>
+    </AuthProvider>,
+  )
+}
+
+describe('Login SSO', () => {
+  it('links configured providers to their OAuth start endpoints', async () => {
+    renderLogin({ signupEnabled: false, sso: { google: true, seznam: true } })
+    expect(await screen.findByRole('link', { name: /Pokračovat přes Google/ })).toHaveAttribute('href', '/api/auth/oauth/google')
+    expect(screen.getByRole('link', { name: /Pokračovat přes Seznam/ })).toHaveAttribute('href', '/api/auth/oauth/seznam')
+    expect(screen.queryByText(/připravujeme/)).not.toBeInTheDocument()
+  })
+
+  it('keeps an unconfigured provider disabled and names only that one as coming soon', async () => {
+    renderLogin({ signupEnabled: false, sso: { google: true, seznam: false } })
+    expect(await screen.findByRole('link', { name: /Pokračovat přes Google/ })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Pokračovat přes Seznam/ })).toBeDisabled()
+    expect(screen.getByText('Přihlášení přes Seznam připravujeme.')).toBeInTheDocument()
+  })
+
+  it('shows a Czech message for a failed SSO callback', async () => {
+    renderLogin({ signupEnabled: false, sso: { google: true, seznam: true } }, '/login?error=cancelled')
+    expect(await screen.findByRole('alert')).toHaveTextContent('Přihlášení bylo zrušeno.')
+  })
+
+  it('falls back to a generic message for an unknown error code', async () => {
+    renderLogin({ signupEnabled: false }, '/login?error=whatever')
+    expect(await screen.findByRole('alert')).toHaveTextContent('Účet se nepodařilo ověřit.')
+  })
+})

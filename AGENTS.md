@@ -18,5 +18,6 @@ tells the truth, and update it in the same change. In particular:
 - **Changed features or guest limits**: the feature texts and the notes about what works without an account
   (weak-spot practice, readiness estimate, saved progress) must match what guests and signed-in users actually get.
 - **Changed sign-in options** (Google/Seznam SSO, registration): `src/components/AuthOptions.tsx` is shared by the
-  landing page and `/login`; flip `ready` on a provider only once its backend works.
+  landing page and `/login`. A provider's button is enabled when `/api/auth/config` reports it configured
+  (`GOOGLE_*` / `SEZNAM_*` env vars); the backend is `server/auth/oauth.ts` and `server/auth/identities.ts`.
 - **Changed routes**: the landing page links into the app under `/app`.

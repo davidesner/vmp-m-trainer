@@ -1,3 +1,4 @@
+import { OAUTH_PROVIDERS, type OAuthCredentials } from './auth/oauth.js'
 import { turnstile, type Captcha } from './auth/captcha.js'
 
 /**
@@ -22,4 +23,28 @@ export function getCaptcha(): Captcha | undefined {
   const siteKey = process.env.TURNSTILE_SITE_KEY?.trim()
   const secretKey = process.env.TURNSTILE_SECRET_KEY?.trim()
   return siteKey && secretKey ? turnstile(siteKey, secretKey) : undefined
+}
+
+/**
+ * Client credentials for "Pokračovat přes Google/Seznam". A provider is enabled only when both its
+ * ID and secret are set; the SPA learns which ones via GET /api/auth/config.
+ */
+export function getOAuthCredentials(): OAuthCredentials {
+  const out: OAuthCredentials = {}
+  for (const provider of OAUTH_PROVIDERS) {
+    const prefix = provider.toUpperCase()
+    const clientId = process.env[`${prefix}_CLIENT_ID`]?.trim()
+    const clientSecret = process.env[`${prefix}_CLIENT_SECRET`]?.trim()
+    if (clientId && clientSecret) out[provider] = { clientId, clientSecret }
+  }
+  return out
+}
+
+/**
+ * Public origin of the app (e.g. https://vmp.example.cz), used to build OAuth redirect URIs.
+ * When unset, the origin of the incoming request is used, which is fine for local dev and Vercel
+ * but can be wrong behind a reverse proxy that rewrites Host or terminates TLS.
+ */
+export function getAppUrl(): string | undefined {
+  return process.env.APP_URL?.trim().replace(/\/+$/, '') || undefined
 }

@@ -4,10 +4,15 @@ export interface AuthUser { id: string; email: string | null; guest: boolean }
 
 interface AuthResult { ok: boolean; error?: string }
 
+export type SsoProvider = 'google' | 'seznam'
+/** Which SSO providers the server has credentials for; null until /api/auth/config answers. */
+export type SsoAvailability = Record<SsoProvider, boolean> | null
+
 interface AuthCtx {
   user: AuthUser | null
   loading: boolean
   signupEnabled: boolean
+  sso: SsoAvailability
   /** Turnstile site key for /register; undefined while /api/auth/config is loading, null when signup is off. */
   captchaSiteKey: string | null | undefined
   login: (email: string, password: string) => Promise<AuthResult>
@@ -23,6 +28,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null)
   const [loading, setLoading] = useState(true)
   const [signupEnabled, setSignupEnabled] = useState(false)
+  const [sso, setSso] = useState<SsoAvailability>(null)
   const [captchaSiteKey, setCaptchaSiteKey] = useState<string | null | undefined>(undefined)
 
   useEffect(() => {
@@ -31,10 +37,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       .then(cfg => {
         setSignupEnabled(Boolean(cfg?.signupEnabled))
         setCaptchaSiteKey(typeof cfg?.captchaSiteKey === 'string' ? cfg.captchaSiteKey : null)
+        setSso({ google: cfg?.sso?.google === true, seznam: cfg?.sso?.seznam === true })
       })
       .catch(() => {
         setSignupEnabled(false)
         setCaptchaSiteKey(null)
+        setSso({ google: false, seznam: false })
       })
   }, [])
 
@@ -105,7 +113,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <Ctx.Provider value={{ user, loading, signupEnabled, captchaSiteKey, login, register, loginAsGuest, logout, refresh }}>
+    <Ctx.Provider value={{ user, loading, signupEnabled, sso, captchaSiteKey, login, register, loginAsGuest, logout, refresh }}>
       {children}
     </Ctx.Provider>
   )

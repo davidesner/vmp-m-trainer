@@ -47,7 +47,7 @@ export default function Settings() {
       <h2 className="text-2xl font-bold mb-6">Nastavení</h2>
 
       <div className="bg-white border border-neutral-200 rounded p-4 mb-4">
-        <div className="text-sm">Přihlášen jako <strong>{user?.email}</strong></div>
+        <div className="text-sm">{user?.email ? <>Přihlášen jako <strong>{user.email}</strong></> : 'Přihlášen přes Google nebo Seznam'}</div>
         <button onClick={() => void logout()}
           className="mt-3 px-3 py-2 border border-neutral-300 rounded text-sm hover:bg-neutral-50">
           Odhlásit

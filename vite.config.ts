@@ -15,7 +15,8 @@ export default defineConfig(({ mode }) => {
       port: devPort,
       strictPort: true,
       proxy: {
-        '/api': `http://localhost:${apiPort}`,
+        // Keep the browser's Host so the API builds OAuth redirect URIs on the Vite port, not its own.
+        '/api': { target: `http://localhost:${apiPort}`, changeOrigin: false },
       },
     },
     preview: {

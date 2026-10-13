@@ -12,6 +12,7 @@ import Settings from './routes/Settings'
 import Login from './routes/Login'
 import Register from './routes/Register'
 import Landing from './routes/Landing'
+import Privacy from './routes/Privacy'
 
 // Pages that are only useful once inside the app; React 19 hoists this <meta> into <head>.
 const NoIndex = () => <meta name="robots" content="noindex" />
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/login" element={<><NoIndex /><Login /></>} />
           <Route path="/register" element={<><NoIndex /><Register /></>} />
           <Route path="/" element={<Landing />} />
+          <Route path="/ochrana-osobnich-udaju" element={<Privacy />} />
           <Route path="/app" element={<RequireAuth><Shell /></RequireAuth>}>
             <Route index element={<Home />} />
             <Route path="test" element={<Test />} />

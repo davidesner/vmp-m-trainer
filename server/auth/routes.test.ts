@@ -114,13 +114,13 @@ describe('registration', () => {
     const { app } = await setup()
     const res = await app.request('/api/auth/config')
     expect(res.status).toBe(200)
-    expect(await res.json()).toEqual({ signupEnabled: false, captchaSiteKey: null })
+    expect(await res.json()).toMatchObject({ signupEnabled: false, captchaSiteKey: null })
   })
 
   it('GET /api/auth/config reports signup enabled with the captcha site key', async () => {
     const { app } = await setup(fakeCaptcha())
     expect(await (await app.request('/api/auth/config')).json())
-      .toEqual({ signupEnabled: true, captchaSiteKey: 'site-key' })
+      .toMatchObject({ signupEnabled: true, captchaSiteKey: 'site-key' })
   })
 
   it('rejects registration when signup is disabled', async () => {

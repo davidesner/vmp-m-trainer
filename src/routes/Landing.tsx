@@ -698,6 +698,7 @@ export default function Landing() {
           <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>, květen 2026
         </span>
         <div className="flex flex-col sm:flex-row gap-x-6 gap-y-2">
+          <Link to="/ochrana-osobnich-udaju" className="hover:text-neutral-800">Ochrana osobních údajů</Link>
           <a href={COFFEE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-neutral-800">
             <CoffeeCup />
             Kup mi kafe
