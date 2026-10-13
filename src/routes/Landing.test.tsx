@@ -2,6 +2,7 @@ import { describe, it, expect, vi, afterEach } from 'vitest'
 import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import { MemoryRouter, Routes, Route } from 'react-router-dom'
 import { AuthProvider } from '../hooks/useAuth'
+import { ActiveTestProvider } from '../hooks/useActiveTest'
 import Landing from './Landing'
 
 afterEach(() => vi.restoreAllMocks())
@@ -23,12 +24,14 @@ function mockApi(me: object | null) {
 function renderLanding() {
   render(
     <AuthProvider>
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/app" element={<div>AppHome</div>} />
-        </Routes>
-      </MemoryRouter>
+      <ActiveTestProvider>
+        <MemoryRouter initialEntries={['/']}>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/app" element={<div>AppHome</div>} />
+          </Routes>
+        </MemoryRouter>
+      </ActiveTestProvider>
     </AuthProvider>,
   )
 }
@@ -72,5 +75,15 @@ describe('Landing', () => {
     expect(screen.getAllByRole('link', { name: 'Pokračovat bez účtu' })).not.toHaveLength(0)
     expect(screen.queryByRole('link', { name: 'Pokračovat do trenažéru' })).not.toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Pokračovat přes Google/ })).toBeInTheDocument()
+  })
+
+  it('keeps the explanation behind a button instead of expanding it under the sample question', async () => {
+    mockApi(null)
+    renderLanding()
+    expect(await screen.findByRole('button', { name: /Vysvětlení/ })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /^[abc]\)\s*zákaz předjíždění\.$/ }))
+    expect(screen.getByText(/Správně|Špatně/)).toBeInTheDocument()
+    expect(screen.queryByRole('article')).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Vysvětlení/ })).toBeInTheDocument()
   })
 })

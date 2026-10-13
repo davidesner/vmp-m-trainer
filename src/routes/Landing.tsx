@@ -1,11 +1,10 @@
-import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import AuthOptions from '../components/AuthOptions'
+import ExplainButton from '../components/ExplainButton'
 import { LANDING_CATEGORIES, LANDING_SAMPLES } from '../lib/landingSamples'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
-import { sanitizeExplanationHtml } from '../lib/sanitize'
-import { TESTS } from '../lib/tests'
 
 const REPO_URL = 'https://github.com/davidesner/vmp-m-trainer'
 const COFFEE_URL = 'https://buymeacoffee.com/davidesner'
@@ -433,23 +432,11 @@ function SampleQuestion() {
   const sample = LANDING_SAMPLES[idx]
   const question = useMemo(() => shuffleQuestionOptions(sample.question), [sample])
   const [answer, setAnswer] = useState<'a' | 'b' | 'c' | null>(null)
-  const [explanation, setExplanation] = useState<string | null>(null)
 
   function pick(i: number) {
     setIdx(i)
     setAnswer(null)
-    setExplanation(null)
   }
-
-  useEffect(() => {
-    if (!answer) return
-    let cancelled = false
-    fetch(`${TESTS[sample.testId].explanationsBase}/q-${sample.question.id}.html`)
-      .then(r => (r.ok ? r.text() : Promise.reject(new Error(String(r.status)))))
-      .then(html => { if (!cancelled) setExplanation(sanitizeExplanationHtml(html)) })
-      .catch(() => { if (!cancelled) setExplanation('') })
-    return () => { cancelled = true }
-  }, [answer, sample])
 
   return (
     <div className="bg-white text-neutral-900 rounded-xl shadow-[0_24px_60px_-20px_rgba(4,24,31,0.6)] overflow-hidden">
@@ -492,31 +479,16 @@ function SampleQuestion() {
           })}
         </div>
 
-        {answer === null && (
-          <p className="mt-4 text-sm text-neutral-500">Vyber odpověď a hned uvidíš vysvětlení.</p>
-        )}
-      </div>
-
-      {answer !== null && (
-        <div className="border-t border-neutral-200 bg-neutral-50">
-          <div className="px-5 sm:px-6 pt-4 flex items-baseline justify-between gap-3">
-            <p className={`font-semibold ${answer === question.correct ? 'text-primary-dark' : 'text-danger'}`}>
-              {answer === question.correct ? 'Správně.' : `Špatně, správně je ${question.correct}).`}
-            </p>
-            <span className="text-xs text-neutral-500">Vysvětlení z trenažéru</span>
-          </div>
-          <div className="px-5 sm:px-6 pb-5">
-            {explanation === null && <p className="text-sm text-neutral-500 py-3">Načítám vysvětlení…</p>}
-            {explanation === '' && <p className="text-sm text-neutral-500 py-3">Vysvětlení se nepodařilo načíst.</p>}
-            {explanation && (
-              <article
-                className="prose prose-sm prose-neutral max-w-none prose-h2:text-base prose-h2:mt-3 prose-h3:text-sm [&_svg]:max-w-full [&_svg]:h-auto [&_table]:text-xs"
-                dangerouslySetInnerHTML={{ __html: explanation }}
-              />
-            )}
-          </div>
+        {/* Same as in the app: verdict after answering, explanation in a modal behind an always-present button. */}
+        <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+          {answer === null
+            ? <p className="text-sm text-neutral-500">Vyber odpověď, nebo se rovnou podívej na vysvětlení.</p>
+            : <p className={`font-semibold ${answer === question.correct ? 'text-primary-dark' : 'text-danger'}`}>
+                {answer === question.correct ? 'Správně.' : `Špatně, správně je ${question.correct}).`}
+              </p>}
+          <ExplainButton question={question} userAnswer={answer} testId={sample.testId} showFeedback={false} />
         </div>
-      )}
+      </div>
     </div>
   )
 }
