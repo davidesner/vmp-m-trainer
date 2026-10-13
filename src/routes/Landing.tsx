@@ -648,7 +648,8 @@ export default function Landing() {
                 Chtěl jsem nástroj, který mi bude servírovat otázky podle toho, kde mám slabiny, dokud se je nenaučím.
               </p>
               <p>
-                Tak vznikl tenhle trenažér. Myslím, že by měl být zdarma, protože mě jeho provoz skoro nic nestojí.
+                Tak vznikl tenhle trenažér. Dávám ho zdarma, protože provoz i vývoj skoro nic nestojí a chci pomoct komunitě.
+                Platit za tak triviální nástroj je nesmysl.
                 Je bez reklam a jeho kód je veřejný na{' '}
                 <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">GitHubu</a>.
                 Chybu v otázce nebo vysvětlení můžeš nahlásit přímo v appce.
