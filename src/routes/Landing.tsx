@@ -694,7 +694,7 @@ export default function Landing() {
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-neutral-500 flex flex-col sm:flex-row justify-between gap-2">
         <span>
           Vytvořil{' '}
-          <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>, 2026
+          <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>, květen 2026
         </span>
         <div className="flex flex-col sm:flex-row gap-x-6 gap-y-2">
           <a href={COFFEE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-neutral-800">
