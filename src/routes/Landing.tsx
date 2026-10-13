@@ -2,6 +2,7 @@ import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import AuthOptions from '../components/AuthOptions'
+import { useGuestStart } from '../hooks/useGuestStart'
 import ExplainButton from '../components/ExplainButton'
 import { LANDING_CATEGORIES, LANDING_SAMPLES } from '../lib/landingSamples'
 import { LANDING_FAQ } from '../lib/landingFaq'
@@ -372,22 +373,6 @@ function Faq() {
   )
 }
 
-function useGuestStart() {
-  const { loginAsGuest } = useAuth()
-  const navigate = useNavigate()
-  const [busy, setBusy] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  async function start() {
-    setBusy(true)
-    setError(null)
-    const res = await loginAsGuest()
-    setBusy(false)
-    if (res.ok) navigate('/app')
-    else setError(res.error ?? 'Nepodařilo se spustit trenažér')
-  }
-  return { start, busy, error }
-}
-
 const LOGIN_ID = 'prihlaseni'
 
 const PRIMARY_CTA = 'inline-block text-center whitespace-nowrap px-7 py-4 rounded-md bg-primary text-river-deep font-display font-bold text-lg hover:bg-[#9ad455] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-60 transition-colors'
@@ -397,14 +382,16 @@ const SECONDARY_CTA = 'inline-block text-center whitespace-nowrap px-6 py-4 roun
 /** Main call to action: start as a guest, or go straight into the app when already signed in. */
 function GuestButton() {
   const { user } = useAuth()
-  const { start, busy, error } = useGuestStart()
+  const navigate = useNavigate()
+  const { start, busy, error, captcha } = useGuestStart(() => navigate('/app'))
   if (user?.guest) return <Link to="/app" className={SECONDARY_CTA}>Pokračovat bez účtu</Link>
   if (user) return <Link to="/app" className={PRIMARY_CTA}>Pokračovat do trenažéru</Link>
   return (
     <>
-      <button type="button" onClick={() => void start()} disabled={busy} className={PRIMARY_CTA}>
-        {busy ? 'Spouštím…' : 'Vyzkoušet bez přihlášení'}
+      <button type="button" onClick={start} disabled={busy} className={PRIMARY_CTA}>
+        {busy ? 'Ověřuji…' : 'Vyzkoušet bez přihlášení'}
       </button>
+      {captcha}
       {error && <p role="alert" className="mt-2 text-sm text-red-300">{error}</p>}
     </>
   )

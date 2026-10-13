@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { useAuth } from '../hooks/useAuth'
+import { useGuestStart } from '../hooks/useGuestStart'
 import AuthOptions from '../components/AuthOptions'
 
 interface LocationState { from?: { pathname?: string } }
@@ -14,11 +13,8 @@ const SSO_ERRORS: Record<string, string> = {
 }
 
 export default function Login() {
-  const { loginAsGuest } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
-  const [error, setError] = useState<string | null>(null)
-  const [busy, setBusy] = useState(false)
   const ssoErrorCode = new URLSearchParams(location.search).get('error')
   const ssoError = ssoErrorCode ? SSO_ERRORS[ssoErrorCode] ?? SSO_ERRORS.provider : null
 
@@ -27,14 +23,7 @@ export default function Login() {
     navigate(to, { replace: true })
   }
 
-  async function onGuest() {
-    setError(null)
-    setBusy(true)
-    const res = await loginAsGuest()
-    setBusy(false)
-    if (res.ok) goBack()
-    else setError(res.error ?? 'Chyba')
-  }
+  const guest = useGuestStart(goBack)
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-neutral-50">
@@ -43,11 +32,12 @@ export default function Login() {
         {ssoError && <div role="alert" className="text-sm text-red-600 mb-4">{ssoError}</div>}
         <AuthOptions onSuccess={goBack} />
         <div className="mt-6 pt-4 border-t border-neutral-200">
-          {error && <div className="text-sm text-red-600 mb-3">{error}</div>}
-          <button type="button" onClick={() => void onGuest()} disabled={busy}
+          {guest.error && <div role="alert" className="text-sm text-red-600 mb-3">{guest.error}</div>}
+          <button type="button" onClick={guest.start} disabled={guest.busy}
             className="w-full border border-neutral-300 rounded py-2 text-sm text-neutral-700 hover:bg-neutral-50 disabled:opacity-50">
-            Pokračovat bez přihlášení
+            {guest.busy ? 'Ověřuji…' : 'Pokračovat bez přihlášení'}
           </button>
+          {guest.captcha}
           <p className="mt-4 text-xs text-neutral-500 text-center">
             <Link to="/ochrana-osobnich-udaju" className="hover:underline">Ochrana osobních údajů</Link>
           </p>

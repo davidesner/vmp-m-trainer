@@ -65,13 +65,19 @@ describe('guest auth context', () => {
     expect(await ctx.db.db.select().from(sessions)).toHaveLength(0)
   })
 })
-function guest(app: Awaited<ReturnType<typeof setup>>['app'], opts: { cookie?: string; ip?: string } = {}) {
+function guest(
+  app: Awaited<ReturnType<typeof setup>>['app'],
+  opts: { cookie?: string; ip?: string; captchaToken?: string | null } = {},
+) {
+  const token = opts.captchaToken === undefined ? 'tok' : opts.captchaToken
   return app.request('/api/auth/guest', {
     method: 'POST',
     headers: {
+      'content-type': 'application/json',
       'x-forwarded-for': opts.ip ?? '7.7.7.7',
       ...(opts.cookie ? { cookie: opts.cookie } : {}),
     },
+    body: JSON.stringify(token === null ? {} : { captchaToken: token }),
   })
 }
 
@@ -140,5 +146,33 @@ describe('POST /api/auth/guest', () => {
     })
     expect(res.status).toBe(201)
     expect(await ctx.db.db.select().from(sessions).where(eq(sessions.userId, guestId))).toHaveLength(0)
+  })
+})
+
+describe('POST /api/auth/guest captcha', () => {
+  beforeEach(() => _resetRateLimit())
+
+  async function appWith(verdict: 'ok' | 'failed' | 'unavailable' | null) {
+    const db = createDb(':memory:')
+    await db.applyMigrations()
+    const captcha = verdict === null ? undefined : { siteKey: 'site-key', verify: async () => verdict }
+    return buildApp({ db, cookieSecure: false, captcha }).app
+  }
+
+  it('requires a captcha token when captcha is configured', async () => {
+    const res = await guest(await appWith('ok'), { captchaToken: null })
+    expect(res.status).toBe(400)
+  })
+
+  it('rejects a failed captcha', async () => {
+    expect((await guest(await appWith('failed'))).status).toBe(403)
+  })
+
+  it('reports an unreachable captcha service', async () => {
+    expect((await guest(await appWith('unavailable'))).status).toBe(503)
+  })
+
+  it('creates a guest without a token when captcha is not configured (local dev)', async () => {
+    expect((await guest(await appWith(null), { captchaToken: null })).status).toBe(201)
   })
 })
