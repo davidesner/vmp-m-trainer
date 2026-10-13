@@ -1,0 +1,44 @@
+<article class="vmp-explanation">
+<h2>Jádro</h2>
+<p>Zdánlivý vítr přichází do plachet více zepředu při <strong>větší rychlosti plachetnice</strong>. Zdánlivý vítr je vektorový součet skutečného větru a větru z jízdy (protivětru, který vzniká pohybem lodi vpřed). Čím rychleji loď pluje, tím větší je vítr z jízdy a výsledný vektor se stáčí k přídi.</p>
+
+<h2>Pozadí</h2>
+<p>Na plachty nepůsobí skutečný vítr, ale <strong>zdánlivý vítr</strong>, který zažívá posádka a plachty na pohybující se lodi. Vypočítá se jako vektorový součet:</p>
+<ul>
+<li>skutečného větru (to, co vidíme na vodě a na pevnině),</li>
+<li>větru z jízdy, který má stejný směr jako pohyb lodi, ale opačný smysl (míří od přídě).</li>
+</ul>
+<p>Při stojící lodi je zdánlivý vítr shodný se skutečným. S rostoucí rychlostí roste vítr z jízdy a zdánlivý vítr se stáčí k přídi, tedy úhel zdánlivého větru vůči podélné ose lodi se zmenšuje. Zároveň se zdánlivý vítr zesiluje (zejména na kursech do větru). Naopak při menší rychlosti zůstává zdánlivý vítr blíže směru skutečného větru, tedy přichází více zboku nebo zezadu. Náklon plachetnice na úhel zdánlivého větru vliv zásadně nemá, ovlivňuje hlavně plochu plachet a stabilitu.</p>
+
+<h2>Vizualizace</h2>
+<svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:#f8fbff">
+<defs>
+<marker id="ah102" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><polygon points="0,0 8,4 0,8" fill="#333"/></marker>
+</defs>
+<text x="10" y="20" style="font-size:14px;font-weight:bold">Vektorový trojúhelník větrů</text>
+<line x1="60" y1="60" x2="200" y2="120" stroke="#1e6bd6" stroke-width="3" marker-end="url(#ah102)"/>
+<text x="70" y="75" style="font-size:12px;fill:#1e6bd6">skutečný vítr</text>
+<line x1="200" y1="120" x2="200" y2="200" stroke="#d68a1e" stroke-width="3" marker-end="url(#ah102)"/>
+<text x="208" y="165" style="font-size:12px;fill:#d68a1e">vítr z jízdy</text>
+<line x1="60" y1="60" x2="200" y2="200" stroke="#c0392b" stroke-width="3" stroke-dasharray="6 3" marker-end="url(#ah102)"/>
+<text x="75" y="150" style="font-size:12px;fill:#c0392b">zdánlivý vítr</text>
+<text x="215" y="215" style="font-size:12px">menší rychlost</text>
+
+<line x1="340" y1="60" x2="480" y2="120" stroke="#1e6bd6" stroke-width="3" marker-end="url(#ah102)"/>
+<text x="350" y="75" style="font-size:12px;fill:#1e6bd6">skutečný vítr</text>
+<line x1="480" y1="120" x2="480" y2="240" stroke="#d68a1e" stroke-width="3" marker-end="url(#ah102)"/>
+<text x="488" y="185" style="font-size:12px;fill:#d68a1e">vítr z jízdy</text>
+<line x1="340" y1="60" x2="480" y2="240" stroke="#c0392b" stroke-width="3" stroke-dasharray="6 3" marker-end="url(#ah102)"/>
+<text x="345" y="170" style="font-size:12px;fill:#c0392b">zdánlivý vítr</text>
+<text x="360" y="255" style="font-size:12px">větší rychlost: vítr více zepředu</text>
+</svg>
+
+<h2>Praktická aplikace</h2>
+<p>Když plachetnice zrychlí (například po vyklouznutí do plachtění), kormidelník i posádka zjistí, že vítr se „stáčí dopředu" a plachty je nutné přitáhnout (přiblížit k ose lodi). Naopak při zpomalení (například po obratu nebo při poryvu, který stlačí loď) se zdánlivý vítr stáčí zpět dozadu a plachty se uvolňují. Proto rychlé lodě (katamarány, plachetnice na hydrofoilech) plují ve velmi ostrém úhlu k zdánlivému větru i při kursech, kde skutečný vítr vane zboku nebo zezadu. Praktickým ukazatelem jsou „větrné pásky" (telltales) na plachtě a větrná směrovka na stěžni, které vždy ukazují zdánlivý vítr.</p>
+
+<h2>Zdroje</h2>
+<ol>
+<li>Teorie plachtění: zdánlivý a skutečný vítr, vítr z jízdy (vektorový součet rychlostí)</li>
+<li>Jachtařská praxe: trimování plachet podle zdánlivého větru</li>
+</ol>
+</article>
