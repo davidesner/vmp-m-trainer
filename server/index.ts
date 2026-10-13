@@ -4,6 +4,7 @@ import type { AppEnv } from './types.js'
 import type { Db } from './db/client.js'
 import { loadUser } from './auth/middleware.js'
 import { authRoutes, meRoute } from './auth/routes.js'
+import type { OAuthCredentials } from './auth/oauth.js'
 import { progressRoutes } from './routes/progress.js'
 import { attemptsRoutes } from './routes/attempts.js'
 import { testHistoryRoutes } from './routes/testHistory.js'
@@ -14,6 +15,10 @@ export interface BuildAppOptions {
   cookieSecure: boolean
   /** Shared invite code required for self-registration. Unset disables signup. */
   signupCode?: string
+  oauth?: OAuthCredentials
+  appUrl?: string
+  /** Injectable for tests (OAuth provider requests). */
+  fetch?: typeof fetch
 }
 
 export function buildApp(opts: BuildAppOptions) {

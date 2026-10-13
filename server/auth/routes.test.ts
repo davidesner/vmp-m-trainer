@@ -99,12 +99,12 @@ describe('registration', () => {
     const { app } = await setup()
     const res = await app.request('/api/auth/config')
     expect(res.status).toBe(200)
-    expect(await res.json()).toEqual({ signupEnabled: false })
+    expect(await res.json()).toMatchObject({ signupEnabled: false })
   })
 
   it('GET /api/auth/config reports signupEnabled true when a code is set', async () => {
     const { app } = await setup('letmein')
-    expect(await (await app.request('/api/auth/config')).json()).toEqual({ signupEnabled: true })
+    expect(await (await app.request('/api/auth/config')).json()).toMatchObject({ signupEnabled: true })
   })
 
   it('rejects registration when signup is disabled', async () => {

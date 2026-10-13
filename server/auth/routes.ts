@@ -9,12 +9,20 @@ import { hashPassword, verifyPassword } from './password.js'
 import { createSession, deleteSession } from './sessions.js'
 import { COOKIE_NAME } from './middleware.js'
 import { checkRateLimit } from './rateLimit.js'
+import { OAUTH_PROVIDERS, oauthRoutes, type OAuthCredentials } from './oauth.js'
+import { findOrCreateUserForIdentity } from './identities.js'
 
 export interface AuthRoutesOptions {
   db: Db
   cookieSecure: boolean
   /** Shared invite code required to self-register. Empty/undefined disables signup. */
   signupCode?: string
+  /** Google/Seznam client credentials; providers without them stay disabled. */
+  oauth?: OAuthCredentials
+  /** Public origin for OAuth redirect URIs (APP_URL); defaults to the request origin. */
+  appUrl?: string
+  /** Injectable for tests (OAuth token and profile requests). */
+  fetch?: typeof fetch
 }
 
 const SESSION_COOKIE = {
@@ -45,8 +53,25 @@ export function authRoutes(opts: AuthRoutesOptions) {
     if (sid && c.get('user')?.guest) await deleteSession(opts.db.db, sid)
   }
 
-  // Lets the SPA decide whether to show the "create account" link.
-  r.get('/config', c => c.json({ signupEnabled }))
+  async function signInAs(c: Context<AppEnv>, userId: string) {
+    await dropGuestSession(c)
+    const sid = await createSession(opts.db.db, userId)
+    setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
+  }
+
+  const oauth = opts.oauth ?? {}
+  const sso = Object.fromEntries(OAUTH_PROVIDERS.map(p => [p, Boolean(oauth[p])]))
+
+  // Lets the SPA decide whether to show the "create account" link and which SSO buttons work.
+  r.get('/config', c => c.json({ signupEnabled, sso }))
+
+  r.route('/oauth', oauthRoutes({
+    credentials: oauth,
+    cookieSecure: opts.cookieSecure,
+    appUrl: opts.appUrl,
+    fetch: opts.fetch,
+    signIn: async (c, profile) => signInAs(c, await findOrCreateUserForIdentity(opts.db.db, profile)),
+  }))
 
   r.post('/register', async c => {
     const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
@@ -81,9 +106,7 @@ export function authRoutes(opts: AuthRoutesOptions) {
       createdAt: new Date().toISOString(),
     })
 
-    await dropGuestSession(c)
-    const sid = await createSession(opts.db.db, id)
-    setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
+    await signInAs(c, id)
     return c.json({ id, email, guest: false }, 201)
   })
 
@@ -126,13 +149,12 @@ export function authRoutes(opts: AuthRoutesOptions) {
       .limit(1)
     const user = row[0]
     if (!user || user.isGuest) return c.json({ error: 'invalid credentials' }, 401)
+    // SSO-only accounts have an empty hash, which verifyPassword never accepts.
     if (!(await verifyPassword(user.passwordHash, body.password))) {
       return c.json({ error: 'invalid credentials' }, 401)
     }
 
-    await dropGuestSession(c)
-    const sid = await createSession(opts.db.db, user.id)
-    setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
+    await signInAs(c, user.id)
     return c.json({ id: user.id, email: user.email, guest: false })
   })
 
