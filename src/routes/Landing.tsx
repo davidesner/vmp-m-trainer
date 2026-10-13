@@ -241,12 +241,19 @@ export default function Landing() {
       </section>
 
       <section className="bg-river-mist">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid md:grid-cols-3 gap-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <h3 className="font-display font-bold text-xl">Otázky podle tvých slabin</h3>
             <p className="mt-3 text-neutral-700 leading-relaxed">
               Procvičování míchá hlavně otázky, ve kterých chybuješ, a ty, které jsi ještě neviděl.
               Co už umíš, se vrací jen občas, aby se to nevykouřilo z hlavy. Funguje s účtem.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-display font-bold text-xl">Procvičuj, co potřebuješ</h3>
+            <p className="mt-3 text-neutral-700 leading-relaxed">
+              Vyber si oblasti, které chceš procvičit, třeba jen noční signalizaci nebo první pomoc.
+              Nebo nech trenažér namíchat otázky ve stejném poměru jako u zkoušky.
             </p>
           </div>
           <div>
