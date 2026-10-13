@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import AuthOptions from '../components/AuthOptions'
@@ -27,7 +27,7 @@ const DEMO_GROUPS: Array<{ name: string; accuracy: number }> = [
 
 function AnchorMark({ className = '' }: { className?: string }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 32 32" className={`text-river-wave ${className}`}
+    <svg aria-hidden="true" viewBox="0 0 32 32" className={className}
       fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="16" cy="6" r="3" />
       <path d="M16 9v19" />
@@ -35,6 +35,101 @@ function AnchorMark({ className = '' }: { className?: string }) {
       <path d="M5 19c0 5 5 9 11 9s11-4 11-9" />
       <path d="M5 19l-2 2M5 19l2.5 1.5M27 19l2 2M27 19l-2.5 1.5" />
     </svg>
+  )
+}
+
+// The chain attaches at the top of the anchor's ring (y = 3 of the 32-unit viewBox).
+const RING_TOP = 3 / 32
+// Gap between the hanging anchor and the hero waterline when the page loads.
+const START_ABOVE_WATER = 48
+
+const WAVE_PATH = 'M0 32 Q 50 12 100 32 T 200 32 T 300 32 T 400 32 T 500 32 T 600 32 T 700 32 T 800 32 T 900 32 T 1000 32 T 1100 32 T 1200 32 V64 H0 Z'
+
+function Waves({ className = '' }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" className={`absolute bottom-0 left-0 w-full h-16 text-river-wave ${className}`} viewBox="0 0 1200 64" preserveAspectRatio="none">
+      <path d={WAVE_PATH} fill="currentColor" />
+    </svg>
+  )
+}
+
+/**
+ * Page-wide anchor on a chain. It starts hanging just above the hero waterline,
+ * sinks through every section as the page scrolls and comes to rest in the
+ * waves at the bottom of `seabedRef` when the page is scrolled to the end.
+ * Only rendered (via CSS) on wide screens without reduced motion; elsewhere a
+ * static anchor sits in the hero waves instead.
+ */
+function SinkingAnchor({ heroRef, seabedRef }: {
+  heroRef: React.RefObject<HTMLElement | null>
+  seabedRef: React.RefObject<HTMLElement | null>
+}) {
+  const layerRef = useRef<HTMLDivElement>(null)
+  const chainRef = useRef<SVGSVGElement>(null)
+  const anchorRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const layer = layerRef.current
+    const chain = chainRef.current
+    const anchor = anchorRef.current
+    const root = layer?.parentElement
+    if (!layer || !chain || !anchor || !root) return
+    let frame = 0
+
+    const update = () => {
+      frame = 0
+      const hero = heroRef.current
+      const seabed = seabedRef.current
+      if (!hero || !seabed || layer.offsetParent === null) return
+      const rootTop = root.getBoundingClientRect().top
+      const size = anchor.offsetHeight
+      // Everything below is in px from the top of the page root.
+      const start = Math.min(
+        hero.getBoundingClientRect().bottom - rootTop - size - START_ABOVE_WATER,
+        window.innerHeight - size - START_ABOVE_WATER,
+      )
+      const landed = seabed.getBoundingClientRect().bottom - rootTop - size
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight
+      const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 1
+      const y = start + (landed - start) * progress
+      anchor.style.transform = `translateY(${y}px)`
+      chain.style.height = `${y + size * RING_TOP}px`
+    }
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
+
+    update()
+    // Page height changes (e.g. an expanded explanation) move the landing spot.
+    const resize = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(schedule)
+    resize?.observe(root)
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', schedule)
+    return () => {
+      cancelAnimationFrame(frame)
+      resize?.disconnect()
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', schedule)
+    }
+  }, [heroRef, seabedRef])
+
+  return (
+    <div ref={layerRef} aria-hidden="true"
+      className="hidden lg:motion-safe:block absolute inset-0 z-[1] overflow-hidden pointer-events-none text-river-anchor">
+      <div className="absolute inset-y-0 right-[4%] w-48">
+        {/* Chain of alternating front-on and side-on links. */}
+        <svg ref={chainRef} className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0">
+          <defs>
+            <pattern id="anchor-chain" width="16" height="22" patternUnits="userSpaceOnUse">
+              <rect x="3" y="1" width="10" height="13" rx="5" fill="none" stroke="currentColor" strokeWidth="3" />
+              <rect x="6.5" y="12" width="3" height="11" rx="1.5" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#anchor-chain)" />
+        </svg>
+        <div ref={anchorRef} className="absolute top-0 left-0 w-full aspect-square will-change-transform">
+          <AnchorMark className="block w-full h-full" />
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -267,17 +362,19 @@ function ReadinessPreview() {
 }
 
 export default function Landing() {
+  const heroRef = useRef<HTMLElement>(null)
+  const seabedRef = useRef<HTMLElement>(null)
   return (
-    <div className="min-h-full bg-white text-neutral-900">
-      <section className="bg-river-deep text-white relative overflow-hidden">
-        {/* Anchor resting on the bottom, drawn before the waves so they cover its lower part. */}
-        <AnchorMark className="absolute right-[4%] bottom-0 w-36 h-36 lg:w-48 lg:h-48" />
-        {/* Waterline echoing the wave hatch in the exam's own diagrams. Opaque, so the anchor sinks under it. */}
-        <svg aria-hidden="true" className="absolute bottom-0 left-0 w-full h-16 text-river-wave" viewBox="0 0 1200 64" preserveAspectRatio="none">
-          <path d="M0 32 Q 50 12 100 32 T 200 32 T 300 32 T 400 32 T 500 32 T 600 32 T 700 32 T 800 32 T 900 32 T 1000 32 T 1100 32 T 1200 32 V64 H0 Z" fill="currentColor" />
-        </svg>
+    <div className="relative min-h-full bg-white text-neutral-900">
+      <SinkingAnchor heroRef={heroRef} seabedRef={seabedRef} />
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-40 sm:pt-20 lg:pb-48 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
+      <section ref={heroRef} className="bg-river-deep text-white relative overflow-hidden">
+        {/* Static stand-in for the sinking anchor: resting in the waves, which cover its lower part. */}
+        <AnchorMark className="lg:motion-safe:hidden absolute right-[4%] bottom-0 w-36 h-36 lg:w-48 lg:h-48 text-river-wave" />
+        {/* Waterline echoing the wave hatch in the exam's own diagrams. */}
+        <Waves />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-40 sm:pt-20 lg:pb-48 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
           <div className="lg:pt-6">
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.05] text-balance tracking-tight">
               Trenažér na zkoušku Vůdce Malého Plavidla (VMP)
@@ -294,7 +391,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-[minmax(0,26rem)_1fr] gap-12 lg:gap-20 items-center">
+      <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-[minmax(0,26rem)_1fr] gap-12 lg:gap-20 items-center">
         <ReadinessPreview />
         <div className="order-1 lg:order-2">
           <h2 className="font-display font-bold text-3xl sm:text-4xl leading-tight">Víš, jestli na zkoušku máš</h2>
@@ -305,7 +402,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24 grid lg:grid-cols-[1fr_minmax(0,34rem)] gap-12 lg:gap-20 items-center">
+      <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24 grid lg:grid-cols-[1fr_minmax(0,34rem)] gap-12 lg:gap-20 items-center">
         <div>
           <h2 className="font-display font-bold text-3xl sm:text-4xl leading-tight">Procvičuj, co potřebuješ</h2>
           <p className="mt-5 text-lg leading-relaxed text-neutral-700 max-w-xl">
@@ -319,7 +416,7 @@ export default function Landing() {
       </section>
 
       <section className="bg-river-mist">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid md:grid-cols-3 gap-10">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid md:grid-cols-3 gap-10">
           <div>
             <h3 className="font-display font-bold text-xl">Otázky podle tvých slabin</h3>
             <p className="mt-3 text-neutral-700 leading-relaxed">
@@ -344,7 +441,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <h2 className="font-display font-bold text-3xl sm:text-4xl">Kategorie</h2>
         <div className="mt-8 overflow-x-auto">
           <table className="w-full text-left min-w-[36rem]">
@@ -376,7 +473,7 @@ export default function Landing() {
       </section>
 
       <section className="border-t border-neutral-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
             <h2 className="font-display font-bold text-3xl">Proč to vzniklo</h2>
             <div className="mt-5 text-lg leading-relaxed text-neutral-700 space-y-4 max-w-xl">
@@ -413,8 +510,10 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="bg-river-deep text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+      <section ref={seabedRef} className="relative bg-river-deep text-white">
+        {/* Seabed where the sinking anchor comes to rest; above the anchor layer so it covers the anchor's base. */}
+        <Waves className="hidden lg:motion-safe:block z-[2]" />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16 lg:motion-safe:pb-56 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <h2 className="font-display font-bold text-3xl sm:text-4xl max-w-md leading-tight">
             Celý trenažér je zdarma, s účtem i bez něj.
           </h2>
@@ -422,7 +521,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-neutral-500 flex flex-col sm:flex-row justify-between gap-2">
+      <footer className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-neutral-500 flex flex-col sm:flex-row justify-between gap-2">
         <span>
           Trenažér vůdce malého plavidla, open source projekt. Vytvořil{' '}
           <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>.
