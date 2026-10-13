@@ -59,7 +59,7 @@ function StartButtons({ tone }: { tone: 'dark' | 'light' }) {
       </div>
       <p className={`mt-3 text-sm ${tone === 'dark' ? 'text-river-line' : 'text-neutral-600'}`}>
         Bez účtu máš procvičování, ostré testy i vysvětlení.
-        Sledování pokroku a otázky podle slabin potřebují účet. Ten slouží jen k uložení
+        Sledování pokroku a otázky podle slabin potřebují účet. Ten je zdarma a slouží jen k uložení
         historie tvých pokusů, žádná analytika, reklamy ani sledování.
       </p>
       {error && <p role="alert" className="mt-2 text-sm text-danger">{error}</p>}
