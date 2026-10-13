@@ -8,6 +8,7 @@ import { sanitizeExplanationHtml } from '../lib/sanitize'
 import { TESTS } from '../lib/tests'
 
 const REPO_URL = 'https://github.com/davidesner/vmp-m-trainer'
+const COFFEE_URL = 'https://buymeacoffee.com/davidesner'
 
 const SOURCES = [
   { href: 'https://sps.gov.cz/', title: 'Státní plavební správa', note: 'úřad, který zkoušky vůdce malého plavidla pořádá' },
@@ -24,6 +25,18 @@ const DEMO_GROUPS: Array<{ name: string; accuracy: number }> = [
   { name: 'Konstrukce plavidel', accuracy: 88 },
   { name: 'První pomoc', accuracy: 42 },
 ]
+
+/** Small cup for the Buy Me a Coffee link, filled in that platform's yellow so it reads as theirs. */
+function CoffeeCup() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none" stroke="currentColor"
+      strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 8h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8z" fill="#FFDD00" />
+      <path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" />
+      <path d="M8.5 2.5v2M12 2.5v2" />
+    </svg>
+  )
+}
 
 function AnchorMark({ className = '' }: { className?: string }) {
   return (
@@ -658,6 +671,10 @@ export default function Landing() {
                 <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">GitHubu</a>.
                 Chybu v otázce nebo vysvětlení můžeš nahlásit přímo v appce.
               </p>
+              <p>
+                Jestli ti trenažér pomohl, můžeš mi{' '}
+                <a href={COFFEE_URL} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">koupit kafe</a>.
+              </p>
             </div>
           </div>
           <div>
@@ -697,7 +714,13 @@ export default function Landing() {
           Vytvořil{' '}
           <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>, 2026
         </span>
-        <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-800">Přispěj nebo si prohlédni kód na GitHubu</a>
+        <div className="flex flex-col sm:flex-row gap-x-6 gap-y-2">
+          <a href={COFFEE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-neutral-800">
+            <CoffeeCup />
+            Kup mi kafe
+          </a>
+          <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-800">Přispěj nebo si prohlédni kód na GitHubu</a>
+        </div>
       </footer>
     </div>
   )
