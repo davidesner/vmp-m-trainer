@@ -27,7 +27,7 @@ const DEMO_GROUPS: Array<{ name: string; accuracy: number }> = [
 
 function AnchorMark({ className = '' }: { className?: string }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 32 32" className={`text-primary ${className}`}
+    <svg aria-hidden="true" viewBox="0 0 32 32" className={`text-river-wave ${className}`}
       fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="16" cy="6" r="3" />
       <path d="M16 9v19" />
@@ -270,16 +270,16 @@ export default function Landing() {
   return (
     <div className="min-h-full bg-white text-neutral-900">
       <section className="bg-river-deep text-white relative overflow-hidden">
-        {/* Waterline: the one decorative element, echoing the wave hatch in the exam's own diagrams */}
-        <svg aria-hidden="true" className="absolute bottom-0 left-0 w-full h-16 text-river opacity-70" viewBox="0 0 1200 64" preserveAspectRatio="none">
+        {/* Anchor resting on the bottom, drawn before the waves so they cover its lower part. */}
+        <AnchorMark className="absolute right-[4%] -bottom-6 w-28 h-28 lg:w-40 lg:h-40" />
+        {/* Waterline echoing the wave hatch in the exam's own diagrams. Opaque, so the anchor sinks under it. */}
+        <svg aria-hidden="true" className="absolute bottom-0 left-0 w-full h-16 text-river-wave" viewBox="0 0 1200 64" preserveAspectRatio="none">
           <path d="M0 32 Q 50 12 100 32 T 200 32 T 300 32 T 400 32 T 500 32 T 600 32 T 700 32 T 800 32 T 900 32 T 1000 32 T 1100 32 T 1200 32 V64 H0 Z" fill="currentColor" />
         </svg>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-24 sm:pt-20 sm:pb-32 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
           <div className="lg:pt-6">
-            <h1 className="relative font-display font-extrabold text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.05] text-balance tracking-tight">
-              {/* Hangs in the margin left of the first line so the heading stays aligned with the text below. */}
-              <AnchorMark className="hidden xl:block absolute right-full mr-5 top-[0.15em] w-12 h-12" />
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.05] text-balance tracking-tight">
               Trenažér na zkoušku Vůdce Malého Plavidla (VMP)
             </h1>
             <p className="mt-6 text-lg text-river-line max-w-xl leading-relaxed">
