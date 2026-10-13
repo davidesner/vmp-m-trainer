@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
 import { useAllProgress } from './useAllProgress'
+import { TEST_IDS } from '../lib/tests'
 
 afterEach(() => vi.restoreAllMocks())
 
@@ -24,7 +25,7 @@ describe('useAllProgress', () => {
     const { result } = renderHook(() => useAllProgress({ includeProgress: false }))
     await waitFor(() => expect(result.current.loading).toBe(false))
     expect(result.current.error).toBeNull()
-    expect(Object.keys(result.current.bundles)).toEqual(['M', 'C'])
+    expect(Object.keys(result.current.bundles)).toEqual(TEST_IDS)
     expect(calls.some(u => u.startsWith('/api/progress'))).toBe(false)
   })
 
