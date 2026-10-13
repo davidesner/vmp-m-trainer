@@ -452,7 +452,7 @@ const LOGIN_ID = 'prihlaseni'
 
 const PRIMARY_CTA = 'inline-block text-center whitespace-nowrap px-7 py-4 rounded-md bg-primary text-river-deep font-display font-bold text-lg hover:bg-[#9ad455] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-60 transition-colors'
 
-const SECONDARY_CTA = 'inline-block text-center whitespace-nowrap px-6 py-4 rounded-md border border-white/40 text-white font-medium hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors'
+const SECONDARY_CTA = 'inline-block text-center whitespace-nowrap px-6 py-4 rounded-md border border-white/40 bg-river-deep text-white font-medium hover:bg-[#233f48] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors'
 
 /** Main call to action: start as a guest, or go straight into the app when already signed in. */
 function GuestButton() {
