@@ -9,9 +9,9 @@ import { TESTS } from '../lib/tests'
 const REPO_URL = 'https://github.com/davidesner/vmp-m-trainer'
 
 const SOURCES = [
-  { href: 'https://sps.gov.cz/', title: 'Státní plavební správa', note: 'úřad, který zkoušky VMP pořádá' },
+  { href: 'https://sps.gov.cz/', title: 'Státní plavební správa', note: 'úřad, který zkoušky vůdce malého plavidla pořádá' },
   { href: 'https://sps.gov.cz/dok-os/nova-opravneni-2023', title: 'Zveřejnění souborů otázek', note: 'oficiální soubory otázek ke zkouškám způsobilosti' },
-  { href: 'https://sps.gov.cz/dok-os/el-podani', title: 'Přihlášení na zkoušku VMP', note: 'elektronické podání žádosti o průkaz' },
+  { href: 'https://sps.gov.cz/dok-os/el-podani', title: 'Přihlášení na zkoušku vůdce malého plavidla', note: 'elektronické podání žádosti o průkaz' },
   { href: 'https://www.spspraha.cz/zkousky/otazky.asp?zp=M', title: 'Testové otázky SPS', note: 'odtud trenažér otázky a obrázky přebírá' },
 ]
 
@@ -204,7 +204,7 @@ export default function Landing() {
         </svg>
 
         <header className="relative max-w-6xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between gap-4">
-          <span className="font-display font-bold text-lg">VMP trenažér</span>
+          <span className="font-display font-bold text-lg">Trenažér vůdce malého plavidla</span>
           <nav className="flex items-center gap-5 text-sm">
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="text-river-line hover:text-white">GitHub</a>
             <Link to="/login" className="font-medium hover:underline">Přihlásit</Link>
@@ -214,7 +214,7 @@ export default function Landing() {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-24 sm:pt-14 sm:pb-32 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
           <div className="lg:pt-6">
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl leading-[1.05] tracking-tight">
-              Otázky ke zkoušce VMP, které se vracejí, dokud je neumíš.
+              Otázky ke zkoušce vůdce malého plavidla (VMP), které se vracejí, dokud je neumíš.
             </h1>
             <p className="mt-6 text-lg text-river-line max-w-xl leading-relaxed">
               Trenažér ti dává hlavně otázky, ve kterých chybuješ, ukazuje, jak jsi na zkoušku připravený,
@@ -344,7 +344,7 @@ export default function Landing() {
       </section>
 
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-neutral-500 flex flex-col sm:flex-row justify-between gap-2">
-        <span>VMP trenažér, open source projekt</span>
+        <span>Trenažér vůdce malého plavidla, open source projekt</span>
         <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-800">Zdrojový kód na GitHubu</a>
       </footer>
     </div>
