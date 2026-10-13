@@ -40,13 +40,11 @@ function AnchorMark({ className = '' }: { className?: string }) {
 
 // The chain attaches at the top of the anchor's ring (y = 3 of the 32-unit viewBox).
 const RING_TOP = 3 / 32
-// Gap between the hanging anchor and the waterline (or the bottom of the screen) on load.
-const START_ABOVE_WATER = 48
 // The anchor is fully under the waves once the hero's bottom edge has scrolled up to this share of the screen.
 const SUBMERGED_AT = 0.35
 
 /**
- * Anchor on a chain in the hero. It starts hanging above the waterline and,
+ * Anchor on a chain in the hero. It starts hanging level with the heading and,
  * as the page scrolls, sinks under the waves and out of sight, so it never
  * shows up over the white sections below. Wide screens without reduced
  * motion only; elsewhere the static anchor rests in the waves.
@@ -68,7 +66,9 @@ function SinkingAnchor() {
       const hero = layer.getBoundingClientRect()
       if (hero.height === 0) return  // hidden on this screen size
       const size = anchor.offsetHeight
-      const start = Math.max(0, Math.min(hero.height, window.innerHeight) - size - START_ABOVE_WATER)
+      // Starts level with the top of the hero heading.
+      const title = layer.parentElement?.querySelector('h1')
+      const start = title ? title.getBoundingClientRect().top - hero.top : 0
       // Sink at a steady rate from the start position to just below the waterline.
       const submergedY = hero.height
       const scrollToSubmerge = Math.max(1, hero.height - window.innerHeight * SUBMERGED_AT)
