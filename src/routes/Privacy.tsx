@@ -83,14 +83,26 @@ export default function Privacy() {
 
           <h2>Jak dlouho je uchováváme</h2>
           <p>
-            Po dobu existence účtu. Průběh procvičování si můžeš kdykoli smazat sám v Nastavení. Smazání
-            celého účtu provedeme na požádání e-mailem, a to do 30 dnů.
+            Po dobu existence účtu. Průběh procvičování si můžeš kdykoli smazat sám v Nastavení.
+          </p>
+          <p>
+            Tamtéž můžeš kdykoli trvale smazat celý účet (sekce „Smazat účet“). Tím okamžitě odstraníme
+            e-mail, hash hesla, propojení s Google či Seznamem, průběh procvičování, výsledky testů a všechna
+            přihlášení na všech zařízeních. Smazané údaje mohou ještě omezenou dobu zůstat v automatických
+            zálohách databáze u poskytovatele, dokud tyto zálohy nevyprší. Pokud se k účtu nedostaneš
+            (třeba jsi zapomněl(a) heslo), napiš na <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> a účet
+            smažeme do 30 dnů.
+          </p>
+          <p>
+            Zpětná vazba zveřejněná na GitHubu s účtem spojená není, takže ji smazání účtu nijak neovlivní.
+            Pokud chceš odstranit konkrétní text, napiš nám.
           </p>
 
           <h2>Tvoje práva</h2>
           <p>
             Máš právo na přístup ke svým údajům, jejich opravu, výmaz, omezení zpracování a přenositelnost
-            a právo vznést námitku. Stačí napsat na <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+            a právo vznést námitku. Výmaz účtu zvládneš sám v Nastavení, ve všech ostatních případech stačí
+            napsat na <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
             Pokud se ti nebude líbit, jak s údaji nakládáme, můžeš podat stížnost u Úřadu pro ochranu
             osobních údajů (<a href="https://uoou.gov.cz" target="_blank" rel="noopener noreferrer">uoou.gov.cz</a>).
           </p>

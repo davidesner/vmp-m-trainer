@@ -5,6 +5,8 @@ export interface AuthUser {
   /** null for guests and SSO accounts without a trusted email; stored placeholders never leave the server */
   email: string | null
   guest: boolean
+  /** false for guests and SSO-only accounts; tells the SPA which confirmation account deletion needs */
+  hasPassword: boolean
 }
 
 export interface AppVariables {

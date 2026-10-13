@@ -48,13 +48,13 @@ describe('guest auth context', () => {
     const sid = await createSession(ctx.db.db, 'g1')
     const res = await ctx.app.request('/api/me', { headers: { cookie: `sid=${sid}` } })
     expect(res.status).toBe(200)
-    expect(await res.json()).toEqual({ id: 'g1', email: null, guest: true })
+    expect(await res.json()).toEqual({ id: 'g1', email: null, guest: true, hasPassword: false })
   })
 
   it('/api/me reports guest: false for a registered user', async () => {
     const sid = await createSession(ctx.db.db, 'u1')
     const res = await ctx.app.request('/api/me', { headers: { cookie: `sid=${sid}` } })
-    expect(await res.json()).toEqual({ id: 'u1', email: 'a@b.c', guest: false })
+    expect(await res.json()).toEqual({ id: 'u1', email: 'a@b.c', guest: false, hasPassword: true })
   })
 
   it('login cannot authenticate a guest row', async () => {
@@ -83,7 +83,7 @@ describe('POST /api/auth/guest', () => {
     const res = await guest(ctx.app)
     expect(res.status).toBe(201)
     const body = await res.json() as { id: string; email: null; guest: true }
-    expect(body).toEqual({ id: expect.any(String), email: null, guest: true })
+    expect(body).toEqual({ id: expect.any(String), email: null, guest: true, hasPassword: false })
     expect(res.headers.get('set-cookie')).toMatch(/^sid=[a-f0-9]{64}/)
     const [row] = await ctx.db.db.select().from(users).where(eq(users.id, body.id))
     expect(row.isGuest).toBe(true)
@@ -97,7 +97,7 @@ describe('POST /api/auth/guest', () => {
     const { id } = await first.json() as { id: string }
     const second = await guest(ctx.app, { cookie })
     expect(second.status).toBe(200)
-    expect(await second.json()).toEqual({ id, email: null, guest: true })
+    expect(await second.json()).toEqual({ id, email: null, guest: true, hasPassword: false })
     expect(await ctx.db.db.select().from(users).where(eq(users.isGuest, true))).toHaveLength(2) // g1 + this one
   })
 
@@ -105,7 +105,7 @@ describe('POST /api/auth/guest', () => {
     const sid = await createSession(ctx.db.db, 'u1')
     const res = await guest(ctx.app, { cookie: `sid=${sid}` })
     expect(res.status).toBe(200)
-    expect(await res.json()).toEqual({ id: 'u1', email: 'a@b.c', guest: false })
+    expect(await res.json()).toEqual({ id: 'u1', email: 'a@b.c', guest: false, hasPassword: true })
     expect(res.headers.get('set-cookie')).toBeNull()
   })
 

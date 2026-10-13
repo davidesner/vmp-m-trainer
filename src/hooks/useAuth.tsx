@@ -1,6 +1,17 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
 
-export interface AuthUser { id: string; email: string | null; guest: boolean }
+export interface AuthUser {
+  id: string
+  email: string | null
+  guest: boolean
+  /** false for guests and SSO-only accounts, which confirm account deletion by typing DELETE_CONFIRM_WORD */
+  hasPassword: boolean
+}
+
+/** Must match DELETE_CONFIRM_WORD in server/auth/routes.ts. */
+export const DELETE_CONFIRM_WORD = 'SMAZAT'
+
+export type DeleteAccountConfirmation = { password: string } | { confirm: string }
 
 interface AuthResult { ok: boolean; error?: string }
 
@@ -19,6 +30,10 @@ interface AuthCtx {
   register: (email: string, password: string, captchaToken: string) => Promise<AuthResult>
   loginAsGuest: () => Promise<AuthResult>
   logout: () => Promise<void>
+  /** Permanently deletes the signed-in account; on success the user is signed out. */
+  deleteAccount: (confirmation: DeleteAccountConfirmation) => Promise<AuthResult>
+  /** Where RequireAuth sends a signed-out visitor: the landing page right after account deletion, else /login. */
+  signedOutPath: '/' | '/login'
   refresh: () => Promise<void>
 }
 
@@ -30,6 +45,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [signupEnabled, setSignupEnabled] = useState(false)
   const [sso, setSso] = useState<SsoAvailability>(null)
   const [captchaSiteKey, setCaptchaSiteKey] = useState<string | null | undefined>(undefined)
+  const [signedOutPath, setSignedOutPath] = useState<'/' | '/login'>('/login')
 
   useEffect(() => {
     void fetch('/api/auth/config', { credentials: 'same-origin' })
@@ -109,11 +125,40 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = useCallback(async () => {
     await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' })
+    setSignedOutPath('/login')
     setUser(null)
   }, [])
 
+  const deleteAccount = useCallback(async (confirmation: DeleteAccountConfirmation) => {
+    let res: Response
+    try {
+      res = await fetch('/api/me', {
+        method: 'DELETE',
+        headers: { 'content-type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify(confirmation),
+      })
+    } catch {
+      return { ok: false, error: 'Nepodařilo se spojit se serverem, zkus to znovu' }
+    }
+    if (res.ok) {
+      setSignedOutPath('/')
+      setUser(null)
+      return { ok: true }
+    }
+    const body = await res.json().catch(() => null) as { error?: string } | null
+    if (body?.error === 'invalid password') return { ok: false, error: 'Špatné heslo' }
+    if (body?.error === 'invalid confirmation') return { ok: false, error: `Pro potvrzení napiš ${DELETE_CONFIRM_WORD}` }
+    const errByStatus: Record<number, string> = {
+      401: 'Nejsi přihlášen, přihlas se znovu',
+      403: 'Účet hosta nelze smazat',
+      429: 'Příliš mnoho pokusů, zkus to za chvíli',
+    }
+    return { ok: false, error: errByStatus[res.status] ?? `Smazání se nepovedlo (HTTP ${res.status})` }
+  }, [])
+
   return (
-    <Ctx.Provider value={{ user, loading, signupEnabled, sso, captchaSiteKey, login, register, loginAsGuest, logout, refresh }}>
+    <Ctx.Provider value={{ user, loading, signupEnabled, sso, captchaSiteKey, login, register, loginAsGuest, logout, deleteAccount, signedOutPath, refresh }}>
       {children}
     </Ctx.Provider>
   )

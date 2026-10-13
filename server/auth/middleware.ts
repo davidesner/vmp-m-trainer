@@ -19,7 +19,7 @@ export function loadUser(db: Db): MiddlewareHandler<AppEnv> {
         const guest = row.user.isGuest
         // Guests and SSO accounts without a trusted email store a placeholder without '@'.
         const email = guest || !row.user.email.includes('@') ? null : row.user.email
-        c.set('user', { id: row.user.id, email, guest })
+        c.set('user', { id: row.user.id, email, guest, hasPassword: row.user.passwordHash !== '' })
         c.set('sid', sid)
         await maybeExtendSession(db.db, sid, new Date(row.session.expiresAt))
       }
