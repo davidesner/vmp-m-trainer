@@ -2,6 +2,10 @@
   "regions": ["fra1"],
   "buildCommand": "pnpm db:migrate && pnpm build",
   "outputDirectory": "dist",
+  "headers": [
+    { "source": "/explanations/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] },
+    { "source": "/data/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
+  ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api" },
     { "source": "/((?!api|explanations|data|assets|landing|favicon|apple-touch-icon|og-image|robots\\.txt|sitemap\\.xml|llms\\.txt).+)", "destination": "/spa.html" }
