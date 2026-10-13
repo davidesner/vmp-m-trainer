@@ -1,7 +1,8 @@
 // Workflow skript pro batch generování vysvětlení.
 //
 // Args (JSON object — Workflow harness ho posílá jako string, parsujeme sami):
-//   { testId: 'M' | 'C',
+//   { testId: 'M' | 'C' | 'S',
+//     repoRoot?: string,         // absolutní cesta k repu/worktree, default '/Users/esner/Projects/VMP_TEST'
 //     ids?: number[],            // konkrétní IDs (override)
 //     filter?: {                 // pokud ids chybí, preflight agent najde missing dle filtru
 //       onlyMissing?: boolean,   // default true: jen ty co nemají q-N.html
@@ -25,12 +26,13 @@ const TEST_ID = A.testId
 const MODEL = A.model || 'sonnet'
 const GENERATED_AT = A.generatedAt || '2026-06-15T20:00:00Z'
 const FILTER = A.filter || { onlyMissing: true }
+const ROOT = (A.repoRoot || '/Users/esner/Projects/VMP_TEST').replace(/\/$/, '')
 
-if (!TEST_ID || !['M', 'C'].includes(TEST_ID)) {
-  throw new Error(`Bad args.testId: ${TEST_ID}. Expected 'M' or 'C'.`)
+if (!TEST_ID || !['M', 'C', 'S'].includes(TEST_ID)) {
+  throw new Error(`Bad args.testId: ${TEST_ID}. Expected 'M', 'C' or 'S'.`)
 }
 
-log(`Batch explain — test=${TEST_ID}, model=${MODEL}`)
+log(`Batch explain — test=${TEST_ID}, model=${MODEL}, root=${ROOT}`)
 
 // ---------- Krok 1: získat seznam IDs ----------
 
@@ -45,9 +47,9 @@ if (!IDS) {
 Filter: ${filterDesc}
 
 POSTUP:
-1. Spusť bash: ls /Users/esner/Documents/Fun/VMP_TEST/public/explanations/${TEST_ID}/ 2>/dev/null | grep -oE 'q-[0-9]+\\.html' | sed 's/q-//;s/\\.html//' | sort -n
+1. Spusť bash: ls ${ROOT}/public/explanations/${TEST_ID}/ 2>/dev/null | grep -oE 'q-[0-9]+\\.html' | sed 's/q-//;s/\\.html//' | sort -n
    Z výstupu si poznamenej seznam EXISTING ids (čísla).
-2. Přečti soubor: /Users/esner/Documents/Fun/VMP_TEST/public/data/questions-${TEST_ID}.json
+2. Přečti soubor: ${ROOT}/public/data/questions-${TEST_ID}.json
    Tam je top-level objekt s polem .questions[]. Každá otázka má .id (number), .zkratka (string), .image (string|null).
 3. Aplikuj filter:
    - onlyMissing: true → vrátit jen id které nejsou v EXISTING
@@ -79,7 +81,7 @@ Vygeneruj HTML vysvětlení pro JEDNU otázku z VMP testu kategorie ${TEST_ID}.
 
 POSTUP:
 1. Spusť pomocí Bash:
-   python3 .claude/skills/explain-vmp-question/scripts/load_question.py <qid> --test ${TEST_ID} --json
+   python3 ${ROOT}/.claude/skills/explain-vmp-question/scripts/load_question.py <qid> --test ${TEST_ID} --json
    Vrátí JSON s text otázky, options, správnou odpověď a image path.
 2. Pokud image.exists je true, přečti obrázek Read toolem (path je v image.resolved_path).
 3. Vyrob HTML vysvětlení v češtině se sekcemi: Jádro / Pozadí / (volitelně Vizualizace) / Praktická aplikace / Zdroje.
@@ -93,15 +95,15 @@ HARD PRAVIDLA:
 
 OBSAH:
 - Jádro: 1–3 věty proč je odpověď správná (cituj OBSAH).
-- Pozadí: právní/technický kontext (předpis + paragraf nebo COLREG pravidlo pro test C).
-- Vizualizace (volitelná): pro signalizaci, světla, plavební značky, navigaci, manévry, kompasy, plavidla, IALA bóje — statický SVG diagram. Pro prostá čísla/definice ne.
+- Pozadí: právní/technický kontext (předpis + paragraf nebo COLREG pravidlo pro test C; pro test S teorie plachtění, názvosloví a jachtařská praxe, předpis citovat jen pokud se otázka předpisu skutečně týká).
+- Vizualizace (volitelná): pro signalizaci, světla, plavební značky, navigaci, manévry, plachty a kurzy vůči větru, kompasy, plavidla, IALA bóje — statický SVG diagram. Pro prostá čísla/definice ne.
 - Praktická aplikace: kdy/jak se to v reálu projeví.
 - Zdroje: očíslovaný seznam jmen předpisů s paragrafy.
 
 ULOŽ DVA SOUBORY (absolutní cesty, použij Write tool):
-1. /Users/esner/Documents/Fun/VMP_TEST/public/explanations/${TEST_ID}/q-<qid>.html
+1. ${ROOT}/public/explanations/${TEST_ID}/q-<qid>.html
    Začíná <article class="vmp-explanation">, končí </article>. Žádné <html>/<head>/<body>.
-2. /Users/esner/Documents/Fun/VMP_TEST/public/explanations/${TEST_ID}/q-<qid>.meta.json
+2. ${ROOT}/public/explanations/${TEST_ID}/q-<qid>.meta.json
    { "qid": <qid>, "test_id": "${TEST_ID}", "generated_at": "${GENERATED_AT}", "sources": [...], "model": "${MODEL}" }
 
 Po uložení vrať POUZE jednu řádku:

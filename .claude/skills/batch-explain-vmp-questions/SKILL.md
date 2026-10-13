@@ -12,7 +12,7 @@ Hromadné vygenerování `public/explanations/{testId}/q-{qid}.html`. Místo per
 ## Jak to spustit
 
 1. Zeptej se uživatele (jen pokud z promptu není jasné):
-   - **Kterou kategorii?** `M` nebo `C`
+   - **Kterou kategorii?** `M`, `C` nebo `S`
    - **Filter?** všechny chybějící (default), jen s obrázkem, určité zkratky, konkrétní IDs, limit
    - **Model?** default sonnet; opus pouze pokud uživatel chce vyšší kvalitu a má rozpočet
 
@@ -20,9 +20,9 @@ Hromadné vygenerování `public/explanations/{testId}/q-{qid}.html`. Místo per
 
    ```js
    Workflow({
-     scriptPath: "/Users/esner/Documents/Fun/VMP_TEST/.claude/skills/batch-explain-vmp-questions/workflow.mjs",
+     scriptPath: "/Users/esner/Projects/VMP_TEST/.claude/skills/batch-explain-vmp-questions/workflow.mjs",
      args: {
-       testId: "C",                       // 'M' nebo 'C'
+       testId: "C",                       // 'M', 'C' nebo 'S'
        // ids: [1, 5, 7],                  // optional: konkrétní IDs (override)
        filter: { onlyMissing: true },      // optional, default; další: onlyWithImage, zkratky, limit
        model: "sonnet",                    // optional, default

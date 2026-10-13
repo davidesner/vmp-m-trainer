@@ -62,7 +62,7 @@ def main() -> None:
         i += 1
 
     if not pos:
-        print("usage: load_question.py <qid> [--test M|C] [--json]", file=sys.stderr)
+        print("usage: load_question.py <qid> [--test M|C|S] [--json]", file=sys.stderr)
         sys.exit(2)
     try:
         qid = int(pos[0])
@@ -70,8 +70,8 @@ def main() -> None:
         print(f"qid musí být číslo, dostal: {pos[0]}", file=sys.stderr)
         sys.exit(2)
 
-    if test_id not in ("M", "C"):
-        print(f"--test musí být M nebo C, dostal: {test_id}", file=sys.stderr)
+    if test_id not in ("M", "C", "S"):
+        print(f"--test musí být M, C nebo S, dostal: {test_id}", file=sys.stderr)
         sys.exit(2)
 
     script_dir = Path(__file__).resolve().parent
