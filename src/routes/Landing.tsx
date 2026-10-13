@@ -310,7 +310,8 @@ export default function Landing() {
             <h2 className="font-display font-bold text-3xl">Proč to vzniklo</h2>
             <div className="mt-5 text-lg leading-relaxed text-neutral-700 space-y-4 max-w-xl">
               <p>
-                Oficiální testy a trenažéry jsou pomalé a krkolomné a nikde z nich nevyčteš, jak dobře jsi připravený.
+                Oficiální testy jsou pomalé a krkolomné, ostatní trenažéry na internetu bývají placené a taky nic moc.
+                A nikde z nich nevyčteš, jak dobře jsi připravený.
                 Chtěl jsem nástroj, který mi bude servírovat otázky podle toho, kde mám slabiny, dokud se je nenaučím.
               </p>
               <p>
