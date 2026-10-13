@@ -337,7 +337,7 @@ export default function Landing() {
       <section className="bg-river-deep text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <h2 className="font-display font-bold text-3xl sm:text-4xl max-w-md leading-tight">
-            Vyzkoušej bez přihlášení, je to zdarma.
+            Celý trenažér je zdarma, s účtem i bez něj.
           </h2>
           <StartButtons tone="dark" />
         </div>
