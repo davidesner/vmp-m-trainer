@@ -23,7 +23,7 @@ describe('Login guest entry', () => {
         <MemoryRouter initialEntries={['/login']}>
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<div>HomePage</div>} />
+            <Route path="/app" element={<div>HomePage</div>} />
           </Routes>
         </MemoryRouter>
       </AuthProvider>,

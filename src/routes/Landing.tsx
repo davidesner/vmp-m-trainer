@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
+import LoginForm from '../components/LoginForm'
 import { LANDING_CATEGORIES, LANDING_SAMPLES } from '../lib/landingSamples'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 import { sanitizeExplanationHtml } from '../lib/sanitize'
@@ -34,37 +35,68 @@ function useGuestStart() {
     setError(null)
     const res = await loginAsGuest()
     setBusy(false)
-    if (res.ok) navigate('/', { replace: true })
+    if (res.ok) navigate('/app')
     else setError(res.error ?? 'Nepodařilo se spustit trenažér')
   }
   return { start, busy, error }
 }
 
-function StartButtons({ tone }: { tone: 'dark' | 'light' }) {
+const LOGIN_ID = 'prihlaseni'
+
+const PRIMARY_CTA = 'inline-block text-center whitespace-nowrap px-7 py-4 rounded-md bg-primary text-river-deep font-display font-bold text-lg hover:bg-[#9ad455] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-60 transition-colors'
+
+/** Main call to action: start as a guest, or go straight into the app when already signed in. */
+function GuestButton() {
+  const { user } = useAuth()
   const { start, busy, error } = useGuestStart()
-  const secondary = tone === 'dark'
-    ? 'text-white border-white/40 hover:bg-white/10'
-    : 'text-river border-river/30 hover:bg-river-mist'
+  if (user) return <Link to="/app" className={PRIMARY_CTA}>Pokračovat do trenažéru</Link>
+  return (
+    <>
+      <button type="button" onClick={() => void start()} disabled={busy} className={PRIMARY_CTA}>
+        {busy ? 'Spouštím…' : 'Vyzkoušet bez přihlášení'}
+      </button>
+      {error && <p role="alert" className="mt-2 text-sm text-red-300">{error}</p>}
+    </>
+  )
+}
+
+function HeroActions() {
+  const { user } = useAuth()
+  const navigate = useNavigate()
+  const signedIn = Boolean(user && !user.guest)
   return (
     <div>
-      <div className="flex flex-col sm:flex-row gap-3">
-        <button type="button" onClick={() => void start()} disabled={busy}
-          className="whitespace-nowrap px-7 py-4 rounded-md bg-primary text-river-deep font-display font-bold text-lg hover:bg-[#9ad455] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-60 transition-colors">
-          {busy ? 'Spouštím…' : 'Vyzkoušet bez přihlášení'}
-        </button>
-        <Link to="/login"
-          className={`px-6 py-4 rounded-md border font-medium text-center whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${secondary} transition-colors`}>
-          Přihlásit se
-        </Link>
-      </div>
-      <p className={`mt-3 text-sm ${tone === 'dark' ? 'text-river-line' : 'text-neutral-600'}`}>
-        Bez účtu máš procvičování, ostré testy i vysvětlení.
-        Sledování pokroku a otázky podle slabin potřebují účet. Ten je zdarma a slouží jen k uložení
-        historie tvých pokusů, žádná analytika, reklamy ani sledování.
-      </p>
-      {error && <p role="alert" className="mt-2 text-sm text-danger">{error}</p>}
+      <GuestButton />
+      {!user && (
+        <p className="mt-3 text-sm text-river-line max-w-xl">
+          Bez účtu máš procvičování, ostré testy i vysvětlení.
+          Sledování pokroku a otázky podle slabin potřebují účet. Ten je zdarma a slouží jen k uložení
+          historie tvých pokusů, žádná analytika, reklamy ani sledování.
+        </p>
+      )}
+      {!signedIn && <div id={LOGIN_ID} className="mt-8 pt-6 border-t border-white/15 max-w-xl scroll-mt-8">
+        <h2 className="font-display font-bold text-lg mb-3">Máš účet? Přihlas se</h2>
+        <LoginForm tone="dark" inline onSuccess={() => navigate('/app')} />
+      </div>}
     </div>
   )
+}
+
+function BottomLoginButton() {
+  const { user } = useAuth()
+  if (user && !user.guest) return null
+  return (
+    <button type="button" onClick={focusLogin}
+      className="px-6 py-4 rounded-md border border-white/40 text-white font-medium whitespace-nowrap hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors">
+      Přihlásit se
+    </button>
+  )
+}
+
+function focusLogin() {
+  const section = document.getElementById(LOGIN_ID)
+  section?.scrollIntoView({ behavior: 'smooth' })
+  section?.querySelector<HTMLInputElement>('input[name="email"]')?.focus({ preventScroll: true })
 }
 
 function SampleQuestion() {
@@ -212,7 +244,7 @@ export default function Landing() {
               Otázky podle tvých slabin, odhad připravenosti a vysvětlení ke každé otázce. Zdarma.
             </p>
             <div className="mt-9">
-              <StartButtons tone="dark" />
+              <HeroActions />
             </div>
           </div>
 
@@ -344,7 +376,10 @@ export default function Landing() {
           <h2 className="font-display font-bold text-3xl sm:text-4xl max-w-md leading-tight">
             Celý trenažér je zdarma, s účtem i bez něj.
           </h2>
-          <StartButtons tone="dark" />
+          <div className="flex flex-col sm:flex-row gap-3">
+            <GuestButton />
+            <BottomLoginButton />
+          </div>
         </div>
       </section>
 

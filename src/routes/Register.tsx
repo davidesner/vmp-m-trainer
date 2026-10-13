@@ -20,7 +20,7 @@ export default function Register() {
     setBusy(true)
     const res = await register(email.trim().toLowerCase(), password, code)
     setBusy(false)
-    if (res.ok) navigate('/', { replace: true })
+    if (res.ok) navigate('/app', { replace: true })
     else setError(res.error ?? 'Chyba')
   }
 

@@ -37,8 +37,8 @@ export default function Weak() {
       <h2 className="text-xl font-semibold mb-1">Žádné slabiny zatím nemáme.</h2>
       <CategorySubtitle className="mb-3" />
       <p className="text-neutral-600 mt-2">Udělej pár testů a vrať se sem.</p>
-      <button onClick={() => navigate('/')} className="mt-4 px-4 py-2 bg-primary text-white rounded">Domů</button>
+      <button onClick={() => navigate('/app')} className="mt-4 px-4 py-2 bg-primary text-white rounded">Domů</button>
     </div>
   )
-  return <PracticeRunner questions={run} onDone={() => navigate('/')} />
+  return <PracticeRunner questions={run} onDone={() => navigate('/app')} />
 }

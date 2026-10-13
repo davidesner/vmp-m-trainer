@@ -48,7 +48,7 @@ describe('guest locked screens', () => {
   it('Home shows the regular overview with empty values plus the sign-in banner', async () => {
     renderRoute(Home)
     expect(screen.getByText(LOCK)).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Spustit ostrý test/ })).toHaveAttribute('href', '/test')
+    expect(screen.getByRole('link', { name: /Spustit ostrý test/ })).toHaveAttribute('href', '/app/test')
     expect(screen.getByText('Odhad úspěchu u zkoušky')).toBeInTheDocument()
     expect(screen.getByText('Po skupinách')).toBeInTheDocument()
     expect(document.querySelector('[data-guest-overlay]')).not.toBeNull()
