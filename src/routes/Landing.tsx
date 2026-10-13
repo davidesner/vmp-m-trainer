@@ -72,13 +72,24 @@ const START_CHAIN = 20
 const LINK_PITCH = 22
 // The anchor is fully under the waves once the hero's bottom edge has scrolled up to this share of the screen.
 const SUBMERGED_AT = 0.35
+// From this width the anchor hangs in the free margin beside the content, from a hawse hole. Below it, it hangs
+// under the question card, its chain coming out from behind the card.
+const WIDE_QUERY = '(min-width: 1400px)'
+// Below WIDE_QUERY: how far up into the card the chain starts, so its end stays hidden behind it, in px.
+const CARD_OVERLAP = 40
+// Below WIDE_QUERY: how far above its resting place on the bottom the anchor starts, in px.
+const START_LIFT = 64
+// Anchor column below WIDE_QUERY, beside the content above it: where the static anchor used to rest.
+const NARROW_COLUMN = 'right-[4%] w-36 lg:w-48'
+// Anchor column from WIDE_QUERY: centred in the free margin right of the max-w-6xl content (72rem + 1.5rem padding).
+const WIDE_COLUMN = 'min-[1400px]:right-[calc((100%_-_72rem)/4_+_0.75rem_-_5rem)] min-[1400px]:w-40'
 
 /**
- * Anchor hanging from a hawse hole level with the hero heading. As the page
- * scrolls it pays out on its chain and sinks steadily under the waves, so it
- * never shows up over the white sections below. Only from 1400px (where the
- * margin beside the content fits the anchor) and without reduced motion;
- * elsewhere the static anchor rests in the waves.
+ * Anchor hanging from a hawse hole level with the hero heading (from 1400px,
+ * where the margin beside the content fits it) or from behind the question card
+ * (narrower screens). As the page scrolls it pays out on its chain and sinks
+ * steadily under the waves, so it never shows up over the white sections below.
+ * Only without reduced motion; otherwise the static anchor rests in the waves.
  */
 function SinkingAnchor() {
   const layerRef = useRef<HTMLDivElement>(null)
@@ -101,21 +112,37 @@ function SinkingAnchor() {
       const hero = layer.getBoundingClientRect()
       if (hero.height === 0) return  // hidden on this screen size
       const size = anchor.offsetHeight
-      // The hawse hole sits level with the top of the hero heading.
-      const title = layer.parentElement?.querySelector('h1')
-      const hawseTop = title ? title.getBoundingClientRect().top - hero.top : 0
-      const hawseCenter = hawseTop + HAWSE_H / 2
-      // At rest the anchor hangs just below the hole on a short length of chain. Fully paid out: under the waterline.
-      const stowed = hawseTop + HAWSE_H + START_CHAIN - size * RING_TOP
+      let chainTop: number
+      let stowed: number
+      // Scrolling before the anchor starts paying out: none beside the heading, but under the card it waits
+      // until the bottom of a hero taller than the screen has come into view, so it isn't gone before it's seen.
+      let lead = 0
+      if (window.matchMedia(WIDE_QUERY).matches) {
+        // The hawse hole sits level with the top of the hero heading.
+        const title = layer.parentElement?.querySelector('h1')
+        const hawseTop = title ? title.getBoundingClientRect().top - hero.top : 0
+        hawse.style.top = `${hawseTop}px`
+        chainTop = hawseTop + HAWSE_H / 2
+        // At rest the anchor hangs just below the hole on a short length of chain.
+        stowed = hawseTop + HAWSE_H + START_CHAIN - size * RING_TOP
+      } else {
+        // The chain comes out from behind the question card; the anchor starts a little above the bottom,
+        // but always on at least a short length of visible chain.
+        const card = layer.parentElement?.querySelector('[data-chain-cover]')
+        const cardBottom = card ? card.getBoundingClientRect().bottom - hero.top : 0
+        chainTop = cardBottom - CARD_OVERLAP
+        stowed = Math.max(hero.height - size - START_LIFT, cardBottom + START_CHAIN - size * RING_TOP)
+        lead = Math.max(0, hero.height - window.innerHeight)
+      }
+      // Fully paid out: under the waterline.
       const submerged = hero.height
-      const scrollToSubmerge = Math.max(1, hero.height - window.innerHeight * SUBMERGED_AT)
-      const scrolled = Math.max(0, -hero.top)
+      const scrollToSubmerge = Math.max(1, hero.height - window.innerHeight * SUBMERGED_AT - lead)
+      const scrolled = Math.max(0, -hero.top - lead)
       const y = Math.min(submerged, stowed + (submerged - stowed) * (scrolled / scrollToSubmerge))
-      const chainLength = Math.max(0, y + size * RING_TOP - hawseCenter)
+      const chainLength = Math.max(0, y + size * RING_TOP - chainTop)
 
       // `top`, not transform: both are centred horizontally with a translate class.
-      hawse.style.top = `${hawseTop}px`
-      chain.style.top = `${hawseCenter}px`
+      chain.style.top = `${chainTop}px`
       chain.style.height = `${chainLength}px`
       // Shift the links with the paid-out length so they run out of the hole instead of sliding past it.
       links.setAttribute('y', String(chainLength % LINK_PITCH))
@@ -133,15 +160,14 @@ function SinkingAnchor() {
     }
   }, [])
 
-  // Centred in the free margin right of the max-w-6xl content (72rem + 1.5rem padding), so the hawse hole
-  // clears the question card. Opacity sits on the whole layer, not in the colour, so overlapping strokes
-  // don't stack into brighter joints.
+  // Drawn before the hero content, so the question card covers the top of the chain on narrow screens.
+  // Opacity sits on the whole layer, not in the colour, so overlapping strokes don't stack into brighter joints.
   return (
     <div ref={layerRef} aria-hidden="true"
-      className="hidden min-[1400px]:motion-safe:block absolute inset-y-0 right-[calc((100%_-_72rem)/4_+_0.75rem_-_5rem)] w-40 pointer-events-none text-[#5f8f9c] opacity-35">
+      className={`hidden motion-safe:block absolute inset-y-0 ${NARROW_COLUMN} ${WIDE_COLUMN} pointer-events-none text-[#5f8f9c] opacity-35`}>
       {/* Hawse hole; the chain is drawn after it so it runs out of the opening and over the lower rim. */}
       <svg ref={hawseRef} viewBox={`0 0 ${HAWSE_W} ${HAWSE_H}`} width={HAWSE_W} height={HAWSE_H}
-        className="absolute top-0 left-1/2 -translate-x-1/2">
+        className="absolute hidden min-[1400px]:block top-0 left-1/2 -translate-x-1/2">
         <ellipse cx={HAWSE_W / 2} cy={HAWSE_H / 2} rx={HAWSE_W / 2 - 1} ry={HAWSE_H / 2 - 1} fill="currentColor" />
         <ellipse cx={HAWSE_W / 2} cy={HAWSE_H / 2} rx={HAWSE_W / 2 - 9} ry={HAWSE_H / 2 - 8} fill="#020f13" />
       </svg>
@@ -311,7 +337,7 @@ function LandingAnchor() {
   // Same column, size and look as the hero's SinkingAnchor.
   return (
     <div ref={layerRef} aria-hidden="true"
-      className="hidden min-[1400px]:motion-safe:block absolute inset-y-0 right-[calc((100%_-_72rem)/4_+_0.75rem_-_5rem)] w-40 pointer-events-none text-[#5f8f9c] opacity-35">
+      className={`hidden motion-safe:block absolute inset-y-0 ${NARROW_COLUMN} ${WIDE_COLUMN} pointer-events-none text-[#5f8f9c] opacity-35`}>
       <svg className="absolute inset-0 w-full h-full overflow-visible">
         {/* Links centred on the origin; alternate front-on rings and side-on bars, like the hero chain. */}
         <g ref={linksRef}>
@@ -521,7 +547,7 @@ function SampleQuestion() {
   }
 
   return (
-    <div className="bg-white text-neutral-900 rounded-xl shadow-[0_24px_60px_-20px_rgba(4,24,31,0.6)] overflow-hidden">
+    <div data-chain-cover className="bg-white text-neutral-900 rounded-xl shadow-[0_24px_60px_-20px_rgba(4,24,31,0.6)] overflow-hidden">
       <div role="tablist" aria-label="Ukázkové otázky" className="flex gap-1 px-3 pt-3 overflow-x-auto">
         {LANDING_SAMPLES.map((s, i) => (
           <button key={s.label} role="tab" aria-selected={i === idx} onClick={() => pick(i)}
@@ -614,8 +640,8 @@ export default function Landing() {
     <div className="min-h-full bg-white text-neutral-900">
       <main>
       <section className="bg-river-deep text-white relative overflow-hidden">
-        {/* Anchors are drawn before the waves so the waves cover them: a static one resting on the bottom, or one that sinks on scroll. */}
-        <AnchorMark className="min-[1400px]:motion-safe:hidden absolute right-[4%] bottom-0 w-36 h-36 lg:w-48 lg:h-48 text-river-wave" />
+        {/* Anchors are drawn before the waves so the waves cover them: a static one resting on the bottom (reduced motion), or one that sinks on scroll. */}
+        <AnchorMark className="motion-safe:hidden absolute right-[4%] bottom-0 w-36 h-36 lg:w-48 lg:h-48 text-river-wave" />
         <SinkingAnchor />
         {/* Waterline echoing the wave hatch in the exam's own diagrams. Opaque, so the anchor sinks under it. */}
         <svg aria-hidden="true" className="absolute bottom-0 left-0 w-full h-16 text-river-wave" viewBox="0 0 1200 64" preserveAspectRatio="none">
