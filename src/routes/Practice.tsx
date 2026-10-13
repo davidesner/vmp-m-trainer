@@ -56,14 +56,14 @@ export default function Practice() {
       <CategorySubtitle className="mb-6" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-        <button onClick={() => setSubMode('structure')}
+        <button onClick={() => setSubMode('structure')} aria-pressed={subMode === 'structure'}
           className={`text-left rounded-lg p-4 border-2 ${subMode === 'structure' ? 'border-primary bg-primary-light' : 'border-neutral-200'}`}>
-          <div className={`text-sm font-semibold ${subMode === 'structure' ? 'text-primary-dark' : ''}`}>● Struktura ostrého testu</div>
+          <div className={`text-sm font-semibold ${subMode === 'structure' ? 'text-primary-dark' : ''}`}>{subMode === 'structure' ? '●' : '○'} Struktura ostrého testu</div>
           <div className="text-xs text-neutral-600 mt-1">{data.passing.total} otázek dle reálné struktury ({data.testStructure.map(s => s.count).join('/')}). Bez timeru.</div>
         </button>
-        <button onClick={() => setSubMode('groups')}
+        <button onClick={() => setSubMode('groups')} aria-pressed={subMode === 'groups'}
           className={`text-left rounded-lg p-4 border-2 ${subMode === 'groups' ? 'border-primary bg-primary-light' : 'border-neutral-200'}`}>
-          <div className={`text-sm font-semibold ${subMode === 'groups' ? 'text-primary-dark' : ''}`}>○ Vybrat oblasti</div>
+          <div className={`text-sm font-semibold ${subMode === 'groups' ? 'text-primary-dark' : ''}`}>{subMode === 'groups' ? '●' : '○'} Vybrat oblasti</div>
           <div className="text-xs text-neutral-600 mt-1">Vyber konkrétní skupiny + počet.</div>
         </button>
       </div>

@@ -56,7 +56,7 @@ export default function Home() {
               Pokrytí otázek: <strong>{cov.overall.seen} / {cov.overall.total}</strong> ({covOverallPct}%)
             </div>
           </div>
-          <Link to="/test" className="relative z-10 w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition shrink-0">
+          <Link to="/app/test" className="relative z-10 w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition shrink-0">
             ▶ Spustit ostrý test
           </Link>
         </div>
@@ -150,7 +150,7 @@ export default function Home() {
             <div className="text-xs uppercase tracking-wide text-neutral-500">
               {recent.length === 1 ? 'Poslední test' : `Posledních ${recent.length} ${recent.length < 5 ? 'testy' : 'testů'}`}
             </div>
-            <Link to="/stats" className="text-xs text-accent hover:underline whitespace-nowrap">Více ve Statistikách →</Link>
+            <Link to="/app/stats" className="text-xs text-accent hover:underline whitespace-nowrap">Více ve Statistikách →</Link>
           </div>
           <div className="flex flex-col gap-2">
             {recent.map((t, i) => {
