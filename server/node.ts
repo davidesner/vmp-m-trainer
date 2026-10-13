@@ -22,7 +22,8 @@ const { app } = buildApp({ db, cookieSecure, signupCode: getSignupCode() })
 const distDir = path.resolve('dist')
 if (fs.existsSync(distDir)) {
   app.use('/*', serveStatic({ root: './dist' }))
-  app.get('*', serveStatic({ path: './dist/index.html' }))  // SPA fallback
+  // SPA fallback: an empty shell, since dist/index.html carries the prerendered landing page for "/" only.
+  app.get('*', serveStatic({ path: './dist/spa.html' }))
 }
 
 serve({ fetch: app.fetch, port }, info => {
