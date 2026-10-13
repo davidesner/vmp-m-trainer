@@ -10,6 +10,7 @@ tells the truth, and update it in the same change. In particular:
   `src/lib/landingSamples.ts` (name, number of questions, test size, score needed, time limit). The values are
   copied from `public/data/questions-<X>.json` (`questions.length` and `passing`).
   Also update the categories listed in the `<meta name="description">` in `index.html`.
+  Check the exam facts in `src/lib/landingFaq.ts` (FAQ answers) against https://sps.gov.cz/dok-os/zkousky too.
 - **Changed question data**: the sample questions in `LANDING_SAMPLES` (same file) are copies of real questions
   from the data bundles. If the source question, its options, correct answer or image changes, update the copy.
   Each sample needs an explanation in `public/explanations/<X>/q-<id>.html`.
