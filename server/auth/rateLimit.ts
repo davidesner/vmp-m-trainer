@@ -6,14 +6,14 @@ const MAX = 5
 
 export interface CheckResult { allowed: boolean; retryAfterSec: number }
 
-export function checkRateLimit(key: string, now = Date.now()): CheckResult {
+export function checkRateLimit(key: string, now = Date.now(), max = MAX): CheckResult {
   let b = buckets.get(key)
   if (!b || now >= b.resetAt) {
     b = { count: 0, resetAt: now + WINDOW_MS }
     buckets.set(key, b)
   }
   b.count += 1
-  if (b.count > MAX) {
+  if (b.count > max) {
     return { allowed: false, retryAfterSec: Math.ceil((b.resetAt - now) / 1000) }
   }
   return { allowed: true, retryAfterSec: 0 }

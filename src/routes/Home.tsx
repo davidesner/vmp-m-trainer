@@ -4,16 +4,21 @@ import { useQuestions } from '../hooks/useQuestions'
 import { useProgress } from '../hooks/useProgress'
 import { estimatePass, coverage } from '../lib/passProbability'
 import CategorySubtitle from '../components/CategorySubtitle'
+import LockedFeature from '../components/LockedFeature'
+import GuestPreview from '../components/GuestPreview'
+import { useGuestStatus } from '../hooks/useAuth'
 
 export default function Home() {
   const { data, loading } = useQuestions()
   const { store } = useProgress()
+  const { isGuest } = useGuestStatus()
 
   const pass = useMemo(() => data ? estimatePass(data, store.questions, data.passing.score) : null, [data, store.questions])
   const cov  = useMemo(() => data ? coverage(data, store.questions)    : null, [data, store.questions])
 
   const recent = store.testHistory.slice(0, 5)
 
+  // Guests get the same overview computed from an empty store (useProgress never loads theirs).
   if (loading || !data || !pass || !cov) return <div className="p-4 md:p-8">Načítám…</div>
 
   const passingScore = data.passing.score
@@ -31,9 +36,11 @@ export default function Home() {
     <div className="p-4 md:p-8 max-w-5xl">
       <h2 className="text-2xl font-bold mb-1">Přehled</h2>
       <CategorySubtitle withParams className="mb-6" />
+      {isGuest && <div className="mb-4"><LockedFeature compact /></div>}
 
       {/* Hero: pass probability + expected score + CTA */}
-      <div className="bg-white border border-neutral-200 rounded-lg overflow-hidden mb-6">
+      <GuestPreview active={isGuest} className="mb-6">
+      <div className="bg-white border border-neutral-200 rounded-lg overflow-hidden">
         <div className="p-5 md:p-6 flex flex-col sm:flex-row items-start sm:justify-between gap-4 sm:gap-6">
           <div>
             <div className="text-xs uppercase tracking-wide text-neutral-500 mb-1">Odhad úspěchu u zkoušky</div>
@@ -49,7 +56,7 @@ export default function Home() {
               Pokrytí otázek: <strong>{cov.overall.seen} / {cov.overall.total}</strong> ({covOverallPct}%)
             </div>
           </div>
-          <Link to="/test" className="w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition shrink-0">
+          <Link to="/app/test" className="relative z-10 w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition shrink-0">
             ▶ Spustit ostrý test
           </Link>
         </div>
@@ -59,8 +66,11 @@ export default function Home() {
         </div>
       </div>
 
+      </GuestPreview>
+
       {/* Per-group breakdown */}
-      <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-5 mb-6">
+      <GuestPreview active={isGuest} className="mb-6">
+      <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-5">
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-3">Po skupinách</div>
 
         {/* Mobile: stacked cards */}
@@ -131,6 +141,8 @@ export default function Home() {
         </table>
       </div>
 
+      </GuestPreview>
+
       {/* Recent tests */}
       {recent.length > 0 && (
         <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-5">
@@ -138,7 +150,7 @@ export default function Home() {
             <div className="text-xs uppercase tracking-wide text-neutral-500">
               {recent.length === 1 ? 'Poslední test' : `Posledních ${recent.length} ${recent.length < 5 ? 'testy' : 'testů'}`}
             </div>
-            <Link to="/stats" className="text-xs text-accent hover:underline whitespace-nowrap">Více ve Statistikách →</Link>
+            <Link to="/app/stats" className="text-xs text-accent hover:underline whitespace-nowrap">Více ve Statistikách →</Link>
           </div>
           <div className="flex flex-col gap-2">
             {recent.map((t, i) => {

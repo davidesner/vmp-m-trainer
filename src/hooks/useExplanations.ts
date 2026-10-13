@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 import type { ExplanationMeta } from '../types'
 import { useActiveTest } from './useActiveTest'
-import { TESTS } from '../lib/tests'
+import { TESTS, type TestId } from '../lib/tests'
 
 export interface ExplanationFetchResult {
   status: 'hit' | 'miss'
@@ -9,8 +9,10 @@ export interface ExplanationFetchResult {
   meta?: ExplanationMeta
 }
 
-export function useExplanations() {
-  const { activeTest } = useActiveTest()
+/** `testOverride` loads another category's explanations than the active one (e.g. landing page samples). */
+export function useExplanations(testOverride?: TestId) {
+  const { activeTest: currentTest } = useActiveTest()
+  const activeTest = testOverride ?? currentTest
   const [cache, setCache] = useState<Record<string, ExplanationFetchResult>>({})
   const cacheRef = useRef(cache)
   cacheRef.current = cache

@@ -12,6 +12,8 @@ export async function hashPassword(plain: string): Promise<string> {
 }
 
 export async function verifyPassword(stored: string, plain: string): Promise<boolean> {
+  // Guests and SSO-only accounts store '' — they have no password, so nothing may match it.
+  if (!stored) return false
   try {
     return await verify(stored, plain)
   } catch {

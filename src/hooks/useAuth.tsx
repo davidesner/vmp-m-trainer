@@ -1,15 +1,23 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
 
-interface AuthUser { id: string; email: string }
+export interface AuthUser { id: string; email: string | null; guest: boolean }
 
 interface AuthResult { ok: boolean; error?: string }
+
+export type SsoProvider = 'google' | 'seznam'
+/** Which SSO providers the server has credentials for; null until /api/auth/config answers. */
+export type SsoAvailability = Record<SsoProvider, boolean> | null
 
 interface AuthCtx {
   user: AuthUser | null
   loading: boolean
   signupEnabled: boolean
+  sso: SsoAvailability
+  /** Turnstile site key for /register; undefined while /api/auth/config is loading, null when signup is off. */
+  captchaSiteKey: string | null | undefined
   login: (email: string, password: string) => Promise<AuthResult>
-  register: (email: string, password: string, code: string) => Promise<AuthResult>
+  register: (email: string, password: string, captchaToken: string) => Promise<AuthResult>
+  loginAsGuest: () => Promise<AuthResult>
   logout: () => Promise<void>
   refresh: () => Promise<void>
 }
@@ -20,12 +28,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null)
   const [loading, setLoading] = useState(true)
   const [signupEnabled, setSignupEnabled] = useState(false)
+  const [sso, setSso] = useState<SsoAvailability>(null)
+  const [captchaSiteKey, setCaptchaSiteKey] = useState<string | null | undefined>(undefined)
 
   useEffect(() => {
     void fetch('/api/auth/config', { credentials: 'same-origin' })
       .then(res => (res.ok ? res.json() : null))
-      .then(cfg => setSignupEnabled(Boolean(cfg?.signupEnabled)))
-      .catch(() => setSignupEnabled(false))
+      .then(cfg => {
+        setSignupEnabled(Boolean(cfg?.signupEnabled))
+        setCaptchaSiteKey(typeof cfg?.captchaSiteKey === 'string' ? cfg.captchaSiteKey : null)
+        setSso({ google: cfg?.sso?.google === true, seznam: cfg?.sso?.seznam === true })
+      })
+      .catch(() => {
+        setSignupEnabled(false)
+        setCaptchaSiteKey(null)
+        setSso({ google: false, seznam: false })
+      })
   }, [])
 
   const refresh = useCallback(async () => {
@@ -57,24 +75,36 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { ok: false, error: res.status === 401 ? 'Špatný email nebo heslo' : `HTTP ${res.status}` }
   }, [])
 
-  const register = useCallback(async (email: string, password: string, code: string) => {
+  const register = useCallback(async (email: string, password: string, captchaToken: string) => {
     const res = await fetch('/api/auth/register', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       credentials: 'same-origin',
-      body: JSON.stringify({ email, password, code }),
+      body: JSON.stringify({ email, password, captchaToken }),
     })
     if (res.ok) {
       setUser(await res.json())
       return { ok: true }
     }
+    const body = await res.json().catch(() => null) as { error?: string } | null
+    if (body?.error === 'captcha failed') return { ok: false, error: 'Ověření, že nejsi robot, neprošlo. Zkus to znovu.' }
     const errByStatus: Record<number, string> = {
-      403: 'Neplatný registrační kód',
+      403: 'Registrace teď není dostupná',
       409: 'Tento email už je registrovaný',
       400: 'Zkontroluj email a heslo (min. 8 znaků)',
       429: 'Příliš mnoho pokusů, zkus to za chvíli',
+      503: 'Ověření teď nefunguje, zkus to za chvíli',
     }
     return { ok: false, error: errByStatus[res.status] ?? `HTTP ${res.status}` }
+  }, [])
+
+  const loginAsGuest = useCallback(async () => {
+    const res = await fetch('/api/auth/guest', { method: 'POST', credentials: 'same-origin' })
+    if (res.ok) {
+      setUser(await res.json())
+      return { ok: true }
+    }
+    return { ok: false, error: res.status === 429 ? 'Příliš mnoho pokusů, zkus to za chvíli' : `HTTP ${res.status}` }
   }, [])
 
   const logout = useCallback(async () => {
@@ -83,7 +113,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <Ctx.Provider value={{ user, loading, signupEnabled, login, register, logout, refresh }}>
+    <Ctx.Provider value={{ user, loading, signupEnabled, sso, captchaSiteKey, login, register, loginAsGuest, logout, refresh }}>
       {children}
     </Ctx.Provider>
   )
@@ -93,4 +123,11 @@ export function useAuth(): AuthCtx {
   const v = useContext(Ctx)
   if (!v) throw new Error('useAuth must be inside <AuthProvider>')
   return v
+}
+
+/** Guest flag for hooks that may render outside <AuthProvider> (e.g. in unit tests). */
+export function useGuestStatus(): { isGuest: boolean; authLoading: boolean } {
+  const v = useContext(Ctx)
+  if (!v) return { isGuest: false, authLoading: false }
+  return { isGuest: v.user?.guest === true, authLoading: v.loading }
 }

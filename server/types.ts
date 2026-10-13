@@ -2,7 +2,9 @@ import type { Db } from './db/client.js'
 
 export interface AuthUser {
   id: string
-  email: string
+  /** null for guests and SSO accounts without a trusted email; stored placeholders never leave the server */
+  email: string | null
+  guest: boolean
 }
 
 export interface AppVariables {

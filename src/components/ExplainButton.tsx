@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import ExplainModal from './ExplainModal'
 import type { Question } from '../types'
+import type { TestId } from '../lib/tests'
 
 interface Props {
   question: Question
   userAnswer?: 'a' | 'b' | 'c' | null
+  testId?: TestId
+  showFeedback?: boolean
 }
 
-export default function ExplainButton({ question, userAnswer }: Props) {
+export default function ExplainButton({ question, userAnswer, testId, showFeedback }: Props) {
   const [open, setOpen] = useState(false)
   return (
     <>
@@ -18,7 +21,8 @@ export default function ExplainButton({ question, userAnswer }: Props) {
       >
         🧠 Vysvětlení
       </button>
-      <ExplainModal question={question} userAnswer={userAnswer} open={open} onClose={() => setOpen(false)} />
+      <ExplainModal question={question} userAnswer={userAnswer} open={open} onClose={() => setOpen(false)}
+        testId={testId} showFeedback={showFeedback} />
     </>
   )
 }

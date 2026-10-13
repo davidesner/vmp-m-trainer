@@ -16,7 +16,10 @@ export function loadUser(db: Db): MiddlewareHandler<AppEnv> {
     if (sid) {
       const row = await lookupSession(db.db, sid)
       if (row) {
-        c.set('user', { id: row.user.id, email: row.user.email })
+        const guest = row.user.isGuest
+        // Guests and SSO accounts without a trusted email store a placeholder without '@'.
+        const email = guest || !row.user.email.includes('@') ? null : row.user.email
+        c.set('user', { id: row.user.id, email, guest })
         c.set('sid', sid)
         await maybeExtendSession(db.db, sid, new Date(row.session.expiresAt))
       }
@@ -28,6 +31,16 @@ export function loadUser(db: Db): MiddlewareHandler<AppEnv> {
 export function requireAuth(): MiddlewareHandler<AppEnv> {
   return async (c, next) => {
     if (!c.get('user')) return c.json({ error: 'unauthorized' }, 401)
+    await next()
+  }
+}
+
+/** Like requireAuth, but guests are refused: stored data is only shown to account holders. */
+export function requireRegistered(): MiddlewareHandler<AppEnv> {
+  return async (c, next) => {
+    const user = c.get('user')
+    if (!user) return c.json({ error: 'unauthorized' }, 401)
+    if (user.guest) return c.json({ error: 'account required' }, 403)
     await next()
   }
 }

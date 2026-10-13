@@ -17,4 +17,8 @@ describe('password', () => {
     const b = await hashPassword('same')
     expect(a).not.toBe(b)
   })
+  it('never verifies against an empty hash (guests and SSO-only accounts)', async () => {
+    expect(await verifyPassword('', '')).toBe(false)
+    expect(await verifyPassword('', 'anything')).toBe(false)
+  })
 })

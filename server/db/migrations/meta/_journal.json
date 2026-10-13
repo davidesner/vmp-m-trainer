@@ -15,6 +15,20 @@
       "when": 1781549215888,
       "tag": "0001_late_lady_deathstrike",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791835956459,
+      "tag": "0002_worried_mach_iv",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791901913085,
+      "tag": "0003_high_umar",
+      "breakpoints": true
     }
   ]
 }

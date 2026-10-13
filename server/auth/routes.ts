@@ -1,7 +1,7 @@
-import { Hono } from 'hono'
+import { Hono, type Context } from 'hono'
 import { setCookie, deleteCookie } from 'hono/cookie'
 import { eq } from 'drizzle-orm'
-import { randomUUID, timingSafeEqual } from 'node:crypto'
+import { randomUUID } from 'node:crypto'
 import type { AppEnv } from '../types.js'
 import type { Db } from '../db/client.js'
 import { users } from '../db/schema.js'
@@ -9,12 +9,21 @@ import { hashPassword, verifyPassword } from './password.js'
 import { createSession, deleteSession } from './sessions.js'
 import { COOKIE_NAME } from './middleware.js'
 import { checkRateLimit } from './rateLimit.js'
+import { OAUTH_PROVIDERS, oauthRoutes, type OAuthCredentials } from './oauth.js'
+import { findOrCreateUserForIdentity } from './identities.js'
+import type { Captcha } from './captcha.js'
 
 export interface AuthRoutesOptions {
   db: Db
   cookieSecure: boolean
-  /** Shared invite code required to self-register. Empty/undefined disables signup. */
-  signupCode?: string
+  /** Captcha every self-registration must pass. Undefined disables signup. */
+  captcha?: Captcha
+  /** Google/Seznam client credentials; providers without them stay disabled. */
+  oauth?: OAuthCredentials
+  /** Public origin for OAuth redirect URIs (APP_URL); defaults to the request origin. */
+  appUrl?: string
+  /** Injectable for tests (OAuth token and profile requests). */
+  fetch?: typeof fetch
 }
 
 const SESSION_COOKIE = {
@@ -24,38 +33,65 @@ const SESSION_COOKIE = {
   maxAge: 30 * 86400,
 } as const
 
-/** Constant-time string compare that doesn't leak length via early return. */
-function codeMatches(provided: string, expected: string): boolean {
-  const a = Buffer.from(provided)
-  const b = Buffer.from(expected)
-  if (a.length !== b.length) return false
-  return timingSafeEqual(a, b)
-}
+// Guests are cheap to create and often share an IP (school, office NAT).
+const GUEST_RATE_MAX = 20
 
 export function authRoutes(opts: AuthRoutesOptions) {
   const r = new Hono<AppEnv>()
-  const signupEnabled = Boolean(opts.signupCode)
+  const { captcha } = opts
 
-  // Lets the SPA decide whether to show the "create account" link.
-  r.get('/config', c => c.json({ signupEnabled }))
+  /** A guest signing in or registering leaves its session behind; its row stays as usage history. */
+  async function dropGuestSession(c: Context<AppEnv>) {
+    const sid = c.get('sid')
+    if (sid && c.get('user')?.guest) await deleteSession(opts.db.db, sid)
+  }
+
+  async function signInAs(c: Context<AppEnv>, userId: string) {
+    await dropGuestSession(c)
+    const sid = await createSession(opts.db.db, userId)
+    setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
+  }
+
+  const oauth = opts.oauth ?? {}
+  const sso = Object.fromEntries(OAUTH_PROVIDERS.map(p => [p, Boolean(oauth[p])]))
+
+  // Lets the SPA decide whether to show the "create account" link, which captcha site key to render
+  // and which SSO buttons work.
+  r.get('/config', c => c.json({
+    signupEnabled: Boolean(captcha), captchaSiteKey: captcha?.siteKey ?? null, sso,
+  }))
+
+  r.route('/oauth', oauthRoutes({
+    credentials: oauth,
+    cookieSecure: opts.cookieSecure,
+    appUrl: opts.appUrl,
+    fetch: opts.fetch,
+    signIn: async (c, profile) => signInAs(c, await findOrCreateUserForIdentity(opts.db.db, profile)),
+  }))
 
   r.post('/register', async c => {
-    const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
-    const rl = checkRateLimit(`register:${ip}`)
+    const forwardedIp = c.req.header('x-forwarded-for')?.split(',')[0].trim()
+    const rl = checkRateLimit(`register:${forwardedIp ?? 'unknown'}`)
     if (!rl.allowed) {
       return c.json({ error: 'too many attempts' }, 429, { 'retry-after': String(rl.retryAfterSec) })
     }
-    if (!opts.signupCode) return c.json({ error: 'registration disabled' }, 403)
+    if (!captcha) return c.json({ error: 'registration disabled' }, 403)
 
     const body = await c.req.json().catch(() => null) as
-      { email?: string; password?: string; code?: string } | null
+      { email?: string; password?: string; captchaToken?: string } | null
     const email = body?.email?.trim().toLowerCase()
     const password = body?.password
-    const code = body?.code
-    if (!email || !password || !code) return c.json({ error: 'bad request' }, 400)
+    const captchaToken = body?.captchaToken
+    if (!email || !password || typeof captchaToken !== 'string' || !captchaToken) {
+      return c.json({ error: 'bad request' }, 400)
+    }
     if (!email.includes('@')) return c.json({ error: 'invalid email' }, 400)
     if (password.length < 8) return c.json({ error: 'password too short' }, 400)
-    if (!codeMatches(code, opts.signupCode)) return c.json({ error: 'invalid code' }, 403)
+
+    // After the cheap checks, before touching the DB, so the 409 below can't be probed without solving a captcha.
+    const verdict = await captcha.verify(captchaToken, forwardedIp)
+    if (verdict === 'unavailable') return c.json({ error: 'captcha unavailable' }, 503)
+    if (verdict !== 'ok') return c.json({ error: 'captcha failed' }, 403)
 
     const existing = await opts.db.db
       .select({ id: users.id })
@@ -72,9 +108,31 @@ export function authRoutes(opts: AuthRoutesOptions) {
       createdAt: new Date().toISOString(),
     })
 
+    await signInAs(c, id)
+    return c.json({ id, email, guest: false }, 201)
+  })
+
+  r.post('/guest', async c => {
+    const current = c.get('user')
+    if (current) return c.json(current, 200)
+
+    const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
+    const rl = checkRateLimit(`guest:${ip}`, Date.now(), GUEST_RATE_MAX)
+    if (!rl.allowed) {
+      return c.json({ error: 'too many attempts' }, 429, { 'retry-after': String(rl.retryAfterSec) })
+    }
+
+    const id = randomUUID()
+    await opts.db.db.insert(users).values({
+      id,
+      email: `guest:${id}`,
+      passwordHash: '',
+      isGuest: true,
+      createdAt: new Date().toISOString(),
+    })
     const sid = await createSession(opts.db.db, id)
     setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
-    return c.json({ id, email }, 201)
+    return c.json({ id, email: null, guest: true }, 201)
   })
 
   r.post('/login', async c => {
@@ -92,14 +150,14 @@ export function authRoutes(opts: AuthRoutesOptions) {
       .where(eq(users.email, body.email.toLowerCase()))
       .limit(1)
     const user = row[0]
-    if (!user) return c.json({ error: 'invalid credentials' }, 401)
+    if (!user || user.isGuest) return c.json({ error: 'invalid credentials' }, 401)
+    // SSO-only accounts have an empty hash, which verifyPassword never accepts.
     if (!(await verifyPassword(user.passwordHash, body.password))) {
       return c.json({ error: 'invalid credentials' }, 401)
     }
 
-    const sid = await createSession(opts.db.db, user.id)
-    setCookie(c, COOKIE_NAME, sid, { ...SESSION_COOKIE, secure: opts.cookieSecure })
-    return c.json({ id: user.id, email: user.email })
+    await signInAs(c, user.id)
+    return c.json({ id: user.id, email: user.email, guest: false })
   })
 
   r.post('/logout', async c => {

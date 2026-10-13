@@ -31,8 +31,15 @@ dist-ssr
 /data/
 .mcp.json
 
-.claude/settings.local.json
+# Local Claude Code state (preview config, local settings, worktrees); project skills stay tracked.
+.claude/*
+!.claude/skills/
 
 # Repo uses pnpm; ignore npm/yarn lockfiles to avoid mixed-manager drift.
 package-lock.json
 yarn.lock
+
+# Vercel CLI link and pulled env files; keep the committed template.
+.vercel
+.env*
+!.env*.example

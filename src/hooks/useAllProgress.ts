@@ -44,7 +44,7 @@ export interface AllProgressResult {
 
 const emptyStore: ProgressStore = { questions: {}, testHistory: [] }
 
-export function useAllProgress(): AllProgressResult {
+export function useAllProgress({ includeProgress = true }: { includeProgress?: boolean } = {}): AllProgressResult {
   const [bundles, setBundles] = useState<Partial<Record<TestId, QuestionsBundle>>>({})
   const [progressByTest, setProgressByTest] = useState<Record<TestId, ProgressStore>>(() => {
     const o = {} as Record<TestId, ProgressStore>
@@ -67,10 +67,13 @@ export function useAllProgress(): AllProgressResult {
           return [id, await res.json() as QuestionsBundle] as const
         }))
 
-        // All progress, no testId filter
-        const progRes = await fetch('/api/progress', { credentials: 'same-origin' })
-        if (!progRes.ok) throw new Error(`HTTP ${progRes.status} loading progress`)
-        const progBody = await progRes.json() as ServerProgress
+        // All progress, no testId filter (skipped for guests: empty preview)
+        let progBody: ServerProgress = { attempts: [], testHistory: [] }
+        if (includeProgress) {
+          const progRes = await fetch('/api/progress', { credentials: 'same-origin' })
+          if (!progRes.ok) throw new Error(`HTTP ${progRes.status} loading progress`)
+          progBody = await progRes.json() as ServerProgress
+        }
 
         const byTest: Record<TestId, ProgressStore> = {} as Record<TestId, ProgressStore>
         for (const id of TEST_IDS) {
@@ -90,7 +93,7 @@ export function useAllProgress(): AllProgressResult {
       }
     })()
     return () => { cancelled = true }
-  }, [])
+  }, [includeProgress])
 
   return { bundles, progressByTest, loading, error }
 }

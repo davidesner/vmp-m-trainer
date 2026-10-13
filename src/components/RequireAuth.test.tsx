@@ -34,4 +34,12 @@ describe('RequireAuth', () => {
     render(<App />)
     await waitFor(() => expect(screen.getByText('SecretPage')).toBeInTheDocument())
   })
+
+  it('renders children for a guest', async () => {
+    vi.spyOn(globalThis, 'fetch').mockImplementation(async () =>
+      new Response(JSON.stringify({ id: 'g1', email: null, guest: true }), { status: 200, headers: { 'content-type': 'application/json' } })
+    )
+    render(<App />)
+    await waitFor(() => expect(screen.getByText('SecretPage')).toBeInTheDocument())
+  })
 })

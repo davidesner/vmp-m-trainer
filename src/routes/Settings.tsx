@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useProgress } from '../hooks/useProgress'
-import { useAuth } from '../hooks/useAuth'
+import { useAuth, useGuestStatus } from '../hooks/useAuth'
+import LockedFeature from '../components/LockedFeature'
 
 const LEGACY_KEY = 'vmp:progress'
 
@@ -9,6 +10,7 @@ export default function Settings() {
   const { user, logout } = useAuth()
   const [confirmReset, setConfirmReset] = useState(false)
   const [importMsg, setImportMsg] = useState<string | null>(null)
+  const { isGuest } = useGuestStatus()
 
   const legacy = (() => {
     try { return localStorage.getItem(LEGACY_KEY) } catch { return null }
@@ -33,12 +35,19 @@ export default function Settings() {
     }
   }
 
+  if (isGuest) return (
+    <div className="max-w-2xl p-4 md:p-8">
+      <h2 className="text-2xl font-bold mb-6">Nastavení</h2>
+      <LockedFeature message="Nejsi přihlášen. Po přihlášení tu najdeš nastavení účtu a správu svého progressu." />
+    </div>
+  )
+
   return (
     <div className="max-w-2xl p-4 md:p-8">
       <h2 className="text-2xl font-bold mb-6">Nastavení</h2>
 
       <div className="bg-white border border-neutral-200 rounded p-4 mb-4">
-        <div className="text-sm">Přihlášen jako <strong>{user?.email}</strong></div>
+        <div className="text-sm">{user?.email ? <>Přihlášen jako <strong>{user.email}</strong></> : 'Přihlášen přes Google nebo Seznam'}</div>
         <button onClick={() => void logout()}
           className="mt-3 px-3 py-2 border border-neutral-300 rounded text-sm hover:bg-neutral-50">
           Odhlásit

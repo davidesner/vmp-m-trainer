@@ -1,11 +1,30 @@
-import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core'
+import { sqliteTable, text, integer, index, primaryKey } from 'drizzle-orm/sqlite-core'
 
 export const users = sqliteTable('users', {
   id: text('id').primaryKey(),                       // crypto.randomUUID()
   email: text('email').notNull().unique(),
-  passwordHash: text('password_hash').notNull(),
+  passwordHash: text('password_hash').notNull(),    // '' for guests and SSO-only accounts
+  isGuest: integer('is_guest', { mode: 'boolean' }).notNull().default(false),
   createdAt: text('created_at').notNull(),           // ISO 8601
 })
+
+/** Google/Seznam accounts linked to a user, matched by the provider's stable id (not by email). */
+export const oauthIdentities = sqliteTable(
+  'oauth_identities',
+  {
+    provider: text('provider', { enum: ['google', 'seznam'] }).notNull(),
+    providerUserId: text('provider_user_id').notNull(),  // Google `sub`, Seznam `oauth_user_id`
+    userId: text('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    email: text('email'),                            // as reported by the provider at link time; informational
+    createdAt: text('created_at').notNull(),         // ISO 8601
+  },
+  t => ({
+    pk: primaryKey({ columns: [t.provider, t.providerUserId] }),
+    userIdIdx: index('oauth_identities_user_id_idx').on(t.userId),
+  }),
+)
 
 export const sessions = sqliteTable(
   'sessions',

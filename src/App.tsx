@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom'
 import { AuthProvider } from './hooks/useAuth'
 import { ActiveTestProvider } from './hooks/useActiveTest'
 import RequireAuth from './components/RequireAuth'
@@ -11,15 +11,24 @@ import Stats from './routes/Stats'
 import Settings from './routes/Settings'
 import Login from './routes/Login'
 import Register from './routes/Register'
+import Landing from './routes/Landing'
+import Privacy from './routes/Privacy'
 
-function Shell({ children }: { children: React.ReactNode }) {
+// Pages that are only useful once inside the app; React 19 hoists this <meta> into <head>.
+const NoIndex = () => <meta name="robots" content="noindex" />
+
+function Shell() {
   return (
     <div className="flex h-screen">
+      <NoIndex />
       <Sidebar />
-      <main className="flex-1 overflow-auto pt-14 md:pt-0">{children}</main>
+      <main className="flex-1 overflow-auto pt-14 md:pt-0"><Outlet /></main>
     </div>
   )
 }
+
+// Pre-/app URLs, kept so old bookmarks still land in the right place.
+const LEGACY_PATHS = ['test', 'practice', 'weak', 'stats', 'settings']
 
 export default function App() {
   return (
@@ -27,14 +36,19 @@ export default function App() {
       <ActiveTestProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/" element={<RequireAuth><Shell><Home /></Shell></RequireAuth>} />
-          <Route path="/test" element={<RequireAuth><Shell><Test /></Shell></RequireAuth>} />
-          <Route path="/practice" element={<RequireAuth><Shell><Practice /></Shell></RequireAuth>} />
-          <Route path="/weak" element={<RequireAuth><Shell><Weak /></Shell></RequireAuth>} />
-          <Route path="/stats" element={<RequireAuth><Shell><Stats /></Shell></RequireAuth>} />
-          <Route path="/settings" element={<RequireAuth><Shell><Settings /></Shell></RequireAuth>} />
+          <Route path="/login" element={<><NoIndex /><Login /></>} />
+          <Route path="/register" element={<><NoIndex /><Register /></>} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/ochrana-osobnich-udaju" element={<Privacy />} />
+          <Route path="/app" element={<RequireAuth><Shell /></RequireAuth>}>
+            <Route index element={<Home />} />
+            <Route path="test" element={<Test />} />
+            <Route path="practice" element={<Practice />} />
+            <Route path="weak" element={<Weak />} />
+            <Route path="stats" element={<Stats />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+          {LEGACY_PATHS.map(p => <Route key={p} path={`/${p}`} element={<Navigate to={`/app/${p}`} replace />} />)}
         </Routes>
       </BrowserRouter>
       </ActiveTestProvider>
