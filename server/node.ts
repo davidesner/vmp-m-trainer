@@ -23,6 +23,14 @@ const { app } = buildApp({
 // Serve built SPA + static assets from dist/ if it exists (production).
 const distDir = path.resolve('dist')
 if (fs.existsSync(distDir)) {
+  // Question data and explanation fragments are app internals, not pages; keep them out of search results.
+  // Mirrors the X-Robots-Tag headers in vercel.json.
+  for (const prefix of ['/explanations/*', '/data/*']) {
+    app.use(prefix, async (c, next) => {
+      await next()
+      c.header('X-Robots-Tag', 'noindex')
+    })
+  }
   app.use('/*', serveStatic({ root: './dist' }))
   // SPA fallback: an empty shell, since dist/index.html carries the prerendered landing page for "/" only.
   app.get('*', serveStatic({ path: './dist/spa.html' }))
