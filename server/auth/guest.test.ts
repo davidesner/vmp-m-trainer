@@ -20,7 +20,10 @@ async function setup() {
     id: 'g1', email: 'guest:g1', passwordHash: '', isGuest: true,
     createdAt: new Date().toISOString(),
   })
-  const app = buildApp({ db, cookieSecure: false, signupCode: 'CODE' }).app
+  const app = buildApp({
+    db, cookieSecure: false,
+    captcha: { siteKey: 'site-key', verify: async () => 'ok' },
+  }).app
   return { db, app }
 }
 
@@ -76,7 +79,7 @@ describe('POST /api/auth/guest', () => {
   let ctx: Awaited<ReturnType<typeof setup>>
   beforeEach(async () => { ctx = await setup() })
 
-  it('creates a guest row and session cookie without a signup code', async () => {
+  it('creates a guest row and session cookie without registering', async () => {
     const res = await guest(ctx.app)
     expect(res.status).toBe(201)
     const body = await res.json() as { id: string; email: null; guest: true }
@@ -133,7 +136,7 @@ describe('POST /api/auth/guest', () => {
     const res = await ctx.app.request('/api/auth/register', {
       method: 'POST',
       headers: { 'content-type': 'application/json', cookie, 'x-forwarded-for': '8.8.8.8' },
-      body: JSON.stringify({ email: 'new@b.c', password: 'longenough', code: 'CODE' }),
+      body: JSON.stringify({ email: 'new@b.c', password: 'longenough', captchaToken: 'token' }),
     })
     expect(res.status).toBe(201)
     expect(await ctx.db.db.select().from(sessions).where(eq(sessions.userId, guestId))).toHaveLength(0)

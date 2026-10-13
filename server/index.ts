@@ -4,6 +4,7 @@ import type { AppEnv } from './types.js'
 import type { Db } from './db/client.js'
 import { loadUser } from './auth/middleware.js'
 import { authRoutes, meRoute } from './auth/routes.js'
+import type { Captcha } from './auth/captcha.js'
 import { progressRoutes } from './routes/progress.js'
 import { attemptsRoutes } from './routes/attempts.js'
 import { testHistoryRoutes } from './routes/testHistory.js'
@@ -12,8 +13,8 @@ import { feedbackRoutes } from './routes/feedback.js'
 export interface BuildAppOptions {
   db: Db
   cookieSecure: boolean
-  /** Shared invite code required for self-registration. Unset disables signup. */
-  signupCode?: string
+  /** Captcha required for self-registration. Unset disables signup. */
+  captcha?: Captcha
 }
 
 export function buildApp(opts: BuildAppOptions) {
