@@ -328,6 +328,55 @@ function LandingAnchor() {
   )
 }
 
+// Study plan for "jak se připravit na zkoušku VMP" searches. Keep the guest/account notes true to what the app does.
+const PREP_STEPS: Array<{ title: string; text: string; link?: { href: string; label: string } }> = [
+  {
+    title: 'Projdi si otázky po oblastech',
+    text: 'V procvičování si vyber jednu oblast, třeba signální znaky nebo první pomoc, a projdi ji celou. '
+      + 'U každé otázky si přečti vysvětlení, proč je správná odpověď správná. Jde to i bez účtu.',
+  },
+  {
+    title: 'Vracej se k chybám',
+    text: 'S účtem ti trenažér dává hlavně otázky, ve kterých chybuješ, a ty, které jsi ještě neviděl. '
+      + 'Odhad připravenosti ukáže, které okruhy tě stojí nejvíc bodů.',
+  },
+  {
+    title: 'Dělej testy nanečisto',
+    text: 'Ostrý test má stejný počet otázek, čas i hranici úspěchu jako zkouška u Státní plavební správy. '
+      + 'Na zkoušku jdi, až ho opakovaně dáváš s rezervou.',
+  },
+  {
+    title: 'Přihlas se na zkoušku',
+    text: 'Termíny a elektronickou přihlášku najdeš na webu Státní plavební správy.',
+    link: { href: 'https://sps.gov.cz/dok-os/el-podani-prehled', label: 'Přihláška na zkoušku' },
+  },
+]
+
+function PrepGuide() {
+  return (
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24">
+      <h2 className="font-display font-bold text-3xl sm:text-4xl">Jak se připravit na zkoušku VMP</h2>
+      <p className="mt-5 text-lg leading-relaxed text-neutral-700 max-w-2xl">
+        Nejlepší příprava na testy VMP je projít všechny otázky, pochopit, proč je odpověď správná,
+        a pak trénovat hlavně to, co ještě neumíš. Na tom je trenažér postavený.
+      </p>
+      <ol className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {PREP_STEPS.map((step, i) => (
+          <li key={step.title}>
+            <span aria-hidden="true" className="font-display font-bold text-4xl text-river">{i + 1}</span>
+            <h3 className="mt-2 font-display font-bold text-xl">{step.title}</h3>
+            <p className="mt-2 text-neutral-700 leading-relaxed">{step.text}</p>
+            {step.link && (
+              <a href={step.link.href} target="_blank" rel="noopener noreferrer"
+                className="mt-2 inline-block text-accent underline underline-offset-2">{step.link.label}</a>
+            )}
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}
+
 // FAQPage structured data built from the same items the section renders, so the two can't drift apart.
 const FAQ_JSON_LD = JSON.stringify({
   '@context': 'https://schema.org',
@@ -579,7 +628,7 @@ export default function Landing() {
               Trenažér na zkoušku Vůdce Malého Plavidla (VMP)
             </h1>
             <p className="mt-6 text-lg text-river-line max-w-xl leading-relaxed">
-              Testy VMP online a zdarma: otázky podle tvých slabin, odhad připravenosti a vysvětlení ke každé otázce.
+              Příprava na testy VMP online a zdarma: otázky podle tvých slabin, odhad připravenosti a vysvětlení ke každé otázce.
             </p>
             <div className="mt-9">
               <HeroActions />
@@ -639,6 +688,8 @@ export default function Landing() {
           </div>
         </div>
       </section>
+
+      <PrepGuide />
 
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <h2 className="font-display font-bold text-3xl sm:text-4xl">Kategorie</h2>
