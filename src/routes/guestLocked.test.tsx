@@ -6,6 +6,7 @@ import type { QuestionsBundle } from '../types'
 import Home from './Home'
 import Weak from './Weak'
 import Stats from './Stats'
+import { ActiveTestProvider } from '../hooks/useActiveTest'
 
 const allProgressSpy = vi.hoisted(() => vi.fn())
 
@@ -29,23 +30,26 @@ vi.mock('../hooks/useProgress', () => ({
   useProgress: () => progressStub,
 }))
 vi.mock('../hooks/useAllProgress', () => ({
-  useAllProgress: () => { allProgressSpy(); return { bundles: {}, progressByTest: {}, loading: false, error: null } },
+  useAllProgress: (opts?: { includeProgress?: boolean }) => {
+    allProgressSpy(opts)
+    return { bundles: {}, progressByTest: { M: { questions: {}, testHistory: [] }, C: { questions: {}, testHistory: [] } }, loading: false, error: null }
+  },
 }))
 vi.mock('../components/CategorySubtitle', () => ({ default: () => null }))
 
 const LOCK = 'Přihlas se a uvidíš odhad úspěchu, slabiny a historii testů'
 
 function renderRoute(Cmp: ComponentType) {
-  render(<MemoryRouter><Cmp /></MemoryRouter>)
+  render(<ActiveTestProvider><MemoryRouter><Cmp /></MemoryRouter></ActiveTestProvider>)
 }
 
 describe('guest locked screens', () => {
-  it('Home shows the lock and keeps the test CTA, without the estimate', async () => {
+  it('Home shows the regular overview with empty values plus the sign-in banner', async () => {
     renderRoute(Home)
     expect(screen.getByText(LOCK)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Spustit ostrý test/ })).toHaveAttribute('href', '/test')
-    expect(screen.queryByText('Odhad úspěchu u zkoušky')).not.toBeInTheDocument()
-    expect(screen.queryByText('Po skupinách')).not.toBeInTheDocument()
+    expect(screen.getByText('Odhad úspěchu u zkoušky')).toBeInTheDocument()
+    expect(screen.getByText('Po skupinách')).toBeInTheDocument()
   })
 
   it('Weak shows the lock instead of starting practice', async () => {
@@ -53,10 +57,12 @@ describe('guest locked screens', () => {
     expect(screen.getByText(LOCK)).toBeInTheDocument()
   })
 
-  it('Stats shows the lock and never loads all progress', async () => {
+  it('Stats shows the regular tabs with empty values, the banner, and skips stored progress', async () => {
     renderRoute(Stats)
     expect(screen.getByText(LOCK)).toBeInTheDocument()
-    expect(allProgressSpy).not.toHaveBeenCalled()
+    expect(screen.getByRole('button', { name: 'Všechny' })).toBeInTheDocument()
+    expect(allProgressSpy).toHaveBeenCalled()
+    for (const [opts] of allProgressSpy.mock.calls) expect(opts).toEqual({ includeProgress: false })
   })
 
   it('lock offers login and, when enabled, register', async () => {

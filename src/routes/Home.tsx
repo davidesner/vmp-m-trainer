@@ -17,24 +17,8 @@ export default function Home() {
 
   const recent = store.testHistory.slice(0, 5)
 
-  if (loading || !data) return <div className="p-4 md:p-8">Načítám…</div>
-
-  if (isGuest) {
-    return (
-      <div className="p-4 md:p-8 max-w-5xl">
-        <h2 className="text-2xl font-bold mb-1">Přehled</h2>
-        <CategorySubtitle withParams className="mb-6" />
-        <div className="mb-6 sm:text-right">
-          <Link to="/test" className="inline-block w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition">
-            ▶ Spustit ostrý test
-          </Link>
-        </div>
-        <LockedFeature title="Odhad úspěchu a statistiky" />
-      </div>
-    )
-  }
-
-  if (!pass || !cov) return <div className="p-4 md:p-8">Načítám…</div>
+  // Guests get the same overview computed from an empty store (useProgress never loads theirs).
+  if (loading || !data || !pass || !cov) return <div className="p-4 md:p-8">Načítám…</div>
 
   const passingScore = data.passing.score
   const passingTotal = data.passing.total
@@ -54,6 +38,7 @@ export default function Home() {
 
       {/* Hero: pass probability + expected score + CTA */}
       <div className="bg-white border border-neutral-200 rounded-lg overflow-hidden mb-6">
+        {isGuest && <div className="px-5 md:px-6 pt-5 md:pt-6"><LockedFeature compact /></div>}
         <div className="p-5 md:p-6 flex flex-col sm:flex-row items-start sm:justify-between gap-4 sm:gap-6">
           <div>
             <div className="text-xs uppercase tracking-wide text-neutral-500 mb-1">Odhad úspěchu u zkoušky</div>

@@ -9,19 +9,10 @@ import LockedFeature from '../components/LockedFeature'
 type Tab = TestId | 'all'
 
 export default function Stats() {
-  const { isGuest } = useGuestStatus()
-  if (isGuest) return (
-    <div className="max-w-4xl mx-auto p-4 md:p-8">
-      <h2 className="text-2xl font-bold mb-4">Statistiky</h2>
-      <LockedFeature />
-    </div>
-  )
-  return <StatsContent />
-}
-
-function StatsContent() {
   const { activeTest } = useActiveTest()
-  const { bundles, progressByTest, loading, error } = useAllProgress()
+  const { isGuest } = useGuestStatus()
+  // Guests see the same page with empty values; their stored progress is never requested.
+  const { bundles, progressByTest, loading, error } = useAllProgress({ includeProgress: !isGuest })
   const [tab, setTab] = useState<Tab>(activeTest)
 
   if (loading) return <div className="p-4 md:p-8">Načítám…</div>
@@ -32,6 +23,7 @@ function StatsContent() {
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-8">
       <h2 className="text-2xl font-bold mb-1">Statistiky</h2>
+      {isGuest && <div className="my-3"><LockedFeature compact /></div>}
       <div className="text-sm text-neutral-500 mb-4">
         {tab === 'all' ? (
           <>Souhrnný pohled napříč kategoriemi</>

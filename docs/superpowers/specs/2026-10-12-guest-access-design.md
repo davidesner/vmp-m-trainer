@@ -7,7 +7,7 @@
 
 Let anyone use the app without an account ("Pokračovat bez přihlášení"). This is the first step towards a free, public app; open signup (Google, or email without a signup code) follows later.
 
-A guest can take the ostrý test and run Procvičování. Their attempts and test results are still stored in the DB for app monitoring, but nothing derived from stored data is ever shown back to them: no Odhad úspěchu, no test history, no Statistiky, no Slabiny, no weak-based practice modes. Those features are visible but locked, with a prompt to sign in.
+A guest can take the ostrý test and run Procvičování. Their attempts and test results are still stored in the DB for app monitoring, but nothing derived from stored data is ever shown back to them: no Odhad úspěchu, no test history, no Statistiky, no Slabiny, no weak-based practice modes. Přehled and Statistiky render as a preview with empty values (as for a brand-new account) plus a sign-in banner; the remaining features are locked with a prompt to sign in.
 
 ## Non-goals
 
@@ -101,15 +101,15 @@ When the user is a guest:
 
 ### `LockedFeature` component
 
-New `src/components/LockedFeature.tsx`: a card with 🔒, the text **"Přihlas se a uvidíš odhad úspěchu, slabiny a historii testů"**, a "Přihlásit se" button (`/login`) and, when `signupEnabled`, a "Vytvořit účet" button (`/register`). Optional `title` prop for context.
+New `src/components/LockedFeature.tsx`: a card with 🔒, the text **"Přihlas se a uvidíš odhad úspěchu, slabiny a historii testů"**, a "Přihlásit se" button (`/login`) and, when `signupEnabled`, a "Vytvořit účet" button (`/register`). `compact` renders the same as a one-line banner placed above an empty-value preview.
 
 ### Screens
 
 | Screen | Guest behaviour |
 |---|---|
-| Home | Hero card shows `LockedFeature` in place of the pass estimate, keeps "▶ Spustit ostrý test". The per-group block and "Poslední testy" are not rendered (both come from stored data). |
+| Home | Regular overview computed from the empty store (0 %, coverage 0 / N, per-group table with empty values); compact `LockedFeature` banner at the top of the hero card. "Poslední testy" does not render (empty). |
 | `/weak` | Renders heading + `LockedFeature`; no practice run is started. |
-| `/stats` | Renders heading + `LockedFeature`; `useAllProgress` is not called (component split so the hook only runs for registered users). |
+| `/stats` | Regular tabs and tables with empty values plus the compact banner. `useAllProgress({ includeProgress: false })` loads only the question bundles and never calls `/api/progress`. |
 | Practice | `mix` defaults to `'random'`. "⚖ Mix slabiny + známé" and "Hlavně slabiny" are disabled with a one-line hint "Dostupné po přihlášení" linking to `/login`. Structure and group selection work normally. |
 | Test | Unchanged. The results screen right after the test still shows (in-session data). |
 | Settings | Reset and legacy import sections are hidden. Shows the "Přihlásit se / Vytvořit účet" prompt instead of the account/logout block. |
