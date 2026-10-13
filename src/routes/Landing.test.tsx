@@ -67,6 +67,7 @@ describe('Landing', () => {
     renderLanding()
     expect(await screen.findByRole('heading', { name: 'Přihlas se nebo si vytvoř účet' })).toBeInTheDocument()
     expect(screen.getByText(/Pokrok se ale neukládá/)).toBeInTheDocument()
+    expect(screen.getByText(/žádná analytika, reklamy ani sledování/)).toBeInTheDocument()
     expect(screen.getAllByRole('link', { name: 'Pokračovat bez účtu' })).not.toHaveLength(0)
     expect(screen.queryByRole('link', { name: 'Pokračovat do trenažéru' })).not.toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Pokračovat přes Google/ })).toBeInTheDocument()

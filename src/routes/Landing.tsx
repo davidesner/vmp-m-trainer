@@ -79,6 +79,9 @@ function HeroActions() {
     return (
       <div className="max-w-xl">
         {auth('Přihlas se nebo si vytvoř účet')}
+        <p className="mt-4 text-sm text-river-line">
+          Účet je zdarma a slouží jen k uložení historie tvých pokusů, žádná analytika, reklamy ani sledování.
+        </p>
         <div className="mt-8 pt-6 border-t border-white/15">
           <GuestButton />
           <p className="mt-3 text-sm text-river-line">
