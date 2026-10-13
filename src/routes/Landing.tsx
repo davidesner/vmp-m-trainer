@@ -4,6 +4,7 @@ import { useAuth } from '../hooks/useAuth'
 import AuthOptions from '../components/AuthOptions'
 import ExplainButton from '../components/ExplainButton'
 import { LANDING_CATEGORIES, LANDING_SAMPLES } from '../lib/landingSamples'
+import { LANDING_FAQ } from '../lib/landingFaq'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
 
 const REPO_URL = 'https://github.com/davidesner/vmp-m-trainer'
@@ -323,6 +324,51 @@ function LandingAnchor() {
         <AnchorMark className="block w-full h-full" />
       </div>
     </div>
+  )
+}
+
+// FAQPage structured data built from the same items the section renders, so the two can't drift apart.
+const FAQ_JSON_LD = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: LANDING_FAQ.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+})
+
+/** Common questions about the exam and the trainer; answers stay in the HTML when collapsed, so crawlers read them. */
+function Faq() {
+  return (
+    <section className="border-t border-neutral-200">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <h2 className="font-display font-bold text-3xl sm:text-4xl">Časté otázky</h2>
+        <div className="mt-8 divide-y divide-neutral-200 border-y border-neutral-200">
+          {LANDING_FAQ.map(item => (
+            <details key={item.question} className="group py-1">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-medium text-lg marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">
+                {item.question}
+                <span aria-hidden="true" className="shrink-0 text-river text-2xl leading-none transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="pb-5 text-neutral-700 leading-relaxed">
+                <p>{item.answer}</p>
+                {item.links && (
+                  <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+                    {item.links.map(l => (
+                      <li key={l.href}>
+                        <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">{l.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: FAQ_JSON_LD }} />
+    </section>
   )
 }
 
@@ -680,6 +726,8 @@ export default function Landing() {
           </div>
         </div>
       </section>
+
+      <Faq />
 
       <section className="relative overflow-hidden bg-river-deep text-white">
         <LandingAnchor />
