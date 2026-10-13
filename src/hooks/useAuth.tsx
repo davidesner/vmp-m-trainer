@@ -8,8 +8,10 @@ interface AuthCtx {
   user: AuthUser | null
   loading: boolean
   signupEnabled: boolean
+  /** Turnstile site key for /register; undefined while /api/auth/config is loading, null when signup is off. */
+  captchaSiteKey: string | null | undefined
   login: (email: string, password: string) => Promise<AuthResult>
-  register: (email: string, password: string, code: string) => Promise<AuthResult>
+  register: (email: string, password: string, captchaToken: string) => Promise<AuthResult>
   loginAsGuest: () => Promise<AuthResult>
   logout: () => Promise<void>
   refresh: () => Promise<void>
@@ -21,12 +23,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null)
   const [loading, setLoading] = useState(true)
   const [signupEnabled, setSignupEnabled] = useState(false)
+  const [captchaSiteKey, setCaptchaSiteKey] = useState<string | null | undefined>(undefined)
 
   useEffect(() => {
     void fetch('/api/auth/config', { credentials: 'same-origin' })
       .then(res => (res.ok ? res.json() : null))
-      .then(cfg => setSignupEnabled(Boolean(cfg?.signupEnabled)))
-      .catch(() => setSignupEnabled(false))
+      .then(cfg => {
+        setSignupEnabled(Boolean(cfg?.signupEnabled))
+        setCaptchaSiteKey(typeof cfg?.captchaSiteKey === 'string' ? cfg.captchaSiteKey : null)
+      })
+      .catch(() => {
+        setSignupEnabled(false)
+        setCaptchaSiteKey(null)
+      })
   }, [])
 
   const refresh = useCallback(async () => {
@@ -58,22 +67,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { ok: false, error: res.status === 401 ? 'Špatný email nebo heslo' : `HTTP ${res.status}` }
   }, [])
 
-  const register = useCallback(async (email: string, password: string, code: string) => {
+  const register = useCallback(async (email: string, password: string, captchaToken: string) => {
     const res = await fetch('/api/auth/register', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       credentials: 'same-origin',
-      body: JSON.stringify({ email, password, code }),
+      body: JSON.stringify({ email, password, captchaToken }),
     })
     if (res.ok) {
       setUser(await res.json())
       return { ok: true }
     }
+    const body = await res.json().catch(() => null) as { error?: string } | null
+    if (body?.error === 'captcha failed') return { ok: false, error: 'Ověření, že nejsi robot, neprošlo. Zkus to znovu.' }
     const errByStatus: Record<number, string> = {
       403: 'Registrace teď není dostupná',
       409: 'Tento email už je registrovaný',
       400: 'Zkontroluj email a heslo (min. 8 znaků)',
       429: 'Příliš mnoho pokusů, zkus to za chvíli',
+      503: 'Ověření teď nefunguje, zkus to za chvíli',
     }
     return { ok: false, error: errByStatus[res.status] ?? `HTTP ${res.status}` }
   }, [])
@@ -93,7 +105,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <Ctx.Provider value={{ user, loading, signupEnabled, login, register, loginAsGuest, logout, refresh }}>
+    <Ctx.Provider value={{ user, loading, signupEnabled, captchaSiteKey, login, register, loginAsGuest, logout, refresh }}>
       {children}
     </Ctx.Provider>
   )
