@@ -65,8 +65,8 @@ describe('Landing', () => {
   it('tells guests what they are missing and keeps continuing as the secondary option', async () => {
     mockApi({ id: 'g1', email: null, guest: true })
     renderLanding()
-    expect(await screen.findByRole('heading', { name: 'Trénuješ bez účtu' })).toBeInTheDocument()
-    expect(screen.getByText(/Pokrok se ti neukládá/)).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Přihlas se nebo si vytvoř účet' })).toBeInTheDocument()
+    expect(screen.getByText(/Pokrok se ale neukládá/)).toBeInTheDocument()
     expect(screen.getAllByRole('link', { name: 'Pokračovat bez účtu' })).not.toHaveLength(0)
     expect(screen.queryByRole('link', { name: 'Pokračovat do trenažéru' })).not.toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Pokračovat přes Google/ })).toBeInTheDocument()

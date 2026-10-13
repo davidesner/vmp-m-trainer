@@ -66,13 +66,10 @@ function GuestButton() {
 function HeroActions() {
   const { user } = useAuth()
   const navigate = useNavigate()
-  const auth = (heading: string, intro?: string) => (
+  const auth = (heading: string) => (
     <div id={LOGIN_ID} className="scroll-mt-8">
-      <h2 className="font-display font-bold text-lg mb-1">{heading}</h2>
-      {intro && <p className="text-sm text-river-line mb-3 max-w-xl">{intro}</p>}
-      <div className={intro ? '' : 'mt-3'}>
-        <AuthOptions tone="dark" onSuccess={() => navigate('/app')} />
-      </div>
+      <h2 className="font-display font-bold text-lg mb-3">{heading}</h2>
+      <AuthOptions tone="dark" onSuccess={() => navigate('/app')} />
     </div>
   )
 
@@ -81,9 +78,13 @@ function HeroActions() {
   if (user?.guest) {
     return (
       <div className="max-w-xl">
-        {auth('Trénuješ bez účtu', 'Pokrok se ti neukládá, takže nevidíš odhad připravenosti a nedostaneš otázky podle svých slabin. Účet je zdarma.')}
+        {auth('Přihlas se nebo si vytvoř účet')}
         <div className="mt-8 pt-6 border-t border-white/15">
           <GuestButton />
+          <p className="mt-3 text-sm text-river-line">
+            Bez účtu máš procvičování, ostré testy i vysvětlení. Pokrok se ale neukládá,
+            takže nevidíš odhad připravenosti a nedostaneš otázky podle svých slabin.
+          </p>
         </div>
       </div>
     )
