@@ -1,6 +1,6 @@
 ---
 name: explain-vmp-question
-description: Vysvětli otázku z VMP testu (kategorie M nebo C) uživateli konverzačně, s vizualizacemi tam, kde pomohou. Aktivuj když uživatel požádá o vysvětlení otázky #ID nebo zmíní VMP test. Cílem je porozumění, ne článek — HTML pro uložení nabídni teprve potom.
+description: Vysvětli otázku z VMP testu (kategorie M, C nebo S) uživateli konverzačně, s vizualizacemi tam, kde pomohou. Aktivuj když uživatel požádá o vysvětlení otázky #ID nebo zmíní VMP test. Cílem je porozumění, ne článek — HTML pro uložení nabídni teprve potom.
 ---
 
 # Skill: Explain VMP test question

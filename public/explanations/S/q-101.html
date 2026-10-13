@@ -1,0 +1,34 @@
+<article class="vmp-explanation">
+<h2>Jádro</h2>
+<p>Vějička na vrcholu stěžně ukazuje směr <strong>zdánlivého větru</strong>, tedy větru, který skutečně cítí a "vidí" plachetnice za plavby. Je to výslednice skutečného větru a větru vzniklého pohybem lodi. Nejde o samotný skutečný vítr ani o samotný vítr z pohybu lodi dopředu.</p>
+
+<h2>Pozadí</h2>
+<p>Na plující lodi se skládají dvě proudění vzduchu: <strong>skutečný vítr</strong> (vítr, který by naměřil pozorovatel stojící na místě vůči zemi) a <strong>vítr z pohybu lodi</strong> (proudění vzduchu, které vzniká tím, že se loď pohybuje dopředu, a míří proti směru jízdy). Jejich vektorový součet je <strong>zdánlivý vítr</strong>. Právě ten působí na plachty i na vějičku, proto se plachty trimují podle zdánlivého větru.</p>
+<p>Důsledky: zdánlivý vítr je vždy "přednější" (vane z úhlu blíž k přídi) než skutečný vítr a při rychlé plavbě bývá silnější. Ve slabém větru se tak vějička stáčí výrazně do směru jízdy.</p>
+
+<h3>Vizualizace</h3>
+<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto">
+<defs>
+<marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" style="fill:#333"/></marker>
+</defs>
+<polygon points="200,150 190,190 210,190" style="fill:#c9d6e2;stroke:#333"/>
+<text x="215" y="205" style="font-size:12px">loď (jede nahoru)</text>
+<line x1="200" y1="150" x2="200" y2="80" style="stroke:#333;stroke-width:2" marker-end="url(#ah)"/>
+<text x="208" y="100" style="font-size:12px">směr jízdy</text>
+<line x1="330" y1="40" x2="205" y2="150" style="stroke:#c0392b;stroke-width:2" marker-end="url(#ah)"/>
+<text x="290" y="60" style="font-size:12px;fill:#c0392b">skutečný vítr</text>
+<line x1="200" y1="230" x2="200" y2="190" style="stroke:#2c7a3f;stroke-width:2" marker-end="url(#ah)"/>
+<text x="60" y="240" style="font-size:12px;fill:#2c7a3f">vítr z pohybu lodi (proti jízdě)</text>
+<line x1="300" y1="95" x2="205" y2="150" style="stroke:#1f4e9c;stroke-width:3" marker-end="url(#ah)"/>
+<text x="305" y="125" style="font-size:12px;fill:#1f4e9c">zdánlivý vítr</text>
+</svg>
+<p>Schéma je orientační: zdánlivý vítr je vektorový součet obou složek a vane z úhlu blíž k přídi než vítr skutečný.</p>
+
+<h2>Praktická aplikace</h2>
+<p>Vějička (nebo pramínky na plachtách) ukazuje, odkud vane vítr, který plachty skutečně obtékají. Podle ní kormidelník volí kurz vůči větru a trimér nastavuje plachty. Pamatujte, že při změně rychlosti lodi se mění i směr a síla zdánlivého větru, takže vějička se stáčí, i když se skutečný vítr nezměnil. Skutečný vítr na vějičce vyčíst nelze, ten je potřeba odvodit (např. při stojící lodi nebo výpočtem).</p>
+
+<h2>Zdroje</h2>
+<ol>
+<li>Teorie plachtění: zdánlivý a skutečný vítr (učebnice jachtingu, obecná jachtařská praxe)</li>
+</ol>
+</article>

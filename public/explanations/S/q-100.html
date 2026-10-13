@@ -1,0 +1,42 @@
+<article class="vmp-explanation">
+<h2>Jádro</h2>
+<p>Zdánlivý vítr je <strong>výsledný vítr, složený ze skutečného větru a vlastního větru</strong> (způsobeného pohybem plachetnice vpřed). Je to vítr, který na lodi skutečně cítíme a který obtéká plachty. Ostatní nabízené možnosti (protivítr v přestávkách poryvů, vítr vychýlený nakloněným trupem) s definicí nesouvisí.</p>
+
+<h2>Pozadí</h2>
+<p>Na plující lodi působí dva větry současně:</p>
+<ul>
+<li><strong>Skutečný vítr</strong> - vítr vůči zemi/vodě, tedy takový, jaký by byl cítit na kotvící lodi.</li>
+<li><strong>Vlastní vítr</strong> - proud vzduchu vzniklý pohybem lodi, míří proti směru jízdy a jeho síla odpovídá rychlosti lodi.</li>
+</ul>
+<p>Jejich vektorový součet je zdánlivý vítr. Plachty se vždy trimují podle něj, ne podle skutečného větru. Proti větru i při kurzech v bočním větru se zdánlivý vítr stáčí více na příď a je silnější než skutečný. Při kurzech po větru (vítr zezadu) se vlastní vítr od skutečného odečítá, takže zdánlivý vítr je slabší a plachetnice se zdá být v "klidu".</p>
+
+<h3>Vizualizace</h3>
+<svg viewBox="0 0 360 220" width="100%" style="max-width:420px">
+<defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" style="fill:currentColor"/></marker></defs>
+<polygon points="40,180 60,170 120,170 140,180 120,190 60,190" style="fill:none;stroke:currentColor;stroke-width:2"/>
+<line x1="140" y1="180" x2="140" y2="180" style="stroke:currentColor"/>
+<line x1="60" y1="40" x2="140" y2="40" style="stroke:currentColor;stroke-width:3" marker-end="url(#ah)"/>
+<text x="60" y="30" style="font-size:12px;fill:currentColor">skutečný vítr</text>
+<line x1="140" y1="40" x2="140" y2="40" style="stroke:currentColor"/>
+<line x1="60" y1="40" x2="60" y2="120" style="stroke:currentColor;stroke-width:3;stroke-dasharray:6 3" marker-end="url(#ah)"/>
+<text x="68" y="90" style="font-size:12px;fill:currentColor">vlastní vítr</text>
+<line x1="60" y1="40" x2="140" y2="120" style="stroke:currentColor;stroke-width:4" marker-end="url(#ah)"/>
+<text x="150" y="85" style="font-size:12px;fill:currentColor" font-weight="bold">zdánlivý vítr</text>
+<text x="150" y="205" style="font-size:12px;fill:currentColor">směr jízdy lodi vpřed</text>
+<line x1="150" y1="180" x2="230" y2="180" style="stroke:currentColor;stroke-width:2" marker-end="url(#ah)"/>
+</svg>
+<p><em>Schéma (zjednodušeně): zdánlivý vítr je výslednice skutečného větru a vlastního větru.</em></p>
+
+<h2>Praktická aplikace</h2>
+<ul>
+<li>Windex, větrná růžice a stuhy (šněry) na plachtách ukazují <strong>zdánlivý vítr</strong>, podle něj se nastavují plachty.</li>
+<li>Při obratu nebo přistání do větru se zdánlivý vítr silně změní. Plachetnice zrychlí a vítr se stočí více na příď.</li>
+<li>Při plachtění po větru se zdánlivý vítr zeslabí, loď se může zdát stabilní, ale po zatočení do boku silně zesílí. Proto je nutné s tímto efektem počítat při reefování.</li>
+<li>Rychlé plachetnice (katamarány, foily) vytvářejí vlastní vítr tak velký, že zdánlivý vítr téměř vždy přichází zpředu.</li>
+</ul>
+
+<h2>Zdroje</h2>
+<ol>
+<li>Teorie plachtění - základy aerodynamiky plachet (skutečný, vlastní a zdánlivý vítr), učební texty pro vůdce plachetnice.</li>
+</ol>
+</article>

@@ -1,0 +1,33 @@
+<article class="vmp-explanation">
+<h2>Jádro</h2>
+<p>Pro nastavení plachet je rozhodující <strong>zdánlivý vítr</strong>. Plachty obtéká vítr, který skutečně cítí plující loď, tedy složení skutečného větru a větru vyvolaného vlastním pohybem lodi. Na něj se plachty trimují.</p>
+
+<h2>Pozadí</h2>
+<p><strong>Skutečný vítr</strong> je vítr, který by měřil pozorovatel stojící v klidu vůči zemi nebo vodě. <strong>Zdánlivý vítr</strong> vznikne vektorovým součtem skutečného větru a <em>větru kurzového</em> (proudění vzduchu vyvolaného pohybem lodi, má opačný směr než kurs lodi a velikost rovnou rychlosti lodi).</p>
+<p>Plachta funguje jako křídlo. Úhel náběhu a vztlak závisí na směru a rychlosti proudění, které na plachtu skutečně dopadá, tedy na zdánlivém větru. Větrná směrovka na stěžni i větrné proužky (telltales) na plachtách ukazují právě zdánlivý vítr.</p>
+<p>Důsledky: s rostoucí rychlostí lodi se zdánlivý vítr stáčí více na příď a jeho rychlost se na ostrých kursech zvyšuje. Na kursu po větru se naopak zdánlivý vítr zeslabuje.</p>
+
+<h3>Vizualizace</h3>
+<svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto" role="img" aria-label="Vektorový trojúhelník větrů">
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker>
+</defs>
+<line x1="60" y1="60" x2="300" y2="60" style="stroke:currentColor;stroke-width:2.5" marker-end="url(#arr)"/>
+<text x="150" y="50" style="font-size:13px;fill:currentColor">skutečný vítr</text>
+<line x1="60" y1="60" x2="60" y2="200" style="stroke:currentColor;stroke-width:2.5;stroke-dasharray:6 4" marker-end="url(#arr)"/>
+<text x="68" y="140" style="font-size:13px;fill:currentColor">vítr z pohybu lodi</text>
+<line x1="300" y1="60" x2="60" y2="200" style="stroke:currentColor;stroke-width:3.5" marker-end="url(#arr)"/>
+<text x="200" y="150" style="font-size:13px;font-weight:bold;fill:currentColor">zdánlivý vítr</text>
+<polygon points="40,225 60,205 80,225 80,250 40,250" style="fill:none;stroke:currentColor;stroke-width:1.5"/>
+<text x="90" y="240" style="font-size:12px;fill:currentColor">loď (kurs dolů)</text>
+</svg>
+
+<h2>Praktická aplikace</h2>
+<p>Při trimu plachet se řídíme zdánlivým větrem: větrnými proužky na lístku a plachtě, směrovkou na stěžni a údajem větroměru. Když loď zrychlí nebo zpomalí, zdánlivý vítr se změní a plachty je třeba přetrimovat. Při přechodu z kursu po větru na ostřejší kurs vítr znatelně zesílí, což je důležité pro rozhodnutí o refování.</p>
+
+<h2>Zdroje</h2>
+<ol>
+<li>Teorie plachtění: zdánlivý a skutečný vítr, vektorový trojúhelník větrů</li>
+<li>Učebnice jachtingu (názvosloví a trim plachet), kapitola Vítr a síly na plachtách</li>
+</ol>
+</article>
