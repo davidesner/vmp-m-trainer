@@ -100,6 +100,8 @@ http://localhost:5400 — frontend (Vite). Vite proxy posílá `/api/*` do Hono 
    - `SESSION_COOKIE_SECURE=true`
    - volitelně `APP_URL` a `GOOGLE_*` / `SEZNAM_*` (viz [Přihlášení přes Google a Seznam](#přihlášení-přes-google-a-seznam))
 3. `vercel deploy`. Build step (`vercel.json`) spustí `pnpm db:migrate` a pak `pnpm build`.
+   API funkce běží ve Frankfurtu (`"regions": ["fra1"]` ve `vercel.json`), Turso DB je v `aws-eu-west-1`
+   (Irsko). Bez nastavení regionu by Vercel pouštěl funkce v USA (`iad1`).
 4. Uživatele zakládat lokálně proti hostované DB:
    ```bash
    DATABASE_URL=libsql://... DATABASE_AUTH_TOKEN=... pnpm user:add <email>

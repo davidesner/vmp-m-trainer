@@ -64,7 +64,8 @@ export default function Privacy() {
           <h2>Kdo k nim má přístup</h2>
           <p>
             Provozovatel a poskytovatelé infrastruktury, na které aplikace běží: Vercel Inc. (hosting) a
-            Turso / ChiselStrike Inc. (databáze). Jejich servery mohou být mimo EU; předávání se řídí jejich
+            Turso / ChiselStrike Inc. (databáze). Data se zpracovávají a ukládají v EU (servery ve Frankfurtu
+            a v Irsku). Oba poskytovatelé jsou americké společnosti, případný přístup z USA se řídí jejich
             smluvními podmínkami a standardními smluvními doložkami EU. Při přihlášení přes Google nebo
             Seznam se řídí zpracování na jejich straně jejich vlastními zásadami.
           </p>
