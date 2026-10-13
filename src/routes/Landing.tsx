@@ -203,11 +203,7 @@ export default function Landing() {
           <path d="M0 32 Q 50 12 100 32 T 200 32 T 300 32 T 400 32 T 500 32 T 600 32 T 700 32 T 800 32 T 900 32 T 1000 32 T 1100 32 T 1200 32 V64 H0 Z" fill="currentColor" />
         </svg>
 
-        <header className="relative max-w-6xl mx-auto px-4 sm:px-6 py-5">
-          <span className="font-display font-bold text-lg">Trenažér vůdce malého plavidla</span>
-        </header>
-
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-24 sm:pt-14 sm:pb-32 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-24 sm:pt-20 sm:pb-32 grid lg:grid-cols-[1fr_minmax(0,32rem)] gap-12 lg:gap-16 items-start">
           <div className="lg:pt-6">
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl leading-[1.05] tracking-tight">
               Otázky ke zkoušce vůdce malého plavidla (VMP), které se vracejí, dokud je neumíš.
