@@ -45,10 +45,13 @@ const LOGIN_ID = 'prihlaseni'
 
 const PRIMARY_CTA = 'inline-block text-center whitespace-nowrap px-7 py-4 rounded-md bg-primary text-river-deep font-display font-bold text-lg hover:bg-[#9ad455] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-60 transition-colors'
 
+const SECONDARY_CTA = 'inline-block text-center whitespace-nowrap px-6 py-4 rounded-md border border-white/40 text-white font-medium hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors'
+
 /** Main call to action: start as a guest, or go straight into the app when already signed in. */
 function GuestButton() {
   const { user } = useAuth()
   const { start, busy, error } = useGuestStart()
+  if (user?.guest) return <Link to="/app" className={SECONDARY_CTA}>Pokračovat bez účtu</Link>
   if (user) return <Link to="/app" className={PRIMARY_CTA}>Pokračovat do trenažéru</Link>
   return (
     <>
@@ -63,33 +66,53 @@ function GuestButton() {
 function HeroActions() {
   const { user } = useAuth()
   const navigate = useNavigate()
-  const signedIn = Boolean(user && !user.guest)
+  const auth = (intro?: string) => (
+    <div id={LOGIN_ID} className="scroll-mt-8">
+      <h2 className="font-display font-bold text-lg mb-1">Chceš ukládat pokrok?</h2>
+      {intro && <p className="text-sm text-river-line mb-3 max-w-xl">{intro}</p>}
+      <div className={intro ? '' : 'mt-3'}>
+        <AuthOptions tone="dark" onSuccess={() => navigate('/app')} />
+      </div>
+    </div>
+  )
+
+  if (user && !user.guest) return <GuestButton />
+
+  if (user?.guest) {
+    return (
+      <div className="max-w-xl">
+        {auth('Teď trénuješ bez účtu, takže se pokrok neukládá a otázky podle slabin ani odhad připravenosti nejsou dostupné. Účet je zdarma.')}
+        <div className="mt-8 pt-6 border-t border-white/15">
+          <GuestButton />
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div>
       <GuestButton />
-      {!user && (
-        <p className="mt-3 text-sm text-river-line max-w-xl">
-          Bez účtu máš procvičování, ostré testy i vysvětlení.
-          Sledování pokroku a otázky podle slabin potřebují účet. Ten je zdarma a slouží jen k uložení
-          historie tvých pokusů, žádná analytika, reklamy ani sledování.
-        </p>
-      )}
-      {!signedIn && <div id={LOGIN_ID} className="mt-8 pt-6 border-t border-white/15 max-w-xl scroll-mt-8">
-        <h2 className="font-display font-bold text-lg mb-3">Chceš ukládat pokrok?</h2>
-        <AuthOptions tone="dark" onSuccess={() => navigate('/app')} />
-      </div>}
+      <p className="mt-3 text-sm text-river-line max-w-xl">
+        Bez účtu máš procvičování, ostré testy i vysvětlení.
+        Sledování pokroku a otázky podle slabin potřebují účet. Ten je zdarma a slouží jen k uložení
+        historie tvých pokusů, žádná analytika, reklamy ani sledování.
+      </p>
+      <div className="mt-8 pt-6 border-t border-white/15 max-w-xl">{auth()}</div>
     </div>
   )
 }
 
-function BottomLoginButton() {
+function BottomActions() {
   const { user } = useAuth()
-  if (user && !user.guest) return null
-  return (
-    <button type="button" onClick={focusLogin}
-      className="px-6 py-4 rounded-md border border-white/40 text-white font-medium whitespace-nowrap hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors">
-      Přihlásit se
+  const login = (primary: boolean) => (
+    <button type="button" onClick={focusLogin} className={primary ? PRIMARY_CTA : SECONDARY_CTA}>
+      {primary ? 'Vytvořit účet nebo se přihlásit' : 'Přihlásit se'}
     </button>
+  )
+  return (
+    <div className="flex flex-col sm:flex-row gap-3">
+      {user?.guest ? <>{login(true)}<GuestButton /></> : <><GuestButton />{!user && login(false)}</>}
+    </div>
   )
 }
 
@@ -376,10 +399,7 @@ export default function Landing() {
           <h2 className="font-display font-bold text-3xl sm:text-4xl max-w-md leading-tight">
             Celý trenažér je zdarma, s účtem i bez něj.
           </h2>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <GuestButton />
-            <BottomLoginButton />
-          </div>
+          <BottomActions />
         </div>
       </section>
 

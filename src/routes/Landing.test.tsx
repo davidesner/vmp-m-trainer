@@ -61,4 +61,13 @@ describe('Landing', () => {
     expect(screen.queryByRole('button', { name: 'Přihlásit se emailem' })).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Vyzkoušet bez přihlášení' })).not.toBeInTheDocument()
   })
+
+  it('tells guests what they are missing and keeps continuing as the secondary option', async () => {
+    mockApi({ id: 'g1', email: null, guest: true })
+    renderLanding()
+    expect(await screen.findByText(/Teď trénuješ bez účtu/)).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: 'Pokračovat bez účtu' })).not.toHaveLength(0)
+    expect(screen.queryByRole('link', { name: 'Pokračovat do trenažéru' })).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Pokračovat přes Google/ })).toBeInTheDocument()
+  })
 })
