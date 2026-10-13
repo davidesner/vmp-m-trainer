@@ -77,7 +77,8 @@ export default function Privacy() {
             <li>
               údaje pro ověření, že nejsi robot (např. IP adresa a technické údaje o prohlížeči), které při
               registraci e-mailem a při spuštění trenažéru bez účtu zpracovává služba Cloudflare Turnstile
-              (Cloudflare, Inc., USA). Načítá se teprve po kliknutí na příslušné tlačítko.
+              (Cloudflare, Inc., USA). Na registrační stránce se načítá s formulářem, u trenažéru bez účtu
+              teprve po kliknutí na tlačítko.
             </li>
           </ul>
           <p>
