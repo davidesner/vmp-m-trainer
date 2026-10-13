@@ -61,13 +61,24 @@ export default function Privacy() {
             Údaje neprodáváme, nepoužíváme k reklamě ani k profilování.
           </p>
 
-          <h2>Kdo k nim má přístup</h2>
+          <h2>Kdo k nim má přístup a kde jsou</h2>
           <p>
             Provozovatel a poskytovatelé infrastruktury, na které aplikace běží: Vercel Inc. (hosting) a
-            Turso / ChiselStrike Inc. (databáze). Data se zpracovávají a ukládají v EU (servery ve Frankfurtu
-            a v Irsku). Oba poskytovatelé jsou americké společnosti, případný přístup z USA se řídí jejich
-            smluvními podmínkami a standardními smluvními doložkami EU. Při přihlášení přes Google nebo
-            Seznam se řídí zpracování na jejich straně jejich vlastními zásadami.
+            Turso / ChiselStrike Inc. (databáze). Údaje o účtu a průběhu procvičování se ukládají a
+            zpracovávají v EU: databáze běží v Irsku, aplikační server ve Frankfurtu.
+          </p>
+          <p>Mimo EU se mohou dostat:</p>
+          <ul>
+            <li>
+              provozní záznamy hostingu (např. IP adresa a čas požadavku), které Vercel zpracovává podle
+              svých podmínek, a to i v USA;
+            </li>
+            <li>text zpětné vazby k otázkám, který se zveřejňuje na GitHubu (GitHub Inc., USA).</li>
+          </ul>
+          <p>
+            Vercel i Turso jsou americké společnosti; zpracování se řídí jejich smluvními podmínkami a
+            standardními smluvními doložkami EU. Při přihlášení přes Google nebo Seznam se zpracování na
+            jejich straně řídí jejich vlastními zásadami.
           </p>
 
           <h2>Jak dlouho je uchováváme</h2>
