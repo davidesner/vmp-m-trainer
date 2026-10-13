@@ -240,20 +240,26 @@ export default function Landing() {
         </div>
       </section>
 
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24 grid lg:grid-cols-[1fr_minmax(0,34rem)] gap-12 lg:gap-20 items-center">
+        <div>
+          <h2 className="font-display font-bold text-3xl sm:text-4xl leading-tight">Procvičuj, co potřebuješ</h2>
+          <p className="mt-5 text-lg leading-relaxed text-neutral-700 max-w-xl">
+            Vyber si oblasti, které chceš procvičit, třeba jen noční signalizaci nebo první pomoc, a kolik otázek chceš.
+            Nebo nech trenažér namíchat otázky ve stejném poměru jako u zkoušky.
+          </p>
+        </div>
+        <img src="/landing/practice-areas.webp" width={1200} height={1042} loading="lazy"
+          alt="Obrazovka procvičování s vybranými oblastmi Noční a denní signalizace a Základy první pomoci"
+          className="w-full h-auto rounded-xl border border-river-line shadow-[0_20px_50px_-24px_rgba(11,43,53,0.45)]" />
+      </section>
+
       <section className="bg-river-mist">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid md:grid-cols-3 gap-10">
           <div>
             <h3 className="font-display font-bold text-xl">Otázky podle tvých slabin</h3>
             <p className="mt-3 text-neutral-700 leading-relaxed">
               Procvičování míchá hlavně otázky, ve kterých chybuješ, a ty, které jsi ještě neviděl.
               Co už umíš, se vrací jen občas, aby se to nevykouřilo z hlavy. Funguje s účtem.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-display font-bold text-xl">Procvičuj, co potřebuješ</h3>
-            <p className="mt-3 text-neutral-700 leading-relaxed">
-              Vyber si oblasti, které chceš procvičit, třeba jen noční signalizaci nebo první pomoc.
-              Nebo nech trenažér namíchat otázky ve stejném poměru jako u zkoušky.
             </p>
           </div>
           <div>
