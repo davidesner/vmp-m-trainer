@@ -6,6 +6,7 @@ import type { QuestionsBundle } from '../types'
 import Home from './Home'
 import Weak from './Weak'
 import Stats from './Stats'
+import Settings from './Settings'
 import { ActiveTestProvider } from '../hooks/useActiveTest'
 
 const allProgressSpy = vi.hoisted(() => vi.fn())
@@ -67,6 +68,13 @@ describe('guest locked screens', () => {
     expect(screen.getByText(LOCK).closest('[data-guest-preview]')).toBeNull()
     expect(allProgressSpy).toHaveBeenCalled()
     for (const [opts] of allProgressSpy.mock.calls) expect(opts).toEqual({ includeProgress: false })
+  })
+
+  it('Settings explains what signing in gives here, not the stats promise', async () => {
+    renderRoute(Settings)
+    expect(screen.getByText('Nejsi přihlášen. Po přihlášení tu najdeš nastavení účtu a správu svého progressu.')).toBeInTheDocument()
+    expect(screen.queryByText(LOCK)).not.toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Přihlásit se' })).toHaveAttribute('href', '/login')
   })
 
   it('lock offers login and, when enabled, register', async () => {

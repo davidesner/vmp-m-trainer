@@ -38,7 +38,7 @@ export default function Settings() {
   if (isGuest) return (
     <div className="max-w-2xl p-4 md:p-8">
       <h2 className="text-2xl font-bold mb-6">Nastavení</h2>
-      <LockedFeature />
+      <LockedFeature message="Nejsi přihlášen. Po přihlášení tu najdeš nastavení účtu a správu svého progressu." />
     </div>
   )
 
