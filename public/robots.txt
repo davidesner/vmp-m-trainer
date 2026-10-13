@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+# The app itself sits behind sign-in or a guest session; only the public pages are worth indexing.
+Disallow: /app
+Disallow: /login
+Disallow: /register
+Disallow: /api/
+
+Sitemap: https://vmp-trenazer.cz/sitemap.xml

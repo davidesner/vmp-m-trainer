@@ -13,9 +13,13 @@ import Login from './routes/Login'
 import Register from './routes/Register'
 import Landing from './routes/Landing'
 
+// Pages that are only useful once inside the app; React 19 hoists this <meta> into <head>.
+const NoIndex = () => <meta name="robots" content="noindex" />
+
 function Shell() {
   return (
     <div className="flex h-screen">
+      <NoIndex />
       <Sidebar />
       <main className="flex-1 overflow-auto pt-14 md:pt-0"><Outlet /></main>
     </div>
@@ -31,8 +35,8 @@ export default function App() {
       <ActiveTestProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<><NoIndex /><Login /></>} />
+          <Route path="/register" element={<><NoIndex /><Register /></>} />
           <Route path="/" element={<Landing />} />
           <Route path="/app" element={<RequireAuth><Shell /></RequireAuth>}>
             <Route index element={<Home />} />
