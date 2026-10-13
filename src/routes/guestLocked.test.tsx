@@ -32,7 +32,7 @@ vi.mock('../hooks/useProgress', () => ({
 vi.mock('../hooks/useAllProgress', () => ({
   useAllProgress: (opts?: { includeProgress?: boolean }) => {
     allProgressSpy(opts)
-    return { bundles: {}, progressByTest: { M: { questions: {}, testHistory: [] }, C: { questions: {}, testHistory: [] } }, loading: false, error: null }
+    return { bundles: { M: questionsStub.data, C: questionsStub.data }, progressByTest: { M: { questions: {}, testHistory: [] }, C: { questions: {}, testHistory: [] } }, loading: false, error: null }
   },
 }))
 vi.mock('../components/CategorySubtitle', () => ({ default: () => null }))
@@ -50,6 +50,8 @@ describe('guest locked screens', () => {
     expect(screen.getByRole('link', { name: /Spustit ostrý test/ })).toHaveAttribute('href', '/test')
     expect(screen.getByText('Odhad úspěchu u zkoušky')).toBeInTheDocument()
     expect(screen.getByText('Po skupinách')).toBeInTheDocument()
+    expect(document.querySelector('[data-guest-overlay]')).not.toBeNull()
+    expect(screen.getByText(LOCK).closest('[data-guest-preview]')).toBeNull()
   })
 
   it('Weak shows the lock instead of starting practice', async () => {
@@ -61,6 +63,8 @@ describe('guest locked screens', () => {
     renderRoute(Stats)
     expect(screen.getByText(LOCK)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Všechny' })).toBeInTheDocument()
+    expect(document.querySelector('[data-guest-overlay]')).not.toBeNull()
+    expect(screen.getByText(LOCK).closest('[data-guest-preview]')).toBeNull()
     expect(allProgressSpy).toHaveBeenCalled()
     for (const [opts] of allProgressSpy.mock.calls) expect(opts).toEqual({ includeProgress: false })
   })

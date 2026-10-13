@@ -5,6 +5,7 @@ import { useAllProgress } from '../hooks/useAllProgress'
 import { TESTS, TEST_IDS, type TestId } from '../lib/tests'
 import { useGuestStatus } from '../hooks/useAuth'
 import LockedFeature from '../components/LockedFeature'
+import GuestPreview from '../components/GuestPreview'
 
 type Tab = TestId | 'all'
 
@@ -62,18 +63,19 @@ export default function Stats() {
       </div>
 
       {tab === 'all' ? (
-        <AllTab bundles={bundles} progressByTest={progressByTest} />
+        <AllTab bundles={bundles} progressByTest={progressByTest} preview={isGuest} />
       ) : (
         <PerCategoryTab
           bundle={bundles[tab] ?? null}
           store={progressByTest[tab] ?? { questions: {}, testHistory: [] }}
+          preview={isGuest}
         />
       )}
     </div>
   )
 }
 
-function PerCategoryTab({ bundle, store }: { bundle: QuestionsBundle | null; store: ProgressStore }) {
+function PerCategoryTab({ bundle, store, preview }: { bundle: QuestionsBundle | null; store: ProgressStore; preview: boolean }) {
   if (!bundle) return <div className="text-sm text-neutral-500">Bundle se nepodařilo načíst.</div>
 
   const perGroup: Record<GroupId, { count: number; attempts: number; correct: number; lastSeen: string | null }> = {}
@@ -96,7 +98,8 @@ function PerCategoryTab({ bundle, store }: { bundle: QuestionsBundle | null; sto
 
   return (
     <>
-      <div className="bg-white border border-neutral-200 rounded p-4 mb-6">
+      <GuestPreview active={preview} className="mb-6">
+      <div className="bg-white border border-neutral-200 rounded p-4">
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Po skupinách</div>
 
         <div className="sm:hidden flex flex-col gap-3">
@@ -147,7 +150,9 @@ function PerCategoryTab({ bundle, store }: { bundle: QuestionsBundle | null; sto
           </table>
         </div>
       </div>
+      </GuestPreview>
 
+      <GuestPreview active={preview}>
       <div className="bg-white border border-neutral-200 rounded p-4">
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-2">Poslední ostré testy</div>
         {history.length === 0 ? <div className="text-sm text-neutral-500">Zatím žádné testy.</div> : (
@@ -165,15 +170,17 @@ function PerCategoryTab({ bundle, store }: { bundle: QuestionsBundle | null; sto
           </div>
         )}
       </div>
+      </GuestPreview>
     </>
   )
 }
 
 function AllTab({
-  bundles, progressByTest,
+  bundles, progressByTest, preview,
 }: {
   bundles: Partial<Record<TestId, QuestionsBundle>>
   progressByTest: Record<TestId, ProgressStore>
+  preview: boolean
 }) {
   return (
     <div className="grid sm:grid-cols-2 gap-4">
@@ -197,7 +204,8 @@ function AllTab({
         const passed = lastTest ? lastTest.score >= bundle.passing.score : null
 
         return (
-          <div key={id} className="bg-white border border-neutral-200 rounded-lg p-5">
+          <GuestPreview key={id} active={preview}>
+          <div className="bg-white border border-neutral-200 rounded-lg p-5">
             <div className="flex items-baseline justify-between gap-2 mb-3">
               <div>
                 <div className="text-xs uppercase tracking-wide text-neutral-500">Kategorie {bundle.testId}</div>
@@ -224,6 +232,7 @@ function AllTab({
               </dd>
             </dl>
           </div>
+          </GuestPreview>
         )
       })}
     </div>

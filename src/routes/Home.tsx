@@ -5,6 +5,7 @@ import { useProgress } from '../hooks/useProgress'
 import { estimatePass, coverage } from '../lib/passProbability'
 import CategorySubtitle from '../components/CategorySubtitle'
 import LockedFeature from '../components/LockedFeature'
+import GuestPreview from '../components/GuestPreview'
 import { useGuestStatus } from '../hooks/useAuth'
 
 export default function Home() {
@@ -35,10 +36,11 @@ export default function Home() {
     <div className="p-4 md:p-8 max-w-5xl">
       <h2 className="text-2xl font-bold mb-1">Přehled</h2>
       <CategorySubtitle withParams className="mb-6" />
+      {isGuest && <div className="mb-4"><LockedFeature compact /></div>}
 
       {/* Hero: pass probability + expected score + CTA */}
-      <div className="bg-white border border-neutral-200 rounded-lg overflow-hidden mb-6">
-        {isGuest && <div className="px-5 md:px-6 pt-5 md:pt-6"><LockedFeature compact /></div>}
+      <GuestPreview active={isGuest} className="mb-6">
+      <div className="bg-white border border-neutral-200 rounded-lg overflow-hidden">
         <div className="p-5 md:p-6 flex flex-col sm:flex-row items-start sm:justify-between gap-4 sm:gap-6">
           <div>
             <div className="text-xs uppercase tracking-wide text-neutral-500 mb-1">Odhad úspěchu u zkoušky</div>
@@ -54,7 +56,7 @@ export default function Home() {
               Pokrytí otázek: <strong>{cov.overall.seen} / {cov.overall.total}</strong> ({covOverallPct}%)
             </div>
           </div>
-          <Link to="/test" className="w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition shrink-0">
+          <Link to="/test" className="relative z-10 w-full sm:w-auto text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition shrink-0">
             ▶ Spustit ostrý test
           </Link>
         </div>
@@ -64,8 +66,11 @@ export default function Home() {
         </div>
       </div>
 
+      </GuestPreview>
+
       {/* Per-group breakdown */}
-      <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-5 mb-6">
+      <GuestPreview active={isGuest} className="mb-6">
+      <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-5">
         <div className="text-xs uppercase tracking-wide text-neutral-500 mb-3">Po skupinách</div>
 
         {/* Mobile: stacked cards */}
@@ -135,6 +140,8 @@ export default function Home() {
           </tbody>
         </table>
       </div>
+
+      </GuestPreview>
 
       {/* Recent tests */}
       {recent.length > 0 && (
