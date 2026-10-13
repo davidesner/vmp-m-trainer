@@ -174,23 +174,36 @@ function Seabed() {
   )
 }
 
+// Share of the closing panel's scroll spent descending; the rest is spent tipping over onto the seabed.
+const TOUCHDOWN_AT = 0.8
+// How far the anchor tips over to the left once it rests on the seabed, in degrees.
+const TIP_ANGLE = -28
+// Pivot for tipping: the bottom of the anchor's arc (y = 28 of the 32-unit viewBox).
+const ARC_BOTTOM = 28 / 32
+// Extra chain above the panel's top edge, so the rotated chain still runs out of the panel.
+const CHAIN_OVERHANG = 400
+
 /**
  * The same anchor arriving in the closing panel: it comes down on its chain
- * from the panel's top edge as the panel scrolls into view and settles on the
- * seabed exactly when the page reaches its end.
+ * from the panel's top edge as the panel scrolls into view, touches the seabed
+ * and, by the time the page reaches its end, tips over onto its left fluke
+ * the way a dropped anchor settles. Chain and anchor rotate together, so the
+ * chain stays on the ring and leads off diagonally.
  */
 function LandingAnchor() {
   const layerRef = useRef<HTMLDivElement>(null)
+  const rigRef = useRef<HTMLDivElement>(null)
   const chainRef = useRef<SVGSVGElement>(null)
   const linksRef = useRef<SVGPatternElement>(null)
   const anchorRef = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
     const layer = layerRef.current
+    const rig = rigRef.current
     const chain = chainRef.current
     const links = linksRef.current
     const anchor = anchorRef.current
-    if (!layer || !chain || !links || !anchor) return
+    if (!layer || !rig || !chain || !links || !anchor) return
     let frame = 0
 
     const update = () => {
@@ -207,12 +220,18 @@ function LandingAnchor() {
         : 1
       const above = -size
       const landed = panel.height - SEABED_REST - size
-      const y = above + (landed - above) * progress
+      const descent = Math.min(1, progress / TOUCHDOWN_AT)
+      const tip = Math.max(0, (progress - TOUCHDOWN_AT) / (1 - TOUCHDOWN_AT))
+      const easedTip = 1 - (1 - tip) ** 2  // eases out as it comes to rest
+      const y = above + (landed - above) * descent
       const chainLength = Math.max(0, y + size * RING_TOP)
 
-      chain.style.height = `${chainLength}px`
+      chain.style.top = `${-CHAIN_OVERHANG}px`
+      chain.style.height = `${chainLength + CHAIN_OVERHANG}px`
       links.setAttribute('y', String(chainLength % LINK_PITCH))
       anchor.style.transform = `translateY(${y}px)`
+      rig.style.transformOrigin = `50% ${y + size * ARC_BOTTOM}px`
+      rig.style.transform = `rotate(${TIP_ANGLE * easedTip}deg)`
     }
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
 
@@ -230,7 +249,9 @@ function LandingAnchor() {
   return (
     <div ref={layerRef} aria-hidden="true"
       className="hidden min-[1400px]:motion-safe:block absolute inset-y-0 right-[calc((100%_-_72rem)/4_+_0.75rem_-_5rem)] w-40 pointer-events-none text-[#5f8f9c] opacity-35">
-      <AnchorRig chainRef={chainRef} linksRef={linksRef} anchorRef={anchorRef} />
+      <div ref={rigRef} className="absolute inset-0">
+        <AnchorRig chainRef={chainRef} linksRef={linksRef} anchorRef={anchorRef} />
+      </div>
     </div>
   )
 }
