@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import AuthOptions from '../components/AuthOptions'
 
@@ -48,6 +48,9 @@ export default function Login() {
             className="w-full border border-neutral-300 rounded py-2 text-sm text-neutral-700 hover:bg-neutral-50 disabled:opacity-50">
             Pokračovat bez přihlášení
           </button>
+          <p className="mt-4 text-xs text-neutral-500 text-center">
+            <Link to="/ochrana-osobnich-udaju" className="hover:underline">Ochrana osobních údajů</Link>
+          </p>
         </div>
       </div>
     </div>
