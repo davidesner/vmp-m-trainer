@@ -734,8 +734,11 @@ export default function Landing() {
               {LANDING_CATEGORIES.map(c => (
                 <tr key={c.id} className="border-b border-neutral-100 align-baseline">
                   <td className="py-4 pr-4">
-                    <span className="font-display font-bold text-2xl text-river mr-3">{c.id}</span>
-                    <span className="font-medium">{c.name}</span>
+                    {/* Plain <a>: /testy/* are static pages built by scripts/build-seo-pages.mjs, not SPA routes. */}
+                    <a href={`/testy/${c.id.toLowerCase()}`} className="group">
+                      <span className="font-display font-bold text-2xl text-river mr-3">{c.id}</span>
+                      <span className="font-medium group-hover:underline underline-offset-2">{c.name}</span>
+                    </a>
                   </td>
                   <td className="py-4 px-4 text-right tabular-nums">{c.questions}</td>
                   <td className="py-4 px-4 text-right tabular-nums">{c.testSize} otázek</td>
@@ -813,6 +816,7 @@ export default function Landing() {
           <a href="https://github.com/davidesner" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-neutral-800">David Esner</a>, květen 2026
         </span>
         <div className="flex flex-col sm:flex-row gap-x-6 gap-y-2">
+          <a href="/kapitanske-zkousky" className="hover:text-neutral-800">Kapitánské zkoušky: všechny otázky</a>
           <Link to="/ochrana-osobnich-udaju" className="hover:text-neutral-800">Ochrana osobních údajů</Link>
           <a href={COFFEE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-neutral-800">
             <CoffeeCup />

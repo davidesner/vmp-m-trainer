@@ -7,6 +7,9 @@ Trenažér není oficiální aplikace Státní plavební správy. Formát zkouš
 ## Trenažér
 
 - [Úvodní stránka](https://vmp-trenazer.cz/): popis funkcí, ukázková otázka s vysvětlením, kategorie a časté otázky
+- [Kapitánské zkoušky](https://vmp-trenazer.cz/kapitanske-zkousky): formát testu pro každou kategorii a přehled všech otázek podle oblastí
+- [Testy kategorie M](https://vmp-trenazer.cz/testy/m), [S](https://vmp-trenazer.cz/testy/s), [C](https://vmp-trenazer.cz/testy/c): složení testu po oblastech a odkazy na otázky
+- Otázky podle oblastí (`/otazky/<kategorie>/<oblast>`) a jednotlivé otázky s vysvětlením a zdroji (`/otazky/<kategorie>/<oblast>/<číslo>`); úplný seznam je v [sitemapě](https://vmp-trenazer.cz/sitemap.xml)
 - [Zdrojový kód](https://github.com/davidesner/vmp-m-trainer): open source repozitář na GitHubu
 
 ## Oficiální zdroje
