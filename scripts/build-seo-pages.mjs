@@ -278,7 +278,7 @@ function asset(from, file) {
 
 function renderPage(page) {
   const link = to => href(page.path, to)
-  const canonical = SITE + page.path
+  const canonical = page.notFound ? null : SITE + page.path
   const crumbs = [{ name: 'Trenažér VMP', path: '/' }, ...page.breadcrumbs]
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -294,19 +294,16 @@ function renderPage(page) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(page.title)}</title>
 <meta name="description" content="${esc(page.description)}">
-<link rel="canonical" href="${canonical}">
-${page.noindex ? '<meta name="robots" content="noindex">\n' : ''}<meta name="theme-color" content="#0b2b35">
+${canonical ? `<link rel="canonical" href="${canonical}">\n` : ''}${page.noindex ? '<meta name="robots" content="noindex">\n' : ''}<meta name="theme-color" content="#0b2b35">
 <link rel="icon" type="image/svg+xml" href="${RELATIVE ? SITE : ''}/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Trenažér VMP">
 <meta property="og:locale" content="cs_CZ">
-<meta property="og:url" content="${canonical}">
-<meta property="og:title" content="${esc(page.title)}">
+${canonical ? `<meta property="og:url" content="${canonical}">\n` : ''}<meta property="og:title" content="${esc(page.title)}">
 <meta property="og:description" content="${esc(page.description)}">
 <meta property="og:image" content="${SITE}/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+${page.notFound ? '' : `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n`}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${asset(page.path, '/seo.css')}">
@@ -316,10 +313,9 @@ ${page.noindex ? '<meta name="robots" content="noindex">\n' : ''}<meta name="the
 <a class="brand" href="${link('/')}">Trenažér VMP</a>
 <nav class="topnav"><a href="${link(urls.hub)}">Kapitánské zkoušky</a>${nav}</nav>
 </div></header>
-<nav class="wrap crumbs" aria-label="Drobečková navigace"><ol>${crumbs.map((c, i) => i === crumbs.length - 1
+${page.notFound ? '' : `<nav class="wrap crumbs" aria-label="Drobečková navigace"><ol>${crumbs.map((c, i) => i === crumbs.length - 1
     ? `<li aria-current="page">${esc(c.name)}</li>`
-    : `<li><a href="${link(c.path)}">${esc(c.name)}</a></li>`).join('')}</ol></nav>
-<main class="wrap">
+    : `<li><a href="${link(c.path)}">${esc(c.name)}</a></li>`).join('')}</ol></nav>\n`}<main class="wrap">
 ${body}
 </main>
 <footer class="foot"><div class="wrap">
@@ -515,6 +511,26 @@ for (const page of pages) {
   fs.writeFileSync(path.join(dir, 'index.html'), html)
   written++
 }
+
+// Vercel serves dist/404.html with status 404 for every path that matches no file and no rewrite.
+// It is served at any depth, so its links stay root-relative (in --relative previews they resolve from the root).
+fs.writeFileSync(path.join(OUT, '404.html'), renderPage({
+  path: '/',
+  notFound: true,
+  noindex: true,
+  title: 'Stránka nenalezena | Trenažér VMP',
+  description: 'Tahle stránka neexistuje. Pokračuj na testy a otázky ke zkoušce vůdce malého plavidla.',
+  breadcrumbs: [],
+  body: link => `
+<h1>Stránka nenalezena</h1>
+<p class="lead">Tahle adresa neexistuje, nebo se přesunula. Otázky a testy najdeš tady:</p>
+<ul>
+<li><a href="${link(urls.hub)}">Kapitánské zkoušky: formát testů a všechny otázky</a></li>
+${categories.map(c => `<li><a href="${link(urls.category(c))}">Testy kategorie ${c.id}: ${esc(c.bundle.name)}</a></li>`).join('\n')}
+</ul>
+${cta(link)}
+`,
+}))
 
 const sitemapEntries = [{ path: '/', lastmod: latest }, ...pages.filter(p => !p.noindex)]
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

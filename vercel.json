@@ -16,6 +16,7 @@
     { "source": "/kapitanske-zkousky", "destination": "/kapitanske-zkousky/index.html" },
     { "source": "/:section(testy|otazky)/:path+", "destination": "/:section/:path+/index.html" },
     { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/((?!api|explanations|data|assets|landing|favicon|apple-touch-icon|og-image|robots\\.txt|sitemap\\.xml|llms\\.txt|seo\\.css|kapitanske-zkousky|testy|otazky).+)", "destination": "/spa.html" }
+    { "source": "/:page(login|register|ochrana-osobnich-udaju|app|test|practice|weak|stats|settings)", "destination": "/spa.html" },
+    { "source": "/app/:path*", "destination": "/spa.html" }
   ]
 }
