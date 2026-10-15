@@ -7,6 +7,7 @@ import ExplainButton from '../components/ExplainButton'
 import { LANDING_CATEGORIES, LANDING_SAMPLES } from '../lib/landingSamples'
 import { LANDING_FAQ } from '../lib/landingFaq'
 import { shuffleQuestionOptions } from '../lib/shuffleOptions'
+import { ACCOUNT_NOTE, GUEST_NOTE } from '../lib/accountCopy'
 
 const REPO_URL = 'https://github.com/davidesner/vmp-m-trainer'
 const COFFEE_URL = 'https://buymeacoffee.com/davidesner'
@@ -488,15 +489,10 @@ function HeroActions() {
     return (
       <div className="max-w-xl">
         {auth('Přihlas se nebo si vytvoř účet')}
-        <p className="mt-4 text-sm text-river-line">
-          Účet je zdarma a slouží jen k uložení historie tvých pokusů, žádná analytika, reklamy ani sledování.
-        </p>
+        <p className="mt-4 text-sm text-river-line">{ACCOUNT_NOTE}</p>
         <div className="mt-8 pt-6 border-t border-white/15">
           <GuestButton />
-          <p className="mt-3 text-sm text-river-line">
-            Bez účtu máš procvičování, ostré testy i vysvětlení. Pokrok se ale neukládá,
-            takže nevidíš odhad připravenosti a nedostaneš otázky podle svých slabin.
-          </p>
+          <p className="mt-3 text-sm text-river-line">{GUEST_NOTE}</p>
         </div>
       </div>
     )
