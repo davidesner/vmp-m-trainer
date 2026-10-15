@@ -23,6 +23,8 @@ tells the truth, and update it in the same change. In particular:
   landing page and `/login`. A provider's button is enabled when `/api/auth/config` reports it configured
   (`GOOGLE_*` / `SEZNAM_*` env vars); the backend is `server/auth/oauth.ts` and `server/auth/identities.ts`.
 - **Changed routes**: the landing page links into the app under `/app`.
+  `vercel.json` rewrites only the routes in `src/App.tsx` to `spa.html` (`/app/*` plus the listed top-level paths);
+  any other path gets the generated `404.html` with status 404. A new top-level route must be added there.
 
 ## Public SEO pages are generated, not written
 
