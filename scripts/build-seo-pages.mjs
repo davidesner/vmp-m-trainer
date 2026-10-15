@@ -331,8 +331,11 @@ ${body}
 `
 }
 
-const cta = (link, text = 'Procvičuj otázky nanečisto, zdarma a bez registrace.') =>
-  `<aside class="cta"><p>${text}</p><a class="btn" href="${link('/')}">Spustit trenažér</a></aside>`
+// /app is the trainer: signed-in visitors go straight in, everyone else gets /login with both sign-in and
+// "Pokračovat bez přihlášení", which then continues into the app.
+const APP_URL = RELATIVE ? `${SITE}/app` : '/app'
+const cta = (_link, text = 'Procvičuj otázky nanečisto, zdarma, s účtem i bez něj.') =>
+  `<aside class="cta"><p>${text}</p><a class="btn" href="${APP_URL}" rel="nofollow">Spustit trenažér</a></aside>`
 
 function segmentsOf(c) {
   // testStructure says how many questions of the real test come from which topics.
