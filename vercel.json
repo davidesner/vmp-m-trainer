@@ -2,12 +2,20 @@
   "regions": ["fra1"],
   "buildCommand": "pnpm db:migrate && pnpm build",
   "outputDirectory": "dist",
+  "trailingSlash": false,
   "headers": [
     { "source": "/explanations/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] },
     { "source": "/data/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
   ],
+  "redirects": [
+    { "source": "/testy", "destination": "/kapitanske-zkousky", "permanent": true },
+    { "source": "/otazky", "destination": "/kapitanske-zkousky", "permanent": true },
+    { "source": "/otazky/:cat", "destination": "/testy/:cat", "permanent": true }
+  ],
   "rewrites": [
+    { "source": "/kapitanske-zkousky", "destination": "/kapitanske-zkousky/index.html" },
+    { "source": "/:section(testy|otazky)/:path+", "destination": "/:section/:path+/index.html" },
     { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/((?!api|explanations|data|assets|landing|favicon|apple-touch-icon|og-image|robots\\.txt|sitemap\\.xml|llms\\.txt).+)", "destination": "/spa.html" }
+    { "source": "/((?!api|explanations|data|assets|landing|favicon|apple-touch-icon|og-image|robots\\.txt|sitemap\\.xml|llms\\.txt|seo\\.css|kapitanske-zkousky|testy|otazky).+)", "destination": "/spa.html" }
   ]
 }

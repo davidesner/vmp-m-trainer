@@ -18,7 +18,24 @@ tells the truth, and update it in the same change. In particular:
   "Vybrat oblasti" selected. Retake it (signed in, so no guest locks show) when that screen changes visibly.
 - **Changed features or guest limits**: the feature texts and the notes about what works without an account
   (weak-spot practice, readiness estimate, saved progress) must match what guests and signed-in users actually get.
+  The account and guest notes shown next to the sign-in options live in `src/lib/accountCopy.ts`, shared with `/login`.
 - **Changed sign-in options** (Google/Seznam SSO, registration): `src/components/AuthOptions.tsx` is shared by the
   landing page and `/login`. A provider's button is enabled when `/api/auth/config` reports it configured
   (`GOOGLE_*` / `SEZNAM_*` env vars); the backend is `server/auth/oauth.ts` and `server/auth/identities.ts`.
 - **Changed routes**: the landing page links into the app under `/app`.
+
+## Public SEO pages are generated, not written
+
+`scripts/build-seo-pages.mjs` runs at the end of `pnpm build` and writes static, JavaScript-free pages into `dist/`:
+`/kapitanske-zkousky` (hub), `/testy/<kat>` (one per category), `/otazky/<kat>/<oblast>` (all questions of a topic
+with the correct answer) and `/otazky/<kat>/<oblast>/<id>` (one question with its explanation), plus `dist/sitemap.xml`.
+Everything comes from `public/data/questions-*.json`, `public/explanations/<kat>/q-<id>.html` (+ `.meta.json`) and
+the SPS source URLs in `scripts/test-configs.mjs`, so changed or new questions, topics, categories and explanations
+need no edits there. Only `CATEGORY_NOTES` (one hand-written sentence per category, mirrors `src/lib/landingFaq.ts`)
+and the hub copy are hand-written; keep them true when exam rules change.
+
+- Preview without a full build: `node scripts/build-seo-pages.mjs --out /tmp/seo --relative`, then open
+  `/tmp/seo/kapitanske-zkousky/index.html` (images load from the live site).
+- New top-level URL prefixes for these pages must be added to the rewrites in `vercel.json` (and excluded from the
+  SPA catch-all there). Do not add a hand-written `public/sitemap.xml`; the generator owns it.
+- Log SEO-relevant changes (titles, page types, URL changes) in `SEO_CHANGELOG.md` so their effect can be measured.
