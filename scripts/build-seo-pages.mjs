@@ -43,6 +43,8 @@ const CATEGORY_NOTES = {
 
 // Same palette and display font as the landing page (tailwind.config.ts). Written to /seo.css, shared by all pages.
 const CSS = `
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:500 800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:500 800;font-display:swap;src:url(fonts/bricolage-grotesque-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{--deep:#0b2b35;--river:#123f4c;--mist:#e6eff1;--line:#c9dadf;--green:#86c441;--green-dark:#6ba830;--green-light:#eef9e1;--accent:#5a6cdb;--text:#171717;--muted:#525252}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -303,9 +305,7 @@ ${canonical ? `<meta property="og:url" content="${canonical}">\n` : ''}<meta pro
 <meta property="og:description" content="${esc(page.description)}">
 <meta property="og:image" content="${SITE}/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-${page.notFound ? '' : `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n`}<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+${page.notFound ? '' : `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n`}<link rel="preload" href="${asset(page.path, '/fonts/bricolage-grotesque-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${asset(page.path, '/seo.css')}">
 </head>
 <body>
