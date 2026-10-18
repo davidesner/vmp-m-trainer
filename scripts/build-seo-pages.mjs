@@ -383,12 +383,12 @@ const latest = categories.map(c => c.bundle.scrapedAt).filter(Boolean).sort().at
 addPage({
   path: urls.hub,
   title: 'Kapitánské zkoušky VMP: testy a otázky ke zkoušce zdarma',
-  description: `Kapitánské zkoušky na vůdce malého plavidla: formát testů ${categories.map(c => c.id).join(', ')}, všechny otázky SPS se správnými odpověďmi a vysvětlením a trenažér zdarma.`,
+  description: `Kapitánské zkoušky („řidičák na loď“) na vůdce malého plavidla: formát testů ${categories.map(c => c.id).join(', ')}, všechny otázky SPS se správnými odpověďmi a vysvětlením a trenažér zdarma.`,
   breadcrumbs: [{ name: 'Kapitánské zkoušky', path: urls.hub }],
   lastmod: latest,
   body: link => `
 <h1>Kapitánské zkoušky VMP: testy a otázky ke zkoušce</h1>
-<p class="lead">Kapitánské zkoušky je běžný název pro zkoušku vůdce malého plavidla (VMP), kterou pořádá Státní plavební správa. Teoretická část je test na počítači: každá otázka má tři možnosti a správná je vždy jedna. Tady najdeš formát testu pro každou kategorii a všechny zveřejněné otázky se správnou odpovědí a vysvětlením.</p>
+<p class="lead">Kapitánské zkoušky (lidově taky „řidičák na loď“) je běžný název pro zkoušku vůdce malého plavidla (VMP), kterou pořádá Státní plavební správa. Teoretická část je test na počítači: každá otázka má tři možnosti a správná je vždy jedna. Tady najdeš formát testu pro každou kategorii a všechny zveřejněné otázky se správnou odpovědí a vysvětlením.</p>
 <h2>Kategorie a formát testu</h2>
 <div class="tablewrap"><table class="wide">
 <thead><tr><th>Kategorie</th><th class="num">Otázek v testu</th><th class="num">Na úspěch</th><th class="num">Čas</th><th class="num">Otázek v sadě</th></tr></thead>
