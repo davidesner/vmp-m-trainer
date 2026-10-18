@@ -99,15 +99,15 @@ ul.plain li{padding:4px 0}
 .qnum{flex:none;font-size:.8rem;font-weight:700;color:var(--river);background:var(--mist);border-radius:6px;padding:2px 7px}
 .qtext{color:var(--text);font-weight:600;text-decoration:none}
 .qtext:hover{text-decoration:underline}
-.qimg{display:block;margin:12px 0;max-height:220px;width:auto;border-radius:6px}
-.qimg.big{max-height:340px;margin:16px 0}
+.qimg{display:block;margin:12px 0;border-radius:6px}
+.qimg.big{margin:16px 0}
 .opts{list-style:none;padding:0;margin:10px 0 0}
 .opts li{display:flex;gap:8px;align-items:flex-start;padding:7px 10px;border-radius:8px;margin:3px 0}
 .opts li.ok{background:var(--green-light);box-shadow:inset 3px 0 0 var(--green)}
 .mark{flex:none;width:1em;text-align:center;font-weight:700;color:#a3a3a3}
 .opts li.ok .mark{color:var(--green-dark)}
 .otext{flex:1}
-.oimg{display:block;max-height:120px;width:auto;margin-top:6px}
+.oimg{display:block;margin-top:6px}
 .badge{flex:none;font-size:.8rem;font-weight:700;color:var(--green-dark);white-space:nowrap}
 .qfoot{display:flex;flex-wrap:wrap;gap:4px 18px;justify-content:space-between;margin:10px 0 0;font-size:.9rem}
 .qfoot a{text-decoration:none}
@@ -233,11 +233,15 @@ function imageSize(src) {
   return size
 }
 
-function img(src, alt, cls = '') {
+// Width and height are the displayed size (scaled down to maxHeight), so the browser reserves the space before the
+// image loads and nothing below it jumps. `eager` is for the image above the fold, which is often the page's LCP.
+function img(src, alt, cls = '', { maxHeight = Infinity, eager = false } = {}) {
   const size = imageSize(src)
-  const dims = size ? ` width="${size.w}" height="${size.h}"` : ''
+  const scale = size ? Math.min(1, maxHeight / size.h) : 1
+  const dims = size ? ` width="${Math.round(size.w * scale)}" height="${Math.round(size.h * scale)}"` : ''
   const url = RELATIVE ? SITE + src : src
-  return `<img src="${esc(url)}" alt="${esc(alt)}"${dims} loading="lazy" decoding="async"${cls ? ` class="${cls}"` : ''}>`
+  const loading = eager ? ' fetchpriority="high"' : ' loading="lazy"'
+  return `<img src="${esc(url)}" alt="${esc(alt)}"${dims}${loading} decoding="async"${cls ? ` class="${cls}"` : ''}>`
 }
 
 function issueUrl(c, g, q) {
@@ -371,7 +375,7 @@ function displayOrder(c, q) {
 function optionsList(c, q, compact = false) {
   return `<ul class="opts">${displayOrder(c, q).map(o => {
     const ok = o.key === q.correct
-    return `<li class="${ok ? 'ok' : ''}"><span class="mark" aria-hidden="true">${ok ? '✓' : '·'}</span><span class="otext">${esc(o.text)}${o.image ? img(o.image, `Možnost k otázce č. ${q.id}: ${o.text}`, 'oimg') : ''}</span>${ok ? `<span class="badge">${compact ? 'správně' : 'správná odpověď'}</span>` : ''}</li>`
+    return `<li class="${ok ? 'ok' : ''}"><span class="mark" aria-hidden="true">${ok ? '✓' : '·'}</span><span class="otext">${esc(o.text)}${o.image ? img(o.image, `Možnost k otázce č. ${q.id}: ${o.text}`, 'oimg', { maxHeight: 120 }) : ''}</span>${ok ? `<span class="badge">${compact ? 'správně' : 'správná odpověď'}</span>` : ''}</li>`
   }).join('')}</ul>`
 }
 
@@ -450,7 +454,7 @@ ${cta(link, `Zkus si test kategorie ${c.id} nanečisto: stejný počet otázek, 
 <ol class="qlist">${g.questions.map(q => `
 <li id="q-${q.id}" class="q">
 <div class="qhead"><span class="qnum">č. ${q.id}</span><a href="${link(urls.question(c, g, q))}" class="qtext">${esc(q.text)}</a></div>
-${q.image ? img(q.image, `Obrázek k otázce č. ${q.id}: ${q.text}`, 'qimg') : ''}
+${q.image ? img(q.image, `Obrázek k otázce č. ${q.id}: ${q.text}`, 'qimg', { maxHeight: 220 }) : ''}
 ${optionsList(c, q, true)}
 <p class="qfoot">${q.explanation ? `<a href="${link(urls.question(c, g, q))}">Proč? Vysvětlení →</a>` : ''}${c.sourceUrl ? `<a class="muted" href="${esc(c.sourceUrl)}" rel="noopener">Zdroj: SPS, otázka č. ${q.id}</a>` : ''}</p>
 </li>`).join('')}
@@ -477,7 +481,7 @@ ${cta(link, `Procvič si oblast ${g.name} v trenažéru: otázky v náhodném po
         body: link => `
 <p class="kicker">Kategorie ${c.id} · ${esc(g.name)} · otázka č. ${q.id}</p>
 <h1 class="qh1">${esc(q.text)}</h1>
-${q.image ? img(q.image, `Obrázek k otázce č. ${q.id}: ${q.text}`, 'qimg big') : ''}
+${q.image ? img(q.image, `Obrázek k otázce č. ${q.id}: ${q.text}`, 'qimg big', { maxHeight: 340, eager: true }) : ''}
 ${optionsList(c, q)}
 <p class="source">Zdroj otázky: Státní plavební správa, ${c.sourceUrl ? `<a href="${esc(c.sourceUrl)}" rel="noopener">soubor otázek kategorie ${c.id}</a>` : `soubor otázek kategorie ${c.id}`} (verze ${esc(c.bundle.version)}), otázka č. ${q.id}.</p>
 ${ex ? `
