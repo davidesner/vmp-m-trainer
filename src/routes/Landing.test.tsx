@@ -77,6 +77,25 @@ describe('Landing', () => {
     expect(screen.getByRole('button', { name: /Pokračovat přes Google/ })).toBeInTheDocument()
   })
 
+  it('shows no sign-in or guest actions until the session check answers, so a guest never sees the first-visit variant flash', async () => {
+    let answerMe: ((res: Response) => void) | undefined
+    vi.spyOn(globalThis, 'fetch').mockImplementation(async input => {
+      const url = typeof input === 'string' ? input : (input as Request).url
+      if (url === '/api/auth/config') return new Response(JSON.stringify({ signupEnabled: false }), { headers: { 'content-type': 'application/json' } })
+      if (url === '/api/me') return new Promise<Response>(resolve => { answerMe = resolve })
+      return new Response('', { status: 404 })
+    })
+    renderLanding()
+    await waitFor(() => expect(answerMe).toBeDefined())
+    expect(screen.queryAllByRole('button', { name: 'Vyzkoušet bez přihlášení' })).toHaveLength(0)
+    expect(screen.queryAllByRole('button', { name: 'Pokračovat emailem' })).toHaveLength(0)
+    expect(screen.queryAllByRole('button', { name: 'Přihlásit se' })).toHaveLength(0)
+
+    answerMe!(new Response(JSON.stringify({ id: 'g1', email: null, guest: true }), { headers: { 'content-type': 'application/json' } }))
+    expect(await screen.findByRole('heading', { name: 'Přihlas se nebo si vytvoř účet' })).toBeInTheDocument()
+    expect(screen.queryAllByRole('button', { name: 'Vyzkoušet bez přihlášení' })).toHaveLength(0)
+  })
+
   it('keeps the explanation behind a button instead of expanding it under the sample question', async () => {
     mockApi(null)
     renderLanding()
