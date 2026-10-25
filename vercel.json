@@ -5,8 +5,7 @@
   "trailingSlash": false,
   "headers": [
     { "source": "/explanations/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] },
-    { "source": "/data/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] },
-    { "source": "/fonts/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+    { "source": "/data/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
   ],
   "redirects": [
     { "source": "/testy", "destination": "/kapitanske-zkousky", "permanent": true },
