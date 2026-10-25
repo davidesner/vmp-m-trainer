@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
-const CONTACT_EMAIL = 'esnerda@gmail.com'
-const UPDATED = '13. 10. 2026'
+const CONTACT_EMAIL = 'info@vmp-trenazer.cz'
+const UPDATED = '18. 10. 2026'
 
 /**
  * Zásady ochrany osobních údajů. Linked from the Google/Seznam consent screens, so keep it public
