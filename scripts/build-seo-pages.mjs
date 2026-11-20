@@ -202,6 +202,15 @@ const esc = s => String(s ?? '')
 const stripTags = html => html.replace(/<svg[\s\S]*?<\/svg>/gi, ' ').replace(/<[^>]+>/g, ' ')
   .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&[a-z]+;/g, ' ').replace(/\s+/g, ' ').trim()
 const truncate = (s, n) => s.length <= n ? s : s.slice(0, s.lastIndexOf(' ', n - 1)).replace(/[,;:–-]$/, '') + '…'
+// Sign questions all start with the same words ("Tento signální znak (tabule) znamená:"), so the answer, the part
+// people search for, used to come last and was cut off. Lead with the answer for those.
+const questionTitle = (c, q, correct) => {
+  const answer = correct?.text.replace(/\.$/, '') ?? ''
+  if (/^Tento signální znak/.test(q.text) && answer) {
+    return truncate(answer.charAt(0).toUpperCase() + answer.slice(1), 75) + ` | Signální znak VMP ${c.id} č. ${q.id}`
+  }
+  return truncate(`${q.text.replace(/:$/, '')}: ${answer}`, 80) + ` | VMP ${c.id} č. ${q.id}`
+}
 const czDate = iso => { const d = new Date(iso); return `${d.getDate()}. ${d.getMonth() + 1}. ${d.getFullYear()}` }
 const isoDay = iso => new Date(iso).toISOString().slice(0, 10)
 const plural = (n, one, few, many) => `${n} ${n === 1 ? one : n >= 2 && n <= 4 ? few : many}`
@@ -472,7 +481,7 @@ ${cta(link, `Procvič si oblast ${g.name} v trenažéru: otázky v náhodném po
       const exText = ex ? stripTags(ex.html) : ''
       addPage({
         path: urls.question(c, g, q),
-        title: truncate(`${q.text.replace(/:$/, '')}: ${correct?.text.replace(/\.$/, '') ?? ''}`, 80) + ` | VMP ${c.id} č. ${q.id}`,
+        title: questionTitle(c, q, correct),
         description: truncate(ex ? `Správně: ${correct?.text} ${exText}` : `Otázka č. ${q.id} ke zkoušce VMP, kategorie ${c.id}, oblast ${g.name}. Správná odpověď: ${correct?.text}`, 158),
         breadcrumbs: [{ name: 'Kapitánské zkoušky', path: urls.hub }, { name: `Kategorie ${c.id}`, path: urls.category(c) }, { name: g.name, path: urls.topic(c, g) }, { name: `Otázka č. ${q.id}`, path: urls.question(c, g, q) }],
         // Without an explanation the page is just a copy of the topic list entry; keep it out of the index until one exists.
