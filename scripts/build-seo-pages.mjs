@@ -202,6 +202,13 @@ const esc = s => String(s ?? '')
 const stripTags = html => html.replace(/<svg[\s\S]*?<\/svg>/gi, ' ').replace(/<[^>]+>/g, ' ')
   .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&[a-z]+;/g, ' ').replace(/\s+/g, ' ').trim()
 const truncate = (s, n) => s.length <= n ? s : s.slice(0, s.lastIndexOf(' ', n - 1)).replace(/[,;:–-]$/, '') + '…'
+// Topic descriptions with a long area name went over 165 characters and got cut in results; those use "VMP" instead
+// of the full "vůdce malého plavidla".
+const topicDescription = (c, g) => {
+  const tail = `, kategorie ${c.id}. Správné odpovědi, obrázky a vysvětlení ke každé otázce.`
+  const long = `Všech ${otazek(g.questions.length)} z oblasti ${g.name} ke zkoušce vůdce malého plavidla${tail}`
+  return long.length <= 165 ? long : `Všech ${otazek(g.questions.length)} z oblasti ${g.name} ke zkoušce VMP${tail}`
+}
 // Sign questions all start with the same words ("Tento signální znak (tabule) znamená:"), so the answer, the part
 // people search for, used to come last and was cut off. Lead with the answer for those.
 const questionTitle = (c, q, correct) => {
@@ -424,7 +431,7 @@ for (const c of categories) {
   addPage({
     path: urls.category(c),
     title: `Testy VMP kategorie ${c.id} – ${c.bundle.name}: otázky a test nanečisto`,
-    description: `Test kategorie ${c.id} (${c.bundle.name}): ${otazek(p.total)}, ${p.durationMin} minut, na úspěch ${p.score} správně. Všech ${c.bundle.questions.length} otázek SPS se správnými odpověďmi a vysvětlením, test nanečisto zdarma.`,
+    description: `Test VMP ${c.id} (${c.bundle.name}): ${otazek(p.total)}, ${p.durationMin} minut, na úspěch ${p.score} správně. Všech ${c.bundle.questions.length} otázek se správnými odpověďmi a vysvětlením, test nanečisto zdarma.`,
     breadcrumbs: [{ name: 'Kapitánské zkoušky', path: urls.hub }, { name: `Kategorie ${c.id}`, path: urls.category(c) }],
     lastmod: c.bundle.scrapedAt,
     body: link => `
@@ -453,7 +460,7 @@ ${cta(link, `Zkus si test kategorie ${c.id} nanečisto: stejný počet otázek, 
     addPage({
       path: urls.topic(c, g),
       title: `Otázky VMP ${c.id}: ${g.name} (${otazek(g.questions.length)} se správnými odpověďmi)`,
-      description: `Všech ${otazek(g.questions.length)} z oblasti ${g.name} ke zkoušce vůdce malého plavidla, kategorie ${c.id}. Správné odpovědi, obrázky a vysvětlení ke každé otázce.`,
+      description: topicDescription(c, g),
       breadcrumbs: [{ name: 'Kapitánské zkoušky', path: urls.hub }, { name: `Kategorie ${c.id}`, path: urls.category(c) }, { name: g.name, path: urls.topic(c, g) }],
       lastmod: c.bundle.scrapedAt,
       body: link => `
