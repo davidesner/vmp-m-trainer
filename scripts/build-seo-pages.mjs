@@ -399,6 +399,16 @@ function optionsList(c, q, compact = false) {
 // Pages
 const latest = categories.map(c => c.bundle.scrapedAt).filter(Boolean).sort().at(-1)
 
+// Days when a page's title, description or copy changed although its question data did not. The sitemap lastmod is
+// the newer of the data date and these, so search engines learn which pages to recrawl. Add a row whenever a change
+// in SEO_CHANGELOG.md touches titles, descriptions or copy; leave out changes that do not alter the text.
+const COPY_REVISIONS = [
+  { date: '2026-11-06', match: p => p.path === urls.hub },
+  { date: '2026-11-20', match: p => p.path === '/' || /^\/testy\/[a-z]$/.test(p.path) || ['/otazky/m/signalizace-rizeni-plavby', '/otazky/c/navigace'].includes(p.path) },
+  { date: '2026-11-20', match: p => / \| Signální znak VMP /.test(p.title || '') },
+]
+const sitemapLastmod = p => [p.lastmod, ...COPY_REVISIONS.filter(r => r.match(p)).map(r => r.date)].filter(Boolean).map(isoDay).sort().at(-1)
+
 // Hub
 addPage({
   path: urls.hub,
@@ -555,7 +565,7 @@ ${cta(link)}
 const sitemapEntries = [{ path: '/', lastmod: latest }, ...pages.filter(p => !p.noindex)]
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries.map(p => `  <url><loc>${SITE}${p.path}</loc>${p.lastmod ? `<lastmod>${isoDay(p.lastmod)}</lastmod>` : ''}</url>`).join('\n')}
+${sitemapEntries.map(p => `  <url><loc>${SITE}${p.path}</loc>${sitemapLastmod(p) ? `<lastmod>${sitemapLastmod(p)}</lastmod>` : ''}</url>`).join('\n')}
 </urlset>
 `
 fs.mkdirSync(OUT, { recursive: true })
