@@ -473,8 +473,16 @@ function GuestButton() {
   )
 }
 
+/**
+ * Holds the place of the sign-in and guest actions until /api/me answers, sized like the first-visit variant. Without it the first-visit variant
+ * (and the prerendered HTML, which never has a session) flashes before a guest's or signed-in user's variant.
+ */
+function ActionsPlaceholder({ className }: { className: string }) {
+  return <div aria-hidden="true" className={className} />
+}
+
 function HeroActions() {
-  const { user } = useAuth()
+  const { user, loading } = useAuth()
   const navigate = useNavigate()
   const auth = (heading: string) => (
     <div id={LOGIN_ID} className="scroll-mt-8">
@@ -482,6 +490,8 @@ function HeroActions() {
       <AuthOptions tone="dark" onSuccess={() => navigate('/app')} />
     </div>
   )
+
+  if (loading) return <ActionsPlaceholder className="h-[28rem] sm:h-[26.5rem]" />
 
   if (user && !user.guest) return <GuestButton />
 
@@ -512,12 +522,13 @@ function HeroActions() {
 }
 
 function BottomActions() {
-  const { user } = useAuth()
+  const { user, loading } = useAuth()
   const login = (primary: boolean) => (
     <button type="button" onClick={focusLogin} className={primary ? PRIMARY_CTA : SECONDARY_CTA}>
       {primary ? 'Vytvořit účet nebo se přihlásit' : 'Přihlásit se'}
     </button>
   )
+  if (loading) return <ActionsPlaceholder className="h-[8.125rem] sm:h-[3.75rem]" />
   return (
     <div className="flex flex-col sm:flex-row gap-3">
       {user?.guest ? <>{login(true)}<GuestButton /></> : <><GuestButton />{!user && login(false)}</>}
